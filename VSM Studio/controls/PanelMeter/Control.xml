@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Panel Meter Control Descriptor -->
+<CONTROL>
+   <CONFIG>
+  	   <PROPERTY NAME="label" DESC="Text for the label" TYPE="STRING"/>
+	   <PROPERTY NAME="min" DESC="Minumum value" TYPE="FLOAT" DEFAULT="0"/>
+	   <PROPERTY NAME="max" DESC="Maximum value" TYPE="FLOAT" DEFAULT="10"/>
+	   <PROPERTY NAME="numDivs" DESC="Number of Divisions" TYPE="INTEGER" MIN="2" MAX="100" DEFAULT="10"/>
+	   <PROPERTY NAME="numSubDivs" DESC="Number of Sub-divisions" TYPE="INTEGER" MIN="1" MAX="10" DEFAULT="5"/>
+	   <PROPERTY NAME="tickLength" DESC="Length of Tick in pixels" TYPE="INTEGER" MIN="0" DEFAULT="5"/>
+	   <PROPERTY NAME="subTickLength" DESC="Length of Sub-Tick in pixels" TYPE="INTEGER" MIN="0" DEFAULT="2"/>
+	   <PROPERTY NAME="showTicks" DESC="Show the ticks" TYPE="BOOLEAN" DEFAULT="1"/>
+	   <PROPERTY NAME="showLabels" DESC="Show numeric labels" TYPE="BOOLEAN" DEFAULT="1"/>
+  	   <PROPERTY NAME="scaleColour" DESC="Colour for the scale markings" TYPE="RGB"/>
+  	   <PROPERTY NAME="scaleFont" DESC="Font for the scale values" TYPE="FONT"/>
+  	   <PROPERTY NAME="labelFont" DESC="Font for the label" TYPE="FONT"/>
+        <PROPERTY NAME="animateNeedle" DESC="Smoothly animate the needle movements" TYPE="BOOLEAN" DEFAULT="1"/>
+   </CONFIG>	  
+   
+   <DRIVER HEADER="Controls">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+     
+        <METHOD NAME="setValue" DESC="Set the meter's value">
+           <PARAMETER TYPE="FLOAT"/>
+        </METHOD>
+
+        <METHOD NAME="setLabel" DESC="Set the meter's label">
+           <PARAMETER TYPE="STRING"/>
+        </METHOD>
+   
+   </DRIVER>
+</CONTROL>  

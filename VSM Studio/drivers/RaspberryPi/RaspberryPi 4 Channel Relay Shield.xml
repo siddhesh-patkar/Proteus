@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Raspberry Pi/RaspberryPi 4 Channel Relay Shield.pdsclip" DESC="4 Channel Relay Breakout Board" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="4 Channel Relay Shield" ELEMENT="CRS1">
+      <INTERFACE OBJECT="RelayBoards">
+         <PIN NAME="r1" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO5"/>
+         </PIN>
+         <PIN NAME="r2" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO7"/>
+         </PIN>
+         <PIN NAME="r2" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO4"/>
+         </PIN>
+         <PIN NAME="r3" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO6"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="RelayBoards.xml"/>     
+   </PERIPHERAL>
+</CLIP>

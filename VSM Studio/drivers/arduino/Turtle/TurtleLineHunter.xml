@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DRIVER HEADER="Turtle.h">
+   <REQUIRE HEADER="Servo.h"/>
+
+   <!-- Line hunter methods -->
+   <FUNCTION DESC="TRUE if conditions are met based on parameters. 1=hit,0=not hit,-1=don't care"> 
+      <PARAMETER NAME="left" TYPE="INTEGER" DEFAULT="0" DESC="Test for left sensor."/>
+      <PARAMETER NAME="centre" TYPE="INTEGER" DEFAULT="0" DESC="Test for centre sensor."/>
+      <PARAMETER NAME="right" TYPE="INTEGER" DEFAULT="0" DESC="Test for right sensor."/>
+  	   <RETURN TYPE="BOOLEAN"/>
+   </FUNCTION>     
+</DRIVER>

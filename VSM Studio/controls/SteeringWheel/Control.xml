@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Steering Wheel Control Descriptor -->
+<CONTROL>
+   <CONFIG>
+  	   <PROPERTY NAME="amin" DESC="Minumum angle" TYPE="INTEGER" DEFAULT="-90"/>
+	   <PROPERTY NAME="amax" DESC="Maximum angle" TYPE="INTEGER" DEFAULT="+90"/>
+	   <PROPERTY NAME="rate" DESC="Update Rate (Hz)" TYPE="FLOAT" DEFAULT="4"/>	   
+   </CONFIG>	  
+   
+   <DRIVER HEADER="Controls">
+        <REQUIRE HEADER="VfpServer" />
+        <FUNCTION DESC="Wheel is Request Source">
+           <RETURN TYPE="BOOLEAN"/>
+        </FUNCTION>
+        
+        <METHOD NAME="getValue" DESC="Reads the wheel angle in degrees">
+           <RETURN NAME="angle" TYPE="INTEGER" />
+        </METHOD>
+        <METHOD NAME="setValue" DESC="Set the wheel angle in degrees">
+           <PARAMETER NAME="angle" TYPE="INTEGER" DESC="Angle in degrees"/>
+        </METHOD>
+            
+        <INTERRUPT DESC="Value Changed Event"  HOOK="attachEventHandler"/>                   
+   </DRIVER>
+</CONTROL>  

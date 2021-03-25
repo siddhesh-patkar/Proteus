@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Arduino/Arduino Ina219 Current Sensor Breakout Board.pdsclip" DESC="Adafruit Ina219 Current Sensor Breakout Board" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="INA219 Current Sensor" ELEMENT="CSENS1">
+      <INTERFACE OBJECT="Ina219">
+         <PORT NAME="I2C"/>
+         <SETUP NAME="begin"/>
+         <!-- JUMPERS DETERMINE I2C ADDRESS -->
+         <PROPERTY NAME="STATE" ELEMENT="JP1" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP2" TYPE="INTEGER"/>
+      </INTERFACE>
+      <DRIVER FILE="ina219/ina219.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

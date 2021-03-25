@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Motor Control" FILE="Raspberry Pi/RaspberryPi Motor Shield with DC Motors.pdsclip" DESC="Motor Shield (R3) with DC Motors" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="DC Motor 1" ELEMENT="M1">
+      <INTERFACE OBJECT="DCMotorV1">
+          <PIN NAME="dir" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="GPIO12"/>
+          </PIN> 
+          <PIN NAME="pwm" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="GPIO3"/>
+          </PIN> 
+          <PIN NAME="brake" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="GPIO9"/>
+          </PIN> 
+         <SETUP NAME="begin"/>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER FILE="DC Motor.xml"/>
+      
+   </PERIPHERAL>
+
+   <PERIPHERAL TYPE="DC Motor 2" ELEMENT="M2">
+      <INTERFACE OBJECT="DCMotorV1">
+          <PIN NAME="dir" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO13"/>
+          </PIN> 
+          <PIN NAME="pwm" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO11"/>
+          </PIN> 
+          <PIN NAME="brake" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO8"/>
+          </PIN> 
+         <SETUP NAME="begin"/>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER FILE="DC Motor.xml"/>
+      
+   </PERIPHERAL>
+
+</CLIP>
+
+

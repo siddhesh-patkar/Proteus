@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 80 200"
+   version="1.1"
+   id="svg267"
+   sodipodi:docname="slideSwitch3.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata271">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1417"
+     id="namedview269"
+     showgrid="false"
+     inkscape:zoom="0.834386"
+     inkscape:cx="-598.07745"
+     inkscape:cy="-57.832239"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg267" />
+  <defs
+     id="defs212">
+    <linearGradient
+       id="Silver_04"
+       data-name="Silver 04"
+       x1="4.64"
+       y1="101.07"
+       x2="20.3"
+       y2="101.07"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#cbd1d6"
+         id="stop37" />
+      <stop
+         offset="0.09"
+         stop-color="#c7ced2"
+         id="stop39" />
+      <stop
+         offset="0.17"
+         stop-color="#bcc3c7"
+         id="stop41" />
+      <stop
+         offset="0.25"
+         stop-color="#abb2b6"
+         id="stop43" />
+      <stop
+         offset="0.25"
+         stop-color="#abb2b6"
+         id="stop45" />
+      <stop
+         offset="0.29"
+         stop-color="#cbd2d6"
+         id="stop47" />
+      <stop
+         offset="0.33"
+         stop-color="#e2e9ec"
+         id="stop49" />
+      <stop
+         offset="0.37"
+         stop-color="#f0f6f9"
+         id="stop51" />
+      <stop
+         offset="0.4"
+         stop-color="#f5fbfe"
+         id="stop53" />
+      <stop
+         offset="0.63"
+         stop-color="#f5fbfe"
+         id="stop55" />
+      <stop
+         offset="0.75"
+         stop-color="#979da1"
+         id="stop57" />
+      <stop
+         offset="0.83"
+         stop-color="#b0b7bd"
+         id="stop59" />
+      <stop
+         offset="0.85"
+         stop-color="#949a9f"
+         id="stop61" />
+      <stop
+         offset="0.87"
+         stop-color="#7d8287"
+         id="stop63" />
+      <stop
+         offset="0.89"
+         stop-color="#6f7478"
+         id="stop65" />
+      <stop
+         offset="0.91"
+         stop-color="#6a6f73"
+         id="stop67" />
+      <stop
+         offset="0.93"
+         stop-color="#71767a"
+         id="stop69" />
+      <stop
+         offset="0.95"
+         stop-color="#84898e"
+         id="stop71" />
+      <stop
+         offset="0.97"
+         stop-color="#a4a9ae"
+         id="stop73" />
+      <stop
+         offset="1"
+         stop-color="#cbd1d6"
+         id="stop75" />
+    </linearGradient>
+    <linearGradient
+       id="Silver_04-2"
+       x1="56.8"
+       y1="101.07"
+       x2="71.47"
+       y2="101.07"
+       xlink:href="#Silver_04"
+       gradientTransform="translate(-40,-100.00001)" />
+    <linearGradient
+       id="Silver_04-3"
+       x1="23.22"
+       y1="101.07"
+       x2="49.64"
+       y2="101.07"
+       xlink:href="#Silver_04"
+       gradientTransform="translate(-40,-100.00001)" />
+    <linearGradient
+       id="Gold_29"
+       data-name="Gold 29"
+       x1="40"
+       y1="12.65"
+       x2="40"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.02"
+         stop-color="#603513"
+         id="stop82" />
+      <stop
+         offset="0.07"
+         stop-color="#86581b"
+         id="stop84" />
+      <stop
+         offset="0.14"
+         stop-color="#b68525"
+         id="stop86" />
+      <stop
+         offset="0.18"
+         stop-color="#c89629"
+         id="stop88" />
+      <stop
+         offset="0.5"
+         stop-color="#f9f090"
+         id="stop90" />
+      <stop
+         offset="0.57"
+         stop-color="#f0e07e"
+         id="stop92" />
+      <stop
+         offset="0.71"
+         stop-color="#dab74e"
+         id="stop94" />
+      <stop
+         offset="0.82"
+         stop-color="#c89627"
+         id="stop96" />
+      <stop
+         offset="0.98"
+         stop-color="#603513"
+         id="stop98" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient"
+       x1="40"
+       y1="12.65"
+       x2="40"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-40,-100.00001)">
+      <stop
+         offset="0"
+         stop-color="#1d1d1b"
+         id="stop101" />
+      <stop
+         offset="0.18"
+         stop-color="#7e7e7d"
+         stop-opacity="0.57"
+         id="stop103" />
+      <stop
+         offset="0.44"
+         stop-color="#dfdfde"
+         stop-opacity="0.14"
+         id="stop105" />
+      <stop
+         offset="0.7"
+         stop-color="#fff"
+         stop-opacity="0"
+         id="stop107" />
+    </linearGradient>
+    <linearGradient
+       id="Gold_29-2"
+       x1="40"
+       y1="199.67"
+       x2="40"
+       y2="188.57"
+       xlink:href="#Gold_29"
+       gradientTransform="translate(-40,-100.00001)" />
+    <linearGradient
+       id="linear-gradient-2"
+       x1="40"
+       y1="200"
+       x2="40"
+       y2="187.35"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-40,-100.00001)">
+      <stop
+         offset="0.3"
+         stop-color="#fff"
+         stop-opacity="0"
+         id="stop111" />
+      <stop
+         offset="0.56"
+         stop-color="#dfdfde"
+         stop-opacity="0.14"
+         id="stop113" />
+      <stop
+         offset="0.82"
+         stop-color="#7e7e7d"
+         stop-opacity="0.57"
+         id="stop115" />
+      <stop
+         offset="1"
+         stop-color="#1d1d1b"
+         id="stop117" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-3"
+       x1="66.73"
+       y1="84.03"
+       x2="64.56"
+       y2="95.97"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="silver"
+         id="stop120" />
+      <stop
+         offset="0.19"
+         stop-color="#bebebe"
+         id="stop122" />
+      <stop
+         offset="0.26"
+         stop-color="#b7b7b7"
+         id="stop124" />
+      <stop
+         offset="0.31"
+         stop-color="#acacac"
+         id="stop126" />
+      <stop
+         offset="0.35"
+         stop-color="#9b9b9b"
+         id="stop128" />
+      <stop
+         offset="0.39"
+         stop-color="#858585"
+         id="stop130" />
+      <stop
+         offset="0.42"
+         stop-color="#6a6a69"
+         id="stop132" />
+      <stop
+         offset="0.44"
+         stop-color="#4b4b4a"
+         id="stop134" />
+      <stop
+         offset="0.45"
+         stop-color="#424241"
+         id="stop136" />
+      <stop
+         offset="0.52"
+         stop-color="#2a2a29"
+         id="stop138" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-4"
+       x1="22.28"
+       y1="84.02"
+       x2="20.11"
+       y2="95.97"
+       gradientTransform="matrix(-1,0,0,1,33.94,0)"
+       xlink:href="#linear-gradient-3" />
+    <linearGradient
+       id="linear-gradient-5"
+       x1="11.52"
+       y1="78.18"
+       x2="78.66"
+       y2="109.26"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-40.014492,-91.052968)">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         id="stop142" />
+      <stop
+         offset="0.01"
+         stop-color="#e1e1e1"
+         id="stop144" />
+      <stop
+         offset="0.04"
+         stop-color="#b8b8b8"
+         id="stop146" />
+      <stop
+         offset="0.07"
+         stop-color="#939392"
+         id="stop148" />
+      <stop
+         offset="0.09"
+         stop-color="#737372"
+         id="stop150" />
+      <stop
+         offset="0.13"
+         stop-color="#585856"
+         id="stop152" />
+      <stop
+         offset="0.16"
+         stop-color="#424240"
+         id="stop154" />
+      <stop
+         offset="0.2"
+         stop-color="#313130"
+         id="stop156" />
+      <stop
+         offset="0.26"
+         stop-color="#262624"
+         id="stop158" />
+      <stop
+         offset="0.33"
+         stop-color="#1f1f1d"
+         id="stop160" />
+      <stop
+         offset="0.53"
+         stop-color="#1d1d1b"
+         id="stop162" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-6"
+       x1="30.65"
+       y1="72.62"
+       x2="47.79"
+       y2="109.38"
+       xlink:href="#linear-gradient-3"
+       gradientTransform="translate(-40.014492,-91.052968)" />
+    <linearGradient
+       id="Gold_18"
+       data-name="Gold 18"
+       x1="35.24"
+       y1="112"
+       x2="41.42"
+       y2="112"
+       gradientTransform="matrix(1, 0, 0, -1, 0, 218.51)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8f5914"
+         id="stop182" />
+      <stop
+         offset="0.05"
+         stop-color="#965d15"
+         id="stop184" />
+      <stop
+         offset="0.09"
+         stop-color="#a86815"
+         id="stop186" />
+      <stop
+         offset="0.13"
+         stop-color="#bb7314"
+         id="stop188" />
+      <stop
+         offset="0.24"
+         stop-color="#f4971e"
+         id="stop190" />
+      <stop
+         offset="0.32"
+         stop-color="#f4971e"
+         id="stop192" />
+      <stop
+         offset="0.44"
+         stop-color="#b06d1d"
+         id="stop194" />
+      <stop
+         offset="0.46"
+         stop-color="#b06d1d"
+         id="stop196" />
+      <stop
+         offset="0.47"
+         stop-color="#b26f1e"
+         id="stop198" />
+      <stop
+         offset="0.54"
+         stop-color="#f59e30"
+         id="stop200" />
+      <stop
+         offset="0.6"
+         stop-color="#f59e30"
+         id="stop202" />
+      <stop
+         offset="0.72"
+         stop-color="#c07921"
+         id="stop204" />
+      <stop
+         offset="1"
+         stop-color="#8c5517"
+         id="stop206" />
+    </linearGradient>
+    <linearGradient
+       id="Gold_18-2"
+       x1="35.24"
+       y1="75.5"
+       x2="41.42"
+       y2="75.5"
+       xlink:href="#Gold_18"
+       gradientTransform="translate(-40.014492,-91.052968)" />
+    <linearGradient
+       id="Gold_18-3"
+       x1="29.27"
+       y1="73.24"
+       x2="46.78"
+       y2="73.24"
+       xlink:href="#Gold_18"
+       gradientTransform="translate(-40.014492,-91.052968)" />
+    <linearGradient
+       id="Gold_18-4"
+       x1="29.27"
+       y1="109.75"
+       x2="46.78"
+       y2="109.75"
+       xlink:href="#Gold_18"
+       gradientTransform="translate(-40.014492,-91.052968)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Silver_04"
+       id="linearGradient3945"
+       gradientUnits="userSpaceOnUse"
+       x1="4.64"
+       y1="101.07"
+       x2="20.3"
+       y2="101.07"
+       gradientTransform="translate(-40,-100.00001)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Gold_29"
+       id="linearGradient3947"
+       gradientUnits="userSpaceOnUse"
+       x1="40"
+       y1="12.65"
+       x2="40"
+       gradientTransform="translate(-40,-100.00001)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linear-gradient-3"
+       id="linearGradient3959"
+       x1="30.65"
+       y1="72.62"
+       x2="47.79"
+       y2="109.38"
+       gradientTransform="translate(-40.014492,-91.052968)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linear-gradient-3"
+       id="linearGradient3965"
+       gradientUnits="userSpaceOnUse"
+       x1="66.73"
+       y1="84.03"
+       x2="64.56"
+       y2="95.97" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Gold_18"
+       id="linearGradient3967"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,-1,-40.014492,127.45703)"
+       x1="35.24"
+       y1="112"
+       x2="41.42"
+       y2="112" />
+  </defs>
+  <vfp:catalogue
+     DESC="Steampunk Slide Switch 3"
+     CATEGORY="Switches"
+     PREFIX="SlideSwitch" />
+  <title
+     id="title214">slideSwitch3</title>
+  <g
+     id="stepSlider3"
+     data-name="Layer 2"
+     vfp:class="SlideSwitch"
+     class="root"
+     transform="translate(40,100)">
+    <g
+       id="orient">
+      <g
+         transform="translate(-0.73813266,7.0684091)"
+         style="opacity:0"
+         class="readout"
+         id="TextValue">
+        <text
+           id="text73"
+           y="0"
+           x="0"
+           style="font-size:20px;font-family:sans-serif;text-anchor:middle">5.0</text>
+      </g>
+      <g
+         class="bounds"
+         id="bounds"
+         transform="translate(0,1.9073486e-6)">
+        <rect
+           id="rect3979"
+           width="80"
+           height="200"
+           x="-40"
+           y="-100.00001"
+           style="opacity:0" />
+        <path
+           style="fill:url(#linearGradient3945)"
+           inkscape:connector-curvature="0"
+           id="path218"
+           d="m -26.53,92.99999 v 0 c -3,0 -5.5,-0.49 -5.5,-4.78 v -179.08 H -21 v 179.08 c 0,4.29 -2.51,4.78 -5.53,4.78 z" />
+        <path
+           style="fill:url(#Silver_04-2)"
+           inkscape:connector-curvature="0"
+           id="path222"
+           d="m 25,92.99999 v 0 c -3,0 -5.5,-0.49 -5.5,-4.78 v -179.08 h 11 v 179.08 c -0.03,4.29 -2.5,4.78 -5.5,4.78 z" />
+        <path
+           style="fill:url(#Silver_04-3)"
+           inkscape:connector-curvature="0"
+           id="path226"
+           d="m -0.78,92.99999 v 0 c -5.5,0 -10,-0.49 -10,-4.78 v -179.08 h 20 v 179.08 c 0,4.29 -4.5,4.78 -10,4.78 z" />
+        <rect
+           style="fill:url(#linearGradient3947)"
+           y="-100.00001"
+           x="-40"
+           id="rect228"
+           ry="6.3200002"
+           rx="6.3200002"
+           height="12.65"
+           width="80" />
+        <rect
+           style="fill:url(#linear-gradient)"
+           y="-100.00001"
+           x="-40"
+           id="rect230"
+           ry="6.3200002"
+           rx="6.3200002"
+           height="12.65"
+           width="80" />
+        <rect
+           style="fill:url(#Gold_29-2)"
+           x="-40"
+           id="rect232"
+           ry="6.3200002"
+           rx="6.3200002"
+           height="12.65"
+           width="80"
+           y="87.349998" />
+        <rect
+           style="fill:url(#linear-gradient-2)"
+           x="-40"
+           id="rect234"
+           ry="6.3200002"
+           rx="6.3200002"
+           height="12.65"
+           width="80"
+           y="87.349998" />
+      </g>
+      <g
+         id="knob"
+         class="knob">
+        <polygon
+           points="61.38,86 70.47,91 61.38,96 "
+           id="polygon237"
+           style="fill:url(#linearGradient3965)"
+           transform="translate(-40.014492,-91.052968)" />
+        <polygon
+           points="16.97,86 7.97,91 16.97,96 "
+           id="polygon239"
+           style="fill:url(#linear-gradient-4)"
+           transform="translate(-40.014492,-91.052968)" />
+        <rect
+           x="-25.51449"
+           y="-13.052968"
+           width="49.43"
+           height="25.99"
+           rx="5.9099998"
+           ry="5.9099998"
+           id="rect241"
+           style="fill:url(#linear-gradient-5)" />
+        <path
+           d="m 17.985508,-13.052968 h -37.58 a 5.92,5.92 0 0 0 -5.91,5.9099999 v 14.17 a 5.92,5.92 0 0 0 5.91,5.9200001 h 37.58 a 5.92,5.92 0 0 0 5.91,-5.9100001 v -14.17 a 5.92,5.92 0 0 0 -5.91,-5.9199999 z m 3.36,20.0799999 a 3.36,3.36 0 0 1 -3.36,3.3600001 h -37.58 a 3.36,3.36 0 0 1 -3.36,-3.3600001 v -14.16 a 3.36,3.36 0 0 1 3.36,-3.3599999 h 37.58 a 3.36,3.36 0 0 1 3.36,3.3599999 z"
+           id="path243"
+           inkscape:connector-curvature="0"
+           style="opacity:0.15;fill:url(#linearGradient3959)" />
+        <path
+           d="m 17.985508,-13.052968 h -37.58 a 5.92,5.92 0 0 0 -5.91,5.9099999 v 14.17 a 5.92,5.92 0 0 0 5.91,5.9200001 h 37.58 a 5.92,5.92 0 0 0 5.91,-5.9100001 v -14.17 a 5.92,5.92 0 0 0 -5.91,-5.9199999 z m 3.36,20.0799999 a 3.36,3.36 0 0 1 -3.36,3.3600001 h -37.58 a 3.36,3.36 0 0 1 -3.36,-3.3600001 v -14.16 a 3.36,3.36 0 0 1 3.36,-3.3599999 h 37.58 a 3.36,3.36 0 0 1 3.36,3.3599999 z"
+           id="path249"
+           inkscape:connector-curvature="0"
+           style="opacity:0.5;fill:url(#linear-gradient-6)" />
+        <rect
+           x="-3.3044925"
+           y="12.947032"
+           width="5.0100002"
+           height="5.0100002"
+           id="rect255"
+           style="fill:url(#linearGradient3967)" />
+        <rect
+           x="-3.3044925"
+           y="-18.062969"
+           width="5.0100002"
+           height="5.0100002"
+           id="rect257"
+           style="fill:url(#Gold_18-2)" />
+        <rect
+           x="-10.794493"
+           y="-20.562969"
+           width="20"
+           height="5.5"
+           id="rect259"
+           style="fill:url(#Gold_18-3)" />
+        <rect
+           x="-10.794493"
+           y="14.957034"
+           width="20"
+           height="5.5"
+           id="rect261"
+           style="fill:url(#Gold_18-4)" />
+      </g>
+      <g
+         transform="translate(-20)"
+         id="layer2"
+         inkscape:label="Layer 1"
+         class="graticule" />
+      <g
+         id="groove"
+         class="scale">
+        <rect
+           style="opacity:0;stroke-width:0.93949193"
+           y="-77.139"
+           x="-6.8855"
+           height="154.278"
+           width="13.771"
+           id="rect4068" />
+      </g>
+    </g>
+  </g>
+</svg>

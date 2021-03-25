@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="271.72775"
+   viewBox="0 0 100 271.72775"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Virtual Traffic Lights.svg">
+  <vfp:catalogue
+     DESC="Traffic Lights"
+     CATEGORY="Miscellaneous"
+     PREFIX="TL" />
+  <defs
+     id="defs4">
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.8181117"
+     inkscape:cx="-198.166"
+     inkscape:cy="107.07306"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="px" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     vfp:class="TrafficLights">
+     <linearGradient
+       inkscape:collect="always"
+       id="gradient"
+       x1="407.46094"
+       y1="771.24756"
+       x2="318.444"
+       y2="518.44714"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-311.7857,-511.70593)" >
+      <stop
+         style="stop-color:#666666;stop-opacity:1;"
+         offset="0"
+         id="stop4139" />
+      <stop
+         style="stop-color:#C0C0C0;stop-opacity:1;"
+         offset="1"
+         id="stop4141" />
+      </linearGradient>   
+    <rect       
+       style="fill:url(#gradient);fill-opacity:1;stroke:#000000;stroke-width:3.66492152;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3387"
+       width="96.335075"
+       height="268.06284"
+       x="1.8324608"
+       y="1.8324562" />
+    <ellipse
+       style="fill:#600000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.66492152;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="red"
+       cx="50.000061"
+       cy="54.188416"
+       rx="26.178011"
+       ry="27.22513"
+       inkscape:label="" />
+    <ellipse
+       ry="27.22513"
+       rx="26.178011"
+       cy="135.86382"
+       cx="50.000061"
+       id="amber"
+       style="fill:#502600;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.66492152;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="" />
+    <ellipse
+       ry="27.22513"
+       rx="26.178011"
+       cy="217.53923"
+       cx="50.000061"
+       id="green"
+       style="fill:#004000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.66492152;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="" />
+  </g>
+</svg>

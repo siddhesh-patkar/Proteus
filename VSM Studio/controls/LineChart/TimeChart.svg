@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   viewBox="0 0 400 300"
+   height="300"
+   width="400"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="LineChart.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1852"
+     inkscape:window-height="893"
+     id="namedview3342"
+     showgrid="false"
+     inkscape:zoom="0.545"
+     inkscape:cx="-122.93578"
+     inkscape:cy="200"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <vfp:catalogue
+     DESC="Line Chart with time x-axis"
+     CATEGORY="Chart Controls"
+     PREFIX="Chart" />
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     vfp:class="LineChart"     
+     vfp:xtype="Time"
+     style="display:inline">
+     <rect
+       class="background"
+       id="rect5"
+       y="0"
+       x="0"
+       height="300"
+       width="400"
+       style="fill:#f0f0e0;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1" />
+    <rect
+       class="bounds"
+       id="rect5"
+       y="0"
+       x="0"
+       height="300"
+       width="400"
+       style="fill-opacity:0;stroke:none" />
+    <rect
+       class="chart"
+       id="rect5"
+       y="5"
+       x="5"
+       height="290"
+       width="390"
+       style="fill:none;stroke:none" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#008000;stroke-width:4.76792336;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 13.204865,283.88151 c 9.14202,-60.42768 16.391459,-123.88134 39.291796,-176.18259 17.399995,-19.252939 32.197333,17.55232 36.522665,40.25839 8.641636,30.98073 16.650874,63.6829 32.094964,88.29252 19.1068,14.72561 41.19866,-6.49581 50.73147,-32.78379 25.0457,-50.57314 32.18434,-116.528761 57.08489,-167.237906 18.54165,-19.285591 32.95424,17.755808 43.68852,36.180258 12.84968,19.940845 23.7491,49.034138 42.94115,54.306128 19.95912,4.33394 41.81877,-17.79571 44.71877,-49.639266 5.2654,-23.247165 13.98221,-44.063811 22.69538,-64.468921"
+       id="path4139"
+       inkscape:connector-curvature="0" />
+   </g>
+</svg>

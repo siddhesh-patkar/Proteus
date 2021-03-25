@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- I2C Driver -->
+<DRIVER HEADER="Ports">
+   <!-- Port 0 = pins 27,28. Port 1 = Pins 3,5 -->
+   <METHOD NAME="transmit" DESC="Send 8 bit data">
+      <PARAMETER NAME="Address" TYPE="INTEGER"  DESC="I2C address"/>
+      <PARAMETER NAME="Command" TYPE="INTEGER" DESC="Command to send"/>
+      <PARAMETER TYPE="LIST"  DESC="Data to transmit"/>
+   </METHOD>   
+
+   <METHOD NAME="receive" DESC="Send 8 bit data">
+      <PARAMETER NAME="Address" TYPE="INTEGER"  DESC="I2C address"/>
+      <PARAMETER NAME="Comand" TYPE="INTEGER"  DESC="Command to send"/>
+      <PARAMETER NAME="Data" TYPE="LIST" BYREF="1"/>
+   </METHOD>                   
+        
+</DRIVER>

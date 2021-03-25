@@ -1,0 +1,51 @@
+<svg xmlns:vfp="http://www.labcenter.com/namespaces/vfp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 59.87 30">
+  <defs>
+    <linearGradient id="YellowPillModernLEDWhite" x1="48.01" y1="33.07" x2="11.86" y2="-3.07" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.3"/>
+      <stop offset="0.56" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="YellowPillModernLEDWhite-2" x1="45.1" y1="30.16" x2="14.78" y2="-0.16" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.2"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="YellowPillModernLEDWhite-3" x1="26.32" y1="1.48" x2="33.56" y2="28.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.4"/>
+      <stop offset="0.47" stop-opacity="0.21"/>
+      <stop offset="0.55" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="YellowPillModernLEDWhite-4" x1="4.88" y1="15" x2="55" y2="15" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
+      <stop offset="1" stop-opacity="0.6"/>
+    </linearGradient>
+    <radialGradient id="YellowPillModernLEDWhiteRadial" cx="54.15" cy="24.29" r="19.11" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="YellowPillModernLEDWhiteRadial-2" cx="3.7" cy="1.49" r="19.12" gradientTransform="translate(1.22 1.88) scale(0.96 0.9)" xlink:href="#YellowPillModernLEDWhiteRadial"/>
+  </defs>
+  <vfp:catalogue
+     DESC="Yellow Pill LED"
+     CATEGORY="Indicators"
+     PREFIX="LED" />
+
+  <g vfp:class="Indicator">
+    <path class="bounds" d="M59.88,15A15,15,0,0,0,45,0H15a15,15,0,1,0,0,30H45A15,15,0,0,0,59.88,15Z" style="fill: #fffef5"/>
+    <path d="M59.88,15A15,15,0,0,0,45,0H15a15,15,0,1,0,0,30H45A15,15,0,0,0,59.88,15Z" style="fill: url(#YellowPillModernLEDWhite)"/>
+    <path d="M44.88,4.13H15a10.88,10.88,0,0,0,0,21.75H44.88a10.88,10.88,0,0,0,0-21.75Z" style="opacity: 0.15;fill: url(#YellowPillModernLEDWhite-2)"/>
+    <path class="colour" d="M55,15A10.12,10.12,0,0,0,45.31,4.9v0H15a10.13,10.13,0,0,0,0,20.25H45.31v0A10.12,10.12,0,0,0,55,15Z" style="fill: #fde910"/>
+    <g style="display:none">
+    <path d="M44.78,5.88l.49,0a9.11,9.11,0,0,1,0,18.21l-.32,0H15A9.12,9.12,0,1,1,15,5.88H44.78m.54-1H15a10.12,10.12,0,1,0,0,20.25H45.31v0a10.11,10.11,0,0,0,0-20.21v0Z" style="fill: url(#YellowPillModernLEDWhite-3)"/>
+    <path d="M55,15A10.12,10.12,0,0,0,45.31,4.9v0H15a10.13,10.13,0,0,0,0,20.25H45.31v0A10.12,10.12,0,0,0,55,15Z" style="opacity: 0.6000000000000001;fill: url(#YellowPillModernLEDWhite-4)"/>
+    </g>
+    <g>
+    <path d="M55,15A10.12,10.12,0,0,0,45.31,4.9v0H15a10.13,10.13,0,0,0,0,20.25H45.31v0A10.12,10.12,0,0,0,55,15Z" style="fill: url(#YellowPillModernLEDWhiteRadial)"/>
+    <path d="M54,15a9.41,9.41,0,0,0-9.29-9.13v0H15.61A9.11,9.11,0,0,0,5.9,15a9.44,9.44,0,0,0,9.71,9.15H44.69v0A9.41,9.41,0,0,0,54,15Z" style="fill: url(#YellowPillModernLEDWhiteRadial-2)"/>
+  </g>
+  <text
+       x="30.120564"
+       y="44.096336"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"
+       id="text23">label</text>
+  </g>
+</svg>

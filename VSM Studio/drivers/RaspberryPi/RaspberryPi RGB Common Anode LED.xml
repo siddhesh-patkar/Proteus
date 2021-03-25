@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Raspberry Pi/RaspberryPi RGB Common Anode LED.pdsclip" FAMILY="Raspberry Pi" DESC="RGB Common Anode LED">
+   <PERIPHERAL TYPE="RPi RGB LED" ELEMENT="RGBLED1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="RgbLedCa">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO19"/>
+         </PIN>
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO20"/>
+         </PIN>
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO26"/>
+         </PIN>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Generic">
+         <!-- Methods for Generic RGB LED -->
+         <METHOD NAME="set" DESC="Turn the RGB Leds on or off.">
+            <PARAMETER NAME="rState" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="State of the Red Led"/>
+            <PARAMETER NAME="gState" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="State of the Green Led"/>
+            <PARAMETER NAME="bState" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="State of the Blue Led"/>
+         </METHOD>
+         <METHOD NAME="toggle" DESC="Toggle the RGB Leds states."/>
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

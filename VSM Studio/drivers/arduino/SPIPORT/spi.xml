@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DRIVER HEADER="spiport.h">
+   <REQUIRE HEADER="core.h"/>
+   <REQUIRE HEADER="spi.h"/>
+
+   <ENUMERATION NAME="CLOCK">
+      <CONSTANT NAME="CLOCK1MHZ" VALUE="1000000L"/>
+      <CONSTANT NAME="CLOCK4MHZ" VALUE="4000000L"/>
+      <CONSTANT NAME="CLOCK8MHZ" VALUE="8000000L"/>
+   </ENUMERATION>
+
+   <ENUMERATION NAME="BITORDER">
+      <CONSTANT NAME="LSBFIRST" VALUE="0"/>
+      <CONSTANT NAME="MSBFIRST" VALUE="1"/>
+   </ENUMERATION>
+
+   <ENUMERATION NAME="SPIMODE">
+      <CONSTANT NAME="SPIMODE0" VALUE="0x00"/>
+      <CONSTANT NAME="SPIMODE1" VALUE="0x04"/>
+      <CONSTANT NAME="SPIMODE2" VALUE="0x08"/>
+      <CONSTANT NAME="SPIMODE3" VALUE="0x0C"/>
+   </ENUMERATION>
+
+      
+   <METHOD NAME="setup" DESC="Configure the SPI Hardware">
+      <PARAMETER NAME="clock" TYPE="CLOCK" DEFAULT="CLOCK4MHZ" DESC="SPI Clock Speed"/>
+      <PARAMETER NAME="order" TYPE="BITORDER" DEFAULT="MSBFIRST" DESC="Bit Order"/>
+      <PARAMETER NAME="mode" TYPE="SPIMODE" DEFAULT="SPIMODE0" DESC="SPI MODE (Clock Phase &amp; Polarity)"/>      
+   </METHOD>
+   
+   <METHOD NAME="beginTransaction" DESC="Start a bus transaction (SS low)">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DEFAULT="10" DESC="Pin to use for SS"/>      
+   </METHOD>   
+   <METHOD NAME="endTransaction" DESC="End a bus transaction (SS high)"/>
+   
+   <METHOD NAME="send" DESC="Send 8 bit command data, received data is ignored">
+      <PARAMETER TYPE="LIST"  DESC="Data to transmit"/>
+   </METHOD>            
+   <METHOD NAME="send16" DESC="Send 16 bit command data, received data is ignored">
+      <PARAMETER TYPE="LIST"  DESC="Data to transmit"/>
+   </METHOD>            
+   <METHOD NAME="transfer" DESC="Send/Receive 8 bits of data">
+      <PARAMETER NAME="data" TYPE="INTEGER"  DESC="Data to transmit"/>
+      <RETURN NAME="data" TYPE="INTEGER"  DESC="Data to receive"/>
+   </METHOD>            
+   <METHOD NAME="transfer16" DESC="Send/Receive 16 bits of data">
+      <PARAMETER NAME="data" TYPE="INTEGER"  DESC="Data to transmit"/>
+      <RETURN NAME="data" TYPE="INTEGER"  DESC="Data to receive"/>
+   </METHOD>            
+        
+
+</DRIVER>

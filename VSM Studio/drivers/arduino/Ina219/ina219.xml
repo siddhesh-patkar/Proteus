@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino INA219 Current Sensor -->
+<DRIVER HEADER="ina219.h">
+   <REQUIRE HEADER="Adafruit_INA219.h"/>
+   <REQUIRE HEADER="Wire.h"/>
+
+   <!-- INA219 REGISTERS enumeration -->
+   <ENUMERATION NAME="INA219_REGISTERS">
+      <CONSTANT NAME="CONFIG"    VALUE="0"/>
+      <CONSTANT NAME="SHUNT"     VALUE="1"/>
+      <CONSTANT NAME="BUS"       VALUE="2"/>
+      <CONSTANT NAME="POWER"     VALUE="3"/>
+      <CONSTANT NAME="CURRENT"   VALUE="4"/>
+      <CONSTANT NAME="CALIBR"    VALUE="5"/>
+   </ENUMERATION>
+
+   <!-- Specialized Methods -->
+   <METHOD NAME="setCalibration_32V_2A"    DESC="Set Calibration to 32Volt 2Amps.">
+   </METHOD>
+   <METHOD NAME="setCalibration_32V_1A"    DESC="Set Calibration to 32Volt 1Amps.">
+   </METHOD>
+   <METHOD NAME="setCalibration_16V_400mA" DESC="Set Calibration to 16Volt 400mA.">
+   </METHOD>
+
+   <!-- Read/write Register Methods -->
+   <METHOD NAME="getBusVoltage_raw" DESC="Get Bus Voltage in raw format.">
+      <RETURN NAME="value"  TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="getShuntVoltage_raw" DESC="Get Shunt Voltage in raw format.">
+      <RETURN NAME="value"  TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="getCurrent_raw" DESC="Get Current in raw format.">
+      <RETURN NAME="value"  TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="getPower_raw" DESC="Get Power in raw format.">
+      <RETURN NAME="value"  TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="getShuntVoltage_mV" DESC="Get Shunt Voltage in mV.">
+      <RETURN NAME="value"  TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="getBusVoltage_V" DESC="Get Bus Voltage in V.">
+      <RETURN NAME="value"  TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="getCurrent_mA" DESC="Get Current in mA.">
+      <RETURN NAME="value"  TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="getPower_mW" DESC="Get Power in mW.">
+      <RETURN NAME="value"  TYPE="FLOAT"/>
+   </METHOD>
+</DRIVER>

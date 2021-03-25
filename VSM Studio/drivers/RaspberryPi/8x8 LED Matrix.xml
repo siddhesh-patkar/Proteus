@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Displays" FILE="Raspberry Pi/8x8 LED Matrix.pdsclip" FAMILY="Raspberry Pi" DESC="LED Matrix 8x8">
+   <PERIPHERAL TYPE="RPi LED Matrix" ELEMENT="U2" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="Matrix8x8"/>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="ht16k33">
+         <METHOD NAME="setSingle" DESC="Set value on single LED.">
+            <PARAMETER NAME="x"     TYPE="INTEGER" DEFAULT="0" DESC="X Coordinates"/>
+            <PARAMETER NAME="y"     TYPE="INTEGER" DEFAULT="0" DESC="Y Coordinates"/>
+            <PARAMETER NAME="value" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="On or Off"/>
+         </METHOD>
+         <METHOD NAME="drawLine" DESC="Draw a straight line.">
+            <PARAMETER NAME="x1"     TYPE="INTEGER" DEFAULT="0" DESC="First X Coordinate"/>
+            <PARAMETER NAME="y1"     TYPE="INTEGER" DEFAULT="0" DESC="First Y Coordinate"/>
+            <PARAMETER NAME="x2"     TYPE="INTEGER" DEFAULT="7" DESC="Seccond X Coordinates"/>
+            <PARAMETER NAME="y2"     TYPE="INTEGER" DEFAULT="7" DESC="Seccond Y Coordinates"/>
+         </METHOD>
+         <METHOD NAME="drawRectangle" DESC="Draw a Rectangle.">
+            <PARAMETER NAME="x"        TYPE="INTEGER" DEFAULT="0" DESC="X Coordinate"/>
+            <PARAMETER NAME="y"        TYPE="INTEGER" DEFAULT="0" DESC="Y Coordinate"/>
+            <PARAMETER NAME="length"   TYPE="INTEGER" DEFAULT="7" DESC="Rectangle Lenght"/>
+            <PARAMETER NAME="height"   TYPE="INTEGER" DEFAULT="7" DESC="Rectangle Height"/>
+            <PARAMETER NAME="fill"     TYPE="BOOLEAN" DEFAULT="FALSE" DESC="Line or filled rectangle"/>
+         </METHOD>
+         <METHOD NAME="clear" DESC="Clear the Matrix."/>
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>	
+  

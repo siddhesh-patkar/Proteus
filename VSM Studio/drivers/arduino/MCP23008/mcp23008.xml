@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino MCP23008 IO Extender -->
+<DRIVER HEADER="MCP23008.h">
+   <REQUIRE HEADER="Adafruit_MCP23008.h"/>
+   <REQUIRE HEADER="Wire.h"/>
+
+   <!-- GPIO DIRECTION enumeration -->
+   <ENUMERATION NAME="GPIO_DIRECTION">
+      <CONSTANT NAME="INPUT"   VALUE="0"/>
+      <CONSTANT NAME="OUTPUT"  VALUE="1"/>
+   </ENUMERATION>
+
+   <!-- GPIO REGISTERS enumeration. Not used at present but they might be in future for driver extension. -->
+   <ENUMERATION NAME="GPIO_REGISTERS">
+      <CONSTANT NAME="IODIR"   VALUE="0"/>
+      <CONSTANT NAME="IPOL"    VALUE="1"/>
+      <CONSTANT NAME="GPINTEN" VALUE="2"/>
+      <CONSTANT NAME="DEFVAL"  VALUE="3"/>
+      <CONSTANT NAME="INTCON"  VALUE="4"/>
+      <CONSTANT NAME="IOCON"   VALUE="5"/>
+      <CONSTANT NAME="GPPU"    VALUE="6"/>
+      <CONSTANT NAME="INTF"    VALUE="7"/>
+      <CONSTANT NAME="INTCAP"  VALUE="8"/>
+      <CONSTANT NAME="GPIO"    VALUE="9"/>
+      <CONSTANT NAME="OLAT"    VALUE="10"/>
+   </ENUMERATION>
+
+   <!-- Specialized Methods -->
+   <METHOD NAME="pinMode" DESC="Set a GPIO pin as INPUT or OUTPUT.">
+      <PARAMETER NAME="pin" TYPE="INTEGER"        DEFAULT="0"     DESC="GPIO pin (0-7)"/>
+      <PARAMETER NAME="dir" TYPE="GPIO_DIRECTION" DEFAULT="INPUT" DESC="Direction, INPUT/OUTPUT"/>
+   </METHOD>
+   <METHOD NAME="digitalWrite" DESC="Write a GPIO pin as 1 or 0.">
+      <PARAMETER NAME="pin"   TYPE="INTEGER"  DEFAULT="0"  DESC="GPIO pin (0-7)"/>
+      <PARAMETER NAME="state" TYPE="INTEGER"  DEFAULT="0"  DESC="GPIO pin state, 1 or 0"/>
+   </METHOD>
+   <METHOD NAME="pullUp" DESC="Enable pull-up resitor to a GPIO input.">
+      <PARAMETER NAME="pin"   TYPE="INTEGER"  DEFAULT="0"  DESC="GPIO pin (0-7)"/>
+      <PARAMETER NAME="state" TYPE="INTEGER"  DEFAULT="0"  DESC="GPIO pull-up, 1=enabled or 0=disabled"/>
+   </METHOD>
+   <METHOD NAME="digitalRead" DESC="Read from specified GPIO pin.">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DEFAULT="0" DESC="Channel number (0-7)"/>
+      <RETURN NAME="state"  TYPE="INTEGER"/>
+   </METHOD>
+
+   <!-- Read/write GPIO Register Methods -->
+   <METHOD NAME="readGPIO" DESC="Read byte from GPIO register (#9).">
+      <RETURN NAME="byte"  TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="writeGPIO" DESC="Write byte to GPIO register (#9).">
+      <PARAMETER NAME="byte" TYPE="INTEGER"  DEFAULT="0"  DESC="Value to write"/>
+   </METHOD>
+</DRIVER>

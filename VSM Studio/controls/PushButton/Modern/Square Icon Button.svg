@@ -1,0 +1,1957 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg340"
+   sodipodi:docname="Square Icon Button.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata344">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     id="namedview342"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="-91.737288"
+     inkscape:cy="50"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_6" />
+  <defs
+     id="defs26">
+    <linearGradient
+       id="ModernWhiteIconButtonSquare"
+       x1="96.47"
+       y1="96.47"
+       x2="3.52"
+       y2="3.53"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-opacity="0.3"
+         id="stop2" />
+      <stop
+         offset="0.56"
+         stop-opacity="0"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="ModernWhiteIconButtonSquare-2"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-opacity="0.4"
+         id="stop7" />
+      <stop
+         offset="0.43"
+         stop-opacity="0.21"
+         id="stop9" />
+      <stop
+         offset="0.5"
+         stop-opacity="0"
+         id="stop11" />
+    </linearGradient>
+    <linearGradient
+       id="ModernWhiteIconButtonSquare-3"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.44"
+         stop-opacity="0"
+         id="stop14" />
+      <stop
+         offset="1"
+         stop-opacity="0.3"
+         id="stop16" />
+    </linearGradient>
+    <radialGradient
+       id="ModernWhiteIconButtonSquareRadial"
+       cx="50"
+       cy="50"
+       r="44.56"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.44"
+         stop-opacity="0"
+         id="stop19" />
+      <stop
+         offset="1"
+         stop-opacity="0.3"
+         id="stop21" />
+    </radialGradient>
+    <linearGradient
+       id="ModernWhiteIconButtonSquare-4"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08"
+       xlink:href="#ModernWhiteIconButtonSquare-2" />
+    <linearGradient
+       id="ModernWhiteIconButtonSquare-5"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78"
+       xlink:href="#ModernWhiteIconButtonSquare-3" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4017"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4019"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4021"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4023"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4025"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4027"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4029"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4031"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4033"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4035"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4037"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4039"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4041"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4043"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4045"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4047"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4049"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4051"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4053"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4055"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4057"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4059"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4061"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4063"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4065"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4067"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4069"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4071"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4073"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4075"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4077"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4079"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4081"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4083"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4085"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4087"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4089"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4091"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4093"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4095"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4097"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4099"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4101"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4103"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4105"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4107"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4109"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4111"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4113"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4115"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4117"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4119"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4121"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4123"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4125"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4127"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4129"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4131"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4133"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4135"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4137"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4139"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4141"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4143"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4145"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4147"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4149"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4151"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4153"
+       x1="12.92"
+       y1="12.92"
+       x2="87.08"
+       y2="87.08" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4155"
+       x1="85.22"
+       y1="85.22"
+       x2="14.78"
+       y2="14.78" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-2"
+       id="linearGradient4157"
+       gradientUnits="userSpaceOnUse"
+       x1="13.01"
+       y1="13.01"
+       x2="86.99"
+       y2="86.99" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquare-3"
+       id="linearGradient4159"
+       gradientUnits="userSpaceOnUse"
+       x1="82.58"
+       y1="82.58"
+       x2="17.42"
+       y2="17.42" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#ModernWhiteIconButtonSquareRadial"
+       id="radialGradient4161"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="44.56" />
+  </defs>
+  <vfp:catalogue
+     PREFIX="Btn"
+     CATEGORY="Buttons"
+     DESC="Modern Square Icon Button" />
+  <g
+     vfp:class="PushButton"
+     data-name="Layer 6"
+     id="Layer_6"
+     inkscape:label="Root">
+    <rect
+       class="bounds"
+       y="0"
+       x="0"
+       id="rect30"
+       style="fill:#fffef5"
+       ry="12"
+       rx="12"
+       height="100"
+       width="100" />
+    <rect
+       y="0"
+       x="0"
+       id="rect32"
+       style="fill:url(#ModernWhiteIconButtonSquare)"
+       ry="12"
+       rx="12"
+       height="100"
+       width="100" />
+    <rect
+       class="lamp"
+       id="rect34"
+       style="fill:#e30613"
+       ry="11.77"
+       rx="11.77"
+       height="81.220001"
+       width="81.220001"
+       y="9.3900003"
+       x="9.3900003" />
+    <g
+       class="buttonIcon"
+       id="g4327"
+       inkscape:label="Blank"
+       style="display:none">
+      <g
+         style="display:inline"
+         inkscape:label="Up"
+         id="g52">
+        <path
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z"
+           style="fill:url(#linearGradient4023)"
+           id="path46"
+           inkscape:connector-curvature="0" />
+        <rect
+           x="12.11"
+           y="12.11"
+           width="75.779999"
+           height="75.779999"
+           rx="9.0900002"
+           ry="9.0900002"
+           class="buttonFace"
+           style="fill:#fffef5"
+           id="rect48" />
+        <rect
+           x="12.11"
+           y="12.11"
+           width="75.779999"
+           height="75.779999"
+           rx="9.0900002"
+           ry="9.0900002"
+           style="fill:url(#linearGradient4025)"
+           id="rect50" />
+      </g>
+      <g
+         inkscape:label="Down"
+         id="g44">
+        <path
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z"
+           style="fill:url(#linearGradient4017)"
+           id="path36"
+           inkscape:connector-curvature="0" />
+        <rect
+           x="14.95"
+           y="14.95"
+           width="70.089996"
+           height="70.089996"
+           rx="8.4099998"
+           ry="8.4099998"
+           class="buttonFace"
+           style="fill:#fffef5"
+           id="rect38" />
+        <rect
+           x="14.95"
+           y="14.95"
+           width="70.089996"
+           height="70.089996"
+           rx="8.4099998"
+           ry="8.4099998"
+           style="fill:url(#linearGradient4019)"
+           id="rect40" />
+        <rect
+           x="14.95"
+           y="14.95"
+           width="70.089996"
+           height="70.089996"
+           rx="8.4099998"
+           ry="8.4099998"
+           style="fill:url(#radialGradient4021)"
+           id="rect42" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g72"
+       inkscape:label="Play"
+       style="display:inline">
+      <g
+         id="g70"
+         sodipodi:insensitive="true"
+         style="display:inline">
+        <path
+           inkscape:connector-curvature="0"
+           id="path64"
+           style="fill:url(#linearGradient4033)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path66"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 78.79,12.11 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.59 a 9.12,9.12 0 0 0 9.09,9.09 h 57.58 a 9.12,9.12 0 0 0 9.09,-9.09 V 21.21 a 9.12,9.12 0 0 0 -9.09,-9.1 z M 48.88,33.18 a 1.125,1.125 0 1 1 2.25,0 v 13.94 a 1.125,1.125 0 1 1 -2.25,0 z M 50,67.95 a 15.75,15.75 0 0 1 -4.08,-31 1.3511199,1.3511199 0 0 1 0.7,2.61 13.05,13.05 0 1 0 6.76,0 1.3511199,1.3511199 0 0 1 0.7,-2.61 15.75,15.75 0 0 1 -4.08,31 z" />
+        <rect
+           id="rect68"
+           style="fill:url(#linearGradient4035)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g62"
+         style="display:none">
+        <path
+           inkscape:connector-curvature="0"
+           id="path54"
+           style="fill:url(#linearGradient4027)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path56"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 Z M 49,34.44 a 1.04,1.04 0 1 1 2.08,0 v 12.89 a 1.04,1.04 0 0 1 -2.08,0 z M 50,66.6 A 14.57,14.57 0 0 1 46.23,38 a 1.25,1.25 0 0 1 0.65,2.41 12.07,12.07 0 1 0 6.25,0 A 1.25,1.25 0 0 1 53.77,38 14.57,14.57 0 0 1 50,66.6 Z" />
+        <rect
+           id="rect58"
+           style="fill:url(#linearGradient4029)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect60"
+           style="fill:url(#radialGradient4031)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g92"
+       inkscape:label="Pause"
+       style="display:none">
+      <g
+         id="g90">
+        <path
+           inkscape:connector-curvature="0"
+           id="path84"
+           style="fill:url(#linearGradient4043)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path86"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 78.79,12.11 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.59 a 9.12,9.12 0 0 0 9.09,9.09 h 57.58 a 9.12,9.12 0 0 0 9.09,-9.09 V 21.21 a 9.12,9.12 0 0 0 -9.09,-9.1 z M 65.34,54.54 42,68.48 A 1.5,1.5 0 0 1 39.73,67.19 V 39.32 A 1.5,1.5 0 0 1 42,38 l 23.34,14 a 1.5,1.5 0 0 1 0,2.58 z" />
+        <rect
+           id="rect88"
+           style="fill:url(#linearGradient4045)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g82">
+        <path
+           inkscape:connector-curvature="0"
+           id="path74"
+           style="fill:url(#linearGradient4037)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path76"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 Z M 64.19,54.2 42.56,67.09 A 1.39,1.39 0 0 1 40.46,65.9 V 40.12 a 1.39,1.39 0 0 1 2.1,-1.19 l 21.63,12.89 a 1.39,1.39 0 0 1 0,2.38 z" />
+        <rect
+           id="rect78"
+           style="fill:url(#linearGradient4039)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect80"
+           style="fill:url(#radialGradient4041)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g112"
+       inkscape:label="Stop"
+       style="display:none">
+      <g
+         id="g110">
+        <path
+           inkscape:connector-curvature="0"
+           id="path104"
+           style="fill:url(#linearGradient4053)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path106"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 78.79,12.11 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.59 a 9.12,9.12 0 0 0 9.09,9.09 h 57.58 a 9.12,9.12 0 0 0 9.09,-9.09 V 21.21 a 9.12,9.12 0 0 0 -9.09,-9.1 z M 40.87,63.57 a 1.5,1.5 0 0 1 -3,0 V 36.18 a 1.5,1.5 0 0 1 3,0 z m 21.25,0.25 a 1.5,1.5 0 0 1 -3,0 V 36.43 a 1.5,1.5 0 0 1 3,0 z" />
+        <rect
+           id="rect108"
+           style="fill:url(#linearGradient4055)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g102">
+        <path
+           inkscape:connector-curvature="0"
+           id="path94"
+           style="fill:url(#linearGradient4047)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path96"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 Z M 41.56,62.55 a 1.39,1.39 0 0 1 -2.78,0 V 37.21 a 1.39,1.39 0 0 1 2.78,0 z m 19.66,0.24 a 1.39,1.39 0 0 1 -2.78,0 V 37.45 a 1.39,1.39 0 0 1 2.78,0 z" />
+        <rect
+           id="rect98"
+           style="fill:url(#linearGradient4049)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect100"
+           style="fill:url(#radialGradient4051)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g132"
+       inkscape:label="FastForward"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <g
+         id="g130">
+        <path
+           inkscape:connector-curvature="0"
+           id="path124"
+           style="fill:url(#linearGradient4063)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path126"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 78.79,12.11 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.59 a 9.12,9.12 0 0 0 9.09,9.09 h 57.58 a 9.12,9.12 0 0 0 9.09,-9.09 V 21.21 a 9.12,9.12 0 0 0 -9.09,-9.1 z M 63.87,62.37 a 1.5,1.5 0 0 1 -1.5,1.5 H 37.63 a 1.5,1.5 0 0 1 -1.5,-1.5 V 37.63 a 1.5,1.5 0 0 1 1.5,-1.5 h 24.74 a 1.5,1.5 0 0 1 1.5,1.5 z" />
+        <rect
+           id="rect128"
+           style="fill:url(#linearGradient4065)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g122">
+        <path
+           inkscape:connector-curvature="0"
+           id="path114"
+           style="fill:url(#linearGradient4057)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path116"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 Z M 62.83,61.44 a 1.39,1.39 0 0 1 -1.39,1.39 H 38.56 A 1.39,1.39 0 0 1 37.17,61.44 V 38.56 a 1.39,1.39 0 0 1 1.39,-1.39 h 22.88 a 1.39,1.39 0 0 1 1.39,1.39 z" />
+        <rect
+           id="rect118"
+           style="fill:url(#linearGradient4059)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect120"
+           style="fill:url(#radialGradient4061)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g152"
+       inkscape:label="FastForward"
+       style="display:none">
+      <g
+         id="g150">
+        <path
+           inkscape:connector-curvature="0"
+           id="path144"
+           style="fill:url(#linearGradient4073)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path146"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 78.79,12.11 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.59 a 9.12,9.12 0 0 0 9.09,9.09 h 57.58 a 9.12,9.12 0 0 0 9.09,-9.09 V 21.21 a 9.12,9.12 0 0 0 -9.09,-9.1 z m -10,39.12 -22.3,13.33 a 1.43,1.43 0 0 1 -2.17,-1.23 v -4.14 l -9,5.37 A 1.43,1.43 0 0 1 33.15,63.33 V 36.67 a 1.43,1.43 0 0 1 2.17,-1.23 l 9,5.37 v -4.14 a 1.43,1.43 0 0 1 2.17,-1.23 l 22.35,13.33 a 1.43,1.43 0 0 1 0,2.46 z" />
+        <rect
+           id="rect148"
+           style="fill:url(#linearGradient4075)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g142">
+        <path
+           inkscape:connector-curvature="0"
+           id="path134"
+           style="fill:url(#linearGradient4067)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path136"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 Z M 67.43,51.14 46.75,63.47 a 1.33,1.33 0 0 1 -2,-1.14 V 58.5 l -8.33,5 a 1.33,1.33 0 0 1 -2,-1.14 V 37.67 a 1.33,1.33 0 0 1 2,-1.14 l 8.33,5 v -3.86 a 1.33,1.33 0 0 1 2,-1.14 l 20.68,12.33 a 1.33,1.33 0 0 1 0,2.28 z" />
+        <rect
+           id="rect138"
+           style="fill:url(#linearGradient4069)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect140"
+           style="fill:url(#radialGradient4071)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g172"
+       inkscape:label="Rewind"
+       style="display:none">
+      <g
+         id="g170">
+        <path
+           inkscape:connector-curvature="0"
+           id="path164"
+           style="fill:url(#linearGradient4083)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path166"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 21.21,87.89 H 78.79 A 9.12,9.12 0 0 0 87.88,78.8 V 21.21 A 9.12,9.12 0 0 0 78.79,12.12 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.58 a 9.12,9.12 0 0 0 9.09,9.1 z m 10,-39.12 22.3,-13.33 a 1.43,1.43 0 0 1 2.17,1.23 v 4.14 l 9,-5.37 a 1.43,1.43 0 0 1 2.17,1.23 v 26.66 a 1.43,1.43 0 0 1 -2.17,1.23 l -9,-5.37 v 4.14 a 1.43,1.43 0 0 1 -2.17,1.23 L 31.16,51.23 a 1.43,1.43 0 0 1 0,-2.46 z" />
+        <rect
+           id="rect168"
+           style="fill:url(#linearGradient4085)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g162">
+        <path
+           inkscape:connector-curvature="0"
+           id="path154"
+           style="fill:url(#linearGradient4077)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path156"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 Z M 32.57,48.81 53.25,36.53 a 1.33,1.33 0 0 1 2,1.14 v 3.83 l 8.33,-5 a 1.33,1.33 0 0 1 2,1.14 v 24.69 a 1.33,1.33 0 0 1 -2,1.14 l -8.33,-5 v 3.83 a 1.33,1.33 0 0 1 -2,1.14 L 32.57,51.14 a 1.33,1.33 0 0 1 0,-2.28 z" />
+        <rect
+           id="rect158"
+           style="fill:url(#linearGradient4079)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect160"
+           style="fill:url(#radialGradient4081)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g196"
+       inkscape:label="Record"
+       style="display:none">
+      <g
+         id="g194">
+        <path
+           inkscape:connector-curvature="0"
+           id="path186"
+           style="fill:url(#linearGradient4093)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <rect
+           id="rect188"
+           class="buttonFace"
+           style="fill:#fffef5"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+        <circle
+           id="circle190"
+           style="fill:#e52421"
+           r="9.1000004"
+           cy="50"
+           cx="50" />
+        <rect
+           id="rect192"
+           style="fill:url(#linearGradient4095)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g184">
+        <path
+           inkscape:connector-curvature="0"
+           id="path174"
+           style="fill:url(#linearGradient4087)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <rect
+           id="rect176"
+           class="buttonFace"
+           style="fill:#fffef5"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <circle
+           id="circle178"
+           style="fill:#e52421"
+           r="8.4099998"
+           cy="49.5"
+           cx="50.380001" />
+        <rect
+           id="rect180"
+           style="fill:url(#linearGradient4089)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect182"
+           style="fill:url(#radialGradient4091)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g216"
+       inkscape:label="JumpForward"
+       style="display:none">
+      <g
+         id="g214">
+        <path
+           inkscape:connector-curvature="0"
+           id="path208"
+           style="fill:url(#linearGradient4103)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path210"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 78.79,12.11 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.59 a 9.12,9.12 0 0 0 9.09,9.09 h 57.58 a 9.12,9.12 0 0 0 9.09,-9.09 V 21.21 a 9.12,9.12 0 0 0 -9.09,-9.1 z M 63.19,63.7 a 1.5,1.5 0 1 1 -3,0 V 52.64 L 39.08,65.23 A 1.5,1.5 0 0 1 36.81,63.94 V 36.06 a 1.5,1.5 0 0 1 2.27,-1.29 L 60.19,47.36 V 36.3 a 1.5,1.5 0 0 1 3,0 z" />
+        <rect
+           id="rect212"
+           style="fill:url(#linearGradient4105)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g206">
+        <path
+           inkscape:connector-curvature="0"
+           id="path198"
+           style="fill:url(#linearGradient4097)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path200"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 Z M 62.2,62.67 a 1.39,1.39 0 1 1 -2.78,0 V 52.44 L 39.9,64.08 A 1.39,1.39 0 0 1 37.8,62.89 V 37.11 a 1.39,1.39 0 0 1 2.1,-1.19 L 59.42,47.56 V 37.33 a 1.39,1.39 0 0 1 2.78,0 z" />
+        <rect
+           id="rect202"
+           style="fill:url(#linearGradient4099)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect204"
+           style="fill:url(#radialGradient4101)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g236"
+       inkscape:label="JumpBack"
+       style="display:none">
+      <g
+         id="g234">
+        <path
+           inkscape:connector-curvature="0"
+           id="path228"
+           style="fill:url(#linearGradient4113)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path230"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 21.21,87.89 H 78.79 A 9.12,9.12 0 0 0 87.88,78.8 V 21.21 A 9.12,9.12 0 0 0 78.79,12.12 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.58 a 9.12,9.12 0 0 0 9.09,9.1 z M 36.81,36.3 a 1.5,1.5 0 0 1 3,0 V 47.36 L 60.92,34.77 a 1.5,1.5 0 0 1 2.27,1.29 v 27.88 a 1.5,1.5 0 0 1 -2.27,1.29 L 39.81,52.64 V 63.7 a 1.5,1.5 0 1 1 -3,0 z" />
+        <rect
+           id="rect232"
+           style="fill:url(#linearGradient4115)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g226">
+        <path
+           inkscape:connector-curvature="0"
+           id="path218"
+           style="fill:url(#linearGradient4107)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path220"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 Z M 37.8,37.33 a 1.39,1.39 0 1 1 2.78,0 V 47.56 L 60.1,35.92 a 1.39,1.39 0 0 1 2.1,1.19 v 25.78 a 1.39,1.39 0 0 1 -2.1,1.19 L 40.58,52.44 v 10.23 a 1.39,1.39 0 0 1 -2.78,0 z" />
+        <rect
+           id="rect222"
+           style="fill:url(#linearGradient4109)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect224"
+           style="fill:url(#radialGradient4111)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g256"
+       inkscape:label="SoundUp"
+       style="display:none">
+      <g
+         id="g254">
+        <path
+           inkscape:connector-curvature="0"
+           id="path248"
+           style="fill:url(#linearGradient4123)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path250"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 78.79,12.11 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.59 a 9.12,9.12 0 0 0 9.09,9.09 h 57.58 a 9.12,9.12 0 0 0 9.09,-9.09 V 21.21 a 9.12,9.12 0 0 0 -9.09,-9.1 z m -30.1,33.25 v 16.5 a 0.6,0.6 0 0 1 -0.6,0.6 l -9.86,-6.64 h -7 a 0.6,0.6 0 0 1 -0.6,-0.6 v -9.86 a 0.6,0.6 0 0 1 0.6,-0.6 h 7 l 9.86,-6.64 a 0.6,0.6 0 0 1 0.6,0.6 z m 0.78,10.29 a 1,1 0 0 1 0.95,-0.95 4.705,4.705 0 0 0 0,-9.41 0.95,0.95 0 0 1 0,-1.9 6.605,6.605 0 0 1 0,13.21 1,1 0 0 1 -0.95,-0.95 z m 2.83,3.5 a 1,1 0 0 1 0.95,-0.95 8.21,8.21 0 0 0 0,-16.42 0.95,0.95 0 0 1 0,-1.9 10.11,10.11 0 0 1 0,20.21 1,1 0 0 1 -0.96,-0.93 z m 3.3,5.4 a 0.95,0.95 0 1 1 0,-1.9 12.66,12.66 0 0 0 0,-25.32 0.95,0.95 0 0 1 0,-1.9 14.56,14.56 0 0 1 0,29.12 z" />
+        <rect
+           id="rect252"
+           style="fill:url(#linearGradient4125)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g246">
+        <path
+           inkscape:connector-curvature="0"
+           id="path238"
+           style="fill:url(#linearGradient4117)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path240"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 Z M 48.79,45.71 V 61 a 0.55,0.55 0 0 1 -0.55,0.55 l -9.12,-6.14 h -6.44 a 0.55,0.55 0 0 1 -0.55,-0.55 v -9.15 a 0.55,0.55 0 0 1 0.55,-0.55 h 6.44 L 48.23,39 a 0.55,0.55 0 0 1 0.55,0.55 z m 0.72,9.52 a 0.88,0.88 0 0 1 0.88,-0.88 4.35,4.35 0 1 0 0,-8.7 0.88,0.88 0 0 1 0,-1.76 6.11,6.11 0 1 1 0,12.21 0.88,0.88 0 0 1 -0.88,-0.87 z m 2.61,3.24 a 0.88,0.88 0 0 1 0.88,-0.88 7.59,7.59 0 0 0 0,-15.18 0.88,0.88 0 0 1 0,-1.76 9.35,9.35 0 0 1 0,18.7 0.88,0.88 0 0 1 -0.88,-0.88 z m 3.05,5 a 0.88,0.88 0 0 1 0,-1.76 11.71,11.71 0 1 0 0,-23.42 0.88,0.88 0 0 1 0,-1.76 13.47,13.47 0 1 1 0,26.93 z" />
+        <rect
+           id="rect242"
+           style="fill:url(#linearGradient4119)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect244"
+           style="fill:url(#radialGradient4121)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g276"
+       inkscape:label="SoundDown"
+       style="display:none">
+      <g
+         id="g274">
+        <path
+           inkscape:connector-curvature="0"
+           id="path268"
+           style="fill:url(#linearGradient4133)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path270"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 78.79,12.11 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.59 a 9.12,9.12 0 0 0 9.09,9.09 h 57.58 a 9.12,9.12 0 0 0 9.09,-9.09 V 21.21 a 9.12,9.12 0 0 0 -9.09,-9.1 z m -23.48,33 v 16.5 a 0.6,0.6 0 0 1 -0.6,0.6 l -9.86,-6.64 h -7 a 0.6,0.6 0 0 1 -0.6,-0.6 v -9.9 a 0.6,0.6 0 0 1 0.6,-0.6 h 7 l 9.86,-6.64 a 0.6,0.6 0 0 1 0.6,0.6 z M 57,56.31 a 0.95,0.95 0 0 1 0,-1.9 4.705,4.705 0 1 0 0,-9.41 0.95,0.95 0 0 1 0,-1.9 6.605,6.605 0 1 1 0,13.21 z" />
+        <rect
+           id="rect272"
+           style="fill:url(#linearGradient4135)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g266">
+        <path
+           inkscape:connector-curvature="0"
+           id="path258"
+           style="fill:url(#linearGradient4127)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path260"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 Z M 54.92,45.44 V 60.7 a 0.55,0.55 0 0 1 -0.55,0.55 l -9.12,-6.14 h -6.44 a 0.55,0.55 0 0 1 -0.55,-0.55 v -9.12 a 0.55,0.55 0 0 1 0.55,-0.55 h 6.44 l 9.12,-6.14 a 0.55,0.55 0 0 1 0.55,0.55 z m 1.6,10.4 a 0.88,0.88 0 0 1 0,-1.76 4.35,4.35 0 1 0 0,-8.7 0.88,0.88 0 0 1 0,-1.76 6.11,6.11 0 1 1 0,12.21 z" />
+        <rect
+           id="rect262"
+           style="fill:url(#linearGradient4129)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect264"
+           style="fill:url(#radialGradient4131)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g296"
+       inkscape:label="Mute"
+       style="display:none">
+      <g
+         id="g294">
+        <path
+           inkscape:connector-curvature="0"
+           id="path288"
+           style="fill:url(#linearGradient4143)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path290"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 78.79,12.11 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.59 a 9.12,9.12 0 0 0 9.09,9.09 h 57.58 a 9.12,9.12 0 0 0 9.09,-9.09 V 21.21 a 9.12,9.12 0 0 0 -9.09,-9.1 z m -26.28,33 v 16.5 a 0.6,0.6 0 0 1 -0.6,0.6 l -9.86,-6.64 h -7 a 0.6,0.6 0 0 1 -0.6,-0.6 v -9.9 a 0.6,0.6 0 0 1 0.6,-0.6 h 7 l 9.86,-6.64 a 0.6,0.6 0 0 1 0.6,0.6 z m 12.68,9.31 a 0.70710678,0.70710678 0 1 1 -1,1 l -3.89,-3.89 -4,4 a 0.70710678,0.70710678 0 1 1 -1,-1 l 4,-4 -4.1,-4.1 a 0.70710678,0.70710678 0 1 1 1,-1 l 4.1,4.1 4,-4 a 0.70710678,0.70710678 0 1 1 1,1 l -4,4 z" />
+        <rect
+           id="rect292"
+           style="fill:url(#linearGradient4145)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g286">
+        <path
+           inkscape:connector-curvature="0"
+           id="path278"
+           style="fill:url(#linearGradient4137)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path280"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 Z M 52.33,45.44 V 60.7 a 0.55,0.55 0 0 1 -0.55,0.55 l -9.12,-6.14 h -6.44 a 0.55,0.55 0 0 1 -0.55,-0.55 v -9.12 a 0.55,0.55 0 0 1 0.55,-0.55 h 6.44 l 9.12,-6.14 a 0.55,0.55 0 0 1 0.55,0.55 z M 64.06,54 a 0.64346717,0.64346717 0 1 1 -0.91,0.91 l -3.6,-3.6 -3.7,3.7 A 0.64346717,0.64346717 0 0 1 54.94,54.1 l 3.7,-3.7 -3.79,-3.79 a 0.64346717,0.64346717 0 0 1 0.91,-0.91 l 3.79,3.79 3.69,-3.69 a 0.64346717,0.64346717 0 0 1 0.91,0.91 l -3.69,3.69 z" />
+        <rect
+           id="rect282"
+           style="fill:url(#linearGradient4139)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect284"
+           style="fill:url(#radialGradient4141)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g316"
+       inkscape:label="Refresh"
+       style="display:none">
+      <g
+         id="g314">
+        <path
+           inkscape:connector-curvature="0"
+           id="path308"
+           style="fill:url(#linearGradient4153)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path310"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 78.79,12.11 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.59 a 9.12,9.12 0 0 0 9.09,9.09 h 57.58 a 9.12,9.12 0 0 0 9.09,-9.09 V 21.21 a 9.12,9.12 0 0 0 -9.09,-9.1 z M 64.64,51.9 56.2,42.72 l 4.42,-1 A 14.41,14.41 0 1 0 47.22,64.37 1.42,1.42 0 0 1 47.06,67.2 H 46.89 A 17.27,17.27 0 1 1 63.6,41.07 L 68.37,40 Z" />
+        <rect
+           id="rect312"
+           style="fill:url(#linearGradient4155)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g306">
+        <path
+           inkscape:connector-curvature="0"
+           id="path298"
+           style="fill:url(#linearGradient4147)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path300"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 Z m -13.1,36.8 -7.8,-8.49 4.09,-0.91 a 13.33,13.33 0 1 0 -12.4,21 1.3121452,1.3121452 0 0 1 -0.15,2.62 H 47.13 A 16,16 0 1 1 62.58,41.74 l 4.41,-1 z" />
+        <rect
+           id="rect302"
+           style="fill:url(#linearGradient4149)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect304"
+           style="fill:url(#radialGradient4151)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g336"
+       style="display:none"
+       inkscape:label="Lamp">
+      <g
+         id="g334">
+        <path
+           inkscape:connector-curvature="0"
+           id="path328"
+           style="fill:url(#ModernWhiteIconButtonSquare-4)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path330"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 78.79,12.11 H 21.21 a 9.12,9.12 0 0 0 -9.09,9.09 v 57.59 a 9.12,9.12 0 0 0 9.09,9.09 h 57.58 a 9.12,9.12 0 0 0 9.09,-9.09 V 21.21 a 9.12,9.12 0 0 0 -9.09,-9.1 z m -21.33,19.07 2.19,1.17 -2.16,4 L 55.3,35.2 Z M 49.22,30 c 0.67,0 1.35,0 2.06,0 v 4.39 h -2.41 a 1.76,1.76 0 0 1 -0.05,-0.31 c 0,-1.22 0,-2.45 0,-3.67 C 48.81,30.13 48.9,30 49.22,30 Z m -6.67,1.17 2.16,4 -2.18,1.18 -2.16,-4 z M 32.3,45.12 h 5 v 2.38 h -5 z m 2.42,10.8 -1,-2.25 4.41,-2 1,2.26 z m 3.37,-14.74 -3.92,-2.8 1.44,-2 3.93,2.81 z M 46.75,68 h 6.47 c -1.86,2.38 -4.22,2.93 -6.47,0 z m 6.48,-1.11 h -6.48 a 0.93,0.93 0 0 1 -1,-0.91 1,1 0 0 1 1,-0.91 h 6.48 a 0.89,0.89 0 0 1 1,0.92 c 0.01,0.52 -0.36,0.85 -1,0.85 z m 0.17,-3 h -6.81 c -0.64,0 -1,-0.35 -1,-0.92 0,-0.57 0.36,-0.87 1,-0.88 h 6.81 c 0.65,0 1,0.32 1,0.89 0,0.57 -0.4,0.89 -1,0.89 z m 4.83,-10.82 c -0.53,0.94 -1.08,1.86 -1.62,2.8 a 10.19,10.19 0 0 0 -1.64,5 h -2.38 a 7.87,7.87 0 0 1 0.33,-2.65 17.68,17.68 0 0 1 1.86,-4.12 c 0.79,-1.42 1.63,-2.82 2.28,-4.29 a 7.48,7.48 0 0 0 0.2,-5.74 6.74,6.74 0 0 0 -5.07,-4.38 8.15,8.15 0 0 0 -7.75,1.78 6.6,6.6 0 0 0 -2.14,4.71 10.75,10.75 0 0 0 1.79,6.06 c 0.87,1.54 1.75,3.07 2.51,4.67 a 8.69,8.69 0 0 1 0.83,4 H 45 c -0.07,-2.44 -1.32,-4.41 -2.5,-6.4 a 18.35,18.35 0 0 1 -2.4,-5.29 9.89,9.89 0 0 1 1.44,-8.22 9.41,9.41 0 0 1 6.2,-3.84 11,11 0 0 1 7.79,1.2 9,9 0 0 1 4.62,8 12.69,12.69 0 0 1 -1.92,6.7 z m 6.17,-16.7 1.44,2 -3.92,2.81 -1.45,-2 z m 0.94,19.58 -4.41,-1.78 0.92,-2.3 4.41,1.79 z M 67.7,47.5 h -5 v -2.39 h 5 z" />
+        <rect
+           id="rect332"
+           style="fill:url(#ModernWhiteIconButtonSquare-5)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g326">
+        <path
+           inkscape:connector-curvature="0"
+           id="path318"
+           style="fill:url(#linearGradient4157)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path320"
+           class="buttonFace"
+           style="fill:#fffef5"
+           d="M 76.64,15 H 23.36 A 8.44,8.44 0 0 0 15,23.36 V 76.64 A 8.44,8.44 0 0 0 23.36,85 H 76.64 A 8.44,8.44 0 0 0 85,76.64 V 23.36 A 8.44,8.44 0 0 0 76.64,15 Z m -19.74,17.59 2,1.08 -2,3.72 -2,-1.08 z m -7.62,-1.08 c 0.62,0 1.24,0 1.9,0 v 4.06 H 49 a 1.63,1.63 0 0 1 0,-0.28 c 0,-1.13 0,-2.26 0,-3.39 -0.1,-0.28 0,-0.4 0.28,-0.39 z m -6.17,1.08 2,3.71 -2,1.09 -2,-3.72 z m -9.48,12.89 h 4.58 v 2.2 h -4.58 z m 2.24,10 -0.95,-2.09 4.08,-1.84 0.94,2.09 z M 39,41.84 35.37,39.25 36.7,37.38 40.32,40 Z m 8,24.77 h 6 c -1.74,2.25 -3.91,2.75 -6,0 z m 6,-1 h -6 a 0.86,0.86 0 0 1 -0.95,-0.85 0.88,0.88 0 0 1 1,-0.84 h 6 a 0.83,0.83 0 0 1 0.93,0.85 c -0.06,0.5 -0.4,0.81 -0.98,0.81 z m 0.16,-2.75 h -6.3 c -0.6,0 -0.93,-0.32 -0.92,-0.85 0.01,-0.53 0.33,-0.81 0.91,-0.81 h 6.3 c 0.6,0 0.94,0.3 0.94,0.82 0,0.52 -0.35,0.81 -0.95,0.81 z m 4.47,-10 c -0.49,0.87 -1,1.72 -1.5,2.59 A 9.42,9.42 0 0 0 54.59,60 H 52.4 a 7.28,7.28 0 0 1 0.31,-2.45 16.35,16.35 0 0 1 1.72,-3.81 c 0.73,-1.31 1.5,-2.6 2.11,-4 a 6.92,6.92 0 0 0 0.19,-5.31 6.24,6.24 0 0 0 -4.73,-4.01 7.54,7.54 0 0 0 -7.17,1.65 6.11,6.11 0 0 0 -2,4.35 9.94,9.94 0 0 0 1.71,5.58 c 0.81,1.42 1.62,2.84 2.32,4.32 A 8,8 0 0 1 47.63,60 H 45.42 C 45.36,57.74 44.2,55.92 43.11,54.08 a 17,17 0 0 1 -2.22,-4.89 9.15,9.15 0 0 1 1.29,-7.55 8.7,8.7 0 0 1 5.73,-3.55 10.15,10.15 0 0 1 7.2,1.11 8.29,8.29 0 0 1 4.27,7.41 11.74,11.74 0 0 1 -1.77,6.22 z M 63.34,37.41 64.67,39.28 61,41.84 59.69,40 Z m 0.87,18.11 -4.07,-1.65 0.86,-2.15 4,1.65 z m 2.18,-7.81 h -4.6 v -2.2 h 4.58 z" />
+        <rect
+           id="rect322"
+           style="fill:url(#linearGradient4159)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect324"
+           style="fill:url(#radialGradient4161)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       style="display:none"
+       inkscape:label="Blank"
+       id="g4340"
+       class="buttonIcon">
+      <g
+         id="g4328"
+         inkscape:label="Up"
+         style="display:inline">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4322"
+           style="fill:url(#linearGradient4023)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <rect
+           id="rect4324"
+           style="fill:#fffef5"
+           class="buttonFace"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+        <rect
+           id="rect4326"
+           style="fill:url(#linearGradient4025)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g4338"
+         inkscape:label="Down">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4330"
+           style="fill:url(#linearGradient4017)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <rect
+           id="rect4332"
+           style="fill:#fffef5"
+           class="buttonFace"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect4334"
+           style="fill:url(#linearGradient4019)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect4336"
+           style="fill:url(#radialGradient4021)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       id="g4360"
+       inkscape:label="Blank"
+       style="display:none">
+      <g
+         style="display:inline"
+         inkscape:label="Up"
+         id="g4348">
+        <path
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z"
+           style="fill:url(#linearGradient4023)"
+           id="path4342"
+           inkscape:connector-curvature="0" />
+        <rect
+           x="12.11"
+           y="12.11"
+           width="75.779999"
+           height="75.779999"
+           rx="9.0900002"
+           ry="9.0900002"
+           class="buttonFace"
+           style="fill:#fffef5"
+           id="rect4344" />
+        <rect
+           x="12.11"
+           y="12.11"
+           width="75.779999"
+           height="75.779999"
+           rx="9.0900002"
+           ry="9.0900002"
+           style="fill:url(#linearGradient4025)"
+           id="rect4346" />
+      </g>
+      <g
+         inkscape:label="Down"
+         id="g4358">
+        <path
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z"
+           style="fill:url(#linearGradient4017)"
+           id="path4350"
+           inkscape:connector-curvature="0" />
+        <rect
+           x="14.95"
+           y="14.95"
+           width="70.089996"
+           height="70.089996"
+           rx="8.4099998"
+           ry="8.4099998"
+           class="buttonFace"
+           style="fill:#fffef5"
+           id="rect4352" />
+        <rect
+           x="14.95"
+           y="14.95"
+           width="70.089996"
+           height="70.089996"
+           rx="8.4099998"
+           ry="8.4099998"
+           style="fill:url(#linearGradient4019)"
+           id="rect4354" />
+        <rect
+           x="14.95"
+           y="14.95"
+           width="70.089996"
+           height="70.089996"
+           rx="8.4099998"
+           ry="8.4099998"
+           style="fill:url(#radialGradient4021)"
+           id="rect4356" />
+      </g>
+    </g>
+    <g
+       style="display:none"
+       inkscape:label="Blank"
+       id="g4380"
+       class="buttonIcon">
+      <g
+         id="g4368"
+         inkscape:label="Up"
+         style="display:inline">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4362"
+           style="fill:url(#linearGradient4023)"
+           d="m 79.07,12.56 a 8.4,8.4 0 0 1 8.37,8.37 v 58.14 a 8.4,8.4 0 0 1 -8.37,8.37 H 20.93 A 8.4,8.4 0 0 1 12.56,79.07 V 20.93 a 8.4,8.4 0 0 1 8.37,-8.37 h 58.14 m 0,-3 H 20.93 A 11.35,11.35 0 0 0 9.59,20.93 V 79.07 A 11.35,11.35 0 0 0 20.93,90.41 H 79.07 A 11.35,11.35 0 0 0 90.41,79.07 V 20.93 A 11.35,11.35 0 0 0 79.07,9.59 Z" />
+        <rect
+           id="rect4364"
+           style="fill:#fffef5"
+           class="buttonFace"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+        <rect
+           id="rect4366"
+           style="fill:url(#linearGradient4025)"
+           ry="9.0900002"
+           rx="9.0900002"
+           height="75.779999"
+           width="75.779999"
+           y="12.11"
+           x="12.11" />
+      </g>
+      <g
+         id="g4378"
+         inkscape:label="Down">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4370"
+           style="fill:url(#linearGradient4017)"
+           d="m 78.2,15.37 a 6.46,6.46 0 0 1 6.44,6.44 V 78.2 A 6.46,6.46 0 0 1 78.2,84.64 H 21.8 A 6.46,6.46 0 0 1 15.36,78.2 V 21.8 a 6.46,6.46 0 0 1 6.44,-6.44 h 56.4 m 0,-6 H 21.8 A 12.45,12.45 0 0 0 9.37,21.8 V 78.2 A 12.45,12.45 0 0 0 21.8,90.63 H 78.2 A 12.45,12.45 0 0 0 90.63,78.2 V 21.8 A 12.45,12.45 0 0 0 78.2,9.37 Z" />
+        <rect
+           id="rect4372"
+           style="fill:#fffef5"
+           class="buttonFace"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect4374"
+           style="fill:url(#linearGradient4019)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+        <rect
+           id="rect4376"
+           style="fill:url(#radialGradient4021)"
+           ry="8.4099998"
+           rx="8.4099998"
+           height="70.089996"
+           width="70.089996"
+           y="14.95"
+           x="14.95" />
+      </g>
+    </g>
+    <text
+       id="text4145"
+       y="-10"
+       x="50"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#00000c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve">label</text>
+  </g>
+</svg>

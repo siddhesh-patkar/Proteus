@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<COMPILER NAME="Arduino AVR" ID="ARDUINO"  VERSION="1.0.5" URL="http://www.arduino.cc/" DOWNLOAD_URL="http://downloads.labcenter.co.uk/vsmstudio/win/compilers/arduino-windows.exe" AVAILABILITY="Hosted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+
+  <!-- Arduino Pre-Processor -->
+  <TOOL NAME="APP" FILE="mksketch">
+    <OPTION NAME="-O " DESC="&quot;filename&quot; Write output to file &quot;filename&quot;"  PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-A " DESC="&quot;path&quot; Set Arduino path"  PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-C " DESC="&quot;board&quot; Prepare local copy of Arduino sources for build"  PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-F " DESC="&quot;clock&quot; Set F_CPU clock value"  PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-N " DESC="&quot;processor&quot; Set processor type"  PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-L " DESC="&quot;Platform&quot; Set platform. Default is AVR"  PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-D" DESC="Generate debugging information"/>
+    <OPTION NAME="-S " DESC="&quot;level&quot; Optimization level"  PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-M " DESC="&quot;directory&quot; Intermediate directory name. By default it is 'arduino'" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-T " DESC="&quot;options&quot; Compiler options" PARAM="STRING" ADVANCED="1" MULTIPLE="1"/>
+    <OPTION NAME="-R" DESC="Resolve library dependencies recursively" ADVANCED="1"/>
+    <OPTION NAME="-U" DESC="Libraries directory" ADVANCED="1" MULTIPLE="1"/>
+  </TOOL>
+
+  <!-- C Compiler -->
+  <TOOL NAME="CC" FILE="avr-gcc">
+    <!-- And C++ Compiler as well -->
+    <ALIAS NAME="CPP"/>
+    <!-- And Objective C and Objecive C++ Compiler as well -->
+    <ALIAS NAME="OC"/>
+    <!-- And assembler as well -->
+    <ALIAS NAME="ASM"/>
+    <!-- And linker as well -->
+    <ALIAS NAME="LD"/>
+    <!-- And librarian as well -->
+    <ALIAS NAME="LIB"/>
+    <!-- Options -->
+    <OPTION KIND="Overall" NAME="-c" DESC="Compile to object file" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-S" DESC="Compile only; do not assemble or link" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-E" DESC="Preprocess only; do not compile, assemble or link" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-o " DESC="Place the output into &lt;file&gt;" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-pass-exit-codes" DESC="Exit with highest error code from a phase" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-x " DESC="Specify the language of the input files (c, c++, none etc)" PARAM="STRING"/>
+    <OPTION KIND="Overall" NAME="-v" DESC="Display the programs invoked by the compiler" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="--version" DESC="Display compiler version information" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-ansi" DESC="A synonym for -std=c89 (for C) or -std=c++98 (for C++)" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-std=" DESC="Standard to conform to" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-fhosted" DESC="Assume normal C execution environment" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-ffreestanding" DESC="Do not assume that standard C libraries and 'main' exist" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-fopenmp" DESC="Enable OpenMP (implies -frecursive in Fortran)" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-traditional-cpp" DESC="Enable traditional preprocessing" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-fsigned-char" DESC="Make 'char' signed by default" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-funsigned-char" DESC="Make 'char' unsigned by default" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-ffor-scope" DESC="Scope of for-init-statement variables is local to the loop" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-fgnu-keywords" DESC="Recognize GNU-defined keywords" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-foperator-names" DESC="Recognize C++ keywords like 'compl' and 'xor'" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-frtti" DESC="Generate run time type descriptor information" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-fstats" DESC="Display statistics accumulated during compilation" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-nostdinc++" DESC="Do not search standard system include directories for C++" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Wnon-virtual-dtor" DESC="Warn about non-virtual destructors" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Wreorder" DESC="Warn when the compiler reorders code" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Wold-style-cast" DESC="Warn if a C-style cast is used in a program" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Woverloaded-virtual" DESC="Warn about overloaded virtual function names" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Wsign-promo" DESC="Warn when overload promotes from unsigned to signed" ADVANCED="1"/>
+    <OPTION KIND="Warning" NAME="-fsyntax-only" DESC=" Check for syntax errors, then stop" ADVANCED="1"/>
+    <OPTION KIND="Warning" NAME="-pedantic" DESC="Issue warnings needed for strict compliance to the standard" ADVANCED="1"/>
+    <OPTION KIND="Warning" NAME="-w" DESC="Suppress warnings" ADVANCED="1"/>
+    <OPTION KIND="Warning" NAME="-W" DESC="Warning options" SEPARATOR="" MULTIPLE="1" PARAM="CHOICE">
+      <PARAM VALUE="" DESC="Supress all warnings"/>
+      <PARAM VALUE="extra" DESC=""/>
+      <PARAM VALUE="all" DESC=""/>
+      <PARAM VALUE="address" DESC=""/>
+      <PARAM VALUE="array-bounds" DESC=""/>
+      <PARAM VALUE="fatal-errors" DESC=""/>
+      <PARAM VALUE="ignored-qualifiers" DESC=""/>
+      <PARAM VALUE="implicit-function-declaration" DESC=""/>
+      <PARAM VALUE="implicit-int" DESC=""/>
+      <PARAM VALUE="inline" DESC=""/>
+      <PARAM VALUE="unsafe-loop-optimizations" DESC=""/>
+      <PARAM VALUE="overlength-strings" DESC=""/>
+      <PARAM VALUE="redundant-decls" DESC=""/>
+      <PARAM VALUE="return-type" DESC=""/>
+      <PARAM VALUE="sign-compare" DESC=""/>
+      <PARAM VALUE="sign-conversion" DESC=""/>
+      <PARAM VALUE="uninitialized" DESC=""/>
+      <PARAM VALUE="unknown-pragmas" DESC=""/>
+      <PARAM VALUE="unreachable-code" DESC=""/>
+      <PARAM VALUE="unused-function" DESC=""/>
+      <PARAM VALUE="unused-variable" DESC=""/>
+    </OPTION>
+    <OPTION KIND="Debugging" NAME="-dumpmachine" DESC="Display the compiler's target processor" ADVANCED="1"/>
+    <OPTION KIND="Debugging" NAME="-dumpversion" DESC="Display the version of the compiler" ADVANCED="1"/>
+    <OPTION KIND="Debugging" NAME="-feliminate-dwarf2-dups" DESC="Perform DWARF2 duplicate elimination" ADVANCED="1"/>
+    <OPTION NAME="-g" KIND="Debugging" DESC="Generate debug information " PARAM="CHOICE" SEPARATOR="">
+      <PARAM VALUE="" DESC="in default format"/>
+      <PARAM VALUE="coff" DESC="in COFF format"/>
+      <PARAM VALUE="gdb" DESC="in default extended"/>
+      <PARAM VALUE="stabs" DESC="in STABS format"/>
+      <PARAM VALUE="stabs+" DESC="in extended STABS"/>
+      <PARAM VALUE="dwarf-2" DESC="in DWARF v2 format"/>
+      <PARAM VALUE="vms" DESC="in VMS formats"/>
+      <PARAM VALUE="xcoff" DESC="in XCOFF format"/>
+      <PARAM VALUE="xcoff+" DESC="in extended XCOFF"/>
+    </OPTION>
+    <OPTION KIND="Debugging" NAME="-p" DESC="Enable function profiling" ADVANCED="1"/>
+    <OPTION KIND="Debugging" NAME="-save-temps" DESC="Do not delete intermediate files" ADVANCED="1"/>
+    <OPTION KIND="Debugging" NAME="-time" DESC="Time the execution of each subprocess" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-O" DESC="Optimization level. 0 is none, s optimizes for space" PARAM="CHOICE" SEPARATOR="">
+      <PARAM VALUE="0" DESC=""/>
+      <PARAM VALUE="1" DESC=""/>
+      <PARAM VALUE="2" DESC=""/>
+      <PARAM VALUE="3" DESC=""/>
+      <PARAM VALUE="s" DESC=""/>
+    </OPTION>
+    <OPTION KIND="Optimization" NAME="-falign-labels" DESC="-falign-labels[=n]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-ffast-math" DESC="" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-ffinite-math-only" DESC="Assume no NaNs or infinities are generated" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-finline-functions" DESC="Integrate simple functions into their callers" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-finline-functions-called-once" DESC="Integrate functions called once into their callers" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-fno-inline" DESC="" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-fomit-frame-pointer" DESC="When possible do not generate stack frames" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-fwhole-program" DESC="Perform whole program optimizations" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-C" DESC="Do not discard comments" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-D" DESC="Define a macro -Dmacro[=defn]" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Preprocessor" NAME="-H" DESC="Print the name of header files as they are used" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-include " DESC="-include file" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Preprocessor" NAME="-imultilib " DESC="-imultilib dir" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-MD" DESC="Generate make dependencies and compile" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-MP" DESC="Generate phony targets for all headers" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-nostdinc" DESC="Do not search standard system include directories (those specified with -isystem will still be used)" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-remap" DESC="Remap file names when including files" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-undef" DESC="Do not predefine system-specific and GCC-specific macros" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-U" DESC="Undefine &lt;macro&gt;>" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Preprocessor" NAME="-Wp," DESC="Pass comma-separated &lt;options&gt; on to the preprocessor" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-Xpreprocessor " DESC="-Xpreprocessor option" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Assembler" TOOL="ASM" NAME="-Wa," DESC="-Wa,options: comma separated list of assembler options" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Assembler" TOOL="ASM" NAME="-Xassembler " DESC="-Xassembler option" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-l " DESC="-l library (to search for)" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-nostartfiles" DESC="" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-nodefaultlibs" DESC="" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-nostdlib" DESC="Only use library directories specified on the command line" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-pie" DESC="Create a position independent executable" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-static" DESC="Do not link against shared libraries" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-shared" DESC="Create a shared library" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-Wl," DESC="-Wl,options: comma separted list of linker options" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-Xlinker " DESC="-Xlinker option" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-T " DESC="Linker script" PARAM="STRING" ID="LKR"/>
+    <OPTION KIND="Directory" NAME="-B " DESC="-B dir (add dir to search path)" PARAM="STRING"/>
+    <OPTION KIND="Directory" NAME="-I " DESC="Add DIR to search list for .include directives" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Directory" NAME="-L" DESC="Add DIRECTORY to library search path" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Directory" NAME="-specs=" DESC="-specs=file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Target" NAME="-b " DESC="Run gcc for target &lt;machine&gt;, if installed" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fexceptions" DESC="Enable exception handling" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fpic" DESC="Generate position-independent code if possible (small mode)" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fPIC" DESC="Generate position-independent code if possible (large mode)" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fpie" DESC="Generate position-independent code for executables if possible (small mode)" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fPIE" DESC="Generate position-independent code for executables if possible (large mode)" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fshort-enums" DESC="Use the narrowest integer type possible for enumeration types" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fshort-double" DESC="Use the same size for double as for float" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fshort-wchar" DESC="Force the underlying type for 'wchar_t' to be 'unsigned short'" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fverbose-asm" DESC="Add extra commentary to assembler output" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fpack-struct" DESC="structure packing [member alignment] -fpack-struct[=n]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fbounds-check" DESC="Generate code to check bounds before indexing arrays" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mcall-prologues" DESC="Use subroutines for function prologues and epilogues" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mint8" DESC="Use an 8-bit 'int' type" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mmcu=" DESC="Select the target MCU" PARAM="STRING"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mno-interrupts" DESC="Change the stack pointer without disabling interrupts" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mno-tablejump" DESC="Do not generate tablejump insns" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mpmem-wrap-around" DESC="Make the linker relaxation machine assume that a program counter wrap-around occures." ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mrelax" DESC="Relax branches" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mshort-calls" DESC="Use rjmp/rcall (limited range) on >8K devices" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-msize" DESC="Output instruction sizes to the asm file" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mtiny-stack" DESC="Change only the low 8 bits of the stack pointer" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mall-opcodes" DESC="accept all AVR opcodes, even if not supported by MCU" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mno-skip-bug" DESC="disable warnings for skipping two-word instructions (default for avr4, avr5)" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mno-wrap" DESC="reject rjmp/rcall instructions with 8K wrap-around (default for avr3, avr5)" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="--build-id=" DESC="Generate build ID note" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="--pmem-wrap-around=" DESC="Make the linker relaxation machine assume that a program counter wrap-around occures at given address.  Supported values: 8k, 16k, 32k and 64k." PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="--no-call-ret-replacement" DESC="The relaxation machine normally will substitute two immediately following call/ret instructions by a single jump instruction. This option disables this optimization." ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="--no-stubs" DESC="If the linker detects to attempt to access an instruction beyond 128k by a reloc that is limited to 128k max, it inserts a jump stub. You can de-active this with this switch." ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="--debug-stubs" DESC="Used for debugging avr-ld." ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="--debug-relax" DESC="Used for debugging avr-ld." ADVANCED="1"/>
+  </TOOL>
+  <!--Object copy tool to build binaries-->
+  <TOOL NAME="OBJ" FILE="avr-objcopy">
+    <OPTION NAME="" DESC="Generic Option" MULTIPLE="1" PARAM="STRING"/>
+  </TOOL>
+  
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="AVR">
+    <CONTROLLER NAME="ATmega168">
+      <PROPERTY NAME="PROGRAMMER" VALUE="AVRDUDE"/>
+      <OPTION TOOL="CC" NAME="-mmcu=" VALUE="atmega168" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="-mmcu=" VALUE="atmega168" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-mmcu=" VALUE="atmega168" DEFAULT="1"/>
+      <OPTION TOOL="APP" NAME="-N " VALUE="atmega168"/>
+      <OPTION TOOL="APP" NAME="-F " VALUE="%CLOCK%"/>
+      <PROPERTY NAME="BOARD" VALUE="pro"/>
+      <PROPERTY NAME="CLOCK" VALUE="16000000" BOARDVALUE="16000000"/>
+      <PROPERTY NAME="INTERFACE" VALUE="Arduino (ATmega168)"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega328P">
+      <PROPERTY NAME="PROGRAMMER" VALUE="AVRDUDE"/>
+      <OPTION TOOL="CC" NAME="-mmcu=" VALUE="atmega328p" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="-mmcu=" VALUE="atmega328p" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-mmcu=" VALUE="atmega328p" DEFAULT="1"/>
+      <OPTION TOOL="APP" NAME="-N " VALUE="atmega328p"/>
+      <OPTION TOOL="APP" NAME="-F " VALUE="%CLOCK%"/>
+      <PROPERTY NAME="BOARD" VALUE="pro328"/>
+      <PROPERTY NAME="CLOCK" VALUE="16000000" BOARDVALUE="16000000"/>
+      <PROPERTY NAME="INTERFACE" VALUE="Arduino (ATmega328)"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega2560">
+      <PROPERTY NAME="PROGRAMMER" VALUE="AVRDUDE"/>
+      <OPTION TOOL="CC" NAME="-mmcu=" VALUE="atmega2560" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="-mmcu=" VALUE="atmega2560" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-mmcu=" VALUE="atmega2560" DEFAULT="1"/>
+      <OPTION TOOL="APP" NAME="-N " VALUE="atmega2560"/>
+      <OPTION TOOL="APP" NAME="-F " VALUE="%CLOCK%"/>
+      <PROPERTY NAME="BOARD" VALUE="mega2560"/>
+      <PROPERTY NAME="CLOCK" VALUE="16000000" BOARDVALUE="16000000"/>
+      <PROPERTY NAME="INTERFACE" VALUE="Arduino Mega2560"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32U4">
+      <PROPERTY NAME="PROGRAMMER" VALUE="LEODUDE"/>
+      <OPTION TOOL="CC" NAME="-mmcu=" VALUE="atmega32u4" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="-mmcu=" VALUE="atmega32u4" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-mmcu=" VALUE="atmega32u4" DEFAULT="1"/>
+      <OPTION TOOL="APP" NAME="-N " VALUE="atmega32u4"/>
+      <OPTION TOOL="APP" NAME="-F " VALUE="%CLOCK%"/>
+      <PROPERTY NAME="BOARD" VALUE="leonardo"/>
+      <PROPERTY NAME="CLOCK" VALUE="16000000" BOARDVALUE="16000000"/>
+      <PROPERTY NAME="INTERFACE" VALUE="Arduino Leonardo"/>
+    </CONTROLLER>
+  </FAMILY>
+  
+  <FAMILY NAME="ARDUINO" DRIVERS="Arduino"> <!-- The Drivers attribute indicates Visual Designer/Peripheheral Gallery Support -->
+    <CONTROLLER NAME="Arduino Uno">
+      <PROPERTY NAME="PROGRAMMER" VALUE="AVRDUDE"/>
+      <OPTION TOOL="CC" NAME="-mmcu=" VALUE="atmega328p" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="-mmcu=" VALUE="atmega328p" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-mmcu=" VALUE="atmega328p" DEFAULT="1"/>
+      <OPTION TOOL="APP" NAME="-N " VALUE="atmega328p"/>
+      <OPTION TOOL="APP" NAME="-F " VALUE="%CLOCK%"/>
+      <OPTION TOOL="APP" NAME="-U " VALUE="%DRIVERS_QUOTED_DIR%"/>
+      <PROPERTY NAME="BOARD" VALUE="pro328"/>
+      <PROPERTY NAME="CLOCK" VALUE="16000000" BOARDVALUE="16000000"/>
+      <PROPERTY NAME="INTERFACE" VALUE="Arduino (ATmega328)"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="Arduino Nano">
+      <PROPERTY NAME="PROGRAMMER" VALUE="AVRDUDE"/>
+      <OPTION TOOL="CC" NAME="-mmcu=" VALUE="atmega328p" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="-mmcu=" VALUE="atmega328p" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-mmcu=" VALUE="atmega328p" DEFAULT="1"/>
+      <OPTION TOOL="APP" NAME="-N " VALUE="atmega328p"/>
+      <OPTION TOOL="APP" NAME="-F " VALUE="%CLOCK%"/>
+      <OPTION TOOL="APP" NAME="-U " VALUE="%DRIVERS_QUOTED_DIR%"/>
+      <PROPERTY NAME="BOARD" VALUE="pro328"/>
+      <PROPERTY NAME="CLOCK" VALUE="16000000" BOARDVALUE="16000000"/>
+      <PROPERTY NAME="INTERFACE" VALUE="Arduino (ATmega328)"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="Arduino Mega">
+      <PROPERTY NAME="PROGRAMMER" VALUE="AVRDUDE"/>
+      <OPTION TOOL="CC" NAME="-mmcu=" VALUE="atmega2560" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="-mmcu=" VALUE="atmega2560" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-mmcu=" VALUE="atmega2560" DEFAULT="1"/>
+      <OPTION TOOL="APP" NAME="-N " VALUE="atmega2560"/>
+      <OPTION TOOL="APP" NAME="-F " VALUE="%CLOCK%"/>
+      <OPTION TOOL="APP" NAME="-U " VALUE="%DRIVERS_QUOTED_DIR%"/>
+      <PROPERTY NAME="BOARD" VALUE="mega2560"/>
+      <PROPERTY NAME="CLOCK" VALUE="16000000" BOARDVALUE="16000000"/>
+      <PROPERTY NAME="INTERFACE" VALUE="Arduino Mega2560"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="Arduino Leonardo">
+      <PROPERTY NAME="PROGRAMMER" VALUE="LEODUDE"/>
+      <OPTION TOOL="CC" NAME="-mmcu=" VALUE="atmega32u4" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="-mmcu=" VALUE="atmega32u4" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-mmcu=" VALUE="atmega32u4" DEFAULT="1"/>
+      <OPTION TOOL="APP" NAME="-N " VALUE="atmega32u4"/>
+      <OPTION TOOL="APP" NAME="-F " VALUE="%CLOCK%"/>
+      <OPTION TOOL="APP" NAME="-U " VALUE="%DRIVERS_QUOTED_DIR%"/>
+      <PROPERTY NAME="BOARD" VALUE="leonardo"/>
+      <PROPERTY NAME="CLOCK" VALUE="16000000" BOARDVALUE="16000000"/>
+      <PROPERTY NAME="INTERFACE" VALUE="Arduino Leonardo"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="Arduino Yun">
+      <PROPERTY NAME="PROGRAMMER" VALUE="LEODUDE"/>
+      <OPTION TOOL="CC" NAME="-mmcu=" VALUE="atmega32u4" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="-mmcu=" VALUE="atmega32u4" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-mmcu=" VALUE="atmega32u4" DEFAULT="1"/>
+      <OPTION TOOL="APP" NAME="-N " VALUE="atmega32u4"/>
+      <OPTION TOOL="APP" NAME="-F " VALUE="%CLOCK%"/>
+      <OPTION TOOL="APP" NAME="-U " VALUE="%DRIVERS_QUOTED_DIR%"/>
+      <PROPERTY NAME="BOARD" VALUE="yun"/>
+      <PROPERTY NAME="CLOCK" VALUE="16000000" BOARDVALUE="16000000"/>
+      <PROPERTY NAME="INTERFACE" VALUE="Arduino Yun"/>
+    </CONTROLLER>
+    <PERIPHERALS>
+       <TEMPLATE NAME="CONFIG_COMMENT" VALUE="// Peripheral Configuration Code (do not edit)" />
+       <TEMPLATE NAME="CONFIG_BEGIN" VALUE="//---CONFIG_BEGIN---"/>
+       <TEMPLATE NAME="CONFIG_END" VALUE="//---CONFIG_END---"/>
+       <TEMPLATE NAME="PERIPHERAL_SETUP" VALUE="peripheral_setup();"/>
+       <TEMPLATE NAME="PERIPHERAL_LOOP" VALUE="peripheral_loop();"/>
+       <TEMPLATE NAME="PERIPHERAL_HANDLER" VALUE="void\s*(%1_%2)\s*\(\)"/>
+    </PERIPHERALS>
+  </FAMILY>
+ 
+  <!-- Compiler Detection -->
+  <DETECT KEYLOC="HKEY_LOCAL_MACHINE\SOFTWARE\Arduino" TYPE="NAMED" KEY="Install_Dir" SUF="hardware/tools/avr/bin/avr-gcc.exe">
+    <CHECK ARG="--ver" STR="WinAVR"/>
+    <CHECK ARG="--ver" STR="Target: avr"/>
+  </DETECT>
+  <DETECT KEYLOC="HKEY_LOCAL_MACHINE\SOFTWARE\Arduino" TYPE="NAMED" KEY="Install_Dir" SUF="hardware/tools/avr/bin/avr-gcc.exe">
+    <CHECK ARG="--version" STR="avr-gcc"/>
+    <CHECK ARG="--version" STR="(GCC)"/>
+  </DETECT>
+  <DETECT PATH="%PROGRAMFILES%/Arduino" SUF="hardware/tools/avr/bin/avr-gcc.exe">
+    <CHECK ARG="--ver" STR="WinAVR"/>
+    <CHECK ARG="--ver" STR="Target: avr"/>
+  </DETECT>
+
+  <PATH ADD="%BIN_DIR%/ARDUINO"/>
+  <PATH ADD="%COMPILER_DIR%/hardware/tools/avr/bin"/>
+  <PATH ADD="%COMPILER_DIR%/hardware/tools/avr/avr/bin"/>
+  <PATH ADD="%COMPILER_DIR%/hardware/tools/avr/utils/bin"/>
+ 
+  <!-- File Types -->
+  <FILE NAME="ino" DESC="Arduino Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png" SYNTAX="ARDUINO.SYN"/>
+  <FILE NAME="c" DESC="C Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="cpp" DESC="C++ Source" CATEGORY="Source" SOURCE="1" ICON="project_c++.png"/>
+  <FILE NAME="s" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="hpp" DESC="C++ Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="lib" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="a" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="elf" DESC="ELF" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="o" DESC="Object" CATEGORY="Intermediate Binary"/>
+ 
+  
+  <!-- Preprocessor -->
+  <PROCESS TOOL="APP" NAME="Arduino Preprocessor" CMDLINE="$(APP) $(APPFLAGS) %OPTIONS% -A %COMPILER_DIR_ABS_QUOTED% -O %OUTFILE% &quot;%INFILE%&quot;">
+    <FILE OUTPUT="cpp">
+      <FILE INPUT="ino"/>
+      <!-- This would let us store these files in the project with the aim of not having to recompile arduino.a 
+      <FILE INFO="a" NAME="%OUTFILE_DIR%\arduino\arduino.a"/>
+      -->
+    </FILE>
+    <OPTION NAME="-C " VALUE="%BOARD%" DEFAULT="1"/>
+    <OPTION NAME="-T " VALUE="-std=gnu++11" DEFAULT="1"/>
+    <OPTION NAME="-T " VALUE="-fno-threadsafe-statics" DEFAULT="1"/>
+    <POSTPROCESS CMDLINE="make -f arduino/Makefile all"/>
+  </PROCESS>
+  <!-- Compiler -->
+  <PROCESS TOOL="CC" NAME="C Compiler" CMDLINE="$(CC) $(CCFLAGS) %OPTIONS% -o %OUTFILE_QUOTED% -c %INFILE_QUOTED%">
+    <FILE OUTPUT="o" NAME="%INFILE_NAME%.o">
+      <FILE INPUT="c"/>
+      <FILE INPUT="cpp"/>
+      <FILE TEMP="d" NAME="%OUTFILE_DIR%\%OUTFILE_NAME%.d"/>
+    </FILE>
+    <OPTION NAME="-W" VALUE="all" DEFAULT="1"/>
+    <OPTION NAME="-g" VALUE="dwarf-2" DEFAULT="1"/>
+    <OPTION NAME="-fno-exceptions" DEFAULT="1"/>
+    <OPTION NAME="-ffunction-sections" DEFAULT="1"/>
+    <OPTION NAME="-fdata-sections" DEFAULT="1"/>
+    <OPTION NAME="-D" VALUE="F_CPU=%CLOCK%" DEFAULT="1"/>
+    <OPTION NAME="-I " VALUE=".." DEFAULT="1"/>
+    <OPTION NAME="-I " VALUE="%DRIVERS_DIR_QUOTED%" DEFAULT="1"/>
+    <OPTION NAME="-D" VALUE="ARDUINO_ARCH_AVR" DEFAULT="1"/>
+    <OPTION NAME="" VALUE="@arduino/libs.inc" DEFAULT="1"/>
+    <OPTION NAME="" VALUE="-std=gnu++11" DEFAULT="1"/>
+    <OPTION NAME="" VALUE="-fno-threadsafe-statics" DEFAULT="1"/>
+    <MESSAGE VALUE="^(.+):(\d+):(\d+): (error|warning|message): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+      <FIELD NAME="COLUMN" POSITION="3" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^(.+):(\d+): (error|warning|message): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^In file included from (.+):(\d+):$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="$(ASM) $(ASMFLAGS) %OPTIONS% -o %OUTFILE_QUOTED% -c %INFILE_QUOTED%">
+    <FILE OUTPUT="o">
+      <FILE INPUT="s"/>
+      <FILE TEMP="d" NAME="%OUTFILE_DIR%\%OUTFILE_NAME%.d"/>
+    </FILE>
+    <OPTION NAME="-W" VALUE="all" DEFAULT="1"/>
+    <OPTION NAME="-g" VALUE="dwarf-2" DEFAULT="1"/>
+    <OPTION NAME="-fno-exceptions" DEFAULT="1"/>
+    <OPTION NAME="-ffunction-sections" DEFAULT="1"/>
+    <OPTION NAME="-fdata-sections" DEFAULT="1"/>
+    <OPTION NAME="-D" VALUE="F_CPU=%CLOCK%" DEFAULT="1"/>
+    <MESSAGE VALUE="^(.+):(\d+):(\d+): (error|warning|message): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+      <FIELD NAME="COLUMN" POSITION="3" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^(.+):(\d+): (error|warning|message): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^In file included from (.+):(\d+):$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="$(LD) $(LDFLAGS) %OPTIONS% -o &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.elf&quot; %INFILES_QUOTED% arduino/arduino.a -lm">
+    <FILE OUTPUT="elf"/>
+    <FILE OUTPUT="hex"/>
+    <FILE INPUT="o"/>
+    <OPTION NAME="-Wl," VALUE="--gc-sections"/>
+    <OPTION NAME="" VALUE="-lm"/>
+    <POSTPROCESS TOOL="LD" CMDLINE="avr-objcopy -O ihex -R .eeprom &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.elf&quot; &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.hex&quot;"/>
+    <POSTPROCESS TOOL="LD" CMDLINE="avr-objcopy -j .eeprom --set-section-flags=.eeprom=&quot;alloc,load&quot; --change-section-lma .eeprom=0 --no-change-warnings -O ihex &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.elf&quot; &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.eep&quot; || exit 0 "/>
+  </PROCESS>
+  <!-- Properties -->
+  <PROPERTY NAME="BOARD" DESC="Arduino board" VALUE="pro"/>
+  <PROPERTY NAME="CLOCK" DESC="Clock for delays" VALUE="8000000"/>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="elf"/>
+    <OPTION TOOL="CC" NAME="-O" VALUE="0" DEFAULT="1"/>
+    <ENVIRONMENT NAME="CYGWIN" VALUE="nodosfilewarning"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="elf"/>
+    <OPTION TOOL="CC" NAME="-O" VALUE="s" DEFAULT="1"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE_NAME%.HEX&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.HEX&quot;"/>
+    <ENVIRONMENT NAME="CYGWIN" VALUE="nodosfilewarning"/>
+  </TARGET>
+  <TARGET NAME="tidy">
+    <POSTPROCESS CMDLINE="-make -f arduino/Makefile tidy"/>
+    <ENVIRONMENT NAME="CYGWIN" VALUE="nodosfilewarning"/>
+  </TARGET>
+  <TARGET NAME="clean">
+    <POSTPROCESS CMDLINE="-make -f arduino/Makefile clean"/>
+    <ENVIRONMENT NAME="CYGWIN" VALUE="nodosfilewarning"/>
+  </TARGET>
+  <TARGET NAME="bootloader">
+    <POSTPROCESS CMDLINE="avr-objcopy -O ihex -R .eeprom &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.elf&quot; &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.hex&quot;"/>
+    <POSTPROCESS CMDLINE="copy /b bootloader.hex+&quot;%OUTFILE_DIR%/%OUTFILE_NAME%.hex&quot; &quot;with.bootloader.hex&quot;"/>
+  </TARGET>
+  <!-- Quick Start Source Files -->
+  <SOURCE NAME="main.ino" FROM="arduinomain.ino" OPEN="1"/>
+</COMPILER>

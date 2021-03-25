@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino MPX4250AP Pressure Gauge Breakout Board.pdsclip" DESC="Arduino MPX4250AP Pressure Gauge" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="MPX4250AP Pressure Gauge"  ELEMENT="MPX1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="Mpx4250PressureGauge">
+         <PIN NAME="AD0" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD0"/>
+         </PIN>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Grove.h">
+
+         <!-- Enumeration Units -->
+         <ENUMERATION NAME="UNITS">
+            <CONSTANT NAME="Bar"   VALUE="0"/>
+            <CONSTANT NAME="Atm"   VALUE="1"/>
+            <CONSTANT NAME="mmHg"  VALUE="2"/>
+            <CONSTANT NAME="Psi"   VALUE="3"/>
+         </ENUMERATION>
+
+         <!-- Function -->
+         <FUNCTION DESC="Return true if Pressure is greater or equal to the trigger value.">
+            <PARAMETER NAME="Trigger" TYPE="FLOAT" DEFAULT="0" DESC="Trigger value in kPa."/>
+            <RETURN TYPE="BOOLEAN"/>
+         </FUNCTION>
+         
+         <!-- Methods -->
+         <METHOD NAME="readPressure" DESC="Read Pressure in kPa.">
+            <RETURN NAME="pressure" TYPE="FLOAT" DEFAULT="kPa"/>
+         </METHOD>
+         <METHOD NAME="convertPressure" DESC="Convert current pressure in kPa to most used units.">
+            <PARAMETER NAME="units" TYPE="UNITS" DEFAULT="0" DESC="Pressure Units"/>
+            <RETURN NAME="pressure" TYPE="FLOAT" DEFAULT="Converted value"/>
+         </METHOD>
+         <METHOD NAME="readAdc" DESC="Read Adc conversion.">
+            <RETURN NAME="value" TYPE="INTEGER" DEFAULT=""/>
+         </METHOD>
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

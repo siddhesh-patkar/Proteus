@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="PROJ_NOTE_TYPE" content="0" />
+<title>Engineering Change Order</title>
+<style>/*Default Style*/
+body
+{
+	color:#000000;
+	font-family:Times;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:5mm;
+	margin-left:5mm;
+	margin-right:5mm;
+	margin-top:5mm;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	paper-height:842.0pt;
+	paper-width:595.0pt;
+	text-decoration:none;
+}
+
+/*Code block*/
+code
+{
+	color:#000000;
+	font-family:Courier;
+	font-size:0.8em;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Paragraph*/
+p
+{
+	color:#000000;
+	font-family:Arial;
+	font-size:1em;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:0.72em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:0.72em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*List Paragraph*/
+lp
+{
+	font-family:Times;
+	font-size:1.0em;
+	line-height:100%;
+	margin-bottom:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+}
+
+/*Heading 1*/
+h1
+{
+	color:#000000;
+	font-family:Arial Black;
+	font-size:2em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:0.67em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:0.67em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-align:center;
+	text-decoration:none;
+}
+
+/*Heading 2*/
+h2
+{
+	color:#000000;
+	font-family:Times;
+	font-size:1.5em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:0.75em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:0.75em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Heading 3*/
+h3
+{
+	color:#000000;
+	font-family:Arial;
+	font-size:1.1667em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:0.43em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:0.63em;
+	padding-bottom:2pt;
+	padding-left:0pt;
+	padding-right:2pt;
+	padding-top:2pt;
+	text-decoration:underline;
+}
+
+/*Heading 4*/
+h4
+{
+	color:#000000;
+	font-family:Arial;
+	font-size:1em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:0.12em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:0.12em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Heading 5*/
+h5
+{
+	color:#000000;
+	font-family:Times;
+	font-size:0.83em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:1.5em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:1.5em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Heading 6*/
+h6
+{
+	color:#000000;
+	font-family:Times;
+	font-size:0.75em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:1.67em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:1.67em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*_ULXcomment*/
+p.LXcomment
+{
+	color:#e80505;
+	font-family:Arial;
+	font-size:10pt;
+	font-style:italic;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*_ULXWarning*/
+p.LXWarning
+{
+	background-color:#f7f1ad;
+	border-bottom-style:solid;
+	border-bottom-width:0.2pt;
+	border-color:#ff5903;
+	border-left-style:solid;
+	border-left-width:0.2pt;
+	border-right-style:solid;
+	border-right-width:0.2pt;
+	border-top-style:solid;
+	border-top-width:0.2pt;
+	color:#a73610;
+	font-family:Arial;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	padding-bottom:3pt;
+	padding-left:6pt;
+	padding-right:5pt;
+	padding-top:3pt;
+	text-decoration:none;
+}
+
+/*_UECOApproved*/
+p.ECOApproved
+{
+	background-color:#f7f1ad;
+	border-bottom-style:solid;
+	border-bottom-width:0.6pt;
+	border-color:#0db504;
+	border-left-style:solid;
+	border-left-width:0.6pt;
+	border-right-style:solid;
+	border-right-width:0.6pt;
+	border-top-style:solid;
+	border-top-width:0.6pt;
+	color:#00aa00;
+	font-family:Arial;
+	font-size:14pt;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:6pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:6pt;
+	padding-bottom:6pt;
+	padding-left:1pt;
+	padding-right:0pt;
+	padding-top:6pt;
+	text-align:center;
+	text-decoration:none;
+}
+
+a /* Links*/ { text-decoration: underline; }
+
+/*_H*/
+ul
+{
+	font-family:Times;
+	font-size:1.0em;
+}</style>
+</head>
+<body>
+<h1 indent='0' textIndent='0'>Engineering Change Order Example</h1>
+<p class="LXcomment" indent='0' textIndent='0'>This is an example structure for an engineering change. Depending on requirements and/or preferences this can be as simple as a list of changes (revision history) a semi-formal report as outlined below or a highly specific process..</p>
+<p class="LXcomment" indent='0' textIndent='0'> </p>
+<p class="LXcomment" indent='0' textIndent='0'>You need to add/remove/modify content to suit and then save as a template (Template Menu) if you want to re-use in your projects. </p>
+<p class="LXcomment" indent='0' textIndent='0'> </p>
+<p class="LXWarning" indent='0' textIndent='0'>IMPORTANT:  The information below is intended to provide some helpful content that may be relevant during a project revision. It is not fit or suitable for any particular purpose without user review and input. </p>
+<h3 indent='0' textIndent='0'>Change Request</h3>
+<p class="LXcomment" indent='0' textIndent='0'>First, the need for an ECO is identified. Why are we making the change, what is the source of the request, what is the priority, etc.</p>
+<h4 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Requested by	: <span style="font-weight: normal; ">&lt;name&gt;</span>	Date: <span style="font-weight: normal; ">&lt;date&gt;</span></h4>
+<h4 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Summary	: Details of change</h4>
+<h3 tabs="120.75,0;423.75,0" indent='0' textIndent='0'>Engineer Evaluation</h3>
+<p class="LXcomment" tabs="120.75,0;423.75,0" indent='0' textIndent='0'>Engineer evaluates request on it's technical merits and difficulty to arrive at cost benefit conclusion.Technical notes and implentation detail / timescale can go here.</p>
+<h4 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Engineer	: <span style="font-weight: normal; ">&lt;name&gt;</span>	Date: <span style="font-weight: normal; ">&lt;date&gt;</span></h4>
+<h4 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Notes	: <span style="font-weight: normal; ">Details of proposed work</span></h4>
+<h3 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Authorization</h3>
+<p class="LXcomment" tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Is the change authorized or rejected and on what basis. Constraints on the project, notes and amendments go here so the specification is clear.</p>
+<h4 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Authorized 	: <span style="font-weight: normal; ">&lt;Yes/No&gt;</span>	Date: <span style="font-weight: normal; ">&lt;date&gt;</span></h4>
+<h4 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Notes	: <span style="font-weight: normal; ">Details of authorised work</span></h4>
+<h4 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Name	: <span style="font-weight: normal; ">&lt;name&gt;</span></h4>
+<h3 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Implementation</h3>
+<p class="LXcomment" tabs="83.25,0;423.75,0" indent='0' textIndent='0'>If authorized, details of modifications go here, along with timescale and notes of any problems or possible impacts that were uncovered during the change process. Rules for interchangeability (e.g. form/fit/function) and re-annotation can be detailed here.</p>
+<h4 tabs="83.25,0;227.25,0;396.75,0" indent='0' textIndent='0'>Engineer	: <span style="font-weight: normal; ">&lt;name&gt;</span>	Work Begins: <span style="font-weight: normal; ">&lt;date&gt;	</span>Work Ends:<span style="font-weight: normal; "> &lt;date&gt;</span></h4>
+<h4 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Notes	: <span style="font-weight: normal; ">Details of work done</span></h4>
+<p class="LXcomment" tabs="83.25,0;423.75,0" indent='0' textIndent='0'>You can add links on parts from the top toolbar so they can be clicked on to navigate to the part on either the schematic or the layout. The internal clipboard makes it simple to copy and paste bits of schematic or layout into the document here.</p>
+<h3 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Testing &amp; Approval</h3>
+<p class="LXcomment" tabs="83.25,0;423.75,0" indent='0' textIndent='0'>The change is checked and approved or rejected. Testing can either be a separate section above this or rolled into the approval process.</p>
+<h4 tabs="83.25,0;227.25,0;396.75,0" indent='0' textIndent='0'>Engineer	: <span style="font-weight: normal; ">&lt;name&gt;</span>	Work Begins: <span style="font-weight: normal; ">&lt;date&gt;	</span>Work Ends:<span style="font-weight: normal; "> &lt;date&gt;</span></h4>
+<h4 tabs="83.25,0;227.25,0;396.75,0" indent='0' textIndent='0'>Notes	: <span style="font-weight: normal; ">Notes</span></h4>
+<h4 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Name	: <span style="font-weight: normal; ">&lt;name&gt;</span></h4>
+<h3 tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Completion</h3>
+<p class="LXcomment" tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Any notes on completion and log of the revision number assigned to the ECO.</p>
+<p class="ECOApproved" tabs="83.25,0;423.75,0" indent='0' textIndent='0'>Work completed on &lt;date&gt;. Project Revision Number &lt;num&gt; Assigned.</p>
+</body>
+</html>

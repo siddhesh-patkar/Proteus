@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino BMP085 Pressure transducer -->
+<DRIVER HEADER="bmp180.h">
+   <REQUIRE HEADER="Adafruit_BMP085.h"/>
+   <REQUIRE HEADER="Wire.h"/>
+
+   <!-- OVERSAMPLE MODE enumeration -->
+   <ENUMERATION NAME="OVERSAMPLE_MODE">
+      <CONSTANT NAME="ULTRALOWPOWER" VALUE="0"/>
+      <CONSTANT NAME="STANDARD"      VALUE="1"/>
+      <CONSTANT NAME="HIGHRES"       VALUE="2"/>
+      <CONSTANT NAME="ULTRAHIGHRES"  VALUE="3"/>
+   </ENUMERATION>
+   
+   <!-- COEFFICIENT INDEX enumeration -->
+   <ENUMERATION NAME="COEFF_INDEX">
+      <CONSTANT NAME="AC1" VALUE="0"/>
+      <CONSTANT NAME="AC2" VALUE="1"/>
+      <CONSTANT NAME="AC3" VALUE="2"/>
+      <CONSTANT NAME="AC4" VALUE="3"/>
+      <CONSTANT NAME="AC5" VALUE="4"/>
+      <CONSTANT NAME="AC6" VALUE="5"/>
+      <CONSTANT NAME="B1"  VALUE="6"/>
+      <CONSTANT NAME="B2"  VALUE="7"/>
+      <CONSTANT NAME="MB"  VALUE="8"/>
+      <CONSTANT NAME="MC"  VALUE="9"/>
+      <CONSTANT NAME="MD"  VALUE="10"/>
+   </ENUMERATION>
+
+
+   <!-- Function -->
+   <FUNCTION DESC="Return true if Pressure in hPa is greater or equal to the trigger value.">
+      <PARAMETER NAME="Trigger" TYPE="FLOAT" DEFAULT="0" DESC="Trigger value in hPa"/>
+      <RETURN TYPE="BOOLEAN"/>
+   </FUNCTION>
+
+   <!-- Methods -->
+   <METHOD NAME="setMode" DESC="Set the oversample mode.">
+      <PARAMETER NAME="mode" TYPE="OVERSAMPLE_MODE" DEFAULT="ULTRAHIGHRES" DESC="Oversample Mode"/>
+   </METHOD>
+
+   <!-- Methods returning value -->
+   <METHOD NAME="readTemperature" DESC="Read Ambient Temperature in °C.">
+      <RETURN NAME="t"    TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="readPressure" DESC="Read Barometric Pressure in hPa.">
+      <RETURN NAME="p"    TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="readSealevelPressure" DESC="Read Sea Level Pressure in hPa from given altitude value in meter.">
+      <PARAMETER NAME="a" TYPE="FLOAT" DEFAULT="0.0" DESC="Altitude value (meter)"/>
+      <RETURN NAME="p"    TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="readAltitude" DESC="Read Altitude in meter from a given Sea Level Pressure in hPa.">
+      <PARAMETER NAME="p" TYPE="FLOAT" DEFAULT="1013.25" DESC="Sea Level Pressure (hPa)"/>
+      <RETURN NAME="a"    TYPE="FLOAT"/>
+   </METHOD>
+   
+   <!-- Additional Methods returning value -->
+   <METHOD NAME="readRawTemperature" DESC="Read row value (ADC units) of Ambient Temperature.">
+      <RETURN NAME="ut"    TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="readRawPressure"    DESC="Read row value (ADC units) of Ambient Pressure.">
+      <RETURN NAME="up"    TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="getCalibrationCoeff" DESC="Read row value (ADC units) of Ambient Pressure.">
+      <PARAMETER NAME="coeff" TYPE="COEFF_INDEX" DEFAULT="AC1" DESC="Calibration Coefficient"/>
+      <RETURN NAME="value"    TYPE="FLOAT"/>
+   </METHOD>
+
+</DRIVER>

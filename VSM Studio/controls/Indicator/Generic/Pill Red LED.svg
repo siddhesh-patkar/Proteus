@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 60 20"
+   version="1.1"
+   id="svg48"
+   sodipodi:docname="Pill Red LED.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata52">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     id="namedview50"
+     showgrid="false"
+     inkscape:zoom="4.7833333"
+     inkscape:cx="-28.118467"
+     inkscape:cy="9.9999999"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g29" />
+  <defs
+     id="defs24">
+    <linearGradient
+       id="RedPillLEDGeneric"
+       x1="46.84"
+       y1="26.84"
+       x2="13.16"
+       y2="-6.84"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#141414"
+         stop-opacity="0.59"
+         id="stop2" />
+      <stop
+         offset="1"
+         stop-color="#c9c9c9"
+         stop-opacity="0"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="RedPillLEDGeneric-2"
+       x1="16.27"
+       y1="23.73"
+       x2="43.73"
+       y2="-3.73"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.13"
+         stop-color="#b3b2b2"
+         id="stop7" />
+      <stop
+         offset="0.19"
+         stop-color="#bfbebf"
+         id="stop9" />
+      <stop
+         offset="0.34"
+         stop-color="#e2e1e1"
+         id="stop11" />
+      <stop
+         offset="0.42"
+         stop-color="#efeeee"
+         id="stop13" />
+      <stop
+         offset="0.68"
+         stop-color="#efeeee"
+         id="stop15" />
+      <stop
+         offset="0.77"
+         stop-color="#e9e8e8"
+         id="stop17" />
+      <stop
+         offset="0.91"
+         stop-color="#d6d6d6"
+         id="stop19" />
+      <stop
+         offset="1"
+         stop-color="#c5c5c4"
+         id="stop21" />
+    </linearGradient>
+  </defs>
+  <vfp:catalogue
+     PREFIX="LED"
+     CATEGORY="Indicators"
+     DESC="Pill Red LED " />
+  <g
+     vfp:class="Indicator"
+     id="g29">
+    <rect
+       class="bounds"
+       y="0"
+       x="0"
+       id="rect28"
+       style="fill:#4d5553"
+       ry="10"
+       rx="10"
+       height="20"
+       width="60" />
+    <rect
+       id="rect30"
+       style="fill:#cdcccc"
+       ry="9.7299995"
+       rx="9.7299995"
+       height="19.459999"
+       width="59.279999"
+       y="0.27000001"
+       x="0.36000001" />
+    <rect
+       id="rect32"
+       style="fill:url(#RedPillLEDGeneric)"
+       ry="9.7299995"
+       rx="9.7299995"
+       height="19.459999"
+       width="59.279999"
+       y="0.27000001"
+       x="0.36000001" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path38"
+       style="display:inline;fill:#010202;fill-opacity:0.58823529;stroke:#454545;stroke-width:0.0607845px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.97382202"
+       d="m 5.68,8.94 v 2.13 a 7,7 0 0 0 7,7 h 34.6 a 7,7 0 0 0 7,-7 V 8.94 a 7,7 0 0 0 -7,-7 H 12.72 a 7,7 0 0 0 -7.04,7 z M 44.09,17 H 15.91 a 7,7 0 0 1 -7,-7 v 0 a 7,7 0 0 1 7,-7 h 28.18 a 7,7 0 0 1 7,7 v 0 a 7,7 0 0 1 -7,7 z" />
+    <rect
+       id="rect34"
+       style="display:inline;fill:#ff0000;stroke:#4d5553;stroke-width:0.22264668px"
+       ry="6.6100001"
+       rx="6.6100001"
+       height="14.09"
+       width="42.889999"
+       y="2.96"
+       x="8.5600004"
+       class="colour"
+       inkscape:label="Colour" />
+    <g
+       id="g3739"
+       style="display:none">
+      <rect
+         x="7.4299998"
+         y="2.6900001"
+         width="45.139999"
+         height="14.62"
+         rx="7.1599998"
+         ry="7.1599998"
+         style="display:inline;fill:#010202;fill-opacity:0.58823529;stroke:#4d5553;stroke-width:0.01712724px;stroke-linecap:round;stroke-linejoin:round"
+         id="rect36" />
+    </g>
+    <g
+       id="g3736"
+       style="display:inline">
+      <path
+         d="m 11.11,9.51 0.05,-1 a 4.33,4.33 0 0 1 4.56,-4.08 l 1.05,0.06 a 1.07,1.07 0 0 1 0.86,1.63 13.05,13.05 0 0 1 -5,4.37 1.07,1.07 0 0 1 -1.52,-0.98 z"
+         style="fill:#ffffff;fill-opacity:0.58823529;stroke:#4d5553;stroke-width:0.0047286px;stroke-linecap:round;stroke-linejoin:round"
+         id="path42"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 43.82,14.8 0.07,-0.73 a 3.29,3.29 0 0 1 3.58,-3 l 0.8,0.07 A 0.81,0.81 0 0 1 48.88,12.4 9.93,9.93 0 0 1 45,15.61 0.82,0.82 0 0 1 43.82,14.8 Z"
+         style="fill:#ffffff;fill-opacity:0.58823529;stroke:#4d5553;stroke-width:0.00359653px;stroke-linecap:round;stroke-linejoin:round"
+         id="path44"
+         inkscape:connector-curvature="0" />
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path40"
+       style="display:inline;fill:url(#RedPillLEDGeneric-2);stroke:#010101;stroke-width:0.19649686px;stroke-opacity:0.97382202"
+       d="m 6.36,8.83 v 2.35 a 6.39,6.39 0 0 0 6.39,6.39 h 34.5 a 6.39,6.39 0 0 0 6.39,-6.39 V 8.83 A 6.39,6.39 0 0 0 47.25,2.44 H 12.75 A 6.39,6.39 0 0 0 6.36,8.83 Z M 43.58,16.4 H 16.42 A 6.39,6.39 0 0 1 10,10 v 0 A 6.39,6.39 0 0 1 16.39,3.61 H 43.58 A 6.39,6.39 0 0 1 50,10 v 0 a 6.39,6.39 0 0 1 -6.42,6.39 z" />
+    <text
+       x="32.625603"
+       y="-2.9763885"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.87733332px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+       xml:space="preserve"
+       id="text73">label</text>
+  </g>
+</svg>

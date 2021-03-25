@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Raspberry Pi/GPIO Expander MCP23017.pdsclip" FAMILY="Raspberry Pi" DESC="GPIO pin Expander Breakout">
+   <PERIPHERAL TYPE="GPIO Expander MCP23017" ELEMENT="U2" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="MCP23017"/>
+
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="Generic">
+         
+       <ENUMERATION NAME="IO">
+         <CONSTANT NAME="Input" VALUE="1"/>
+         <CONSTANT NAME="Output" VALUE="0"/>
+       </ENUMERATION>
+        
+       <METHOD NAME="setAddress"  DESC="Set the address of the chip.">
+         <PARAMETER NAME="Address" TYPE="INTEGER" DEFAULT="0x20" DESC="Sets the address, Starts at 0x20."/>
+       </METHOD>
+        
+       <METHOD NAME="pinMode"  DESC="Set the pin mode.">
+         <PARAMETER NAME="Pin Number" TYPE="INTEGER" DEFAULT="0" DESC="Number of pin being set."/>
+         <PARAMETER NAME="Mode" TYPE="IO" DEFAULT="Input" DESC="Setting pin to Input or Output."/>
+       </METHOD>
+       
+       <METHOD NAME="pullUpPin"  DESC="Create internal pull up on pin.">
+         <PARAMETER NAME="Pin Number" TYPE="INTEGER" DEFAULT="0" DESC="Number of pin being set."/>
+       </METHOD>
+       
+       <METHOD NAME="digitalWrite"  DESC="Write to pin.">
+         <PARAMETER NAME="Pin Number" TYPE="INTEGER" DEFAULT="0" DESC="Number of pin being written to."/>
+         <PARAMETER NAME="Value" TYPE="INTEGER" DEFAULT="1" DESC="Writing on or off"/>
+       </METHOD>
+       
+       <METHOD NAME="digitalRead"  DESC="Read from pin.">
+         <PARAMETER NAME="Pin Number" TYPE="INTEGER" DEFAULT="0" DESC="Number of pin being read from."/>
+         <RETURN TYPE="INTEGER" DEFAULT="digitalInput"/>
+       </METHOD>
+
+    </DRIVER>
+   </PERIPHERAL>
+</CLIP>	
+  

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove Rotary Angle Sensor.pdsclip" DESC="Rotary Angle potentiomenter based sensor." FAMILY="Raspberry Pi" >
+   <PERIPHERAL TYPE="Grove Rotary Angle Sensor" ELEMENT="RV1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GroveRotaryAngleSensor">
+       <PROPERTY NAME="STATE" ELEMENT="GC1" TYPE="INTEGER" GROVE="ANALOG"/>
+       <PROPERTY NAME="FULLANGLE" ELEMENT="RV1" TYPE="FLOAT"/>
+     </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="Grove">
+       <REQUIRE MODULE="GROVE"/>
+        <!-- Sensor Function -->
+       <FUNCTION DESC="Return true if angle greater or equal to the trigger value.">
+         <PARAMETER NAME="Trigger" TYPE="FLOAT" DEFAULT="0" DESC="Trigger value in degree"/>
+         <RETURN TYPE="BOOLEAN"/>
+       </FUNCTION>
+       <!-- Methods -->
+       <METHOD NAME="readAngle" DESC="Read angle in degree."> 
+         <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="degree"/>
+       </METHOD>
+       <METHOD NAME="readRaw" DESC="Read Raw Value."> 
+         <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="ADCUnits"/>
+       </METHOD>
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>   	
+  

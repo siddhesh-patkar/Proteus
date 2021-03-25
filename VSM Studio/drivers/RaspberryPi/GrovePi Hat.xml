@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Raspberry Pi/GrovePi Hat.pdsclip" DESC="GrovePi Hat" FAMILY="Raspberry Pi">
+    <PERIPHERAL NAME="grove" TYPE="GROVE" DESC="GrovePi" ELEMENT="U2" >
+        <INTERFACE OBJECT="Grove" EXTERNAL="grove"/>
+        <DRIVER FILE="Grove.xml"/>
+    </PERIPHERAL>            	   
+</CLIP>

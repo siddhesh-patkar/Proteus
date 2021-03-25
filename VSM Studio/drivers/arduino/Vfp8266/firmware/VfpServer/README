@@ -1,0 +1,22 @@
+VFP (Virtual Front Panel) Server for ESP8266
+============================================
+
+This code allows an ESP8266 based WiFi module to be used as an IoT Co-Processor
+for applications built with Proteus IoT Builder.
+
+Capabilities include:
+ - File Storage and http server for SVG front panels created with Proteus IoT Builder
+ - Partial emulation of Arduino Yun bridge protocol to permit communication between AVR and ESP8266
+ - Access to the ESP8266 filestore via the bridge FILEIO library.
+ - End user configuration mode for initial setup of ESP8266 WiFi etc.
+ - FTP server for uploading of application resource files from Proteus
+ - AVRISP mode for ISP programming of AVR via WiFi from Proteus
+ - Telnet based remote debugging console, allowing access to debug output from both the VFP Server and the AVR code.
+
+It is based on the ESP8266 Arduino core 2.3.0 and also uses lightly modified code from the following 3rd party libraries.
+
+Wifi Manager - https://github.com/tzapu/WiFiManager
+Remote Debugger - https://github.com/JoaoLopesF/RemoteDebug
+FTP Server - https://github.com/nailbuster/esp8266FTPServer
+
+This firmware carries an LPGL licence.

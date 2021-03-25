@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Arduino/Arduino Weather Station Shield.pdsclip" DESC="Arduino Weather Station Shield" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="Alphanumeric LCD Display" ELEMENT="LCD1">
+      <INTERFACE OBJECT="AlphanumericLcd">
+         <PIN NAME="RS" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO7"/>
+         </PIN>
+         <PIN NAME="E" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO6"/>
+         </PIN>
+         <PIN NAME="D4" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO5"/>
+         </PIN>
+         <PIN NAME="D5" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO4"/>
+         </PIN>
+         <PIN NAME="D6" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO3"/>
+         </PIN>
+         <PIN NAME="D7" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO2"/>
+         </PIN>
+         <SETUP NAME="begin">
+             <PROPERTY NAME="NUMCOLS" ELEMENT="LCD1" TYPE="INTEGER"/>
+             <PROPERTY NAME="NUMROWS" ELEMENT="LCD1" TYPE="INTEGER"/>
+         </SETUP>   
+      </INTERFACE>
+      <DRIVER FILE="AlphanumericLcd/AlphanumericLcd.xml"/> 
+   </PERIPHERAL>
+
+   <PERIPHERAL TYPE="Weather Station" ELEMENT="WS1">
+      <INTERFACE OBJECT="WeatherStation">
+         <!-- Temperature pin -->
+         <PIN NAME="tout" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD2"/>
+         </PIN>
+         <!-- Pressure pin -->
+         <PIN NAME="pout" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD0"/>
+         </PIN>
+         <!-- Humidity pin -->
+         <PIN NAME="hout" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD1"/>
+         </PIN>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="weather_station.h">
+         <REQUIRE HEADER="Wire.h"/>
+         <!-- Weather Station methods -->        
+         <METHOD NAME="readTemperature"  DESC="Get Temperature value.">
+            <RETURN NAME="temp" TYPE="FLOAT" DESC="Celsius Degree"/>
+         </METHOD>
+         <METHOD NAME="readPressure"  DESC="Get pressure value.">
+            <RETURN NAME="press" TYPE="FLOAT" DESC="Pascal abs"/>
+         </METHOD>
+         <METHOD NAME="readHumidity"  DESC="Get humidity value.">
+            <RETURN NAME="humi" TYPE="FLOAT" DESC="RH %"/>
+         </METHOD>
+      </DRIVER>
+   </PERIPHERAL>
+   
+   <PERIPHERAL TYPE="Real Time Clock" ELEMENT="RTC1">
+        <INTERFACE OBJECT="DS1307RTC">
+            <PORT NAME="I2C"/>
+            <!-- SOUT pin -->
+            <SETUP NAME="begin">
+               <PIN NAME="SOUT" TYPE="DIGITAL">
+                  <TERMINAL ELEMENT="AD3"/>
+               </PIN>
+            </SETUP>   
+            <LOOP NAME="poll"/>
+            <CLOCK ELEMENT="RTC1"/>       
+        </INTERFACE>
+        <DRIVER FILE="RTC/RTC.xml"/>
+   </PERIPHERAL>
+
+</CLIP>
+
+

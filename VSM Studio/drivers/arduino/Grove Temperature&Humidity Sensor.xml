@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<PERIPHERAL NAME="Grove TH02 Sensor" DESC="Grove TH02 Sensor Module" FAMILY="AVR" ELEMENT="U1" CATEGORY="Grove">
+  <!-- Snippet file relative to IMAGE/Snippets folder -->
+  <CLIP FILE="Grove/Grove Temperature&amp;Humidity Sensor.pdsclip" />
+
+  <!-- Supported Toolchains -->
+  <TOOLCHAIN ID="ARDUINO" />
+
+  <!-- Hardware Interface -->
+  <INTERFACE OBJECT="GroveTh02Dev">
+    <SETUP NAME="begin">
+    </SETUP>
+  </INTERFACE>
+
+  <!-- Firmware Driver -->
+  <DRIVER HEADER="grove_th02_dev.h">
+    <REQUIRE HEADER="TH02_dev.h"/>
+    <REQUIRE HEADER="Wire.h"/>
+    
+    <!-- Methods -->
+    <METHOD NAME="readTemperature" DESC="Read temperature in Celcius."> 
+         <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="tempC"/>
+    </METHOD>
+    <METHOD NAME="readRHumidity" DESC="Read Relative Humidity.">
+         <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="%RH"/>
+    </METHOD>
+
+  </DRIVER>
+</PERIPHERAL>
+        

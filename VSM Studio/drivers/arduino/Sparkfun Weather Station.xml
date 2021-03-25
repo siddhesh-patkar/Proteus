@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Sparkfun" FILE="Arduino/Sparkfun Weather Station.pdsclip" DESC="Sparkfun Weather Station" FAMILY="ARDUINO">
+
+   <PERIPHERAL TYPE="WEATHER" ELEMENT="WS1">
+      <INTERFACE OBJECT="WeatherStation">
+         <PORT NAME="I2C"/>
+         <PIN NAME="wdout" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD0"/>
+         </PIN>
+         <PIN NAME="wsout" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO3"/>
+         </PIN>
+         <PIN NAME="rgout" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO2"/>
+         </PIN>
+         <PIN NAME="lsref" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD3"/>
+         </PIN>
+         <PIN NAME="lsout" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD1"/>
+         </PIN>
+         <SETUP NAME="begin"/>
+         <LOOP NAME="poll"/>
+      </INTERFACE>
+      
+      <DRIVER HEADER="Sparkfun_Weather.h" RAM="600">
+       <REQUIRE HEADER="core.h"/>
+       <REQUIRE HEADER="Wire.h"/>
+       
+       <METHOD NAME="reset" DESC="Reset the weather history buffers"/>
+       
+       <METHOD NAME="getTemperature" DESC="Read the temperature in Celcius">
+          <RETURN NAME="temp"  TYPE="FLOAT" DEFAULT="temp" DESC="Temperature in Celcius"/>
+       </METHOD>
+       <METHOD NAME="getPressure" DESC="Read the barometric pressue in kPa">
+          <RETURN NAME="pressure"  TYPE="FLOAT" DEFAULT="pressure" DESC="Barometric pressure in mBar"/>
+       </METHOD>
+       <METHOD NAME="getHumidity" DESC="Get the relative humidity">
+          <RETURN NAME="humidity"  TYPE="FLOAT" DEFAULT="humidity" DESC="Relative humidity"/>
+       </METHOD>
+       <METHOD NAME="getDaylight" DESC="Get the light level reading.">
+          <RETURN NAME="light"  TYPE="FLOAT" DEFAULT="daylight" DESC="Light level value."/>
+       </METHOD>
+       <METHOD NAME="getWindSpeed" DESC="Get the wind speed in mph (average for last minute).">
+          <RETURN NAME="windSpeed"  TYPE="FLOAT" DEFAULT="windSpeed" DESC="Wind speed in mph."/>
+       </METHOD>
+       <METHOD NAME="getWindDirection" DESC="Get the wind direction/bearing (average for last minute in degrees).">
+          <RETURN NAME="windDir"  TYPE="FLOAT" DEFAULT="windDir" DESC="Wind direction."/>
+       </METHOD>
+       <METHOD NAME="getGustSpeed" DESC="Get the wind gust in mph (peak for last 10 minutes).">
+          <RETURN NAME="gustSpeed"  TYPE="FLOAT" DEFAULT="gustSpeed" DESC="Wind gust in mph."/>
+       </METHOD>
+       <METHOD NAME="getGustDirection" DESC="Get the wind gust direction (wrt gust for last 10 minutes).">
+          <RETURN NAME="gustDir"  TYPE="FLOAT" DEFAULT="gustDir" DESC="Gust direction."/>
+       </METHOD>
+       <METHOD NAME="getRainHour" DESC="Get the rainfall for the last hour in mm.">
+          <RETURN NAME="rainHour"  TYPE="FLOAT" DEFAULT="rainHour" DESC="Hourly rainfall in mm."/>
+       </METHOD>
+       <METHOD NAME="getRainDay" DESC="Get the rainfall for the last day in mm.">
+          <RETURN NAME="rainDay"  TYPE="FLOAT" DEFAULT="rainDay" DESC="Daily rainfall in mm."/>
+       </METHOD>
+      </DRIVER>
+   </PERIPHERAL>
+
+</CLIP>

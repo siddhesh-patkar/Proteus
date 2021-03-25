@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg54"
+   sodipodi:docname="Round Plain.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata58">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     id="namedview56"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="2.7542373"
+     inkscape:cy="50"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g50" />
+  <defs
+     id="defs22">
+    <linearGradient
+       id="linear-gradient"
+       x1="85.36"
+       y1="85.36"
+       x2="14.64"
+       y2="14.64"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-opacity="0.3"
+         id="stop2" />
+      <stop
+         offset="0.56"
+         stop-opacity="0"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-2"
+       x1="24.39"
+       y1="24.39"
+       x2="75.61"
+       y2="75.61"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-opacity="0.4"
+         id="stop7" />
+      <stop
+         offset="0.43"
+         stop-opacity="0.21"
+         id="stop9" />
+      <stop
+         offset="0.5"
+         stop-opacity="0"
+         id="stop11" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-3"
+       x1="73.86"
+       y1="73.86"
+       x2="26.14"
+       y2="26.14"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.44"
+         stop-opacity="0"
+         id="stop14" />
+      <stop
+         offset="1"
+         stop-opacity="0.3"
+         id="stop16" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-4"
+       x1="24.25"
+       y1="24.25"
+       x2="75.75"
+       y2="75.75"
+       xlink:href="#linear-gradient-2" />
+    <linearGradient
+       id="linear-gradient-5"
+       x1="71.88"
+       y1="71.88"
+       x2="28.12"
+       y2="28.12"
+       xlink:href="#linear-gradient-3" />
+    <radialGradient
+       id="radial-gradient"
+       cx="50"
+       cy="50"
+       r="30.94"
+       xlink:href="#linear-gradient-3" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linear-gradient-2"
+       id="linearGradient3730"
+       gradientUnits="userSpaceOnUse"
+       x1="24.39"
+       y1="24.39"
+       x2="75.61"
+       y2="75.61" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linear-gradient-3"
+       id="linearGradient3732"
+       gradientUnits="userSpaceOnUse"
+       x1="73.86"
+       y1="73.86"
+       x2="26.14"
+       y2="26.14" />
+  </defs>
+  <vfp:catalogue
+     PREFIX="Btn"
+     CATEGORY="Buttons"
+     DESC="Modern Round Plain Button" />
+  <g vfp:class="PushButton"
+     id="g50"
+     inkscape:label="Root">
+    <circle class="bounds"
+       cx="50"
+       cy="50"
+       r="50"
+       style="fill:#fffef5"
+       id="circle26" />
+    <circle
+       cx="50"
+       cy="50"
+       r="50"
+       style="fill:url(#linear-gradient)"
+       id="circle28" />
+    <circle
+       class="lamp"
+       cx="50"
+       cy="50"
+       r="36.25"
+       style="fill:#e30613"
+       id="circle30" />
+    <g
+       id="g38">
+      <path
+         d="M 50,16.25 A 33.75,33.75 0 1 1 26.14,26.14 33.64,33.64 0 0 1 50,16.25 m 0,-2.47 v 0 A 36.22,36.22 0 1 0 75.61,24.39 36,36 0 0 0 50,13.78 Z"
+         style="fill:url(#linearGradient3730)"
+         id="path32"
+         inkscape:connector-curvature="0" />
+      <circle
+         class="buttonFace"
+         cx="50"
+         cy="50"
+         r="33.75"
+         style="fill:#fffef5"
+         id="circle34" />
+      <circle
+         cx="50"
+         cy="50"
+         r="33.75"
+         style="fill:url(#linearGradient3732)"
+         id="circle36" />
+    </g>
+    <g
+       id="g48"
+       style="display:none"
+       inkscape:label="Down">
+      <path
+         d="m 50,19.28 a 30.72,30.72 0 1 1 -21.72,9 30.62,30.62 0 0 1 21.72,-9 m 0,-5.7 v 0 A 36.42,36.42 0 1 0 75.75,24.25 36.18,36.18 0 0 0 50,13.58 Z"
+         style="fill:url(#linear-gradient-4)"
+         id="path40"
+         inkscape:connector-curvature="0" />
+      <circle
+         class="buttonFace"
+         cx="50"
+         cy="50"
+         r="30.940001"
+         style="fill:#fffef5"
+         id="circle42" />
+      <circle
+         cx="50"
+         cy="50"
+         r="30.940001"
+         style="fill:url(#linear-gradient-5)"
+         id="circle44" />
+      <circle
+         cx="50"
+         cy="50"
+         r="30.940001"
+         style="fill:url(#radial-gradient)"
+         id="circle46" />
+    </g>
+    <text
+       id="text4145"
+       y="133.64171"
+       x="50.620945"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#00000c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve">label</text>
+  </g>
+</svg>

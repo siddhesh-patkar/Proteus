@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DRIVER HEADER="Zumo.h">
+   <!-- Line hunter methods -->
+   <FUNCTION DESC="Returns true if the line pos is within the min and max positions"> 
+      <PARAMETER NAME="min" TYPE="INTEGER" DEFAULT="1000" DESC="Min pos of line"/>
+      <PARAMETER NAME="max" TYPE="INTEGER" DEFAULT="6000" DESC="Max pos of line"/>
+  	   <RETURN TYPE="BOOLEAN"/>
+   </FUNCTION>    
+
+   <METHOD NAME="readLinePos"  DESC="Position of the line">
+      <RETURN TYPE="INTEGER"/>
+   </METHOD>
+   
+   <METHOD NAME="readRawValue"  DESC="Value from a single sensor">
+      <PARAMETER NAME="index" TYPE="INTEGER" DEFAULT="0" DESC="Sensor index"/>
+      <RETURN TYPE="INTEGER"/>
+   </METHOD>
+   
+</DRIVER>

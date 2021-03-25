@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino Hall-Effect Current Sensor Breakout Board.pdsclip" DESC="Hall-Effect Current Sensor Breakout." FAMILY="ARDUINO" >
+   <PERIPHERAL TYPE="Hall-Effect Current Sensor" ELEMENT="ACS1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="GenericHallEffectSensor">
+         <PIN NAME="AN" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD2"/>
+         </PIN>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Generic.h">
+         <!-- Sensor Function -->
+         <FUNCTION DESC="Return true if current greater or equal to the trigger value.">
+            <PARAMETER NAME="Trigger" TYPE="FLOAT" DEFAULT="0" DESC="Trigger value in Amps"/>
+            <RETURN TYPE="BOOLEAN"/>
+         </FUNCTION>
+         <!-- Methods -->
+         <METHOD NAME="readAcCurrent" DESC="Read rms value of AC current in Amps rms.">
+            <PARAMETER NAME="nsamples" TYPE="INTEGER" DEFAULT="1" DESC="Number of samples to integrate"/>
+            <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="Amps"/>
+         </METHOD>
+         <METHOD NAME="readDcCurrent" DESC="Read value of DC current in Amps.">
+            <PARAMETER NAME="naverages" TYPE="INTEGER" DEFAULT="1" DESC="Number of average to stabilize measure"/>
+            <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="Amps"/>
+         </METHOD>
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

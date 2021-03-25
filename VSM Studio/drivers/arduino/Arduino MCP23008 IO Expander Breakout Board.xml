@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino MCP23008 IO Expander Breakout Board.pdsclip" DESC="Arduino MCP23008 IO Expander Breakout Board" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="MCP23008 IO Expander" ELEMENT="IOX1">
+      <INTERFACE OBJECT="MCP23008">
+         <PORT NAME="I2C"/>
+         <SETUP NAME="begin"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP1" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP2" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP3" TYPE="INTEGER"/>
+      </INTERFACE>
+      <DRIVER FILE="mcp23008/mcp23008.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

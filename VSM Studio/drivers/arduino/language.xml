@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<LANGUAGE TOOLCHAIN="ARDUINO" ARRAYBASE="0">  
+  <!-- Define symbolic constants used by the C++/Arduino language -->
+  <CONSTANTS>
+      <CONSTANT NAME="TRUE" VALUE="true" TYPE="BOOLEAN" />
+      <CONSTANT NAME="FALSE" VALUE="false" TYPE="BOOLEAN"/>
+      <CONSTANT NAME="ON" VALUE="true" TYPE="BOOLEAN" />
+      <CONSTANT NAME="OFF" VALUE="false" TYPE="BOOLEAN"/>
+      <CONSTANT NAME="NULL" VALUE="NULL" TYPE="NONE" />
+      <CONSTANT NAME="PI" VALUE="PI" TYPE="FLOAT" />
+  </CONSTANTS>
+
+  <!-- Allow types to be promoted when a strict match cannot be found -->
+  <TYPE_PROMOTIONS>
+    <TYPE_PROMOTION FROM="INTEGER" TO="FLOAT" />
+    <TYPE_PROMOTION FROM="TIME" TO="VARIANT" />
+    <TYPE_PROMOTION FROM="FLOAT" TO="VARIANT" />
+    <TYPE_PROMOTION FROM="STRING" TO="VARIANT" />
+    <TYPE_PROMOTION FROM="BOOLEAN" TO="VARIANT" />
+    <TYPE_PROMOTION FROM="INTEGER" TO="LIST" />
+    <TYPE_PROMOTION FROM="TIME" TO="LIST" />
+    <TYPE_PROMOTION FROM="FLOAT" TO="LIST" />
+    <TYPE_PROMOTION FROM="STRING" TO="LIST" />
+    <TYPE_PROMOTION FROM="BOOLEAN" TO="LIST" />
+  </TYPE_PROMOTIONS>
+  
+  <OPERATORS>
+    <OPERATOR NAME="!" PRECEDENCE_INDEX="1" ARITY="UNARY_PREFIX">
+      <TYPES RETURN="BOOLEAN" RHS="BOOLEAN" />
+    </OPERATOR>
+    <OPERATOR NAME="+" PRECEDENCE_INDEX="1" ARITY="UNARY_PREFIX">
+      <TYPES RETURN="INTEGER" RHS="INTEGER" />
+      <TYPES RETURN="FLOAT" RHS="FLOAT" />
+    </OPERATOR>
+    <OPERATOR NAME="-" PRECEDENCE_INDEX="1" ARITY="UNARY_PREFIX">
+      <TYPES RETURN="INTEGER" RHS="INTEGER" />
+      <TYPES RETURN="FLOAT" RHS="FLOAT" />
+    </OPERATOR>
+    <OPERATOR NAME="*" PRECEDENCE_INDEX="2" ARITY="BINARY">
+      <TYPES RETURN="INTEGER" LHS="INTEGER" RHS="INTEGER" />
+      <TYPES RETURN="FLOAT" LHS="FLOAT" RHS="FLOAT" />
+    </OPERATOR>
+    <OPERATOR NAME="/" PRECEDENCE_INDEX="2" ARITY="BINARY">
+      <TYPES RETURN="INTEGER" LHS="INTEGER" RHS="INTEGER" />
+      <TYPES RETURN="FLOAT" LHS="FLOAT" RHS="FLOAT" />
+    </OPERATOR>
+    <OPERATOR NAME="%" PRECEDENCE_INDEX="2" ARITY="BINARY">
+      <TYPES RETURN="INTEGER" LHS="INTEGER" RHS="INTEGER" />
+      <TYPES RETURN="FLOAT" LHS="FLOAT" RHS="FLOAT" />
+    </OPERATOR>
+    <OPERATOR NAME="+" PRECEDENCE_INDEX="3" ARITY="BINARY">
+      <TYPES RETURN="INTEGER" LHS="INTEGER" RHS="INTEGER" />
+      <TYPES RETURN="FLOAT" LHS="FLOAT" RHS="FLOAT" />
+      <TYPES RETURN="STRING" LHS="STRING" RHS="STRING" />
+      <TYPES RETURN="TIME" LHS="TIME" RHS="INTEGER" />
+    </OPERATOR>
+    <OPERATOR NAME="-" PRECEDENCE_INDEX="3" ARITY="BINARY">
+      <TYPES RETURN="INTEGER" LHS="INTEGER" RHS="INTEGER" />
+      <TYPES RETURN="FLOAT" LHS="FLOAT" RHS="FLOAT" />
+      <TYPES RETURN="TIME" LHS="TIME" RHS="INTEGER" />
+      <TYPES RETURN="INTEGER" LHS="TIME" RHS="TIME" />
+    </OPERATOR>
+    <OPERATOR NAME="&gt;=" PRECEDENCE_INDEX="4" ARITY="BINARY">
+      <TYPES RETURN="BOOLEAN" LHS="FLOAT" RHS="FLOAT" />
+      <TYPES RETURN="BOOLEAN" LHS="TIME" RHS="TIME" />
+    </OPERATOR>
+    <OPERATOR NAME="&lt;=" PRECEDENCE_INDEX="4" ARITY="BINARY">
+      <TYPES RETURN="BOOLEAN" LHS="FLOAT" RHS="FLOAT" />
+      <TYPES RETURN="BOOLEAN" LHS="TIME" RHS="TIME" />
+    </OPERATOR>
+    <OPERATOR NAME="&gt;" PRECEDENCE_INDEX="4" ARITY="BINARY">
+      <TYPES RETURN="BOOLEAN" LHS="FLOAT" RHS="FLOAT" />
+      <TYPES RETURN="BOOLEAN" LHS="TIME" RHS="TIME" />
+    </OPERATOR>
+    <OPERATOR NAME="&lt;" PRECEDENCE_INDEX="4" ARITY="BINARY">
+      <TYPES RETURN="BOOLEAN" LHS="FLOAT" RHS="FLOAT" />
+      <TYPES RETURN="BOOLEAN" LHS="TIME" RHS="TIME" />
+    </OPERATOR>
+    <OPERATOR NAME="&amp;&amp;" PRECEDENCE_INDEX="5" ARITY="BINARY">
+      <TYPES RETURN="BOOLEAN" LHS="BOOLEAN" RHS="BOOLEAN" />
+    </OPERATOR>
+    <OPERATOR NAME="||" PRECEDENCE_INDEX="5" ARITY="BINARY">
+      <TYPES RETURN="BOOLEAN" LHS="BOOLEAN" RHS="BOOLEAN" />
+    </OPERATOR>
+    <OPERATOR NAME="=" PRECEDENCE_INDEX="6" ARITY="BINARY">
+      <TYPES RETURN="BOOLEAN" LHS="BOOLEAN" RHS="BOOLEAN" />
+      <TYPES RETURN="BOOLEAN" LHS="FLOAT" RHS="FLOAT" />
+      <TYPES RETURN="BOOLEAN" LHS="STRING" RHS="STRING" />
+      <TYPES RETURN="BOOLEAN" LHS="TIME" RHS="TIME" />
+    </OPERATOR>
+    <OPERATOR NAME="==" PRECEDENCE_INDEX="6" ARITY="BINARY">
+      <TYPES RETURN="BOOLEAN" LHS="BOOLEAN" RHS="BOOLEAN" />
+      <TYPES RETURN="BOOLEAN" LHS="FLOAT" RHS="FLOAT" />
+      <TYPES RETURN="BOOLEAN" LHS="STRING" RHS="STRING" />
+      <TYPES RETURN="BOOLEAN" LHS="TIME" RHS="TIME" />
+   </OPERATOR>
+    <OPERATOR NAME="!=" PRECEDENCE_INDEX="6" ARITY="BINARY">
+      <TYPES RETURN="BOOLEAN" LHS="BOOLEAN" RHS="BOOLEAN" />
+      <TYPES RETURN="BOOLEAN" LHS="FLOAT" RHS="FLOAT" />
+      <TYPES RETURN="BOOLEAN" LHS="STRING" RHS="STRING" />
+      <TYPES RETURN="BOOLEAN" LHS="TIME" RHS="TIME" />
+    </OPERATOR>
+  </OPERATORS>
+
+  <!-- Define function libraries provided by the language -->
+  <!-- If the library is nameless, the function name is used directly -->
+  <LIBRARY DESC="General Functions">
+  		<FUNCTION NAME="toInt" DESC="Convert string to an integer">
+  			<PARAMETER NAME="string" TYPE="STRING"/>
+  			<RETURN TYPE="INTEGER"/>
+  		</FUNCTION>
+  		<FUNCTION NAME="toFloat" DESC="Convert string to a float">
+  			<PARAMETER NAME="string" TYPE="STRING"/>
+  			<RETURN TYPE="FLOAT"/>
+  		</FUNCTION>
+  		<FUNCTION NAME="toString" DESC="Convert a number to a string">
+  			<PARAMETER NAME="number" TYPE="FLOAT"/>
+  			<RETURN TYPE="STRING"/>
+  		</FUNCTION>
+      <FUNCTION NAME="abs" DESC="Absolute value of an integer">
+        <PARAMETER NAME="value" TYPE="INTEGER"/>
+        <RETURN TYPE="INTEGER"/>
+      </FUNCTION>
+      <FUNCTION NAME="min" DESC="Minimum of two integer values">
+          <PARAMETER NAME="v1" TYPE="INTEGER"/>
+          <PARAMETER NAME="v2" TYPE="INTEGER"/>
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="max" DESC="Maximum of two integer values">
+      <PARAMETER NAME="v1" TYPE="INTEGER"/>
+      <PARAMETER NAME="v2" TYPE="INTEGER"/>
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="random" DESC="Pseudo-random number generator">
+      <PARAMETER NAME="max" TYPE="INTEGER"/>
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="eof" DESC="True if at end of a file">
+      <PARAMETER NAME="file" TYPE="HANDLE"/>
+      <RETURN TYPE="BOOLEAN"/>
+    </FUNCTION>        
+    </LIBRARY>
+  
+  <LIBRARY DESC="String Functions">
+    <FUNCTION NAME="len" DESC="Length of string">
+      <PARAMETER NAME="string" TYPE="STRING"/>
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="left" DESC="Characters from the left">
+      <PARAMETER NAME="string" TYPE="STRING"/>
+      <PARAMETER NAME="count" TYPE="INTEGER"/>
+      <RETURN TYPE="STRING"/>
+    </FUNCTION>
+    <FUNCTION NAME="right" DESC="Characters from the right">
+      <PARAMETER NAME="string" TYPE="STRING"/>
+      <PARAMETER NAME="count" TYPE="INTEGER"/>
+      <RETURN TYPE="STRING"/>
+    </FUNCTION>
+    <FUNCTION NAME="sub" DESC="Subsection string">
+      <PARAMETER NAME="string" TYPE="STRING"/>
+      <PARAMETER NAME="from" TYPE="INTEGER"/>
+      <PARAMETER NAME="to" TYPE="INTEGER"/>
+      <RETURN TYPE="STRING"/>
+    </FUNCTION>
+    <FUNCTION NAME="upper" DESC="Upper case">
+      <PARAMETER NAME="string" TYPE="STRING"/>
+      <RETURN TYPE="STRING"/>
+    </FUNCTION>
+    <FUNCTION NAME="lower" DESC="Lower case">
+      <PARAMETER NAME="string" TYPE="STRING"/>
+      <RETURN TYPE="STRING"/>
+    </FUNCTION>
+  </LIBRARY>
+  
+  <LIBRARY DESC="Math Functions">
+    <FUNCTION NAME="fabs" DESC="Absolute value of a float">
+      <PARAMETER NAME="value" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="fmin" DESC="Minimum of two floating point values">
+      <PARAMETER NAME="v1" TYPE="FLOAT"/>
+      <PARAMETER NAME="v2" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="fmax" DESC="Maximum of two floating point values">
+      <PARAMETER NAME="v1" TYPE="FLOAT"/>
+      <PARAMETER NAME="v2" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="round" DESC="Round to nearest integer">
+      <PARAMETER NAME="value" TYPE="FLOAT"/>
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="ceil" DESC="Round up">
+      <PARAMETER NAME="value" TYPE="FLOAT"/>
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="floor" DESC="Round down">
+      <PARAMETER NAME="value" TYPE="FLOAT"/>
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="sqrt" DESC="Square root">
+      <PARAMETER NAME="value" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="log" DESC="Natural logarithm of value">
+      <PARAMETER NAME="value" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="log10" DESC="Base 10 logarithm of value">
+      <PARAMETER NAME="value" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="exp" DESC="Returns e raised to the power of value">
+      <PARAMETER NAME="value" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="pow" DESC="Returns x raised to the power of y">
+      <PARAMETER NAME="x" TYPE="FLOAT"/>
+      <PARAMETER NAME="y" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="sin" DESC="Sine of angle in radians">
+      <PARAMETER NAME="angle" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="cos" DESC="Cosine of angle in radians">
+      <PARAMETER NAME="angle" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="tan" DESC="Tangent of angle in radians">
+      <PARAMETER NAME="angle" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="asin" DESC="Inverse sine of theta in radians">
+      <PARAMETER NAME="theta" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="acos" DESC="Inverse cosine of theta in radians">
+      <PARAMETER NAME="theta" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="atan" DESC="Inverse tangent of theta in radians">
+      <PARAMETER NAME="theta" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="degrees" DESC="Convert value in radians to degrees">
+      <PARAMETER NAME="value" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+    <FUNCTION NAME="radians" DESC="Convert value in degrees to radians">
+      <PARAMETER NAME="value" TYPE="FLOAT"/>
+      <RETURN TYPE="FLOAT"/>
+    </FUNCTION>
+  </LIBRARY>
+
+<LIBRARY DESC="Time Functions">
+    <FUNCTION NAME="millis" DESC="The number of milliseconds the program has been running">
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="now" DESC="The current time expressed in TAI seconds since midnight on 01/01/1970">
+      <RETURN TYPE="TIME"/>
+    </FUNCTION>
+    <FUNCTION NAME="date" DESC="The date at time t formatted as yyyy-mm-dd">
+      <PARAMETER NAME="t" TYPE="TIME"/>      
+      <RETURN TYPE="STRING"/>
+    </FUNCTION>  
+    <FUNCTION NAME="time" DESC="The time t formatted as hh:mm:ss">
+      <PARAMETER NAME="t" TYPE="TIME"/>      
+      <RETURN TYPE="STRING"/>
+    </FUNCTION>      
+    <FUNCTION NAME="timeValid" DESC="Returns TRUE if the values are valid.">
+      <RETURN TYPE="BOOLEAN"/>
+    </FUNCTION>
+    <FUNCTION NAME="makeTime" DESC="Set the current time from a separate values">
+         <PARAMETER NAME="year" TYPE="INTEGER"/>
+         <PARAMETER NAME="month" TYPE="INTEGER"/>
+         <PARAMETER NAME="day" TYPE="INTEGER"/>
+         <PARAMETER NAME="hour" TYPE="INTEGER"/>
+         <PARAMETER NAME="minute" TYPE="INTEGER"/>
+         <PARAMETER NAME="second" TYPE="INTEGER"/>
+         <RETURN TYPE="TIME"/>
+    </FUNCTION>    
+    <FUNCTION NAME="tmHour" DESC="The hour at time t">
+      <PARAMETER NAME="t" TYPE="TIME"/>      
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="tmMinute" DESC="The minute at time t">
+      <PARAMETER NAME="t" TYPE="TIME"/>      
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="tmSecond" DESC="The second at time t">
+      <PARAMETER NAME="t" TYPE="TIME"/>      
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="tmDay" DESC="The day of the month at time t">
+      <PARAMETER NAME="t" TYPE="TIME"/>      
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="tmWeekDay" DESC="The day of the week at time t">
+      <PARAMETER NAME="t" TYPE="TIME"/>      
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="tmMonth" DESC="The month at time t">
+      <PARAMETER NAME="t" TYPE="TIME"/>      
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="tmYear" DESC="The year at time t">
+      <PARAMETER NAME="t" TYPE="TIME"/>      
+      <RETURN TYPE="INTEGER"/>
+    </FUNCTION>
+    <FUNCTION NAME="monthName" DESC="Full name of the month">
+      <PARAMETER NAME="month" TYPE="INTEGER"/>      
+      <RETURN TYPE="STRING"/>
+    </FUNCTION>
+    <FUNCTION NAME="dayName" DESC="Return full name of the day">
+      <PARAMETER NAME="day" TYPE="INTEGER"/>      
+      <RETURN TYPE="STRING"/>
+    </FUNCTION>
+   <FUNCTION NAME="shortMonthName" DESC="Short name of the month">
+      <PARAMETER NAME="month" TYPE="INTEGER"/>      
+      <RETURN TYPE="STRING"/>
+    </FUNCTION>
+    <FUNCTION NAME="shortDayName" DESC="Short name of the day">
+      <PARAMETER NAME="day" TYPE="INTEGER"/>      
+      <RETURN TYPE="STRING"/>
+    </FUNCTION>       
+  </LIBRARY>
+     
+</LANGUAGE>
+	

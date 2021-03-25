@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove Buzzer.pdsclip" FAMILY="ARDUINO" DESC="Grove Buzzer Module" >
+   <PERIPHERAL TYPE="Grove Buzzer" ELEMENT="BUZ1" CATEGORY="Grove">
+   
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GroveBuzzer">
+       <PROPERTY NAME="STATE" ELEMENT="GC1" TYPE="INTEGER" GROVE="DIGITAL"/>
+     </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="Grove.h">
+        <METHOD NAME="on"  DESC="Turn Buzzer on."/>
+        <METHOD NAME="off" DESC="Turn Buzzer off."/>
+        <METHOD NAME="set" DESC="Turn Buzzer on or off.">
+        	 <PARAMETER NAME="state" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="State of Buzzer"/>
+        </METHOD>       
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>   	
+  

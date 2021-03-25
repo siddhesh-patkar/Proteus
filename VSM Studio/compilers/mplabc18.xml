@@ -1,0 +1,2060 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<COMPILER NAME="MPLAB C18" ID="MPLABC18" VERSION="3.34" URL="http://www.microchip.com/" AVAILABILITY="External" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- Compiler -->
+  <TOOL NAME="CC" FILE="mcc18.exe">
+    <!-- Options -->
+    <OPTION NAME="-I=" DESC="Add 'path' to include path" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-fo=" DESC="Object file name" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-fe=" DESC="Error file name" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--inc=" DESC="Commandline include file name" PARAM="STRING">
+      <ALIAS NAME="-z"/>
+    </OPTION>
+    <OPTION NAME="-k" DESC="Set plain char type to unsigned char" ADVANCED="1"/>
+    <OPTION NAME="-ls" DESC="Large stack (can span multiple banks)" ADVANCED="1"/>
+    <OPTION NAME="-ms" DESC="Set compiler memory model to small model (default)" ADVANCED="1"/>
+    <OPTION NAME="-ml" DESC="Set compiler memory model to large model" ADVANCED="1"/>
+    <OPTION NAME="-O" DESC="Optimization settings" PARAM="CHOICE" MULTIPLE="1">
+      <PARAM VALUE="" DESC="Enable all optimizations" DEFAULT="1">
+        <ALIAS VALUE="+"/>
+      </PARAM>
+      <PARAM VALUE="-" DESC="Disable all optimizations"/>
+      <PARAM VALUE="i+" DESC="Enable integer promotion"/>
+      <PARAM VALUE="i-" DESC="Disable integer promotion"/>
+      <PARAM VALUE="m+" DESC="Enable duplicate string merging"/>
+      <PARAM VALUE="m-" DESC="Disable duplicate string merging"/>
+      <PARAM VALUE="n+" DESC="Enable banking optimizer"/>
+      <PARAM VALUE="n-" DESC="Disable banking optimizer"/>
+      <PARAM VALUE="u+" DESC="Enable unreachable code removal"/>
+      <PARAM VALUE="u-" DESC="Disable unreachable code removal"/>
+      <PARAM VALUE="s+" DESC="Enable code straightening"/>
+      <PARAM VALUE="s-" DESC="Disable code straightening"/>
+      <PARAM VALUE="t+" DESC="Enable tail merging"/>
+      <PARAM VALUE="t-" DESC="Disable tail merging"/>
+      <PARAM VALUE="b+" DESC="Enable branch optimizations"/>
+      <PARAM VALUE="b-" DESC="Disable branch optimizations"/>
+      <PARAM VALUE="d+" DESC="Enable dead code removal"/>
+      <PARAM VALUE="d-" DESC="Disable dead code removal"/>
+      <PARAM VALUE="pa+" DESC="Enable procedural abstraction"/>
+      <PARAM VALUE="pa-" DESC="Disable procedural abstraction"/>
+      <PARAM VALUE="p+" DESC="Enable copy propagation"/>
+      <PARAM VALUE="p-" DESC="Disable copy propagation"/>
+      <PARAM VALUE="r+" DESC="Enable redundant store elimination"/>
+      <PARAM VALUE="r-" DESC="Disable redundant store elimination"/>
+      <PARAM VALUE="a+" DESC="Enable default data in access memory"/>
+      <PARAM VALUE="a-" DESC="Disable default data in access memory"/>
+      <PARAM VALUE="w+" DESC="Enable WREG tracking"/>
+      <PARAM VALUE="w-" DESC="Disable WREG tracking"/>
+    </OPTION>
+    <OPTION NAME="-sca" DESC="Enable default auto locals" DEFAULT="1" ADVANCED="1"/>
+    <OPTION NAME="-scs" DESC="Enable default static locals" ADVANCED="1"/>
+    <OPTION NAME="-sco" DESC="Enable default overlay locals (statically allocate activation records)" ADVANCED="1"/>
+    <OPTION NAME="-pa=" DESC="Set procedural abstraction repeat count (default = 4)" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="-p" DESC="Set processor (default is generic)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--extended" DESC="generate extended mode code" ADVANCED="1"/>
+    <OPTION NAME="--no-extended" DESC="generate non-extended mode code" ADVANCED="1"/>
+    <OPTION NAME="-D=" DESC="Define a macro" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-w=" DESC="Set warning level" PARAM="CHOICE">
+      <PARAM VALUE="1"/>
+      <PARAM VALUE="2" DEFAULT="1"/>
+      <PARAM VALUE="3"/>
+    </OPTION>
+    <OPTION NAME="-nw=" DESC="Suppress message" PARAM="STRING"/>
+    <OPTION NAME="-verbose" DESC="Operate verbosely (show banner and other information)" ADVANCED="1"/>
+  </TOOL>
+  <!-- Linker -->
+  <TOOL NAME="LD" FILE="mplink.exe">
+    <OPTION NAME="-o" DESC="specify output file 'filename', default is 'a.out'" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-m" DESC="create map file 'filename'" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-l" DESC="list of directories to search for library/object files" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-k" DESC="list of directories to search for linker command files" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-n" DESC="number of lines per listing page (0 = no pagination)" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="-a" DESC="specify format of hex programming file" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="INHX8M"/>
+      <PARAM VALUE="INHX8S"/>
+      <PARAM VALUE="INHX32"/>
+    </OPTION>
+    <OPTION NAME="-d" DESC="do not create listing file" ADVANCED="1"/>
+    <OPTION NAME="-w" DESC="do not invoke MP2COD (no .COD or .LST file)" ADVANCED="1"/>
+    <OPTION NAME="-x" DESC="do not invoke MP2HEX (no .HEX, .HXL, or .HXH file)" ADVANCED="1"/>
+    <OPTION NAME="-q" DESC="quiet mode operation (display no warnings or errors)" ADVANCED="1"/>
+    <OPTION NAME="-v" DESC="verbose mode operation (display all warnings and errors)" ADVANCED="1"/>
+    <OPTION NAME="-u " DESC="define linker script symbol and optionally assign value to it" PARAM="STRING"/>
+    <OPTION NAME="-g" DESC="generate the report file for stack analysis" ADVANCED="1"/>
+    <OPTION NAME="-i" DESC="generate the .LST file and no .COD file" ADVANCED="1"/>
+    <OPTION NAME="-p" DESC="Set processor (default is generic)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="" DESC="Linker script" PARAM="STRING" ID="LKR"/>
+  </TOOL>
+  <!-- Librarian -->
+  <TOOL NAME="LIB" FILE="mplib.exe">
+    <OPTION NAME="/q " DESC="quiet mode"/>
+    <OPTION NAME="/c " DESC="create library LIBRARY" ADVANCED="1"/>
+    <OPTION NAME="/t " DESC="list library LIBRARY" ADVANCED="1"/>
+    <OPTION NAME="/d " DESC="delete MEMBER from LIBRARY" ADVANCED="1"/>
+    <OPTION NAME="/r " DESC="add or replace MEMBER in LIBRARY" ADVANCED="1"/>
+    <OPTION NAME="/x " DESC="extract MEMBER from LIBRARY" ADVANCED="1"/>
+  </TOOL>
+  <!-- Assembler -->
+  <TOOL NAME="ASM" FILE="c:/mcc18/mpasm/MPASMWIN.exe">
+    <OPTION NAME="/a" DESC="Generate absolute hex file of type format" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="INHX8S"/>
+      <PARAM VALUE="INHX8M"/>
+      <PARAM VALUE="INHX32" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="/c" DESC="Enable or disable case sensitivity to symbols" PARAM="CHOICE">
+      <PARAM VALUE="+" DESC="Enable" DEFAULT="1"/>
+      <PARAM VALUE="-" DESC="Disable"/>
+    </OPTION>
+    <OPTION NAME="/d" DESC="Defines assembly run time variable" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/e" DESC="Enable or disable error file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/l" DESC="Enable or disable listing file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/m" DESC="Enable or disable macro expansion" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="+" DESC="Enable" DEFAULT="1"/>
+      <PARAM VALUE="-" DESC="Disable"/>
+    </OPTION>
+    <OPTION NAME="/o" DESC="Specify path for object files" PARAM="STRING"/>
+    <OPTION NAME="/p" DESC="Specify processor type, where procsr like 16C54" PARAM="STRING"/>
+    <OPTION NAME="/q" DESC="Enable or disable quiet mode (suppresses screen output)" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="+" DESC="Enable" DEFAULT="1"/>
+      <PARAM VALUE="-" DESC="Disable"/>
+    </OPTION>
+    <OPTION NAME="/r" DESC="Specify default radix" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="hex" DEFAULT="1"/>
+      <PARAM VALUE="dec"/>
+      <PARAM VALUE="oct"/>
+    </OPTION>
+    <OPTION NAME="/s" DESC="Show progress window while assembling" PARAM="CHOICE">
+      <PARAM VALUE="+" DESC="Enable" DEFAULT="1"/>
+      <PARAM VALUE="-" DESC="Disable"/>
+    </OPTION>
+    <OPTION NAME="/t" DESC="Specify tab size" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="/w" DESC="Specify level of warnings to appear in listing" PARAM="CHOICE">
+      <PARAM VALUE="0" DESC="All" DEFAULT="1"/>
+      <PARAM VALUE="1" DESC="Warnings &amp; errors"/>
+      <PARAM VALUE="2" DESC="Errors only"/>
+    </OPTION>
+    <OPTION NAME="/x" DESC="Enable or disable cross reference file" PARAM="STRING" ADVANCED="1"/>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="PIC18">
+    <CONTROLLER NAME="PIC18C242">
+      <TEMPLATE NAME="INCFILE" VALUE="p18c242.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18c242"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18c242"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18c242_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18c242"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C252">
+      <TEMPLATE NAME="INCFILE" VALUE="p18c252.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18c252"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18c252"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18c252_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18c252"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C442">
+      <TEMPLATE NAME="INCFILE" VALUE="p18c442.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18c442"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18c442"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18c442_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18c442"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C452">
+      <TEMPLATE NAME="INCFILE" VALUE="p18c452.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18c452"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18c452"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18c452_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18c452"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C601">
+      <TEMPLATE NAME="INCFILE" VALUE="p18c601.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18c601"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18c601"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18c601_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18c601"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C658">
+      <TEMPLATE NAME="INCFILE" VALUE="p18c658.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18c658"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18c658"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18c658_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18c658"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C801">
+      <TEMPLATE NAME="INCFILE" VALUE="p18c801.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18c801"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18c801"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18c801_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18c801"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C858">
+      <TEMPLATE NAME="INCFILE" VALUE="p18c858.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18c858"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18c858"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18c858_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18c858"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F1220">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f1220.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f1220"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f1220"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f1220_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f1220"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F1230">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f1230.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f1230"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f1230"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f1230_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f1230"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F1320">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f1320.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f1320"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f1320"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f1320_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f1320"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F1330">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f1330.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f1330"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f1330"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f1330_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f1330"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F13K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f13k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f13k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f13k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f13k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f13k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F13K50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f13k50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f13k50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f13k50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f13k50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f13k50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F14K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f14k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f14k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f14k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f14k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f14k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F14K50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f14k50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f14k50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f14k50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f14k50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f14k50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2220">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2220.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2220"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2220"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2220_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2220"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2221">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2221.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2221"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2221"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2221_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2221"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2320">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2320.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2320"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2320"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2320_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2320"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2321">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2321.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2321"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2321"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2321_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2321"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2331">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2331.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2331"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2331"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2331_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2331"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F23K20">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f23k20.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f23k20"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f23k20"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f23k20_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f23k20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2410">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2410.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2410"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2410"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2410_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2410"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F242">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f242.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f242"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f242"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f242_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f242"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2420">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2420.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2420"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2420"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2420_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2420"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2423">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2423.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2423"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2423"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2423_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2423"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2431">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2431.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2431"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2431"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2431_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2431"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2439">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2439.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2439"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2439"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2439_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2439"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2450">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2450.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2450"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2450"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2450_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2450"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2455">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2455.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2455"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2455"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2455_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2455"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2458">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2458.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2458"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2458"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2458_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2458"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F248">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f248.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f248"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f248"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f248_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f248"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2480">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2480.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2480"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2480"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2480_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2480"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F24J10">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f24j10.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f24j10"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f24j10"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f24j10_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f24j10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F24J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f24j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f24j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f24j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f24j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f24j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F24J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f24j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f24j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f24j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f24j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f24j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F24K20">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f24k20.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f24k20"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f24k20"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f24k20_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f24k20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2510">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2510.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2510"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2510"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2510_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2510"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2515">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2515.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2515"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2515"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2515_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2515"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F252">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f252.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f252"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f252"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f252_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f252"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2520">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2520.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2520"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2520"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2520_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2520"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2523">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2523.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2523"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2523"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2523_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2523"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2525">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2525.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2525"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2525"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2525_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2525"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2539">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2539.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2539"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2539"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2539_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2539"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2550">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2550.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2550"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2550"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2550_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2550"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2553">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2553.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2553"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2553"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2553_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2553"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F258">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f258.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f258"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f258"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f258_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f258"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2580">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2580.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2580"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2580"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2580_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2580"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2585">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2585.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2585"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2585"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2585_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2585"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F25J10">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f25j10.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f25j10"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f25j10"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f25j10_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f25j10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F25J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f25j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f25j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f25j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f25j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f25j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F25J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f25j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f25j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f25j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f25j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f25j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F25K20">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f25k20.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f25k20"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f25k20"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f25k20_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f25k20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F25K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f25k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f25k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f25k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f25k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f25k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2610">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2610.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2610"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2610"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2610_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2610"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2620">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2620.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2620"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2620"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2620_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2620"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2680">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2680.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2680"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2680"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2680_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2680"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2682">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2682.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2682"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2682"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2682_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2682"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2685">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f2685.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f2685"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f2685"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f2685_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f2685"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f26j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f26j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f26j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f26j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f26j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26J13">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f26j13.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f26j13"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f26j13"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f26j13_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f26j13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f26j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f26j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f26j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f26j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f26j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26J53">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f26j53.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f26j53"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f26j53"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f26j53_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f26j53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26K20">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f26k20.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f26k20"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f26k20"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f26k20_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f26k20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F27J13">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f27j13.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f27j13"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f27j13"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f27j13_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f27j13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F27J53">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f27j53.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f27j53"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f27j53"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f27j53_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f27j53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4220">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4220.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4220"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4220"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4220_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4220"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4221">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4221.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4221"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4221"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4221_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4221"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4320">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4320.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4320"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4320"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4320_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4320"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4321">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4321.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4321"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4321"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4321_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4321"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4331">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4331.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4331"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4331"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4331_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4331"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F43K20">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f43k20.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f43k20"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f43k20"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f43k20_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f43k20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4410">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4410.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4410"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4410"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4410_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4410"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F442">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f442.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f442"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f442"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f442_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f442"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4420">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4420.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4420"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4420"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4420_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4420"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4423">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4423.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4423"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4423"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4423_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4423"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4431">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4431.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4431"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4431"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4431_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4431"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4439">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4439.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4439"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4439"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4439_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4439"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4450">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4450.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4450"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4450"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4450_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4450"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4455">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4455.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4455"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4455"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4455_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4455"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4458">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4458.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4458"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4458"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4458_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4458"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F448">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f448.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f448"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f448"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f448_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f448"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4480">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4480.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4480"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4480"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4480_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4480"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F44J10">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f44j10.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f44j10"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f44j10"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f44j10_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f44j10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F44J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f44j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f44j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f44j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f44j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f44j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F44J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f44j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f44j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f44j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f44j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f44j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F44K20">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f44k20.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f44k20"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f44k20"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f44k20_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f44k20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4510">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4510.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4510"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4510"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4510_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4510"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4515">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4515.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4515"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4515"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4515_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4515"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F452">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f452.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f452"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f452"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f452_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f452"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4520">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4520.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4520"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4520"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4520_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4520"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4523">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4523.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4523"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4523"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4523_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4523"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4525">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4525.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4525"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4525"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4525_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4525"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4539">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4539.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4539"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4539"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4539_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4539"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4550">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4550.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4550"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4550"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4550_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4550"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4553">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4553.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4553"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4553"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4553_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4553"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F458">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f458.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f458"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f458"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f458_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f458"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4580">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4580.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4580"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4580"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4580_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4580"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4585">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4585.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4585"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4585"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4585_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4585"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F45J10">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f45j10.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f45j10"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f45j10"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f45j10_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f45j10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F45J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f45j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f45j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f45j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f45j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f45j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F45J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f45j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f45j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f45j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f45j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f45j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F45K20">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f45k20.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f45k20"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f45k20"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f45k20_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f45k20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F45K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f45k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f45k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f45k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f45k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f45k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4610">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4610.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4610"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4610"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4610_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4610"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4620">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4620.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4620"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4620"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4620_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4620"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4680">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4680.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4680"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4680"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4680_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4680"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4682">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4682.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4682"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4682"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4682_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4682"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4685">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f4685.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f4685"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f4685"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f4685_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f4685"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f46j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f46j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f46j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f46j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f46j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46J13">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f46j13.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f46j13"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f46j13"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f46j13_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f46j13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f46j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f46j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f46j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f46j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f46j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46J53">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f46j53.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f46j53"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f46j53"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f46j53_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f46j53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46K20">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f46k20.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f46k20"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f46k20"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f46k20_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f46k20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F47J13">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f47j13.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f47j13"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f47j13"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f47j13_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f47j13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F47J53">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f47j53.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f47j53"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f47j53"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f47j53_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f47j53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6310">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6310.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6310"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6310"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6310_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6310"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6390">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6390.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6390"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6390"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6390_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6390"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6393">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6393.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6393"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6393"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6393_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6393"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F63J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f63j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f63j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f63j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f63j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f63j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F63J90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f63j90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f63j90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f63j90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f63j90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f63j90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6410">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6410.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6410"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6410"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6410_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6410"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6490">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6490.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6490"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6490"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6490_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6490"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6493">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6493.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6493"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6493"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6493_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6493"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F64J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f64j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f64j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f64j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f64j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f64j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F64J90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f64j90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f64j90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f64j90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f64j90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f64j90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6520">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6520.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6520"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6520"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6520_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6520"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6525">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6525.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6525"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6525"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6525_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6525"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6527">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6527.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6527"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6527"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6527_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6527"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6585">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6585.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6585"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6585"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6585_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6585"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65J10">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f65j10.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f65j10"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f65j10"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f65j10_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f65j10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f65j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f65j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f65j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f65j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f65j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65J15">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f65j15.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f65j15"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f65j15"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f65j15_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f65j15"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f65j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f65j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f65j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f65j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f65j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65J90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f65j90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f65j90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f65j90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f65j90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f65j90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f65k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f65k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f65k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f65k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f65k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65K90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f65k90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f65k90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f65k90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f65k90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f65k90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6620">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6620.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6620"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6620"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6620_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6620"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6621">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6621.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6621"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6621"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6621_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6621"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6622">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6622.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6622"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6622"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6622_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6622"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6627">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6627.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6627"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6627"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6627_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6627"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6628">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6628.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6628"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6628"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6628_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6628"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6680">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6680.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6680"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6680"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6680_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6680"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J10">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f66j10.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f66j10"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f66j10"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f66j10_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f66j10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f66j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f66j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f66j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f66j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f66j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J15">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f66j15.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f66j15"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f66j15"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f66j15_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f66j15"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J16">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f66j16.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f66j16"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f66j16"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f66j16_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f66j16"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f66j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f66j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f66j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f66j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f66j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J55">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f66j55.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f66j55"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f66j55"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f66j55_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f66j55"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J60">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f66j60.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f66j60"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f66j60"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f66j60_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f66j60"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J65">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f66j65.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f66j65"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f66j65"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f66j65_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f66j65"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f66j90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f66j90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f66j90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f66j90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f66j90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J93">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f66j93.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f66j93"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f66j93"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f66j93_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f66j93"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f66k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f66k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f66k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f66k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f66k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66K90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f66k90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f66k90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f66k90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f66k90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f66k90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6720">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6720.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6720"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6720"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6720_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6720"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6722">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6722.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6722"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6722"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6722_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6722"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6723">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f6723.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f6723"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f6723"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f6723_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f6723"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67J10">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f67j10.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f67j10"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f67j10"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f67j10_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f67j10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f67j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f67j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f67j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f67j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f67j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f67j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f67j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f67j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f67j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f67j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67J60">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f67j60.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f67j60"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f67j60"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f67j60_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f67j60"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67J90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f67j90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f67j90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f67j90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f67j90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f67j90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67J93">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f67j93.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f67j93"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f67j93"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f67j93_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f67j93"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f67k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f67k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f67k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f67k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f67k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67K90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f67k90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f67k90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f67k90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f67k90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f67k90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8310">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8310.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8310"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8310"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8310_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8310"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8390">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8390.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8390"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8390"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8390_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8390"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8393">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8393.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8393"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8393"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8393_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8393"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F83J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f83j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f83j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f83j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f83j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f83j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F83J90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f83j90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f83j90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f83j90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f83j90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f83j90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8410">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8410.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8410"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8410"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8410_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8410"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8490">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8490.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8490"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8490"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8490_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8490"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8493">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8493.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8493"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8493"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8493_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8493"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F84J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f84j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f84j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f84j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f84j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f84j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F84J90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f84j90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f84j90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f84j90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f84j90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f84j90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8520">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8520.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8520"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8520"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8520_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8520"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8525">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8525.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8525"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8525"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8525_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8525"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8527">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8527.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8527"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8527"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8527_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8527"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8585">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8585.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8585"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8585"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8585_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8585"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85J10">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f85j10.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f85j10"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f85j10"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f85j10_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f85j10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f85j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f85j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f85j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f85j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f85j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85J15">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f85j15.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f85j15"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f85j15"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f85j15_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f85j15"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f85j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f85j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f85j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f85j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f85j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85J90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f85j90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f85j90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f85j90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f85j90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f85j90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f85k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f85k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f85k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f85k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f85k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85K90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f85k90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f85k90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f85k90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f85k90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f85k90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8620">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8620.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8620"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8620"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8620_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8620"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8621">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8621.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8621"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8621"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8621_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8621"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8622">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8622.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8622"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8622"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8622_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8622"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8627">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8627.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8627"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8627"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8627_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8627"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8628">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8628.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8628"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8628"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8628_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8628"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8680">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8680.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8680"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8680"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8680_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8680"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J10">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86j10.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86j10"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86j10"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86j10_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86j10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J15">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86j15.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86j15"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86j15"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86j15_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86j15"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J16">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86j16.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86j16"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86j16"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86j16_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86j16"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J55">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86j55.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86j55"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86j55"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86j55_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86j55"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J60">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86j60.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86j60"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86j60"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86j60_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86j60"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J65">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86j65.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86j65"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86j65"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86j65_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86j65"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J72">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86j72.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86j72"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86j72"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86j72_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86j72"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86j90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86j90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86j90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86j90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86j90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J93">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86j93.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86j93"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86j93"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86j93_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86j93"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86K90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f86k90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f86k90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f86k90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f86k90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f86k90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8720">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8720.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8720"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8720"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8720_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8720"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8722">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8722.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8722"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8722"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8722_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8722"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8723">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f8723.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f8723"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f8723"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f8723_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f8723"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J10">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f87j10.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f87j10"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f87j10"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f87j10_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f87j10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f87j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f87j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f87j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f87j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f87j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f87j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f87j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f87j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f87j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f87j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J60">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f87j60.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f87j60"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f87j60"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f87j60_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f87j60"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J72">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f87j72.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f87j72"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f87j72"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f87j72_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f87j72"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f87j90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f87j90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f87j90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f87j90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f87j90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J93">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f87j93.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f87j93"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f87j93"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f87j93_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f87j93"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f87k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f87k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f87k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f87k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f87k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87K90">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f87k90.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f87k90"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f87k90"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f87k90_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f87k90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F96J60">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f96j60.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f96j60"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f96j60"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f96j60_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f96j60"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F96J65">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f96j65.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f96j65"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f96j65"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f96j65_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f96j65"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F96J72">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f96j72.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f96j72"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f96j72"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f96j72_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f96j72"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F97J60">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f97j60.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f97j60"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f97j60"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f97j60_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f97j60"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F97J72">
+      <TEMPLATE NAME="INCFILE" VALUE="p18f97j72.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18f97j72"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18f97j72"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18f97j72_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18f97j72"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18L13K50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18l13k50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18l13k50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18l13k50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18l13k50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18l13k50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18L14K50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18l14k50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18l14k50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18l14k50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18l14k50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18l14k50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF13K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf13k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf13k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf13k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf13k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf13k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF13K50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf13k50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf13k50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf13k50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf13k50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf13k50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF14K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf14k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf14k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf14k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf14k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf14k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF14K50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf14k50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf14k50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf14k50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf14k50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf14k50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF24J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf24j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf24j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf24j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf24j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf24j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF24J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf24j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf24j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf24j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf24j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf24j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF25J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf25j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf25j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf25j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf25j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf25j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF25J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf25j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf25j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf25j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf25j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf25j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF25K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf25k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf25k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf25k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf25k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf25k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF26J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf26j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf26j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf26j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf26j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf26j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF26J13">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf26j13.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf26j13"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf26j13"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf26j13_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf26j13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF26J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf26j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf26j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf26j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf26j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf26j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF26J53">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf26j53.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf26j53"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf26j53"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf26j53_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf26j53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF27J13">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf27j13.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf27j13"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf27j13"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf27j13_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf27j13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF27J53">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf27j53.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf27j53"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf27j53"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf27j53_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf27j53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF44J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf44j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf44j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf44j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf44j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf44j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF44J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf44j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf44j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf44j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf44j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf44j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF45J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf45j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf45j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf45j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf45j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf45j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF45J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf45j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf45j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf45j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf45j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf45j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF45K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf45k22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf45k22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf45k22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf45k22_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf45k22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF46J11">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf46j11.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf46j11"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf46j11"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf46j11_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf46j11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF46J13">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf46j13.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf46j13"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf46j13"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf46j13_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf46j13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF46J50">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf46j50.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf46j50"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf46j50"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf46j50_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf46j50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF46J53">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf46j53.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf46j53"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf46j53"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf46j53_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf46j53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF47J13">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf47j13.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf47j13"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf47j13"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf47j13_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf47j13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF47J53">
+      <TEMPLATE NAME="INCFILE" VALUE="p18lf47j53.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18lf47j53"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18lf47j53"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18lf47j53_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18lf47j53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="Generic PIC18">
+      <TEMPLATE NAME="INCFILE" VALUE="p18cxxx.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18cxxx"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18cxxx"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18cxxx_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18cxxx"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PS500">
+      <TEMPLATE NAME="INCFILE" VALUE="pPS500.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="PS500"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="PS500"/>
+      <OPTION TOOL="LD" NAME="" VALUE="PS500_g.lkr" ID="LKR" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="PS500"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PS810">
+      <TEMPLATE NAME="INCFILE" VALUE="pPS810.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="PS810"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="PS810"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="PS810"/>
+      <OPTION TOOL="LD" NAME="" VALUE="PS810_g.lkr" ID="LKR" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F24K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18F24K22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18F24K22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18F24K22"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18F24K22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18F24K22_g.lkr" ID="LKR" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18F26K22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18F26K22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18F26K22"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18F26K22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18F26K22_g.lkr" ID="LKR" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F43K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18F43K22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18F43K22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18F43K22"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18F43K22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18F43K22_g.lkr" ID="LKR" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F44K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18F44K22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18F44K22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18F44K22"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18F44K22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18F44K22_g.lkr" ID="LKR" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18F46K22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18F46K22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18F46K22"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18F46K22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18F46K22_g.lkr" ID="LKR" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF24K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18LF24K22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18LF24K22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18LF24K22"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18LF24K22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18LF24K22_g.lkr" ID="LKR" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF26K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18LF26K22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18LF26K22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18LF26K22"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18LF26K22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18LF26K22_g.lkr" ID="LKR" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF43K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18LF43K22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18LF43K22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18LF43K22"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18LF43K22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18LF43K22_g.lkr" ID="LKR" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF44K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18LF44K22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18LF44K22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18LF44K22"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18LF44K22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18LF44K22_g.lkr" ID="LKR" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF46K22">
+      <TEMPLATE NAME="INCFILE" VALUE="p18LF46K22.h"/>
+      <OPTION TOOL="CC" NAME="-p" VALUE="18LF46K22"/>
+      <OPTION TOOL="ASM" NAME="/p" VALUE="18LF46K22"/>
+      <OPTION TOOL="LD" NAME="-p" VALUE="18LF46K22"/>
+      <OPTION TOOL="LD" NAME="" VALUE="18LF46K22_g.lkr" ID="LKR" DEFAULT="1"/>
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT KEYLOC="HKEY_CURRENT_USER\Software\Microchip\MPLAB  C18" KEY="InstallDir" TYPE="NAMED" >
+    <CHECK SUF="bin/mcc18.exe" ARG="-v" STR="MPLAB C18" DATE="2010-02-01"/>
+    <CHECK SUF="mpasm/mpasmwin.exe" ARG="/?" STR="MPASM " DATE="2010-02-01"/>
+    <CHECK SUF="bin/mplink.exe" ARG="/?" STR="Linker" DATE="2010-01-12"/>
+    <CHECK SUF="bin/mplib.exe" ARG="/?" STR="Librarian" DATE="2010-01-12"/>
+  </DETECT>
+  <DETECT PATH="C:/MCC18">
+    <CHECK SUF="bin/mcc18.exe" ARG="-v" STR="MPLAB C18" DATE="2010-02-01"/>
+    <CHECK SUF="mpasm/mpasmwin.exe" ARG="/?" STR="MPASM " DATE="2010-02-01"/>
+    <CHECK SUF="bin/mplink.exe" ARG="/?" STR="Linker" DATE="2010-01-12"/>
+    <CHECK SUF="bin/mplib.exe" ARG="/?" STR="Librarian" DATE="2010-01-12"/>
+  </DETECT>
+  <PATH ADD="%COMPILER_DIR%/bin"/>
+  <PATH ADD="%COMPILER_DIR%/mpasm"/>
+  <!-- File Types -->
+  <FILE NAME="c" DESC="C Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="asm" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="lkr" DESC="Linker Script" CATEGORY="Linker Script" SOURCE="1" ICON="project_other.png"/>
+  <FILE NAME="lib" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="cof" DESC="Microchip Coff" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="o" DESC="Object" CATEGORY="Intermediate Binary"/>
+  <!-- C Compiler -->
+  <PROCESS TOOL="CC" NAME="C Compiler" CMDLINE="$(CC) $(CCFLAGS) %OPTIONS% -fo=%OUTFILE_QUOTED% %INFILE_QUOTED%">
+    <FILE INPUT="c" OUTPUT="o"/>
+    <OPTION TOOL="CC" NAME="-I=" VALUE="&quot;%COMPILER_DOS_DIR%\h&quot;"/>
+    <MESSAGE VALUE="^(.+):(\d+):(Error|Warning|Message).+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="$(ASM) /q /o%OUTFILE_QUOTED% /s $(ASMFLAGS) %OPTIONS% %INFILE_DOS_QUOTED%">
+    <FILE INPUT="asm" OUTPUT="o" ERROR="ERR"/>
+    <FILE TEMP="hex"/>
+    <FILE TEMP="err"/>
+    <FILE TEMP="lst"/>
+    <MESSAGE VALUE="^(Error|Warning|Message)\[\d+\]\s*(.+) (\d+) : .+$">
+      <FIELD NAME="FILENAME" POSITION="2"/>
+      <FIELD NAME="LINE" POSITION="3" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="$(LD) $(LDFLAGS) %OPTIONS% -o%OUTFILE_QUOTED% %INFILES_QUOTED%">
+    <FILE OUTPUT="cof"/>
+    <FILE OUTPUT="hex"/>
+    <FILE INPUT="lib"/>
+    <FILE INPUT="o"/>
+    <FILE INPUT="lkr" OPTION="LKR"/>
+    <OPTION TOOL="LD" NAME="-u" VALUE="_CRUNTIME"/>
+    <OPTION TOOL="LD" NAME="-l" VALUE="&quot;%COMPILER_DOS_DIR%\lib&quot;"/>
+  </PROCESS>
+  <!-- Librarian -->
+  <PROCESS TOOL="LIB" NAME="Librarian" CMDLINE="$(LIB) /c $(LIBFLAGS) %OPTIONS% %OUTFILE_QUOTED% %INFILES_QUOTED%">
+    <FILE OUTPUT="lib">
+      <FILE INPUT="o"/>
+      <FILE INPUT="lib"/>
+    </FILE>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="cof"/>
+    <OPTION TOOL="LD" NAME="-x"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <SOURCE NAME="main.c" FROM="voidmain.c" OPEN="1"/>
+</COMPILER>

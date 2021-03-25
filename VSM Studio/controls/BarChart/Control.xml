@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<CONTROL>
+   <CONFIG>
+     <TYPE NAME="SERIES" DESC="Series Settings">
+         <PROPERTY NAME="name" TYPE="STRING" DESC="Name of this data"/>
+         <PROPERTY NAME="colour" TYPE="RGB" DESC="Colour for this series"/>
+     </TYPE>
+
+     <SETUP NAME="init">
+        <PROPERTY NAME="numCategories" TYPE="INTEGER" MIN="1" MAX="30" DEFAULT="1" DESC="Number of Categories"/>
+     </SETUP>
+
+     <PROPERTY NAME="titleText" TYPE="STRING" DEFAULT="" DESC="Chart Title"/>
+     <PROPERTY NAME="titleFontSize" TYPE="INTEGER" MIN="10" MAX="100" DEFAULT="15" DESC="Font size for chart title"/>
+     <PROPERTY NAME="showLegend" TYPE="BOOLEAN" DEFAULT="1" DESC="Show the legend (series names, colours)"/>
+     <PROPERTY NAME="labelFontSize" TYPE="INTEGER" MIN="10" MAX="100" DEFAULT="15" DESC="Font size for labels"/>
+     <PROPERTY NAME="scaleFontSize" TYPE="INTEGER" MIN="10" MAX="100" DEFAULT="15" DESC="Font size for scale values"/>
+     <PROPERTY NAME="backgroundColour" TYPE="RGB" DESC="Colour for chart background"/>
+
+     <GROUP NAME="categorySet">
+        <PROPERTY NAME="0" TYPE="STRING" DESC="Name of category 0"/>
+        <PROPERTY NAME="1" TYPE="STRING" DESC="Name of category 1"/>
+        <PROPERTY NAME="2" TYPE="STRING" DESC="Name of category 2"/>
+        <PROPERTY NAME="3" TYPE="STRING" DESC="Name of category 3"/>
+        <PROPERTY NAME="4" TYPE="STRING" DESC="Name of category 4"/>
+        <PROPERTY NAME="5" TYPE="STRING" DESC="Name of category 5"/>
+        <PROPERTY NAME="6" TYPE="STRING" DESC="Name of category 6"/>
+        <PROPERTY NAME="7" TYPE="STRING" DESC="Name of category 7"/>
+        <PROPERTY NAME="8" TYPE="STRING" DESC="Name of category 8"/>
+        <PROPERTY NAME="9" TYPE="STRING" DESC="Name of category 9"/>
+        <PROPERTY NAME="10" TYPE="STRING" DESC="Name of category 10"/>
+        <PROPERTY NAME="11" TYPE="STRING" DESC="Name of category 11"/>
+        <PROPERTY NAME="12" TYPE="STRING" DESC="Name of category 12"/>
+        <PROPERTY NAME="13" TYPE="STRING" DESC="Name of category 13"/>
+        <PROPERTY NAME="14" TYPE="STRING" DESC="Name of category 14"/>
+        <PROPERTY NAME="15" TYPE="STRING" DESC="Name of category 15"/>
+        <PROPERTY NAME="16" TYPE="STRING" DESC="Name of category 16"/>
+        <PROPERTY NAME="17" TYPE="STRING" DESC="Name of category 17"/>
+        <PROPERTY NAME="18" TYPE="STRING" DESC="Name of category 18"/>
+        <PROPERTY NAME="19" TYPE="STRING" DESC="Name of category 19"/>
+        <PROPERTY NAME="20" TYPE="STRING" DESC="Name of category 20"/>
+        <PROPERTY NAME="21" TYPE="STRING" DESC="Name of category 21"/>
+        <PROPERTY NAME="22" TYPE="STRING" DESC="Name of category 22"/>
+        <PROPERTY NAME="23" TYPE="STRING" DESC="Name of category 23"/>
+        <PROPERTY NAME="24" TYPE="STRING" DESC="Name of category 24"/>
+        <PROPERTY NAME="25" TYPE="STRING" DESC="Name of category 25"/>
+        <PROPERTY NAME="26" TYPE="STRING" DESC="Name of category 26"/>
+        <PROPERTY NAME="27" TYPE="STRING" DESC="Name of category 27"/>
+        <PROPERTY NAME="28" TYPE="STRING" DESC="Name of category 28"/>
+        <PROPERTY NAME="29" TYPE="STRING" DESC="Name of category 29"/>
+     </GROUP>
+
+     <PROPERTY NAME="numSeries" TYPE="INTEGER" MIN="1" MAX="10" DEFAULT="1" DESC="Number of Data Series"/>
+     <GROUP NAME="seriesSet">
+        <PROPERTY NAME="0" TYPE="SERIES" DESC="Settings for data series 0"/>
+        <PROPERTY NAME="1" TYPE="SERIES" DESC="Settings for data series 1"/>
+        <PROPERTY NAME="2" TYPE="SERIES" DESC="Settings for data series 2"/>
+        <PROPERTY NAME="3" TYPE="SERIES" DESC="Settings for data series 3"/>
+        <PROPERTY NAME="4" TYPE="SERIES" DESC="Settings for data series 4"/>
+        <PROPERTY NAME="5" TYPE="SERIES" DESC="Settings for data series 5"/>
+        <PROPERTY NAME="6" TYPE="SERIES" DESC="Settings for data series 6"/>
+        <PROPERTY NAME="7" TYPE="SERIES" DESC="Settings for data series 7"/>
+        <PROPERTY NAME="8" TYPE="SERIES" DESC="Settings for data series 8"/>
+        <PROPERTY NAME="9" TYPE="SERIES" DESC="Settings for data series 9"/>
+     </GROUP>
+
+     <PROPERTY NAME="minY" TYPE="FLOAT" DEFAULT="0" DESC="Minimum y value"/>
+     <PROPERTY NAME="maxY" TYPE="FLOAT" DEFAULT="0" DESC="Maximum y value"/>
+   </CONFIG>
+
+   <!-- Driver Descriptor for Bar Chart -->
+   <DRIVER HEADER="Controls">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+        <REQUIRE MODULE="STORAGE"/>
+        <RESOURCE FILE="scripts/chart.js"/>
+        <RESOURCE FILE="scripts/moment.js"/>
+
+        <METHOD NAME="setSeriesVisible" DESC="Show or hide a data series.">
+            <PARAMETER NAME="index" TYPE="INTEGER" DEFAULT="0" DESC="Series index in data"/>
+            <PARAMETER NAME="visible" TYPE="BOOLEAN" DEFAULT="FALSE" DESC="Show/Hide the data series."/>
+        </METHOD>
+
+        <METHOD NAME="setYRange" DESC="Set a range for the specified y axis.">
+            <PARAMETER NAME="minY" TYPE="FLOAT" DEFAULT="0" DESC="Suggested minimum y value"/>
+            <PARAMETER NAME="maxY" TYPE="FLOAT" DEFAULT="0" DESC="Suggested Maximum y value"/>
+        </METHOD>
+
+        <METHOD NAME="setData" DESC="Set a data point for the graph.">
+           <PARAMETER NAME="catIdx" TYPE="INTEGER" DESC="Index of category to modify"/>
+           <PARAMETER NAME="value" TYPE="FLOAT" DESC="Value to insert"/>
+        </METHOD>
+
+        <METHOD NAME="incrementData" DESC="Increment a data point for the graph.">
+           <PARAMETER NAME="catIdx" TYPE="INTEGER" DESC="Index of category to modify"/>
+           <PARAMETER NAME="amount" TYPE="FLOAT" DEFAULT="1.0" DESC="Amount to increment by"/>
+        </METHOD>
+
+        <METHOD NAME="decrementData" DESC="Decrement a data point for the graph.">
+           <PARAMETER NAME="catIdx" TYPE="INTEGER" DESC="Index of category to modify"/>
+           <PARAMETER NAME="amount" TYPE="FLOAT" DEFAULT="1.0" DESC="Amount to decrement by"/>
+        </METHOD>
+
+        <METHOD NAME="resetSeries" DESC="Reset all data points to 0">
+           <PARAMETER NAME="seriesIdx" TYPE="INTEGER" DESC="Index of series to modify"/>
+        </METHOD>
+
+        <METHOD NAME="writeSeries" DESC="Write series to file">
+           <PARAMETER NAME="filename" TYPE="STRING" DESC="Filename to use"/>
+        </METHOD>
+
+        <METHOD NAME="loadSeries" DESC="Read series from file">
+           <PARAMETER NAME="seriesIdx" TYPE="INTEGER" DESC="Index of series to load"/>
+           <PARAMETER NAME="filename" TYPE="STRING" DESC="Filename to use"/>
+        </METHOD>
+
+        <METHOD NAME="clearData" DESC="Clear the data stored in the graph."/>
+   </DRIVER>
+</CONTROL>

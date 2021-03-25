@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<CONTROL>   
+   <CONFIG>
+      <TYPE NAME="LAMPCOLOURS">
+     	   <PROPERTY NAME="on" DESC="Colour for the lamp on" TYPE="RGB"/>
+     	   <PROPERTY NAME="off" DESC="Colour for the lamp off" TYPE="RGB"/>         
+      </TYPE>
+  	   <PROPERTY NAME="red" DESC="Colours for red lamp" TYPE="LAMPCOLOURS">
+  	       <DEFAULT NAME="on" VALUE="#FF0000"/>
+  	       <DEFAULT NAME="off" VALUE="#400000"/>  	       
+  	   </PROPERTY>
+  	   <PROPERTY NAME="amber"  DESC="Colours for amber lamp" TYPE="LAMPCOLOURS">
+  	       <DEFAULT NAME="on" VALUE="#FFAA00"/>
+  	       <DEFAULT NAME="off" VALUE="#402000"/>  	       
+  	   </PROPERTY>
+  	   <PROPERTY NAME="green" DESC="Colours for the green lamp" TYPE="LAMPCOLOURS">  	      
+  	       <DEFAULT NAME="on" VALUE="#00AA00"/>
+  	       <DEFAULT NAME="off" VALUE="#004000"/>  	       
+      </PROPERTY>  	     	       
+  	</CONFIG>   
+
+   <!-- Driver Descriptor for Traffic Lights  -->
+   <DRIVER HEADER="Controls">
+     <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+     <METHOD NAME="setRed" DESC="Set the state of the red light.">
+      	 <PARAMETER NAME="state" TYPE="BOOLEAN" DEFAULT="FALSE"/>
+     </METHOD>                 
+     <METHOD NAME="setGreen" DESC="Set the state of the amber light.">
+      	 <PARAMETER NAME="state" TYPE="BOOLEAN" DEFAULT="FALSE"/>
+     </METHOD>                 
+     <METHOD NAME="setAmber" DESC="Set the state of the green light.">
+      	 <PARAMETER NAME="state" TYPE="BOOLEAN" DEFAULT="FALSE"/>
+     </METHOD>                 
+     <METHOD NAME="setState" DESC="Set the state of the traffic lights.">
+      	 <PARAMETER NAME="state" TYPE="INTEGER" DEFAULT="0" DESC="Bitwise state"/>
+     </METHOD>                 
+   </DRIVER>
+</CONTROL>
+  

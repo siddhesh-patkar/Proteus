@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<CONTROL>   
+   <CONFIG>
+       <PROPERTY NAME="controls" DESC="Show controls on video" TYPE="BOOLEAN" DEFAULT="0"/>
+   </CONFIG>   
+
+   <!-- Driver Descriptor for Line Edit Control  -->
+   <DRIVER HEADER="Controls">
+     <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+              
+     <METHOD NAME="showImage"  DESC="Show a specific image file">
+        <PARAMETER TYPE="STRING" DEFAULT="" DESC="Image filename"/>
+     </METHOD>
+     <METHOD NAME="showVideo"  DESC="Show a specific video file">
+        <PARAMETER TYPE="STRING" DEFAULT="" DESC="Video filename"/>
+     </METHOD>
+     <METHOD NAME="clear"  DESC="Clear the image"/>
+   </DRIVER>
+</CONTROL>
+  

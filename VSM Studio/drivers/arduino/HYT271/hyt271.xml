@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for HT16K33 LED/Keyboard controller  -->
+<DRIVER HEADER="HYT271.h">
+   <REQUIRE HEADER="Wire.h"/>
+   
+   <!-- SCALE enumeration -->
+   <ENUMERATION NAME="SCALE">
+      <CONSTANT NAME="Celsius"    VALUE="0"/>
+      <CONSTANT NAME="Fahrenheit" VALUE="1"/>
+   </ENUMERATION>
+
+   <!-- Specialized LED matrix methods -->
+   <METHOD NAME="readSensor" DESC="Read Humidity and Temperature row words from I2C bus."/>
+   <METHOD NAME="getTemperature" DESC="Get Temperature value in Celsius or Farenheit previously sampled with readSensor.">
+      <PARAMETER NAME="s" TYPE="SCALE" DEFAULT="Celsius" DESC="Scale Options"/>
+      <RETURN NAME="Temperature" TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="getHumidity" DESC="Get Relative Humidity % previously sampled with readSensor.">
+      <RETURN NAME="Humidity" TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="readTemperature" DESC="Read Temperature value in Celsius or Farenheit scale.">
+      <PARAMETER NAME="s" TYPE="SCALE" DEFAULT="Celsius" DESC="Scale Options"/>
+      <RETURN NAME="Temperature" TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="readHumidity" DESC="Read Relative Humidity %.">
+      <RETURN NAME="Humidity" TYPE="FLOAT"/>
+   </METHOD>
+
+</DRIVER>

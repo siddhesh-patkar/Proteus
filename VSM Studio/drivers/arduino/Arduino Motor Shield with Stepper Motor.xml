@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Motor Control" FILE="Arduino/Arduino Motor Shield with Stepper Motor.pdsclip" DESC="Arduino Motor Shield (R3) with Stepper Motor" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="Stepper Motor" ELEMENT="M1">
+      <INTERFACE OBJECT="StepperMotorV1">
+          <PIN NAME="dir1" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO12"/>
+          </PIN> 
+          <PIN NAME="pwm1" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO3"/>
+          </PIN> 
+          <PIN NAME="brake1" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO9"/>
+          </PIN> 
+          <PIN NAME="dir2" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO13"/>
+          </PIN> 
+          <PIN NAME="pwm2" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO11"/>
+          </PIN> 
+          <PIN NAME="brake2" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO8"/>
+          </PIN> 
+          <PROPERTY NAME="STEP" ELEMENT="M1" TYPE="INTEGER"/>
+         <SETUP NAME="begin"/>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER FILE="motor_shield_v1/Stepper Motor.xml"/>
+      
+   </PERIPHERAL>
+
+   
+</CLIP>
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove Ultrasonic Ranger.pdsclip" DESC="Grove Ultrasonic Ranger Module" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="Grove Ultrasonic Ranger"  ELEMENT="UR1" >
+     <!-- Snippet file relative to IMAGE/Snippets folder -->
+   
+      <!-- Supported Toolchains -->
+      <TOOLCHAIN ID="Python 3 (Proteus)" />
+      <TOOLCHAIN ID="Visual Designer for Raspberry Pi" />
+   
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="GroveUltrasonic">
+          <PROPERTY NAME="STATE" ELEMENT="GC1" TYPE="INTEGER" GROVE="DIGITAL"/>
+      </INTERFACE>
+   
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Grove">
+         <REQUIRE HEADER="GROVE"/>
+   
+         <!-- Methods -->
+         <METHOD NAME="readCentimeters" DESC="Read distance in centimeters.">
+            <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="cm"/>
+         </METHOD>
+         <METHOD NAME="readInches" DESC="Read distance in inches.">
+            <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="inch"/>
+         </METHOD>
+   
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="Rotart Switch 1.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata22">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs20" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="-44.491525"
+     inkscape:cy="50"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg16" />
+  <vfp:catalogue
+     PREFIX="Switch"
+     CATEGORY="Switches"
+     DESC="Rotary Switch 1" />
+  <g vfp:class="RotarySwitch"
+     id="g3693"
+     inkscape:label="Root"
+     transform="translate(50,50)">
+    <g class="stator"
+       id="g3697"
+       inkscape:label="Stator">
+      <circle
+         cx="0"
+         cy="0"
+         r="50"
+         style="fill:#a7d7cf"
+         id="circle4" />
+      <circle
+         cx="0"
+         cy="0"
+         r="46.75"
+         style="fill:#b9b8bc"
+         id="circle6" />
+    </g>
+    <path 
+       style="pointer-events:none"
+       class="rotor"
+       d="m -1,-46.75 v 34.15 c 0,1 0.43,1.87 1,1.87 0.57,0 1,-0.84 1,-1.87 v -34.15 z"
+       style="fill:#1d1d1b"
+       id="path10"
+       inkscape:connector-curvature="0"
+       inkscape:label="Rotor" />
+           <g
+    	class="lables"
+    	id="lables"
+    	></g>
+    	<g 
+       id="Text"
+       class="readout"
+       style="opacity:0"><text
+         id="text"
+         style="font-size:20px;font-family:sans-serif;dominant-baseline:central;text-anchor:middle;fill:#000000"
+         x="0"
+         y="0">999</text>
+       </g>  
+  </g>
+</svg>

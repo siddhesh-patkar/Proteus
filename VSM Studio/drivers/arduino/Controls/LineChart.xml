@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Driver Descriptor for Virtual Traffic Lights -->
+<DRIVER HEADER="Controls.h">
+     <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+	  <RESOURCE FILE="controls/chart.js"/>
+	  <RESOURCE FILE="controls/moment.js"/>
+	  <ENUMERATION NAME="TIMEUNIT">
+         <CONSTANT NAME="SECOND" VALUE="0"/>
+         <CONSTANT NAME="MINUTE" VALUE="1"/>
+         <CONSTANT NAME="HOUR"   VALUE="2"/>
+         <CONSTANT NAME="DAY"    VALUE="3"/>
+         <CONSTANT NAME="WEEK"   VALUE="4"/>
+	  </ENUMERATION>
+	  <ENUMERATION NAME="AXIS">
+	     <CONSTANT NAME="LEFT"  VALUE="0"/>
+	     <CONSTANT NAME="RIGHT" VALUE="1"/>
+	  </ENUMERATION>      
+     <METHOD NAME="setXrange" DESC="Set a range for the x axis.">
+	      <PARAMETER NAME="min" TYPE="FLOAT" DEFAULT="0" DESC="Minimum x value"/>
+	      <PARAMETER NAME="max" TYPE="FLOAT" DESC="Maximum x value"/>
+	  </METHOD>
+     <METHOD NAME="setTimeRange" DESC="Set a range for the x axis.">
+	      <PARAMETER NAME="unit" TYPE="TIMEUNIT" DEFAULT="SECOND" DESC="Time units"/>
+	      <PARAMETER NAME="range" TYPE="INTEGER" DEFAULT="60" DESC="Number of time units to display"/>
+	      <PARAMETER NAME="absolute" TYPE="BOOLEAN" DEFAULT="FALSE" DESC="Use absolute times/dates"/>
+	  </METHOD>
+	  <METHOD NAME="setColumn" DESC="Set the properties of a data column.">
+	      <PARAMETER NAME="column" TYPE="INTEGER" DEFAULT="0" DESC="Column number in data"/>
+	      <PARAMETER NAME="name" TYPE="STRING" DEFAULT="" DESC="Name of this data"/>
+	      <PARAMETER NAME="axis" TYPE="AXIS" DEFAULT="LEFT" DESC="Axis for this column"/>
+	      <PARAMETER NAME="colour" TYPE="STRING" DEFAULT="black" DESC="CSS colour name/code"/>
+     </METHOD>	  	  
+ 	  <METHOD NAME="showColumn" DESC="Show or hide a data set.">
+ 	      <PARAMETER NAME="column" TYPE="INTEGER" DEFAULT="0" DESC="Column number in data"/>
+ 	      <PARAMETER NAME="visible" TYPE="BOOLEAN" DEFAULT="FALSE" DESC="Show/Hide the column data."/> 	      
+	  </METHOD>	  	  
+	  <METHOD NAME="setYrange" DESC="Set a range for the specified y axis.">
+	      <PARAMETER NAME="axis" TYPE="AXIS" DEFAULT="LEFT" DESC="Axis to set"/>
+	      <PARAMETER NAME="min" TYPE="FLOAT" DEFAULT="0" DESC="Minimum y value"/>
+	      <PARAMETER NAME="max" TYPE="FLOAT" DESC="Maximum y value"/>
+     </METHOD>
+     <METHOD NAME="loadData" DESC="Load a dataset from a file on the SD card.">
+	     <PARAMETER NAME="filename" TYPE="STRING" DESC="Filename containing the data set"/>
+	  </METHOD>
+     <METHOD NAME="appendData" DESC="Append a new line of data to the file.">
+	     <PARAMETER TYPE="LIST"/>
+	  </METHOD>
+     <METHOD NAME="clearData" DESC="Clear the data stored in the graph."/>
+</DRIVER>
+  

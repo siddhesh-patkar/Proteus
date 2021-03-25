@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino K Type Thermocouple Amplifier Breakout board.pdsclip" DESC="Adafruit K Type Thermocouple Amplifier AD8495" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="K Type Thermocouple Ampplifier"  ELEMENT="AMP1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="ThemocoupleAmplifier">
+         <PIN NAME="AD0" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD0"/>
+         </PIN>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Grove.h">
+         <!-- Function -->
+         <FUNCTION DESC="Return true if Voltage greater or equal to the trigger value.">
+            <PARAMETER NAME="Trigger" TYPE="FLOAT" DEFAULT="0" DESC="Trigger value in Celsius Degree"/>
+            <RETURN TYPE="BOOLEAN"/>
+         </FUNCTION>
+         <!-- Methods -->
+         <METHOD NAME="readCelsius" DESC="Read Temperature in Celsius Degree.">
+            <RETURN NAME="temperature" TYPE="FLOAT" DEFAULT="Celsius"/>
+         </METHOD>
+         <METHOD NAME="readFahrenheit" DESC="Read Temperature in Fahrenheit Degree.">
+            <RETURN NAME="temperature" TYPE="FLOAT" DEFAULT="Fahrenheit"/>
+         </METHOD>
+         <METHOD NAME="readAdc" DESC="Read Adc conversion.">
+            <RETURN NAME="value" TYPE="INTEGER" DEFAULT=""/>
+         </METHOD>
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+	 xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg41"
+   sodipodi:docname="Dial.svg"
+   inkscape:version="0.92.1 r15371">
+  <defs
+     id="defs17">
+    <linearGradient
+       id="KitchenDialSwitchWhite1"
+       x1="85.36"
+       y1="85.36"
+       x2="14.64"
+       y2="14.64"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-50,-50)">
+      <stop
+         offset="0"
+         stop-opacity="0.3"
+         id="stop2" />
+      <stop
+         offset="0.56"
+         stop-opacity="0"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="KitchenDialSwitchWhite2"
+       x1="83.06"
+       y1="83.06"
+       x2="16.94"
+       y2="16.94"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-50,-50)">
+      <stop
+         offset="0"
+         stop-opacity="0.2"
+         id="stop7" />
+      <stop
+         offset="1"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
+       id="KitchenDialSwitchWhite3"
+       x1="74.41"
+       y1="77.35"
+       x2="25.59"
+       y2="28.52"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-50,-50)">
+      <stop
+         offset="0"
+         stop-opacity="0.3"
+         id="stop12" />
+      <stop
+         offset="0.7"
+         stop-opacity="0"
+         id="stop14" />
+    </linearGradient>
+  </defs>
+<vfp:catalogue
+     PREFIX="Switch"
+     CATEGORY="Switches"
+     DESC="Rotary Switch (Kitchen)" />
+  <g
+     vfp:class="RotarySwitch"
+     id="g3847"
+     transform="translate(50,50)">
+    <g
+    	 class="stator"
+       id="g3836">
+      <circle
+         id="circle21"
+         style="fill:#fffef5"
+         r="50"
+         cy="0"
+         cx="0" />
+      <circle
+         id="circle23"
+         style="fill:url(#KitchenDialSwitchWhite1)"
+         r="50"
+         cy="0"
+         cx="0" />
+      <circle
+         id="circle25"
+         style="fill:#fffef5"
+         r="46.75"
+         cy="0"
+         cx="0" />
+      <circle
+         id="circle27"
+         style="opacity:0.15;fill:url(#KitchenDialSwitchWhite2)"
+         r="46.75"
+         cy="0"
+         cx="0" />
+    </g>
+    <g style="pointer-events:none"
+    	 class="rotor"
+       id="g3830">
+      <path
+         inkscape:connector-curvature="0"
+         id="path31"
+         style="fill:#fffef5;stroke:#9d9d9c;stroke-miterlimit:10"
+         d="M 15,0 A 150.8,150.8 0 0 0 4,-37.62 q -0.41,-1 -0.81,-1.81 c -1.11,-2.46 -2,-4.29 -2.56,-5.33 -0.34,-0.66 -0.91,-0.66 -1.27,0 -0.54,1.05 -1.43,2.86 -2.52,5.27 q -0.39,0.86 -0.81,1.81 A 150.8,150.8 0 0 0 -15,0 c -1.6,11.11 -2.76,23.89 -1.31,32 1.58,8.74 12.18,13.67 16.07,13.81 a 2,2 0 0 0 0.22,0 h 0.14 c 3.74,0 14.64,-5 16.24,-13.82 C 17.79,23.91 16.63,11.13 15,0 Z" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path33"
+         style="fill:url(#KitchenDialSwitchWhite3)"
+         d="M 15,0 A 150.8,150.8 0 0 0 4,-37.62 q -0.41,-1 -0.81,-1.81 c -1.82,-4 -3.08,-6.34 -3.08,-6.34 v 0 -0.05 L 0,-45.7 v -0.07 0 0 c 0,0 -1.27,2.32 -3.08,6.34 q -0.39,0.86 -0.81,1.81 A 150.8,150.8 0 0 0 -15,0 c -1.6,11.11 -2.76,23.89 -1.31,32 1.58,8.74 12.18,13.67 16.07,13.81 a 2,2 0 0 0 0.22,0 h 0.14 c 3.74,0 14.64,-5 16.24,-13.82 C 17.79,23.91 16.63,11.13 15,0 Z" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path35"
+         style="fill:#3c3c3b"
+         d="m 0,-46.17 a 0.86,0.86 0 0 0 -0.94,0.76 V -31 a 1,1 0 0 0 1.88,0 V -45.41 A 0.86,0.86 0 0 0 0,-46.17 Z" />
+    </g>
+    <g
+    	class="lables"
+    	id="lables"
+    	></g>
+    	<g
+       id="Text"
+       class="readout"
+       style="opacity:0"><text
+         id="text"
+         style="font-size:20px;font-family:sans-serif;dominant-baseline:central;text-anchor:middle;fill:#000000"
+         x="0"
+         y="0">999</text>
+      </g>  
+  </g>
+</svg>

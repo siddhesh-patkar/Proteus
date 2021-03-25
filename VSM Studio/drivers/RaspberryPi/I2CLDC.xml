@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Displays" FILE="Raspberry Pi/I2CLDC.pdsclip" DESC="I2c LDC Display" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="I2c controlled LDC" ELEMENT="LCD1" >
+   
+   <INTERFACE OBJECT="I2CLDC"/>
+   
+    <DRIVER HEADER="Displays">   
+    
+      <ENUMERATION NAME="BASE">
+         <CONSTANT NAME="DECIMAL" VALUE="10"/>
+         <CONSTANT NAME="BINARY" VALUE="2"/>
+         <CONSTANT NAME="OCTAL"  VALUE="8"/>
+         <CONSTANT NAME="HEX"  VALUE="16"/>
+      </ENUMERATION>
+      
+      <METHOD NAME="print" DESC="Prints data along UART">
+         <PARAMETER TYPE="LIST"  DESC="String to print"/>
+      </METHOD>  
+      
+      <!--<METHOD NAME="println" DESC="Prints data along UART">
+         <PARAMETER TYPE="LIST"  DESC="String to print"/>
+      </METHOD> -->
+      
+      <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+         <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+      </METHOD>
+      
+      <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+         <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+      </METHOD>
+       
+      <METHOD NAME="clear"  DESC="Set the address of the hat."/>
+        
+       
+
+    </DRIVER>
+   </PERIPHERAL>
+</CLIP>

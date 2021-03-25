@@ -1,0 +1,56 @@
+<svg xmlns:vfp="http://www.labcenter.com/namespaces/vfp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="TickBoxModern" x1="38.08" y1="38.08" x2="1.92" y2="1.92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.3"/>
+      <stop offset="0.56" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="TickBoxModern-2" x1="35.66" y1="35.66" x2="4.34" y2="4.34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.2"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="TickBoxModern-3" x1="5.37" y1="5.37" x2="34.63" y2="34.63" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.4"/>
+      <stop offset="0.47" stop-opacity="0.21"/>
+      <stop offset="0.55" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="TickBoxModern-4" x1="5.37" y1="5.37" x2="34.63" y2="34.63" xlink:href="#TickBoxModern"/>
+  </defs>
+  
+  
+    <vfp:catalogue
+     PREFIX="TickBox"
+     CATEGORY="Switches"
+     DESC="Tick Box" />
+  
+  
+  <g vfp:class="ToggleSwitch">
+    <g>
+      <rect class="bounds" width="40" height="40" rx="6.54" ry="6.54" style="fill: #fffef5"/>
+      <rect width="40" height="40" rx="6.54" ry="6.54" style="fill: url(#TickBoxModern)"/>
+      <rect x="1.95" y="1.95" width="36.1" height="36.1" rx="8.14" ry="8.14" style="opacity: 0.15;fill: url(#TickBoxModern-2)"/>
+      <rect x="3.19" y="3.19" width="33.61" height="33.61" rx="7.41" ry="7.41" style="fill: #fff"/>
+      <path d="M29.4,4.44a6.17,6.17,0,0,1,6.16,6.16V29.4a6.17,6.17,0,0,1-6.16,6.16H10.6A6.17,6.17,0,0,1,4.44,29.4V10.6A6.17,6.17,0,0,1,10.6,4.44H29.4m0-1.24H10.6A7.43,7.43,0,0,0,3.19,10.6V29.4a7.43,7.43,0,0,0,7.41,7.41H29.4a7.43,7.43,0,0,0,7.41-7.41V10.6A7.43,7.43,0,0,0,29.4,3.19Z" style="fill: url(#TickBoxModern-3)"/>
+      <rect x="3.19" y="3.19" width="33.61" height="33.61" rx="7.41" ry="7.41" style="fill: url(#TickBoxModern-4)"/>
+      <g style="display:none">
+	  <path d="M23.54,19.9l8.65-8.65a2.5,2.5,0,1,0-3.54-3.54L20,16.36,11.35,7.71a2.5,2.5,0,0,0-3.54,3.54l8.65,8.65L7.81,28.55a2.5,2.5,0,1,0,3.54,3.54L20,23.43l8.65,8.65a2.5,2.5,0,0,0,3.54-3.54Z" style="fill: #e30613"/>
+      </g>
+	  <g>
+	  <path d="M34.1,9.63a2.5,2.5,0,0,0-3.54,0L13.16,27,9.39,23.46A2.5,2.5,0,0,0,6,27.09l5.53,5.25a2.46,2.46,0,0,0,.21.16l.16.12a2.45,2.45,0,0,0,.26.14l.16.08a2.48,2.48,0,0,0,.32.09l.14,0a2.51,2.51,0,0,0,.47,0h0a2.51,2.51,0,0,0,.49,0l.16,0a2.46,2.46,0,0,0,.31-.1l.18-.1a2.44,2.44,0,0,0,.26-.14l.18-.14a2.44,2.44,0,0,0,.2-.16L34.1,13.16A2.5,2.5,0,0,0,34.1,9.63Z" style="fill: #009640"/>
+      </g>
+	  <text
+      class="text"
+       id="text5322"
+       y="-41.81345"
+       x="-28.962091"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.10623932px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve">Label</text>
+      <text
+       class="text2"
+       id="text5322"
+       y="-41.81345"
+       x="-28.962091"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.10623932px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve">Label</text>
+	</g>
+  </g>
+</svg>

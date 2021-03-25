@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<COMPILER NAME="IAR for ARM" ID="ARMIAR" VERSION="5.4" URL="http://www.iar.com/" AVAILABILITY="External" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- C Compiler -->
+  <TOOL NAME="CC" FILE="iccarm.exe">
+    <!-- And C++ Compiler as well -->
+    <ALIAS NAME="CPP"/>
+    <!-- Options -->
+    <OPTION NAME="--aapcs=" DESC="Specify calling convention" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="std"/>
+      <PARAM VALUE="vfp"/>
+    </OPTION>
+    <OPTION NAME="--aeabi" DESC="Generate aeabi compliant code" ADVANCED="1"/>
+    <OPTION NAME="--align_sp_on_irq" DESC="Generate code to align SP on entry to __irq functions" ADVANCED="1"/>
+    <OPTION NAME="--arm" DESC="Generate code in arm mode, same as --cpu_mode arm" ADVANCED="1"/>
+    <OPTION NAME="--char_is_signed" DESC="'Plain' char is treated as signed char" ADVANCED="1"/>
+    <OPTION NAME="--cpu=" DESC="Specify target core" PARAM="CHOICE">
+      <PARAM VALUE="ARM7TDMI" DEFAULT="1"/>
+      <PARAM VALUE="ARM7TDMI-S"/>
+      <PARAM VALUE="ARM710T"/>
+      <PARAM VALUE="ARM720T"/>
+      <PARAM VALUE="ARM740T"/>
+      <PARAM VALUE="ARM7EJ-S"/>
+      <PARAM VALUE="ARM9TDMI"/>
+      <PARAM VALUE="ARM920T"/>
+      <PARAM VALUE="ARM922T"/>
+      <PARAM VALUE="ARM940T"/>
+      <PARAM VALUE="ARM9E"/>
+      <PARAM VALUE="ARM9E-S"/>
+      <PARAM VALUE="ARM926EJ-S"/>
+      <PARAM VALUE="ARM946E-S"/>
+      <PARAM VALUE="ARM966E-S"/>
+      <PARAM VALUE="ARM968E-S"/>
+      <PARAM VALUE="ARM10E"/>
+      <PARAM VALUE="ARM1020E"/>
+      <PARAM VALUE="ARM1022E"/>
+      <PARAM VALUE="ARM1026EJ-S"/>
+      <PARAM VALUE="ARM1136J"/>
+      <PARAM VALUE="ARM1136J-S"/>
+      <PARAM VALUE="ARM1136JF"/>
+      <PARAM VALUE="ARM1136JF-S"/>
+      <PARAM VALUE="ARM1176J"/>
+      <PARAM VALUE="ARM1176J-S"/>
+      <PARAM VALUE="ARM1176JF"/>
+      <PARAM VALUE="ARM1176JF-S"/>
+      <PARAM VALUE="Cortex-M0"/>
+      <PARAM VALUE="Cortex-M1"/>
+      <PARAM VALUE="Cortex-Ms1"/>
+      <PARAM VALUE="Cortex-M3"/>
+      <PARAM VALUE="Cortex-R4"/>
+      <PARAM VALUE="XScale"/>
+      <PARAM VALUE="XScale-IR7"/>
+    </OPTION>
+    <OPTION NAME="--cpu_mode=" DESC="Specify target core" PARAM="CHOICE">
+      <PARAM VALUE="arm" DEFAULT="1">
+        <ALIAS VALUE="a"/>
+      </PARAM>
+      <PARAM VALUE="thumb">
+        <ALIAS VALUE="t"/>
+      </PARAM>
+    </OPTION>
+    <OPTION NAME="-D " DESC="Define a symbol by symbol[=value]" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="--debug" DESC="Insert debug info in object file">
+      <ALIAS NAME="-r"/>
+    </OPTION>
+    <OPTION NAME="--dependencies=i " DESC="List file dependencies" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--dependencies=m " DESC="List file dependencies (Makefile style)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--diagnostics_tables " DESC="Dump diagnostic message tables to file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--diag_error=" DESC="Treat the list of tags as error diagnostics =tag,tag,..." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_remark=" DESC="Treat the list of tags as remark diagnostics =tag,tag,..." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_suppress=" DESC="Suppress the list of tags as diagnostics =tag,tag,..." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_warning=" DESC="Treat the list of tags as warning diagnostics =tag,tag,..." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--discard_unused_publics" DESC="Discard unused public functions and variables" ADVANCED="1"/>
+    <OPTION NAME="--dlib_config " DESC="Specify DLib library configuration file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-e" DESC="Enable language extensions" ADVANCED="1"/>
+    <OPTION NAME="--ec++" DESC="Enable Embedded C++" ADVANCED="1"/>
+    <OPTION NAME="--eec++" DESC="Extended EC++ (EC++ with templates/namespaces/mutable/casts)" ADVANCED="1"/>
+    <OPTION NAME="--enable_hardware_workaround=" DESC="Generate hardware workaround for specified problem: waid[,waid[...]]" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="--enable_multibytes" DESC="Enable multibyte support" ADVANCED="1"/>
+    <OPTION NAME="--endian=" DESC="Select byte order, little-endian is default" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="big">
+        <ALIAS VALUE="b"/>
+      </PARAM>
+      <PARAM VALUE="little" DEFAULT="1">
+        <ALIAS VALUE="l"/>
+      </PARAM>
+    </OPTION>
+    <OPTION NAME="--enum_is_int" DESC="Force the size of all enumeration types to be at least 4 bytes" ADVANCED="1"/>
+    <OPTION NAME="--error_limit limit=" DESC="Stop after this many errors (0 = no limit)" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="-f " DESC="Read command line options from file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--fpu=" DESC="Specify target FPU coprocessor support" PARAM="CHOICE">
+      <PARAM VALUE="VFPv1"/>
+      <PARAM VALUE="VFPv2"/>
+      <PARAM VALUE="VFPv3_D16"/>
+      <PARAM VALUE="VFPv3_FP16"/>
+      <PARAM VALUE="VFP9-S"/>
+      <PARAM VALUE="none" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="--generate_alf " DESC="Generate an ALF description of the module (out filename)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--header_context" DESC="Adds include file context to diagnostics" ADVANCED="1"/>
+    <OPTION NAME="-I " DESC="Add #include search directory" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="--interwork" DESC="Generate interworking code" ADVANCED="1"/>
+    <OPTION NAME="-l" DESC="Output list file: -l[c|C|D|E|a|A|b|B][N][H] file|directory" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--legacy=" DESC="Generate object files compatible with older toolchains" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="RVCT3.0" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="--mfc" DESC="Enable multiple file compilation" ADVANCED="1"/>
+    <OPTION NAME="--migration_preprocessor_extensions" DESC="Enable IAR migration preprocessor extensions" ADVANCED="1"/>
+    <OPTION NAME="--misrac" DESC="Enable MISRA C diagnostics (if available)" ADVANCED="1"/>
+    <OPTION NAME="--no_clustering" DESC="Disable static clustering for static and global variables" ADVANCED="1"/>
+    <OPTION NAME="--no_code_motion" DESC="Disable code motion" ADVANCED="1"/>
+    <OPTION NAME="--no_const_align" DESC="Turn off the alignment optimization for constants" ADVANCED="1"/>
+    <OPTION NAME="--no_cse" DESC="Disable common sub-expression elimination" ADVANCED="1"/>
+    <OPTION NAME="--no_fragments" DESC="Do not generate section fragments" ADVANCED="1"/>
+    <OPTION NAME="--no_guard_calls" DESC="Use the optimized non-AEABI function static initialization scheme" ADVANCED="1"/>
+    <OPTION NAME="--no_inline" DESC="Disable function inlining" ADVANCED="1"/>
+    <OPTION NAME="--no_mem_idioms" DESC="Disable idiom recognition for memcpy/memset/memclr" ADVANCED="1"/>
+    <OPTION NAME="--no_path_in_file_macros" DESC="Strip path from __FILE__ and __BASE_FILE__ macros" ADVANCED="1"/>
+    <OPTION NAME="--no_scheduling" DESC="Disable instruction scheduling" ADVANCED="1"/>
+    <OPTION NAME="--no_tbaa" DESC="Disable type based alias analysis" ADVANCED="1"/>
+    <OPTION NAME="--no_typedefs_in_diagnostics" DESC="Don't use typedefs when printing types" ADVANCED="1"/>
+    <OPTION NAME="--no_unaligned_access" DESC="Don't generate unaligned accesses" ADVANCED="1"/>
+    <OPTION NAME="--no_unroll" DESC="Disable loop unrolling" ADVANCED="1"/>
+    <OPTION NAME="--no_warnings" DESC="Disable generation of warnings" ADVANCED="1"/>
+    <OPTION NAME="--no_wrap_diagnostics" DESC="Don't wrap long lines in diagnostic messages" ADVANCED="1"/>
+    <OPTION NAME="-O" DESC="Select level of optimization" PARAM="CHOICE">
+      <PARAM VALUE="n" DESC="No optimizations"/>
+      <PARAM VALUE="l" DESC="Low optimizations" DEFAULT="1"/>
+      <PARAM VALUE="m" DESC="Medium optimizations"/>
+      <PARAM VALUE="h" DESC="High optimizations">
+        <ALIAS VALUE=""/>
+      </PARAM>
+      <PARAM VALUE="hz" DESC="High optimizations, tuned for small code size"/>
+      <PARAM VALUE="hs" DESC="High optimizations, tuned for high speed"/>
+    </OPTION>
+    <OPTION NAME="--output " DESC="Specify object file" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-o "/>
+    </OPTION>
+    <OPTION NAME="--only_stdout" DESC="Use stdout only (no console output on stderr)" ADVANCED="1"/>
+    <OPTION NAME="--predef_macros " DESC="Output predefined macros" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preinclude " DESC="Include file before normal source" PARAM="STRING"/>
+    <OPTION NAME="--preprocess=c " DESC="Preprocessor output: Include comments" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preprocess=n " DESC="Preprocessor output: Preprocess only" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preprocess=l " DESC="Preprocessor output: Include #line directives" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preprocess=cn " DESC="Preprocessor output: Include comments, Preprocess only" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preprocess=nl " DESC="Preprocessor output: Preprocess only, Include #line directives" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preprocess=cl " DESC="Preprocessor output: Include comments, Include #line directives" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preprocess=cnl " DESC="Preprocessor output: Include comments, Preprocess only, Include #line directives" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--public_equ " DESC="Define public assembler symbol (EQU) symbol[=value]" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="--remarks" DESC="Enable generation of remarks" ADVANCED="1"/>
+    <OPTION NAME="--require_prototypes" DESC="Require prototypes for all called or public functions" ADVANCED="1"/>
+    <OPTION NAME="--section " DESC="Rename section: section-name=new section-name" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--separate_cluster_for_initialized_variables" DESC="Separate initialized and uninitialized variables, when using variable clustering" ADVANCED="1"/>
+    <OPTION NAME="--silent" DESC="Silent operation" ADVANCED="1"/>
+    <OPTION NAME="--strict_ansi" DESC="Strict ANSI rules" ADVANCED="1"/>
+    <OPTION NAME="--thumb" DESC="Generate code in thumb mode, same as --cpu_mode thumb" ADVANCED="1"/>
+    <OPTION NAME="--use_unix_directory_separators" DESC="Use forward slashes in paths in debug information" ADVANCED="1"/>
+    <OPTION NAME="--warnings_affect_exit_code" DESC="Warnings affect exit code" ADVANCED="1"/>
+    <OPTION NAME="--warnings_are_errors" DESC="All warnings are errors" ADVANCED="1"/>
+  </TOOL>
+  <!-- Linker -->
+  <TOOL NAME="LD" FILE="ilinkarm.exe">
+    <OPTION NAME="--BE32" DESC="Use old type big-endian mode" ADVANCED="1"/>
+    <OPTION NAME="--BE8" DESC="Use byte invariant mode" ADVANCED="1"/>
+    <OPTION NAME="--config " DESC="Linker script" PARAM="STRING" ID="LKR"/>
+    <OPTION NAME="--config_def " DESC="Define a config symbol: symbol[=value]" PARAM="STRING"/>
+    <OPTION NAME="--cpp_init_routine " DESC="Specify C++ dynamic init routine name" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--cpu=" DESC="Specify target core, default extracted from objectse" PARAM="CHOICE">
+      <PARAM VALUE="ARM7TDMI"/>
+      <PARAM VALUE="ARM7TDMI-S"/>
+      <PARAM VALUE="ARM710T"/>
+      <PARAM VALUE="ARM720T"/>
+      <PARAM VALUE="ARM740T"/>
+      <PARAM VALUE="ARM7EJ-S"/>
+      <PARAM VALUE="ARM9TDMI"/>
+      <PARAM VALUE="ARM920T"/>
+      <PARAM VALUE="ARM922T"/>
+      <PARAM VALUE="ARM940T"/>
+      <PARAM VALUE="ARM9E"/>
+      <PARAM VALUE="ARM9E-S"/>
+      <PARAM VALUE="ARM926EJ-S"/>
+      <PARAM VALUE="ARM946E-S"/>
+      <PARAM VALUE="ARM966E-S"/>
+      <PARAM VALUE="ARM968E-S"/>
+      <PARAM VALUE="ARM10E"/>
+      <PARAM VALUE="ARM1020E"/>
+      <PARAM VALUE="ARM1022E"/>
+      <PARAM VALUE="ARM1026EJ-S"/>
+      <PARAM VALUE="ARM1136J"/>
+      <PARAM VALUE="ARM1136J-S"/>
+      <PARAM VALUE="ARM1136JF"/>
+      <PARAM VALUE="ARM1136JF-S"/>
+      <PARAM VALUE="ARM1176J"/>
+      <PARAM VALUE="ARM1176J-S"/>
+      <PARAM VALUE="ARM1176JF"/>
+      <PARAM VALUE="ARM1176JF-S"/>
+      <PARAM VALUE="Cortex-M0"/>
+      <PARAM VALUE="Cortex-M1"/>
+      <PARAM VALUE="Cortex-Ms1"/>
+      <PARAM VALUE="Cortex-M3"/>
+      <PARAM VALUE="Cortex-R4"/>
+      <PARAM VALUE="XScale"/>
+      <PARAM VALUE="XScale-IR7"/>
+    </OPTION>
+    <OPTION NAME="--define_symbol " DESC="Define absolute symbol symbol[=constant_value]" PARAM="STRING"/>
+    <OPTION NAME="--dependencies=i " DESC="List file dependencies" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--dependencies=m " DESC="List file dependencies (Makefile style)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--diagnostics_tables " DESC="Dump diagnostic message tables to file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--diag_error=" DESC="Treat the list of tags as error diagnostics =tag,tag,..." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_remark=" DESC="Treat the list of tags as remark diagnostics =tag,tag,..." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_suppress=" DESC="Suppress the list of tags as diagnostics =tag,tag,..." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_warning=" DESC="Treat the list of tags as warning diagnostics =tag,tag,..." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--entry " DESC="Set program entry point to given symbol" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--error_limit=" DESC="Stop after this many errors (0 = no limit)" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="--export_builtin_config " DESC="Export the builtin configuration to given filename" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-f " DESC="Read command line options from file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--force_exceptions" DESC="Always include exception code" ADVANCED="1"/>
+    <OPTION NAME="--force_output" DESC="Produce an output file in spite of errors" ADVANCED="1"/>
+    <OPTION NAME="--image_input " DESC="Put image file in section: file[,symbol[,section[,alignment]]]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--keep " DESC="Require global symbol" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--log " DESC=" Do log output for the selected topics" PARAM="CHOICE" SEPARATOR="," ADVANCED="1">
+      <PARAM VALUE="initialization" DESC="Initialization decisions"/>
+      <PARAM VALUE="inlining" DESC="Small function inlining"/>
+      <PARAM VALUE="libraries" DESC="Automatic library selection"/>
+      <PARAM VALUE="modules" DESC="Module selection"/>
+      <PARAM VALUE="redirects" DESC="Redirected symbols"/>
+      <PARAM VALUE="sections" DESC="Section selection"/>
+      <PARAM VALUE="unused_fragments" DESC="Unused section fragments"/>
+      <PARAM VALUE="veneers" DESC="Veneer statistics"/>
+    </OPTION>
+    <OPTION NAME="--log_file " DESC="Specify file for log output" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--mangled_names_in_messages" DESC="Include mangled symbol names in diagnostics" ADVANCED="1"/>
+    <OPTION NAME="--map " DESC="Produce a linker list file of given name" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--misrac1998" DESC="Enable MISRA-C 1998 diagnostics as specified" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--misrac2004" DESC="Enable MISRA-C 2004 diagnostics as specified" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--misrac_verbose" DESC="Enable verbose MISRA C messages" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--no_dynamic_rtti_elimination" DESC="Disable dynamic rtti elimination" ADVANCED="1"/>
+    <OPTION NAME="--no_exceptions" DESC="Signal an error if exceptions are used" ADVANCED="1"/>
+    <OPTION NAME="--no_fragments" DESC="Always link entire sections" ADVANCED="1"/>
+    <OPTION NAME="--no_library_search" DESC="Disable automatic runtime library search" ADVANCED="1"/>
+    <OPTION NAME="--no_locals" DESC="Do not include local symbols in output symbol table" ADVANCED="1"/>
+    <OPTION NAME="--no_out_extension" DESC="Do not add a .out extension to the output file name" ADVANCED="1"/>
+    <OPTION NAME="--no_remove" DESC="Do not remove unused sections" ADVANCED="1"/>
+    <OPTION NAME="--no_veneers" DESC="Disable the insertion of veneers" ADVANCED="1"/>
+    <OPTION NAME="--no_warnings" DESC="Disable generation of warnings" ADVANCED="1"/>
+    <OPTION NAME="--no_wrap_diagnostics" DESC="Don't wrap long lines in diagnostic messages" ADVANCED="1"/>
+    <OPTION NAME="--output " DESC="Specify output file" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-o "/>
+    </OPTION>
+    <OPTION NAME="--only_stdout" DESC="Use stdout only (no console output on stderr)" ADVANCED="1"/>
+    <OPTION NAME="--pi_veneers" DESC="Generate position independent veneers" ADVANCED="1"/>
+    <OPTION NAME="--place_holder " DESC="Reserve a place in ROM for later use: symbol[,size[,section[,alignment]]]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--redirect " DESC="Redirect symbol refs to replacement symbol: orig=replacement" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--remarks" DESC="Enable generation of remarks" ADVANCED="1"/>
+    <OPTION NAME="--semihosting" DESC="Link with debug interface, specify interface to override default" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE=""/>
+      <PARAM VALUE="=iar_breakpoint"/>
+    </OPTION>
+    <OPTION NAME="--silent" DESC="Silent operation" ADVANCED="1"/>
+    <OPTION NAME="--strip" DESC="Do not include debug information" ADVANCED="1"/>
+    <OPTION NAME="--warnings_affect_exit_code" DESC="Warnings affect exit code" ADVANCED="1"/>
+    <OPTION NAME="--warnings_are_errors" DESC="All warnings are errors" ADVANCED="1"/>
+  </TOOL>
+  <!-- Assembler -->
+  <TOOL NAME="ASM" FILE="iasmarm.exe">
+    <OPTION NAME="-B " DESC="Print debug info for assembler macros" ADVANCED="1"/>
+    <OPTION NAME="-c" DESC="Listing options" PARAM="CHOICE" SEPARATOR="" ADVANCED="1">
+      <PARAM VALUE="D" DESC="Disable listing"/>
+      <PARAM VALUE="A" DESC="List only assembled part"/>
+      <PARAM VALUE="M" DESC="List Macro definition"/>
+      <PARAM VALUE="E" DESC="Disable macro expansion"/>
+      <PARAM VALUE="O" DESC="List several lines of code"/>
+    </OPTION>
+    <OPTION NAME="--cpu " DESC="Specify target core" PARAM="CHOICE">
+      <PARAM VALUE="ARM7TDMI" DEFAULT="1"/>
+      <PARAM VALUE="ARM7TDMI-S"/>
+      <PARAM VALUE="ARM710T"/>
+      <PARAM VALUE="ARM720T"/>
+      <PARAM VALUE="ARM740T"/>
+      <PARAM VALUE="ARM7EJ-S"/>
+      <PARAM VALUE="ARM9TDMI"/>
+      <PARAM VALUE="ARM920T"/>
+      <PARAM VALUE="ARM922T"/>
+      <PARAM VALUE="ARM940T"/>
+      <PARAM VALUE="ARM9E"/>
+      <PARAM VALUE="ARM9E-S"/>
+      <PARAM VALUE="ARM926EJ-S"/>
+      <PARAM VALUE="ARM946E-S"/>
+      <PARAM VALUE="ARM966E-S"/>
+      <PARAM VALUE="ARM968E-S"/>
+      <PARAM VALUE="ARM10E"/>
+      <PARAM VALUE="ARM1020E"/>
+      <PARAM VALUE="ARM1022E"/>
+      <PARAM VALUE="ARM1026EJ-S"/>
+      <PARAM VALUE="ARM1136J"/>
+      <PARAM VALUE="ARM1136J-S"/>
+      <PARAM VALUE="ARM1136JF"/>
+      <PARAM VALUE="ARM1136JF-S"/>
+      <PARAM VALUE="ARM1176J"/>
+      <PARAM VALUE="ARM1176J-S"/>
+      <PARAM VALUE="ARM1176JF"/>
+      <PARAM VALUE="ARM1176JF-S"/>
+      <PARAM VALUE="Cortex-M0"/>
+      <PARAM VALUE="Cortex-M1"/>
+      <PARAM VALUE="Cortex-Ms1"/>
+      <PARAM VALUE="Cortex-M3"/>
+      <PARAM VALUE="Cortex-R4"/>
+      <PARAM VALUE="XScale"/>
+      <PARAM VALUE="XScale-IR7"/>
+    </OPTION>
+    <OPTION NAME="-D" DESC="Define preprocessor symbol: -Dsymbol[=value]" PARAM="STRING"/>
+    <OPTION NAME="-E" DESC="Set maximum number of errors reported" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="-e" DESC="Use big-endian byte order" ADVANCED="1"/>
+    <OPTION NAME="--endian " DESC="Specify target byte order" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="little">
+        <ALIAS VALUE="l"/>
+      </PARAM>
+      <PARAM VALUE="big">
+        <ALIAS VALUE="b"/>
+      </PARAM>
+    </OPTION>
+    <OPTION NAME="-f" DESC="Extend command line with command file" ADVANCED="1"/>
+    <OPTION NAME="--fpu " DESC="Specify target FPU coprocessor support" PARAM="CHOICE">
+      <PARAM VALUE="VFPv1"/>
+      <PARAM VALUE="VFPv2"/>
+      <PARAM VALUE="VFPv3_D16"/>
+      <PARAM VALUE="VFPv3_FP16"/>
+      <PARAM VALUE="VFP9-S"/>
+      <PARAM VALUE="none" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="-G" DESC="Open standard input as source" ADVANCED="1"/>
+    <OPTION NAME="-I" DESC="Add #include search path" PARAM="STRING"/>
+    <OPTION NAME="-i" DESC="List #included files" ADVANCED="1"/>
+    <OPTION NAME="-j" DESC="Enable alternative register names, operators and mnemonics" ADVANCED="1"/>
+    <OPTION NAME="-L" DESC="Generate a list on:  [prefix]sourcename.lst" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-l" DESC="Generate a list on: filename" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-M" DESC="Change asm.macro argument quote chars: -Mab" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-N" DESC="No header in listing" ADVANCED="1"/>
+    <OPTION NAME="-n" DESC="Enable multibytes" ADVANCED="1"/>
+    <OPTION NAME="-O" DESC="specify object file prefix" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-o " DESC="specify object filename" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-p" DESC="Specify number of lines per page (10-150) in listing" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="-r" DESC="Enable debugger output in object"/>
+    <OPTION NAME="-S" DESC="Silent operation of assembler" ADVANCED="1"/>
+    <OPTION NAME="-s" DESC="Set case sensitivity for user symbols" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="+" DESC="enables sensitivity" DEFAULT="1"/>
+      <PARAM VALUE="-" DESC="disables sensitivity"/>
+    </OPTION>
+    <OPTION NAME="-t" DESC="Set tab spacing between 2 and 9 (default 8) in listings" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="-U" DESC="-USYMB equivalent to: #undef SYMB" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-w" DESC="Enable and disable warnings: -w+7-12,-3" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-x" DESC="Generate cross-reference list" PARAM="CHOICE" SEPARATOR="" ADVANCED="1">
+      <PARAM VALUE="D" DESC="Show all #defines"/>
+      <PARAM VALUE="I" DESC="Show Internal table"/>
+      <PARAM VALUE="2" DESC="Dual line space listing"/>
+    </OPTION>
+    <OPTION NAME="--legacy " DESC="Generate object files compatible with older toolchains" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="RVCT3.0" DESC="enables sensitivity"/>
+    </OPTION>
+  </TOOL>
+  <TOOL NAME="BIN2HEX" FILE="ielftool.exe">
+    <OPTION NAME="--byte" DESC="Output as bytes rather than target addressing" ADVANCED="1">
+      <ALIAS NAME="-byte"/>
+    </OPTION>
+    <OPTION NAME="--checksum " DESC="sym:size,algo[:[1|2][m][r][i|p]][,start];range[;range...]\nGenerate checksum\nsym Checksum symbol\nsize Length of the symbol in bytes\nalgo Algorithm: sum, sum8wide, sum32, crc16, crc32 or crc=poly\n1|2 Complement: 1 or 2\nm Reverse the bit order within each byte\nr Reverse the byte order within each word\ni|p Use initial value normally: i. Prefix input data with the start value: p\nstart Initial checksum value (defaults to 0)\nrange Do checksum of bytes in range" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--fill " DESC="pattern;range[;range...]\nSpecify fill\npattern Sequence of filler bytes\nrange Fill range" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--strip" DESC="Remove all section headers and non-program sections" ADVANCED="1"/>
+    <OPTION NAME="--self_reloc " DESC="relocator[,jtc]\nCreate self-relocating image with relocator\njtc Number of jump table entries" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--srec" DESC="Save as Motorola S-records" ADVANCED="1"/>
+    <OPTION NAME="--srec-len " DESC="Restrict the length of S-records" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--srec-s3only" DESC="Restrict the type of S-records to S3 (and S7)" ADVANCED="1"/>
+    <OPTION NAME="--ihex" DESC="Save as Intel hex" ADVANCED="1"/>
+    <OPTION NAME="--simple" DESC="Save as SimpleCode" ADVANCED="1"/>
+    <OPTION NAME="--bin" DESC="Save as raw binary" ADVANCED="1"/>
+    <OPTION NAME="--silent" DESC="Silent operation" ADVANCED="1"/>
+    <OPTION NAME="--verbose" DESC="Print all performed operations" ADVANCED="1"/>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="ARM7">
+    <CONTROLLER NAME="LPC2101">
+      <SOURCE NAME="LPC2101_FLASH.icf" FROM="iar-arm/LPC2101_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2101.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2102">
+      <SOURCE NAME="LPC2102_FLASH.icf" FROM="iar-arm/LPC2102_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2102.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2103">
+      <SOURCE NAME="LPC2103_FLASH.icf" FROM="iar-arm/LPC2103_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2103.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2104">
+      <SOURCE NAME="LPC2104_FLASH.icf" FROM="iar-arm/LPC2104_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2104.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2105">
+      <SOURCE NAME="LPC2105_FLASH.icf" FROM="iar-arm/LPC2105_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2105.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2106">
+      <SOURCE NAME="LPC2106_FLASH.icf" FROM="iar-arm/LPC2106_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2106.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2114">
+      <SOURCE NAME="LPC2114_FLASH.icf" FROM="iar-arm/LPC2114_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2114.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2124">
+      <SOURCE NAME="LPC2124_FLASH.icf" FROM="iar-arm/LPC2124_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2124.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2131">
+      <SOURCE NAME="LPC2131_FLASH.icf" FROM="iar-arm/LPC2131_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2131.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2132">
+      <SOURCE NAME="LPC2132_FLASH.icf" FROM="iar-arm/LPC2132_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2132.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2134">
+      <SOURCE NAME="LPC2134_FLASH.icf" FROM="iar-arm/LPC2134_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2134.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2136">
+      <SOURCE NAME="LPC2136_FLASH.icf" FROM="iar-arm/LPC2136_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2136.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2138">
+      <SOURCE NAME="LPC2138_FLASH.icf" FROM="iar-arm/LPC2138_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc2138.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="ARM7TDMI-S" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="arm" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+  </FAMILY>
+  <FAMILY NAME="Cortex-M3">
+    <CONTROLLER NAME="LM3S300">
+      <SOURCE NAME="LM3S300_FLASH.icf" FROM="iar-arm/LM3S300_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolm3s300.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/TexasInstruments&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S301">
+      <SOURCE NAME="LM3S301_FLASH.icf" FROM="iar-arm/LM3S301_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolm3s301.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/TexasInstruments&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S308">
+      <SOURCE NAME="LM3S308_FLASH.icf" FROM="iar-arm/LM3S308_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolm3s308.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/TexasInstruments&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S310">
+      <SOURCE NAME="LM3S310_FLASH.icf" FROM="iar-arm/LM3S310_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolm3s310.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/TexasInstruments&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S315">
+      <SOURCE NAME="LM3S315_FLASH.icf" FROM="iar-arm/LM3S315_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolm3s315.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/TexasInstruments&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S316">
+      <SOURCE NAME="LM3S316_FLASH.icf" FROM="iar-arm/LM3S316_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolm3s316.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/TexasInstruments&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S317">
+      <SOURCE NAME="LM3S317_FLASH.icf" FROM="iar-arm/LM3S317_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolm3s317.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/TexasInstruments&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S328">
+      <SOURCE NAME="LM3S328_FLASH.icf" FROM="iar-arm/LM3S328_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolm3s328.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/TexasInstruments&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1311FHN33">
+      <SOURCE NAME="LPC1311_FLASH.icf" FROM="iar-arm/LPC1311_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc1311.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1313FBD48">
+      <SOURCE NAME="LPC1313_FLASH.icf" FROM="iar-arm/LPC1313_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc1313.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1313FHN33">
+      <SOURCE NAME="LPC1313_FLASH.icf" FROM="iar-arm/LPC1313_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc1313.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1342FBD48">
+      <SOURCE NAME="LPC1342_FLASH.icf" FROM="iar-arm/LPC1342_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc1342.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1342FHN33">
+      <SOURCE NAME="LPC1342_FLASH.icf" FROM="iar-arm/LPC1342_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc1342.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1343FBD48">
+      <SOURCE NAME="LPC1343_FLASH.icf" FROM="iar-arm/LPC1343_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc1343.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1343FHN33">
+      <SOURCE NAME="LPC1343_FLASH.icf" FROM="iar-arm/LPC1343_FLASH.icf"/>
+      <TEMPLATE NAME="INCFILE" VALUE="iolpc1343.h"/>
+      <OPTION TOOL="CC" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="ASM" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="--cpu=" VALUE="Cortex-M3" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="--cpu_mode=" VALUE="thumb" DEFAULT="1"/>
+      <OPTION TOOL="CC" NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc/NXP&quot;"/>
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT PATH="%PROGRAMFILES%/IAR Systems/%SUB%/arm" SUF="bin/iccarm.exe" LEVELS="2" DATE="2009-07-01">
+    <CHECK ARG="" STR="ARM"/>
+  </DETECT>
+  <PATH ADD="%COMPILER_DIR%/bin"/>
+  <!-- File Types -->
+  <FILE NAME="c" DESC="C Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="cpp" DESC="C++ Source" CATEGORY="Source" SOURCE="1" ICON="project_c++.png"/>
+  <FILE NAME="s" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="icf" DESC="Linker Script" CATEGORY="Linker Script" SOURCE="1" ICON="project_other.png"/>
+  <FILE NAME="lib" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="elf" DESC="Arm elf" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="o" DESC="Object" CATEGORY="Intermediate Binary"/>
+  <!-- Compiler -->
+  <PROCESS TOOL="CC" NAME="C Compiler" CMDLINE="$(CC) $(CCFLAGS) %OPTIONS% --output %OUTFILE_QUOTED% %INFILE_QUOTED%">
+    <FILE OUTPUT="o">
+      <FILE INPUT="c"/>
+      <FILE INPUT="cpp"/>
+      <FILE TEMP="d" NAME="%OUTFILE_DIR%\%OUTFILE%.d"/>
+    </FILE>
+    <OPTION NAME="-I" VALUE="&quot;%COMPILER_DIR%/inc&quot;"/>
+    <OPTION NAME="--endian=" VALUE="little" DEFAULT="1"/>
+    <OPTION NAME="--fpu=" VALUE="none" DEFAULT="1"/>
+    <OPTION NAME="--no_cse" DEFAULT="1"/>
+    <OPTION NAME="--no_unroll" DEFAULT="1"/>
+    <OPTION NAME="--no_inline" DEFAULT="1"/>
+    <OPTION NAME="--no_code_motion" DEFAULT="1"/>
+    <OPTION NAME="--no_tbaa" DEFAULT="1"/>
+    <OPTION NAME="--no_clustering" DEFAULT="1"/>
+    <OPTION NAME="--no_scheduling" DEFAULT="1"/>
+    <OPTION NAME="-e" DEFAULT="1"/>
+    <OPTION NAME="--interwork" DEFAULT="1"/>
+    <OPTION NAME="--dlib_config " VALUE="DLib_Config_Normal.h" DEFAULT="1"/>
+    <OPTION NAME="-O" VALUE="l" DEFAULT="1"/>
+    <MESSAGE VALUE="^.*&quot;(.+)&quot;,(\d+)\s*((f|F)atal\s*)?(Error|Warning|Message|error|warning|message)\[.*\]:.*$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="$(ASM) -S -o %OUTFILE_QUOTED% $(ASMFLAGS) %OPTIONS% %INFILE_QUOTED%">
+    <FILE INPUT="s" OUTPUT="o" ERROR="ERR"/>
+    <FILE TEMP="hex"/>
+    <FILE TEMP="err"/>
+    <FILE TEMP="lst"/>
+    <OPTION NAME="--endian " VALUE="little" DEFAULT="1"/>
+    <OPTION NAME="--fpu " VALUE="none" DEFAULT="1"/>
+    <MESSAGE VALUE="^(Error|Warning|Message)\[\d+\]\s*(.+) (\d+) : .+$">
+      <FIELD NAME="FILENAME" POSITION="2"/>
+      <FIELD NAME="LINE" POSITION="3" OFFSET="0"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="$(LD) $(LDFLAGS) %OPTIONS% --output %OUTFILE_QUOTED% %INFILES_QUOTED%">
+    <FILE OUTPUT="elf"/>
+    <FILE INPUT="lib"/>
+    <FILE INPUT="o"/>
+    <FILE INPUT="icf" OPTION="LKR"/>
+    <OPTION NAME="--entry " VALUE="__iar_program_start" DEFAULT="1"/>
+    <OPTION NAME="--silent"/>
+    <MESSAGE VALUE="^.*&quot;(.+)&quot;,(\d+)\s+((f|F)atal\s+)?(Error|Warning|Message|error|warning|message)\[.*\]:.*$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Bin2Hex -->
+  <PROCESS TOOL="BIN2HEX" NAME="Bin2hex" CMDLINE="$(BIN2HEX) $(BIN2HEXFLAGS) %INFILE_QUOTED% %OUTFILE_QUOTED%">
+    <FILE OUTPUT="hex"/>
+    <FILE INPUT="elf"/>
+    <OPTION NAME="--ihex"/>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="elf"/>
+    <OPTION TOOL="CC" NAME="--debug"/>
+    <OPTION TOOL="ASM" NAME="-r"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <SOURCE NAME="main.c" FROM="intmain.c" OPEN="1"/>
+</COMPILER>

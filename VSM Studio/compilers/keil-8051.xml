@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<COMPILER NAME="Keil for 8051" ID="8051KEIL" VERSION="9.02" URL="http://www.keil.com/c51/" AVAILABILITY="External" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- C Compiler -->
+  <TOOL NAME="CC" FILE="C51.exe">
+    <!--  -->
+    <!-- And C++ Compiler as well -->
+    <ALIAS NAME="CPP"/>
+    <OPTION NAME="AREGS" DESC="Enables absolute register (ARn) addressing" MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="AR"/>
+    </OPTION>
+    <OPTION NAME="BROWSE" DESC="Enables source browser information">
+      <ALIAS NAME="BR"/>
+    </OPTION>
+    <OPTION NAME="CODE" DESC="Includes generated assembly in the listing file">
+      <ALIAS NAME="CD"/>
+    </OPTION>
+    <OPTION NAME="DEBUG" DESC="Includes debugging information in the object file">
+      <ALIAS NAME="DB"/>
+    </OPTION>
+    <OPTION NAME="OBJECTEXTEND" DESC="Adds additional debugging information to the object file">
+      <ALIAS NAME="OE"/>
+    </OPTION>
+    <OPTION NAME="OPTIMIZE" DESC="Specifies the level of optimization performed by the compiler. OPTIMIZE (8, SPEED)" PARAM="STRING">
+      <ALIAS NAME="OT"/>
+    </OPTION>
+    <OPTION NAME="PREPRINT" DESC="Produces a preprocessor listing file with expanded macros">
+      <ALIAS NAME="PP"/>
+    </OPTION>
+    <OPTION NAME="ROM(" DESC="Specifies the ROM model (SMALL, COMPACT or LARGE)" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="SMALL)"/>
+      <PARAM VALUE="COMPACT)"/>
+      <PARAM VALUE="LARGE)"/>
+      <PARAM VALUE="D512K)"/>
+      <PARAM VALUE="D16M)"/>
+    </OPTION>
+  </TOOL>
+  <!-- Linker -->
+  <TOOL NAME="LD" FILE="BL51.exe">
+    <OPTION NAME="BANK" DESC="Specifies the code bank in which to locate the specified segment." PARAM="STRING" MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="B"/>
+    </OPTION>
+    <OPTION NAME="BANKAREA" DESC="Specifies the address range where code banks are located." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="BA"/>
+    </OPTION>
+    <OPTION NAME="BIT" DESC="Locates BIT segments." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="BI"/>
+    </OPTION>
+    <OPTION NAME="CODE" DESC="Locates CODE segments." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="CO"/>
+    </OPTION>
+    <OPTION NAME="DATA" DESC="Locates DATA segments." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="DA"/>
+    </OPTION>
+    <OPTION NAME="DISABLEWARNING" DESC="Disables generation of specified warning numbers. BL51 myfile.obj DW(20,22)" PARAM="STRING">
+      <ALIAS NAME="DW"/>
+    </OPTION>
+    <OPTION NAME="IBANKING" DESC="Uses the on-chip code banking hardware of the Mentor M8051EW core, the Infineon SDA30C16x/26x, and the Micronas SDA555x." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="IB"/>
+    </OPTION>
+    <OPTION NAME="IDATA" DESC="Locates IDATA segments." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="ID"/>
+    </OPTION>
+    <OPTION NAME="IXREF" DESC="Enables cross reference details in the listing file." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="IX"/>
+    </OPTION>
+    <OPTION NAME="NOAJMP" DESC="Avoids AJMP instructions in bank switch code." ADVANCED="1">
+      <ALIAS NAME="NOAJ"/>
+    </OPTION>
+    <OPTION NAME="NOAMAKE" DESC="Excludes AMAKE information from the object file." ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="NODEBUGLINES" DESC="Excludes line number information from the output object file." ADVANCED="1">
+      <ALIAS NAME="NODL"/>
+    </OPTION>
+    <OPTION NAME="NODEBUGPUBLICS" DESC="Excludes public symbol information from the output object file." ADVANCED="1">
+      <ALIAS NAME="NODP"/>
+    </OPTION>
+    <OPTION NAME="NODEBUGSYMBOLS" DESC="Excludes local symbol information from the output object file." ADVANCED="1">
+      <ALIAS NAME="NODS"/>
+    </OPTION>
+    <OPTION NAME="NODEFAULTLIBRARY" DESC="Disables automatic inclusion of run-time library routines." ADVANCED="1">
+      <ALIAS NAME="NLIB"/>
+    </OPTION>
+    <OPTION NAME="NOINDIRECTCALL" DESC="Disables bank switching code for indirectly called functions." ADVANCED="1">
+      <ALIAS NAME="NOIC"/>
+    </OPTION>
+    <OPTION NAME="NOJMPTAB" DESC="Disables generation of the code banking jump table." ADVANCED="1">
+      <ALIAS NAME="NOJT"/>
+    </OPTION>
+    <OPTION NAME="NOLINES" DESC="Excludes line number information from the listing file and object file." ADVANCED="1">
+      <ALIAS NAME="NOLI"/>
+    </OPTION>
+    <OPTION NAME="NOMAP" DESC="Excludes the memory map from the listing file." ADVANCED="1">
+      <ALIAS NAME="NOMA"/>
+    </OPTION>
+    <OPTION NAME="NOOVERLAY" DESC="Disables data segment overlaying." ADVANCED="1">
+      <ALIAS NAME="NOOL"/>
+    </OPTION>
+    <OPTION NAME="NOPRINT" DESC="Disables generation of the listing (MAP) file." ADVANCED="1">
+      <ALIAS NAME="NOPR"/>
+    </OPTION>
+    <OPTION NAME="NOPUBLICS" DESC="Excludes public symbols from the listing file and object file." ADVANCED="1">
+      <ALIAS NAME="NOPU"/>
+    </OPTION>
+    <OPTION NAME="NOSORTSIZE" DESC="Disables sorting sections by size prior to locating." ADVANCED="1">
+      <ALIAS NAME="NOSO"/>
+    </OPTION>
+    <OPTION NAME="NOSYMBOLS" DESC="Excludes local symbols from the listing file and object file." ADVANCED="1">
+      <ALIAS NAME="NOSY"/>
+    </OPTION>
+    <OPTION NAME="OVERLAY" DESC="Modifies the call tree for overlaying of local bit and data segments." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="OL"/>
+    </OPTION>
+    <OPTION NAME="PAGELENGTH" DESC="Specifies the number of lines on a page in the listing file." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="PL"/>
+    </OPTION>
+    <OPTION NAME="PAGEWIDTH" DESC="Specifies the number of characters on a line in the listing file." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="PW"/>
+    </OPTION>
+    <OPTION NAME="PDATA" DESC="Locates PDATA segments." PARAM="STRING" ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="PRECEDE" DESC="Locates segments in DATA memory prior to other relocatable BIT, DATA, and IDATA segments." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="PC"/>
+    </OPTION>
+    <OPTION NAME="PRINT" DESC="Specifies the name of the listing file." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="PR"/>
+    </OPTION>
+    <OPTION NAME="RAMSIZE(" DESC="RAMSIZE(256): Specifies the number of bytes of DATA and IDATA" PARAM="STRING" SUFFIX=")" ADVANCED="1">
+      <ALIAS NAME="RS"/>
+    </OPTION>
+    <OPTION NAME="RECURSIONS" DESC="Specifies the maximum number of recursive calls detected before link failure." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="RC"/>
+    </OPTION>
+    <OPTION NAME="REGFILE" DESC="Specifies the name of the register definition file for global register coloring." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="RF"/>
+    </OPTION>
+    <OPTION NAME="RTX51" DESC="Specifies that the RTX51 Real-Time Kernel is used." ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="RTX51TINY" DESC="Specifies that the RTX51 Tiny Real-Time Kernel is used." ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="SPEEDOVL" DESC="Ignores references from constant segments to program segments during overlay analysis." ADVANCED="1">
+      <ALIAS NAME="SP"/>
+    </OPTION>
+    <OPTION NAME="STACK" DESC="Locates segments in the uppermost IDATA memory space." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="ST"/>
+    </OPTION>
+    <OPTION NAME="XDATA" DESC="Locates XDATA segments." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="XD"/>
+    </OPTION>
+  </TOOL>
+  <!-- Assembler -->
+  <TOOL NAME="ASM" FILE="A51.exe">
+    <OPTION NAME="CASE" DESC="Enables case-sensitive symbol names." MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="CA"/>
+    </OPTION>
+    <OPTION NAME="COND" DESC="Includes (in the listing file) conditional source lines skipped by the preprocessor." MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="CO"/>
+    </OPTION>
+    <OPTION NAME="DATE" DESC="Specifies the date to use in the listing file header." PARAM="STRING" MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="DA"/>
+    </OPTION>
+    <OPTION NAME="DEBUG" DESC="Includes debugging information in the object file" MULTIPLE="1">
+      <ALIAS NAME="DB"/>
+    </OPTION>
+    <OPTION NAME="DEFINE" DESC="Defines C preprocessor symbols on the command line." PARAM="STRING" MULTIPLE="1">
+      <ALIAS NAME="DF"/>
+    </OPTION>
+    <OPTION NAME="ECRM" DESC="Allow expansion of generic CALL instruction to ECALL for the NXP 80C51MX devices." MULTIPLE="1" ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="ELSE" DESC="Assemble block if the condition of a previous IF is false." MULTIPLE="1" ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="ELSEIF" DESC="Assemble block if condition is true and a previous IF or ELSEIF is false." PARAM="STRING" MULTIPLE="1" ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="ENDIF" DESC="Ends an IF block." MULTIPLE="1" ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="ERRORPRINT" DESC="Specifies the file name for error messages." PARAM="STRING" MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="EP"/>
+    </OPTION>
+    <OPTION NAME="GEN" DESC="Includes all macro expansions in the listing file." MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="GE"/>
+    </OPTION>
+    <OPTION NAME="IF" DESC="Assemble block if condition is true." MULTIPLE="1" PARAM="STRING" ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="INCDIR" DESC="Sets additional include file paths." MULTIPLE="1" PARAM="STRING">
+      <ALIAS NAME="ID"/>
+    </OPTION>
+    <OPTION NAME="INCLUDE" DESC="Includes the contents of another file." MULTIPLE="1" PARAM="STRING">
+      <ALIAS NAME="IC"/>
+    </OPTION>
+    <OPTION NAME="LIST" DESC="Includes the assembly source text in the listing file." MULTIPLE="1">
+      <ALIAS NAME="LI"/>
+    </OPTION>
+    <OPTION NAME="MACRO" DESC="Enables preprocessor expansion of standard macros." MULTIPLE="1" ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="MOD_CONT" DESC="Enables 24-bit contiguous addressing for Dallas Semiconductor devices." ADVANCED="1">
+      <ALIAS NAME="MC"/>
+    </OPTION>
+    <OPTION NAME="MOD_MX51" DESC="Enables instruction set extensions for the NXP 80C51MX architecture." ADVANCED="1">
+      <ALIAS NAME="MX"/>
+    </OPTION>
+    <OPTION NAME="MOD51" DESC="Enables code generation and defines SFRs for classic 8051 devices." ADVANCED="1">
+      <ALIAS NAME="M51"/>
+    </OPTION>
+    <OPTION NAME="MPL" DESC="Enables preprocessor expansion of MPL macros." MULTIPLE="1" ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="NOAMAKE" DESC="Excludes build information from the object file." MULTIPLE="1" ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="NOCASE" DESC="Disables case-sensitive symbol names. All symbols are converted to uppercase." ADVANCED="1">
+      <ALIAS NAME="NOCA"/>
+    </OPTION>
+    <OPTION NAME="NOCOND" DESC="Excludes (from the listing file) conditional source lines skipped by the preprocessor." ADVANCED="1">
+      <ALIAS NAME="NOCO"/>
+    </OPTION>
+    <OPTION NAME="NODEBUG" DESC="Excludes debugging information from the object file." ADVANCED="1">
+      <ALIAS NAME="NODB"/>
+    </OPTION>
+    <OPTION NAME="NOERRORPRINT" DESC="Disables error messages output to the screen." MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="NOEP"/>
+    </OPTION>
+    <OPTION NAME="NOGEN" DESC="Excludes macro expansions from the listing file." MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="NOGE"/>
+    </OPTION>
+    <OPTION NAME="NOLINES" DESC="Excludes line number information from the generated object module." MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="NOLN"/>
+    </OPTION>
+    <OPTION NAME="NOLIST" DESC="Excludes the assembly source text from the listing file." MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="NOLI"/>
+    </OPTION>
+    <OPTION NAME="NOMACRO" DESC="Disables preprocessor expansion of standard and MPL macros." MULTIPLE="1" ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="NOMOD51" DESC="Suppresses SFRs definitions for classic 8051 devices" ADVANCED="1">
+      <ALIAS NAME="NOMO"/>
+    </OPTION>
+    <OPTION NAME="NOMPL" DESC="Disables preprocessor expansion of MPL macros." ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="NOOBJECT" DESC="Disables object file generation." MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="NOOJ"/>
+    </OPTION>
+    <OPTION NAME="NOPRINT" DESC="Disables listing file generation." MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="NOPR"/>
+    </OPTION>
+    <OPTION NAME="NOREGISTERBANK" DESC="Disables memory space reservation for register banks." ADVANCED="1">
+      <ALIAS NAME="NORB"/>
+    </OPTION>
+    <OPTION NAME="NOSYMBOLS" DESC="Excludes the symbol table from the listing file." ADVANCED="1">
+      <ALIAS NAME="NOSB"/>
+    </OPTION>
+    <OPTION NAME="NOSYMLIST" DESC="Excludes subsequently defined symbols from the symbol table." ADVANCED="1">
+      <ALIAS NAME="NOSL"/>
+    </OPTION>
+    <OPTION NAME="NOXREF" DESC="Excludes the cross-reference table from the listing file." ADVANCED="1">
+      <ALIAS NAME="NOXR"/>
+    </OPTION>
+    <OPTION NAME="OBJECT" DESC="Specifies the name for the object file." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="OJ"/>
+    </OPTION>
+    <OPTION NAME="PAGELENGTH" DESC="Specifies the number of lines on a page in the listing file." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="PL"/>
+    </OPTION>
+    <OPTION NAME="PAGEWIDTH" DESC="Specifies the number of characters on a line in the listing file." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="PW"/>
+    </OPTION>
+    <OPTION NAME="PRINT" DESC="Specifies the name for the listing file." PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="PR"/>
+    </OPTION>
+    <OPTION NAME="REGISTERBANK" DESC="Reserves memory space for register banks." MULTIPLE="1" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="RB"/>
+    </OPTION>
+    <OPTION NAME="REGUSE" DESC="Specifies registers modified by the specified function." MULTIPLE="1" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="RU"/>
+    </OPTION>
+    <OPTION NAME="RESET" DESC="Sets symbols, which may be tested by IF or ELSEIF, to false." MULTIPLE="1" PARAM="STRING" ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="SET" DESC="Sets symbols, which may be tested by IF or ELSEIF, to true or a specified value." MULTIPLE="1" PARAM="STRING" ADVANCED="1">
+    </OPTION>
+    <OPTION NAME="SYMBOLS" DESC="Includes a symbol table in the listing file" ADVANCED="1">
+      <ALIAS NAME="SB"/>
+    </OPTION>
+    <OPTION NAME="SYMLIST" DESC="Includes subsequently defined symbols in the symbol table." MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="SL"/>
+    </OPTION>
+    <OPTION NAME="TITLE" DESC="Specifies the page header title in the listing file." MULTIPLE="1" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="TT"/>
+    </OPTION>
+    <OPTION NAME="XREF" DESC="Includes the cross-reference table in the listing file." ADVANCED="1">
+      <ALIAS NAME="XR"/>
+    </OPTION>
+  </TOOL>
+  <!-- Object to hex converter-->
+  <TOOL NAME="OBJ" FILE="OH51.exe">
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="8051">
+    <CONTROLLER NAME="80C31">
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="8031 (all Variants)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Generic" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C32">
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="8032 (all Variants)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Generic" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C51">
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="8051 (all Variants)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Generic" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C52">
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="8052 (all Variants)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Generic" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C54">
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="8054 (all Variants)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Generic" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C58">
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="8058 (all Variants)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Generic" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Atmel\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="AT89C51" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Atmel" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C52">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Atmel\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Atmel" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="AT89C52" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C55">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Atmel\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Atmel" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="AT89C55" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51RB2">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Atmel\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Atmel" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="AT89C51RB2" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51RC2">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Atmel\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Atmel" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="AT89C51RC2" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51RD2">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Atmel\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Atmel" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="AT89C51RD2" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51FA">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Philips\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="NXP (founded by Philips)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="P8xC51FA" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51FB">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Philips\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="NXP (founded by Philips)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="P8xC51FB" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51FC">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Philips\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="NXP (founded by Philips)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="P8xC51FC" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51RA+">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Philips\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="NXP (founded by Philips)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="P8xC51RA+" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51RB+">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Philips\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="NXP (founded by Philips)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="P8xC51RB+" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51RC+">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Philips\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="NXP (founded by Philips)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="P8xC51RC+" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51RD+">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Philips\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="NXP (founded by Philips)" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="P8xC51RD+" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C1051">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Atmel\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Atmel" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="AT89C1051" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C2051">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Atmel\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Atmel" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="AT89C2051" ACTION="SET"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C4051">
+      <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\Atmel\" ACTION="ADD" SEPARATOR=";"/>
+      <ENVIRONMENT NAME="CPU_VENDOR" VALUE="Atmel" ACTION="SET"/>
+      <ENVIRONMENT NAME="CPU_TYPE" VALUE="AT89C4051" ACTION="SET"/>
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT KEYLOC="HKEY_LOCAL_MACHINE\SOFTWARE\Keil\Products\C51" TYPE="NAMED" KEY="Path">
+    <CHECK SUF="BIN/C51.exe" ARG="" STR="C51" DATE="2010-06-30"/>
+    <CHECK SUF="BIN/BL51.exe" ARG="" STR="BL51" DATE="2009-10-01"/>
+    <CHECK SUF="BIN/A51.exe" ARG="" STR="A51" DATE="2010-02-22"/>
+  </DETECT>
+  <DETECT PATH="C:/Keil/C51">
+    <CHECK SUF="BIN/C51.exe" ARG="" STR="C51" DATE="2010-06-30"/>
+    <CHECK SUF="BIN/BL51.exe" ARG="" STR="BL51" DATE="2009-10-01"/>
+    <CHECK SUF="BIN/A51.exe" ARG="" STR="A51" DATE="2010-02-22"/>
+  </DETECT>
+  <PATH ADD="%COMPILER_DIR%/BIN"/>
+  <!-- File Types -->
+  <FILE NAME="c" DESC="C Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="cpp" DESC="C++ Source" CATEGORY="Source" SOURCE="1" ICON="project_c++.png"/>
+  <FILE NAME="A51" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="ASM" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="INC" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="LIB" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="OMF" DESC="OMF51" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="OBJ" DESC="Object" CATEGORY="Intermediate Binary"/>
+  <!-- Compiler -->
+  <PROCESS TOOL="CC" NAME="C Compiler" CMDLINE="&quot;%BIN_DIR_DOS%\MAKE\RunTool.exe&quot; --good-exits=0,1 --executable=$(CC) %INFILE_QUOTED_DOS% $(CCFLAGS) %OPTIONS% OBJECT(%OUTFILE_QUOTED_DOS%)">
+    <FILE OUTPUT="OBJ">
+      <FILE INPUT="c"/>
+      <FILE INPUT="cpp"/>
+      <FILE TEMP="lst" NAME="%OUTFILE_DIR%/%INFILE_NAME%.lst"/>
+      <FILE TEMP="I" NAME="%OUTFILE_DIR%/%INFILE_NAME%.I"/>
+    </FILE>
+    <OPTION NAME="ROM(" VALUE="SMALL)" DEFAULT="1"/>
+    <MESSAGE VALUE="^.*(ERROR|WARNING|FATAL ERROR).*IN\s*LINE\s*(\d+)\s*OF\s*([^:]*):(.+)$">
+      <FIELD NAME="FILENAME" POSITION="3"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="&quot;%BIN_DIR_DOS%\MAKE\RunTool.exe&quot; --good-exits=0,1 --executable=$(LD) %INFILES_QUOTED_DOS(,)% TO %OUTFILE_QUOTED_DOS% $(LDFLAGS) %OPTIONS%">
+    <FILE OUTPUT="OMF"/>
+    <FILE INPUT="LIB"/>
+    <FILE INPUT="OBJ"/>
+    <FILE TEMP="M51"/>
+    <MESSAGE VALUE="^.*(ERROR|WARNING|FATAL ERROR)\s*([^:]*):(.+)$"/>
+  </PROCESS>
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="&quot;%BIN_DIR_DOS%\MAKE\RunTool.exe&quot; --good-exits=0,1 --executable=$(LD) %INFILES_QUOTED_DOS(,)% TO &quot;%OUTFILE_DIR%\%OUTFILE_NAME_DOS%.OMF&quot; $(LDFLAGS) %OPTIONS%">
+    <FILE OUTPUT="hex"/>
+    <FILE INPUT="LIB"/>
+    <FILE INPUT="OBJ"/>
+    <FILE TEMP="M51"/>
+    <POSTPROCESS TOOL="LD" CMDLINE="&quot;%COMPILER_DIR_DOS%\BIN\OH51.exe&quot; &quot;%OUTFILE_DIR%\%OUTFILE_NAME_DOS%.OMF&quot;"/>
+    <MESSAGE VALUE="^.*(ERROR|WARNING|FATAL ERROR)\s*([^:]*):(.+)$"/>
+  </PROCESS>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="&quot;%BIN_DIR_DOS%\MAKE\RunTool.exe&quot; --good-exits=0,1 --executable=$(ASM) %INFILE_DOS_QUOTED% $(ASMFLAGS) %OPTIONS% OBJECT(%OUTFILE_QUOTED_DOS%)">
+    <FILE OUTPUT="OBJ">
+      <FILE INPUT="A51"/>
+      <FILE INPUT="ASM"/>
+    </FILE>
+    <FILE TEMP="I" NAME="%INFILE_NAME%.I"/>
+    <FILE ERROR="err" TEMP="lst" NAME="%OUTFILE_NAME%.lst" HIDE_UNMATCHED="false"/>
+    <MESSAGE VALUE="^.*(ERROR|WARNING|FATAL ERROR)\s*#(.*)\s*IN.*\((.*),\s*LINE\s*(\d+)\):\s*(.*)$">
+      <FIELD NAME="FILENAME" POSITION="3"/>
+      <FIELD NAME="LINE" POSITION="4" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="OMF"/>
+    <OPTION TOOL="CC" NAME="BROWSE" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="DEBUG" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="CODE" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="OBJECTEXTEND" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="PREPRINT" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="DEBUG" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="SYMBOLS" DEFAULT="1"/>
+    <ENVIRONMENT NAME="C51LIB" VALUE="%COMPILER_DIR_DOS%\LIB" ACTION="ADD" SEPARATOR=";"/>
+    <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\" ACTION="ADD" SEPARATOR=";"/>
+    <ENVIRONMENT NAME="C51INC" VALUE=".\" ACTION="ADD" SEPARATOR=";"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <ENVIRONMENT NAME="C51LIB" VALUE="%COMPILER_DIR_DOS%\LIB" ACTION="ADD" SEPARATOR=";"/>
+    <ENVIRONMENT NAME="C51INC" VALUE="%COMPILER_DIR_DOS%\INC\" ACTION="ADD" SEPARATOR=";"/>
+    <ENVIRONMENT NAME="C51INC" VALUE=".\" ACTION="ADD" SEPARATOR=";"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <SOURCE NAME="main.c" FROM="keil51main.c" OPEN="1"/>
+</COMPILER>

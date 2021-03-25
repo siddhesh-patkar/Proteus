@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Snippet file relative to IMAGE/Snippets folder -->
+<CLIP CATEGORY="Grove" FILE="Grove/Grove Terminal.pdsclip" FAMILY="ARDUINO" DESC="Grove Terminal Module">
+  <PERIPHERAL NAME="Grove Terminal"  ELEMENT="VT1" >   
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="SerialTerminal">
+      <PORT NAME="UART"/>          
+     	<SETUP NAME="begin">
+          <PROPERTY NAME="BAUDRATE" ELEMENT="VT1" TYPE="INTEGER"/>
+       </SETUP>
+     </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER FILE="SerialTerminal/SerialTerminal.xml"/>
+   </PERIPHERAL>
+</CLIP>        
+  

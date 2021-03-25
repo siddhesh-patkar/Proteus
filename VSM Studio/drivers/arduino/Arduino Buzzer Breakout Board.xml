@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino Buzzer Breakout Board.pdsclip" FAMILY="ARDUINO" DESC="Arduino Buzzer Breakout Board" >
+   <PERIPHERAL TYPE="Arduino Buzzer" ELEMENT="BUZ1">
+
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="GenericBuzzer">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO6"/>
+         </PIN>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Generic.h">
+         <METHOD NAME="on"  DESC="Turn Buzzer on."/>
+         <METHOD NAME="off" DESC="Turn Buzzer off."/>
+         <METHOD NAME="set" DESC="Turn Buzzer on or off.">
+            <PARAMETER NAME="state" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="State of Buzzer"/>
+         </METHOD>
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

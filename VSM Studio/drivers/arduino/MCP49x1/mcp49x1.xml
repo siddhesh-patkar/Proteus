@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino MCP49x1 DAC converter -->
+<DRIVER HEADER="MCP49x1.h">
+   <REQUIRE HEADER="SPI.h"/>
+
+   <!-- GAIN enumeration -->
+   <ENUMERATION NAME="DAC_GAIN">
+      <CONSTANT NAME="X1"   VALUE="1"/>
+      <CONSTANT NAME="X2"   VALUE="2"/>
+   </ENUMERATION>
+
+   <!-- SPI CLOCK DIVIDER enumeration -->
+   <ENUMERATION NAME="SPI_CLOCK">
+      <CONSTANT NAME="CLOCK_DIV2"   VALUE="4"/>
+      <CONSTANT NAME="CLOCK_DIV4"   VALUE="0"/>
+      <CONSTANT NAME="CLOCK_DIV8"   VALUE="5"/>
+      <CONSTANT NAME="CLOCK_DIV16"  VALUE="1"/>
+      <CONSTANT NAME="CLOCK_DIV32"  VALUE="6"/>
+      <CONSTANT NAME="CLOCK_DIV64"  VALUE="2"/>
+      <CONSTANT NAME="CLOCK_DIV128" VALUE="3"/>
+   </ENUMERATION>
+
+   <!-- VREF_BUFFER enumeration -->
+   <ENUMERATION NAME="VREF_BUFFER">
+      <CONSTANT NAME="Unbuffered" VALUE="0"/>
+      <CONSTANT NAME="Buffered"   VALUE="1"/>
+   </ENUMERATION>
+
+   <!-- Methods -->
+   <METHOD NAME="setGain" DESC="Set the DAC Gain x2.">
+      <PARAMETER NAME="gain" TYPE="DAC_GAIN" DEFAULT="X1" DESC="DAC Gain"/>
+   </METHOD>
+   <METHOD NAME="setSPIDivider" DESC="Set SPI clock divider.">
+      <PARAMETER NAME="div" TYPE="SPI_CLOCK" DEFAULT="CLOCK_DIV8" DESC="SPI Clock Divider"/>
+   </METHOD>
+   <METHOD NAME="output" DESC="Output converted data.">
+      <PARAMETER NAME="data" TYPE="INTEGER" DEFAULT="0" DESC="Data being converted"/>
+   </METHOD>
+   <METHOD NAME="setBuffer" DESC="Set VREF Input Unbuffered/Buffered.">
+      <PARAMETER NAME="buffer" TYPE="VREF_BUFFER" DEFAULT="0" DESC="Unbuffered/Buffered"/>
+   </METHOD>
+   <METHOD NAME="shutdown" DESC="Shuts the DAC down."/>
+</DRIVER>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Driver Descriptor for Multi-State Actuator -->
+<!-- A multi-state actuator uses an integer/long value to represent it's state -->
+<DRIVER HEADER="Controls.h">
+     <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+     <FUNCTION DESC="Button is Request Source">
+        <RETURN TYPE="BOOLEAN"/>
+     </FUNCTION>
+
+     <METHOD NAME="setState" DESC="Set the state of the control">
+        <PARAMETER TYPE="INTEGER"/>
+     </METHOD>
+
+     <METHOD NAME="getState" DESC="Get the state of the control">
+        <RETURN TYPE="INTEGER"/>
+     </METHOD>
+
+     <INTERRUPT DESC="Control Event"  HOOK="attachEventHandler"/>                   
+
+</DRIVER>
+  

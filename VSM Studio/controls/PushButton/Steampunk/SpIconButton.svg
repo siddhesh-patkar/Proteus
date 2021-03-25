@@ -1,0 +1,3048 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg5326"
+   sodipodi:docname="SpIconButton.svg"
+   inkscape:version="0.92.1 r15371">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1417"
+     id="namedview574"
+     showgrid="false"
+     inkscape:zoom="6.675088"
+     inkscape:cx="-10.216289"
+     inkscape:cy="56.490205"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Custom 2" />
+  <metadata
+     id="metadata5330">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4826">
+    <linearGradient
+       id="Gold_14"
+       data-name="Gold 14"
+       y1="50"
+       x2="100"
+       y2="50"
+       gradientTransform="rotate(44.42,50.001499,49.993367)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#893813"
+         id="stop4510" />
+      <stop
+         offset="0.11"
+         stop-color="#eae43b"
+         id="stop4512" />
+      <stop
+         offset="0.2"
+         stop-color="#f9ae27"
+         id="stop4514" />
+      <stop
+         offset="0.28"
+         stop-color="#a46b1e"
+         id="stop4516" />
+      <stop
+         offset="0.39"
+         stop-color="#422b13"
+         id="stop4518" />
+      <stop
+         offset="0.52"
+         stop-color="#be8725"
+         id="stop4520" />
+      <stop
+         offset="0.63"
+         stop-color="#f9ba42"
+         id="stop4522" />
+      <stop
+         offset="0.75"
+         stop-color="#b58726"
+         id="stop4524" />
+      <stop
+         offset="0.85"
+         stop-color="#fcef79"
+         id="stop4526" />
+      <stop
+         offset="0.87"
+         stop-color="#fbe973"
+         id="stop4528" />
+      <stop
+         offset="0.9"
+         stop-color="#f7d862"
+         id="stop4530" />
+      <stop
+         offset="0.93"
+         stop-color="#f1bd46"
+         id="stop4532" />
+      <stop
+         offset="0.97"
+         stop-color="#e8971f"
+         id="stop4534" />
+      <stop
+         offset="0.97"
+         stop-color="#e8961e"
+         id="stop4536" />
+    </linearGradient>
+    <radialGradient
+       id="radial-gradient"
+       cx="50"
+       cy="50"
+       r="48.12"
+       gradientTransform="rotate(44.42,50.001499,49.993367)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#764111"
+         id="stop4539" />
+      <stop
+         offset="0.08"
+         stop-color="#e1b03f"
+         id="stop4541" />
+      <stop
+         offset="0.15"
+         stop-color="#daac39"
+         id="stop4543" />
+      <stop
+         offset="0.29"
+         stop-color="#cc9b36"
+         id="stop4545" />
+      <stop
+         offset="0.42"
+         stop-color="#ddb24d"
+         id="stop4547" />
+      <stop
+         offset="0.52"
+         stop-color="#d0a43f"
+         id="stop4549" />
+      <stop
+         offset="0.61"
+         stop-color="#e4b853"
+         id="stop4551" />
+      <stop
+         offset="0.63"
+         stop-color="#dcb150"
+         id="stop4553" />
+      <stop
+         offset="0.65"
+         stop-color="#c69c46"
+         id="stop4555" />
+      <stop
+         offset="0.68"
+         stop-color="#a27b37"
+         id="stop4557" />
+      <stop
+         offset="0.71"
+         stop-color="#704d22"
+         id="stop4559" />
+      <stop
+         offset="0.73"
+         stop-color="#4c2c13"
+         id="stop4561" />
+      <stop
+         offset="0.8"
+         stop-color="#3c2a14"
+         id="stop4563" />
+      <stop
+         offset="0.82"
+         stop-color="#462d12"
+         id="stop4565" />
+      <stop
+         offset="0.85"
+         stop-color="#62350e"
+         id="stop4567" />
+      <stop
+         offset="0.85"
+         stop-color="#63350e"
+         id="stop4569" />
+      <stop
+         offset="0.85"
+         stop-color="#60340e"
+         id="stop4571" />
+      <stop
+         offset="0.88"
+         stop-color="#402a12"
+         id="stop4573" />
+      <stop
+         offset="0.9"
+         stop-color="#342614"
+         id="stop4575" />
+      <stop
+         offset="0.93"
+         stop-color="#6c5322"
+         id="stop4577" />
+      <stop
+         offset="0.96"
+         stop-color="#ab8732"
+         id="stop4579" />
+      <stop
+         offset="0.98"
+         stop-color="#d3a73c"
+         id="stop4581" />
+      <stop
+         offset="0.99"
+         stop-color="#e2b340"
+         id="stop4583" />
+    </radialGradient>
+    <linearGradient
+       id="Gold_10"
+       data-name="Gold 10"
+       x1="5.13"
+       y1="50"
+       x2="94.87"
+       y2="50"
+       gradientTransform="rotate(44.56,49.998224,49.990771)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#cb6915"
+         id="stop4586" />
+      <stop
+         offset="0"
+         stop-color="#ce6e18"
+         id="stop4588" />
+      <stop
+         offset="0.01"
+         stop-color="#dc892a"
+         id="stop4590" />
+      <stop
+         offset="0.01"
+         stop-color="#e79f38"
+         id="stop4592" />
+      <stop
+         offset="0.02"
+         stop-color="#f0b043"
+         id="stop4594" />
+      <stop
+         offset="0.03"
+         stop-color="#f6bb4b"
+         id="stop4596" />
+      <stop
+         offset="0.04"
+         stop-color="#fac250"
+         id="stop4598" />
+      <stop
+         offset="0.07"
+         stop-color="#fbc451"
+         id="stop4600" />
+      <stop
+         offset="0.08"
+         stop-color="#f3c35b"
+         id="stop4602" />
+      <stop
+         offset="0.19"
+         stop-color="#e6ac3d"
+         id="stop4604" />
+      <stop
+         offset="0.28"
+         stop-color="#f2ee98"
+         id="stop4606" />
+      <stop
+         offset="0.37"
+         stop-color="#f09d39"
+         id="stop4608" />
+      <stop
+         offset="0.41"
+         stop-color="#ef7c12"
+         id="stop4610" />
+      <stop
+         offset="0.45"
+         stop-color="#ef7c12"
+         id="stop4612" />
+      <stop
+         offset="0.68"
+         stop-color="#f6dd6c"
+         id="stop4614" />
+      <stop
+         offset="0.75"
+         stop-color="#fff3b9"
+         id="stop4616" />
+      <stop
+         offset="0.78"
+         stop-color="#fff3b9"
+         id="stop4618" />
+      <stop
+         offset="0.92"
+         stop-color="#fdc64f"
+         id="stop4620" />
+      <stop
+         offset="0.95"
+         stop-color="#fcc44e"
+         id="stop4622" />
+      <stop
+         offset="0.96"
+         stop-color="#fabd4a"
+         id="stop4624" />
+      <stop
+         offset="0.97"
+         stop-color="#f6b244"
+         id="stop4626" />
+      <stop
+         offset="0.97"
+         stop-color="#f0a13b"
+         id="stop4628" />
+      <stop
+         offset="0.98"
+         stop-color="#e98b2f"
+         id="stop4630" />
+      <stop
+         offset="0.98"
+         stop-color="#e07020"
+         id="stop4632" />
+      <stop
+         offset="0.99"
+         stop-color="#d85914"
+         id="stop4634" />
+      <stop
+         offset="1"
+         stop-color="#d85914"
+         id="stop4636" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient"
+       x1="12.18"
+       y1="50"
+       x2="87.82"
+       y2="50"
+       gradientTransform="rotate(30.1,49.995238,50.005337)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8b5417"
+         id="stop4639" />
+      <stop
+         offset="0.02"
+         stop-color="#815015"
+         id="stop4641" />
+      <stop
+         offset="0.16"
+         stop-color="#704a14"
+         id="stop4643" />
+      <stop
+         offset="0.25"
+         stop-color="#704a14"
+         id="stop4645" />
+      <stop
+         offset="0.37"
+         stop-color="#ab6a1a"
+         id="stop4647" />
+      <stop
+         offset="0.42"
+         stop-color="#b8731e"
+         id="stop4649" />
+      <stop
+         offset="0.57"
+         stop-color="#f7a42e"
+         id="stop4651" />
+      <stop
+         offset="0.72"
+         stop-color="#f7a42e"
+         id="stop4653" />
+      <stop
+         offset="0.94"
+         stop-color="#9a6115"
+         id="stop4655" />
+      <stop
+         offset="0.97"
+         stop-color="#905a14"
+         id="stop4657" />
+      <stop
+         offset="1"
+         stop-color="#8e5714"
+         id="stop4659" />
+    </linearGradient>
+    <radialGradient
+       id="radial-gradient-2"
+       cx="49.99"
+       cy="50"
+       r="34.89"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8e5714"
+         id="stop4662" />
+      <stop
+         offset="0.03"
+         stop-color="#905a14"
+         id="stop4664" />
+      <stop
+         offset="0.06"
+         stop-color="#9a6115"
+         id="stop4666" />
+      <stop
+         offset="0.28"
+         stop-color="#f7a42e"
+         id="stop4668" />
+      <stop
+         offset="0.43"
+         stop-color="#f7a42e"
+         id="stop4670" />
+      <stop
+         offset="0.58"
+         stop-color="#b8731e"
+         id="stop4672" />
+      <stop
+         offset="0.63"
+         stop-color="#ab6a1a"
+         id="stop4674" />
+      <stop
+         offset="0.75"
+         stop-color="#704a14"
+         id="stop4676" />
+      <stop
+         offset="0.84"
+         stop-color="#704a14"
+         id="stop4678" />
+      <stop
+         offset="0.98"
+         stop-color="#815015"
+         id="stop4680" />
+      <stop
+         offset="1"
+         stop-color="#8b5417"
+         id="stop4682" />
+    </radialGradient>
+    <linearGradient
+       id="linear-gradient-2"
+       x1="7.19"
+       y1="47.9"
+       x2="10.4"
+       y2="51.76"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#4d4d4c"
+         id="stop4685" />
+      <stop
+         offset="1"
+         stop-color="silver"
+         id="stop4687" />
+    </linearGradient>
+    <linearGradient
+       id="White_Black"
+       data-name="White, Black"
+       x1="7.63"
+       y1="48.65"
+       x2="10.39"
+       y2="51.5"
+       gradientTransform="translate(57.94 36.63) rotate(84.88)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         id="stop4690" />
+      <stop
+         offset="1"
+         stop-color="#1d1d1b"
+         id="stop4692" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-3"
+       x1="7.91"
+       y1="48.23"
+       x2="9.78"
+       y2="51.44"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#1d1d1b"
+         id="stop4695" />
+      <stop
+         offset="1"
+         stop-color="#c4c4c4"
+         id="stop4697" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-4"
+       x1="27.72"
+       y1="12.34"
+       x2="30.94"
+       y2="16.2"
+       xlink:href="#linear-gradient-2" />
+    <linearGradient
+       id="White_Black-2"
+       x1="28.17"
+       y1="13.09"
+       x2="30.93"
+       y2="15.95"
+       gradientTransform="rotate(84.88,29.478672,14.439677)"
+       xlink:href="#White_Black" />
+    <linearGradient
+       id="linear-gradient-5"
+       x1="28.45"
+       y1="12.67"
+       x2="30.32"
+       y2="15.88"
+       xlink:href="#linear-gradient-3" />
+    <linearGradient
+       id="linear-gradient-6"
+       x1="27.72"
+       y1="83.46"
+       x2="30.94"
+       y2="87.32"
+       xlink:href="#linear-gradient-2" />
+    <linearGradient
+       id="White_Black-3"
+       x1="28.17"
+       y1="84.21"
+       x2="30.93"
+       y2="87.07"
+       gradientTransform="rotate(84.88,29.482259,85.560184)"
+       xlink:href="#White_Black" />
+    <linearGradient
+       id="linear-gradient-7"
+       x1="28.45"
+       y1="83.8"
+       x2="30.32"
+       y2="87.01"
+       xlink:href="#linear-gradient-3" />
+    <linearGradient
+       id="linear-gradient-8"
+       x1="68.79"
+       y1="83.46"
+       x2="72"
+       y2="87.32"
+       xlink:href="#linear-gradient-2" />
+    <linearGradient
+       id="White_Black-4"
+       x1="69.23"
+       y1="84.22"
+       x2="71.99"
+       y2="87.07"
+       gradientTransform="rotate(84.88,70.536023,85.560138)"
+       xlink:href="#White_Black" />
+    <linearGradient
+       id="linear-gradient-9"
+       x1="69.51"
+       y1="83.8"
+       x2="71.38"
+       y2="87.01"
+       xlink:href="#linear-gradient-3" />
+    <linearGradient
+       id="linear-gradient-10"
+       x1="68.79"
+       y1="12.33"
+       x2="72.01"
+       y2="16.19"
+       xlink:href="#linear-gradient-2" />
+    <linearGradient
+       id="White_Black-5"
+       x1="69.23"
+       y1="13.09"
+       x2="71.99"
+       y2="15.94"
+       gradientTransform="rotate(84.88,70.537905,14.434632)"
+       xlink:href="#White_Black" />
+    <linearGradient
+       id="linear-gradient-11"
+       x1="69.51"
+       y1="12.67"
+       x2="71.38"
+       y2="15.88"
+       xlink:href="#linear-gradient-3" />
+    <linearGradient
+       id="linear-gradient-12"
+       x1="89.31"
+       y1="47.9"
+       x2="92.53"
+       y2="51.76"
+       xlink:href="#linear-gradient-2" />
+    <linearGradient
+       id="White_Black-6"
+       x1="89.76"
+       y1="48.66"
+       x2="92.52"
+       y2="51.51"
+       gradientTransform="rotate(84.88,91.063612,50.002596)"
+       xlink:href="#White_Black" />
+    <linearGradient
+       id="linear-gradient-13"
+       x1="90.04"
+       y1="48.24"
+       x2="91.91"
+       y2="51.45"
+       xlink:href="#linear-gradient-3" />
+    <radialGradient
+       id="radial-gradient-3"
+       cx="50"
+       cy="50"
+       r="34.89"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.87"
+         stop-color="#fff"
+         stop-opacity="0"
+         id="stop4715" />
+      <stop
+         offset="0.9"
+         stop-color="#fff"
+         stop-opacity="0.06"
+         id="stop4717" />
+      <stop
+         offset="0.94"
+         stop-color="#fff"
+         stop-opacity="0.21"
+         id="stop4719" />
+      <stop
+         offset="0.96"
+         stop-color="#fff"
+         stop-opacity="0.3"
+         id="stop4721" />
+      <stop
+         offset="0.96"
+         stop-color="#fff"
+         stop-opacity="0.27"
+         id="stop4723" />
+      <stop
+         offset="0.98"
+         stop-color="#fff"
+         stop-opacity="0.22"
+         id="stop4725" />
+      <stop
+         offset="1"
+         stop-color="#fff"
+         stop-opacity="0.2"
+         id="stop4727" />
+    </radialGradient>
+    <linearGradient
+       id="Gold_17"
+       data-name="Gold 17"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50"
+       xlink:href="#radial-gradient-2" />
+    <linearGradient
+       id="Gold_26"
+       data-name="Gold 26"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.01"
+         stop-color="#fbc925"
+         id="stop4731" />
+      <stop
+         offset="0.25"
+         stop-color="#fef8cd"
+         id="stop4733" />
+      <stop
+         offset="0.3"
+         stop-color="#f8edbc"
+         id="stop4735" />
+      <stop
+         offset="0.41"
+         stop-color="#e7d08f"
+         id="stop4737" />
+      <stop
+         offset="0.55"
+         stop-color="#cda347"
+         id="stop4739" />
+      <stop
+         offset="0.6"
+         stop-color="#c3922d"
+         id="stop4741" />
+      <stop
+         offset="0.87"
+         stop-color="#eed688"
+         id="stop4743" />
+      <stop
+         offset="1"
+         stop-color="#fef8cd"
+         id="stop4745" />
+    </linearGradient>
+    <radialGradient
+       id="radial-gradient-4"
+       cx="50"
+       cy="50"
+       r="29.14"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.93"
+         stop-color="#1d1d1b"
+         stop-opacity="0"
+         id="stop4748" />
+      <stop
+         offset="0.96"
+         stop-color="#1d1d1b"
+         stop-opacity="0.8"
+         id="stop4750" />
+      <stop
+         offset="0.97"
+         stop-color="#1d1d1b"
+         stop-opacity="0.9"
+         id="stop4752" />
+      <stop
+         offset="1"
+         stop-color="#1d1d1b"
+         id="stop4754" />
+    </radialGradient>
+    <radialGradient
+       id="radial-gradient-5"
+       cx="50"
+       cy="50"
+       r="34.38"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.9"
+         stop-color="#1d1d1b"
+         stop-opacity="0"
+         id="stop4757" />
+      <stop
+         offset="0.93"
+         stop-color="#1d1d1b"
+         stop-opacity="0.5"
+         id="stop4759" />
+      <stop
+         offset="0.96"
+         stop-color="#1d1d1b"
+         stop-opacity="0.88"
+         id="stop4761" />
+      <stop
+         offset="1"
+         stop-color="#1d1d1b"
+         id="stop4763" />
+    </radialGradient>
+    <linearGradient
+       id="Gold_17-2"
+       data-name="Gold 17"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50"
+       xlink:href="#radial-gradient-2" />
+    <linearGradient
+       id="Gold_26-2"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50"
+       xlink:href="#Gold_26" />
+    <radialGradient
+       id="radial-gradient-6"
+       cx="50"
+       cy="50"
+       r="28.07"
+       xlink:href="#radial-gradient-4" />
+    <radialGradient
+       id="radial-gradient-59"
+       cx="50.57"
+       cy="50"
+       r="34.89"
+       xlink:href="#radial-gradient-3" />
+    <linearGradient
+       id="Gold_17-29"
+       data-name="Gold 17"
+       x1="19.51"
+       y1="50"
+       x2="81.63"
+       y2="50"
+       xlink:href="#radial-gradient-2" />
+    <linearGradient
+       id="Gold_26-29"
+       x1="21.43"
+       y1="50"
+       x2="79.71"
+       y2="50"
+       xlink:href="#Gold_26" />
+    <radialGradient
+       id="radial-gradient-60"
+       cx="50.57"
+       cy="50"
+       r="29.14"
+       xlink:href="#radial-gradient-4" />
+    <radialGradient
+       xlink:href="#radial-gradient-2"
+       id="radialGradient5332"
+       gradientUnits="userSpaceOnUse"
+       cx="49.99"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#linear-gradient-2"
+       id="linearGradient5334"
+       gradientUnits="userSpaceOnUse"
+       x1="7.19"
+       y1="47.9"
+       x2="10.4"
+       y2="51.76" />
+    <linearGradient
+       xlink:href="#White_Black"
+       id="linearGradient5336"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(84.88,8.9406155,49.996751)"
+       x1="7.63"
+       y1="48.65"
+       x2="10.39"
+       y2="51.5" />
+    <linearGradient
+       xlink:href="#linear-gradient-3"
+       id="linearGradient5338"
+       gradientUnits="userSpaceOnUse"
+       x1="7.91"
+       y1="48.23"
+       x2="9.78"
+       y2="51.44" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5340"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5342"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5344"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5346"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5348"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5350"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5352"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5354"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5356"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5358"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5360"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5362"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5366"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5368"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5370"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5372"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5374"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5376"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5378"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5380"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5382"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5384"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5386"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5388"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5392"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5394"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5396"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5398"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5400"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5402"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5404"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5406"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5408"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5410"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5412"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5414"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5418"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5420"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5422"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5424"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5428"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5430"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5432"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5434"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5438"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5440"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5442"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5444"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5448"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5450"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5452"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5454"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5458"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5460"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5462"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5464"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5468"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5470"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5472"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5474"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5478"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5480"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5482"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5484"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5488"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5490"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5492"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5494"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5496"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5498"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5500"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5502"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5504"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5506"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5508"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5510"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5512"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5514"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5516"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5518"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5520"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5522"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5524"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5526"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5528"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5530"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5532"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5534"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5536"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5538"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5540"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5542"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5544"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5546"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5548"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5550"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5552"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5554"
+       x1="18.94"
+       y1="50"
+       x2="81.06"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5556"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5558"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5560"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5562"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5564"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5566"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-3"
+       id="radialGradient5568"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.89" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5570"
+       gradientUnits="userSpaceOnUse"
+       x1="20.86"
+       y1="50"
+       x2="79.14"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5572"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="29.14" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5574"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+    <linearGradient
+       xlink:href="#radial-gradient-2"
+       id="linearGradient5576"
+       x1="20.08"
+       y1="50"
+       x2="79.92"
+       y2="50" />
+    <linearGradient
+       xlink:href="#Gold_26"
+       id="linearGradient5578"
+       x1="21.93"
+       y1="50"
+       x2="78.07"
+       y2="50" />
+    <radialGradient
+       xlink:href="#radial-gradient-4"
+       id="radialGradient5580"
+       cx="50"
+       cy="50"
+       r="28.07" />
+    <radialGradient
+       xlink:href="#radial-gradient-5"
+       id="radialGradient5582"
+       gradientUnits="userSpaceOnUse"
+       cx="50"
+       cy="50"
+       r="34.38" />
+  </defs>
+  <vfp:catalogue
+     PREFIX="Btn"
+     CATEGORY="Buttons"
+     DESC="Icon Button" />
+  <g
+     vfp:class="PushButton"
+     id="Layer_4">
+    <rect
+       class="bounds"
+       y="0"
+       x="0"
+       height="100"
+       width="100"
+       id="rect4817"
+       style="opacity:0.94199997;fill:none;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <circle
+       style="fill:url(#Gold_14)"
+       id="circle4830"
+       transform="rotate(-44.42,49.993367,50.001499)"
+       r="50"
+       cy="50"
+       cx="50"
+       class="" />
+    <circle
+       class=""
+       style="fill:url(#radial-gradient)"
+       id="circle4832"
+       transform="rotate(-44.42,49.993367,50.001499)"
+       r="48.130001"
+       cy="50"
+       cx="50" />
+    <circle
+       style="fill:url(#Gold_10)"
+       id="circle4834"
+       transform="rotate(-44.56,49.990771,49.998224)"
+       r="44.869999"
+       cy="50"
+       cx="50" />
+    <circle
+       style="fill:url(#linear-gradient)"
+       id="circle4836"
+       transform="rotate(-30.1,50.005337,49.995238)"
+       r="37.810001"
+       cy="50"
+       cx="50" />
+    <path
+       style="fill:url(#radialGradient5332);fill-rule:evenodd"
+       id="path4838"
+       d="M 50,84.89 A 35,35 0 0 1 19.82,67.5 34.89,34.89 0 0 1 50,15.11 34.89,34.89 0 0 1 50,84.89 Z"
+       inkscape:connector-curvature="0" />
+    <circle
+       style="display:inline;fill:#e52421"
+       id="circle4840"
+       r="34.400002"
+       cy="50"
+       cx="50"
+       class="lamp" />
+    <circle
+       style="fill:url(#linearGradient5334)"
+       id="circle4842"
+       r="2.3"
+       cy="50"
+       cx="8.9399996" />
+    <circle
+       style="fill:#231f20"
+       id="circle4844"
+       r="2.25"
+       cy="50"
+       cx="8.9399996" />
+    <circle
+       style="fill:url(#linearGradient5336)"
+       id="circle4846"
+       transform="rotate(-84.88,8.9379414,49.999802)"
+       r="1.95"
+       cy="50"
+       cx="8.9399996" />
+    <polygon
+       style="fill:url(#linearGradient5338);fill-rule:evenodd"
+       id="polygon4848"
+       points="9.96,50.59 9.62,51.18 8.94,51.18 8.26,51.18 7.92,50.59 7.58,50 7.92,49.41 8.26,48.82 8.94,48.82 9.62,48.82 9.96,49.41 10.3,50 " />
+    <polygon
+       style="fill:#231f20;fill-rule:evenodd"
+       id="polygon4850"
+       points="9.91,50.56 9.59,51.12 8.94,51.12 8.29,51.12 7.97,50.56 7.64,50 7.97,49.44 8.29,48.88 8.94,48.88 9.59,48.88 9.91,49.44 10.24,50 " />
+    <circle
+       style="fill:url(#linear-gradient-4)"
+       id="circle4852"
+       r="2.3"
+       cy="14.44"
+       cx="29.48" />
+    <circle
+       style="fill:#231f20"
+       id="circle4854"
+       r="2.25"
+       cy="14.44"
+       cx="29.48" />
+    <circle
+       style="fill:url(#White_Black-2)"
+       id="circle4856"
+       transform="matrix(0.09,-1,1,0.09,12.46,42.51)"
+       r="1.95"
+       cy="14.44"
+       cx="29.48" />
+    <polygon
+       style="fill:url(#linear-gradient-5);fill-rule:evenodd"
+       id="polygon4858"
+       points="30.5,15.03 30.16,15.62 29.48,15.62 28.8,15.62 28.45,15.03 28.11,14.44 28.45,13.85 28.8,13.26 29.48,13.26 30.16,13.26 30.5,13.85 30.84,14.44 " />
+    <polygon
+       style="fill:#231f20;fill-rule:evenodd"
+       id="polygon4860"
+       points="30.45,15 30.12,15.56 29.48,15.56 28.83,15.56 28.5,15 28.18,14.44 28.5,13.88 28.83,13.32 29.48,13.32 30.12,13.32 30.45,13.88 30.77,14.44 " />
+    <circle
+       style="fill:url(#linear-gradient-6)"
+       id="circle4862"
+       r="2.3"
+       cy="85.57"
+       cx="29.48" />
+    <circle
+       style="fill:#231f20"
+       id="circle4864"
+       r="2.25"
+       cy="85.57"
+       cx="29.48" />
+    <circle
+       style="fill:url(#White_Black-3)"
+       id="circle4866"
+       transform="matrix(0.09,-1,1,0.09,-58.38,107.28)"
+       r="1.95"
+       cy="85.57"
+       cx="29.48" />
+    <polygon
+       style="fill:url(#linear-gradient-7);fill-rule:evenodd"
+       id="polygon4868"
+       points="30.5,86.16 30.16,86.75 29.48,86.75 28.8,86.75 28.45,86.16 28.11,85.57 28.45,84.98 28.8,84.39 29.48,84.39 30.16,84.39 30.5,84.98 30.84,85.57 " />
+    <polygon
+       style="fill:#231f20;fill-rule:evenodd"
+       id="polygon4870"
+       points="30.45,86.13 30.13,86.69 29.48,86.69 28.83,86.69 28.5,86.13 28.18,85.57 28.5,85 28.83,84.44 29.48,84.44 30.13,84.44 30.45,85 30.77,85.57 " />
+    <circle
+       style="fill:url(#linear-gradient-8)"
+       id="circle4872"
+       r="2.3"
+       cy="85.57"
+       cx="70.540001" />
+    <circle
+       style="fill:#231f20"
+       id="circle4874"
+       r="2.25"
+       cy="85.57"
+       cx="70.540001" />
+    <circle
+       style="fill:url(#White_Black-4)"
+       id="circle4876"
+       transform="matrix(0.09,-1,1,0.09,-20.99,148.18)"
+       r="1.95"
+       cy="85.57"
+       cx="70.540001" />
+    <polygon
+       style="fill:url(#linear-gradient-9);fill-rule:evenodd"
+       id="polygon4878"
+       points="71.56,86.16 71.22,86.75 70.54,86.75 69.86,86.75 69.52,86.16 69.18,85.57 69.52,84.98 69.86,84.39 70.54,84.39 71.22,84.39 71.56,84.98 71.9,85.57 " />
+    <polygon
+       style="fill:#231f20;fill-rule:evenodd"
+       id="polygon4880"
+       points="71.51,86.13 71.19,86.69 70.54,86.69 69.89,86.69 69.57,86.13 69.24,85.57 69.57,85 69.89,84.44 70.54,84.44 71.19,84.44 71.51,85 71.84,85.57 " />
+    <circle
+       style="fill:url(#linear-gradient-10)"
+       id="circle4882"
+       r="2.3"
+       cy="14.44"
+       cx="70.540001" />
+    <circle
+       style="fill:#231f20"
+       id="circle4884"
+       r="2.25"
+       cy="14.44"
+       cx="70.540001" />
+    <circle
+       style="fill:url(#White_Black-5)"
+       id="circle4886"
+       transform="rotate(-84.88,70.538817,14.441415)"
+       r="1.95"
+       cy="14.44"
+       cx="70.540001" />
+    <polygon
+       style="fill:url(#linear-gradient-11);fill-rule:evenodd"
+       id="polygon4888"
+       points="71.56,15.03 71.22,15.62 70.54,15.62 69.86,15.62 69.52,15.03 69.18,14.44 69.52,13.85 69.86,13.26 70.54,13.26 71.22,13.26 71.56,13.85 71.9,14.44 " />
+    <polygon
+       style="fill:#231f20;fill-rule:evenodd"
+       id="polygon4890"
+       points="71.51,15 71.19,15.56 70.54,15.56 69.89,15.56 69.57,15 69.24,14.44 69.57,13.88 69.89,13.31 70.54,13.31 71.19,13.31 71.51,13.88 71.84,14.44 " />
+    <circle
+       style="fill:url(#linear-gradient-12)"
+       id="circle4892"
+       r="2.3"
+       cy="50.009998"
+       cx="91.07" />
+    <circle
+       style="fill:#231f20"
+       id="circle4894"
+       r="2.25"
+       cy="50.009998"
+       cx="91.07" />
+    <circle
+       style="fill:url(#White_Black-6)"
+       id="circle4896"
+       transform="rotate(-84.88,91.061406,50.004425)"
+       r="1.95"
+       cy="50.009998"
+       cx="91.07" />
+    <polygon
+       style="fill:url(#linear-gradient-13);fill-rule:evenodd"
+       id="polygon4898"
+       points="92.09,50.6 91.75,51.19 91.07,51.19 90.39,51.19 90.05,50.6 89.7,50.01 90.05,49.42 90.39,48.83 91.07,48.83 91.75,48.83 92.09,49.42 92.43,50.01 " />
+    <polygon
+       style="fill:#231f20;fill-rule:evenodd"
+       id="polygon4900"
+       points="92.04,50.57 91.72,51.13 91.07,51.13 90.42,51.13 90.09,50.57 89.77,50.01 90.09,49.45 90.42,48.88 91.07,48.88 91.72,48.88 92.04,49.45 92.36,50.01 " />
+    <g
+       id="blank"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g4910">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5340)"
+           id="circle4902"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5342);fill-rule:evenodd"
+           id="path4904"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5344);fill-rule:evenodd"
+           id="path4906"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5346);fill-rule:evenodd"
+           id="path4908"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g4920">
+        <circle
+           style="fill:url(#radialGradient5348)"
+           id="circle4912"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5350);fill-rule:evenodd"
+           id="path4914"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5352);fill-rule:evenodd"
+           id="path4916"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5354);fill-rule:evenodd"
+           id="path4918"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="power"
+       style="display:inline"
+       class="buttonIcon">
+      <g
+         id="g4936"
+         style="display:inline">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5356)"
+           id="circle4924"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5358);fill-rule:evenodd"
+           id="path4926"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5360);fill-rule:evenodd"
+           id="path4928"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5362);fill-rule:evenodd"
+           id="path4930"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4.51999998;stroke-linecap:round;stroke-miterlimit:10;stroke-opacity:0.78590788"
+           id="path4932"
+           stroke-miterlimit="10"
+           d="m 57.36,39.27 a 14.72,14.72 0 1 1 -14.72,0"
+           inkscape:connector-curvature="0" />
+        <line
+           style="fill:none;stroke:#000000;stroke-width:4.51999998;stroke-linecap:round;stroke-miterlimit:10;stroke-opacity:0.78590788"
+           id="line4934"
+           stroke-miterlimit="10"
+           y2="33.25"
+           x2="50"
+           y1="45.310001"
+           x1="50" />
+      </g>
+      <g
+         id="g4950"
+         style="display:none">
+        <circle
+           style="fill:url(#radialGradient5366)"
+           id="circle4938"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5368);fill-rule:evenodd"
+           id="path4940"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5370);fill-rule:evenodd"
+           id="path4942"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5372);fill-rule:evenodd"
+           id="path4944"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4.19000006;stroke-linecap:round;stroke-miterlimit:10;stroke-opacity:0.78590788"
+           id="path4946"
+           stroke-miterlimit="10"
+           d="m 56.81,40.08 a 13.63,13.63 0 1 1 -13.63,0"
+           inkscape:connector-curvature="0" />
+        <line
+           style="fill:none;stroke:#000000;stroke-width:4.19000006;stroke-linecap:round;stroke-miterlimit:10;stroke-opacity:0.78590788"
+           id="line4948"
+           stroke-miterlimit="10"
+           y2="34.5"
+           x2="50"
+           y1="45.66"
+           x1="50" />
+      </g>
+    </g>
+    <g
+       id="play"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g4964"
+         style="display:inline">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5374)"
+           id="circle4954"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5376);fill-rule:evenodd"
+           id="path4956"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5378);fill-rule:evenodd"
+           id="path4958"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5380);fill-rule:evenodd"
+           id="path4960"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="display:inline;fill:#000000;fill-opacity:0.78431373;fill-rule:evenodd"
+           id="path4962"
+           d="m 42.82754,34.27 21.8,12.59 h 0.07 a 3.58,3.58 0 0 1 -0.08,6.26 l -21.49,12.41 a 3.59,3.59 0 0 1 -5.71,-2.88 V 37.36 a 3.58,3.58 0 0 1 5.42,-3.08 z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g4976"
+         style="display:none">
+        <circle
+           style="display:inline;fill:url(#radialGradient5382)"
+           id="circle4966"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="display:inline;fill:url(#linearGradient5384);fill-rule:evenodd"
+           id="path4968"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="display:inline;opacity:0.43000004;fill:url(#linearGradient5386);fill-rule:evenodd"
+           id="path4970"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5388);fill-rule:evenodd"
+           id="path4972"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="display:inline;fill:#000000;fill-opacity:0.78431373;fill-rule:evenodd"
+           id="path4974"
+           d="m 43.686972,35 20.82,12 h 0.06 a 3.42,3.42 0 0 1 -0.08,6 l -20.51,11.83 a 3.42,3.42 0 0 1 -5.46,-2.75 v 0 -24.16 a 3.42,3.42 0 0 1 5.17,-2.92 z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="pause"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g4992">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5392)"
+           id="circle4980"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5394);fill-rule:evenodd"
+           id="path4982"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5396);fill-rule:evenodd"
+           id="path4984"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5398);fill-rule:evenodd"
+           id="path4986"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <rect
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="rect4988"
+           ry="2.8099999"
+           rx="2.8099999"
+           height="33.5"
+           width="13.8"
+           y="33.25"
+           x="33.25" />
+        <rect
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="rect4990"
+           ry="2.8099999"
+           rx="2.8099999"
+           height="33.5"
+           width="13.8"
+           y="33.25"
+           x="52.950001" />
+      </g>
+      <g
+         id="g5006"
+         style="display:inline">
+        <circle
+           style="fill:url(#radialGradient5400)"
+           id="circle4994"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5402);fill-rule:evenodd"
+           id="path4996"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5404);fill-rule:evenodd"
+           id="path4998"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5406);fill-rule:evenodd"
+           id="path5000"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <rect
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="rect5002"
+           ry="2.54"
+           rx="2.54"
+           height="31"
+           width="12.2"
+           y="34.5"
+           x="34.5" />
+        <rect
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="rect5004"
+           ry="2.54"
+           rx="2.54"
+           height="31"
+           width="12.2"
+           y="34.5"
+           x="53.299999" />
+      </g>
+    </g>
+    <g
+       id="stop"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g5020">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5408)"
+           id="circle5010"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5410);fill-rule:evenodd"
+           id="path5012"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5412);fill-rule:evenodd"
+           id="path5014"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5414);fill-rule:evenodd"
+           id="path5016"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <rect
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="rect5018"
+           ry="4.3800001"
+           rx="4.3800001"
+           height="33.5"
+           width="33.5"
+           y="33.25"
+           x="33.25" />
+      </g>
+      <g
+         id="g5032"
+         style="display:inline">
+        <circle
+           style="fill:url(#radialGradient5418)"
+           id="circle5022"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5420);fill-rule:evenodd"
+           id="path5024"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5422);fill-rule:evenodd"
+           id="path5026"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5424);fill-rule:evenodd"
+           id="path5028"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <rect
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="rect5030"
+           ry="4.0599999"
+           rx="4.0599999"
+           height="31"
+           width="31"
+           y="34.5"
+           x="34.5" />
+      </g>
+    </g>
+    <g
+       id="fastfoward"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g5046">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5428)"
+           id="circle5036"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5430);fill-rule:evenodd"
+           id="path5038"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5432);fill-rule:evenodd"
+           id="path5040"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5434);fill-rule:evenodd"
+           id="path5042"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373;fill-rule:evenodd"
+           id="path5044"
+           d="m 67.896783,46.79 h -0.05 l -17,-13 a 2.3,2.3 0 0 0 -1.43,-0.52 c -1.54,0 -2.8,1.66 -2.8,3.7 v 1.86 l -6.6,-5 a 2.3,2.3 0 0 0 -1.47,-0.58 c -1.54,0 -2.8,1.66 -2.8,3.7 v 26.1 c 0,2 1.25,3.7 2.8,3.7 a 2.37,2.37 0 0 0 1.71,-0.75 l 6.37,-4.86 v 1.88 c 0,2 1.25,3.7 2.8,3.7 a 2.37,2.37 0 0 0 1.65,-0.72 l 16.76,-12.75 a 3.35,3.35 0 0 0 1.09,-1.4 4.42,4.42 0 0 0 -1.03,-5.06 z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g5058"
+         style="display:inline">
+        <circle
+           style="fill:url(#radialGradient5438)"
+           id="circle5048"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5440);fill-rule:evenodd"
+           id="path5050"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5442);fill-rule:evenodd"
+           id="path5052"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5444);fill-rule:evenodd"
+           id="path5054"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373;fill-rule:evenodd"
+           id="path5056"
+           d="m 66.776783,47 v 0 l -15.55,-12 a 2.08,2.08 0 0 0 -1.3,-0.48 c -1.41,0 -2.55,1.53 -2.55,3.42 V 40 l -6.48,-5 a 2.08,2.08 0 0 0 -1.35,-0.5 c -1.41,0 -2.55,1.53 -2.55,3.42 v 24.14 0 c 0.05,1.94 1.19,3.44 2.55,3.44 a 2.15,2.15 0 0 0 1.51,-0.67 l 6.32,-4.83 v 2.08 0 c 0,1.89 1.14,3.42 2.55,3.42 a 2.15,2.15 0 0 0 1.51,-0.67 l 15.28,-11.83 a 3.09,3.09 0 0 0 1,-1.3 4.13,4.13 0 0 0 -0.94,-4.7 z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="rewind"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g5072">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5448)"
+           id="circle5062"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5450);fill-rule:evenodd"
+           id="path5064"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5452);fill-rule:evenodd"
+           id="path5066"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5454);fill-rule:evenodd"
+           id="path5068"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373;fill-rule:evenodd"
+           id="path5070"
+           d="m 62.05246,33.25 a 2.3,2.3 0 0 0 -1.43,0.52 l -6.6,5 V 37 c 0,-2 -1.25,-3.7 -2.8,-3.7 a 2.3,2.3 0 0 0 -1.43,0.52 l -17,13 h -0.05 a 4.42,4.42 0 0 0 -1,5.06 3.35,3.35 0 0 0 1.09,1.4 l 16.69,12.72 a 2.37,2.37 0 0 0 1.66,0.72 c 1.54,0 2.8,-1.66 2.8,-3.7 v -1.85 l 6.36,4.83 a 2.37,2.37 0 0 0 1.66,0.72 c 1.54,0 2.8,-1.66 2.8,-3.7 V 37 c 0,-2.09 -1.25,-3.75 -2.75,-3.75 z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g5084"
+         style="display:inline">
+        <circle
+           style="fill:url(#radialGradient5458)"
+           id="circle5074"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5460);fill-rule:evenodd"
+           id="path5076"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5462);fill-rule:evenodd"
+           id="path5078"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5464);fill-rule:evenodd"
+           id="path5080"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373;fill-rule:evenodd"
+           id="path5082"
+           d="m 61.05246,34.5 a 2.08,2.08 0 0 0 -1.3,0.48 l -6.48,5 v -2.06 c 0,-1.89 -1.14,-3.42 -2.55,-3.42 a 2.08,2.08 0 0 0 -1.3,0.48 L 33.87246,47 v 0 a 4.13,4.13 0 0 0 -0.93,4.68 3.09,3.09 0 0 0 1,1.3 l 15.21,11.85 a 2.15,2.15 0 0 0 1.51,0.67 c 1.41,0 2.55,-1.53 2.55,-3.42 v 0 V 60 l 6.27,4.85 a 2.15,2.15 0 0 0 1.57,0.65 c 1.41,0 2.55,-1.53 2.55,-3.42 v 0 -24.16 c -0.05,-1.92 -1.19,-3.42 -2.55,-3.42 z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="record"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g5100"
+         style="display:inline">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5468)"
+           id="circle5088"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5470);fill-rule:evenodd"
+           id="path5090"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5472);fill-rule:evenodd"
+           id="path5092"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5474);fill-rule:evenodd"
+           id="path5094"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <circle
+           style="fill:#e52421"
+           id="circle5096"
+           r="16.75"
+           cy="50"
+           cx="50" />
+        <circle
+           style="opacity:1;fill:#000000;fill-opacity:0.39215686"
+           id="circle5098"
+           r="16.75"
+           cy="50"
+           cx="50" />
+      </g>
+      <g
+         id="g5114"
+         style="display:none">
+        <circle
+           style="display:inline;fill:url(#radialGradient5478)"
+           id="circle5102"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="display:inline;fill:url(#linearGradient5480);fill-rule:evenodd"
+           id="path5104"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="display:inline;opacity:0.43000004;fill:url(#linearGradient5482);fill-rule:evenodd"
+           id="path5106"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="display:inline;fill:url(#radialGradient5484);fill-rule:evenodd"
+           id="path5108"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <circle
+           style="fill:#e52421"
+           id="circle5110"
+           r="15.5"
+           cy="50"
+           cx="50" />
+        <circle
+           style="display:inline;opacity:1;fill:#000000;fill-opacity:0.39215686;stroke:none;stroke-opacity:1"
+           id="circle5112"
+           r="15.5"
+           cy="50"
+           cx="50" />
+      </g>
+    </g>
+    <g
+       id="skipforward"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g5128">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5488)"
+           id="circle5118"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5490);fill-rule:evenodd"
+           id="path5120"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5492);fill-rule:evenodd"
+           id="path5122"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5494);fill-rule:evenodd"
+           id="path5124"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5126"
+           d="M 63.35,34.29 A 3.36,3.36 0 0 0 60,37.6 v 8 L 39,33.77 a 3.87,3.87 0 0 0 -2,-0.52 3.75,3.75 0 0 0 -3.8,3.7 v 26.1 A 3.75,3.75 0 0 0 37,66.75 3.86,3.86 0 0 0 39.3,66 L 60,54.43 v 8.19 a 3.4,3.4 0 0 0 6.79,0 v -25 a 3.36,3.36 0 0 0 -3.44,-3.33 z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g5140">
+        <circle
+           style="fill:url(#radialGradient5496)"
+           id="circle5130"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5498);fill-rule:evenodd"
+           id="path5132"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5500);fill-rule:evenodd"
+           id="path5134"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5502);fill-rule:evenodd"
+           id="path5136"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5138"
+           d="m 62.36,35.46 a 3.11,3.11 0 0 0 -3.14,3.06 v 7.37 L 39.81,35 A 3.58,3.58 0 0 0 38,34.5 3.47,3.47 0 0 0 34.49,37.92 v 24.14 0 A 3.47,3.47 0 0 0 38,65.5 3.57,3.57 0 0 0 40.09,64.83 L 59.21,54.1 v 7.58 a 3.145,3.145 0 0 0 6.29,0 V 38.53 a 3.11,3.11 0 0 0 -3.14,-3.07 z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="skipbackwards"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g5154">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5504)"
+           id="circle5144"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5506);fill-rule:evenodd"
+           id="path5146"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5508);fill-rule:evenodd"
+           id="path5148"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5510);fill-rule:evenodd"
+           id="path5150"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5152"
+           d="M 36.65,34.29 A 3.36,3.36 0 0 1 40,37.6 v 8 L 61,33.77 a 3.87,3.87 0 0 1 2,-0.52 3.75,3.75 0 0 1 3.8,3.7 v 26.1 A 3.75,3.75 0 0 1 63,66.75 3.86,3.86 0 0 1 60.7,66 L 40,54.43 v 8.19 a 3.4,3.4 0 0 1 -6.79,0 v -25 a 3.36,3.36 0 0 1 3.44,-3.33 z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g5166">
+        <circle
+           style="fill:url(#radialGradient5512)"
+           id="circle5156"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5514);fill-rule:evenodd"
+           id="path5158"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5516);fill-rule:evenodd"
+           id="path5160"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5518);fill-rule:evenodd"
+           id="path5162"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5164"
+           d="m 37.64,35.46 a 3.11,3.11 0 0 1 3.14,3.06 v 7.37 L 60.19,35 a 3.58,3.58 0 0 1 1.81,-0.5 3.47,3.47 0 0 1 3.51,3.42 v 24.14 0 A 3.47,3.47 0 0 1 62,65.5 3.57,3.57 0 0 1 59.91,64.83 L 40.79,54.1 v 7.58 a 3.145,3.145 0 0 1 -6.29,0 V 38.53 a 3.11,3.11 0 0 1 3.14,-3.07 z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="volumeup"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g5186">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5520)"
+           id="circle5170"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5522);fill-rule:evenodd"
+           id="path5172"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5524);fill-rule:evenodd"
+           id="path5174"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5526);fill-rule:evenodd"
+           id="path5176"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373;fill-rule:evenodd"
+           id="path5178"
+           d="m 47.73,33.76 -10.52,9.67 h -7.3 c -1.76,0 -3.19,2.08 -3.19,4.65 V 51 c 0,2.57 1.43,4.65 3.19,4.65 h 6.45 l 11.37,10.41 c 2,1.87 4.42,-0.85 4.42,-5 V 38.78 c 0,-4.17 -2.39,-6.89 -4.42,-5.02 z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5180"
+           d="M 55.24,57.09 H 54.7 A 1,1 0 0 1 53.76,56 1,1 0 0 1 54.81,55.06 c 3.68,0.19 6.45,-2.34 6.66,-4.75 a 5.26,5.26 0 0 0 -1.62,-4.08 6.18,6.18 0 0 0 -5,-1.71 1,1 0 0 1 -1.08,-0.91 1,1 0 0 1 0.91,-1.08 8.12,8.12 0 0 1 6.61,2.29 7.27,7.27 0 0 1 2.2,5.67 c -0.31,3.28 -3.65,6.6 -8.25,6.6 z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5182"
+           d="m 55.3,61.51 h -0.59 a 1.001012,1.001012 0 0 1 0.09,-2 11.59,11.59 0 0 0 8.33,-3.07 9.43,9.43 0 0 0 3.18,-6.44 9.81,9.81 0 0 0 -3.23,-7.47 10.27,10.27 0 0 0 -8.22,-2.67 1.0060318,1.0060318 0 1 1 -0.22,-2 12.24,12.24 0 0 1 9.8,3.14 11.8,11.8 0 0 1 3.86,9 11.43,11.43 0 0 1 -3.81,7.87 13.62,13.62 0 0 1 -9.19,3.64 z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5184"
+           d="m 55.37,66.84 h -0.65 a 1,1 0 0 1 -1,-1 1,1 0 0 1 1,-1 16.51,16.51 0 0 0 12.28,-4.9 13.73,13.73 0 0 0 4.3,-10.2 14.63,14.63 0 0 0 -5.18,-10.62 14.28,14.28 0 0 0 -11.2,-3.26 1.0084146,1.0084146 0 1 1 -0.26,-2 16.23,16.23 0 0 1 12.72,3.74 16.63,16.63 0 0 1 5.88,12.07 15.71,15.71 0 0 1 -4.88,11.69 18.52,18.52 0 0 1 -13.01,5.48 z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g5204">
+        <circle
+           style="fill:url(#radialGradient5528)"
+           id="circle5188"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5530);fill-rule:evenodd"
+           id="path5190"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5532);fill-rule:evenodd"
+           id="path5192"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5534);fill-rule:evenodd"
+           id="path5194"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373;fill-rule:evenodd"
+           id="path5196"
+           d="m 47.9,35 -9.74,8.95 h -6.75 c -1.63,0 -3,1.93 -3,4.3 v 2.67 c 0,2.38 1.32,4.3 3,4.3 h 6 l 10.49,9.64 c 1.88,1.73 4.09,-0.78 4.09,-4.65 V 39.62 C 52,35.76 49.78,33.25 47.9,35 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5198"
+           d="m 54.85,56.56 h -0.5 a 0.93,0.93 0 1 1 0.1,-1.85 c 3.41,0.18 6,-2.17 6.17,-4.4 a 4.86,4.86 0 0 0 -1.5,-3.77 5.69,5.69 0 0 0 -4.64,-1.59 0.93,0.93 0 1 1 -0.16,-1.84 7.52,7.52 0 0 1 6.11,2.12 6.73,6.73 0 0 1 2,5.25 c -0.23,3.01 -3.32,6.08 -7.58,6.08 z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5200"
+           d="m 54.9,60.65 h -0.54 a 0.93,0.93 0 0 1 -0.88,-1 1,1 0 0 1 1,-0.88 10.72,10.72 0 0 0 7.71,-2.84 8.73,8.73 0 0 0 2.94,-6 9.08,9.08 0 0 0 -3,-6.92 9.49,9.49 0 0 0 -7.6,-2.47 0.93,0.93 0 1 1 -0.2,-1.84 11.33,11.33 0 0 1 9.06,2.95 10.93,10.93 0 0 1 3.55,8.35 10.58,10.58 0 0 1 -3.53,7.28 12.6,12.6 0 0 1 -8.51,3.37 z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5202"
+           d="m 55,65.58 h -0.6 a 0.93,0.93 0 0 1 -0.89,-1 1,1 0 0 1 1,-0.89 15.24,15.24 0 0 0 11.19,-4.49 12.7,12.7 0 0 0 4,-9.44 13.54,13.54 0 0 0 -4.79,-9.83 13.19,13.19 0 0 0 -10.36,-3 0.9228353,0.9228353 0 1 1 -0.24,-1.83 15,15 0 0 1 11.8,3.44 15.4,15.4 0 0 1 5.45,11.17 A 14.54,14.54 0 0 1 67,60.5 17.14,17.14 0 0 1 55,65.58 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="volumedown"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g5220">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5536)"
+           id="circle5208"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5538);fill-rule:evenodd"
+           id="path5210"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5540);fill-rule:evenodd"
+           id="path5212"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5542);fill-rule:evenodd"
+           id="path5214"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373;fill-rule:evenodd"
+           id="path5216"
+           d="m 54.26,33.85 -10.52,9.67 h -7.3 c -1.76,0 -3.19,2.08 -3.19,4.65 v 2.88 c 0,2.57 1.43,4.65 3.19,4.65 h 6.45 l 11.37,10.45 c 2,1.87 4.42,-0.85 4.42,-5 V 38.87 c 0,-4.17 -2.39,-6.87 -4.42,-5.02 z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5218"
+           d="m 61.38,57.44 h -0.24 c -0.39,0 -0.7,-0.51 -0.68,-1.08 0.02,-0.57 0.35,-1 0.74,-1 2.3,0.14 4,-2.39 4.12,-4.83 A 6.54,6.54 0 0 0 64.25,46.58 3.53,3.53 0 0 0 61,44.81 c -0.39,0.05 -0.73,-0.39 -0.76,-1 -0.03,-0.61 0.27,-1.07 0.66,-1.1 a 4.73,4.73 0 0 1 4.31,2.37 9.21,9.21 0 0 1 1.48,5.57 c -0.16,3.82 -2.54,6.79 -5.31,6.79 z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g5234">
+        <circle
+           style="fill:url(#radialGradient5544)"
+           id="circle5222"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5546);fill-rule:evenodd"
+           id="path5224"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5548);fill-rule:evenodd"
+           id="path5226"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5550);fill-rule:evenodd"
+           id="path5228"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373;fill-rule:evenodd"
+           id="path5230"
+           d="M 53.94,35.06 44.2,44 h -6.75 c -1.63,0 -3,1.93 -3,4.3 V 51 c 0,2.38 1.32,4.3 3,4.3 h 6 l 10.52,9.67 C 55.82,66.67 58,64.16 58,60.3 V 39.7 c 0,-3.86 -2.18,-6.37 -4.06,-4.64 z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5232"
+           d="m 60.53,56.88 h -0.22 c -0.36,0 -0.65,-0.47 -0.63,-1 0.02,-0.53 0.32,-0.93 0.69,-0.92 2.13,0.13 3.69,-2.21 3.81,-4.47 a 6,6 0 0 0 -1,-3.65 3.26,3.26 0 0 0 -3,-1.63 c -0.36,0.05 -0.68,-0.36 -0.7,-0.89 -0.02,-0.53 0.25,-1 0.61,-1 a 4.38,4.38 0 0 1 4,2.19 8.52,8.52 0 0 1 1.37,5.15 c -0.16,3.48 -2.36,6.22 -4.93,6.22 z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="mute"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g5250">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5552)"
+           id="circle5238"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5554);fill-rule:evenodd"
+           id="path5240"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5556);fill-rule:evenodd"
+           id="path5242"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5558);fill-rule:evenodd"
+           id="path5244"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373;fill-rule:evenodd"
+           id="path5246"
+           d="m 50.65,33.85 -10.52,9.67 h -7.3 c -1.76,0 -3.19,2.08 -3.19,4.65 v 2.88 c 0,2.57 1.43,4.65 3.19,4.65 h 6.45 l 11.37,10.45 c 2,1.87 4.42,-0.85 4.42,-5 V 38.87 c 0,-4.17 -2.39,-6.87 -4.42,-5.02 z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5248"
+           d="m 65,50 5.05,-8.44 a 2.27,2.27 0 0 0 0,-2.12 0.68,0.68 0 0 0 -1.27,0 l -5.05,8.44 -5.05,-8.44 a 0.68,0.68 0 0 0 -1.27,0 2.27,2.27 0 0 0 0,2.12 L 62.5,50 57.45,58.44 a 2.27,2.27 0 0 0 0,2.12 0.68,0.68 0 0 0 1.27,0 l 5.05,-8.44 5.05,8.44 a 0.68,0.68 0 0 0 1.27,0 2.27,2.27 0 0 0 0,-2.12 z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g5264">
+        <circle
+           style="fill:url(#radialGradient5560)"
+           id="circle5252"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5562);fill-rule:evenodd"
+           id="path5254"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5564);fill-rule:evenodd"
+           id="path5256"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5566);fill-rule:evenodd"
+           id="path5258"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373;fill-rule:evenodd"
+           id="path5260"
+           d="M 50.6,35.06 40.86,44 h -6.75 c -1.63,0 -3,1.93 -3,4.3 V 51 c 0,2.38 1.32,4.3 3,4.3 h 6 l 10.49,9.64 c 1.88,1.73 4.09,-0.78 4.09,-4.65 V 39.7 c 0,-3.86 -2.21,-6.37 -4.09,-4.64 z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5262"
+           d="m 63.92,50 4.67,-7.81 a 2.1,2.1 0 0 0 0,-2 0.63,0.63 0 0 0 -1.17,0 L 62.75,48 58.08,40.19 a 0.63,0.63 0 0 0 -1.17,0 2.1,2.1 0 0 0 0,2 L 61.57,50 56.9,57.81 a 2.1,2.1 0 0 0 0,2 0.63,0.63 0 0 0 1.17,0 l 4.68,-7.81 4.67,7.81 a 0.63,0.63 0 0 0 1.17,0 2.1,2.1 0 0 0 0,-2 z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="reload"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="g5278">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5568)"
+           id="circle5268"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#Gold_17);fill-rule:evenodd"
+           id="path5270"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5570);fill-rule:evenodd"
+           id="path5272"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5572);fill-rule:evenodd"
+           id="path5274"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5276"
+           d="M 52,35.26 A 14.76,14.76 0 0 0 37.39,48.17 H 33.25 L 39.51,59 45.76,48.17 H 41.91 A 10.26,10.26 0 1 1 52,60.26 a 2.24,2.24 0 1 0 0,4.48 14.745,14.745 0 0 0 0,-29.49 z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g5290">
+        <circle
+           style="fill:url(#radialGradient5574)"
+           id="circle5280"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5576);fill-rule:evenodd"
+           id="path5282"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5578);fill-rule:evenodd"
+           id="path5284"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5580);fill-rule:evenodd"
+           id="path5286"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           id="path5288"
+           d="M 51.86,36.36 A 13.66,13.66 0 0 0 38.33,48.3 H 34.5 l 5.79,10 5.78,-10 h -3.55 a 9.5,9.5 0 1 1 9.34,11.2 2.07,2.07 0 1 0 0,4.14 13.645,13.645 0 1 0 0,-27.29 z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="light"
+       class="buttonIcon"
+       style="display:none">
+      <g
+         id="g5306">
+        <circle
+           style="opacity:0.61000001;fill:url(#radial-gradient-59)"
+           id="circle5294"
+           r="34.889999"
+           cy="50"
+           cx="50.57" />
+        <path
+           style="fill:url(#Gold_17-29);fill-rule:evenodd"
+           id="path5296"
+           d="M 50.57,81.06 A 31.06,31.06 0 1 1 81.63,50 31.1,31.1 0 0 1 50.57,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#Gold_26-29);fill-rule:evenodd"
+           id="path5298"
+           d="M 50.57,79.14 A 29.14,29.14 0 1 1 79.71,50 29.18,29.18 0 0 1 50.57,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radial-gradient-60);fill-rule:evenodd"
+           id="path5300"
+           d="M 50.57,79.14 A 29.14,29.14 0 1 1 79.71,50 29.18,29.18 0 0 1 50.57,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           d="m 50.544922,28.566406 a 0.88,0.88 0 0 0 -0.855469,0.972656 v 4.681641 a 11.18,11.18 0 0 0 -6.419922,2.660156 L 40,33.570312 a 0.88,0.88 0 0 0 -1.240234,1.240235 L 42,38.119141 a 11.18,11.18 0 0 0 -2.660156,6.419921 h -4.640625 a 0.88,0.88 0 0 0 0,1.75 h 4.68164 a 11.18,11.18 0 0 0 0.390625,2.230469 h -0.201172 l 1.90625,4.716797 L 38.730469,56 A 0.89449707,0.89449707 0 1 0 40,57.259766 l 2.210938,-2.205078 3.568359,8.826171 v 5 a 2.45,2.45 0 0 0 2.451172,2.449219 h 4.660156 a 2.45,2.45 0 0 0 2.449219,-2.449219 v -5 l 3.570312,-8.839843 2.269532,2.269531 A 0.89883048,0.89883048 0 0 0 62.410156,56 l -2.769531,-2.769531 1.919922,-4.75 h -0.208985 a 11.18,11.18 0 0 0 0.408204,-2.210938 h 4.679687 a 0.88,0.88 0 0 0 0,-1.75 v 0.01953 H 61.759766 A 11.18,11.18 0 0 0 59.099609,38.11914 l 3.310547,-3.308594 a 0.88,0.88 0 0 0 -1.240234,-1.240235 l -3.310547,3.310547 a 11.18,11.18 0 0 0 -6.419922,-2.660156 v -4.681641 a 0.88,0.88 0 0 0 -0.894531,-0.972655 z"
+           id="path5302"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g5320">
+        <circle
+           style="fill:url(#radialGradient5582)"
+           id="circle5308"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#Gold_17-2);fill-rule:evenodd"
+           id="path5310"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#Gold_26-2);fill-rule:evenodd"
+           id="path5312"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radial-gradient-6);fill-rule:evenodd"
+           id="path5314"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0.78431373"
+           d="m 50.015625,30.259766 a 0.81,0.81 0 0 0 -0.785156,0.810546 v 4.330079 a 10.34,10.34 0 0 0 -5.941407,2.458984 L 40.189453,34.800781 A 0.82396905,0.82396905 0 0 0 39,35.939453 L 42.099609,39 a 10.35,10.35 0 0 0 -2.458984,5.939453 h -4.330078 a 0.810547,0.810547 0 0 0 0,1.621094 h 4.330078 a 10.34,10.34 0 0 0 0.375,2.070312 H 39.820312 L 41.589844,53.003906 39,55.570312 a 0.81344928,0.81344928 0 1 0 1.150391,1.150391 l 2.095703,-2.095703 3.324218,8.214844 v 4.630859 a 2.27,2.27 0 0 0 2.269532,2.269531 h 4.310547 a 2.27,2.27 0 0 0 2.269531,-2.269531 v -4.589844 l 3.3125,-8.197265 2.037109,2.037109 A 0.84223711,0.84223711 0 0 0 61,55.570312 l -2.591797,-2.558593 1.771485,-4.38086 h -0.201172 a 10.34,10.34 0 0 0 0.380859,-2.060547 h 4.330078 a 0.8105465,0.8105465 0 0 0 0,-1.621093 H 60.359375 A 10.35,10.35 0 0 0 57.900391,39 L 61,35.939453 a 0.81344928,0.81344928 0 0 0 -1.150391,-1.150391 l -3.060547,3.060547 a 10.34,10.34 0 0 0 -5.939453,-2.458984 v -4.320313 a 0.81,0.81 0 0 0 -0.833984,-0.810546 z"
+           id="path5316"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       style="display:none"
+       id="Custom 1">
+      <g
+         id="Up1">
+        <circle
+           cx="50"
+           cy="50"
+           r="34.889999"
+           id="circle4246"
+           style="opacity:0.61000001;fill:url(#radialGradient5340)" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           id="path4248"
+           style="fill:url(#linearGradient5342);fill-rule:evenodd" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           id="path4250"
+           style="opacity:0.43000004;fill:url(#linearGradient5344);fill-rule:evenodd" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           id="path4252"
+           style="fill:url(#radialGradient5346);fill-rule:evenodd" />
+      </g>
+      <g
+         id="Down1">
+        <circle
+           cx="50"
+           cy="50"
+           r="34.380001"
+           id="circle4256"
+           style="fill:url(#radialGradient5348)" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           id="path4258"
+           style="fill:url(#linearGradient5350);fill-rule:evenodd" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           id="path4260"
+           style="opacity:0.43000004;fill:url(#linearGradient5352);fill-rule:evenodd" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           id="path4262"
+           style="fill:url(#radialGradient5354);fill-rule:evenodd" />
+      </g>
+    </g>
+    <g
+       id="Custom 2"
+       style="display:none"
+       class="buttonIcon">
+      <g
+         id="Up2">
+        <circle
+           style="opacity:0.61000001;fill:url(#radialGradient5340)"
+           id="circle4268"
+           r="34.889999"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5342);fill-rule:evenodd"
+           id="path4270"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5344);fill-rule:evenodd"
+           id="path4272"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5346);fill-rule:evenodd"
+           id="path4274"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Down2">
+        <circle
+           style="fill:url(#radialGradient5348)"
+           id="circle4278"
+           r="34.380001"
+           cy="50"
+           cx="50" />
+        <path
+           style="fill:url(#linearGradient5350);fill-rule:evenodd"
+           id="path4280"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="opacity:0.43000004;fill:url(#linearGradient5352);fill-rule:evenodd"
+           id="path4282"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:url(#radialGradient5354);fill-rule:evenodd"
+           id="path4284"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       class="buttonIcon"
+       style="display:none"
+       id="Custom 3">
+      <g
+         id="Up3">
+        <circle
+           cx="50"
+           cy="50"
+           r="34.889999"
+           id="circle4290"
+           style="opacity:0.61000001;fill:url(#radialGradient5340)" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 50,81.06 A 31.06,31.06 0 1 1 81.06,50 31.1,31.1 0 0 1 50,81.06 Z"
+           id="path4292"
+           style="fill:url(#linearGradient5342);fill-rule:evenodd" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           id="path4294"
+           style="opacity:0.43000004;fill:url(#linearGradient5344);fill-rule:evenodd" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 50,79.14 A 29.14,29.14 0 1 1 79.14,50 29.18,29.18 0 0 1 50,79.14 Z"
+           id="path4296"
+           style="fill:url(#radialGradient5346);fill-rule:evenodd" />
+      </g>
+      <g
+         id="Down3">
+        <circle
+           cx="50"
+           cy="50"
+           r="34.380001"
+           id="circle4300"
+           style="fill:url(#radialGradient5348)" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 50,79.92 A 29.92,29.92 0 1 1 79.92,50 30,30 0 0 1 50,79.92 Z"
+           id="path4302"
+           style="fill:url(#linearGradient5350);fill-rule:evenodd" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           id="path4304"
+           style="opacity:0.43000004;fill:url(#linearGradient5352);fill-rule:evenodd" />
+        <path
+           inkscape:connector-curvature="0"
+           d="M 50,78.07 A 28.07,28.07 0 1 1 78.07,50 28.1,28.1 0 0 1 50,78.07 Z"
+           id="path4306"
+           style="fill:url(#radialGradient5354);fill-rule:evenodd" />
+      </g>
+    </g>
+    <text
+       id="text4145"
+       y="-10"
+       x="50"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#00000c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve">label</text>
+  </g>
+</svg>

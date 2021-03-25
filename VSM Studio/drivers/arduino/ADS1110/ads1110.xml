@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino ADS1110 16-bit ADC -->
+<DRIVER HEADER="ads1110.h">
+   <REQUIRE HEADER="ADS1110_PString.h"/>
+   <REQUIRE HEADER="Wire.h"/>
+   
+   <!-- GAIN enumeration -->
+   <ENUMERATION NAME="GAIN">
+      <CONSTANT NAME="GAIN_1" VALUE="0"/>
+      <CONSTANT NAME="GAIN_2" VALUE="1"/>
+      <CONSTANT NAME="GAIN_4" VALUE="2"/>
+      <CONSTANT NAME="GAIN_8" VALUE="3"/>
+   </ENUMERATION>
+   
+   <!-- SAMPLE RATE enumeration -->
+   <ENUMERATION NAME="SAMPLERATE">
+      <CONSTANT NAME="SPS_15"  VALUE="0x0C"/>
+      <CONSTANT NAME="SPS_30"  VALUE="0x08"/>
+      <CONSTANT NAME="SPS_60"  VALUE="0x04"/>
+      <CONSTANT NAME="SPS_240" VALUE="0x00"/>
+   </ENUMERATION>
+   
+   <!-- SAMPLE MODE enumeration -->
+   <ENUMERATION NAME="SAMPLEMODE">
+      <CONSTANT NAME="CONT"   VALUE="0x00"/>
+      <CONSTANT NAME="SINGLE" VALUE="0x10"/>
+   </ENUMERATION>
+
+   <!-- RESOLUTION enumeration -->
+   <ENUMERATION NAME="RESOLUTION">
+      <CONSTANT NAME="RES_12BIT" VALUE="0"/>
+      <CONSTANT NAME="RES_14BIT" VALUE="1"/>
+      <CONSTANT NAME="RES_15BIT" VALUE="2"/>
+      <CONSTANT NAME="RES_16BIT" VALUE="3"/>
+   </ENUMERATION>
+
+   <!-- REFERENCE MODE enumeration -->
+   <ENUMERATION NAME="REFMODE">
+      <CONSTANT NAME="INT" VALUE="0"/>
+      <CONSTANT NAME="EXT" VALUE="2048"/>
+   </ENUMERATION>
+
+   <!-- Methods -->
+   <METHOD NAME="setGain" DESC="Set the Gain (1,2,4 or 8).">
+      <PARAMETER NAME="newGain" TYPE="GAIN" DEFAULT="GAIN_1" DESC="Gain Values"/>
+   </METHOD>
+   <METHOD NAME="setSampleRate" DESC="Set the Sample Rate (15,30,60 or 240).">
+      <PARAMETER NAME="newRate" TYPE="SAMPLERATE" DEFAULT="SPS_15" DESC="Sample Rate Values"/>
+   </METHOD>
+   <METHOD NAME="setConMode" DESC="Set the Sample Mode (Continuous or Single).">
+      <PARAMETER NAME="newConMode" TYPE="SAMPLEMODE" DEFAULT="CONT" DESC="Sample Mode Values"/>
+   </METHOD>
+   <METHOD NAME="setRes" DESC="Set the Resolution (12, 1, 15 or 16-bit).">
+      <PARAMETER NAME="newRes" TYPE="RESOLUTION" DEFAULT="RES_16BIT" DESC="Resolution Values"/>
+   </METHOD>
+   <METHOD NAME="setVref" DESC="Set the Reference Source (Internal, External to 2.048V.">
+      <PARAMETER NAME="newVref" TYPE="REFMODE" DEFAULT="INT" DESC="Reference Values"/>
+   </METHOD>
+   <METHOD NAME="reset" DESC="Reset Configuration to Gain=1, Data Rate=15SPS and Control Mode=CONT).">
+   </METHOD>
+
+   <!-- Methods returning value -->
+   <METHOD NAME="getGain" DESC="Read Gain Settings">
+      <RETURN NAME="Gain" TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="getSampleRate" DESC="Read Sample Rate Settings">
+      <RETURN NAME="SampleRate" TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="getConMode" DESC="Read Sample Mode Settings">
+      <RETURN NAME="SampleMode" TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="getRes" DESC="Read Resolution Settings">
+      <RETURN NAME="Res" TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="getVref" DESC="Read Reference Settings">
+      <RETURN NAME="Vref" TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="getData" DESC="Read Raw Converted Data">
+      <RETURN NAME="RowData" TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="getVolt" DESC="Read mV Converted Data">
+      <RETURN NAME="VoltData" TYPE="INTEGER"/>
+   </METHOD>
+
+</DRIVER>

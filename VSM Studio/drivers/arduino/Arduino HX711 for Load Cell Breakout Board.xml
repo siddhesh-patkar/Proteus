@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino HX711 for Load Cell Breakout Board.pdsclip" DESC="Arduino HX711 for Load Cell Breakout Board" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="HX711 for Load Cell" ELEMENT="HXADC1">
+      <INTERFACE OBJECT="HX711_adc">
+         <PIN NAME="dout" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO3"/>
+         </PIN>
+         <PIN NAME="pd_sck" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO2"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="hx711/hx711_adc.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

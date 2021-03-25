@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<COMPILER NAME="SDCC for 8051" VERSION="3.0.0" URL="http://sdcc.sourceforge.net/" DOWNLOAD_URL="http://downloads.labcenter.co.uk/vsmstudio/win/compilers/sdcc-3.0.0-setup.exe" AVAILABILITY="Hosted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- C Compiler -->
+  <TOOL NAME="CC" FILE="sdcc.exe">
+    <!-- And C++ Compiler as well -->
+    <ALIAS NAME="CPP"/>
+    <!-- And Linker as well -->
+    <ALIAS NAME="LD"/>
+    <!-- General options -->
+    <OPTION NAME="--help" DESC="Display help" ADVANCED="1"/>
+    <OPTION NAME="--version" DESC="Display sdcc's version" ADVANCED="1">
+      <ALIAS NAME="-v"/>
+    </OPTION>
+    <OPTION NAME="--verbose" DESC="Trace calls to the preprocessor, assembler, and linker" ADVANCED="1"/>
+    <OPTION NAME="-V" DESC="Execute verbosely. Show sub commands as they are run" ADVANCED="1"/>
+    <OPTION NAME="-W" DESC="Pass through options to the pre-processor (p), assembler (a) or linker (l). -Wl&quot;-u&quot;" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="-S" DESC="Compile only; do not assemble or link" ADVANCED="1"/>
+    <OPTION NAME="-c" DESC="Compile and assemble, but do not link" ADVANCED="1">
+      <ALIAS NAME="--compile-only"/>
+    </OPTION>
+    <OPTION NAME="-E" DESC=" Preprocess only, do not compile" ADVANCED="1">
+      <ALIAS NAME="--preprocessonly"/>
+    </OPTION>
+    <OPTION NAME="-o " DESC="Place the output into the given file or output to the given path." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--print-search-dirs" DESC="Display the directories in the compiler's search path" ADVANCED="1"/>
+    <OPTION NAME="--vc" DESC="Messages are compatible with Microsoft Visual Studio" ADVANCED="1"/>
+    <OPTION NAME="--use-stdout" DESC="Send errors to stdout instead of stderr" ADVANCED="1"/>
+    <OPTION NAME="--nostdlib" DESC="Do not include the standard library directory in the search path" ADVANCED="1"/>
+    <OPTION NAME="--nostdinc" DESC="Do not include the standard include directory in the search path" ADVANCED="1"/>
+    <OPTION NAME="--less-pedantic" DESC="Disable some of the more pedantic warnings" ADVANCED="1"/>
+    <OPTION NAME="--disable-warning " DESC="Disable specific warning n" PARAM="NUMBER"/>
+    <OPTION NAME="--Werror" DESC="Treat all warnings as errors" ADVANCED="1"/>
+    <OPTION NAME="--debug" DESC="Enable debugging symbol output"/>
+    <OPTION NAME="--cyclomatic" DESC="Display complexity of compiled functions" ADVANCED="1"/>
+    <OPTION NAME="--std-" DESC="Specify standard" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="c89" DESC="Use C89 standard only"/>
+      <PARAM VALUE="sdcc89" DESC="Use C89 standard with SDCC extensions" DEFAULT="1"/>
+      <PARAM VALUE="c99" DESC="Use C99 standard only (incomplete)"/>
+      <PARAM VALUE="sdcc99" DESC="Use C99 standard with SDCC extensions (incomplete)"/>
+    </OPTION>
+    <OPTION NAME="--fdollars-in-identifiers" DESC="Permit '$' as an identifier character" ADVANCED="1"/>
+    <OPTION NAME="--funsigned-char" DESC="Make 'char' unsigned by default" ADVANCED="1"/>
+    <OPTION NAME="--use-non-free" DESC="Search / include non-free licensed libraries and header files" ADVANCED="1"/>
+    <!-- Preprocessor options -->
+    <OPTION NAME="-D" DESC="Define macro as in -Dmacro" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-I" DESC="Add to the include (*.h) path, as in -Ipath" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-A" DESC="Assert answer as in -Aquestion(answer) when tested with a preprocessor conditional." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="-U" DESC="-Umacro Undefine macro. -U options are evaluated after all -D options, but before -include and -imacros." PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-dM" DESC="Preprocessor option. Output only a list of the macro definitions that are in effect at the end of preprocessing. Used with the ‘-E’ option." ADVANCED="1"/>
+    <OPTION NAME="-dD" DESC="Preprocessor option. Pass all macro definitions into the output, in their proper sequence in the rest of the output." ADVANCED="1"/>
+    <OPTION NAME="-dN" DESC="Preprocessor option. Like ‘-dD’ except that the macro arguments and contents are omitted." ADVANCED="1"/>
+    <OPTION NAME="-M" DESC="Preprocessor option. Output a rule suitable for make describing the dependencies of each object file." ADVANCED="1"/>
+    <OPTION NAME="-MM" DESC="Preprocessor option. Like -M but the output mentions only the user header files included with ‘#include file’." ADVANCED="1"/>
+    <OPTION NAME="-C" DESC="Preprocessor option. Do not discard comments. Used with the ‘-E’ option." ADVANCED="1"/>
+    <OPTION NAME="-pedantic-parse-number" DESC="Pedantic parse numbers so that situations like 0xfe-LO_B(3) are parsed properly." ADVANCED="1"/>
+    <!--Code generation options -->
+    <OPTION NAME="-m" DESC="Set the port to use" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="mcs51" DESC="Generate code for the Intel MCS51 family of processors" DEFAULT="1"/>
+      <PARAM VALUE="ds390" DESC="Generate code for the Dallas DS80C390 processor"/>
+      <PARAM VALUE="ds400" DESC="Generate code for the Dallas DS80C400 processor"/>
+      <PARAM VALUE="hc08" DESC="Generate code for the Freescale/Motorola HC08 family of processors"/>
+      <PARAM VALUE="z80" DESC="Generate code for the Zilog Z80 family of processors"/>
+      <PARAM VALUE="gbz80" DESC="Generate code for the GameBoy Z80 processor (Not actively maintained)"/>
+      <PARAM VALUE="pic14" DESC="Generate code for the Microchip PIC 14-bit processors (In development, not complete)"/>
+      <PARAM VALUE="pic16" DESC="Generate code for the Microchip PIC 16-bit processors (In development, not complete)"/>
+    </OPTION>
+    <OPTION NAME="-p" DESC="Select port specific processor e.g. -p16f84" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--stack-auto" DESC="Stack automatic variables" ADVANCED="1"/>
+    <OPTION NAME="--int-long-reent" DESC="Use reentrant calls on the int and long support functions" ADVANCED="1"/>
+    <OPTION NAME="--float-reent" DESC="Use reentrant calls on the float support functions" ADVANCED="1"/>
+    <OPTION NAME="--main-return" DESC="Issue a return after main()" ADVANCED="1"/>
+    <OPTION NAME="--xram-movc" DESC="Use movc instead of movx to read xram (xdata)" ADVANCED="1"/>
+    <OPTION NAME="--callee-saves" DESC="The called function saves registers instead of the caller" ADVANCED="1"/>
+    <OPTION NAME="--profile" DESC="On supported ports, generate extra profiling information" ADVANCED="1"/>
+    <OPTION NAME="--fomit-frame-pointer" DESC="Leave out the frame pointer" ADVANCED="1"/>
+    <OPTION NAME="--all-callee-saves" DESC="Callee will always save registers used" ADVANCED="1"/>
+    <OPTION NAME="--stack-probe" DESC="Insert call to function __stack_probe at each function prologue" ADVANCED="1"/>
+    <OPTION NAME="--no-c-code-in-asm" DESC="Don't include c-code as comments in the asm file" ADVANCED="1"/>
+    <OPTION NAME="--no-peep-comments" DESC="Don't include peephole optimizer comments" ADVANCED="1"/>
+    <OPTION NAME="--fverbose-asm" DESC="Include code generator comments" ADVANCED="1"/>
+    <OPTION NAME="--short-is-8bits" DESC="Make short 8 bits" ADVANCED="1"/>
+    <OPTION NAME="--codeseg " DESC="Usage --codeseg &lt;name&gt;. Use this name for the code segment" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--constseg " DESC="Usage --constseg &lt;name&gt;. Use this name for the const segment" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <!--Optimization options -->
+    <OPTION NAME="--no-xinit-opt" DESC="Don't memcpy initialized xram from code" ADVANCED="1"/>
+    <OPTION NAME="--nooverlay" DESC="Disable overlaying leaf function auto variables" ADVANCED="1"/>
+    <OPTION NAME="--nogcse" DESC="Disable the GCSE optimisation" ADVANCED="1"/>
+    <OPTION NAME="--nolabelopt" DESC="Disable label optimisation" ADVANCED="1"/>
+    <OPTION NAME="--noinvariant" DESC="Disable optimisation of invariants" ADVANCED="1"/>
+    <OPTION NAME="--noinduction" DESC="Disable loop variable induction" ADVANCED="1"/>
+    <OPTION NAME="--nojtbound" DESC="Don't generate boundary check for jump tables" ADVANCED="1"/>
+    <OPTION NAME="--noloopreverse" DESC="Disable the loop reverse optimisation" ADVANCED="1"/>
+    <OPTION NAME="--no-peep" DESC="Disable the peephole assembly file optimisation" ADVANCED="1"/>
+    <OPTION NAME="--no-reg-params" DESC="On some ports, disable passing some parameters in registers" ADVANCED="1"/>
+    <OPTION NAME="--peep-asm" DESC="Enable peephole optimization on inline assembly" ADVANCED="1"/>
+    <OPTION NAME="--peep-file " DESC="Usage --peep-file &lt;file&gt;. Use extra peephole file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--opt-code-" DESC="Optimize preferences" PARAM="CHOICE">
+      <PARAM VALUE="speed" DESC="Code speed rather than size"/>
+      <PARAM VALUE="size" DESC="Code size rather than speed"/>
+    </OPTION>
+    <!-- MCS8051 Specific -->
+    <OPTION NAME="--model-" DESC="Set the memory model to use" PARAM="CHOICE">
+      <PARAM VALUE="small" DESC="Internal data space is used" DEFAULT="1"/>
+      <PARAM VALUE="medium" DESC="External paged data space is used"/>
+      <PARAM VALUE="large" DESC="External data space is used"/>
+      <PARAM VALUE="huge" DESC="Functions are banked, data in external space"/>
+    </OPTION>
+    <OPTION NAME="--xstack" DESC="Use external stack" ADVANCED="1"/>
+    <OPTION NAME="--acall-ajmp" DESC="Use acall/ajmp instead of lcall/ljmp" ADVANCED="1"/>
+    <!-- Linking MCS8051 Specific -->
+    <OPTION TOOL="LD" NAME="--stack-size " DESC="Usage --stack-size &lt;Value&gt;. Tells the linker to check there are n bytes available for stack" PARAM="NUMBER"/>
+    <OPTION TOOL="LD" NAME="--iram-size " DESC="Usage --iram-size &lt;Value&gt;. Tells the linker to check if the internal ram usage is within the given value" PARAM="NUMBER"/>
+    <OPTION TOOL="LD" NAME="--xram-size " DESC="Usage --xram-size &lt;Value&gt;. Tells the linker to check if the external ram usage is within the given value" PARAM="NUMBER"/>
+    <OPTION TOOL="LD" NAME="--code-size " DESC="Usage --code-size &lt;Value&gt;. Tells the linker to check if the code memory usage is within the given value" PARAM="NUMBER"/>
+    <OPTION TOOL="LD" NAME="--parms-in-bank1" DESC="Use Bank1 for parameter passing"/>
+    <OPTION TOOL="LD" NAME="--pack-iram" DESC="Tells the linker to pack variables in internal ram" DEFAULT="1"/>
+    <!-- Linking Options -->
+    <OPTION TOOL="LD" NAME="-l" DESC="Include the given library in the link" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION TOOL="LD" NAME="--lib-path " DESC="Add the absolute path to the library search path" PARAM="STRING" MULTIPLE="1">
+      <ALIAS NAME="-L "/>
+    </OPTION>
+    <OPTION TOOL="LD" NAME="-out-fmt-" DESC="Output format" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="ihx" DESC="Intel hex"/>
+      <PARAM VALUE="s19" DESC="Motorola S19"/>
+    </OPTION>
+    <OPTION TOOL="LD" NAME="--xram-loc " DESC="Specify the external ram start location" PARAM="NUMBER"/>
+    <OPTION TOOL="LD" NAME="--xstack-loc " DESC="Specify the external stack start location" PARAM="NUMBER"/>
+    <OPTION TOOL="LD" NAME="--code-loc " DESC="Specify the code segment location" PARAM="NUMBER"/>
+    <OPTION TOOL="LD" NAME="--stack-loc " DESC="Specify the stack pointer initial value" PARAM="NUMBER"/>
+    <OPTION TOOL="LD" NAME="--data-loc " DESC="The direct data start location" PARAM="STRING">
+      <ALIAS NAME="--idata-loc "/>
+    </OPTION>
+    <!-- Internal debugging options -->
+    <OPTION NAME="--dumpraw" DESC="Dump the internal structure after the initial parse" ADVANCED="1"/>
+    <OPTION NAME="--dumpgcse" DESC="Create a dump of iCodes, after global subexpression elimination" ADVANCED="1"/>
+    <OPTION NAME="--dumploop" DESC="Create a dump of iCodes, after loop optimizations" ADVANCED="1"/>
+    <OPTION NAME="--dumpdeadcode" DESC="Create a dump of iCodes, after deadcode elimination" ADVANCED="1"/>
+    <OPTION NAME="--dumpliverange" DESC="" ADVANCED="1"/>
+    <OPTION NAME="--dumpregpack" DESC="" ADVANCED="1"/>
+    <OPTION NAME="--dumpregassign" DESC="Create a dump of iCodes, after register assignment" ADVANCED="1"/>
+    <OPTION NAME="--dumptree" DESC="Dump front-end AST before generating iCode" ADVANCED="1"/>
+    <OPTION NAME="--dumpall" DESC="Dump the internal structure at all stages" ADVANCED="1"/>
+    <OPTION NAME="--i-code-in-asm" DESC="Include i-code as comments in the asm file" ADVANCED="1"/>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="8051">
+    <CONTROLLER NAME="80C31"/>
+    <CONTROLLER NAME="80C32">
+      <OPTION TOOL="CC" NAME="-D" VALUE="MICROCONTROLLER_8052"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C51"/>
+    <CONTROLLER NAME="80C52">
+      <OPTION TOOL="CC" NAME="-D" VALUE="MICROCONTROLLER_8052"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STC15W4K32S4">
+      <OPTION TOOL="CC" NAME="-D" VALUE="MICROCONTROLLER_8052"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C54"/>
+    <CONTROLLER NAME="80C58"/>
+    <CONTROLLER NAME="AT89C51"/>
+    <CONTROLLER NAME="AT89C52">
+      <OPTION TOOL="CC" NAME="-D" VALUE="MICROCONTROLLER_AT89X52"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C55">
+      <OPTION TOOL="CC" NAME="-D" VALUE="MICROCONTROLLER_AT89X55"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51RB2"/>
+    <CONTROLLER NAME="AT89C51RC2"/>
+    <CONTROLLER NAME="AT89C51RD2"/>
+    <CONTROLLER NAME="P87C51FA"/>
+    <CONTROLLER NAME="P87C51FB"/>
+    <CONTROLLER NAME="P87C51FC"/>
+    <CONTROLLER NAME="P87C51RA+"/>
+    <CONTROLLER NAME="P87C51RB+"/>
+    <CONTROLLER NAME="P87C51RC+"/>
+    <CONTROLLER NAME="P87C51RD+"/>
+    <CONTROLLER NAME="AT89C1051">
+      <OPTION TOOL="CC" NAME="-D" VALUE="MICROCONTROLLER_AT89CX051"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C2051">
+      <OPTION TOOL="CC" NAME="-D" VALUE="MICROCONTROLLER_AT89CX051"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C4051">
+      <OPTION TOOL="CC" NAME="-D" VALUE="MICROCONTROLLER_AT89CX051"/>
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT KEYLOC="HKEY_LOCAL_MACHINE\SOFTWARE\SDCC" TYPE="ANONYMOUS" SUF="bin/sdcc.exe" DATE="2010-10-31">
+    <CHECK ARG="-v" STR="SDCC"/>
+  </DETECT>
+  <DETECT PATH="%PROGRAMFILES%/SDCC" SUF="bin/sdcc.exe" DATE="2010-10-31">
+    <CHECK ARG="-v" STR="SDCC"/>
+  </DETECT>
+  <DETECT PATH="%ProgramW6432%/SDCC" SUF="bin/sdcc.exe" DATE="2010-10-31">
+    <CHECK ARG="-v" STR="SDCC"/>
+  </DETECT>
+  <PATH ADD="%COMPILER_DIR%/bin"/>
+  <!-- File Types -->
+  <FILE NAME="c" DESC="C Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="cpp" DESC="C++ Source" CATEGORY="Source" SOURCE="1" ICON="project_c++.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="lib" DESC="Object Library" CATEGORY="Library"/>
+  <!-- Note cdb is not a binary and only conatins debug but we submit it for simulation like a binary and load the hex file -->
+  <FILE NAME="cdb" DESC="Debug Symbols" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="rel" DESC="Object" CATEGORY="Intermediate Binary"/>
+  <!-- Compiler -->
+  <PROCESS TOOL="CC" NAME="C Compiler" CMDLINE="$(CC) $(CCFLAGS) %OPTIONS% -o %OUTFILE_QUOTED% %INFILE_QUOTED%">
+    <FILE OUTPUT="rel">
+      <FILE INPUT="c"/>
+      <FILE INPUT="cpp"/>
+      <FILE TEMP="lst" NAME="%OUTFILE_DIR%/%INFILE_NAME%.lst"/>
+      <FILE TEMP="rst" NAME="%OUTFILE_DIR%/%INFILE_NAME%.rst"/>
+      <FILE TEMP="sym" NAME="%OUTFILE_DIR%/%INFILE_NAME%.sym"/>
+      <FILE TEMP="asm" NAME="%OUTFILE_DIR%/%INFILE_NAME%.asm"/>
+      <FILE TEMP="adb" NAME="%OUTFILE_DIR%/%INFILE_NAME%.adb"/>
+    </FILE>
+    <OPTION NAME="-c" DEFAULT="1"/>
+    <OPTION NAME="-m" VALUE="mcs51" DEFAULT="1"/>
+    <OPTION NAME="--model-" VALUE="small" DEFAULT="1"/>
+    <MESSAGE VALUE="^(.+):(\d+):\s*(warning|error|syntax error).*$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^(.+):(\d+):(\d+):\s*(warning|error|syntax error).*$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="$(LD) -Wl&quot;-u&quot; --out-fmt-ihx $(LDFLAGS) %OPTIONS% -o &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.hex&quot; %INFILES_QUOTED%">
+    <FILE OUTPUT="hex"/>
+    <FILE OUTPUT="cdb">
+      <FILE INFO="hex" NAME="%OUTFILE_DIR%/%OUTFILE_NAME%.hex"/>
+      <!-- Include .hex file into the project -->
+    </FILE>
+    <FILE INPUT="lib"/>
+    <FILE INPUT="rel"/>
+    <FILE TEMP="lnk" NAME="%OUTFILE_DIR%/%OUTFILE_NAME%.lnk"/>
+    <FILE TEMP="map" NAME="%OUTFILE_DIR%/%OUTFILE_NAME%.map"/>
+    <FILE TEMP="mem" NAME="%OUTFILE_DIR%/%OUTFILE_NAME%.mem"/>
+    <OPTION NAME="-m" VALUE="mcs51" DEFAULT="1"/>
+    <OPTION NAME="--model-" VALUE="small" DEFAULT="1"/>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="cdb"/>
+    <OPTION TOOL="CC" NAME="--debug" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--noinduction" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--nooverlay" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="--debug" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="--noinduction" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="--nooverlay" DEFAULT="1"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <SOURCE NAME="main.c" FROM="sdcc8051main.c" OPEN="1"/>
+</COMPILER>

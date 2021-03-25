@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="PROJ_NOTE_TYPE" content="1" />
+<title>PCB Specification Document</title>
+<style>/*Default Style*/
+body
+{
+	color:#000000;
+	font-family:Times;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:5mm;
+	margin-left:5mm;
+	margin-right:5mm;
+	margin-top:5mm;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	paper-height:842.0pt;
+	paper-width:595.0pt;
+	text-decoration:none;
+}
+
+/*Code block*/
+code
+{
+	color:#000000;
+	font-family:Courier;
+	font-size:0.8em;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Paragraph*/
+p
+{
+	color:#000000;
+	font-family:Arial;
+	font-size:1em;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:0.72em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:0.72em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*List Paragraph*/
+lp
+{
+	font-family:Times;
+	font-size:1.0em;
+	line-height:100%;
+	margin-bottom:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+}
+
+/*Heading 1*/
+h1
+{
+	color:#000000;
+	font-family:Arial Black;
+	font-size:2em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:0.67em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:0.67em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-align:center;
+	text-decoration:none;
+}
+
+/*Heading 2*/
+h2
+{
+	color:#000000;
+	font-family:Times;
+	font-size:1.5em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:0.75em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:0.75em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Heading 3*/
+h3
+{
+	color:#000000;
+	font-family:Arial;
+	font-size:1.1667em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:0.43em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:0.63em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:underline;
+}
+
+/*Heading 4*/
+h4
+{
+	color:#000000;
+	font-family:Arial;
+	font-size:1em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:0.52em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:0.52em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Heading 5*/
+h5
+{
+	color:#000000;
+	font-family:Times;
+	font-size:0.83em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:1.5em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:1.5em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Heading 6*/
+h6
+{
+	color:#000000;
+	font-family:Times;
+	font-size:0.75em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:1.67em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:1.67em;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*_ULXcomment*/
+p.LXcomment
+{
+	color:#e80505;
+	font-family:Arial;
+	font-size:10pt;
+	font-style:italic;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*_ULXWarning*/
+p.LXWarning
+{
+	background-color:#f7f1ad;
+	border-bottom-style:solid;
+	border-bottom-width:0.2pt;
+	border-color:#ff5903;
+	border-left-style:solid;
+	border-left-width:0.2pt;
+	border-right-style:solid;
+	border-right-width:0.2pt;
+	border-top-style:solid;
+	border-top-width:0.2pt;
+	color:#a73610;
+	font-family:Arial;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	padding-bottom:3pt;
+	padding-left:6pt;
+	padding-right:5pt;
+	padding-top:3pt;
+	text-decoration:none;
+}
+
+a /* Links*/ { text-decoration: underline; }
+
+/*_H*/
+ul
+{
+	font-family:Times;
+	font-size:1.0em;
+}</style>
+</head>
+<body>
+<h1 indent='0' textIndent='0'>PCB Specification Document Example</h1>
+<h3 indent='0' textIndent='0'>Customer Detail Specification</h3>
+<p class="LXcomment" indent='0' textIndent='0'>This is an ***Example*** of the types of information you may wish to add to a PCB specification document.  Fabrication requirements vary enormously according to product, industry, country, cost and company policy.</p>
+<p class="LXcomment" indent='0' textIndent='0'> </p>
+<p class="LXcomment" indent='0' textIndent='0'>You need to add/remove/modify content to suit and then save as a template (Template Menu) so that it can be re-used in your projects. It can then be appended to your CADCAM output by selecting the Project Manufacturing Notes option on the Notes tab of the output dialogue. </p>
+<p class="LXcomment" indent='0' textIndent='0'> </p>
+<p class="LXWarning" indent='0' textIndent='0'>IMPORTANT:  The information below is intended to provide basic guidance on content that may be relevant in a PCB specification document. It is not fit or suitable for any particular purpose without user review and input. It may contain errors and it <span style="font-weight: bold; text-decoration: underline; ">will</span> contain omissions. You must modify this template to suit corporate and regulatory requirements. </p>
+<h3 indent='0' textIndent='0'>Prohibition of Transfer or Production</h3>
+<p class="LXcomment" indent='0' textIndent='0'>Is subcontract allowed and -if so - under what authority and what terms ? For example:</p>
+<p indent='0' textIndent='0'>Whatever the reason, it is forbidden for the supplier to transfer or subcontract any part of an order or contract to another manufacturer without prior written permission.</p>
+<h3 indent='0' textIndent='0'>Materials</h3>
+<p class="LXcomment" indent='0' textIndent='0'>What can be used for making the board, quality expectations, etc. </p>
+<h4 indent='0' textIndent='0'>Laminate</h4>
+<p class="LXcomment" indent='0' textIndent='0'>Requirements for the board material (bonding, flame retardant, nominal thickness, etc.). </p>
+<p indent='0' textIndent='0'>Unless otherwise specified, laminate material shall be reinforced epoxy that meets NEMA FR-4 grade requirements.</p>
+<h4 indent='0' textIndent='0'>RoHS Compliance</h4>
+<p indent='0' textIndent='0'>Only approved RoHS materials may be used.</p>
+<p class="LXcomment" indent='0' textIndent='0'>Other guidance can be provided here such as fabrication temperatures, copper foil weight, copper purity, allowable laminate imperfections, copper adhesion requirements. Relevant documents include IPC-6012 (3.5.8.3, 3.6.2) and IPC-TM-650 (2.4.8.1)</p>
+<h3 indent='0' textIndent='0'>Copper Plating Requirements</h3>
+<p class="LXcomment" indent='0' textIndent='0'>Quality expectations, tolerances, supplier responsibility and any other information. For example:</p>
+<h4 indent='0' textIndent='0'>Plated Through Holes</h4>
+<p indent='0' textIndent='0'>Holes shall be drilled and free from burrs, epoxy smearing, protruding fibres and delamination. All plated through holes shall have an average wall thickness of .001 inches and a minimum wall thickness of .0008 inches of copper. Integrity of plated through holes before and after thermal stress shall be per IPC-6012.</p>
+<h4 indent='0' textIndent='0'>Annular Ring</h4>
+<p indent='0' textIndent='0'>The minimum internal and external annular ring requirements shall be per IPC-2221, Class 2. Breakout is not allowed. It is the suppliers responsibility to inform the purchaser of potential problems associated with meeting annular ring requirements prior to board fabrication.</p>
+<h3 indent='0' textIndent='0'>Surface Finishes</h3>
+<p class="LXcomment" indent='0' textIndent='0'>Guidance on re-coated boards  (e.g. do they need to be marked ?), application of Organic Solderability Preservative (OSP), acceptable surface finishes ( e.g. ENIG with thickness as per IPC4552 .) Hot Air Solder Level , etc..</p>
+<h3 style="page-break-before: always; " indent='0' textIndent='0'>Tooling Modifications</h3>
+<p class="LXcomment" indent='0' textIndent='0'>Tell the manufacturer if they can make mods and - if so - to what extent. </p>
+<h4 indent='0' textIndent='0'>Active Pads and Test points</h4>
+<p class="LXcomment" indent='0' textIndent='0'>Can the manufacturer modify soldermask openings ? By how much ? On all or some pads ? For example.</p>
+<p indent='0' textIndent='0'>It is permissable to modify the soldermask openings to allow for a .002&quot; minimum relief on active copper pads. Exposed copper on adjacent conductors is not permitted.</p>
+<h4 indent='0' textIndent='0'>Vias</h4>
+<p class="LXcomment" indent='0' textIndent='0'>Can the manufacturer modify relief for vias ? By how much ? Quality requirements ? Tented vias ? For example.</p>
+<p indent='0' textIndent='0'>The soldermask relief for vias is to relieve only the finished hole. The soldermask opening should be .002 larger than the finished hole diameter. Latent or residual soldermask in vias is acceptable. Tented vias are not allowed. If the CAD tooling has tented vias the manufacturer is to add an opening equal to the drill size +0.002 per side.</p>
+<h4 indent='0' textIndent='0'>Copper Features</h4>
+<p class="LXcomment" indent='0' textIndent='0'>Can the manufacturer make width mods ? To what extent ? Teardrops ? If so, when ? Copper add ? For example.</p>
+<p indent='0' textIndent='0'>Minimum width modifications to allow for normal processes are permitted. Teardropping is permitted to meet annular ring requirement or to improve yields. Copper may be added to non functional breakaway tabs. It is not permissable to add copper for balance or theiving purposes within the functional area of the PCB.</p>
+<h3 indent='0' textIndent='0'>Solder Mask</h3>
+<p class="LXcomment" indent='0' textIndent='0'>Solder mask detail , quality expectations and any other relevant / project specific information. For example:</p>
+<p indent='0' textIndent='0'>PCB's shall be solder mask over bare copper (SMOBC) unless otherwise specified. Solder mask is to comply with ANSI/IPC-SM-840, Class 2.</p>
+<p indent='0' textIndent='0'>Solder mask is to be a green liquid photoimageable type and semi-gloss in appearance.</p>
+<p class="LXcomment" indent='0' textIndent='0'>Guidance can also be provided on aesthetics, touch-up or rework by manufacturer (allowed?), adhesion testing (e.g. IPC-TM-650), permissable or required soldering methods, etc.</p>
+<h3 indent='0' textIndent='0'>PCB Legend and Markings</h3>
+<p class="LXcomment" indent='0' textIndent='0'>Silkscreen detail , quality expectations, manufacturer responsibilities, aesthetics (e.g. color) and any other relevant / project specific information. For example:</p>
+<p indent='0' textIndent='0'>Reference designators and PCB nomenclature shall use permanent non-conductive solvent resistant RoHS compliant material. Legend shall be legible and sharply defined per ANSI/IPC-A-600 Class 2.</p>
+<p indent='0' textIndent='0'>It is the vendor’s responsibility to ensure legend is not removed from via pads. Relief of legend .002” from via holes is permissible. If legend is defined on active pads it is the responsibility of the manufacturer to contact the purchasers for corrected tooling.</p>
+<h4 indent='0' textIndent='0'>Identification</h4>
+<p class="LXcomment" indent='0' textIndent='0'>Detail for manufacturers batch indentification.  For example:</p>
+<p indent='0' textIndent='0'>The manufacturer's three-letter code and either his batch code,or the year and week of manufacture, shall be marked indelibly in copper or ink on a clear area of the board. The code shall be in a position which is legible after assembly of components. The position and method of marking must be agreed before delivery.</p>
+<h3 style="page-break-before: always; " indent='0' textIndent='0'>Testing and Quality</h3>
+<p class="LXcomment" indent='0' textIndent='0'>This is for detail on production quality, testing requirements, materials conformity, traceability requirement,etc. Much depends on the product and it all costs money. For example.</p>
+<h4 indent='0' textIndent='0'>Workmanship</h4>
+<p indent='0' textIndent='0'>Workmanship shall be of a level as to indicate controlled conditions of manufacture such that subsequent assembly operations, board functionality, and performance are not degraded. Gross cosmetic imperfections are not acceptable. Gross cosmetic imperfections are those that readily stand out without special lighting, magnification, or positioning of the product. </p>
+<h4 indent='0' textIndent='0'>Bow and Twist</h4>
+<p class="LXcomment" indent='0' textIndent='0'>Requirements for board flatness. </p>
+<p indent='0' textIndent='0'>When the board is placed on a flat plate such that all four corners rest on the plate, the maximum vertical distance between the plate and the underside of the board shall not exceed .75mm for every 100mm length of board. For additional fractions of 100mm the maximum permitted bow shall be calculated pro-rata.</p>
+<p indent='0' textIndent='0'>When the board is placed on a flat plate such that three corners rest on the plate, the maximum vertical distance between the plate and the corner which is not in contact shall not exceed .75mm for every 100mm diagonal length of board. For additional fractions of 100mm the maximum permitted twist shall be calculated pro-rata</p>
+<h4 indent='0' textIndent='0'>Solderability Tests</h4>
+<p indent='0' textIndent='0'>All boards must be subject to solderability, as per IPC-TM-650 testing requirements. Poor solderability (angle of meniscus &gt; 55 degrees) is regarded as a major defect.</p>
+<h4 indent='0' textIndent='0'>Ionic Contamination Tests</h4>
+<p indent='0' textIndent='0'>The measurement method should be in accordance with IPC-TM-650 - ionograph. The maximum allowed residual pollution is 0.5 µg/cm² (NaCl equivalent) for all finishing except HASL where the maximum shall be 0.8 µg/cm² (NaCl equivalent).</p>
+<h4 indent='0' textIndent='0'>Electrical Characteristics</h4>
+<p indent='0' textIndent='0'>The supplier’s manufacturing process must guarantee that the electrical characteristics of the PCB meet IPC 9252 standards.</p>
+<h3 indent='0' textIndent='0'>Packaging</h3>
+<p class="LXcomment" indent='0' textIndent='0'>Care requirements for packaging and delivery. For example:</p>
+<p indent='0' textIndent='0'>Prior to packaging, all boards shall be suitably cleaned to remove all processing materials including etchants, machining dust, plating salts, oils, fluxes, etc.</p>
+<p indent='0' textIndent='0'>Shrink wrap is the preferred method of packaging.</p>
+<p indent='0' textIndent='0'>Boards or arrays shall be bundled in stacks of ten preferred to a maximum of 25 unless otherwise specified on the purchase order. Each bundle of PCBs will be identified with the part number and date code. Shipments shall be separated by date code.</p>
+<p class="LXcomment" indent='0' textIndent='0'>Further guidance on things like humidity concerns, vacuum packing and requirements for supplier storage if applicable can go here.</p>
+<h3 indent='0' textIndent='0'>Contact</h3>
+<p class="LXcomment" indent='0' textIndent='0'>Make clear who the manufacturer should contact in advance of manufacture if they have problems or concerns. For example:</p>
+<p indent='0' textIndent='0'>In the event that the manufacturer feels that he is incapable of meeting the requirements of the specification he may apply for a relaxation of the specification. For all enquiries or to discuss further, the technical contact for the purchasr is.</p>
+<p indent='0' textIndent='0'>&lt;contact details&gt; </p>
+</body>
+</html>

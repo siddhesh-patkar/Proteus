@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for MCP23008 based matrix keypad -->
+<DRIVER HEADER="Keypad.h">
+   <REQUIRE HEADER="Wire.h"/>
+   <REQUIRE HEADER="MCP23008.h"/>
+   
+	<FUNCTION DESC="Test if a key is pressed">
+      <RETURN TYPE="BOOLEAN"/>
+    </FUNCTION>
+
+   <METHOD NAME="getKey" DESC="Return the key that is pressed">
+      <PARAMETER NAME="wait" TYPE="BOOLEAN"   DEFAULT="FALSE"  DESC="Wait until a key is pressed before returning"/>
+      <RETURN NAME="key"  TYPE="STRING" DEFAULT="key"/>
+   </METHOD>
+
+   <METHOD NAME="waitPress" DESC="Wait until a key is pressed."/>
+   <METHOD NAME="waitRelease" DESC="Wait until all the keys are released."/>
+</DRIVER>

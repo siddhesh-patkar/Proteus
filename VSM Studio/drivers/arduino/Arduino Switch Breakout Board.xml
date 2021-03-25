@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino Switch Breakout Board.pdsclip" DESC="Arduino SPDT slide Switch" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="Arduino Switch"  ELEMENT="SW1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="GenericSwitch">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO2"/>
+         </PIN>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Generic.h">
+         <FUNCTION DESC="Switch State">
+            <RETURN TYPE="BOOLEAN"/>
+         </FUNCTION>
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

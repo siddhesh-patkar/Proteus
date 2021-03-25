@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DRIVER HEADER="Turtle.h">
+   <REQUIRE HEADER="Servo.h"/>
+
+   <FUNCTION DESC="Returns true if an object is detected within the distance at the specified head angle"> 
+      <PARAMETER NAME="distance" TYPE="FLOAT" DESC="Range of detection test"/>
+      <PARAMETER NAME="angle" TYPE="FLOAT" DESC="Angle value to write, from -90 to +90 degrees"/>
+  	   <RETURN TYPE="BOOLEAN"/>
+   </FUNCTION>     
+
+   <METHOD NAME="setAngle" DESC="Sets the angle in degrees of the sonar head (0 is straight ahead)">
+      <PARAMETER NAME="angle" TYPE="FLOAT" DESC="Angle value to write, from -90 to +90 degrees."/>
+   </METHOD>
+   <METHOD NAME="setRange" DESC="Sets the maximum range from the sonar head will listen for reflections.">
+      <PARAMETER NAME="range" TYPE="FLOAT" DESC="Maximum range in cm (10-400)"/>
+   </METHOD>
+   <METHOD NAME="ping" DESC="Distance in centimeters to obstacle or -1 if nothing detected">
+      <RETURN TYPE="FLOAT"/>
+   </METHOD>
+
+</DRIVER>

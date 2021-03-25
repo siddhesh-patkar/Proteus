@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino Generic Input Voltage.pdsclip" FAMILY="ARDUINO" DESC="Generic Input Voltage">
+   <PERIPHERAL TYPE="Arduino Input Voltage" ELEMENT="VIN1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="GenericInputVoltage">
+         <PIN NAME="AN" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD0"/>
+         </PIN>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Generic.h">
+         <!-- Function -->
+         <FUNCTION DESC="Return true if Voltage greater or equal to the trigger value.">
+            <PARAMETER NAME="Trigger" TYPE="FLOAT" DEFAULT="0" DESC="Trigger value in Volt"/>
+            <RETURN TYPE="BOOLEAN"/>
+         </FUNCTION>
+
+         <!-- Function -->
+         <FUNCTION DESC="Return true if Voltage greater or equal to the trigger value.">
+            <PARAMETER NAME="Trigger" TYPE="FLOAT" DEFAULT="0" DESC="Trigger value in Volt"/>
+            <RETURN TYPE="BOOLEAN"/>
+         </FUNCTION>
+
+         <!-- Methods -->
+         <METHOD NAME="readAdc" DESC="Read Adc Channel.">
+            <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="Raw 10bit resolution"/>
+         </METHOD>
+         <METHOD NAME="readAverageVoltage" DESC="Read Average Input Voltage.">
+            <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="Volt"/>
+            <PARAMETER NAME="navr" TYPE="INTEGER" DEFAULT="100" DESC="Number of Averages"/>
+         </METHOD>
+         <METHOD NAME="readVoltage" DESC="Read Input Voltage.">
+            <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="Volt"/>
+         </METHOD>
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

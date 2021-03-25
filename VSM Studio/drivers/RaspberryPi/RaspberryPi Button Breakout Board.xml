@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Raspberry Pi/RaspberryPi Button Breakout Board.pdsclip" FAMILY="Raspberry Pi" DESC="Momentary Action Push Button">
+   <PERIPHERAL TYPE="RPi Button" ELEMENT="BTN1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="Button">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO4"/>
+         </PIN>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Generic">
+         <FUNCTION DESC="Button State">
+            <RETURN TYPE="BOOLEAN"/>
+         </FUNCTION>
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

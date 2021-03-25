@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Displays" FILE="Raspberry Pi/RaspberryPi RGB TFT Display.pdsclip" FAMILY="Raspberry Pi" DESC="TFT Display">
+   <PERIPHERAL TYPE="TFT LCD" ELEMENT="LCD1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="TFTDisplay">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO18"/>
+         </PIN>
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO23"/>
+         </PIN>
+   	</INTERFACE>
+   
+     <!-- Firmware Driver -->
+      <DRIVER HEADER="Displays">
+         <!-- Methods for TFT Display -->
+         <!-- Image Methods -->
+         <METHOD NAME="loadImage" DESC="Turn the RGB Leds on or off.">
+            <PARAMETER NAME="Image" TYPE="STRING" DESC="Pictures Path"/>
+            <PARAMETER NAME="Angle" TYPE="INTEGER" DEFAULT="90" DESC="Rotation Angle"/>
+         </METHOD>
+
+         <!-- Drawing Methods -->
+         <METHOD NAME="setOutline" DESC="Sets outline colour.">
+            <PARAMETER NAME="Red" TYPE="INTEGER" DEFAULT="255" DESC="Amount of Red 0-255"/>
+            <PARAMETER NAME="Green" TYPE="INTEGER" DEFAULT="255" DESC="Amount of Green 0-255"/>
+            <PARAMETER NAME="Blue" TYPE="INTEGER" DEFAULT="255" DESC="Amount of Blue 0-255"/>
+         </METHOD>
+         
+         <METHOD NAME="setFill" DESC="Sets Fill colour.">
+            <PARAMETER NAME="Red" TYPE="INTEGER" DEFAULT="255" DESC="Amount of Red 0-255"/>
+            <PARAMETER NAME="Green" TYPE="INTEGER" DEFAULT="255" DESC="Amount of Green 0-255"/>
+            <PARAMETER NAME="Blue" TYPE="INTEGER" DEFAULT="255" DESC="Amount of Blue 0-255"/>
+         </METHOD>
+         
+         <METHOD NAME="fillScreen" DESC="Fills screen with fill colour."/>
+                  
+         <METHOD NAME="drawCircle" DESC="Draws a circle with specified location and size.">
+            <PARAMETER NAME="X" TYPE="INTEGER" DEFAULT="120" DESC="X Co-orderedlist 0-240"/>
+            <PARAMETER NAME="Y" TYPE="INTEGER" DEFAULT="160" DESC="Y Co-orderedlist 0-320"/>
+            
+            <PARAMETER NAME="Radius" TYPE="INTEGER" DEFAULT="25" DESC="Height 0-240"/>
+         </METHOD>
+         
+         <METHOD NAME="drawEllipses" DESC="Draws a ellipses with specified location and size.">
+            <PARAMETER NAME="X" TYPE="INTEGER" DEFAULT="120" DESC="X Co-orderedlist 0-240"/>
+            <PARAMETER NAME="Y" TYPE="INTEGER" DEFAULT="160" DESC="Y Co-orderedlist 0-320"/>
+            
+            <PARAMETER NAME="xRadius" TYPE="INTEGER" DEFAULT="50" DESC="Height 0-240"/>
+            <PARAMETER NAME="yRadius" TYPE="INTEGER" DEFAULT="50" DESC="Width 0-320"/>
+         </METHOD>
+         
+         <METHOD NAME="drawRectangle" DESC="Draws a rectangle with specified location and size.">
+            <PARAMETER NAME="X1" TYPE="INTEGER" DEFAULT="120" DESC="X Co-orderedlist 0-240"/>
+            <PARAMETER NAME="Y1" TYPE="INTEGER" DEFAULT="160" DESC="Y Co-orderedlist 0-320"/>
+            
+            <PARAMETER NAME="Height" TYPE="INTEGER" DEFAULT="50" DESC="Height 0-240"/>
+            <PARAMETER NAME="Width" TYPE="INTEGER" DEFAULT="50" DESC="Width 0-320"/>
+         </METHOD>
+         
+         <METHOD NAME="drawLine" DESC="Draws a line between two points in outline colour.">
+            <PARAMETER NAME="X1" TYPE="INTEGER" DEFAULT="10" DESC="X Co-orderedlist 0-240"/>
+            <PARAMETER NAME="Y1" TYPE="INTEGER" DEFAULT="10" DESC="Y Co-orderedlist 0-320"/>
+            
+            <PARAMETER NAME="X2" TYPE="INTEGER" DEFAULT="10" DESC="X Co-orderedlist 0-240"/>
+            <PARAMETER NAME="Y2" TYPE="INTEGER" DEFAULT="10" DESC="Y Co-orderedlist 0-320"/>
+         </METHOD>
+         
+         <METHOD NAME="newPolygon" DESC="Starts a new polygon.">
+            <PARAMETER NAME="X" TYPE="INTEGER" DEFAULT="10" DESC="X Co-orderedlist 0-240"/>
+            <PARAMETER NAME="Y" TYPE="INTEGER" DEFAULT="10" DESC="Y Co-orderedlist 0-320"/>
+         </METHOD>
+         
+         <METHOD NAME="addPolygonPoint" DESC="Adds a point to the polygon.">
+            <PARAMETER NAME="X" TYPE="INTEGER" DEFAULT="10" DESC="X Co-orderedlist 0-240"/>
+            <PARAMETER NAME="Y" TYPE="INTEGER" DEFAULT="10" DESC="Y Co-orderedlist 0-320"/>
+         </METHOD>
+         
+         <METHOD NAME="drawPolygon" DESC="Draws the Polygon."/>
+         
+         <ENUMERATION NAME="FONT">
+            <CONSTANT NAME="Serif" VALUE="0"/>
+            <CONSTANT NAME="Sans" VALUE="1"/>
+            <CONSTANT NAME="Mono" VALUE="2"/>
+         </ENUMERATION>
+         
+         <METHOD NAME="setTextFont" DESC="Text properties.">
+            <PARAMETER NAME="TestSize" TYPE="INTEGER" DEFAULT="12" DESC="Size of text."/>
+            <PARAMETER NAME="TextFont" TYPE="FONT" DEFAULT="Serif" DESC="Font text is displated as."/>
+         </METHOD>
+         
+         <METHOD NAME="customTextFont" DESC="Text properties.">
+            <PARAMETER NAME="TestSize" TYPE="INTEGER" DEFAULT="12" DESC="Size of text."/>
+            <PARAMETER NAME="TextFont" TYPE="STRING" DEFAULT="DejaVuSans.ttf" DESC="Font text is displated as."/>
+         </METHOD>
+         
+         <METHOD NAME="drawText" DESC="Creates some text.">
+            <PARAMETER NAME="Text" TYPE="String" DESC="Text drawn"/>
+            <PARAMETER NAME="X" TYPE="INTEGER" DEFAULT="10" DESC="X Co-orderedlist 0-240"/>
+            <PARAMETER NAME="Y" TYPE="INTEGER" DEFAULT="10" DESC="Y Co-orderedlist 0-320"/>
+            <PARAMETER NAME="Angle" TYPE="INTEGER" DEFAULT="0" DESC="Angle of text"/>
+         </METHOD>
+         
+         <METHOD NAME="clear" DESC="Clear the display."/>
+      </DRIVER> 
+   </PERIPHERAL>
+</CLIP>	
+  

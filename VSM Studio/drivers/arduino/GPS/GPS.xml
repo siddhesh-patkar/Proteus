@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Generic GPS Module -->
+<DRIVER HEADER="GPS.h">
+ <REQUIRE HEADER="core.h"/>
+ <REQUIRE HEADER="SoftwareSerial.h"/>
+
+ <ENUMERATION NAME="RATES">
+    <CONSTANT NAME="RATE_10S"   VALUE="10000"/>
+    <CONSTANT NAME="RATE_5S"    VALUE="5000"/> 
+    <CONSTANT NAME="RATE_1S"    VALUE="1000"/>
+    <CONSTANT NAME="RATE_500MS" VALUE="500"/> 
+    <CONSTANT NAME="RATE_200MS" VALUE="200"/> 
+ </ENUMERATION>    
+
+ <FUNCTION DESC="Poll the GPS for data"> 
+	  <RETURN TYPE="BOOLEAN"/>
+ </FUNCTION>
+
+ <METHOD NAME="waitForFix" DESC="Wait until a new fix is received - use the sensor function to check for valid fix data.">
+    <PARAMETER NAME="newData" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="If TRUE, wait until a new fix is received"/> 	  
+    <PARAMETER NAME="timeOut" TYPE="INTEGER" DEFAULT="0" DESC="Maximum number of milliseconds to wait, 0 for infinite"/> 	  
+ </METHOD>
+
+ <METHOD NAME="getPosition" DESC="Get current latitude and longitude">
+    <RETURN NAME="latitude"  TYPE="FLOAT" DEFAULT="lat" DESC="Latitude in decimal degrees north"/>
+    <RETURN NAME="longitude" TYPE="FLOAT" DEFAULT="lon" DESC="Longitude in decimal degrees east"/>
+ </METHOD>      
+ 
+ <METHOD NAME="getVelocity" DESC="Get current speed and direction">
+    <RETURN NAME="speed"   TYPE="FLOAT" DEFAULT="speed" DESC="Speed over ground in m/s"/>
+    <RETURN NAME="bearing" TYPE="FLOAT" DEFAULT="dir" DESC="Bearing in degrees rel true north"/>
+ </METHOD>      
+ 
+ <METHOD NAME="getAltitude" DESC="Get altitude">
+    <RETURN NAME="altitude" TYPE="FLOAT" DEFAULT="alt" DESC="Altitude in meters above mean sea level"/>
+ </METHOD>      
+
+ <METHOD NAME="getSatellites" DESC="Get number of satellites">
+    <RETURN NAME="Satellites" TYPE="INTEGER" DEFAULT="sats" DESC="Number of satellites in view"/>
+ </METHOD>      
+ 
+ <METHOD NAME="getDistance" DESC="Get distance between two positions using the haversine formula">
+    <PARAMETER NAME="lat1" TYPE="FLOAT" DESC="Latitude of first point"/>
+    <PARAMETER NAME="lng1" TYPE="FLOAT" DESC="Longitude of first point"/>
+    <PARAMETER NAME="lat2" TYPE="FLOAT" DESC="Latitude of second point"/>
+    <PARAMETER NAME="lng2" TYPE="FLOAT" DESC="Longitude of second point"/>
+    <RETURN NAME="distance" TYPE="FLOAT" DEFAULT="distance" DESC="Distance in meters"/>
+ </METHOD>      
+
+ <METHOD NAME="getBearing" DESC="Get the initial bearing between two positions">
+    <PARAMETER NAME="lat1" TYPE="FLOAT" DESC="Latitude of first point"/>
+    <PARAMETER NAME="lng1" TYPE="FLOAT" DESC="Longitude of first point"/>
+    <PARAMETER NAME="lat2" TYPE="FLOAT" DESC="Latitude of second point"/>
+    <PARAMETER NAME="lng2" TYPE="FLOAT" DESC="Longitude of second point"/>
+    <RETURN NAME="bearing" TYPE="FLOAT" DEFAULT="bearing" DESC="Bearing in degrees"/>
+ </METHOD>      
+        
+ <METHOD NAME="setUpdateRate" DESC="Set time between GPS update messages">
+    <PARAMETER NAME="Update Rate" TYPE="RATES" DESC="Time between NMEA updates"/>        
+ </METHOD>
+
+ <METHOD NAME="setFixRate" DESC="Set time between GPS fixes">
+    <PARAMETER NAME="Fix Rate" TYPE="RATES" DESC="Time between GPS fixes"/>        
+ </METHOD>
+         
+</DRIVER>

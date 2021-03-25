@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PROGRAMMER NAME="Yun SSH Uploader" ID="YUNSSH" PATH="RTP" VERSION="1.0" AVAILABILITY="Internal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/programmer.xsd">
+  <TOOL NAME="SSHRTP" FILE="sshrtp.exe">
+    <OPTION NAME="-H " DESC="&lt;host&gt;             Connect to device with name or ip &lt;host&gt;." PARAM="STRING"/>
+    <OPTION NAME="-N " DESC="&lt;username&gt;         User name is &lt;username&gt;." PARAM="STRING"/>
+    <OPTION NAME="-P " DESC="&lt;password&gt;         Password is &lt;password&gt;." PARAM="STRING"/>
+    <OPTION NAME="-U " DESC="&lt;remote&gt; &lt;local&gt;   Upload file &lt;local&gt; to &lt;remote&gt; path." PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-D " DESC="&lt;remote&gt; &lt;local&gt;   Download file from &lt;remote&gt; path to &lt;local&gt;." PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-X " DESC="&lt;file&gt;             Execute remote file." PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-C " DESC="&lt;path&gt;             Change working directory." PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-G" DESC="Check board configuration, apply fixes if required."/>
+    <OPTION NAME="-T" DESC="Enable trace output." ADVANCED="1"/>
+    <OPTION NAME="-Q" DESC="Quiet (no messages)." ADVANCED="1"/>
+  </TOOL>
+  <FAMILY NAME="ARDUINO">
+    <CONTROLLER NAME="Arduino Uno" DEVICE="atmega328p"/>
+    <CONTROLLER NAME="Arduino Mega" DEVICE="atmega2560"/>
+    <CONTROLLER NAME="Arduino Leonardo" DEVICE="atmega32u4"/>
+    <CONTROLLER NAME="Arduino Yun" DEVICE="atmega32u4"/>
+    <OPTION NAME="-G " VALUE="Yun"/>
+  </FAMILY>
+  <INTERFACE NAME="Arduino Yun">
+    <PROPERTY NAME="HOST" DESC="Host" TYPE="_arduino._tcp."/>
+    <PROPERTY NAME="USERNAME" DESC="User Name" VALUE="root"/>
+    <PROPERTY NAME="PASSWORD" DESC="Password" VALUE="arduino"/>
+    <PROPERTY NAME="TARGET_PATH" DESC="Target Path" VALUE="/vsm"/>
+    <PROPERTY NAME="BOOTLOADER" DESC="Bootloader" VALUE="Caterina-Yun-noblink.hex"/>
+    <OPTION NAME="-H " VALUE="%HOST%"/>
+    <OPTION NAME="-N " VALUE="%USERNAME%"/>
+    <OPTION NAME="-P " VALUE="%PASSWORD%"/>
+  </INTERFACE>
+  <INTERFACE NAME="Arduino Yun Shield on Arduino Uno 328">
+    <PROPERTY NAME="HOST" DESC="Host" TYPE="_arduino._tcp."/>
+    <PROPERTY NAME="USERNAME" DESC="User Name" VALUE="root"/>
+    <PROPERTY NAME="PASSWORD" DESC="Password" VALUE="arduino"/>
+    <PROPERTY NAME="TARGET_PATH" DESC="Target Path" VALUE="/vsm"/>
+    <PROPERTY NAME="BOOTLOADER" DESC="Bootloader" VALUE="optiboot_atmega328.hex"/>
+    <OPTION NAME="-H " VALUE="%HOST%"/>
+    <OPTION NAME="-N " VALUE="%USERNAME%"/>
+    <OPTION NAME="-P " VALUE="%PASSWORD%"/>
+  </INTERFACE>
+  <INTERFACE NAME="Arduino Yun Shield on Arduino Mega 2560">
+    <PROPERTY NAME="HOST" DESC="Host" TYPE="_arduino._tcp."/>
+    <PROPERTY NAME="USERNAME" DESC="User Name" VALUE="root"/>
+    <PROPERTY NAME="PASSWORD" DESC="Password" VALUE="arduino"/>
+    <PROPERTY NAME="TARGET_PATH" DESC="Target Path" VALUE="/vsm"/>
+    <PROPERTY NAME="BOOTLOADER"  DESC="Bootloader" VALUE="stk500boot_v2_mega2560.hex"/>
+    <OPTION NAME="-H " VALUE="%HOST%"/>
+    <OPTION NAME="-N " VALUE="%USERNAME%"/>
+    <OPTION NAME="-P " VALUE="%PASSWORD%"/>
+  </INTERFACE>
+  <FILE TYPE="HEX" DESC="Intel Hex"/>
+  <FILE TYPE="ELF" DESC="ELF"/>
+  <FILE TYPE="DAT" DESC="Resource File List"/>
+  <PROCESS TOOL="SSHRTP" NAME="Upload Resources" ID="UPLOAD" CMDLINE="%OPTIONS% -U &quot;@%INFILE%&quot; " >
+      <OPTION NAME="-X " VALUE="&quot;mkdir -p '%TARGET_PATH%'&quot;"/>
+      <OPTION NAME="-C " VALUE="&quot;%TARGET_PATH%&quot;"/>
+  </PROCESS>
+  <PROCESS TOOL="SSHRTP" NAME="Upload Program"  ID="PROGRAM" CMDLINE="%OPTIONS% -U &quot;%INFILE%&quot; &quot;%INFILE_NAME%&quot; -E -X &quot;/usr/bin/run-avrdude '%INFILE_NAME% %INFILE_SUFFIX%' -v -p%DEVICE%&quot;" >
+     <OPTION NAME="-C " VALUE="/tmp"/>
+  </PROCESS>
+</PROGRAMMER>

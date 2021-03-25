@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Internet of Things" FILE="Arduino/GoKit3.pdsclip" DESC="GoKit3 Shield (ESP8266)" FAMILY="ARDUINO">
+     <PERIPHERAL TYPE="SERVER" DESC="ESP8266 VFP Server" ELEMENT="ESP1" SUFFIX="SERVER">
+        <INTERFACE OBJECT="Vfp8266::Server" EXTERNAL="VFP">
+         <PORT NAME="UART"/>          
+         <SETUP NAME="begin">
+            <PROPERTY NAME="PORT" ELEMENT="ESP1" TYPE="INTEGER"/>
+         </SETUP>         
+         <LOOP NAME="poll"/>
+         <SERVER TYPE="VFP" TRANSPORT="ETHERNET" ELEMENT="ESP1"/>
+        </INTERFACE>
+        <DRIVER FILE="Vfp8266/VfpServer.xml"/>
+    </PERIPHERAL>            	   
+    
+    <PERIPHERAL TYPE="STORAGE" DESC="ESP8266 Storage" ELEMENT="ESP1" SUFFIX="STORAGE" >
+       <INTERFACE OBJECT="Vfp8266::FileStore" EXTERNAL="FS" >
+         <SETUP NAME="begin"></SETUP>  
+         <STORAGE NAME="MANIFEST" ELEMENT="ESP1"/>
+        </INTERFACE>
+        <DRIVER FILE="Vfp8266/FileStore.xml"/>
+    </PERIPHERAL>            	   
+
+    <PERIPHERAL TYPE="Arduino Button" ELEMENT="B1" >
+      <INTERFACE OBJECT="GenericInvertedButton">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO6"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="Generic/Button.xml"/>
+    </PERIPHERAL>
+
+   <PERIPHERAL TYPE="Arduino Button" ELEMENT="B2" >
+      <INTERFACE OBJECT="GenericInvertedButton">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO7"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="Generic/Button.xml"/>
+    </PERIPHERAL>
+
+   <PERIPHERAL TYPE="Arduino Button" ELEMENT="B3" >
+      <INTERFACE OBJECT="GenericInvertedButton">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO15"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="Generic/Button.xml"/>
+   </PERIPHERAL>
+
+   <PERIPHERAL TYPE="DHT11 Humidity Temperature" ELEMENT="HTS1">
+      <INTERFACE OBJECT="DHTXX">
+         <PIN NAME="data" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO3"/>
+         </PIN>
+         <!-- TYPE allows DHT11=11 (low accuracy sensor) and DHT22=22 (high accuracy sensor) -->
+         <PROPERTY NAME="TYPE" ELEMENT="HTS1" TYPE="INTEGER" VALUE="11"/>
+         <SETUP NAME="begin"/>
+      </INTERFACE>
+      <DRIVER FILE="dhtxx/dhtxx.xml"/>
+   </PERIPHERAL>
+
+   <PERIPHERAL TYPE="Piezo Speaker" ELEMENT="LS1" >
+      <INTERFACE OBJECT="GenericSpeaker">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO2"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="Generic/Speaker.xml"/>
+   </PERIPHERAL>
+
+   <PERIPHERAL TYPE="RGB LED" ELEMENT="RGB1" >
+      <INTERFACE OBJECT="ChainableLED">
+         <PIN NAME="CLK" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO19"/>
+         </PIN>
+         <PIN NAME="DATA" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO18"/>
+         </PIN>
+        <PROPERTY NAME="CHAINLENGTH" ELEMENT="U2" TYPE="INTEGER" VALUE="1"/>
+        <SETUP NAME="init" />    
+      </INTERFACE>
+      <DRIVER FILE="ChainableLED/ChainableLED.xml"/>    
+   </PERIPHERAL>
+   
+   <PERIPHERAL TYPE="DC Motor" ELEMENT="MOTOR1" >
+      <INTERFACE OBJECT="GenericMotorBridge">
+         <PIN NAME="DIR" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO4"/>
+         </PIN>                     
+         <PIN NAME="PWM" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO5"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="Generic/MotorBridge.xml"/>    
+   </PERIPHERAL>   
+</CLIP>

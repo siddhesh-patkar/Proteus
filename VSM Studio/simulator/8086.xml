@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SIMULATOR xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/simulator.xsd">
+  <FAMILY NAME="8086">
+    <KEY VALUE="6656"/>
+    <CONTROLLER NAME="8086">
+      <PIN NAME="READY" TERMINAL="POWER" NET="VCC"/>
+      <PIN NAME="MN/$MX$" TERMINAL="POWER" NET="VCC"/>
+      <PIN NAME="RESET" TERMINAL="GROUND" NET="GND"/>
+    </CONTROLLER>
+  </FAMILY>
+</SIMULATOR>

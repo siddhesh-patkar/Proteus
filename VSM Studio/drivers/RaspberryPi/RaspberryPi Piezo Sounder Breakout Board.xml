@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Raspberry Pi/RaspberryPi Piezo Sounder Breakout Board.pdsclip" FAMILY="Raspberry Pi" DESC="Piezo Breakout Board" >
+   <PERIPHERAL TYPE="RPi Piezo" ELEMENT="LS1">
+
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="Piezo">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO6"/>
+         </PIN>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Generic">
+         <METHOD NAME="drive"   DESC="Drive Piezo."/>
+         <METHOD NAME="enable"  DESC="Enable Piezo."/>
+         <METHOD NAME="disable" DESC="Disable Piezo."/>
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

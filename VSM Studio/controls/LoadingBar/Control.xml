@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<CONTROL>
+
+   <CONFIG>
+      <PROPERTY NAME="init" DESC="Initial value" TYPE="FLOAT" MIN="0" MAX="100" DEFAULT="0"/>
+   	  <PROPERTY NAME="barColour" DESC="Colour of the loading bar" TYPE="RGB"/>
+	  <PROPERTY NAME="textFont" DESC="Font for the value readout" TYPE="FONT"/>
+	  <PROPERTY NAME="textVisible" DESC="Text Visibility" TYPE="BOOLEAN" DEFAULT="1"/>
+	  <PROPERTY NAME="animateBar" DESC="Smoothly animate the needle movements" TYPE="BOOLEAN" DEFAULT="1"/>
+   </CONFIG>
+
+   <DRIVER HEADER="Controls">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+        <METHOD NAME="setValue" DESC="Sets the loading bar position">
+           <PARAMETER NAME="location" TYPE="FLOAT" DEFAULT="0.0" />
+        </METHOD>        
+   </DRIVER>
+
+</CONTROL>

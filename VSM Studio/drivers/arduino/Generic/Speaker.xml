@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Generic Piezo Speaker -->
+<DRIVER HEADER="Generic.h">
+   <METHOD NAME="beep" DESC="Play a 1kHz beep for 1 second"/>
+   <METHOD NAME="tone" DESC="Play tone for specified duration">
+      <PARAMETER NAME="freq" TYPE="INTEGER" DESC="Tone Frequency" DEFAULT="1000" />
+      <PARAMETER NAME="duration" TYPE="INTEGER" DESC="Tone Duration (ms)" DEFAULT="1000" />
+   </METHOD>
+   <METHOD NAME="toneOn" DESC="Play tone indefinitely">
+      <PARAMETER NAME="freq" TYPE="INTEGER" DESC="Tone Frequency" DEFAULT="1000" />
+   </METHOD>
+   <METHOD NAME="toneOff" DESC="Stop playing tone"/>
+</DRIVER>  

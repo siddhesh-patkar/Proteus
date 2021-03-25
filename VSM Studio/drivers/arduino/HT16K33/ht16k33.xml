@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for HT16K33 LED/Keyboard controller  -->
+<DRIVER HEADER="HT16K33.h">
+   <REQUIRE HEADER="Adafruit_Trellis.h"/>
+   <REQUIRE HEADER="Wire.h"/>
+
+   <!-- BLINK options enumeration -->
+   <ENUMERATION NAME="BLINK_OPT">
+      <CONSTANT NAME="BLINK_OFF"     VALUE="0"/>
+      <CONSTANT NAME="BLINK_2HZ"     VALUE="1"/>
+      <CONSTANT NAME="BLINK_1HZ"     VALUE="2"/>
+      <CONSTANT NAME="BLINK_HALFHZ"  VALUE="3"/>
+   </ENUMERATION>
+
+   <!-- Specialized LED matrix methods -->
+   <METHOD NAME="setBrightness" DESC="Define the brightness from 1/16 to 16/16 duty.">
+      <PARAMETER NAME="b" TYPE="INTEGER" DEFAULT="16" DESC="Duty Factor from 0 to 15"/>
+   </METHOD>
+   <METHOD NAME="blinkRate" DESC="Set Led Blink ON/OFF or the blink rate.">
+      <PARAMETER NAME="br" TYPE="BLINK_OPT" DEFAULT="BLINK_OFF" DESC="Blink Options"/>
+   </METHOD>
+   <METHOD NAME="writeDisplay" DESC="Write the display data buffer contents to physical LEDs."/>
+   <METHOD NAME="clear" DESC="Clear the display data buffer contents."/>
+   <METHOD NAME="setLED" DESC="Set to 1 the display data buffer addressing specific LED.">
+      <PARAMETER NAME="ln" TYPE="INTEGER" DEFAULT="0" DESC="LED number"/>
+   </METHOD>
+   <METHOD NAME="clrLED" DESC="Reset to 0 the display data buffer addressing specific LED.">
+      <PARAMETER NAME="ln" TYPE="INTEGER" DEFAULT="0" DESC="LED number"/>
+   </METHOD>
+   <METHOD NAME="isLED" DESC="Returns TRUE if display data buffer adressing LED is set.">
+      <PARAMETER NAME="ln" TYPE="INTEGER" DEFAULT="0" DESC="LED number"/>
+      <RETURN NAME="state"  TYPE="BOOLEAN"/>
+   </METHOD>
+
+   <!-- Specialized Switch matrix methods -->
+   <METHOD NAME="readSwitches" DESC="Return TRUE if any switch is pressed.">
+      <RETURN NAME="state"  TYPE="BOOLEAN"/>
+   </METHOD>
+   <METHOD NAME="isKeyPressed" DESC="Return TRUE if an addressed switch is pressed.">
+      <PARAMETER NAME="sn" TYPE="INTEGER" DEFAULT="0" DESC="Switch number. Max 0-38 keys"/>
+      <RETURN NAME="state"  TYPE="BOOLEAN"/>
+   </METHOD>
+   <METHOD NAME="wasKeyPressed" DESC="Return TRUE if an addressed switch was pressed.">
+      <PARAMETER NAME="sn" TYPE="INTEGER" DEFAULT="0" DESC="Switch number. Max 0-38 keys"/>
+      <RETURN NAME="state"  TYPE="BOOLEAN"/>
+   </METHOD>
+   <METHOD NAME="justPressed" DESC="Return TRUE if an addressed switch is pressed just now.">
+      <PARAMETER NAME="sn" TYPE="INTEGER" DEFAULT="0" DESC="Switch number. Max 0-38 keys"/>
+      <RETURN NAME="state"  TYPE="BOOLEAN"/>
+   </METHOD>
+   <METHOD NAME="justReleased" DESC="Return TRUE if an addressed switch is released just now.">
+      <PARAMETER NAME="sn" TYPE="INTEGER" DEFAULT="0" DESC="Switch number. Max 0-38 keys"/>
+      <RETURN NAME="state"  TYPE="BOOLEAN"/>
+   </METHOD>
+</DRIVER>

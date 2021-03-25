@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+   <PROGRAMMER NAME="ESP8266" ID="ESP8266" VERSION="6.1" URL="http://savannah.nongnu.org/projects/avrdude/" AVAILABILITY="Internal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/programmer.xsd">
+  <TOOL NAME="AVRDUDE" FILE="avrdude.exe"  PATH="AVRDUDE">
+    <OPTION NAME="-p " DESC="partno Required. Specify AVR device." PARAM="STRING"/>
+    <OPTION NAME="-b " DESC="baudrate Override RS-232 baud rate." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-B " DESC="bitclock Specify JTAG/STK500v2 bit clock period (us)." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-C " DESC="config-file Specify location of configuration file." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-c " DESC="programmer Specify programmer type." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-D" DESC="Disable auto erase for flash memory" ADVANCED="1"/>
+    <OPTION NAME="-i " DESC="delay ISP Clock Delay [in microseconds]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-P " DESC="port Specify connection port." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-F" DESC="Override invalid signature check." ADVANCED="1"/>
+    <OPTION NAME="-e" DESC="Perform a chip erase." ADVANCED="1"/>
+    <OPTION NAME="-O" DESC="Perform RC oscillator calibration (see AVR053)." ADVANCED="1"/>
+    <OPTION NAME="-U " DESC="memtype:r|w|v:filename[:format] Memory operation specification. Multiple -U options are allowed, each request is performed in the order specified." PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-n" DESC="Do not write anything to the device." ADVANCED="1"/>
+    <OPTION NAME="-V" DESC="Do not verify." ADVANCED="1"/>
+    <OPTION NAME="-u" DESC="Disable safemode, default when running from a script." ADVANCED="1"/>
+    <OPTION NAME="-s" DESC="Silent safemode operation, will not ask you if fuses should be changed back." ADVANCED="1"/>
+    <OPTION NAME="-t" DESC="Enter terminal mode." ADVANCED="1"/>
+    <OPTION NAME="-E " DESC="exitspec[,exitspec] List programmer exit specifications." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-x " DESC="extended_param Pass extended_param to programmer." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-y" DESC="Count # erase cycles in EEPROM." ADVANCED="1"/>
+    <OPTION NAME="-Y " DESC="number Initialize erase cycle # in EEPROM." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-v" DESC="Verbose output. -v -v for more." MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="-l " DESC="logfile Use logfile rather than stderr for diagnostics." PARAM="STRING" ADVANCED="1"/>
+  </TOOL>
+  <TOOL NAME="RTP" FILE="ftprtp.exe" PATH="RTP">
+    <OPTION NAME="-H " DESC="&lt;host&gt; Connect to device with name or ip &lt;host&gt;." PARAM="STRING"/>
+    <OPTION NAME="-N " DESC="&lt;username&gt; User name is &lt;username&gt;." PARAM="STRING"/>
+    <OPTION NAME="-P " DESC="&lt;password&gt; Password is &lt;password&gt;." PARAM="STRING"/>
+    <OPTION NAME="-U " DESC="&lt;remote&gt; &lt;local&gt; Upload file &lt;local&gt; to &lt;remote&gt; path." PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-D " DESC="&lt;remote&gt; &lt;local&gt; Download file from &lt;remote&gt; path to &lt;local&gt;." PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-C " DESC="&lt;path&gt;             Change working directory." PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-T" DESC="Enable trace output." ADVANCED="1"/>
+    <OPTION NAME="-Q" DESC="Quiet (no messages)." ADVANCED="1"/>
+  </TOOL>
+
+  <FAMILY NAME="ARDUINO">
+    <CONTROLLER NAME="Arduino Uno">
+      <OPTION NAME="-p " VALUE="m328p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="Arduino Nano">
+      <OPTION NAME="-p " VALUE="m328p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="Arduino Mega">
+      <OPTION NAME="-p " VALUE="m2560"/>
+    </CONTROLLER>
+  </FAMILY>
+  
+  <INTERFACE NAME="ESP8266 on Arduino Uno">
+    <PROPERTY NAME="HOST" DESC="Host" TYPE="_avrisp._tcp."/>
+    <PROPERTY NAME="USERNAME" DESC="User Name" VALUE="proteus"/>
+    <PROPERTY NAME="PASSWORD" DESC="Password" VALUE="esp8266"/>
+    <PROPERTY NAME="BOOTLOADER" DESC="Bootloader" VALUE="optiboot_atmega328.hex"/> 
+  </INTERFACE>
+  
+  <INTERFACE NAME="ESP8266 on Arduino Mega2560 ">
+    <PROPERTY NAME="HOST" DESC="Host" TYPE="_avrisp._tcp."/>
+    <PROPERTY NAME="USERNAME" DESC="User Name" VALUE="proteus"/>
+    <PROPERTY NAME="PASSWORD" DESC="Password" VALUE="esp8266"/>
+    <PROPERTY NAME="BOOTLOADER"  DESC="Bootloader" VALUE="stk500boot_v2_mega2560.hex"/>
+  </INTERFACE>
+    
+  <FILE TYPE="HEX" DESC="Intel Hex"/>
+  <FILE TYPE="ELF" DESC="ELF"/>
+  <FILE TYPE="DAT" DESC="Resource File List"/>
+  <PROCESS TOOL="AVRDUDE" NAME="Program Firmware" ID="PROGRAM" CMDLINE="%OPTIONS% -Uflash:w:%INFILE%">
+    <FILE TYPE="HEX" NAME="&quot;%INFILE%&quot;:i"/>
+    <FILE TYPE="ELF" NAME="&quot;%INFILE%&quot;:e"/>
+    <OPTION NAME="-c " VALUE="arduino"/>
+    <OPTION NAME="-P " VALUE="net:%HOST%:328"/>
+    <OPTION NAME="-V"/>
+    <OPTION NAME="-q"/>
+  </PROCESS>
+  <PROCESS TOOL="AVRDUDE" NAME="Verify Firmware" ID="VERIFY" CMDLINE="%OPTIONS% -Uflash:v:%INFILE%">
+    <FILE TYPE="HEX" NAME="&quot;%INFILE%&quot;:i"/>
+    <FILE TYPE="ELF" NAME="&quot;%INFILE%&quot;:e"/>
+    <OPTION NAME="-c " VALUE="arduino"/>
+    <OPTION NAME="-P " VALUE="net:%HOST%:328"/>
+    <OPTION NAME="-q"/>
+  </PROCESS>
+  <PROCESS TOOL="RTP" NAME="Upload Resources" ID="UPLOAD" CMDLINE="%OPTIONS% -Z -U %INFILE%">
+    <FILE TYPE="DAT" NAME="&quot;@%INFILE%&quot;"/>
+    <OPTION NAME="-H " VALUE="%HOST%"/>
+    <OPTION NAME="-N " VALUE="%USERNAME%"/>
+    <OPTION NAME="-P " VALUE="%PASSWORD%"/>
+  </PROCESS>
+
+</PROGRAMMER>

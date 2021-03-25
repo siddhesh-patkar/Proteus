@@ -1,0 +1,31 @@
+    <DRIVER HEADER="rtc.h">
+      <REQUIRE HEADER="wire.h"/>
+       
+       <!-- Methods -->              
+       <METHOD NAME="setTime" DESC="Set the current time from a separate values">
+         <PARAMETER NAME="year" TYPE="INTEGER"/>
+         <PARAMETER NAME="month" TYPE="INTEGER"/>
+         <PARAMETER NAME="day" TYPE="INTEGER"/>
+         <PARAMETER NAME="hour" TYPE="INTEGER"/>
+         <PARAMETER NAME="minute" TYPE="INTEGER"/>
+         <PARAMETER NAME="second" TYPE="INTEGER"/>
+       </METHOD>
+              
+       <METHOD NAME="setTimer" DESC="Set up the timer interrupt.">
+          <PARAMETER NAME="interval" TYPE="INTEGER"  DESC="Number of seconds between interrupts"/> 
+       </METHOD>
+       <METHOD NAME="cancelTimer" DESC="Cancel the timer interrupt."/>
+       <METHOD NAME="setAlarm" DESC="Set up the alarm interrupt.">
+          <PARAMETER NAME="hour" TYPE="INTEGER" DEFAULT="8" DESC="hour for alarm"/> 
+          <PARAMETER NAME="minute" TYPE="INTEGER" DEFAULT="0" DESC="minute for alarm"/> 
+          <PARAMETER NAME="second" TYPE="INTEGER" DEFAULT="0" DESC="second for alarm"/> 
+       </METHOD>
+       <METHOD NAME="cancelAlarm" DESC="Cancel the alarm interrupt."/>
+       
+    
+       <INTERRUPT DESC="Timer Interrupt" HOOK="attachTimerInterruptHandler"/>                   
+       <INTERRUPT DESC="Alarm Interrupt" HOOK="attachAlarmInterruptHandler"/>                   
+      
+
+     </DRIVER>
+   

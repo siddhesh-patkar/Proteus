@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PROGRAMMER NAME="LEODUDE" ID="LEODUDE" AVAILABILITY="Internal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/programmer.xsd">
+  <TOOL NAME="LEODUDE" FILE="LEODUDE.exe"  PATH="AVRDUDE">
+    <OPTION NAME="-p " DESC="partno Required. Specify AVR device." PARAM="STRING"/>
+    <OPTION NAME="-b " DESC="baudrate Override RS-232 baud rate." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-B " DESC="bitclock Specify JTAG/STK500v2 bit clock period (us)." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-C " DESC="config-file Specify location of configuration file." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-c " DESC="programmer Specify programmer type." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-D" DESC="Disable auto erase for flash memory" ADVANCED="1"/>
+    <OPTION NAME="-i " DESC="delay ISP Clock Delay [in microseconds]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-P " DESC="port Specify connection port." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-F" DESC="Override invalid signature check." ADVANCED="1"/>
+    <OPTION NAME="-e" DESC="Perform a chip erase." ADVANCED="1"/>
+    <OPTION NAME="-O" DESC="Perform RC oscillator calibration (see AVR053)." ADVANCED="1"/>
+    <OPTION NAME="-U " DESC="memtype:r|w|v:filename[:format] Memory operation specification. Multiple -U options are allowed, each request is performed in the order specified." PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-n" DESC="Do not write anything to the device." ADVANCED="1"/>
+    <OPTION NAME="-V" DESC="Do not verify." ADVANCED="1"/>
+    <OPTION NAME="-u" DESC="Disable safemode, default when running from a script." ADVANCED="1"/>
+    <OPTION NAME="-s" DESC="Silent safemode operation, will not ask you if fuses should be changed back." ADVANCED="1"/>
+    <OPTION NAME="-t" DESC="Enter terminal mode." ADVANCED="1"/>
+    <OPTION NAME="-E " DESC="exitspec[,exitspec] List programmer exit specifications." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-x " DESC="extended_param Pass extended_param to programmer." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-y" DESC="Count # erase cycles in EEPROM." ADVANCED="1"/>
+    <OPTION NAME="-Y " DESC="number Initialize erase cycle # in EEPROM." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-v" DESC="Verbose output. -v -v for more." MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="-l " DESC="logfile Use logfile rather than stderr for diagnostics." PARAM="STRING" ADVANCED="1"/>
+  </TOOL>
+  <TOOL NAME="RTP" FILE="avrrtp.exe" PATH="RTP">
+    <OPTION NAME="-P " DESC="port Specify connection port." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-b " DESC="baudrate Override RS-232 baud rate." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-S " DESC="Chip select line for SD card 'IOnn'" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-p " DESC="partno Specify AVR device." PARAM="STRING"/>
+    <OPTION NAME="-c " DESC="programmer Specify programmer type." PARAM="STRING" ADVANCED="1"/>    
+    <OPTION NAME="-d" DESC="Debug Mode (trace output)." ADVANCED="1"/>
+    <OPTION NAME="-q" DESC="Quell progress output. -q -q for less." MULTIPLE="1" ADVANCED="1"/>
+  </TOOL>
+  <FAMILY NAME="ARDUINO">
+    <CONTROLLER NAME="Arduino Leonardo">
+      <OPTION NAME="-p " VALUE="m32u4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="Arduino Yun">
+      <OPTION NAME="-p " VALUE="m32u4"/>
+    </CONTROLLER>
+  </FAMILY>
+  <INTERFACE NAME="Arduino Leonardo" URL="www.arduino.cc">
+    <OPTION NAME="-c " VALUE="avr109"/>
+    <OPTION NAME="-P " VALUE="%PORT%"/>
+    <OPTION NAME="-b " VALUE="%PORTCLOCK%"/>
+    <PROPERTY NAME="PORT" DESC="Port" TYPE="COM"/>
+    <PROPERTY NAME="PORTCLOCK" DESC="Port Speed" VALUE="57600"/>
+    <PROPERTY NAME="UPLOADER" DESC="Resource Uploader" VALUE="ArduinoLeonardo.hex"/>
+  </INTERFACE>
+  <INTERFACE NAME="Arduino Yun" URL="www.arduino.cc">
+    <OPTION NAME="-c " VALUE="avr109"/>
+    <OPTION NAME="-P " VALUE="%PORT%"/>
+    <OPTION NAME="-b " VALUE="%PORTCLOCK%"/>
+    <PROPERTY NAME="PORT" DESC="Port" TYPE="COM"/>
+    <PROPERTY NAME="PORTCLOCK" DESC="Port Speed" VALUE="57600"/>
+    <PROPERTY NAME="UPLOADER" DESC="Resource Uploader" VALUE="ArduinoYun.hex"/>
+  </INTERFACE>
+  <FILE TYPE="HEX" DESC="Intel Hex"/>
+  <FILE TYPE="ELF" DESC="ELF"/>
+  <FILE TYPE="DAT" DESC="Resource File List"/>
+  <PROCESS TOOL="LEODUDE" NAME="Program Firmware" ID="PROGRAM" CMDLINE="%OPTIONS% -Uflash:w:%INFILE%">
+    <FILE TYPE="HEX" NAME="&quot;%INFILE%&quot;:i"/>
+    <FILE TYPE="ELF" NAME="&quot;%INFILE%&quot;:e"/>
+    <OPTION NAME="-D"/>
+    <OPTION NAME="-V"/>
+    <OPTION NAME="-q"/>
+  </PROCESS>
+  <PROCESS TOOL="LEODUDE" NAME="Verify Firmware" ID="VERIFY" CMDLINE="%OPTIONS% -Uflash:v:%INFILE%">
+    <FILE TYPE="HEX" NAME="&quot;%INFILE%&quot;:i"/>
+    <FILE TYPE="ELF" NAME="&quot;%INFILE%&quot;:e"/>
+    <OPTION NAME="-q"/>
+  </PROCESS>
+  <PROCESS TOOL="RTP" NAME="Upload Resources" ID="UPLOAD" CMDLINE="%OPTIONS% -S %CHIPSELECT% -U %INFILE%">
+    <FILE TYPE="DAT" NAME="&quot;@%INFILE%&quot;"/>
+  </PROCESS>
+
+</PROGRAMMER>

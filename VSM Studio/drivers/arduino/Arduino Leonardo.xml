@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CONTROLLER NAME="Arduino Leonardo" FAMILY="ARDUINO" DESC="Arduino Leonardo ATmega32U4">
+    <PERIPHERAL NAME="cpu" TYPE="CPU" DESC="Arduino Processor" ELEMENT="U1">
+        <INTERFACE OBJECT="CPU" EXTERNAL="Cpu"/>
+        <DRIVER FILE="Cpu/Cpu.xml"/>
+    </PERIPHERAL>            	   
+      
+    <PERIPHERAL NAME="timer1" TYPE="TIMER1" DESC="Timer One" ELEMENT="U1" OPTIONAL="1">
+        <INTERFACE OBJECT="TimerOne" EXTERNAL="Timer1"/>
+        <DRIVER FILE="TimerOne/TimerOne.xml"/>
+    </PERIPHERAL>            	   
+    
+    <PERIPHERAL NAME="spi" TYPE="SPI" DESC="SPI Port" ELEMENT="U1" OPTIONAL="1" >
+       <INTERFACE OBJECT="SpiPort" EXTERNAL="Spi">
+          <SETUP NAME="begin"/>
+       </INTERFACE>
+       <DRIVER FILE="SPIPORT/spi.xml"/>
+    </PERIPHERAL>            	   
+
+    <PERIPHERAL NAME="i2c" TYPE="I2C" DESC="I2C Port" ELEMENT="U1" OPTIONAL="1" >
+       <INTERFACE OBJECT="I2CPort" EXTERNAL="I2C">
+          <SETUP NAME="begin"/>
+       </INTERFACE>
+       <DRIVER FILE="I2CPORT/i2c.xml"/>
+    </PERIPHERAL>            	   
+
+    <PERIPHERAL NAME="uart" TYPE="UART" DESC="UART (USB)" ELEMENT="U1" OPTIONAL="1" >
+       <INTERFACE OBJECT="UART" EXTERNAL="Uart"/>
+       <DRIVER FILE="UART/uart.xml"/>
+    </PERIPHERAL> 
+    
+    <PERIPHERAL NAME="uart1" TYPE="UART" DESC="UART1 (Hardware)" ELEMENT="U1" OPTIONAL="1" >
+       <INTERFACE OBJECT="UART" EXTERNAL="Uart1"/>
+       <DRIVER FILE="UART/uart.xml"/>
+    </PERIPHERAL>            	              	   
+
+</CONTROLLER>
+	
+  

@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BOMTemplate version="2">
+    <AppendNotes Type="bool" Value="false"/>
+    <CSS Type="QString">/*The main title of the BOM*/
+h1.mainTitle
+{
+	background-color:#f7f1ad;
+	border-bottom-style:solid;
+	border-bottom-width:0.6pt;
+	border-color:#e2e2ef;
+	border-left-style:solid;
+	border-left-width:0.6pt;
+	border-right-style:solid;
+	border-right-width:0.6pt;
+	border-top-style:solid;
+	border-top-width:0.6pt;
+	color:#a73610;
+	font-family:Franklin Gothic Medium;
+	font-size:20pt;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:8pt;
+	margin-left:6pt;
+	margin-right:4pt;
+	margin-top:7pt;
+	padding-bottom:5pt;
+	padding-left:7pt;
+	padding-right:0pt;
+	padding-top:5pt;
+	text-decoration:underline;
+}
+
+/*Header table*/
+table.headerTable
+{
+	cell-padding:0pt;
+	cell-spacing:0pt;
+	line-height:100%;
+	margin-bottom:1pt;
+	margin-left:4pt;
+	margin-right:4pt;
+	margin-top:7pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+}
+
+/*Header table titles*/
+p.headerTitle
+{
+	border-bottom-style:solid;
+	border-color:#000000;
+	border-left-style:solid;
+	border-right-style:solid;
+	border-top-style:solid;
+	color:#a73610;
+	font-family:Franklin Gothic Medium;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:2pt;
+	margin-left:5pt;
+	margin-right:4pt;
+	margin-top:2pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Header table values*/
+p.headerValue
+{
+	color:#000000;
+	font-family:Courier New;
+	font-size:11pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:2pt;
+	margin-left:4pt;
+	margin-right:4pt;
+	margin-top:2pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Notes title*/
+h3.NotesTitle
+{
+	color:#000000;
+	font-family:Arial;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	margin-bottom:2pt;
+	margin-left:6pt;
+	margin-right:4pt;
+	margin-top:10pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Notes*/
+p.bomNotes
+{
+	color:#000000;
+	font-family:Arial;
+	font-size:11pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:2pt;
+	margin-left:6pt;
+	margin-right:4pt;
+	margin-top:2pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Document Header*/
+p.DocHeader
+{
+	color:#000000;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:2pt;
+	margin-left:4pt;
+	margin-right:4pt;
+	margin-top:2pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Document Footer*/
+p.DocFooter
+{
+	color:#000000;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:2pt;
+	margin-left:4pt;
+	margin-right:4pt;
+	margin-top:2pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Main BOM table*/
+table.categoriesTable
+{
+	cell-padding:0pt;
+	cell-spacing:0pt;
+	line-height:100%;
+	margin-bottom:2pt;
+	margin-left:4pt;
+	margin-right:4pt;
+	margin-top:1pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	width:100%;
+}
+
+/*Section title*/
+p.sectionTitle
+{
+	background-color:#f7f1ad;
+	border-bottom-style:solid;
+	border-bottom-width:0.2pt;
+	border-color:#000000;
+	border-left-style:solid;
+	border-left-width:0.2pt;
+	border-right-style:solid;
+	border-right-width:0.2pt;
+	border-top-style:solid;
+	border-top-width:0.2pt;
+	color:#a73610;
+	font-family:Franklin Gothic Medium;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:1pt;
+	margin-left:0pt;
+	margin-right:1pt;
+	margin-top:7pt;
+	padding-bottom:1pt;
+	padding-left:2pt;
+	padding-right:0pt;
+	padding-top:1pt;
+	text-decoration:none;
+}
+
+/*Main table odd row entry*/
+p.oddfield
+{
+	border-bottom-style:none;
+	border-color:#000000;
+	border-left-style:none;
+	border-right-style:none;
+	border-top-style:dashed;
+	border-top-width:0.2pt;
+	color:#000000;
+	font-family:Courier New;
+	font-size:10pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	padding-bottom:2pt;
+	padding-left:4pt;
+	padding-right:3pt;
+	padding-top:1pt;
+	text-decoration:none;
+	vertical-align:top;
+}
+
+/*Main table even row entry*/
+p.evenfield
+{
+	background-color:#feffe6;
+	border-bottom-style:none;
+	border-color:#000000;
+	border-left-style:none;
+	border-right-style:none;
+	border-top-style:dashed;
+	border-top-width:0.2pt;
+	color:#000000;
+	font-family:Courier New;
+	font-size:10pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	padding-bottom:2pt;
+	padding-left:4pt;
+	padding-right:3pt;
+	padding-top:1pt;
+	text-decoration:none;
+	vertical-align:top;
+}
+
+/*Field heading*/
+p.fieldHeading
+{
+	color:#a73610;
+	font-family:Franklin Gothic Medium;
+	font-size:10pt;
+	font-style:italic;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:2pt;
+	margin-left:4pt;
+	margin-right:4pt;
+	margin-top:2pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:underline;
+}
+
+/*Sub-totals*/
+p.subtotal
+{
+	color:#a73610;
+	font-family:Courier New;
+	font-size:10pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:2pt;
+	margin-left:4pt;
+	margin-right:4pt;
+	margin-top:2pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Totals*/
+p.total
+{
+	color:#a73610;
+	font-family:Courier New;
+	font-size:10pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:2pt;
+	margin-left:4pt;
+	margin-right:4pt;
+	margin-top:2pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*Links*/
+a
+{
+	text-decoration:underline;
+}
+
+/*Timestamp*/
+p.timestamp
+{
+	color:#a73610;
+	font-family:Courier New;
+	font-size:9pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:2pt;
+	margin-left:4pt;
+	margin-right:4pt;
+	margin-top:2pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-align:right;
+	text-decoration:none;
+}
+
+/*Line shown above the grand total*/
+p.horizLine
+{
+	border-bottom-style:solid;
+	border-bottom-width:1pt;
+	border-color:#a73610;
+	border-left-style:none;
+	border-right-style:none;
+	border-top-style:none;
+	color:#a73610;
+	font-size:12pt;
+	font-style:normal;
+	font-weight:normal;
+	line-height:100%;
+	margin-bottom:8pt;
+	margin-left:4pt;
+	margin-right:2pt;
+	margin-top:0pt;
+	padding-bottom:0pt;
+	padding-left:0pt;
+	padding-right:0pt;
+	padding-top:0pt;
+	text-decoration:none;
+}
+
+/*_H List Paragraph*/
+lp
+{
+	font-family:Times;
+	font-size:1.0em;
+}
+
+/*_H Paragraph*/
+p
+{
+	font-size:1.0em;
+	margin-bottom:1pt;
+	margin-top:1pt;
+}
+
+/*_HDefault Style*/
+body
+{
+	font-family:Arial;
+	font-size:12pt;
+	margin-bottom:5.00001mm;
+	margin-left:5.00001mm;
+	margin-right:5.00001mm;
+	margin-top:5.00001mm;
+	paper-height:210mm;
+	paper-width:297mm;
+	text-align:left;
+}
+
+/*_H*/
+div
+{
+	font-size:1.0em;
+	margin-bottom:1pt;
+	margin-top:1pt;
+}</CSS>
+    <DocumentFooter Type="QString"></DocumentFooter>
+    <DocumentHeader Type="QString"></DocumentHeader>
+    <PageFooter Type="QString"></PageFooter>
+    <PageHeader Type="QString"></PageHeader>
+    <categories Type="QVariantList">
+        <Element>
+            <heading Type="QString">Modules</heading>
+            <isMiscCategory Type="bool" Value="false"/>
+            <references Type="QStringList">
+                <Element Type="QString">M</Element>
+            </references>
+        </Element>
+        <Element>
+            <heading Type="QString">Capacitors</heading>
+            <isMiscCategory Type="bool" Value="false"/>
+            <references Type="QStringList">
+                <Element Type="QString">C</Element>
+            </references>
+        </Element>
+        <Element>
+            <heading Type="QString">Resistors</heading>
+            <isMiscCategory Type="bool" Value="false"/>
+            <references Type="QStringList">
+                <Element Type="QString">R</Element>
+            </references>
+        </Element>
+        <Element>
+            <heading Type="QString">Integrated Circuits</heading>
+            <isMiscCategory Type="bool" Value="false"/>
+            <references Type="QStringList">
+                <Element Type="QString">U</Element>
+            </references>
+        </Element>
+        <Element>
+            <heading Type="QString">Transistors</heading>
+            <isMiscCategory Type="bool" Value="false"/>
+            <references Type="QStringList">
+                <Element Type="QString">Q</Element>
+            </references>
+        </Element>
+        <Element>
+            <heading Type="QString">Diodes</heading>
+            <isMiscCategory Type="bool" Value="false"/>
+            <references Type="QStringList">
+                <Element Type="QString">D</Element>
+            </references>
+        </Element>
+        <Element>
+            <heading Type="QString">Miscellaneous</heading>
+            <isMiscCategory Type="bool" Value="true"/>
+            <references Type="QStringList">
+                <Element Type="QString">*</Element>
+            </references>
+        </Element>
+    </categories>
+    <fields Type="QVariantList">
+        <Element>
+            <applyToEmpty Type="bool" Value="false"/>
+            <fieldLines Type="int" Value="0"/>
+            <fieldName Type="QString">Value</fieldName>
+            <fieldWidth Type="int" Value="0"/>
+            <generateTotals Type="bool" Value="false"/>
+            <precision Type="int" Value="0"/>
+            <prefix Type="QString"></prefix>
+            <propertyName Type="QString">VALUE</propertyName>
+            <suffix Type="QString"></suffix>
+        </Element>
+        <Element>
+            <applyToEmpty Type="bool" Value="false"/>
+            <fieldLines Type="int" Value="0"/>
+            <fieldName Type="QString">Stock Code</fieldName>
+            <fieldWidth Type="int" Value="0"/>
+            <generateTotals Type="bool" Value="false"/>
+            <precision Type="int" Value="0"/>
+            <prefix Type="QString"></prefix>
+            <propertyName Type="QString">CODE</propertyName>
+            <suffix Type="QString"></suffix>
+        </Element>
+        <Element>
+            <applyToEmpty Type="bool" Value="false"/>
+            <fieldLines Type="int" Value="0"/>
+            <fieldName Type="QString">Unit Cost</fieldName>
+            <fieldWidth Type="int" Value="0"/>
+            <generateTotals Type="bool" Value="true"/>
+            <precision Type="int" Value="2"/>
+            <prefix Type="QString">£</prefix>
+            <propertyName Type="QString">COST</propertyName>
+            <suffix Type="QString"></suffix>
+        </Element>
+    </fields>
+    <fullTextOuputs Type="bool" Value="false"/>
+    <groupReferences Type="bool" Value="true"/>
+    <suppressEmptyCategories Type="bool" Value="false"/>
+</BOMTemplate>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<CONTROL>
+
+   <CONFIG>   
+      <ENUMERATION NAME="POSITION">
+           <CONSTANT NAME="None" VALUE="0"/> 
+           <CONSTANT NAME="Left/Above" VALUE="1"/> 
+           <CONSTANT NAME="Right/Below" VALUE="2"/>
+      </ENUMERATION>
+      
+      
+ 	   <ENUMERATION NAME="ORIENTATION">
+           <CONSTANT NAME="Vertical" VALUE="0"/> 
+           <CONSTANT NAME="Horizontal" VALUE="1"/> 
+      </ENUMERATION>  
+        
+  	   <PROPERTY NAME="labelText1" DESC="Text for button label" TYPE="STRING" DEFAULT="label1"/>
+  	   <PROPERTY NAME="labelText2" DESC="Text for button label" TYPE="STRING" DEFAULT="label2"/>
+  	   <PROPERTY NAME="orientation" DESC="Orientation of the slider" TYPE="ORIENTATION" DEFAULT="0"/>
+  	   <PROPERTY NAME="labelSpacing" DESC="Distance of the label from the button" TYPE="INTEGER" DEFAULT="10"/>
+  	   <PROPERTY NAME="labelFont" DESC="Font for the label" TYPE="FONT"/>
+   </CONFIG>
+   
+   <!-- Driver Descriptor for Push-Button  -->
+   <DRIVER HEADER="Controls">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+
+        <INTERRUPT DESC="Control Event"  HOOK="attachEventHandler"/>                   
+
+        <FUNCTION DESC="Button is Clicked/Down">
+           <RETURN TYPE="BOOLEAN"/>
+        </FUNCTION>
+
+        <METHOD NAME="setState" DESC="Set the state of the button (latching only)">
+           <PARAMETER TYPE="BOOLEAN"/>
+        </METHOD>
+
+        <METHOD NAME="getState" DESC="Return the state of the button (latching only)">
+           <RETURN TYPE="BOOLEAN" DEFAULT="state"/>
+        </METHOD>
+   
+   
+   </DRIVER>
+</CONTROL>
+  

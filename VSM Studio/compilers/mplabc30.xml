@@ -1,0 +1,1919 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<COMPILER NAME="MPLAB C30" ID="MPLABC30" VERSION="3.21" URL="http://www.microchip.com/" AVAILABILITY="External" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- Compiler -->
+  <TOOL NAME="CC" FILE="pic30-gcc.exe">
+    <!-- And C++ Compiler as well -->
+    <ALIAS NAME="CPP"/>
+    <!-- And Objective C and Objecive C++ Compiler as well -->
+    <ALIAS NAME="OC"/>
+    <!-- And assembler as well -->
+    <ALIAS NAME="ASM"/>
+    <!-- And linker as well -->
+    <ALIAS NAME="LD"/>
+    <!-- And librarian as well -->
+    <ALIAS NAME="LIB"/>
+    <!-- Options -->
+    <OPTION NAME="-pass-exit-codes" DESC="Exit with highest error code from a phase" ADVANCED="1"/>
+    <OPTION NAME="-fast-math" DESC="Use alternative floating point support routines" ADVANCED="1"/>
+    <OPTION NAME="-Wa," DESC="Pass comma-separated options on to the assembler" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-Wp," DESC="Pass comma-separated options on to the preprocessor" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-Wl," DESC="Pass comma-separated options on to the linker" ADVANCED="1"/>
+    <OPTION TOOL="ASM" NAME="-Xassembler " DESC="Pass arg on to the assembler" MULTIPLE="1" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-Xpreprocessor " DESC="Pass arg on to the preprocessor" MULTIPLE="1" PARAM="STRING" ADVANCED="1"/>
+    <OPTION TOOL="LD" NAME="-Xlinker " DESC="Pass arg on to the linker" MULTIPLE="1" PARAM="STRING" ADVANCED="1"/>
+    <OPTION TOOL="LD" NAME="-Xlinker --script=" DESC="Linker script" PARAM="STRING" ID="GLD" ADVANCED="1"/>
+    <OPTION NAME="-combine" DESC="Pass multiple source files to compiler at once" ADVANCED="1"/>
+    <OPTION NAME="-save-temps" DESC="Do not delete intermediate files" ADVANCED="1"/>
+    <OPTION NAME="-pipe" DESC="Use pipes rather than intermediate files" ADVANCED="1"/>
+    <OPTION NAME="-time" DESC="Time the execution of each subprocess" ADVANCED="1"/>
+    <OPTION NAME="-specs=" DESC="Override built-in specs with the contents of file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-std=" DESC="Assume that the input sources are for standard" ADVANCED="1"/>
+    <OPTION NAME="-B " DESC="Add directory to the compiler's search paths" MULTIPLE="1" PARAM="STRING"/>
+    <OPTION NAME="-E" DESC="Preprocess only; do not compile, assemble or link" ADVANCED="1"/>
+    <OPTION NAME="-S" DESC="Compile only; do not assemble or link" ADVANCED="1"/>
+    <OPTION NAME="-c" DESC="Compile and assemble, but do not link" ADVANCED="1"/>
+    <OPTION NAME="-o " DESC="Place the output into file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION TOOL="CC" NAME="-x " DESC="Specify the language of the following input files" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="c" DESC="C"/>
+      <PARAM VALUE="c++" DESC="C++"/>
+      <PARAM VALUE="none" DESC="Guess depending of file extension" DEFAULT="1"/>
+    </OPTION>
+    <OPTION TOOL="CPP" NAME="-x " DESC="Specify the language of the following input files" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="c" DESC="C"/>
+      <PARAM VALUE="c++" DESC="C++"/>
+      <PARAM VALUE="none" DESC="Guess depending of file extension" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="-omf=" DESC="Select coff or elf object module format" ADVANCED="1">
+      <PARAM VALUE="coff" DESC="COFF" DEFAULT="1"/>
+      <PARAM VALUE="elf" DESC="ELF"/>
+    </OPTION>
+    <!-- Target specific options -->
+    <OPTION NAME="-mtrack" DESC="Track auto psv page" ADVANCED="1"/>
+    <OPTION NAME="-mlarge-arrays" DESC="Allow arrays larger than 32K" ADVANCED="1"/>
+    <OPTION NAME="-menable-large-arrays" DESC="Allow arrays larger than 32K" ADVANCED="1"/>
+    <OPTION NAME="-mnear-chars" DESC="Place &quot;char&quot; variables into near data space, regardless of memory model" ADVANCED="1"/>
+    <OPTION NAME="-munified" DESC="Use unified data model" ADVANCED="1"/>
+    <OPTION NAME="-mno-file" DESC="Disable placing file directive in assembly output" ADVANCED="1"/>
+    <OPTION NAME="-mno-isr-warn" DESC="Disable warning for inappropriate use of ISR function names" ADVANCED="1"/>
+    <OPTION NAME="-msmart-io" DESC="Enable smart IO library call forwarding" ADVANCED="1"/>
+    <OPTION NAME="-mno-pa" DESC="Do not run procedural abstraction stage" ADVANCED="1"/>
+    <OPTION NAME="-mpa" DESC="Run procedural abstraction stage" ADVANCED="1"/>
+    <OPTION NAME="-mconst-in-code" DESC="Put constants in code space" ADVANCED="1"/>
+    <OPTION NAME="-mconst-in-data" DESC="Put constants in data space" ADVANCED="1"/>
+    <OPTION NAME="-mlarge-code" DESC="Use large code model" ADVANCED="1"/>
+    <OPTION NAME="-msmall-code" DESC="Use small code model" ADVANCED="1"/>
+    <OPTION NAME="-mlarge-aggregate" DESC="Use large aggregate data model" ADVANCED="1"/>
+    <OPTION NAME="-msmall-aggregate" DESC="Use small aggregate data model" ADVANCED="1"/>
+    <OPTION NAME="-mlarge-scalar" DESC="Use large scalar data model" ADVANCED="1"/>
+    <OPTION NAME="-msmall-scalar" DESC="Use small scalar data model" ADVANCED="1"/>
+    <OPTION NAME="-mlarge-data" DESC="Use large data model" ADVANCED="1"/>
+    <OPTION NAME="-msmall-data" DESC="Use small data model" ADVANCED="1"/>
+    <OPTION NAME="-mtext=" DESC="Name the text section (default .text)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-msmart-io=" DESC="Set smart IO library call forwarding level" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-mresource=" DESC="Identify MPLABC30 resource file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-mpa=" DESC="Procedural abstraction nesting limit" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-mit=" DESC="Enable instrumented trace" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-mfillupper=" DESC="Select global fillupper value for data stored in FLASH" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-merrata=" DESC="Enable compiler generated work-arounds for specific errata" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-mcpu=" DESC="Select target CPU" PARAM="STRING"/>
+    <!-- Microchip PIC30 options -->
+    <OPTION NAME="-g" DESC="Generate symbolic debug info"/>
+    <OPTION NAME="--no-relax" DESC="Turn off relaxation (default)" ADVANCED="1"/>
+    <OPTION NAME="--relax" DESC="Use shorter branches and RCALLs when possible" ADVANCED="1"/>
+    <OPTION NAME="--processor=" DESC="Specify the target processor (e.g., 30F2010)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-p"/>
+    </OPTION>
+    <!-- pic30_coff options -->
+    <OPTION NAME="--boot " DESC="Specify options for boot segment" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--data-init" DESC="Initialize data memory (default)" ADVANCED="1"/>
+    <OPTION NAME="--no-data-init" DESC="Don't initialize data memory" ADVANCED="1"/>
+    <OPTION NAME="--debug" DESC="Produce linker debugging messages">
+      <ALIAS NAME="-D"/>
+    </OPTION>
+    <OPTION NAME="--handles" DESC="Create jump table for function pointers (default)" ADVANCED="1"/>
+    <OPTION NAME="--no-handles" DESC="Don&quot;t create jump table for function pointers" ADVANCED="1"/>
+    <OPTION NAME="--fill-upper " DESC="Set fill value for upper byte of data (default = 0)" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="--force-link" DESC="Force linking of objects that may not be compatible" ADVANCED="1"/>
+    <OPTION NAME="--no-force-link" DESC="Don&quot;t force linking (default)" ADVANCED="1"/>
+    <OPTION NAME="--general " DESC="Specify options for general segment" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--heap " DESC="Create heap of SIZE bytes" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--isr" DESC="Create interrupt function for unused vectors (default)" ADVANCED="1"/>
+    <OPTION NAME="--no-isr" DESC="Don&quot;t create interrupt function for unused vectors" ADVANCED="1"/>
+    <OPTION NAME="--pack-data" DESC="Use upper byte of program memory to store data (default)" ADVANCED="1"/>
+    <OPTION NAME="--no-pack-data" DESC="Don&quot;t use upper byte of program memory to store data" ADVANCED="1"/>
+    <OPTION NAME="--report-mem" DESC="Report memory usage to console"/>
+    <OPTION NAME="--secure " DESC="Specify options for secure segment" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--select-objects" DESC="Select library objects based on options (default)" ADVANCED="1"/>
+    <OPTION NAME="--no-select-objects" DESC="Don&quot;t select library objects based on options" ADVANCED="1"/>
+    <OPTION NAME="--smart-io" DESC="Merge I/O library functions (default)" ADVANCED="1"/>
+    <OPTION NAME="--no-smart-io" DESC="Don't merge I/O library functions" ADVANCED="1"/>
+    <OPTION NAME="--stack " DESC="Set minimum stack to SIZE bytes (default=16)" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="--stackguard " DESC="Set stack guardband to SIZE bytes (default=16)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION TOOL="LD" NAME="-l" DESC="Library name to include" PARAM="STRING" MULTIPLE="1"/>
+  </TOOL>
+  <TOOL NAME="BIN2HEX" FILE="pic30-bin2hex.exe">
+    <OPTION NAME="-a" DESC="sort sections by address"/>
+    <OPTION NAME="-u" DESC="use upper-case hex digits"/>
+    <OPTION NAME="-v" DESC="print verbose messages"/>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="PIC24">
+    <CONTROLLER NAME="PIC24FJ128DA106">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128DA106.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128DA106"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128DA106"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128DA106"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GA010.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128DA110">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128DA110.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128DA110"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128DA110"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128DA110"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128DA110.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128DA206">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128DA206.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128DA206"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128DA206"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128DA206"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128DA206.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128DA210">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128DA210.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128DA210"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128DA210"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128DA210"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128DA210.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GA006">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GA006.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GA006"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GA006"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GA006"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GA006.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GA008">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GA008.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GA008"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GA008"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GA008"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GA008.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GA010">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GA010.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GA010"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GA010"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GA010"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GA010.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GA106">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GA106.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GA106"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GA106"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GA106"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GA106.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GA108">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GA108.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GA108"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GA108"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GA108"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GA108.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GA110">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GA110.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GA110"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GA110"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GA110"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GA110.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GA306">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GA306.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GA306"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GA306"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GA306"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GA306.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GA308">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GA308.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GA308"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GA308"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GA308"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GA308.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GA310">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GA310.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GA310"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GA310"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GA310"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GA310.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GA306">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GA306.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GA306"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GA306"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GA306"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GA306.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GA308">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GA308.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GA308"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GA308"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GA308"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GA308.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GA310">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GA310.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GA310"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GA310"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GA310"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GA310.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GB106">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GB106.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GB106"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GB106"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GB106"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GB106.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GB108">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GB108.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GB108"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GB108"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GB108"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GB108.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GB110">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GB110.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GB110"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GB110"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GB110"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GB110.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GB206">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GB206.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GB206"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GB206"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GB206"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GB206.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ128GB210">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ128GB210.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ128GB210"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ128GB210"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ128GB210"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ128GB210.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ16GA002">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ16GA002.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ16GA002"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ16GA002"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ16GA002"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ16GA002.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ16GA004">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ16GA004.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ16GA004"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ16GA004"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ16GA004"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ16GA004.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ192GA106">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ192GA106.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ192GA106"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ192GA106"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ192GA106"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ192GA106.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ192GA108">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ192GA108.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ192GA108"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ192GA108"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ192GA108"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ192GA108.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ192GA110">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ192GA110.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ192GA110"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ192GA110"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ192GA110"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ192GA110.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ192GB106">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ192GB106.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ192GB106"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ192GB106"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ192GB106"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ192GB106.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ192GB108">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ192GB108.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ192GB108"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ192GB108"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ192GB108"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ192GB108.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ192GB110">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ192GB110.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ192GB110"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ192GB110"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ192GB110"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ192GB110.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ256DA106">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ256DA106.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ256DA106"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ256DA106"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ256DA106"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ256DA106.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ256DA110">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ256DA110.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ256DA110"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ256DA110"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ256DA110"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ256DA110.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ256DA206">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ256DA206.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ256DA206"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ256DA206"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ256DA206"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ256DA206.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ256DA210">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ256DA210.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ256DA210"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ256DA210"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ256DA210"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ256DA210.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ256GA106">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ256GA106.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ256GA106"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ256GA106"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ256GA106"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ256GA106.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ256GA108">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ256GA108.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ256GA108"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ256GA108"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ256GA108"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ256GA108.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ256GA110">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ256GA110.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ256GA110"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ256GA110"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ256GA110"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ256GA110.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ256GB106">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ256GB106.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ256GB106"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ256GB106"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ256GB106"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ256GB106.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ256GB108">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ256GB108.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ256GB108"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ256GB108"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ256GB108"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ256GB108.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ256GB110">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ256GB110.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ256GB110"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ256GB110"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ256GB110"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ256GB110.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ256GB206">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ256GB206.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ256GB206"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ256GB206"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ256GB206"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ256GB206.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ256GB210">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ256GB210.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ256GB210"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ256GB210"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ256GB210"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ256GB210.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ32GA002">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ32GA002.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ32GA002"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ32GA002"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ32GA002"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ32GA002.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ32GA004">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ32GA004.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ32GA004"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ32GA004"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ32GA004"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ32GA004.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ32GA102">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ32GA102.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ32GA102"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ32GA102"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ32GA102"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ32GA102.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ32GA104">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ32GA104.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ32GA104"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ32GA104"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ32GA104"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ32GA104.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ32GB002">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ32GB002.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ32GB002"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ32GB002"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ32GB002"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ32GB002.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ32GB004">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ32GB004.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ32GB004"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ32GB004"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ32GB004"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ32GB004.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ48GA002">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ48GA002.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ48GA002"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ48GA002"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ48GA002"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ48GA002.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ48GA004">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ48GA004.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ48GA004"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ48GA004"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ48GA004"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ48GA004.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GA002">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GA002.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GA002"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GA002"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GA002"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GA002.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GA004">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GA004.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GA004"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GA004"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GA004"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GA004.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GA006">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GA006.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GA006"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GA006"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GA006"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GA006.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GA008">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GA008.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GA008"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GA008"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GA008"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GA008.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GA010">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GA010.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GA010"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GA010"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GA010"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GA010.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GA102">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GA102.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GA102"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GA102"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GA102"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GA102.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GA104">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GA104.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GA104"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GA104"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GA104"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GA104.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GB002">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GB002.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GB002"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GB002"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GB002"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GB002.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GB004">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GB004.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GB004"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GB004"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GB004"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GB004.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GB106">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GB106.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GB106"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GB106"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GB106"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GB106.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GB108">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GB108.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GB108"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GB108"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GB108"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GB108.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ64GB110">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ64GB110.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ64GB110"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ64GB110"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ64GB110"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ64GB110.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ96GA006">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ96GA006.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ96GA006"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ96GA006"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ96GA006"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ96GA006.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ96GA008">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ96GA008.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ96GA008"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ96GA008"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ96GA008"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ96GA008.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24FJ96GA010">
+      <TEMPLATE NAME="INCFILE" VALUE="p24FJ96GA010.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24FJ96GA010"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24FJ96GA010"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24FJ96GA010"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24FJ96GA010.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP202">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP204">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP204.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP204"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP204"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP204"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP204.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP206">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP206.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP206"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP206"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP206"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP206.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP206A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP206A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP206A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP206A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP206A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP206A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP210">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP210.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP210"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP210"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP210"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP210.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP210A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP210A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP210A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP210A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP210A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP210A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP306">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP306.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP306"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP306"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP306"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP306.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP306A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP306A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP306A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP306A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP306A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP306A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP310">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP310.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP310"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP310"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP310"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP310.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP310A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP310A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP310A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP310A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP310A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP310A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP502">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP502.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP502"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP502"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP502"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP502.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP504">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP504.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP504"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP504"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP504"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP504.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP506">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP506.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP506"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP506"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP506"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP506.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP506A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP506A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP506A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP506A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP506A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP506A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP510">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP510.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP510"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP510"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP510"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP510.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ128GP510A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ128GP510A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ128GP510A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ128GP510A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ128GP510A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ128GP510A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ12GP201">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ12GP201.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ12GP201"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ12GP201"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ12GP201"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ12GP201.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ12GP202">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ12GP202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ12GP202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ12GP202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ12GP202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ12GP202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ16GP304">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ16GP304.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ16GP304"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ16GP304"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ16GP304"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ16GP304.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ256GP206">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ256GP206.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ256GP206"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ256GP206"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ256GP206"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ256GP206.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ256GP206A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ256GP206A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ256GP206A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ256GP206A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ256GP206A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ256GP206A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ256GP210">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ256GP210.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ256GP210"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ256GP210"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ256GP210"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ256GP210.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ256GP210A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ256GP210A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ256GP210A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ256GP210A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ256GP210A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ256GP210A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ256GP610">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ256GP610.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ256GP610"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ256GP610"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ256GP610"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ256GP610.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ256GP610A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ256GP610A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ256GP610A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ256GP610A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ256GP610A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ256GP610A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ32GP202">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ32GP202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ32GP202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ32GP202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ32GP202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ32GP202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ32GP204">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ32GP204.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ32GP204"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ32GP204"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ32GP204"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ32GP204.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ32GP302">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ32GP302.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ32GP302"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ32GP302"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ32GP302"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ32GP302.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ32GP304">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ32GP304.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ32GP304"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ32GP304"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ32GP304"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ32GP304.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ64GP202">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ64GP202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ64GP202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ64GP202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ64GP202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ64GP202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ64GP204">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ64GP204.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ64GP204"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ64GP204"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ64GP204"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ64GP204.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ64GP206">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ64GP206.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ64GP206"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ64GP206"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ64GP206"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ64GP206.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ64GP206A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ64GP206A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ64GP206A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ64GP206A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ64GP206A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ64GP206A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ64GP210">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ64GP210.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ64GP210"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ64GP210"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ64GP210"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ64GP210.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ64GP210A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ64GP210A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ64GP210A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ64GP210A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ64GP210A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ64GP210A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ64GP502">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ64GP502.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ64GP502"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ64GP502"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ64GP502"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ64GP502.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ64GP504">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ64GP504.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ64GP504"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ64GP504"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ64GP504"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ64GP504.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ64GP506">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ64GP506.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ64GP506"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ64GP506"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ64GP506"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ64GP506.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ64GP506A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ64GP506A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ64GP506A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ64GP506A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ64GP506A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ64GP506A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ64GP510">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ64GP510.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ64GP510"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ64GP510"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ64GP510"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ64GP510.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24HJ64GP510A">
+      <TEMPLATE NAME="INCFILE" VALUE="p24HJ64GP510A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24HJ64GP510A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24HJ64GP510A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24HJ64GP510A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24HJ64GP510A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24F04KA200">
+      <TEMPLATE NAME="INCFILE" VALUE="p24F04KA200.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24F04KA200"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24F04KA200"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24F04KA200"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24F04KA200.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24F04KA201">
+      <TEMPLATE NAME="INCFILE" VALUE="p24F04KA201.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24F04KA201"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24F04KA201"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24F04KA201"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24F04KA201.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24F08KA101">
+      <TEMPLATE NAME="INCFILE" VALUE="p24F08KA101.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24F08KA101"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24F08KA101"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24F08KA101"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24F08KA101.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24F08KA102">
+      <TEMPLATE NAME="INCFILE" VALUE="p24F08KA102.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24F08KA102"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24F08KA102"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24F08KA102"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24F08KA102.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24F16KA101">
+      <TEMPLATE NAME="INCFILE" VALUE="p24F16KA101.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24F16KA101"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24F16KA101"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24F16KA101"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24F16KA101.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC24F16KA102">
+      <TEMPLATE NAME="INCFILE" VALUE="p24F16KA102.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="24F16KA102"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="24F16KA102"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="24F16KA102"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p24F16KA102.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+  </FAMILY>
+  <FAMILY NAME="dsPIC30">
+    <CONTROLLER NAME="dsPIC30F1010">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F1010.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F1010"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F1010"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F1010"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F1010.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F2005">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F2005.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F2005"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F2005"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F2005"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F2005.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F2010">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F2010.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F2010"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F2010"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F2010"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F2010.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F2010A">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F2010A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F2010A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F2010A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F2010A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F2010A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F2011">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F2011.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F2011"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F2011"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F2011"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F2011.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F2012">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F2012.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F2012"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F2012"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F2012"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F2012.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F2020">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F2020.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F2020"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F2020"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F2020"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F2020.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F2021">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F2021.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F2021"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F2021"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F2021"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F2021.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F2022">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F2022.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F2022"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F2022"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F2022"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F2022.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F2023">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F2023.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F2023"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F2023"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F2023"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F2023.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F3010">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F3010.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F3010"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F3010"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F3010"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F3010.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F3011">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F3011.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F3011"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F3011"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F3011"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F3011.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F3012">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F3012.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F3012"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F3012"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F3012"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F3012.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F3013">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F3013.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F3013"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F3013"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F3013"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F3013.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F3014">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F3014.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F3014"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F3014"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F3014"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F3014.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F4011">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F4011.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F4011"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F4011"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F4011"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F4011.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F4012">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F4012.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F4012"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F4012"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F4012"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F4012.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F4013">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F4013.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F4013"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F4013"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F4013"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F4013.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F5011">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F5011.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F5011"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F5011"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F5011"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F5011.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F5013">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F5013.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F5013"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F5013"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F5013"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F5013.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F5015">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F5015.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F5015"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F5015"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F5015"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F5015.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F5016">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F5016.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F5016"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F5016"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F5016"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F5016.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F6010">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F6010.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F6010"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F6010"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F6010"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F6010.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F6010A">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F6010A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F6010A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F6010A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F6010A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F6010A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F6011">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F6011.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F6011"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F6011"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F6011"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F6011.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F6011A">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F6011A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F6011A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F6011A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F6011A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F6011A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F6012">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F6012.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F6012"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F6012"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F6012"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F6012.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F6012A">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F6012A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F6012A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F6012A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F6012A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F6012A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F6013">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F6013.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F6013"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F6013"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F6013"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F6013.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F6013A">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F6013A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F6013A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F6013A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F6013A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F6013A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F6014">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F6014.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F6014"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F6014"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F6014"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F6014.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F6014A">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F6014A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F6014A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F6014A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F6014A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F6014A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC30F6015">
+      <TEMPLATE NAME="INCFILE" VALUE="p30F6015.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="30F6015"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="30F6015"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="30F6015"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;pdsPIC30F6015.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+  </FAMILY>
+  <FAMILY NAME="dsPIC33">
+    <CONTROLLER NAME="dsPIC33FJ06GS101">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ06GS101.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ06GS101"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ06GS101"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ06GS101"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ06GS101.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ06GS102">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ06GS102.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ06GS102"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ06GS102"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ06GS102"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ06GS102.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ06GS202">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ06GS202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ06GS202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ06GS202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ06GS202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ06GS202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP202">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP204">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP204.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP204"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP204"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP204"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP204.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP206">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP206.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP206"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP206"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP206"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP206.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP206A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP206A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP206A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP206A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP206A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP206A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP306">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP306.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP306"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP306"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP306"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP306.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP306A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP306A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP306A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP306A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP306A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP306A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP310">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP310.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP310"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP310"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP310"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP310.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP310A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP310A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP310A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP310A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP310A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP310A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP706">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP706.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP706"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP706"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP706"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP706.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP706A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP706A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP706A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP706A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP706A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP706A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP708">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP708.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP708"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP708"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP708"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP708.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP708A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP708A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP708A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP708A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP708A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP708A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP710">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP710.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP710"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP710"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP710"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP710.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP710A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP710A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP710A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP710A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP710A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP710A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP802">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP802.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP802"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP802"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP802"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP802.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128GP804">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128GP804.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128GP804"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128GP804"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128GP804"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128GP804.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC202">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC204">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC204.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC204"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC204"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC204"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC204.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC506">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC506.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC506"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC506"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC506"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC506.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC506A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC506A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC506A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC506A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC506A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC506A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC510">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC510.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC510"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC510"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC510"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC510.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC510A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC510A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC510A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC510A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC510A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC510A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC706">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC706.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC706"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC706"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC706"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC706.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC706A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC706A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC706A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC706A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC706A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC706A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC708">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC708.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC708"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC708"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC708"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC708.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC708A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC708A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC708A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC708A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC708A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC708A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC710">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC710.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC710"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC710"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC710"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC710.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC710A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC710A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC710A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC710A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC710A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC710A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC802">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC802.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC802"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC802"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC802"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC802.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ128MC804">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ128MC804.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ128MC804"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ128MC804"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ128MC804"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ128MC804.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ12GP201">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ12GP201.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ12GP201"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ12GP201"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ12GP201"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ12GP201.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ12GP202">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ12GP202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ12GP202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ12GP202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ12GP202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ12GP202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ12MC201">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ12MC201.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ12MC201"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ12MC201"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ12MC201"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ12MC201.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ12MC202">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ12MC202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ12MC202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ12MC202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ12MC202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ12MC202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ16GP304">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ16GP304.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ16GP304"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ16GP304"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ16GP304"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ16GP304.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ16GS402">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ16GS402.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ16GS402"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ16GS402"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ16GS402"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ16GS402.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ16GS404">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ16GS404.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ16GS404"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ16GS404"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ16GS404"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ16GS404.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ16GS502">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ16GS502.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ16GS502"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ16GS502"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ16GS502"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ16GS502.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ16GS504">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ16GS504.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ16GS504"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ16GS504"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ16GS504"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ16GS504.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ16MC304">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ16MC304.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ16MC304"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ16MC304"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ16MC304"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ16MC304.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ256GP506">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ256GP506.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ256GP506"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ256GP506"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ256GP506"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ256GP506.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ256GP506A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ256GP506A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ256GP506A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ256GP506A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ256GP506A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ256GP506A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ256GP510">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ256GP510.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ256GP510"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ256GP510"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ256GP510"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ256GP510.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ256GP510A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ256GP510A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ256GP510A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ256GP510A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ256GP510A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ256GP510A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ256GP710">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ256GP710.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ256GP710"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ256GP710"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ256GP710"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ256GP710.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ256GP710A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ256GP710A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ256GP710A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ256GP710A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ256GP710A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ256GP710A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ256MC510">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ256MC510.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ256MC510"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ256MC510"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ256MC510"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ256MC510.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ256MC510A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ256MC510A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ256MC510A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ256MC510A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ256MC510A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ256MC510A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ256MC710">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ256MC710.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ256MC710"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ256MC710"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ256MC710"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ256MC710.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ256MC710A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ256MC710A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ256MC710A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ256MC710A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ256MC710A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ256MC710A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ32GP202">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ32GP202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ32GP202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ32GP202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ32GP202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ32GP202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ32GP204">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ32GP204.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ32GP204"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ32GP204"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ32GP204"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ32GP204.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ32GP302">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ32GP302.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ32GP302"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ32GP302"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ32GP302"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ32GP302.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ32GP304">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ32GP304.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ32GP304"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ32GP304"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ32GP304"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ32GP304.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ32GS406">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ32GS406.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ32GS406"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ32GS406"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ32GS406"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ32GS406.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ32GS606">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ32GS606.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ32GS606"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ32GS606"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ32GS606"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ32GS606.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ32GS608">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ32GS608.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ32GS608"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ32GS608"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ32GS608"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ32GS608.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ32GS610">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ32GS610.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ32GS610"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ32GS610"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ32GS610"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ32GS610.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ32MC202">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ32MC202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ32MC202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ32MC202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ32MC202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ32MC202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ32MC204">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ32MC204.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ32MC204"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ32MC204"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ32MC204"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ32MC204.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ32MC302">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ32MC302.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ32MC302"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ32MC302"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ32MC302"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ32MC302.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ32MC304">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ32MC304.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ32MC304"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ32MC304"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ32MC304"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ32MC304.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP202">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP204">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP204.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP204"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP204"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP204"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP204.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP206">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP206.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP206"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP206"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP206"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP206.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP206A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP206A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP206A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP206A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP206A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP206A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP306">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP306.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP306"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP306"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP306"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP306.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP306A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP306A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP306A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP306A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP306A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP306A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP310">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP310.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP310"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP310"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP310"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP310.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP310A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP310A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP310A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP310A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP310A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP310A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP706">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP706.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP706"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP706"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP706"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP706.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP706A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP706A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP706A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP706A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP706A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP706A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP708">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP708.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP708"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP708"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP708"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP708.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP708A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP708A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP708A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP708A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP708A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP708A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP710">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP710.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP710"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP710"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP710"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP710.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP710A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP710A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP710A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP710A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP710A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP710A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP802">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP802.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP802"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP802"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP802"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP802.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GP804">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GP804.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GP804"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GP804"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GP804"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GP804.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GS406">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GS406.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GS406"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GS406"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GS406"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GS406.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GS606">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GS606.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GS606"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GS606"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GS606"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GS606.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GS608">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GS608.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GS608"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GS608"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GS608"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GS608.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64GS610">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64GS610.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64GS610"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64GS610"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64GS610"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64GS610.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC202">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC202.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC202"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC202"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC202"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC202.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC204">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC204.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC204"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC204"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC204"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC204.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC506">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC506.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC506"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC506"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC506"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC506.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC506A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC506A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC506A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC506A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC506A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC506A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC508">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC508.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC508"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC508"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC508"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC508.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC508A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC508A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC508A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC508A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC508A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC508A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC510">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC510.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC510"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC510"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC510"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC510.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC510A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC510A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC510A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC510A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC510A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC510A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC706">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC706.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC706"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC706"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC706"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC706.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC706A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC706A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC706A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC706A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC706A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC706A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC710">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC710.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC710"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC710"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC710"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC710.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC710A">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC710A.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC710A"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC710A"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC710A"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC710A.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC802">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC802.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC802"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC802"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC802"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC802.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="dsPIC33FJ64MC804">
+      <TEMPLATE NAME="INCFILE" VALUE="p33FJ64MC804.h"/>
+      <OPTION TOOL="CC" NAME="-mcpu=" VALUE="33FJ64MC804"/>
+      <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="33FJ64MC804"/>
+      <OPTION TOOL="LD" NAME="-mcpu=" VALUE="33FJ64MC804"/>
+      <OPTION TOOL="LD" NAME="-Xlinker --script=" VALUE="&quot;p33FJ64MC804.gld&quot;" ID="GLD" DEFAULT="1"/>
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT KEYLOC="HKEY_LOCAL_MACHINE\SOFTWARE\Microchip\MPLAB C for PIC24 MCUs and-or dsPIC DSCs" KEY="Location" TYPE="NAMED">
+    <CHECK SUF="bin/pic30-gcc.exe" ARG="-dumpmachine" STR="pic30-coff" DATE="2009-01-30"/>
+  </DETECT>
+  <DETECT PATH="%PROGRAMFILES%/Microchip/mplabc30/%SUB%" LEVELS="1" SUF="bin/pic30-gcc.exe" DATE="2009-01-30">
+    <CHECK ARG="-dumpmachine" STR="pic30-coff"/>
+  </DETECT>
+  <DETECT PATH="%PROGRAMFILES%/Microchip/MPLAB C30" SUF="bin/pic30-gcc.exe" DATE="2009-01-30">
+    <CHECK ARG="-dumpmachine" STR="pic30-coff"/>
+  </DETECT>
+  <PATH ADD="%COMPILER_DIR%/bin"/>
+  <!-- File Types -->
+  <FILE NAME="c" DESC="C Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="asm" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="s" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="gld" DESC="Linker Script" CATEGORY="Linker Script" SOURCE="1" ICON="project_other.png"/>
+  <FILE NAME="a" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="cof" DESC="Microchip Coff" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="obj" DESC="Object" CATEGORY="Intermediate Binary"/>
+  <!-- C Compiler -->
+  <PROCESS TOOL="CC" NAME="C Compiler" CMDLINE="$(CC) $(CCFLAGS) %OPTIONS% -c -o %OUTFILE_QUOTED% %INFILE_QUOTED%">
+    <FILE INPUT="c" OUTPUT="obj"/>
+    <MESSAGE VALUE="^(.+):(\d+): (error|warning|message): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="$(ASM) $(ASMFLAGS) %OPTIONS% -c -o %OUTFILE_QUOTED_DOS% %INFILE_QUOTED_DOS%">
+    <FILE OUTPUT="obj">
+      <FILE INPUT="s"/>
+      <FILE INPUT="asm"/>
+    </FILE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="$(LD) -o &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.cof&quot; %INFILES_QUOTED% $(LDFLAGS) %OPTIONS% ">
+    <FILE OUTPUT="cof"/>
+    <FILE OUTPUT="hex"/>
+    <FILE INPUT="a"/>
+    <FILE INPUT="obj"/>
+    <FILE INPUT="gld" OPTION="GLD"/>
+    <POSTPROCESS CMDLINE="pic30-bin2hex.exe &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.cof&quot;"/>
+    <MESSAGE VALUE="^(.+):(\d+):(\d+): (error|warning|message): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+      <FIELD NAME="COLUMN" POSITION="3" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^(.+):(\d+): (error|warning|message): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^.+\(.+\):(.+):(\d+): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^.+\(.+\):(.+): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^(.+):(\d+): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^.+ from (.+):(\d+).+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Librarian -->
+  <PROCESS TOOL="LIB" NAME="Librarian" CMDLINE="$(LIB) $(LIBFLAGS) %OPTIONS% -c -o %OUTFILE_QUOTED% %INFILES_QUOTED%">
+    <FILE OUTPUT="a">
+      <FILE INPUT="obj"/>
+      <FILE INPUT="a"/>
+    </FILE>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="cof"/>
+    <OPTION TOOL="CC" NAME="-g"/>
+    <OPTION TOOL="LD" NAME="-g"/>
+    <OPTION TOOL="CC" NAME="--debug"/>
+    <OPTION TOOL="LD" NAME="--debug"/>
+    <OPTION TOOL="ASM" NAME="-g"/>
+    <OPTION TOOL="ASM" NAME="--debug"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <SOURCE NAME="main.c" FROM="intmain.c" OPEN="1"/>
+</COMPILER>

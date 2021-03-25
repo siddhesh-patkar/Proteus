@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Numeric Keypad Breakout Board.pdsclip" DESC="Arduino MCP23008 based Keypad Breakout Board" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="Matrix Keypad" ELEMENT="KEYPAD">
+      <INTERFACE OBJECT="Keypad_MCP23008">
+         <PORT NAME="I2C"/>
+         <SETUP NAME="begin"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP1" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP2" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP3" TYPE="INTEGER"/>
+         <PROPERTY NAME="NUMROWS" ELEMENT="KEYPAD" TYPE="INTEGER"/>
+         <PROPERTY NAME="NUMCOLS" ELEMENT="KEYPAD" TYPE="INTEGER"/>
+         <PROPERTY NAME="KEYS"  ELEMENT="KEYPAD" TYPE="STRING"/>
+      </INTERFACE>
+      <DRIVER FILE="Keypad/keypad.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Arduino/Arduino Data Logger Shield.pdsclip" DESC="Arduino Data Logger Shield" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="Data Logger" ELEMENT="DL1">
+      <INTERFACE OBJECT="DataLogger">
+         <!-- LEDs pins -->
+         <PIN NAME="RED" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO2"/>
+         </PIN>
+         <PIN NAME="GREEN" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO3"/>
+         </PIN>
+         <PIN NAME="DIG0" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO4"/>
+         </PIN>
+         <PIN NAME="DIG1" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO5"/>
+         </PIN>
+         <PIN NAME="DIG2" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO6"/>
+         </PIN>
+         <PIN NAME="DIG3" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO7"/>
+         </PIN>
+         <PIN NAME="AN0" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD0"/>
+         </PIN>
+         <PIN NAME="AN1" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD1"/>
+         </PIN>
+         <PIN NAME="AN2" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD2"/>
+         </PIN>
+         <PIN NAME="AN3" TYPE="ANALOG">
+            <TERMINAL ELEMENT="AD3"/>
+         </PIN>
+
+         <SETUP NAME="begin">
+         </SETUP>
+      </INTERFACE>
+      <DRIVER FILE="DataLogger/DataLogger.xml"/>
+   </PERIPHERAL>
+
+   <PERIPHERAL TYPE="Real Time Clock" ELEMENT="RTC1">
+      <INTERFACE OBJECT="DS1307RTC">
+         <PORT NAME="I2C"/>
+         <!-- SOUT pin -->
+         <SETUP NAME="begin">
+            <PIN NAME="SOUT" TYPE="DIGITAL">
+               <TERMINAL ELEMENT="IO8"/>
+            </PIN>
+         </SETUP>
+  
+          <LOOP NAME="poll"/>
+          <CLOCK ELEMENT="RTC1"/>       
+      </INTERFACE>
+
+      <DRIVER FILE="RTC/RTC.xml"/>     
+   </PERIPHERAL>
+   
+   <PERIPHERAL TYPE="SD Card" ELEMENT="SD1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="FileStore" EXTERNAL="FS" >
+         <SETUP NAME="begin">
+            <!-- Chip select active low -->
+            <PIN NAME="cs" TYPE="DIGITAL">
+               <TERMINAL ELEMENT="IO10"/>
+            </PIN>
+         </SETUP>
+         <STORAGE NAME="MANIFEST" ELEMENT="SD1"/>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER FILE="FileStore/FileStore.xml"/>
+   </PERIPHERAL>
+</CLIP>

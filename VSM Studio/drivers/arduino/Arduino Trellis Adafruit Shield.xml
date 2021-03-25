@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Arduino/Arduino Trellis Adafruit Shield.pdsclip" DESC="Adafruit Trellis Shield" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="Trellis Shield" ELEMENT="TRSH1">
+      <INTERFACE OBJECT="HT16K33">
+         <PORT NAME="I2C"/>
+         <SETUP NAME="begin"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP1" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP2" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP3" TYPE="INTEGER"/>
+      </INTERFACE>
+      <DRIVER FILE="ht16k33/ht16k33.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

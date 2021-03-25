@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Gauge Control Descriptor -->
+<CONTROL>
+   <CONFIG>
+      <ENUMERATION NAME="VALUEPOSITION">
+           <CONSTANT NAME="None" VALUE="0"/> 
+           <CONSTANT NAME="Above/Right" VALUE="1"/> 
+           <CONSTANT NAME="Below/Left" VALUE="2"/>
+      </ENUMERATION>
+      <ENUMERATION NAME="LABELPOSITION">
+           <CONSTANT NAME="None" VALUE="0"/> 
+           <CONSTANT NAME="Left/Above" VALUE="1"/> 
+           <CONSTANT NAME="Right/Below" VALUE="2"/>
+      </ENUMERATION>
+ 	   <ENUMERATION NAME="ORIENTATION">
+           <CONSTANT NAME="Vertical" VALUE="0"/> 
+           <CONSTANT NAME="Horizontal" VALUE="1"/> 
+      </ENUMERATION>      	      
+      
+     <PROPERTY NAME="init" DESC="Initial value" TYPE="FLOAT" DEFAULT="0"/> 
+	   <PROPERTY NAME="min" DESC="Minumum value" TYPE="FLOAT" DEFAULT="0"/>
+	   <PROPERTY NAME="max" DESC="Maximum value" TYPE="FLOAT" DEFAULT="10"/>
+	   <PROPERTY NAME="animateGauge" DESC="Smoothly animate the needle movements" TYPE="BOOLEAN" DEFAULT="1"/>
+  	 <PROPERTY NAME="orientation" DESC="Orientation of the slider" TYPE="ORIENTATION" DEFAULT="0"/>
+  	 <PROPERTY NAME="labelPosition" DESC="Location for the value labels" TYPE="LABELPOSITION" DEFAULT="2"/>
+	   <PROPERTY NAME="numDivs" DESC="Number of Divisions" TYPE="INTEGER" MIN="2" MAX="100" DEFAULT="10"/>
+	   <PROPERTY NAME="tickDis" DESC="Distance ticks are from edge" TYPE="FLOAT" DEFAULT="20"/>
+	   <PROPERTY NAME="labelDis" DESC="Distance labels are from edge" TYPE="FLOAT" DEFAULT="20"/> 
+	   <PROPERTY NAME="numSubDivs" DESC="Number of Sub-divisions" TYPE="INTEGER" MIN="1" MAX="10" DEFAULT="5"/>
+	   <PROPERTY NAME="tickLength" DESC="Length of Tick in pixels" TYPE="INTEGER" MIN="0" DEFAULT="5"/>
+	   <PROPERTY NAME="subTickLength" DESC="Length of Sub-Tick in pixels" TYPE="INTEGER" MIN="0" DEFAULT="2"/>
+	   <PROPERTY NAME="tickColour" DESC="Colour for the scale ticks" TYPE="RGB" DEFAULT="#000000"/>
+	   <PROPERTY NAME="emptyColour" DESC="Colour for empty space above the mercury" TYPE="RGB"/>
+  	 <PROPERTY NAME="gaugeColour" DESC="Pick the LED colour" TYPE="RGB"/>
+  	 <PROPERTY NAME="valueFont" DESC="Font for the value readout" TYPE="FONT"/>
+  	 <PROPERTY NAME="labelFont" DESC="Font for the labels" TYPE="FONT"/>
+  	 
+
+   </CONFIG>	  
+   
+   <DRIVER HEADER="Controls">
+        <REQUIRE HEADER="VfpServer" />
+        <INTERRUPT DESC="Value Changed Event"  HOOK="attachEventHandler"/>                   
+
+    
+        <METHOD NAME="setValue" DESC="Set the gauge position.">
+           <PARAMETER TYPE="FLOAT"/>
+        </METHOD>
+      
+   </DRIVER>
+</CONTROL>  

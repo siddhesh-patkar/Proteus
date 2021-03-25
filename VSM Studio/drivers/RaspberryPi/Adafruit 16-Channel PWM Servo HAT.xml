@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Raspberry Pi/Adafruit 16-Channel PWM Servo HAT.pdsclip" DESC="16-Channel PWM Servo HAT" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="Servo Motor Hat" ELEMENT="U2" >
+   
+   <INTERFACE OBJECT="Adafruit_16_Channel_Servo_HAT"/>
+   
+    <DRIVER HEADER="AdafruitHATs">
+
+       <METHOD NAME="setAddress"  DESC="Set the address of the hat.">
+         <PARAMETER NAME="Address" TYPE="INTEGER" DESC="Sets the address, Starts at 0x40."/>
+       </METHOD>
+        
+       <METHOD NAME="setMaxMinAngle"  DESC="Set the Servo Angle limits.">
+         <PARAMETER NAME="ServoNumber" TYPE="INTEGER" DEFAULT="0" DESC="Port Number of the Servo."/>
+         <PARAMETER NAME="MaxAngle" TYPE="INTEGER" DEFAULT="90" DESC="Maximum angle the servo can reach."/>
+         <PARAMETER NAME="MinAngle" TYPE="INTEGER" DEFAULT="-90" DESC="Minimum angle the servo can reach."/>
+       </METHOD>
+      
+       <METHOD NAME="setMaxMinPulse"  DESC="Set the Servo Pulse limits.">
+         <PARAMETER NAME="ServoNumber" TYPE="INTEGER" DEFAULT="0" DESC="Port Number of the Servo."/>
+         <PARAMETER NAME="MaxPulse" TYPE="INTEGER" DEFAULT="2" DESC="Maximum pulse the servo can give."/>
+         <PARAMETER NAME="MinPulse" TYPE="INTEGER" DEFAULT="1" DESC="Minimum pulse the servo can give."/>
+       </METHOD>      
+       
+       <METHOD NAME="setAngle"  DESC="Set the servo motor.">
+         <PARAMETER NAME="Servo" TYPE="INTEGER" DEFAULT="0" DESC="The Number Servo."/>
+         <PARAMETER NAME="Angle" TYPE="FLOAT" DEFAULT="0" DESC="The angle you wish to turn to."/>
+       </METHOD>
+       
+
+    </DRIVER>
+   </PERIPHERAL>
+</CLIP>

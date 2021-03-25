@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino HX711 for Load Cell -->
+<DRIVER HEADER="HX711_adc.h">
+   
+   <!-- GAIN enumeration -->
+   <ENUMERATION NAME="GAIN">
+      <CONSTANT NAME="GAIN_128" VALUE="128"/>
+      <CONSTANT NAME="GAIN_64"  VALUE="64"/>
+      <CONSTANT NAME="GAIN_32"  VALUE="32"/>
+   </ENUMERATION>
+
+   <!-- Methods with parameters -->
+   <METHOD NAME="writeGain" DESC="Set the Gain Value.">
+      <PARAMETER NAME="gain" TYPE="GAIN" DEFAULT="GAIN_128" DESC="Gain Value."/>
+   </METHOD>
+   <METHOD NAME="writeScale" DESC="Set the Scale Value.">
+      <PARAMETER NAME="scale" TYPE="FLOAT" DEFAULT="1.0" DESC="Scale Value."/>
+   </METHOD>
+   <METHOD NAME="writeTare" DESC="Store the Tare Offset.">
+      <PARAMETER NAME="times" TYPE="INTEGER" DEFAULT="10" DESC="Average number."/>
+   </METHOD>
+
+   <!-- Methods -->
+   <METHOD NAME="powerDown" DESC="Put HX711 in Power down mode.">
+   </METHOD>
+   <METHOD NAME="powerUp"   DESC="Wake up HX711 from Power down mode.">
+   </METHOD>
+
+   <!-- Methods returning values -->
+   <METHOD NAME="readAverage" DESC="Read average reading ADC value.">
+      <PARAMETER NAME="times" TYPE="INTEGER" DEFAULT="10" DESC="Average number."/>
+      <RETURN NAME="value"    TYPE="INTEGER"/>   
+   </METHOD>
+   <METHOD NAME="readValue"   DESC="Read current value without the tare weight.">
+      <PARAMETER NAME="times" TYPE="INTEGER" DEFAULT="1" DESC="Average number."/>
+      <RETURN NAME="value"    TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="readUnits"   DESC="Read current value divided by SCALE.">
+      <PARAMETER NAME="times" TYPE="INTEGER" DEFAULT="1" DESC="Average number."/>
+      <RETURN NAME="value"    TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="readScale"   DESC="Read the current SCALE.">
+      <RETURN NAME="scale"    TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="readTare"    DESC="Read the current Tare Offset.">
+      <RETURN NAME="offset"   TYPE="INTEGER"/>
+   </METHOD>
+
+</DRIVER>

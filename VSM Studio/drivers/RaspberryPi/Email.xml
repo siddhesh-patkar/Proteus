@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Twitter -->
+<DRIVER HEADER="InternetCommunication">
+   <METHOD NAME="emailLogIn" DESC="Log in for email">
+      <PARAMETER NAME="Email"       TYPE="STRING"  DESC="you@gmail.com        Email Address sending from"/>
+      <PARAMETER NAME="Password"    TYPE="STRING"  DESC="Password123          Password to email account"/>
+      <PARAMETER NAME="Server"      TYPE="STRING"  DESC="smtp.gmail.com:465   Email server"/>
+   </METHOD>   
+
+   <METHOD NAME="emailStructure" DESC="Send 8 bit data">
+      <PARAMETER NAME="Subject" TYPE="STRING"  DESC="Email Subject"/>
+      <PARAMETER NAME="EmailContent" TYPE="STRING"  DESC="Content to put into email"/>
+      <PARAMETER NAME="RecipientEmail" TYPE="LIST"  DESC="Recipients email address"/>
+   </METHOD>       
+
+   <METHOD NAME="emailAttachment" DESC="Send 8 bit data">
+      <PARAMETER NAME="FileName" TYPE="LIST"  DESC="Files to attach"/>
+   </METHOD>        
+
+   <METHOD NAME="sendEmail" DESC="Creates and sends the email"/>     
+        
+</DRIVER>

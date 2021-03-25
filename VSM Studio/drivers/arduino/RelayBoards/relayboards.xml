@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Firmware Driver -->
+<DRIVER HEADER="relayboards.h">
+
+   <!-- fourChannelRelay methods -->
+   <METHOD NAME="relayOn"  DESC="Relay# ON (HIGH).">
+      <PARAMETER NAME="n" TYPE="INTEGER" DEFAULT="0" DESC="Relay Number"/>
+   </METHOD>
+   <METHOD NAME="relayOff" DESC="Relay# OFF (LOW).">
+      <PARAMETER NAME="n" TYPE="INTEGER" DEFAULT="0" DESC="Relay Number"/>
+   </METHOD>
+   <METHOD NAME="relaySet" DESC="Relay# Set ON or OFF.">
+      <PARAMETER NAME="n" TYPE="INTEGER" DEFAULT="0" DESC="Relay Number"/>
+      <PARAMETER NAME="s" TYPE="BOOLEAN" DEFAULT="LOW" DESC="HIGH or LOW"/>
+   </METHOD>
+
+   <!-- fourChannelRelay functions -->
+   <METHOD NAME="relayGet"  DESC="Return Relay# state.">
+      <PARAMETER NAME="n" TYPE="INTEGER" DEFAULT="0" DESC="Relay Number"/>
+      <RETURN NAME="state" TYPE="BOOLEAN" DESC="HIGH or LOW"/>
+   </METHOD>
+</DRIVER>

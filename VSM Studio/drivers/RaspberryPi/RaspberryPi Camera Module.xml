@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Camera" FILE="Raspberry Pi/RaspberryPi Camera Module.pdsclip" FAMILY="Raspberry Pi" DESC="Raspberry Pi Camera Module">
+   <PERIPHERAL TYPE="CAMERA" ELEMENT="CAM1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="RPiCamera">
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="camera">
+         <!-- Methods for Camera Wrapper -->
+         <METHOD NAME="setFilestem" DESC="Set the file stem used for image name generation">
+            <PARAMETER NAME="filestem" TYPE="STRING" DEFAULT="&quot;image&quot;" DESC="Filestem of image set" />
+         </METHOD>            
+         <METHOD NAME="setResolution" DESC="Set the image size">
+            <PARAMETER NAME="width"  TYPE="INTEGER" DEFAULT="640" DESC="Image Width"/>            
+            <PARAMETER NAME="height" TYPE="INTEGER" DEFAULT="480" DESC="Image Height"/>            
+         </METHOD>            
+         <METHOD NAME="reset" DESC="Reset the image counter"/>
+         <METHOD NAME="capture" DESC="Capture a still image">
+            <PARAMETER NAME="quality" TYPE="INTEGER" DESC="Image Quality" DEFAULT="25"/>            
+         </METHOD>
+         <METHOD NAME="getImage" DESC="Return the filename of the n'th image">
+            <PARAMETER NAME="count" TYPE="INTEGER" DESC="Image Number" DEFAULT="0"/>            
+            <RETURN NAME="image" TYPE="STRING" DEFAULT="image" DESC="Image filename"/>
+         </METHOD>
+         <METHOD NAME="getLastImage" DESC="Return the filename of the last image taken">
+            <RETURN NAME="image" TYPE="STRING" DEFAULT="image" DESC="Image filename"/>
+         </METHOD>
+         <METHOD NAME="getImageCount" DESC="Return the number of images captured so far">
+            <RETURN NAME="count" TYPE="INTEGER" DEFAULT="count" DESC="Image count"/>
+         </METHOD>
+         <METHOD NAME="makeVideo" DESC="Convert captured images to MP4 video">
+            <PARAMETER NAME="framerate" TYPE="INTEGER" DESC="Video framerate (Hz)" DEFAULT="25"/>
+         </METHOD>
+         <!--
+         <METHOD NAME="startRecording" DESC="Start recording video">
+            <PARAMETER NAME="filename" TYPE="STRING" DESC="Filename for video (MP4)/>
+         </METHOD>
+         <METHOD NAME="stopRecording" DESC="Stop recording video"/>
+         -->
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

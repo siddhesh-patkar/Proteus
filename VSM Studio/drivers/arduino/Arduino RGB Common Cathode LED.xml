@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino RGB Common Cathode LED.pdsclip" FAMILY="ARDUINO" DESC="Arduino RGB Common Cathode LED">
+   <PERIPHERAL TYPE="Arduino RGB LED" ELEMENT="RGBLED1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="GenericRgbLedCc">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO9"/>
+         </PIN>
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO10"/>
+         </PIN>
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO11"/>
+         </PIN>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER FILE="Generic/RGBLED CC Driver.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

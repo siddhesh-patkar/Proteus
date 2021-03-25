@@ -1,0 +1,14 @@
+#
+# Labcenter Electronics
+#
+# Basic syntax highlighter definition file.
+#
+line_comment=(REM|').*$
+string="([^"\\]|\\.)*"
+constant=\b((0(x|X)[\da-fA-F]*)|((\d+\.?\d*)|(\.\d+))((e|E)(\+|-)?\d+)?)(L|l|UL|ul|u|U|F|f)?\b
+constant='([^'\\]|\\.)*'
+keyword=\b(IF|THEN|ELSE|ELSEIF|END|WHILE|WEND|DO|LOOP|SELECT|CASE|FOR|NEXT|CONFIG)\b
+keyword=\b(DECLARE|FUNCTION|SUB|DIM|EXIT|GOSUB|GOTO|RETURN|ON|CONST|VALUE|POPALL|PUSHALL|SHIFT|SWAP|BYVAL|VARPTR|LOCAL|BITS)\b
+extensions=\b(PRINT|ASC|UCASE|LCASE|TRIM|SPLIT|LTRIM|INSTR|SPACE|RTRIM|LEFT|LEN|MID|RIGHT|VAL|STR|CHR|HEX|HEXVAL)\b
+extensions=\b(ACOS|ASIN|ATN|ATN2|EXP|RAD2DEG|FRAC|TAN|TANH|COS|COSH|LOG|LOG10|ROUND|ABS|INT|MAX|MIN|SQR|SGN|POWER|SIN|SINH|FIX|INCR|DECR|DEG2RAD)\b
+operator=(\+|-|\*|\\|/|\^|=|<>|<|>|<=|>=|NOT|AND|OR|XOR)

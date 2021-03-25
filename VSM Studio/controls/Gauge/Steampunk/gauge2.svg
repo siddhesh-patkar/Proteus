@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 100.67 340"
+   version="1.1"
+   id="svg151"
+   sodipodi:docname="gauge2.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata155">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     id="namedview153"
+     showgrid="false"
+     inkscape:zoom="1.9632612"
+     inkscape:cx="-140.74436"
+     inkscape:cy="178.82829"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g4751" />
+  <defs
+     id="defs111">
+    <linearGradient
+       id="Copper_13"
+       data-name="Copper 13"
+       y1="170"
+       x2="100.67"
+       y2="170"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-50.335,-170)">
+      <stop
+         offset="0.01"
+         stop-color="#633823"
+         id="stop2" />
+      <stop
+         offset="0.06"
+         stop-color="#905d3f"
+         id="stop4" />
+      <stop
+         offset="0.09"
+         stop-color="#b17c5a"
+         id="stop6" />
+      <stop
+         offset="0.12"
+         stop-color="#bf8b67"
+         id="stop8" />
+      <stop
+         offset="0.13"
+         stop-color="#bf8d6a"
+         id="stop10" />
+      <stop
+         offset="0.14"
+         stop-color="#bf8b67"
+         id="stop12" />
+      <stop
+         offset="0.18"
+         stop-color="#b17c5a"
+         id="stop14" />
+      <stop
+         offset="0.23"
+         stop-color="#a36745"
+         id="stop16" />
+      <stop
+         offset="0.38"
+         stop-color="#a2623c"
+         id="stop18" />
+      <stop
+         offset="0.48"
+         stop-color="#a2623c"
+         id="stop20" />
+      <stop
+         offset="0.61"
+         stop-color="#a86841"
+         id="stop22" />
+      <stop
+         offset="0.69"
+         stop-color="#a86841"
+         id="stop24" />
+      <stop
+         offset="0.81"
+         stop-color="#c48963"
+         id="stop26" />
+      <stop
+         offset="0.88"
+         stop-color="#e5b794"
+         id="stop28" />
+      <stop
+         offset="0.92"
+         stop-color="#e5b794"
+         id="stop30" />
+      <stop
+         offset="0.95"
+         stop-color="#c49270"
+         id="stop32" />
+      <stop
+         offset="1"
+         stop-color="#6d3f26"
+         id="stop34" />
+    </linearGradient>
+    <linearGradient
+       id="Copper_02"
+       data-name="Copper 02"
+       x1="28.42"
+       y1="170"
+       x2="72.25"
+       y2="170"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-50.335,-170)">
+      <stop
+         offset="0.01"
+         stop-color="#3f1617"
+         id="stop37" />
+      <stop
+         offset="0.08"
+         stop-color="#6c4c2d"
+         id="stop39" />
+      <stop
+         offset="0.38"
+         stop-color="#a58a54"
+         id="stop41" />
+      <stop
+         offset="0.56"
+         stop-color="#e5d4b5"
+         id="stop43" />
+      <stop
+         offset="0.8"
+         stop-color="#987a59"
+         id="stop45" />
+      <stop
+         offset="0.8"
+         stop-color="#967857"
+         id="stop47" />
+      <stop
+         offset="0.96"
+         stop-color="#82502f"
+         id="stop49" />
+    </linearGradient>
+    <linearGradient
+       id="Copper_01"
+       data-name="Copper 01"
+       x1="28.42"
+       y1="170"
+       x2="72.25"
+       y2="170"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.64723615,-50.335,-57.821098)">
+      <stop
+         offset="0.01"
+         stop-color="#541614"
+         id="stop52" />
+      <stop
+         offset="0.08"
+         stop-color="#8e5127"
+         id="stop54" />
+      <stop
+         offset="0.38"
+         stop-color="#cb9552"
+         id="stop56" />
+      <stop
+         offset="0.56"
+         stop-color="#fff2dc"
+         id="stop58" />
+      <stop
+         offset="0.8"
+         stop-color="#d7b189"
+         id="stop60" />
+      <stop
+         offset="0.92"
+         stop-color="#a9672d"
+         id="stop62" />
+      <stop
+         offset="0.96"
+         stop-color="#9d5416"
+         id="stop64" />
+    </linearGradient>
+    <linearGradient
+       id="Gold_29"
+       data-name="Gold 29"
+       x1="9.58"
+       y1="15.33"
+       x2="22.92"
+       y2="15.33"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.02"
+         stop-color="#603513"
+         id="stop67" />
+      <stop
+         offset="0.07"
+         stop-color="#86581b"
+         id="stop69" />
+      <stop
+         offset="0.14"
+         stop-color="#b68525"
+         id="stop71" />
+      <stop
+         offset="0.18"
+         stop-color="#c89629"
+         id="stop73" />
+      <stop
+         offset="0.5"
+         stop-color="#f9f090"
+         id="stop75" />
+      <stop
+         offset="0.57"
+         stop-color="#f0e07e"
+         id="stop77" />
+      <stop
+         offset="0.71"
+         stop-color="#dab74e"
+         id="stop79" />
+      <stop
+         offset="0.82"
+         stop-color="#c89627"
+         id="stop81" />
+      <stop
+         offset="0.98"
+         stop-color="#603513"
+         id="stop83" />
+    </linearGradient>
+    <linearGradient
+       id="Gold_29-2"
+       x1="14.92"
+       y1="15.33"
+       x2="17.67"
+       y2="15.33"
+       gradientTransform="rotate(54.3,156.86914,-118.73721)"
+       xlink:href="#Gold_29" />
+    <linearGradient
+       id="Gold_29-3"
+       x1="77.58"
+       y1="15.33"
+       x2="90.91"
+       y2="15.33"
+       xlink:href="#Gold_29"
+       gradientTransform="translate(-50.335,-170)" />
+    <linearGradient
+       id="Gold_29-4"
+       x1="54.59"
+       y1="-39.89"
+       x2="57.34"
+       y2="-39.89"
+       gradientTransform="rotate(54.3,156.86914,-118.73721)"
+       xlink:href="#Gold_29" />
+    <linearGradient
+       id="Gold_29-5"
+       x1="9.58"
+       y1="324.67"
+       x2="22.92"
+       y2="324.67"
+       xlink:href="#Gold_29"
+       gradientTransform="translate(-50.335,-170)" />
+    <linearGradient
+       id="Gold_29-6"
+       x1="266.13"
+       y1="195.83"
+       x2="268.88"
+       y2="195.83"
+       gradientTransform="rotate(54.3,156.86914,-118.73721)"
+       xlink:href="#Gold_29" />
+    <linearGradient
+       id="Gold_29-7"
+       x1="77.58"
+       y1="324.67"
+       x2="90.91"
+       y2="324.67"
+       xlink:href="#Gold_29"
+       gradientTransform="translate(-50.335,-170)" />
+    <linearGradient
+       id="Gold_29-8"
+       x1="305.81"
+       y1="140.61"
+       x2="308.56"
+       y2="140.61"
+       gradientTransform="rotate(54.3,156.86914,-118.73721)"
+       xlink:href="#Gold_29" />
+    <linearGradient
+       id="Gold_30"
+       data-name="Gold 30"
+       x1="96.08"
+       y1="311.19"
+       x2="4.58"
+       y2="311.19"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#65410f"
+         id="stop93" />
+      <stop
+         offset="0.02"
+         stop-color="#6d4b15"
+         id="stop95" />
+      <stop
+         offset="0.17"
+         stop-color="#ac9d44"
+         id="stop97" />
+      <stop
+         offset="0.28"
+         stop-color="#d3cf61"
+         id="stop99" />
+      <stop
+         offset="0.33"
+         stop-color="#e2e36c"
+         id="stop101" />
+      <stop
+         offset="0.66"
+         stop-color="#af7a1d"
+         id="stop103" />
+      <stop
+         offset="1"
+         stop-color="#65410f"
+         id="stop105" />
+    </linearGradient>
+    <linearGradient
+       id="Gold_29-9"
+       x1="4.08"
+       y1="311.22"
+       x2="96.59"
+       y2="311.22"
+       xlink:href="#Gold_29"
+       gradientTransform="translate(-50.335,-170)" />
+    <linearGradient
+       id="Gold_30-2"
+       x1="96.08"
+       y1="592.85"
+       x2="4.58"
+       y2="592.85"
+       gradientTransform="matrix(1,0,0,-1,-50.335,452.38)"
+       xlink:href="#Gold_30" />
+    <linearGradient
+       id="Gold_29-10"
+       x1="4.08"
+       y1="592.89"
+       x2="96.59"
+       y2="592.89"
+       gradientTransform="matrix(1,0,0,-1,-50.335,452.38)"
+       xlink:href="#Gold_29" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Gold_29"
+       id="linearGradient4642"
+       gradientUnits="userSpaceOnUse"
+       x1="9.58"
+       y1="15.33"
+       x2="22.92"
+       y2="15.33"
+       gradientTransform="translate(-50.335,-170)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Gold_30"
+       id="linearGradient4644"
+       gradientUnits="userSpaceOnUse"
+       x1="96.08"
+       y1="311.19"
+       x2="4.58"
+       y2="311.19"
+       gradientTransform="translate(-50.335,-170)" />
+    <linearGradient
+       id="Copper_01-9"
+       data-name="Copper 01"
+       x1="28.42"
+       y1="170"
+       x2="72.25"
+       y2="170"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-50.334992,-169.99999)">
+      <stop
+         offset="0.01"
+         stop-color="#541614"
+         id="stop52-2" />
+      <stop
+         offset="0.08"
+         stop-color="#8e5127"
+         id="stop54-3" />
+      <stop
+         offset="0.38"
+         stop-color="#cb9552"
+         id="stop56-2" />
+      <stop
+         offset="0.56"
+         stop-color="#fff2dc"
+         id="stop58-3" />
+      <stop
+         offset="0.8"
+         stop-color="#d7b189"
+         id="stop60-1" />
+      <stop
+         offset="0.92"
+         stop-color="#a9672d"
+         id="stop62-7" />
+      <stop
+         offset="0.96"
+         stop-color="#9d5416"
+         id="stop64-8" />
+    </linearGradient>
+  </defs>
+  <vfp:catalogue
+     DESC="Gauge"
+     CATEGORY="Display Controls"
+     PREFIX="Gauge" />
+  <g
+     id="g4774"
+     class="root"
+     vfp:class="Gauge"
+     transform="translate(50.334999,170)">
+    <g
+       id="g4751"
+       class="orient">
+      <rect
+         width="100.67"
+         height="340"
+         id="rect115"
+         x="-50.334999"
+         y="-170"
+         style="fill:url(#Copper_13)"
+         class="bounds" />
+      <rect
+         x="-21.914999"
+         y="-148"
+         width="43.830002"
+         height="296"
+         rx="21.92"
+         ry="21.92"
+         id="rect117"
+         style="display:inline;opacity:0.43999999;fill:url(#Copper_02)"
+         class="scale"
+         inkscape:label="Back" />
+      <rect
+         x="-21.914999"
+         y="-43.581902"
+         width="43.830002"
+         height="191.58189"
+         rx="9.3140678"
+         ry="6.4946294"
+         id="rect119"
+         style="display:inline;fill:url(#Copper_01);stroke-width:0.80450988"
+         class="indicator colour"
+         inkscape:label="rect119" />
+      <circle
+         cx="-33.084999"
+         cy="-153.67"
+         r="6.6700001"
+         id="circle121"
+         style="fill:#1d1d1b" />
+      <circle
+         cx="-34.084999"
+         cy="-154.67"
+         r="6.6700001"
+         id="circle123"
+         style="fill:url(#linearGradient4642)" />
+      <path
+         d="m -40.155,-152 a 6.64,6.64 0 0 0 1.62,2.22 l 10.58,-7.6 a 6.64,6.64 0 0 0 -1.59,-2.25 z"
+         id="path125"
+         inkscape:connector-curvature="0"
+         style="fill:url(#Gold_29-2)" />
+      <circle
+         cx="34.904999"
+         cy="-153.67"
+         r="6.6700001"
+         id="circle127"
+         style="fill:#1d1d1b" />
+      <circle
+         cx="33.904999"
+         cy="-154.67"
+         r="6.6700001"
+         id="circle129"
+         style="fill:url(#Gold_29-3)" />
+      <path
+         d="m 27.845,-152 a 6.64,6.64 0 0 0 1.62,2.22 l 10.58,-7.6 a 6.64,6.64 0 0 0 -1.59,-2.25 z"
+         id="path131"
+         inkscape:connector-curvature="0"
+         style="fill:url(#Gold_29-4)" />
+      <circle
+         cx="-33.084999"
+         cy="155.67001"
+         r="6.6700001"
+         id="circle133"
+         style="fill:#1d1d1b" />
+      <circle
+         cx="-34.084999"
+         cy="154.67001"
+         r="6.6700001"
+         id="circle135"
+         style="fill:url(#Gold_29-5)" />
+      <path
+         d="m -40.155,157.36 a 6.64,6.64 0 0 0 1.62,2.22 l 10.58,-7.58 a 6.64,6.64 0 0 0 -1.59,-2.25 z"
+         id="path137"
+         inkscape:connector-curvature="0"
+         style="fill:url(#Gold_29-6)" />
+      <circle
+         cx="34.904999"
+         cy="155.67001"
+         r="6.6700001"
+         id="circle139"
+         style="fill:#1d1d1b" />
+      <circle
+         cx="33.904999"
+         cy="154.67001"
+         r="6.6700001"
+         id="circle141"
+         style="fill:url(#Gold_29-7)" />
+      <path
+         d="m 27.845,157.36 a 6.64,6.64 0 0 0 1.62,2.22 L 40.045,152 a 6.64,6.64 0 0 0 -1.59,-2.25 z"
+         id="path143"
+         inkscape:connector-curvature="0"
+         style="fill:url(#Gold_29-8)" />
+      <rect
+         x="-21.914999"
+         y="-148"
+         width="43.830002"
+         height="296"
+         rx="9.3140678"
+         ry="10.034405"
+         id="rect119-0"
+         style="display:inline;opacity:0.3;fill:url(#Copper_01-9)"
+         class="indicator colour" />
+      <path
+         d="m 21.915,118.56 v 7.5 A 21.92,21.92 0 0 1 0.005,148 v 0 a 21.92,21.92 0 0 1 -21.92,-21.92 v -7.5 h -23.84 c 0,0 0.17,18 7.42,12.42 7.25,-5.58 11.58,0 11.58,0 l 4.84,14.08 c 0,0 14,3.75 12.41,8.5 -1.32,4 -3.64,3.34 -4.36,3 l 13.86,7.22 13.87,-7.22 c -0.72,0.31 -3,0.94 -4.37,-3 -1.58,-4.75 12.42,-8.5 12.42,-8.5 L 26.745,131 c 0,0 4.34,-5.59 11.59,0 7.25,5.59 7.41,-12.42 7.41,-12.42 z"
+         stroke-miterlimit="10"
+         id="path145"
+         inkscape:connector-curvature="0"
+         style="fill:url(#linearGradient4644);stroke:url(#Gold_29-9);stroke-miterlimit:10" />
+      <path
+         d="m 21.915,-117.85 v -7.5 a 21.92,21.92 0 0 0 -21.91,-21.92 v 0 a 21.92,21.92 0 0 0 -21.92,21.92 v 7.5 h -23.84 c 0,0 0.17,-18 7.42,-12.42 7.25,5.58 11.58,0 11.58,0 l 4.84,-14.08 c 0,0 14,-3.75 12.41,-8.5 -1.32,-4 -3.64,-3.34 -4.36,-3 l 13.86,-7.25 13.87,7.22 c -0.72,-0.31 -3,-0.94 -4.37,3 -1.58,4.75 12.42,8.5 12.42,8.5 l 4.83,14.08 c 0,0 4.34,5.59 11.59,0 7.25,-5.59 7.41,12.42 7.41,12.42 z"
+         stroke-miterlimit="10"
+         id="path147"
+         inkscape:connector-curvature="0"
+         style="fill:url(#Gold_30-2);stroke:url(#Gold_29-10);stroke-miterlimit:10" />
+      <g
+         pointer-events="none"
+         class="graticule"
+         id="g32" />
+      <g
+         class="readout"
+         id="g3962">
+        <text
+           id="text73"
+           y="145.43275"
+           x="0.05968352"
+           style="font-size:15px;font-family:sans-serif;text-anchor:middle;stroke-width:0.5">5.0</text>
+      </g>
+    </g>
+  </g>
+</svg>

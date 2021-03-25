@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino MCP4921 12bit DAC Breakout Board.pdsclip" DESC="Arduino MCP4921 12bit DAC Breakout Board" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="MCP4921 12bit DAC" ELEMENT="DAC1">
+      <INTERFACE OBJECT="MCP49x1">
+         <PORT NAME="SPI"/>
+         <PROPERTY NAME="DACMODEL" ELEMENT="DAC1" TYPE="INTEGER"/>
+         <PIN NAME="ss" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO10"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="mcp49x1/mcp49x1.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

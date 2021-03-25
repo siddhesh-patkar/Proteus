@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino ADS1110 16-bit ADC Breakout Board.pdsclip" DESC="Arduino ADS1110 16-bit ADC Breakout Board" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="ADS1110 16-bit ADC" ELEMENT="ADC1">
+      <INTERFACE OBJECT="ADS1110">
+         <PORT NAME="I2C"/>
+         <PROPERTY NAME="DVCADDR" ELEMENT="ADC1" TYPE="INTEGER"/>
+      </INTERFACE>
+      <DRIVER FILE="ads1110/ads1110.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

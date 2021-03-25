@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Arduino/Arduino 2 Channel Relay Shield.pdsclip" DESC="Arduino 2 Channel Relay Numato Shield" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="2 Channel Relay Shield" ELEMENT="CRS1">
+      <INTERFACE OBJECT="RelayBoards">
+         <PIN NAME="r1" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO2"/>
+         </PIN>
+         <PIN NAME="r2" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO3"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="RelayBoards/RelayBoards.xml"/>
+   </PERIPHERAL>
+</CLIP>

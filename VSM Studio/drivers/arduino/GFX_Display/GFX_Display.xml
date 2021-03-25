@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Adafruit Graphics Display -->
+     <DRIVER HEADER="GFX_Display.h">
+       <REQUIRE HEADER="core.h"/>
+       <REQUIRE HEADER="spi.h"/>
+       <REQUIRE HEADER="wire.h"/>
+
+       <RESOURCE TYPE="bmp" DESC="Bitmap Files" METHOD="drawBitmap"/>
+   
+       <ENUMERATION NAME="COLOUR">
+          <CONSTANT NAME="BLACK"   VALUE="0x0000"/>
+          <CONSTANT NAME="GREY"    VALUE="0x8410"/> 
+          <CONSTANT NAME="WHITE"   VALUE="0xFFFF"/>       
+          <CONSTANT NAME="RED"     VALUE="0xF800"/>       
+          <CONSTANT NAME="GREEN"   VALUE="0x07E0"/>       
+          <CONSTANT NAME="BLUE"    VALUE="0x001F"/>       
+          <CONSTANT NAME="CYAN"    VALUE="0x07FF"/>       
+          <CONSTANT NAME="MAGENTA" VALUE="0xF81F"/>       
+          <CONSTANT NAME="YELLOW"  VALUE="0xFFE0"/>       
+       </ENUMERATION>    
+       <METHOD NAME="fillScreen"  DESC="Clear the screen to black.">
+         <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to fill screen with." DEFAULT="BLACK"/>
+       </METHOD>
+       <METHOD NAME="setPixel" DESC="Draw a single pixel">
+            <PARAMETER NAME="x" TYPE="INTEGER" DESC="X coordinate of pixel"/>
+         <PARAMETER NAME="y" TYPE="INTEGER" DESC="Y coordinate of pixel"/>
+         <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to fill with." DEFAULT="WHITE"/>
+       </METHOD>      
+       <METHOD NAME="drawLine" DESC="Draw a line.">
+         <PARAMETER NAME="x1" TYPE="INTEGER" DESC="x-coord of line start"/>
+         <PARAMETER NAME="y1" TYPE="INTEGER" DESC="y-coord of line start"/>
+         <PARAMETER NAME="x2" TYPE="INTEGER" DESC="x-coord of line end"/>
+         <PARAMETER NAME="y2" TYPE="INTEGER" DESC="y-coord of line end"/>
+         <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to draw with" DEFAULT="WHITE"/>
+       </METHOD>
+       <METHOD NAME="drawFastHLline" DESC="Draw a horizontal line.">
+         <PARAMETER NAME="x" TYPE="INTEGER" DESC="x-coord of line start"/>
+         <PARAMETER NAME="y" TYPE="INTEGER" DESC="y-coord of line start"/>
+         <PARAMETER NAME="width" TYPE="INTEGER" DESC="Width of line"/>
+         <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to draw with" DEFAULT="WHITE"/>
+       </METHOD>
+       <METHOD NAME="drawFastVLline" DESC="Draw a horizontal line.">
+         <PARAMETER NAME="x" TYPE="INTEGER" DESC="x-coord of line start"/>
+         <PARAMETER NAME="y" TYPE="INTEGER" DESC="y-coord of line start"/>
+         <PARAMETER NAME="height" TYPE="INTEGER" DESC="height of line"/>
+         <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to draw with" DEFAULT="WHITE"/>
+       </METHOD>
+       <METHOD NAME="drawRect" DESC="Draw a rectangle.">
+         <PARAMETER NAME="x" TYPE="INTEGER" DESC="Left edge of rectangle"/>
+         <PARAMETER NAME="y" TYPE="INTEGER" DESC="Right edge of rectangle"/>
+         <PARAMETER NAME="width" TYPE="INTEGER" DESC="Width of rectangle"/>
+         <PARAMETER NAME="height" TYPE="INTEGER" DESC="Height of rectangle"/>
+         <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to fill with." DEFAULT="WHITE"/>
+       </METHOD>
+       <METHOD NAME="fillRect" DESC="Fill a rectangle.">
+         <PARAMETER NAME="x" TYPE="INTEGER" DESC="Left edge of rectangle"/>
+         <PARAMETER NAME="y" TYPE="INTEGER" DESC="Right edge of rectangle"/>
+         <PARAMETER NAME="width" TYPE="INTEGER" DESC="Width of rectangle"/>
+         <PARAMETER NAME="height" TYPE="INTEGER" DESC="Height of rectangle"/>
+         <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to fill with." DEFAULT="WHITE"/>
+       </METHOD>
+       <METHOD NAME="drawCircle" DESC="Draw a curcle.">
+         <PARAMETER NAME="centreX" TYPE="INTEGER" DESC="x-coord of centre"/>
+         <PARAMETER NAME="centreY" TYPE="INTEGER" DESC="y-coord of centre"/>
+         <PARAMETER NAME="radius" TYPE="INTEGER" DESC="Radius of circle"/>
+         <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to draw with." DEFAULT="WHITE"/>
+       </METHOD>
+       <METHOD NAME="fillCircle" DESC="Draw a circle.">
+         <PARAMETER NAME="centreX" TYPE="INTEGER" DESC="x-coord of centre"/>
+         <PARAMETER NAME="centreY" TYPE="INTEGER" DESC="y-coord of centre"/>
+         <PARAMETER NAME="radius" TYPE="INTEGER" DESC="Radius of circle"/>
+         <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to draw with." DEFAULT="WHITE"/>
+       </METHOD>
+
+       <METHOD NAME="drawBitmap" DESC="Draw a bitmap at the specified co-ordinates.">
+         <PARAMETER NAME="file" TYPE="STRING" DESC="Name of a BMP bitmap file"/>
+         <PARAMETER NAME="xPos" TYPE="INTEGER" DEFAULT="0" DESC="x-coord of left of character"/>
+         <PARAMETER NAME="yPos" TYPE="INTEGER" DEFAULT="0" DESC="y-coord of top of character"/>
+       </METHOD>          
+
+       <METHOD NAME="print" DESC="Write text to the display.">
+         <PARAMETER TYPE="LIST" DESC="List of numbers or strings to print."/>
+       </METHOD>
+       <METHOD NAME="println" DESC="Write text, then move text cursor to new line.">
+         <PARAMETER TYPE="LIST" DESC="List of numbers or strings to print."/>
+       </METHOD>
+
+       <METHOD NAME="setCursor" DESC="Set the position of the text cursor.">
+         <PARAMETER NAME="x" TYPE="INTEGER" DESC="X coordinate of cursor"/>
+         <PARAMETER NAME="y" TYPE="INTEGER" DESC="Y coordinate of cursor"/>
+       </METHOD>
+       <METHOD NAME="setTextColor" DESC="Set the text colour; background will be transparent.">
+         <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour for text" DEFAULT="WHITE"/>
+       </METHOD>
+       <METHOD NAME="setTextBackground" DESC="Set a background colour for text.">
+         <PARAMETER NAME="background" TYPE="COLOUR" DESC="Background colour for text." DEFAULT="BLACK"/>
+       </METHOD>
+        <METHOD NAME="setTextSize" DESC="Set the size of the text.">
+         <PARAMETER NAME="size" TYPE="INTEGER" DESC="Text font size" DEFAULT="1"/>
+       </METHOD>
+        <METHOD NAME="setTextWrap" DESC="Set the size of the text.">
+         <PARAMETER NAME="Wrap" TYPE="BOOLEAN" DESC="Text wrapping mode" DEFAULT="TRUE"/>
+       </METHOD>
+
+       <!-- Output Functions -->
+       <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+         <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+       </METHOD>
+       <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+         <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+       </METHOD>
+
+        <METHOD NAME="setRotation" DESC="Set orientation of the display.">
+         <PARAMETER NAME="rotation" TYPE="INTEGER" DESC="Rotation value 0-3" DEFAULT="0"/>
+       </METHOD>
+   
+       <!--
+       <METHOD NAME="setScrollArea" DESC="Set up the vertical scrolling area.">
+         <PARAMETER NAME="tfa" TYPE="INTEGER" DESC="Top fixed area - non scrolling region at top of screen"/>
+         <PARAMETER NAME="vsa" TYPE="INTEGER" DESC="Vertical scroll area - number of rows to scroll"/>
+         <PARAMETER NAME="bfa" TYPE="INTEGER" DESC="Bottom fixed area - non scrolling region at bottom of screen"/>
+       </METHOD>      
+       <METHOD NAME="setScrollPos" DESC="Set the vertical scroll position.">
+         <PARAMETER NAME="vsp" TYPE="INTEGER" DESC="Vertical scroll position - the number of rows to scroll"/>
+       </METHOD>
+       -->      
+               
+      </DRIVER>

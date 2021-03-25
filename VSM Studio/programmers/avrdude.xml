@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PROGRAMMER NAME="AVRDUDE" ID="AVRDUDE" VERSION="6.1" URL="http://savannah.nongnu.org/projects/avrdude/" AVAILABILITY="Internal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/programmer.xsd">
+  <TOOL NAME="AVRDUDE" FILE="avrdude.exe"  PATH="AVRDUDE">
+    <OPTION NAME="-p " DESC="partno Required. Specify AVR device." PARAM="STRING"/>
+    <OPTION NAME="-b " DESC="baudrate Override RS-232 baud rate." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-B " DESC="bitclock Specify JTAG/STK500v2 bit clock period (us)." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-C " DESC="config-file Specify location of configuration file." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-c " DESC="programmer Specify programmer type." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-D" DESC="Disable auto erase for flash memory" ADVANCED="1"/>
+    <OPTION NAME="-i " DESC="delay ISP Clock Delay [in microseconds]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-P " DESC="port Specify connection port." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-F" DESC="Override invalid signature check." ADVANCED="1"/>
+    <OPTION NAME="-e" DESC="Perform a chip erase." ADVANCED="1"/>
+    <OPTION NAME="-O" DESC="Perform RC oscillator calibration (see AVR053)." ADVANCED="1"/>
+    <OPTION NAME="-U " DESC="memtype:r|w|v:filename[:format] Memory operation specification. Multiple -U options are allowed, each request is performed in the order specified." PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-n" DESC="Do not write anything to the device." ADVANCED="1"/>
+    <OPTION NAME="-V" DESC="Do not verify." ADVANCED="1"/>
+    <OPTION NAME="-u" DESC="Disable safemode, default when running from a script." ADVANCED="1"/>
+    <OPTION NAME="-s" DESC="Silent safemode operation, will not ask you if fuses should be changed back." ADVANCED="1"/>
+    <OPTION NAME="-t" DESC="Enter terminal mode." ADVANCED="1"/>
+    <OPTION NAME="-E " DESC="exitspec[,exitspec] List programmer exit specifications." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-x " DESC="extended_param Pass extended_param to programmer." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-y" DESC="Count # erase cycles in EEPROM." ADVANCED="1"/>
+    <OPTION NAME="-Y " DESC="number Initialize erase cycle # in EEPROM." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-v" DESC="Verbose output. -v -v for more." MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="-l " DESC="logfile Use logfile rather than stderr for diagnostics." PARAM="STRING" ADVANCED="1"/>
+  </TOOL>
+  <TOOL NAME="RTP" FILE="avrrtp.exe" PATH="RTP">
+    <OPTION NAME="-P " DESC="port Specify connection port." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-b " DESC="baudrate Override RS-232 baud rate." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-S " DESC="Chip select line for SD card 'IOnn'" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-p " DESC="partno Specify AVR device." PARAM="STRING"/>
+    <OPTION NAME="-c " DESC="programmer Specify programmer type." PARAM="STRING" ADVANCED="1"/>    
+    <OPTION NAME="-d" DESC="Debug Mode (trace output)." ADVANCED="1"/>
+    <OPTION NAME="-q" DESC="Quell progress output. -q -q for less." MULTIPLE="1" ADVANCED="1"/>
+  </TOOL>
+    <FAMILY NAME="AVR">
+    <CONTROLLER NAME="AT32UC3A0512">
+      <OPTION NAME="-p " VALUE="uc3a0512"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90CAN128">
+      <OPTION NAME="-p " VALUE="c128"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90CAN32">
+      <OPTION NAME="-p " VALUE="c32"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90CAN64">
+      <OPTION NAME="-p " VALUE="c64"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM2">
+      <OPTION NAME="-p " VALUE="pwm2"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM2B">
+      <OPTION NAME="-p " VALUE="pwm2b"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM3">
+      <OPTION NAME="-p " VALUE="pwm3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM316">
+      <OPTION NAME="-p " VALUE="pwm316"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM3B">
+      <OPTION NAME="-p " VALUE="pwm3b"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S1200">
+      <OPTION NAME="-p " VALUE="1200"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S2313">
+      <OPTION NAME="-p " VALUE="2313"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S2333">
+      <OPTION NAME="-p " VALUE="2333"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S2343">
+      <OPTION NAME="-p " VALUE="2343"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S4414">
+      <OPTION NAME="-p " VALUE="4414"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S4433">
+      <OPTION NAME="-p " VALUE="4433"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S4434">
+      <OPTION NAME="-p " VALUE="4434"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S8515">
+      <OPTION NAME="-p " VALUE="8515"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S8535">
+      <OPTION NAME="-p " VALUE="8535"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB1286">
+      <OPTION NAME="-p " VALUE="usb1286"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB1287">
+      <OPTION NAME="-p " VALUE="usb1287"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB162">
+      <OPTION NAME="-p " VALUE="usb162"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB646">
+      <OPTION NAME="-p " VALUE="usb646"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB647">
+      <OPTION NAME="-p " VALUE="usb647"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB82">
+      <OPTION NAME="-p " VALUE="usb82"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega103">
+      <OPTION NAME="-p " VALUE="m103"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega128">
+      <OPTION NAME="-p " VALUE="m128"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega1280">
+      <OPTION NAME="-p " VALUE="m1280"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega1281">
+      <OPTION NAME="-p " VALUE="m1281"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega1284">
+      <OPTION NAME="-p " VALUE="m1284"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega1284P">
+      <OPTION NAME="-p " VALUE="m1284p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega1284RFR2">
+      <OPTION NAME="-p " VALUE="m1284rfr2"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega128RFA1">
+      <OPTION NAME="-p " VALUE="m128rfa1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega128RFR2">
+      <OPTION NAME="-p " VALUE="m128rfr2"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16">
+      <OPTION NAME="-p " VALUE="m16"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega161">
+      <OPTION NAME="-p " VALUE="m161"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega162">
+      <OPTION NAME="-p " VALUE="m162"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega163">
+      <OPTION NAME="-p " VALUE="m163"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega164P">
+      <OPTION NAME="-p " VALUE="m164p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega168">
+      <OPTION NAME="-p " VALUE="m168"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega168P">
+      <OPTION NAME="-p " VALUE="m168p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega169">
+      <OPTION NAME="-p " VALUE="m169"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16U2">
+      <OPTION NAME="-p " VALUE="m16u2"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega2560">
+      <OPTION NAME="-p " VALUE="m2560"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega2561">
+      <OPTION NAME="-p " VALUE="m2561"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega2564RFR2">
+      <OPTION NAME="-p " VALUE="m2564rfr2"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega256RFR2">
+      <OPTION NAME="-p " VALUE="m256rfr2"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32">
+      <OPTION NAME="-p " VALUE="m32"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega324P">
+      <OPTION NAME="-p " VALUE="m324p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega324PA">
+      <OPTION NAME="-p " VALUE="m324pa"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega325">
+      <OPTION NAME="-p " VALUE="m325"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega3250">
+      <OPTION NAME="-p " VALUE="m3250"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega328">
+      <OPTION NAME="-p " VALUE="m328"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega328P">
+      <OPTION NAME="-p " VALUE="m328p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega329">
+      <OPTION NAME="-p " VALUE="m329"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega3290">
+      <OPTION NAME="-p " VALUE="m3290"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega3290P">
+      <OPTION NAME="-p " VALUE="m3290p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega329P">
+      <OPTION NAME="-p " VALUE="m329p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32U2">
+      <OPTION NAME="-p " VALUE="m32u2"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32U4">
+      <OPTION NAME="-p " VALUE="m32u4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATMEGA406">
+      <OPTION NAME="-p " VALUE="m406"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega48">
+      <OPTION NAME="-p " VALUE="m48"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega48P">
+      <OPTION NAME="-p " VALUE="m48p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega64">
+      <OPTION NAME="-p " VALUE="m64"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega640">
+      <OPTION NAME="-p " VALUE="m640"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega644">
+      <OPTION NAME="-p " VALUE="m644"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega644P">
+      <OPTION NAME="-p " VALUE="m644p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega644RFR2">
+      <OPTION NAME="-p " VALUE="m644rfr2"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega645">
+      <OPTION NAME="-p " VALUE="m645"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega6450">
+      <OPTION NAME="-p " VALUE="m6450"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega649">
+      <OPTION NAME="-p " VALUE="m649"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega6490">
+      <OPTION NAME="-p " VALUE="m6490"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega64RFR2">
+      <OPTION NAME="-p " VALUE="m64rfr2"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8">
+      <OPTION NAME="-p " VALUE="m8"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8515">
+      <OPTION NAME="-p " VALUE="m8515"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8535">
+      <OPTION NAME="-p " VALUE="m8535"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega88">
+      <OPTION NAME="-p " VALUE="m88"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega88P">
+      <OPTION NAME="-p " VALUE="m88p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8U2">
+      <OPTION NAME="-p " VALUE="m8u2"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny10">
+      <OPTION NAME="-p " VALUE="t10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny11">
+      <OPTION NAME="-p " VALUE="t11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny12">
+      <OPTION NAME="-p " VALUE="t12"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny13">
+      <OPTION NAME="-p " VALUE="t13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny15">
+      <OPTION NAME="-p " VALUE="t15"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny1634">
+      <OPTION NAME="-p " VALUE="t1634"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny20">
+      <OPTION NAME="-p " VALUE="t20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny2313">
+      <OPTION NAME="-p " VALUE="t2313"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny24">
+      <OPTION NAME="-p " VALUE="t24"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny25">
+      <OPTION NAME="-p " VALUE="t25"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny26">
+      <OPTION NAME="-p " VALUE="t26"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny261">
+      <OPTION NAME="-p " VALUE="t261"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny4">
+      <OPTION NAME="-p " VALUE="t4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny40">
+      <OPTION NAME="-p " VALUE="t40"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny4313">
+      <OPTION NAME="-p " VALUE="t4313"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny43u">
+      <OPTION NAME="-p " VALUE="t43u"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny44">
+      <OPTION NAME="-p " VALUE="t44"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny45">
+      <OPTION NAME="-p " VALUE="t45"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny461">
+      <OPTION NAME="-p " VALUE="t461"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny5">
+      <OPTION NAME="-p " VALUE="t5"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny84">
+      <OPTION NAME="-p " VALUE="t84"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny85">
+      <OPTION NAME="-p " VALUE="t85"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny861">
+      <OPTION NAME="-p " VALUE="t861"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny88">
+      <OPTION NAME="-p " VALUE="t88"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny9">
+      <OPTION NAME="-p " VALUE="t9"/>
+    </CONTROLLER>
+  </FAMILY>
+  <FAMILY NAME="ATxmega">
+    <CONTROLLER NAME="ATxmega128A1">
+      <OPTION NAME="-p " VALUE="x128a1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128A1revD">
+      <OPTION NAME="-p " VALUE="x128a1d"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128A1U">
+      <OPTION NAME="-p " VALUE="x128a1u"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128A3">
+      <OPTION NAME="-p " VALUE="x128a3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128A3U">
+      <OPTION NAME="-p " VALUE="x128a3u"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128A4">
+      <OPTION NAME="-p " VALUE="x128a4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128A4U">
+      <OPTION NAME="-p " VALUE="x128a4u"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128B1">
+      <OPTION NAME="-p " VALUE="x128b1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128B3">
+      <OPTION NAME="-p " VALUE="x128b3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128C3">
+      <OPTION NAME="-p " VALUE="x128c3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128D3">
+      <OPTION NAME="-p " VALUE="x128d3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128D4">
+      <OPTION NAME="-p " VALUE="x128d4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega16A4">
+      <OPTION NAME="-p " VALUE="x16a4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega16A4U">
+      <OPTION NAME="-p " VALUE="x16a4u"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega16C4">
+      <OPTION NAME="-p " VALUE="x16c4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega16D4">
+      <OPTION NAME="-p " VALUE="x16d4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega16E5">
+      <OPTION NAME="-p " VALUE="x16e5"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega192A1">
+      <OPTION NAME="-p " VALUE="x192a1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega192A3">
+      <OPTION NAME="-p " VALUE="x192a3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega192A3U">
+      <OPTION NAME="-p " VALUE="x192a3u"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega192C3">
+      <OPTION NAME="-p " VALUE="x192c3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega192D3">
+      <OPTION NAME="-p " VALUE="x192d3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega256A1">
+      <OPTION NAME="-p " VALUE="x256a1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega256A3">
+      <OPTION NAME="-p " VALUE="x256a3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega256A3B">
+      <OPTION NAME="-p " VALUE="x256a3b"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega256A3BU">
+      <OPTION NAME="-p " VALUE="x256a3bu"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega256A3U">
+      <OPTION NAME="-p " VALUE="x256a3u"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega256C3">
+      <OPTION NAME="-p " VALUE="x256c3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega256D3">
+      <OPTION NAME="-p " VALUE="x256d3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega32A4">
+      <OPTION NAME="-p " VALUE="x32a4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega32A4U">
+      <OPTION NAME="-p " VALUE="x32a4u"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega32C4">
+      <OPTION NAME="-p " VALUE="x32c4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega32D4">
+      <OPTION NAME="-p " VALUE="x32d4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega32E5">
+      <OPTION NAME="-p " VALUE="x32e5"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega384C3">
+      <OPTION NAME="-p " VALUE="x384c3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega384D3">
+      <OPTION NAME="-p " VALUE="x384d3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64A1">
+      <OPTION NAME="-p " VALUE="x64a1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64A1U">
+      <OPTION NAME="-p " VALUE="x64a1u"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64A3">
+      <OPTION NAME="-p " VALUE="x64a3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64A3U">
+      <OPTION NAME="-p " VALUE="x64a3u"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64A4">
+      <OPTION NAME="-p " VALUE="x64a4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64A4U">
+      <OPTION NAME="-p " VALUE="x64a4u"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64B1">
+      <OPTION NAME="-p " VALUE="x64b1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64B3">
+      <OPTION NAME="-p " VALUE="x64b3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64C3">
+      <OPTION NAME="-p " VALUE="x64c3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64D3">
+      <OPTION NAME="-p " VALUE="x64d3"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64D4">
+      <OPTION NAME="-p " VALUE="x64d4"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega8E5">
+      <OPTION NAME="-p " VALUE="x8e5"/>
+    </CONTROLLER>
+  </FAMILY>
+
+  <FAMILY NAME="ARDUINO">
+    <CONTROLLER NAME="Arduino Uno">
+      <OPTION NAME="-p " VALUE="m328p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="Arduino Nano">
+      <OPTION NAME="-p " VALUE="m328p"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="Arduino Mega">
+      <OPTION NAME="-p " VALUE="m2560"/>
+    </CONTROLLER>
+  </FAMILY>
+  
+  <INTERFACE NAME="Arduino (ATmega168)" URL="www.arduino.cc">
+    <OPTION NAME="-c " VALUE="arduino"/>
+    <OPTION NAME="-P " VALUE="%PORT%"/>
+    <OPTION NAME="-b " VALUE="%PORTCLOCK%"/>
+    <PROPERTY NAME="PORT" DESC="Port" TYPE="COM"/>
+    <PROPERTY NAME="PORTCLOCK" DESC="Port Speed" VALUE="115200"/>
+    <PROPERTY NAME="UPLOADER" DESC="Resource Uploader" VALUE="ArduinoUnoR3.hex"/>
+  </INTERFACE>
+  <INTERFACE NAME="Arduino (ATmega328)" URL="www.arduino.cc">
+    <OPTION NAME="-c " VALUE="arduino"/>
+    <OPTION NAME="-P " VALUE="%PORT%"/>
+    <OPTION NAME="-b " VALUE="%PORTCLOCK%"/>
+    <PROPERTY NAME="PORT" DESC="Port" TYPE="COM"/>
+    <PROPERTY NAME="PORTCLOCK" DESC="Port Speed" VALUE="115200"/>
+    <PROPERTY NAME="UPLOADER" DESC="Resource Uploader" VALUE="ArduinoUnoR3.hex"/>
+  </INTERFACE>
+  <INTERFACE NAME="Arduino Uno" URL="www.arduino.cc">
+    <OPTION NAME="-c " VALUE="arduino"/>
+    <OPTION NAME="-P " VALUE="%PORT%"/>
+    <OPTION NAME="-b " VALUE="%PORTCLOCK%"/>
+    <PROPERTY NAME="PORT" DESC="Port" TYPE="COM"/>
+    <PROPERTY NAME="PORTCLOCK" DESC="Port Speed" VALUE="115200"/>
+    <PROPERTY NAME="UPLOADER" DESC="Resource Uploader" VALUE="ArduinoUnoR3.hex"/>
+  </INTERFACE>
+  <INTERFACE NAME="Arduino Nano" URL="www.arduino.cc">
+    <OPTION NAME="-c " VALUE="arduino"/>
+    <OPTION NAME="-P " VALUE="%PORT%"/>
+    <OPTION NAME="-b " VALUE="%PORTCLOCK%"/>
+    <PROPERTY NAME="PORT" DESC="Port" TYPE="COM"/>
+    <PROPERTY NAME="PORTCLOCK" DESC="Port Speed" VALUE="115200"/>
+    <PROPERTY NAME="UPLOADER" DESC="Resource Uploader" VALUE="ArduinoUnoR3.hex"/>
+  </INTERFACE>
+  <INTERFACE NAME="Arduino Mega1280" URL="www.arduino.cc">
+    <OPTION NAME="-c " VALUE="arduino"/>
+    <OPTION NAME="-P " VALUE="%PORT%"/>
+    <OPTION NAME="-b " VALUE="%PORTCLOCK%"/>
+    <PROPERTY NAME="PORT" DESC="Port" TYPE="COM"/>
+    <PROPERTY NAME="PORTCLOCK" DESC="Port Speed" VALUE="115200"/>
+  </INTERFACE>
+  <INTERFACE NAME="Arduino Mega2560" URL="www.arduino.cc">
+    <OPTION NAME="-c " VALUE="wiring"/>
+    <OPTION NAME="-P " VALUE="%PORT%"/>
+    <OPTION NAME="-b " VALUE="%PORTCLOCK%"/>
+    <PROPERTY NAME="PORT" DESC="Port" TYPE="COM"/>
+    <PROPERTY NAME="PORTCLOCK" DESC="Port Speed" VALUE="115200"/>
+    <PROPERTY NAME="UPLOADER" DESC="Resource Uploader" VALUE="ArduinoMega2560.hex"/>
+  </INTERFACE>
+  <INTERFACE NAME="USBasp" URL="http://www.fischl.de/usbasp/">
+    <OPTION NAME="-c " VALUE="usbasp"/>
+    <OPTION NAME="-D"/>
+  </INTERFACE>
+  <FILE TYPE="HEX" DESC="Intel Hex"/>
+  <FILE TYPE="ELF" DESC="ELF"/>
+  <FILE TYPE="DAT" DESC="Resource File List"/>
+  <PROCESS TOOL="AVRDUDE" NAME="Program Firmware" ID="PROGRAM" CMDLINE="%OPTIONS% -Uflash:w:%INFILE%">
+    <FILE TYPE="HEX" NAME="&quot;%INFILE%&quot;:i"/>
+    <FILE TYPE="ELF" NAME="&quot;%INFILE%&quot;:e"/>
+    <OPTION NAME="-D"/>
+    <OPTION NAME="-V"/>
+    <OPTION NAME="-q"/>
+  </PROCESS>
+  <PROCESS TOOL="AVRDUDE" NAME="Verify Firmware" ID="VERIFY" CMDLINE="%OPTIONS% -Uflash:v:%INFILE%">
+    <FILE TYPE="HEX" NAME="&quot;%INFILE%&quot;:i"/>
+    <FILE TYPE="ELF" NAME="&quot;%INFILE%&quot;:e"/>
+    <OPTION NAME="-q"/>
+  </PROCESS>
+  <PROCESS TOOL="RTP" NAME="Upload Resources" ID="UPLOAD" CMDLINE="%OPTIONS% -S %CHIPSELECT% -U %INFILE%">
+    <FILE TYPE="DAT" NAME="&quot;@%INFILE%&quot;"/>
+  </PROCESS>
+
+</PROGRAMMER>

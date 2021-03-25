@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove I2C ADC.pdsclip" FAMILY="ARDUINO" DESC="Grove I2C 12-bit ADC" >
+   <PERIPHERAL TYPE="Grove I2C ADC"   ELEMENT="ADC1" >     
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GroveI2CAdc">
+       <PORT NAME="I2C"/>
+       <SETUP NAME="begin"/>
+       <PROPERTY NAME="STATE" ELEMENT="JP1" TYPE="INTEGER"/>
+       <PROPERTY NAME="STATE" ELEMENT="JP2" TYPE="INTEGER"/>
+     </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="grove_i2c_adc.h">
+       <REQUIRE HEADER="i2c_adc.h"/>
+       <REQUIRE HEADER="Wire.h"/>
+       
+       <!-- Methods -->
+       <METHOD NAME="readAnalog" DESC="Read Adc value."> 
+            <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="Analog"/>
+       </METHOD>
+       <METHOD NAME="readAverageAnalog" DESC="Read Average ADC value.">
+            <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="Analog"/>
+            <PARAMETER NAME="navr" TYPE="INTEGER" DEFAULT="100" DESC="Number of Averages (100 max)."/> 
+       </METHOD>
+       <METHOD NAME="readVoltage" DESC="Read Input Voltage.">
+            <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="Volt"/>
+       </METHOD>
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>

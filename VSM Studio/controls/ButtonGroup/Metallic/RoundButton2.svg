@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 55 55"
+   version="1.1"
+   id="svg4792"
+   sodipodi:docname="RoundButton2.svg"
+   inkscape:version="0.92.1 r15371"
+   width="55"
+   height="55">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1417"
+     id="namedview4794"
+     showgrid="false"
+     inkscape:zoom="6.1100323"
+     inkscape:cx="5.7606531"
+     inkscape:cy="9.5448578"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g101" />
+  <defs
+     id="defs194">
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="25.83"
+       x2="176.84"
+       y1="25.83"
+       x1="125.19"
+       data-name="MetalRadioButton21 05"
+       id="MetalRadioButton21_05">
+      <stop
+         id="stop4615"
+         stop-color="#bfc1c6"
+         offset="0" />
+      <stop
+         id="stop4617"
+         stop-color="#b8babe"
+         offset="0.02" />
+      <stop
+         id="stop4619"
+         stop-color="#a3a6a9"
+         offset="0.05" />
+      <stop
+         id="stop4621"
+         stop-color="#909395"
+         offset="0.08" />
+      <stop
+         id="stop4623"
+         stop-color="#a9abad"
+         offset="0.08" />
+      <stop
+         id="stop4625"
+         stop-color="#c4c5c6"
+         offset="0.09" />
+      <stop
+         id="stop4627"
+         stop-color="#dadbdb"
+         offset="0.1" />
+      <stop
+         id="stop4629"
+         stop-color="#ebebeb"
+         offset="0.1" />
+      <stop
+         id="stop4631"
+         stop-color="#f6f7f7"
+         offset="0.11" />
+      <stop
+         id="stop4633"
+         stop-color="#fdfdfd"
+         offset="0.13" />
+      <stop
+         id="stop4635"
+         stop-color="#fff"
+         offset="0.16" />
+      <stop
+         id="stop4637"
+         stop-color="#f2f2f3"
+         offset="0.18" />
+      <stop
+         id="stop4639"
+         stop-color="#d0d1d4"
+         offset="0.2" />
+      <stop
+         id="stop4641"
+         stop-color="#9a9ba2"
+         offset="0.23" />
+      <stop
+         id="stop4643"
+         stop-color="#6a6c75"
+         offset="0.25" />
+      <stop
+         id="stop4645"
+         stop-color="#6b6d76"
+         offset="0.25" />
+      <stop
+         id="stop4647"
+         stop-color="#7b7e85"
+         offset="0.26" />
+      <stop
+         id="stop4649"
+         stop-color="#87898f"
+         offset="0.27" />
+      <stop
+         id="stop4651"
+         stop-color="#8d9095"
+         offset="0.29" />
+      <stop
+         id="stop4653"
+         stop-color="#8f9297"
+         offset="0.35" />
+      <stop
+         id="stop4655"
+         stop-color="#8b8e93"
+         offset="0.36" />
+      <stop
+         id="stop4657"
+         stop-color="#808488"
+         offset="0.38" />
+      <stop
+         id="stop4659"
+         stop-color="#6e7276"
+         offset="0.4" />
+      <stop
+         id="stop4661"
+         stop-color="#54585c"
+         offset="0.41" />
+      <stop
+         id="stop4663"
+         stop-color="#4d5155"
+         offset="0.42" />
+      <stop
+         id="stop4665"
+         stop-color="#696c70"
+         offset="0.44" />
+      <stop
+         id="stop4667"
+         stop-color="#848589"
+         offset="0.46" />
+      <stop
+         id="stop4669"
+         stop-color="#9a9a9e"
+         offset="0.49" />
+      <stop
+         id="stop4671"
+         stop-color="#abaaae"
+         offset="0.52" />
+      <stop
+         id="stop4673"
+         stop-color="#b6b6ba"
+         offset="0.55" />
+      <stop
+         id="stop4675"
+         stop-color="#bdbcc0"
+         offset="0.61" />
+      <stop
+         id="stop4677"
+         stop-color="#bfbec2"
+         offset="0.75" />
+      <stop
+         id="stop4679"
+         stop-color="#bdbcc0"
+         offset="0.8" />
+      <stop
+         id="stop4681"
+         stop-color="#b6b6b9"
+         offset="0.82" />
+      <stop
+         id="stop4683"
+         stop-color="#abaaae"
+         offset="0.83" />
+      <stop
+         id="stop4685"
+         stop-color="#9a9a9d"
+         offset="0.85" />
+      <stop
+         id="stop4687"
+         stop-color="#858487"
+         offset="0.85" />
+      <stop
+         id="stop4689"
+         stop-color="#6a6a6b"
+         offset="0.86" />
+      <stop
+         id="stop4691"
+         stop-color="#4a4b4b"
+         offset="0.87" />
+      <stop
+         id="stop4693"
+         stop-color="#262727"
+         offset="0.88" />
+      <stop
+         id="stop4695"
+         stop-color="#1a1b1a"
+         offset="0.88" />
+      <stop
+         id="stop4697"
+         stop-color="#1a1b1a"
+         offset="0.93" />
+      <stop
+         id="stop4699"
+         stop-color="#3c3d3d"
+         offset="0.93" />
+      <stop
+         id="stop4701"
+         stop-color="#5d5f60"
+         offset="0.94" />
+      <stop
+         id="stop4703"
+         stop-color="#797c7d"
+         offset="0.95" />
+      <stop
+         id="stop4705"
+         stop-color="#8f9293"
+         offset="0.96" />
+      <stop
+         id="stop4707"
+         stop-color="#9ea1a3"
+         offset="0.97" />
+      <stop
+         id="stop4709"
+         stop-color="#a7aaac"
+         offset="0.98" />
+      <stop
+         id="stop4711"
+         stop-color="#aaadaf"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#MetalRadioButton2_03"
+       id="MetalRadioButton2_421"
+       gradientUnits="userSpaceOnUse"
+       y1="25"
+       x2="50"
+       y2="25" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="25.83"
+       x2="51.650002"
+       y1="25.83"
+       data-name="Silver 03"
+       id="MetalRadioButton2_03">
+      <stop
+         id="stop4557"
+         stop-color="#e5e1df"
+         offset="0" />
+      <stop
+         id="stop4559"
+         stop-color="#ded9d7"
+         offset="0" />
+      <stop
+         id="stop4561"
+         stop-color="#cfcaca"
+         offset="0.06" />
+      <stop
+         id="stop4563"
+         stop-color="#a8a4a7"
+         offset="0.18" />
+      <stop
+         id="stop4565"
+         stop-color="#8b878d"
+         offset="0.26" />
+      <stop
+         id="stop4567"
+         stop-color="#f3f4f4"
+         offset="0.52" />
+      <stop
+         id="stop4569"
+         stop-color="#e5e5e6"
+         offset="0.58" />
+      <stop
+         id="stop4571"
+         stop-color="#c0bec0"
+         offset="0.7" />
+      <stop
+         id="stop4573"
+         stop-color="#858085"
+         offset="0.86" />
+      <stop
+         id="stop4575"
+         stop-color="#807b80"
+         offset="0.88" />
+      <stop
+         id="stop4577"
+         stop-color="#d1d3d4"
+         offset="1" />
+      <stop
+         id="stop4579"
+         stop-color="#a7a9ab"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#MetalRadioButton2_116"
+       id="MetalRadioButton2_034"
+       x1="1"
+       y1="25"
+       x2="49"
+       y2="25"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="86.089996"
+       x2="114.25"
+       y1="86.089996"
+       x1="62.599998"
+       data-name="GradientFill 16"
+       id="MetalRadioButton2_116">
+      <stop
+         id="stop4808"
+         stop-color="#3a4346"
+         offset="0" />
+      <stop
+         id="stop4810"
+         stop-color="#cedde6"
+         offset="0.17" />
+      <stop
+         id="stop4812"
+         stop-color="#63747e"
+         offset="0.33" />
+      <stop
+         id="stop4814"
+         stop-color="#fff"
+         offset="0.47" />
+      <stop
+         id="stop4816"
+         stop-color="#515453"
+         offset="0.78" />
+      <stop
+         id="stop4818"
+         stop-color="#4c5a60"
+         offset="0.85" />
+      <stop
+         id="stop4820"
+         stop-color="#fff"
+         offset="0.96" />
+      <stop
+         id="stop4822"
+         stop-color="#fff"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#MetalRadioButton2_118"
+       id="MetalRadioButton2_042"
+       x1="4"
+       y1="25"
+       x2="46"
+       y2="25"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="86.089996"
+       x2="176.84"
+       y1="86.089996"
+       x1="125.19"
+       data-name="GradientFill 18"
+       id="MetalRadioButton2_118">
+      <stop
+         id="stop4825"
+         stop-color="#dff2fd"
+         offset="0" />
+      <stop
+         id="stop4827"
+         stop-color="#84898e"
+         offset="0.21" />
+      <stop
+         id="stop4829"
+         stop-color="#545758"
+         offset="0.43" />
+      <stop
+         id="stop4831"
+         stop-color="#fff"
+         offset="0.64" />
+      <stop
+         id="stop4833"
+         stop-color="#dbe4ec"
+         offset="0.74" />
+      <stop
+         id="stop4835"
+         stop-color="#8297a7"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="35"
+       x2="42.32"
+       y1="15"
+       x1="7.6799998"
+       id="MetalRadioButton2_2-15-2">
+      <stop
+         id="stop4787-7"
+         stop-opacity="0"
+         stop-color="#fff"
+         offset="0" />
+      <stop
+         id="stop4789-2"
+         stop-opacity="0.16"
+         stop-color="#dbdbdb"
+         offset="0.05" />
+      <stop
+         id="stop4791-0"
+         stop-opacity="0.64"
+         stop-color="#6f6f6e"
+         offset="0.27" />
+      <stop
+         id="stop4793-9"
+         stop-opacity="0.92"
+         stop-color="#30302e"
+         offset="0.53" />
+      <stop
+         id="stop4795-0"
+         stop-color="#1d1d1b"
+         offset="1" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#MetalRadioButton21_05"
+       id="MetalRadioButton2_3423"
+       gradientUnits="userSpaceOnUse"
+       cx="25"
+       cy="25"
+       r="19" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="10.505842"
+       x2="39.634457"
+       y1="42.704453"
+       x1="6.5239015"
+       id="MetalRadioButton2_2594"
+       xlink:href="#MetalRadioButton2_41"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="25.83"
+       x2="239.44"
+       y1="25.83"
+       x1="187.78999"
+       data-name="Linear Gradient 1"
+       id="MetalRadioButton2_41">
+      <stop
+         id="stop4714"
+         stop-color="#010000"
+         offset="0" />
+      <stop
+         id="stop4716"
+         stop-color="#7f7e82"
+         offset="0.17" />
+      <stop
+         id="stop4718"
+         stop-color="#fff"
+         offset="0.48" />
+      <stop
+         id="stop4720"
+         stop-color="#e3e2e5"
+         offset="0.68" />
+      <stop
+         id="stop4722"
+         stop-color="#7f7e82"
+         offset="0.77" />
+      <stop
+         id="stop4724"
+         stop-color="#010000"
+         offset="1" />
+    </linearGradient>
+    <radialGradient
+       xlink:href="#MetalRadioButton2_41"
+       r="18"
+       cx="25"
+       id="MetalRadioButton2_2-16-2" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#MetalRadioButton2_41"
+       id="MetalRadioButton2_050"
+       x1="8.9854212"
+       y1="41.911888"
+       x2="41.704857"
+       y2="8.4332514"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       r="19.1"
+       cy="25"
+       cx="25"
+       id="MetalRadioButton2_2-18">
+      <stop
+         id="stop4840-3"
+         stop-opacity="0"
+         stop-color="#1d1d1b"
+         offset="0.57536292" />
+      <stop
+         style="stop-color:#1d1d1b;stop-opacity:0.54205608"
+         id="stop4842-2"
+         stop-opacity="0.4"
+         stop-color="#1d1d1b"
+         offset="0.68924606" />
+      <stop
+         style="stop-color:#1d1d1b;stop-opacity:0.65420562"
+         id="stop4844-6"
+         stop-opacity="0.54"
+         stop-color="#1d1d1b"
+         offset="0.7MetalRadioButton2_2-160255" />
+      <stop
+         style="stop-color:#1d1d1b;stop-opacity:0.79906541"
+         id="stop4846-2"
+         stop-opacity="0.7"
+         stop-color="#1d1d1b"
+         offset="1" />
+    </radialGradient>
+    <filter
+       id="MetalRadioButton2_2-feather"
+       inkscape:label="Feather"
+       style="color-interpolation-filters:sRGB"
+       x="-0.0252"
+       width="1.0504"
+       y="-0.0252"
+       height="1.0504">
+      <feGaussianBlur
+         id="feGaussianBlur4985"
+         result="blur"
+         stdDeviation="0.4011" />
+      <feComposite
+         id="feComposite4987"
+         result="composite1"
+         operator="atop"
+         in2="blur"
+         in="SourceGraphic" />
+      <feComposite
+         id="feComposite4989"
+         result="composite2"
+         operator="in"
+         in2="composite1" />
+      <feComposite
+         id="feComposite4991"
+         result="composite3"
+         operator="in"
+         in2="composite2" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata4637">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title />
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <vfp:catalogue
+     PREFIX="Btn"
+     ELEMENTS="2,3,4,5,6,7,8"
+     CATEGORY="Buttons"
+     DESC="Radio-Buttons (round 2)" />
+  <g
+     id="layer1-6"
+     vfp:class="ButtonGroup"
+     transform="scale(1.1)">
+    <g
+       id="g101"
+       class="element">
+      <circle
+         class="bounds"
+         style="fill:url(#MetalRadioButton2_421);fill-opacity:1"
+         id="circle4851"
+         r="25"
+         cy="25"
+         cx="25" />
+      <path
+         style="fill:url(#MetalRadioButton2_034);fill-opacity:1"
+         inkscape:connector-curvature="0"
+         id="path4853"
+         d="M 25,49 A 24,24 0 1 1 49,25 24,24 0 0 1 25,49 Z" />
+      <path
+         style="display:inline;fill:url(#MetalRadioButton2_042);fill-opacity:1"
+         inkscape:connector-curvature="0"
+         id="path4855"
+         d="M 25,46 A 21,21 0 1 1 46,25 21,21 0 0 1 25,46 Z" />
+      <path
+         style="display:inline;fill:url(#MetalRadioButton2_2-15-2)"
+         inkscape:connector-curvature="0"
+         id="path4857"
+         d="M 25,45 A 20,20 0 1 1 45,25 20,20 0 0 1 25,45 Z" />
+      <path
+         class="lamp"
+         style="display:inline;fill:#e52421"
+         inkscape:connector-curvature="0"
+         id="path4859"
+         d="M 25,45 A 20,20 0 1 1 45,25 20,20 0 0 1 25,45 Z" />
+      <g
+         style="display:inline"
+         id="g4867"
+         transform="matrix(0.92952214,0,0,0.92952214,1.7619465,1.7619465)">
+        <path
+           style="fill:url(#MetalRadioButton2_3423);fill-opacity:1"
+           inkscape:connector-curvature="0"
+           id="path4861"
+           d="M 25,44 A 19,19 0 1 1 44,25 19,19 0 0 1 25,44 Z" />
+        <path
+           style="display:inline;fill:url(#MetalRadioButton2_2594);fill-opacity:1"
+           inkscape:connector-curvature="0"
+           id="path4863"
+           d="M 25,43 A 18,18 0 1 1 43,25 18,18 0 0 1 25,43 Z" />
+        <path
+           style="fill:#ffffff"
+           inkscape:connector-curvature="0"
+           id="path4865"
+           d="M 18.37,9.33 C 3.49,15.62 8.42,32 8.42,32 A 18,18 0 1 1 41.58,18 c 0,0 -7.72,-14.16 -23.21,-8.67 z" />
+      </g>
+      <g
+         style="display:none"
+         id="g4875"
+         transform="matrix(0.92952214,0,0,0.92952214,1.7619465,1.7619465)">
+        <path
+           style="display:inline;fill:url(#MetalRadioButton2_2-16-2);fill-opacity:1"
+           inkscape:connector-curvature="0"
+           id="path4869"
+           d="M 25,43 A 18,18 0 1 1 43,25 18,18 0 0 1 25,43 Z" />
+        <path
+           d="M 25,42.05 A 17.05,17.05 0 1 1 42.05,25 17.07,17.07 0 0 1 25,42.05 Z"
+           id="path4995"
+           inkscape:connector-curvature="0"
+           style="display:inline;fill:url(#MetalRadioButton2_050);fill-opacity:1" />
+        <path
+           transform="matrix(0.94291232,0,0,0.94582195,1.4271919,1.354451)"
+           style="display:inline;fill:url(#MetalRadioButton2_2-18);filter:url(#MetalRadioButton2_2-feather)"
+           inkscape:connector-curvature="0"
+           id="path4873"
+           d="M 25,44.1 A 19.1,19.1 0 1 1 44.1,25 19.12,19.12 0 0 1 25,44.1 Z" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.10623932px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:none"
+         x="-7.2355804"
+         y="70.704704"
+         id="text5322-3">Label</text>
+    </g>
+  </g>
+</svg>

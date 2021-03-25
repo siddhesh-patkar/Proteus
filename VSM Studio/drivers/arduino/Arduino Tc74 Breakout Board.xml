@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino Tc74 Breakout Board.pdsclip" DESC="Arduino Tc74 temperature sensor Breakout Board" FAMILY="ARDUINO">
+  <PERIPHERAL TYPE="Tc74 Temperature Sensor" ELEMENT="TS1">
+    <INTERFACE OBJECT="TC74TempSensor">
+      <PORT NAME="I2C"/>
+      <PROPERTY NAME="DEVADDR" ELEMENT="TS1" TYPE="INTEGER"/>
+    </INTERFACE>
+    
+    <!-- Firmware Driver -->
+    <DRIVER HEADER="Tc74TempSensor.h">
+      <REQUIRE HEADER="Wire.h"/>
+      
+      <!-- Neo Pixel type enumeration -->
+      <ENUMERATION NAME="DEVADDR">
+         <CONSTANT NAME="A0" VALUE="144"/>
+         <CONSTANT NAME="A1" VALUE="146"/>
+         <CONSTANT NAME="A2" VALUE="148"/>
+         <CONSTANT NAME="A3" VALUE="150"/>
+         <CONSTANT NAME="A4" VALUE="152"/>
+         <CONSTANT NAME="A5" VALUE="154"/>
+         <CONSTANT NAME="A6" VALUE="156"/>
+         <CONSTANT NAME="A7" VALUE="158"/>
+      </ENUMERATION>
+
+      <!-- Methods -->
+      <METHOD NAME="read" DESC="Read Tc74 Temperature value.">
+        <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="temp"/>
+      </METHOD>
+    </DRIVER>
+  </PERIPHERAL>
+</CLIP>
+

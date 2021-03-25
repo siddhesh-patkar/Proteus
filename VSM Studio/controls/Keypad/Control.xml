@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<CONTROL>
+
+   <CONFIG>
+  	   <!-- PROPERTY NAME="keypadFont" DESC="Font for the keypad" TYPE="FONT"/ -->
+      <ENUMERATION NAME="POSITION">
+           <CONSTANT NAME="None" VALUE="0"/> 
+           <CONSTANT NAME="Above" VALUE="1"/> 
+           <CONSTANT NAME="Below" VALUE="2"/>
+           <CONSTANT NAME="Left" VALUE="3"/>       
+           <CONSTANT NAME="Right" VALUE="4"/>       
+      </ENUMERATION>  
+      <PROPERTY NAME="labelText" DESC="Text for the label" TYPE="STRING" DEFAULT="label"/>
+      <PROPERTY NAME="labelPosition" DESC="Position of the label" TYPE="POSITION" DEFAULT="2"/>
+      <PROPERTY NAME="labelSpacing" DESC="Distance of the label from the control" TYPE="INTEGER" DEFAULT="10"/>
+      <PROPERTY NAME="labelFont" DESC="Font for the label" TYPE="FONT"/>
+   </CONFIG>
+   
+   <!-- Driver Descriptor for Push-Button  -->
+   <DRIVER HEADER="Controls">
+     <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+     <INTERRUPT DESC="Key Pressed"  HOOK="attachEventHandler"/>                   
+     <FUNCTION DESC="Last Keypress">
+        <RETURN TYPE="STRING"/>
+     </FUNCTION>
+
+     <METHOD NAME="getInput" DESC="Returns the value of the last key pressed, or an empty string if none">        
+       <RETURN TYPE="STRING"/>
+ 	  </METHOD>
+   
+   </DRIVER>
+</CONTROL>
+  

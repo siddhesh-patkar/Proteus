@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Pimoroni" FILE="Raspberry Pi/PimoroniExplorerHat.pdsclip" DESC="Explorer Hat" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="PimoroniExplorerHat" ELEMENT="U2" >
+   
+   <INTERFACE OBJECT="PimoroniExplorerHat"/>
+   
+    <DRIVER HEADER="PimoroniHats">
+
+       <METHOD NAME="setOutput"  DESC="Sets the Output Pins.">
+         <PARAMETER NAME="OutputNumber" TYPE="INTEGER" DEFAULT="1" DESC="The number of the pin to control."/>
+         <PARAMETER NAME="Value" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="Boolean output pin."/>
+       </METHOD>
+       
+       <METHOD NAME="readAnalog"  DESC="Read from an analogue input.">
+         <PARAMETER NAME="Input" TYPE="INTEGER" DEFAULT="1" DESC="The analog pin number."/>
+         <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="Volt"/>
+       </METHOD>
+       
+       <METHOD NAME="readInput"  DESC="Read from an digital input.">
+         <PARAMETER NAME="Input" TYPE="INTEGER" DEFAULT="1" DESC="The digital pin number."/>
+         <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="Volt"/>
+       </METHOD>
+       
+       <METHOD NAME="setMotor"  DESC="Set the motor direction and speed.">
+         <PARAMETER NAME="Motor" TYPE="INTEGER" DEFAULT="1" DESC="The motor number."/>
+         <PARAMETER NAME="Speed" TYPE="INTEGER" DEFAULT="100" DESC="The motor speed -100(Backwards) to 100(Forward)."/>
+       </METHOD>
+       
+       <METHOD NAME="setLight"  DESC="Set a LED.">
+         <PARAMETER NAME="LED" TYPE="INTEGER" DEFAULT="1" DESC="The LED number."/>
+         <PARAMETER NAME="Value" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="LED On or Off."/>
+       </METHOD>
+       
+       <METHOD NAME="getButton"  DESC="Gets the state of a button">
+         <PARAMETER NAME="Button" TYPE="INTEGER" DEFAULT="1" DESC="The Button number."/>
+         <RETURN NAME="State" TYPE="BOOLEAN" DEFAULT="State"/>
+       </METHOD>
+       
+
+    </DRIVER>
+   </PERIPHERAL>
+</CLIP>

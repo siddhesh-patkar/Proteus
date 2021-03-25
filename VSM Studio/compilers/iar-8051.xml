@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<COMPILER NAME="IAR for 8051 (C)" BASE_NAME="IAR for 8051" ID="8051IAR" VERSION="5.3" URL="http://www.iar.com/" AVAILABILITY="External" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- C Compiler -->
+  <TOOL NAME="CC" FILE="icc8051.exe">
+    <!-- And C++ Compiler as well -->
+    <ALIAS NAME="CPP"/>
+    <!-- Options -->
+    <OPTION NAME="--calling_convention=" DESC="Select calling convention (default idata_reentrant)" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="data_overlay">
+        <ALIAS VALUE="do"/>
+      </PARAM>
+      <PARAM VALUE="idata_overlay">
+        <ALIAS VALUE="io"/>
+      </PARAM>
+      <PARAM VALUE="idata_reentrant" DEFAULT="1">
+        <ALIAS VALUE="ir"/>
+      </PARAM>
+      <PARAM VALUE="pdata_reentrant">
+        <ALIAS VALUE="pr"/>
+      </PARAM>
+      <PARAM VALUE="xdata_reentrant">
+        <ALIAS VALUE="xr"/>
+      </PARAM>
+      <PARAM VALUE="ext_stack_reentrant">
+        <ALIAS VALUE="er"/>
+      </PARAM>
+    </OPTION>
+    <OPTION NAME="--char_is_signed" DESC="'Plain' char is treated as signed char" ADVANCED="1"/>
+    <OPTION NAME="--code_model=" DESC="Code Model to use" PARAM="CHOICE">
+      <PARAM VALUE="near">
+        <ALIAS VALUE="n"/>
+      </PARAM>
+      <PARAM VALUE="banked">
+        <ALIAS VALUE="b"/>
+      </PARAM>
+      <PARAM VALUE="banked_ext2">
+        <ALIAS VALUE="b2"/>
+      </PARAM>
+      <PARAM VALUE="far">
+        <ALIAS VALUE="f"/>
+      </PARAM>
+    </OPTION>
+    <OPTION NAME="--core=" DESC="Select core" PARAM="CHOICE">
+      <ALIAS VALUE="-v"/>
+      <PARAM VALUE="plain" DEFAULT="1">
+        <ALIAS VALUE="p1"/>
+      </PARAM>
+      <PARAM VALUE="extended1">
+        <ALIAS VALUE="e1"/>
+      </PARAM>
+      <PARAM VALUE="extended2">
+        <ALIAS VALUE="e2"/>
+      </PARAM>
+    </OPTION>
+    <OPTION NAME="-D" DESC="Define preprocessor symbol: -Dsymbol[=value]" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="--data_model=" DESC="Data Model to use" PARAM="CHOICE">
+      <PARAM VALUE="tiny">
+        <ALIAS VALUE="t"/>
+      </PARAM>
+      <PARAM VALUE="small">
+        <ALIAS VALUE="s"/>
+      </PARAM>
+      <PARAM VALUE="large">
+        <ALIAS VALUE="l"/>
+      </PARAM>
+      <PARAM VALUE="generic">
+        <ALIAS VALUE="g"/>
+      </PARAM>
+      <PARAM VALUE="far">
+        <ALIAS VALUE="f"/>
+      </PARAM>
+    </OPTION>
+    <OPTION NAME="--debug" DESC="Insert debug info in object file">
+      <ALIAS NAME="-r"/>
+    </OPTION>
+    <OPTION NAME="--dependencies=i " DESC="List file dependencies" PARAM="STRING" MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="--dependencies "/>
+    </OPTION>
+    <OPTION NAME="--dependencies=m " DESC="List file dependencies (makefile style)" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_error=" DESC="Treat the list of tags as error diagnostics =tag,tag,..." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_remark=" DESC="Treat the list of tags as remark diagnostics =tag,tag,..." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_suppress=" DESC="Suppress the list of tags as diagnostics =tag,tag,..." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_warning=" DESC="Treat the list of tags as warning diagnostics =tag,tag,..." PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diagnostics_tables " DESC="Dump diagnostic message tables to file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--discard_unused_publics" DESC="Discard unused public functions and variables" ADVANCED="1"/>
+    <OPTION NAME="--dlib_config " DESC="Specify DLib library configuration file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--dptr=" DESC="Setup for data pointers: --dptr={[size][,number][,visibility][,select]}" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-e" DESC="Enable IAR C/C++ language extensions" ADVANCED="1"/>
+    <OPTION NAME="--ec++" DESC="Enable Embedded C++" ADVANCED="1"/>
+    <OPTION NAME="--eec++" DESC="Extended EC++ (EC++ with templates/namespaces/mutable/casts)" ADVANCED="1"/>
+    <OPTION NAME="--enable_multibytes" DESC="Enable multibyte support" ADVANCED="1"/>
+    <OPTION NAME="--error_limit=" DESC="Stop after this many errors (0 = no limit)" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="--extended_stack" DESC="Use Dallas 390 extended stack" ADVANCED="1"/>
+    <OPTION NAME="-f " DESC="Read options from file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--header_context" DESC="Adds include file context to diagnostics" ADVANCED="1"/>
+    <OPTION NAME="--has_cobank" DESC="Use if device has COBANK bits in bank selection register" ADVANCED="1"/>
+    <OPTION NAME="-I " DESC="Add #include search directory" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-l" DESC="Output list file: -l[c|C|D|E|a|A|b|B][N][H] file|directory" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--library_module" DESC="Make a library module" ADVANCED="1"/>
+    <OPTION NAME="--mfc" DESC="Enable multiple file compilation" ADVANCED="1"/>
+    <OPTION NAME="--migration_preprocessor_extensions" DESC="Enable IAR migration preprocessor extensions" ADVANCED="1"/>
+    <OPTION NAME="--module_name" DESC="Set module name" ADVANCED="1"/>
+    <OPTION NAME="--no_code_motion" DESC="Disable code motion" ADVANCED="1"/>
+    <OPTION NAME="--no_cse" DESC="Disable common sub-expression elimination" ADVANCED="1"/>
+    <OPTION NAME="--no_inline" DESC="Disable function inlining" ADVANCED="1"/>
+    <OPTION NAME="--no_path_in_file_macros" DESC="Strip path from __FILE__ and __BASE_FILE__ macros" ADVANCED="1"/>
+    <OPTION NAME="--no_tbaa" DESC="Disable type based alias analysis" ADVANCED="1"/>
+    <OPTION NAME="--no_typedefs_in_diagnostics" DESC="Don't use typedefs when printing types" ADVANCED="1"/>
+    <OPTION NAME="--no_ubrof_messages" DESC="Do not output UBROF error messages in object files" ADVANCED="1"/>
+    <OPTION NAME="--no_unroll" DESC="Disable loop unrolling" ADVANCED="1"/>
+    <OPTION NAME="--no_warnings" DESC="Disable generation of warnings" ADVANCED="1"/>
+    <OPTION NAME="--no_wrap_diagnostics" DESC="Don't wrap long lines in diagnostic messages" ADVANCED="1"/>
+    <OPTION NAME="--nr_virtual_regs " DESC="Specifies number of virtual registers (default 8) [8-32]" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="-O" DESC="Select level of optimization" PARAM="CHOICE">
+      <PARAM VALUE="n" DESC="No optimizations"/>
+      <PARAM VALUE="l" DESC="Low optimizations" DEFAULT="1"/>
+      <PARAM VALUE="m" DESC="Medium optimizations"/>
+      <PARAM VALUE="h" DESC="High optimizations">
+        <ALIAS VALUE=""/>
+      </PARAM>
+      <PARAM VALUE="hz" DESC="High optimizations, tuned for small code size"/>
+      <PARAM VALUE="hs" DESC="High optimizations, tuned for high speed"/>
+    </OPTION>
+    <OPTION NAME="--output " DESC="Specify object file" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-o "/>
+    </OPTION>
+    <OPTION NAME="--omit_types" DESC="Omit function/variable type info in object output" ADVANCED="1"/>
+    <OPTION NAME="--only_stdout" DESC="Use stdout only (no console output on stderr)" ADVANCED="1"/>
+    <OPTION NAME="--place_constants=" DESC="Select default placement for constants" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="data" DEFAULT="1"/>
+      <PARAM VALUE="data_rom"/>
+      <PARAM VALUE="code"/>
+    </OPTION>
+    <OPTION NAME="--predef_macros " DESC="Output predefined macros to file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preinclude " DESC="Include file before normal source" PARAM="STRING"/>
+    <OPTION NAME="--preprocess=c " DESC="Preprocessor output: Include comments" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preprocess=n " DESC="Preprocessor output: Preprocess only" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preprocess=l " DESC="Preprocessor output: Include #line directives" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preprocess=cn " DESC="Preprocessor output: Include comments, Preprocess only" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preprocess=nl " DESC="Preprocessor output: Preprocess only, Include #line directives" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preprocess=cl " DESC="Preprocessor output: Include comments, Include #line directives" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--preprocess=cnl " DESC="Preprocessor output: Include comments, Preprocess only, Include #line directives" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--public_equ " DESC="Define public assembler symbol (EQU) symbol[=value]" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="--remarks" DESC="Enable generation of remarks" ADVANCED="1"/>
+    <OPTION NAME="--require_prototypes" DESC="Require prototypes for all called or public functions" ADVANCED="1"/>
+    <OPTION NAME="--rom_mon_bp_padding" DESC="Pad instructions (with NOPs) that violates insertion of ROM-monitor C-level breakpoints" ADVANCED="1"/>
+    <OPTION NAME="--silent" DESC="Silent operation" ADVANCED="1"/>
+    <OPTION NAME="--strict_ansi" DESC="Strict ANSI rules" ADVANCED="1"/>
+    <OPTION NAME="--warnings_affect_exit_code" DESC="Warnings affect exit code" ADVANCED="1"/>
+    <OPTION NAME="--warnings_are_errors" DESC="All warnings are errors" ADVANCED="1"/>
+    <OPTION NAME="-s" DESC="Optimize for speed {0-9}" PARAM="NUMBER"/>
+    <OPTION NAME="-z" DESC="Optimize for size {0-9}" PARAM="NUMBER"/>
+  </TOOL>
+  <!-- Linker -->
+  <TOOL NAME="LD" FILE="xlink.exe">
+    <!--xlink {<options>} <sourcefiles> {<options>}-->
+    <OPTION NAME="" DESC="Library object file name" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--misrac1998" DESC="Enable MISRA-C 1998 diagnostics as specified" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--misrac"/>
+    </OPTION>
+    <OPTION NAME="--misrac2004" DESC="Enable MISRA-C 2004 diagnostics as specified" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--misrac_verbose" DESC="Enable verbose MISRA C messages" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-c" DESC="Specify target cpu" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="16032"/>
+      <PARAM VALUE="1802"/>
+      <PARAM VALUE="6301"/>
+      <PARAM VALUE="65000"/>
+      <PARAM VALUE="6502"/>
+      <PARAM VALUE="65k"/>
+      <PARAM VALUE="6801"/>
+      <PARAM VALUE="6805"/>
+      <PARAM VALUE="6809"/>
+      <PARAM VALUE="6811"/>
+      <PARAM VALUE="6812"/>
+      <PARAM VALUE="6816"/>
+      <PARAM VALUE="68hc11"/>
+      <PARAM VALUE="68hc16"/>
+      <PARAM VALUE="68k"/>
+      <PARAM VALUE="740"/>
+      <PARAM VALUE="7700"/>
+      <PARAM VALUE="7800"/>
+      <PARAM VALUE="78000"/>
+      <PARAM VALUE="78000s"/>
+      <PARAM VALUE="78200"/>
+      <PARAM VALUE="78300"/>
+      <PARAM VALUE="78400"/>
+      <PARAM VALUE="78600"/>
+      <PARAM VALUE="80196"/>
+      <PARAM VALUE="80251"/>
+      <PARAM VALUE="8048"/>
+      <PARAM VALUE="8051"/>
+      <PARAM VALUE="8085"/>
+      <PARAM VALUE="8096"/>
+      <PARAM VALUE="80x96"/>
+      <PARAM VALUE="a90"/>
+      <PARAM VALUE="arm"/>
+      <PARAM VALUE="avr"/>
+      <PARAM VALUE="avr32"/>
+      <PARAM VALUE="cf"/>
+      <PARAM VALUE="cop8"/>
+      <PARAM VALUE="cr16"/>
+      <PARAM VALUE="cr16c"/>
+      <PARAM VALUE="cr32"/>
+      <PARAM VALUE="dip"/>
+      <PARAM VALUE="dspic"/>
+      <PARAM VALUE="ez80"/>
+      <PARAM VALUE="h16"/>
+      <PARAM VALUE="h8"/>
+      <PARAM VALUE="h8300"/>
+      <PARAM VALUE="h8300h"/>
+      <PARAM VALUE="h8500"/>
+      <PARAM VALUE="hcs12"/>
+      <PARAM VALUE="m16c"/>
+      <PARAM VALUE="m32c"/>
+      <PARAM VALUE="maxq"/>
+      <PARAM VALUE="mc80"/>
+      <PARAM VALUE="mk5"/>
+      <PARAM VALUE="mrkii"/>
+      <PARAM VALUE="ms8"/>
+      <PARAM VALUE="msp430"/>
+      <PARAM VALUE="pic"/>
+      <PARAM VALUE="pic18"/>
+      <PARAM VALUE="r32c"/>
+      <PARAM VALUE="s08"/>
+      <PARAM VALUE="sam8"/>
+      <PARAM VALUE="sh"/>
+      <PARAM VALUE="sk0"/>
+      <PARAM VALUE="sm6000"/>
+      <PARAM VALUE="sm8500"/>
+      <PARAM VALUE="t7000"/>
+      <PARAM VALUE="t99"/>
+      <PARAM VALUE="tlcs900"/>
+      <PARAM VALUE="u8"/>
+      <PARAM VALUE="v850"/>
+      <PARAM VALUE="x51"/>
+      <PARAM VALUE="z8"/>
+      <PARAM VALUE="z80"/>
+      <PARAM VALUE="z8002"/>
+    </OPTION>
+    <OPTION NAME="--image_input=" DESC="Put image file in segment at alignment {file,symbol,segment,alignment}" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--disable_overlap_check=" DESC="disable_overlap_check=seg1,seg2,seg3... " PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-A " DESC="Forced load: {filename}[,filename[,filename]...]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-a" DESC="Overlay control: -a{iw(.)[.]{.}}" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-B" DESC="Forced dump" ADVANCED="1"/>
+    <OPTION NAME="-b" DESC="Define banked segments: ...={start},{length},{bankinc}[,count]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-C " DESC="Conditional load: {filename}[,filename[, filename]...]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-D" DESC="Define global entries: symb a[,symb c][=value]" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-d" DESC="Disable code generation" ADVANCED="1"/>
+    <OPTION NAME="-E " DESC="Empty load: {filename}[,filename[, filename]...]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-e" DESC="Define replace names for externals: {extern to} = {extern from}[,extern from]..." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-F" DESC="Define format type" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="aomf80196"/>
+      <PARAM VALUE="aomf80251"/>
+      <PARAM VALUE="aomf8051"/>
+      <PARAM VALUE="aomf8096"/>
+      <PARAM VALUE="ashling"/>
+      <PARAM VALUE="ashling-6301"/>
+      <PARAM VALUE="ashling-64180"/>
+      <PARAM VALUE="ashling-6801"/>
+      <PARAM VALUE="ashling-8080"/>
+      <PARAM VALUE="ashling-8085"/>
+      <PARAM VALUE="ashling-z80"/>
+      <PARAM VALUE="basemap"/>
+      <PARAM VALUE="coff"/>
+      <PARAM VALUE="debug"/>
+      <PARAM VALUE="debug-intel-ext"/>
+      <PARAM VALUE="debug-intel-std"/>
+      <PARAM VALUE="debug-motorola"/>
+      <PARAM VALUE="elf"/>
+      <PARAM VALUE="extended-tekhex"/>
+      <PARAM VALUE="hp"/>
+      <PARAM VALUE="hp-code"/>
+      <PARAM VALUE="hp-symb"/>
+      <PARAM VALUE="ieee695"/>
+      <PARAM VALUE="ieee695-ie"/>
+      <PARAM VALUE="ieee695-is"/>
+      <PARAM VALUE="ieee695-m"/>
+      <PARAM VALUE="intel-extended"/>
+      <PARAM VALUE="intel-standard"/>
+      <PARAM VALUE="millenium"/>
+      <PARAM VALUE="motorola"/>
+      <PARAM VALUE="motorola-s19"/>
+      <PARAM VALUE="motorola-s28"/>
+      <PARAM VALUE="motorola-s37"/>
+      <PARAM VALUE="mpds"/>
+      <PARAM VALUE="mpds-code"/>
+      <PARAM VALUE="mpds-i"/>
+      <PARAM VALUE="mpds-m"/>
+      <PARAM VALUE="mpds-symb"/>
+      <PARAM VALUE="msd"/>
+      <PARAM VALUE="msd-i"/>
+      <PARAM VALUE="msd-m"/>
+      <PARAM VALUE="msd-t"/>
+      <PARAM VALUE="msp430_txt"/>
+      <PARAM VALUE="nec"/>
+      <PARAM VALUE="nec-symbolic"/>
+      <PARAM VALUE="nec2"/>
+      <PARAM VALUE="nec2-symbolic"/>
+      <PARAM VALUE="nec78k"/>
+      <PARAM VALUE="nec78k-symbolic"/>
+      <PARAM VALUE="pentica-a"/>
+      <PARAM VALUE="pentica-ai"/>
+      <PARAM VALUE="pentica-am"/>
+      <PARAM VALUE="pentica-b"/>
+      <PARAM VALUE="pentica-bi"/>
+      <PARAM VALUE="pentica-bm"/>
+      <PARAM VALUE="pentica-c"/>
+      <PARAM VALUE="pentica-ci"/>
+      <PARAM VALUE="pentica-cm"/>
+      <PARAM VALUE="pentica-d"/>
+      <PARAM VALUE="pentica-di"/>
+      <PARAM VALUE="pentica-dm"/>
+      <PARAM VALUE="raw-binary"/>
+      <PARAM VALUE="rca"/>
+      <PARAM VALUE="simple"/>
+      <PARAM VALUE="simple-code"/>
+      <PARAM VALUE="symbolic"/>
+      <PARAM VALUE="sysrof"/>
+      <PARAM VALUE="tektronix"/>
+      <PARAM VALUE="ti7000"/>
+      <PARAM VALUE="typed"/>
+      <PARAM VALUE="ubrof"/>
+      <PARAM VALUE="ubrof10"/>
+      <PARAM VALUE="ubrof5"/>
+      <PARAM VALUE="ubrof6"/>
+      <PARAM VALUE="ubrof7"/>
+      <PARAM VALUE="ubrof8"/>
+      <PARAM VALUE="ubrof9"/>
+      <PARAM VALUE="xcoff78k"/>
+      <PARAM VALUE="zax"/>
+      <PARAM VALUE="zax-i"/>
+      <PARAM VALUE="zax-m"/>
+    </OPTION>
+    <OPTION NAME="-f " DESC="Read options from linker file" PARAM="STRING" ID="LKR"/>
+    <OPTION NAME="-G" DESC="Disable global typecheck" ADVANCED="1"/>
+    <OPTION NAME="-g" DESC="Require global entries: symb1,symb2,..." PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-H" DESC="Specify filler byte(s): hexvalue" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-h" DESC="Generate filler bytes in ranges:  -hranges[;ranges...]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-hc" DESC="Use processor specific code fill" ADVANCED="1"/>
+    <OPTION NAME="-I" DESC="Add search prefix for files to load" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-J" DESC="Generate checksum: -Jsize,algo{,flags{,sym{,seg{,align[,[m][#]initial]}}}}}[=ranges[;ranges...]]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-j" DESC="Ignore module names" ADVANCED="1"/>
+    <OPTION NAME="-K" DESC="Duplicate segment contents: -Ksegments=[-]increment,count" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-k" DESC="Disable sorted output for some formats" ADVANCED="1"/>
+    <OPTION NAME="-L" DESC="Generate a list on: dir\dest.lst" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-l " DESC="Generate a list on: file.lst" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-M" DESC="Translate logical addresses to physical: -Mranges=ranges" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-n" DESC="No local symbols" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="" DESC="Suppress all module-local symbols"/>
+      <PARAM VALUE="c" DESC="Suppress only compiler-generated symbols"/>
+    </OPTION>
+    <OPTION NAME="-O" DESC="Object file using format 'format': -Oformat[,variant][=filename]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-o " DESC="Put object on: file.extension" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-P" DESC="Define packed segments: -P{seg a}[,seg b]...[=range1[,range2]...]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-p" DESC="Page listing with 'nn' lines/page (10-150)" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="-Q" DESC="Setup for copy init of segment: -Qsegment=initializer_segment" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-q" DESC="Disable relay function optimization" ADVANCED="1"/>
+    <OPTION NAME="-R" DESC="Disable range check" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE=""/>
+      <PARAM VALUE="w"/>
+    </OPTION>
+    <OPTION NAME="-r" DESC="Link debug system: -r[char]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-S" DESC="Silent operation of linker on terminal" ADVANCED="1"/>
+    <OPTION NAME="-s " DESC="Specify entry point" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-U" DESC="Declare address sharing: -Uranges=ranges" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-V" DESC="Declare relocation area: -V(segtype)name[,alignment]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-v" DESC="Print out version info" ADVANCED="1"/>
+    <OPTION NAME="-w" DESC="Disable warning(s)" PARAM="CHOICE">
+      <PARAM VALUE="" DESC="Disable all warnings"/>
+      <PARAM VALUE="" DESC="Change severity of diagnostic 'id' to 'sev': -wid[=sev]" ARG="STRING"/>
+      <PARAM VALUE="s" DESC="Warnings affect program status"/>
+      <PARAM VALUE="t" DESC="Disable extra type info for some warnings"/>
+    </OPTION>
+    <OPTION NAME="-x" DESC="Generate linker list file" PARAM="CHOICE" SEPARATOR="" ADVANCED="1">
+      <PARAM VALUE="s" DESC="Segment map"/>
+      <PARAM VALUE="m" DESC="Module map"/>
+      <PARAM VALUE="n" DESC="Module summary"/>
+      <PARAM VALUE="e" DESC="Entry list"/>
+      <PARAM VALUE="o" DESC="Static overlay map"/>
+      <PARAM VALUE="d" DESC="Stack usage"/>
+      <PARAM VALUE="h" DESC="HTML format"/>
+      <PARAM VALUE="i" DESC="Include suppressed entries"/>
+    </OPTION>
+    <OPTION NAME="-Y" DESC="Extended format operation: -Y{character}" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-y" DESC="Extended format operation: -yflags" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-Z" DESC="Define segments: {seg a}[,seg b]...[=range1[,range2]...]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-z" DESC="Disable overlap checks" PARAM="CHOICE" SEPARATOR="" ADVANCED="1">
+      <PARAM VALUE="" DESC="Disable all overlap checks"/>
+      <PARAM VALUE="a" DESC="Ignore absolute overlaps"/>
+      <PARAM VALUE="b" DESC="Ignore overlaps in bit memory"/>
+      <PARAM VALUE="o" DESC="Warn for overlaps in bit memory"/>
+      <PARAM VALUE="s" DESC="Ignore overlaps in sfr memory"/>
+      <PARAM VALUE="p" DESC="Warn for overlaps in sfr memory"/>
+    </OPTION>
+  </TOOL>
+  <!-- Assembler -->
+  <TOOL NAME="ASM" FILE="a8051.exe">
+    <!--Usage:   a8051 {<options>} <sourcefile> {<options>} -->
+    <OPTION NAME="-c" DESC="Listing options" PARAM="CHOICE" SEPARATOR="" ADVANCED="1">
+      <PARAM VALUE="D" DESC="Disable listing"/>
+      <PARAM VALUE="S" DESC="No structured asm. list"/>
+      <PARAM VALUE="E" DESC="Disable macro expansion"/>
+      <PARAM VALUE="A" DESC="List only assembled part"/>
+      <PARAM VALUE="O" DESC="List several lines of code"/>
+      <PARAM VALUE="M" DESC="List Macro definition"/>
+    </OPTION>
+    <OPTION NAME="-O" DESC="Put object on: path \ source .r51" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-o " DESC="Put object on: file .r51" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-v" DESC="Select processor option" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="0" DESC="plain" DEFAULT="1"/>
+      <PARAM VALUE="1" DESC="tiny"/>
+      <PARAM VALUE="2" DESC="extended1"/>
+    </OPTION>
+    <OPTION NAME="-ws" DESC="To make warnings generate exit code 1" ADVANCED="1"/>
+    <OPTION NAME="-w" DESC="Disable warnings: &lt;+|-,&gt;&lt;+|-range&gt;&lt;,+|-range&gt;" PARAM="STRING"/>
+    <OPTION NAME="-E" DESC="Allow &lt;number&gt; errors" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="-f " DESC="Extend command line with &lt;file&gt; &lt;.xcl&gt;" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-r" DESC="Enable debugger output in object"/>
+    <OPTION NAME="-B" DESC="Print debug info for assembler macros" ADVANCED="1"/>
+    <OPTION NAME="-M" DESC="-Mab Change macro argument quote chars, a is start-of-quote, b is end-of-quote char" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-l " DESC="Generate a list on: &lt;file&gt; &lt;.lst&gt;" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-L" DESC="Generate a list on: &lt;path&gt; \ &lt;source&gt; &lt;.lst&gt;" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-D" DESC="Define preprocessor symbol: -Dsymbol[=value]" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-U" DESC="-USYMB equivalent to: #undef SYMB" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="-t" DESC="Set tab spacing between 2 and 9 (default 8) in listings" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="-x" DESC="Generate cross-reference list" PARAM="CHOICE" SEPARATOR="" ADVANCED="1">
+      <PARAM VALUE="D" DESC="Show all #defines"/>
+      <PARAM VALUE="I" DESC="Show Internal table"/>
+      <PARAM VALUE="2" DESC="Dual line space listing"/>
+    </OPTION>
+    <OPTION NAME="-S" DESC="Silent operation of assembler" ADVANCED="1"/>
+    <OPTION NAME="-s" DESC="Set case sensitivity for user symbols" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="+" DESC="enables sensitivity" DEFAULT="1"/>
+      <PARAM VALUE="-" DESC="disables sensitivity"/>
+    </OPTION>
+    <OPTION NAME="-N" DESC="No header in listing" ADVANCED="1"/>
+    <OPTION NAME="-n" DESC="Enable multibytes" ADVANCED="1"/>
+    <OPTION NAME="-p" DESC="Specify number of lines per page (10-150) in listing" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="-I" DESC="Add #include search path" PARAM="STRING"/>
+    <OPTION NAME="-i" DESC="List #included files" ADVANCED="1"/>
+    <OPTION NAME="-G" DESC="Open standard input as source" ADVANCED="1"/>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="8051">
+    <CONTROLLER NAME="80C31">
+      <TEMPLATE NAME="INCFILE" VALUE="io8031AH.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Intel/lnk51ew_8031AH.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C32">
+      <TEMPLATE NAME="INCFILE" VALUE="io80C32.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Intel/lnk51ew_80C32.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C51">
+      <TEMPLATE NAME="INCFILE" VALUE="io8051.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Intel/lnk51ew_8051AH.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C52">
+      <TEMPLATE NAME="INCFILE" VALUE="io80C52.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Intel/lnk51ew_80C52.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C54">
+      <TEMPLATE NAME="INCFILE" VALUE="io80C54.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Intel/lnk51ew_80C54.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C58">
+      <TEMPLATE NAME="INCFILE" VALUE="io80C58.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Intel/lnk51ew_80C58.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51">
+      <TEMPLATE NAME="INCFILE" VALUE="ioAT89C51.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Atmel/lnk51ew_AT89C51.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C52">
+      <TEMPLATE NAME="INCFILE" VALUE="ioAT89C52.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Atmel/lnk51ew_AT89C52.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C55">
+      <TEMPLATE NAME="INCFILE" VALUE="ioAT89C55.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Atmel/lnk51ew_AT89C55.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51RB2">
+      <TEMPLATE NAME="INCFILE" VALUE="ioAT89C51RB2.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Atmel/lnk51ew_AT89C51RB2.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51RC2">
+      <TEMPLATE NAME="INCFILE" VALUE="ioAT89C51RC2.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Atmel/lnk51ew_AT89C51RC2.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51RD2">
+      <TEMPLATE NAME="INCFILE" VALUE="ioAT89C51RD2.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Atmel/lnk51ew_AT89C51RD2.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51FA">
+      <TEMPLATE NAME="INCFILE" VALUE="ioP87C51FA.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/NXP/lnk51ew_P87C51FA.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51FB">
+      <TEMPLATE NAME="INCFILE" VALUE="ioP87C51.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/NXP/lnk51ew_P87C51.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51FC">
+      <TEMPLATE NAME="INCFILE" VALUE="ioP87C51.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/NXP/lnk51ew_P87C51.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51RA+">
+      <TEMPLATE NAME="INCFILE" VALUE="ioP87C51.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/NXP/lnk51ew_P87C51.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51RB+">
+      <TEMPLATE NAME="INCFILE" VALUE="ioP87C51.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/NXP/lnk51ew_P87C51.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51RC+">
+      <TEMPLATE NAME="INCFILE" VALUE="ioP87C51.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/NXP/lnk51ew_P87C51.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51RD+">
+      <TEMPLATE NAME="INCFILE" VALUE="ioP87C51.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/NXP/lnk51ew_P87C51.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C1051">
+      <TEMPLATE NAME="INCFILE" VALUE="ioAT89C1051.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Atmel/lnk51ew_AT89C1051.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C2051">
+      <TEMPLATE NAME="INCFILE" VALUE="ioAT89C2051.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Atmel/lnk51ew_AT89C2051.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C4051">
+      <TEMPLATE NAME="INCFILE" VALUE="ioAT89C4051.h"/>
+      <OPTION TOOL="ASM" NAME="-v" VALUE="0"/>
+      <OPTION TOOL="CC" NAME="--core=" VALUE="plain"/>
+      <OPTION TOOL="LD" NAME="-f " VALUE="&quot;%COMPILER_DIR%/config/devices/Atmel/lnk51ew_AT89C4051.xcl&quot;" DEFAULT="1"/>
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT PATH="%PROGRAMFILES%/IAR Systems/%SUB%/8051" >
+    <CHECK SUF="bin/icc8051.exe" LEVELS="2" ARG="" STR="8051" DATE="2009-04-03"/>
+    <CHECK SUF="bin/xlink.exe" LEVELS="2" ARG="" STR="IAR" DATE="2009-03-05"/>
+    <CHECK SUF="bin/a8051.exe" LEVELS="2" ARG="" STR="8051" DATE="2009-04-03"/>
+  </DETECT>
+  <PATH ADD="%COMPILER_DIR%/bin"/>
+  <!-- File Types -->
+  <FILE NAME="c" DESC="C Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="cpp" DESC="C++ Source" CATEGORY="Source" SOURCE="1" ICON="project_c++.png"/>
+  <FILE NAME="s51" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="asm" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="xcl" DESC="Linker Script" CATEGORY="Linker Script" SOURCE="1" ICON="project_other.png"/>
+  <FILE NAME="lib" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="ubf" DESC="UBROF" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="r51" DESC="Object" CATEGORY="Intermediate Binary"/>
+  <!-- Compiler -->
+  <PROCESS TOOL="CC" NAME="C Compiler" CMDLINE="$(CC) $(CCFLAGS) %OPTIONS% %INFILE_QUOTED% -o %OUTFILE_QUOTED% ">
+    <FILE OUTPUT="r51">
+      <FILE INPUT="c"/>
+      <FILE INPUT="cpp"/>
+      <FILE TEMP="d" NAME="%OUTFILE_DIR%\%OUTFILE_NAME%.d"/>
+    </FILE>
+    <OPTION TOOL="CC" NAME="-e" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--no_cse" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--no_unroll" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--no_inline" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--no_code_motion" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--no_tbaa" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--dptr=" VALUE="16,1" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--data_model=" VALUE="small" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--code_model=" VALUE="near" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--calling_convention=" VALUE="idata_reentrant" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--place_constants=" VALUE="data" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--nr_virtual_regs " VALUE="8" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="-I " VALUE="&quot;%COMPILER_DIR%/INC/&quot;" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="-I " VALUE="&quot;%COMPILER_DIR%/INC/CLIB/&quot;" DEFAULT="1"/>
+    <MESSAGE VALUE="^.*&quot;(.+)&quot;,(\d+)\s+((E|e)rror|(W|w)arning|(M|m)essage|ERROR|WARNING|MESSAGE).+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="$(LD) $(LDFLAGS) %OPTIONS% -o %OUTFILE_QUOTED% %INFILES_QUOTED%">
+    <FILE OUTPUT="ubf">
+      <OPTION NAME="-F" VALUE="ubrof8" DEFAULT="1"/>
+    </FILE>
+    <FILE OUTPUT="hex">
+      <OPTION NAME="-F" VALUE="intel-extended" DEFAULT="1"/>
+    </FILE>
+    <FILE INPUT="lib"/>
+    <FILE INPUT="r51"/>
+    <FILE INPUT="xcl" OPTION="LKR"/>
+    <OPTION TOOL="LD" NAME="-I" VALUE="&quot;%COMPILER_DIR%/CONFIG/&quot;"/>
+    <OPTION TOOL="LD" NAME="-I" VALUE="&quot;%COMPILER_DIR%/LIB/&quot;"/>
+    <OPTION TOOL="LD" NAME="-e_small_write=" VALUE="_formatted_write" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="-e_medium_read=" VALUE="_formatted_read" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="-D" VALUE="_NR_OF_VIRTUAL_REGISTERS=8"/>
+    <OPTION TOOL="LD" NAME="-D" VALUE="_IDATA_STACK_SIZE=0x40"/>
+    <OPTION TOOL="LD" NAME="-D" VALUE="_PDATA_STACK_SIZE=0x80"/>
+    <OPTION TOOL="LD" NAME="-D" VALUE="_EXTENDED_STACK_START=0x00"/>
+    <OPTION TOOL="LD" NAME="-D" VALUE="_EXTENDED_STACK_SIZE=0x00"/>
+    <OPTION TOOL="LD" NAME="-D" VALUE="_XDATA_STACK_SIZE=0xEFF"/>
+    <OPTION TOOL="LD" NAME="-D" VALUE="_XDATA_HEAP_SIZE=0xFF"/>
+    <!--Default C library include-->
+    <OPTION TOOL="LD" NAME="" VALUE="&quot;%COMPILER_DIR%/LIB/CLIB/cl-pli-nsid-1e16x01.r51&quot;" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="-s " VALUE="__program_start" DEFAULT="1"/>
+  </PROCESS>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="$(ASM) %INFILE_DOS_QUOTED% $(ASMFLAGS) %OPTIONS% -o %OUTFILE_QUOTED% ">
+    <FILE OUTPUT="r51">
+      <FILE INPUT="s51"/>
+      <FILE INPUT="asm"/>
+    </FILE>
+    <FILE TEMP="err"/>
+    <FILE TEMP="lst"/>
+    <OPTION TOOL="ASM" NAME="-D" VALUE="__CORE__=1"/>
+    <OPTION TOOL="ASM" NAME="-D" VALUE="__CODE_MODEL__=1"/>
+    <OPTION TOOL="ASM" NAME="-D" VALUE="__DATA_MODEL__=1"/>
+    <OPTION TOOL="ASM" NAME="-D" VALUE="__CALLING_CONVENTION__=2"/>
+    <OPTION TOOL="ASM" NAME="-D" VALUE="__NUMBER_OF_DPTRS__=1"/>
+    <OPTION TOOL="ASM" NAME="-s" VALUE="+" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="-I" VALUE="&quot;%COMPILER_DIR_DOS%\INC&quot;" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="-w" VALUE="+" DEFAULT="1"/>
+    <MESSAGE VALUE="^.*&quot;(.+)&quot;,(\d+)\s+((E|e)rror|(W|w)arning|(M|m)essage|ERROR|WARNING|MESSAGE).+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="ubf"/>
+    <OPTION TOOL="CC" NAME="--debug" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="-O" VALUE="n" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="-r" DEFAULT="1"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <OPTION TOOL="CC" NAME="-O" VALUE="l" DEFAULT="1"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <SOURCE NAME="main.c" FROM="voidmain.c" OPEN="1"/>
+</COMPILER>

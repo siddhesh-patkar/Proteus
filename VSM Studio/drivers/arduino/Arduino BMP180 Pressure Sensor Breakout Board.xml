@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino BMP180 Pressure Sensor Breakout Board.pdsclip" DESC="Arduino BMP180 Digital Pressure Sensor Breakout Board" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="BMP180 Digital Pressure Sensor" ELEMENT="PS1">
+      <INTERFACE OBJECT="BMP180">
+         <PORT NAME="I2C"/>
+         <SETUP NAME="begin"/>
+      </INTERFACE>
+      <DRIVER FILE="bmp180/bmp180.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

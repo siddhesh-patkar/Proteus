@@ -1,0 +1,18 @@
+#
+# Labcenter Electronics
+#
+# LUA syntax highlighter definition file.
+# This is a first draft. May require tweaking.
+# Some thought might be given to dynamic parsing of actual function names and table members.
+#
+line_comment=--.*$
+block_comment_open=--[[
+block_comment_close=--]]
+string="([^"\\]|\\.)*"|'([^'\\]|\\.)*'
+constant=\b((0(b|B)[01]*)|(0(x|X)[\da-fA-F]*)|((\d+\.?\d*)|(\.\d+))((e|E)(\+|-)?\d+)?)\b
+keyword=\b(if|then|else|elseif|end|repeat|until|while|do|for|in|function|local|return|break)\b
+extensions=\b(false|true|nil)\b
+macro=(require).*$
+operator=(\+|-|*|/|^|=|~=|==|>|<|>=|<=)
+operator=(and|or|not)
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove Voltage Divider.pdsclip" DESC="Grove Voltage Divider Module" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="Grove Voltage Divider"  ELEMENT="GVD1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="GroveVoltageDivider">
+         <PROPERTY NAME="STATE" ELEMENT="GC1" TYPE="INTEGER" GROVE="ANALOG"/>
+         <PROPERTY NAME="STATE" ELEMENT="GVD1" TYPE="INTEGER" />
+      </INTERFACE>
+   
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Grove">
+         <REQUIRE MODULE="GROVE"/>
+    
+         <!-- Function -->
+         <FUNCTION DESC="Return true if Voltage greater or equal to the trigger value.">
+            <PARAMETER NAME="Trigger" TYPE="FLOAT" DEFAULT="0" DESC="Trigger value in Volt"/>
+            <RETURN TYPE="BOOLEAN"/>
+         </FUNCTION>
+         <!-- Methods -->
+         <METHOD NAME="readAnalog" DESC="Read Analog Channel.">
+            <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="Volt"/>
+         </METHOD>
+         <METHOD NAME="readAverageAnalog" DESC="Read Average Analog Channel.">
+            <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="Volt"/>
+            <PARAMETER NAME="navr" TYPE="INTEGER" DEFAULT="100" DESC="Number of Averages"/>
+         </METHOD>
+         <METHOD NAME="readVoltage" DESC="Read Input Voltage.">
+            <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="Volt"/>
+         </METHOD>
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

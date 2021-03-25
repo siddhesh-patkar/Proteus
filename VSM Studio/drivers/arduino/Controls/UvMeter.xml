@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<DRIVER HEADER="Controls.h">
+	  <REQUIRE HEADER="VfpServer.h" />
+	  <RESOURCE FILE="controls/jquery.js" />
+
+     <METHOD NAME="setDeflectionPercentage" DESC="Sets the deflection between 0.0 and 1.0">
+        <PARAMETER NAME="deflection" TYPE="FLOAT" DEFAULT="0.0" />
+     </METHOD>
+</DRIVER>
+  

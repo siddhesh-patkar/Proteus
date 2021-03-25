@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CONTROLLER NAME="RPI3" FAMILY="Raspberry Pi" DESC="Raspberry Pi 3">
+    <PERIPHERAL NAME="cpu" TYPE="CPU" DESC="Raspberry Pi" ELEMENT="U1" OPTIONAL="1" ENABLED="1">
+        <INTERFACE OBJECT="CPU" EXTERNAL="cpu"/>
+        <DRIVER FILE="Cpu.xml"/>
+    </PERIPHERAL>            	   
+    <PERIPHERAL NAME="storage" TYPE="STORAGE" DESC="File Storage" ELEMENT="U1" OPTIONAL="1" ENABLED="1">
+       <INTERFACE OBJECT="FileStore" EXTERNAL="FS" >
+         <SETUP NAME="begin"></SETUP>  
+         <STORAGE NAME="MANIFEST" ELEMENT="U1"/>
+        </INTERFACE>
+        <DRIVER FILE="FileStore.xml"/>
+    </PERIPHERAL>            	   
+    <PERIPHERAL NAME="server" TYPE="SERVER" DESC="VFP Server" ELEMENT="U1" OPTIONAL="1" ENABLED="1">
+        <INTERFACE OBJECT="VfpServer" EXTERNAL="VFP">
+         <SETUP NAME="begin">
+            <PROPERTY NAME="PORT" ELEMENT="U1" TYPE="INTEGER"/>
+         </SETUP>         
+         <!--<LOOP NAME="poll"/>-->
+         <SERVER TYPE="VFP" TRANSPORT="ETHERNET" ELEMENT="U1"/>
+        </INTERFACE>
+        <DRIVER FILE="Vfp/VfpServer.xml"/>
+    </PERIPHERAL>     
+    <PERIPHERAL NAME="timer" TYPE="TIMER" DESC="Timer" ELEMENT="U1" OPTIONAL="1">
+        <INTERFACE OBJECT="Timer" EXTERNAL="timer">
+          <LOOP NAME="poll"/>
+        </INTERFACE>
+        <DRIVER FILE="timer.xml"/>
+    </PERIPHERAL>            	   
+    <PERIPHERAL NAME="i2c" TYPE="I2C" DESC="I2C Port" ELEMENT="U1" OPTIONAL="1">
+       <INTERFACE OBJECT="I2c" EXTERNAL="I2C"/>
+       <DRIVER FILE="I2c.xml"/>
+    </PERIPHERAL>   
+    <PERIPHERAL NAME="spi" TYPE="SPI" DESC="SPI Port" ELEMENT="U1" OPTIONAL="1">
+       <INTERFACE OBJECT="SPI" EXTERNAL="SPI"/>
+       <DRIVER FILE="SPI.xml"/>
+    </PERIPHERAL>   
+    <PERIPHERAL NAME="uart" TYPE="UART" DESC="UART Port" ELEMENT="U1" OPTIONAL="1">
+       <INTERFACE OBJECT="UART" EXTERNAL="UART"/>
+       <DRIVER FILE="UART.xml"/>
+    </PERIPHERAL>  
+    <PERIPHERAL NAME="twitter" TYPE="TWITTER" DESC="Twitter Bot" ELEMENT="U1" OPTIONAL="1">
+       <INTERFACE OBJECT="Twitter" EXTERNAL="TWITTER"/>
+       <DRIVER FILE="Twitter.xml"/>
+    </PERIPHERAL>
+        <PERIPHERAL NAME="email" TYPE="EMAIL" DESC="SMT Email" ELEMENT="U1" OPTIONAL="1">
+       <INTERFACE OBJECT="Email" EXTERNAL="EMAIL"/>
+       <DRIVER FILE="Email.xml"/>
+    </PERIPHERAL> 
+</CONTROLLER>

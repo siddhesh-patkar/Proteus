@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DRIVER HEADER="i2cport.h">
+   <REQUIRE HEADER="core.h"/>
+   <REQUIRE HEADER="wire.h"/>
+
+   <ENUMERATION NAME="CLOCK">
+      <CONSTANT NAME="SLOW" VALUE="100000L"/>
+      <CONSTANT NAME="FAST" VALUE="400000L"/>
+   </ENUMERATION>
+      
+   <METHOD NAME="setClock" DESC="Configure the SPI Hardware">
+      <PARAMETER NAME="clock" TYPE="CLOCK" DEFAULT="SLOW" DESC="I2C Clock Speed"/>
+   </METHOD>
+
+   <METHOD NAME="setSlave" DESC="Operate as a slave with the specified address">
+      <PARAMETER NAME="address" TYPE="INTEGER"  DESC="I2C slave address"/>
+   </METHOD>
+      
+   <METHOD NAME="transmit" DESC="Send 8 bit data">
+      <PARAMETER NAME="address" TYPE="INTEGER"  DESC="I2C address"/>
+      <PARAMETER NAME="stop" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="Send stop at end of message"/>
+      <PARAMETER TYPE="LIST"  DESC="Data to transmit"/>
+   </METHOD>            
+   
+   <METHOD NAME="receive" DESC="Receive 8 bit data">
+      <PARAMETER NAME="address" TYPE="INTEGER" DESC="I2C address"/>
+      <PARAMETER NAME="length" TYPE="INTEGER"  DESC="Expected message length (bytes)"/>
+      <PARAMETER NAME="stop" TYPE="BOOLEAN" DEFAULT="TRUE"  DESC="Stop at end of message"/>
+      <PARAMETER TYPE="LIST"  BYREF="1" DESC="Variables to receive data"/>      
+   </METHOD>            
+        
+</DRIVER>

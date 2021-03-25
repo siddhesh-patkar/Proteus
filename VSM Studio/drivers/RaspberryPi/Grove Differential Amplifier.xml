@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FAMILY="Raspberry Pi" FILE="Grove/Grove Differential Amplifier.pdsclip" DESC="Grove Differential Amplifier Module">
+   <PERIPHERAL TYPE="Grove Differential Amplifier"  ELEMENT="GDA1" >
+     <!-- Snippet file relative to IMAGE/Snippets folder -->
+     <CLIP FILE="Grove/Grove Differential Amplifier.pdsclip" />
+   
+      <!-- Supported Toolchains -->
+      <TOOLCHAIN ID="ARDUINO" />
+   
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="GroveDifferentialAmplifier">
+         <PROPERTY NAME="STATE" ELEMENT="GC1" TYPE="INTEGER" GROVE="ANALOG"/>
+      </INTERFACE>
+   
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Grove">
+         <REQUIRE MODULE="GROVE"/>
+    
+         <!-- Function -->
+         <FUNCTION DESC="Return true if Voltage greater or equal to the trigger value.">
+            <PARAMETER NAME="Trigger" TYPE="FLOAT" DEFAULT="0" DESC="Trigger value in Volt"/>
+            <RETURN TYPE="BOOLEAN"/>
+         </FUNCTION>
+         <!-- Methods -->
+         <METHOD NAME="readAnalog" DESC="Read Analog Channel.">
+            <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="Volt"/>
+         </METHOD>
+         <METHOD NAME="readAverageAnalog" DESC="Read Average Analog Channel.">
+            <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="Volt"/>
+            <PARAMETER NAME="navr" TYPE="INTEGER" DEFAULT="100" DESC="Number of Averages"/>
+         </METHOD>
+         <METHOD NAME="readVoltage" DESC="Read Output Voltage.">
+            <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="Volt"/>
+         </METHOD>
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

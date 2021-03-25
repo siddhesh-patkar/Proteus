@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Arduino/Arduino NeoPixel Shield.pdsclip" DESC="Arduino NeoPixel Shield" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="NeoPixel Chain" ELEMENT="LED1">
+      <INTERFACE OBJECT="NeoPixel">
+         <PROPERTY NAME="CHAINLENGTH" ELEMENT="LED1" TYPE="INTEGER"/>
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO6"/>
+         </PIN>
+         <SETUP NAME="begin"/>
+      </INTERFACE>
+      
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="neopixel.h">
+         <REQUIRE HEADER="Adafruit_NeoPixel.h"/>
+         
+         <!-- Neo Pixel type enumeration -->
+         <ENUMERATION NAME="NEOTYPE">
+            <CONSTANT NAME="RGB" VALUE="6"/>
+            <CONSTANT NAME="RBG" VALUE="9"/>
+            <CONSTANT NAME="GRB" VALUE="82"/>
+            <CONSTANT NAME="GBR" VALUE="161"/>
+            <CONSTANT NAME="BRG" VALUE="88"/>
+         </ENUMERATION>
+
+         <!-- NeoPixel methods -->
+         <METHOD NAME="show" DESC="Update all Leds."/>
+         <METHOD NAME="clear" DESC="Clear all Leds."/>
+         <METHOD NAME="setPixelColor"  DESC="Set pixel color from R,G,B components.">
+            <PARAMETER NAME="n" TYPE="INTEGER" DEFAULT="0" DESC="Pixel address"/>
+            <PARAMETER NAME="r" TYPE="INTEGER" DEFAULT="0" DESC="Red color intensity, 0-255"/>
+            <PARAMETER NAME="g" TYPE="INTEGER" DEFAULT="0" DESC="Green color intensity, 0-255"/>
+            <PARAMETER NAME="b" TYPE="INTEGER" DEFAULT="0" DESC="Blue color intensity, 0-255"/>
+         </METHOD>
+         <METHOD NAME="setPixelColor"  DESC="Set pixel color from 'packed' 32-bit RGB color.">
+            <PARAMETER NAME="n" TYPE="INTEGER" DEFAULT="0" DESC="Pixel address"/>
+            <PARAMETER NAME="c" TYPE="INTEGER" DEFAULT="0" DESC="'packed' 32-bit RGB color"/>
+         </METHOD>
+         <METHOD NAME="setBrightness"  DESC="Adjust output brightness.">
+            <PARAMETER NAME="b" TYPE="INTEGER" DEFAULT="0" DESC="0=darkest (off), 255=brightest."/>
+         </METHOD>
+         <METHOD NAME="updateLength"  DESC="Override CHAINLENGTH clip property.">
+            <PARAMETER NAME="n" TYPE="INTEGER" DEFAULT="1" DESC="Pixel number"/>
+         </METHOD>
+         <METHOD NAME="updateType"  DESC="Override Neo Pixel type.">
+            <PARAMETER NAME="type" TYPE="NEOTYPE" DEFAULT="GRB" DESC="Neo Pixel type"/>
+         </METHOD>
+         
+         <!-- NeoPixel functions -->
+         <METHOD NAME="numPixels"  DESC="Return the number of pixels.">
+            <RETURN NAME="n" TYPE="INTEGER" DESC="Pixels number"/>
+         </METHOD>
+         <METHOD NAME="Color"  DESC="Convert separate R,G,B into packed 32-bit RGB color.">
+            <RETURN NAME="color" TYPE="INTEGER" DESC="packed 32-bit RGB color"/>
+            <PARAMETER NAME="r" TYPE="INTEGER" DEFAULT="0" DESC="Red color intensity, 0-255"/>
+            <PARAMETER NAME="g" TYPE="INTEGER" DEFAULT="0" DESC="Green color intensity, 0-255"/>
+            <PARAMETER NAME="b" TYPE="INTEGER" DEFAULT="0" DESC="Blue color intensity, 0-255"/>
+         </METHOD>
+         <METHOD NAME="getBrightness"  DESC="Return the brightness value.">
+            <RETURN NAME="brightness" TYPE="INTEGER" DESC="Brightness value"/>
+         </METHOD>
+         <METHOD NAME="getPixelColor"  DESC="Query color from previously-set pixel (packed 32-bit RGB value).">
+            <RETURN NAME="color" TYPE="INTEGER" DESC="packed 32-bit RGB color"/>
+            <PARAMETER NAME="n" TYPE="INTEGER" DEFAULT="0" DESC="Pixel to get color from."/>
+         </METHOD>
+
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>

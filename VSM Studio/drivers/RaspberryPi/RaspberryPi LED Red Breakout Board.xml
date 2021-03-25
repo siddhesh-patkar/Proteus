@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Raspberry Pi/RaspberryPi LED Red Breakout Board.pdsclip" FAMILY="Raspberry Pi" DESC="LED (Red)">
+   <PERIPHERAL TYPE="RPi LED" ELEMENT="LED1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="LED">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO18"/>
+         </PIN>
+   	</INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER FILE="LED Driver.xml"/>
+   </PERIPHERAL>
+</CLIP>	
+  

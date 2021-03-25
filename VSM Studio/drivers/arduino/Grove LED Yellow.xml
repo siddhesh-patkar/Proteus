@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove LED Yellow.pdsclip" FAMILY="ARDUINO" DESC="Grove LED (Yellow)">
+   <PERIPHERAL TYPE="Grove LED" ELEMENT="LED1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GroveLED">
+       <PROPERTY NAME="STATE" ELEMENT="GC1" TYPE="INTEGER" GROVE="DIGITAL"/>
+   	</INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER FILE="Grove/LED Driver.xml"/>
+   </PERIPHERAL>
+</CLIP>	
+  

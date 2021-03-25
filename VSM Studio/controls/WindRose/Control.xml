@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Rotary Knob Control Descriptor -->
+<CONTROL>
+   <CONFIG>
+   	<ENUMERATION NAME="TIMEUNIT">
+         <CONSTANT NAME="Minute" VALUE="0"/>
+         <CONSTANT NAME="Hour"   VALUE="1"/>
+         <CONSTANT NAME="Day"    VALUE="2"/>
+         <CONSTANT NAME="Month"  VALUE="3"/>
+	   </ENUMERATION>
+     
+      <GROUP NAME="calm">
+	     <PROPERTY NAME="label" DESC="Label for calm" TYPE="STRING" DEFAULT="Calm" />
+        <PROPERTY NAME="bandColour" DESC="Colour for calm " TYPE="RGB" DEFAULT="#F0F0F0"/>
+        <PROPERTY NAME="textColour" DESC="Colour for percentage" TYPE="RGB" DEFAULT="#000000"/>
+	   </GROUP>
+
+      <GROUP NAME="band1">
+	     <PROPERTY NAME="label" DESC="Label for band 1" TYPE="STRING" DEFAULT="Light Breeze" />
+        <PROPERTY NAME="bandColour" DESC="Colour for band 1" TYPE="RGB" DEFAULT="#0000FF"/>
+        <PROPERTY NAME="textColour" DESC="Colour for percentage" TYPE="RGB" DEFAULT="#000000"/>
+	   </GROUP>
+
+      <GROUP NAME="band2">
+	     <PROPERTY NAME="label" DESC="Label for band 2" TYPE="STRING" DEFAULT="Moderate Breeze" />
+        <PROPERTY NAME="bandColour" DESC="Colour for band 2" TYPE="RGB" DEFAULT="#00FFFF"/>
+        <PROPERTY NAME="textColour" DESC="Colour for percentage" TYPE="RGB" DEFAULT="#000000"/>
+	   </GROUP>
+	   
+      <GROUP NAME="band3">
+	     <PROPERTY NAME="label" DESC="Label for band 3" TYPE="STRING" DEFAULT="Strong Breeze" />
+        <PROPERTY NAME="bandColour" DESC="Colour for band 3" TYPE="RGB" DEFAULT="#00FF00"/>
+        <PROPERTY NAME="textColour" DESC="Colour for percentage" TYPE="RGB" DEFAULT="#000000"/>
+	   </GROUP>
+
+      <GROUP NAME="band4">
+	     <PROPERTY NAME="label" DESC="Label for band 4" TYPE="STRING" DEFAULT="Gale" />
+        <PROPERTY NAME="bandColour" DESC="Colour for band 4" TYPE="RGB" DEFAULT="#FFFF00"/>
+        <PROPERTY NAME="textColour" DESC="Colour for percentage" TYPE="RGB" DEFAULT="#000000"/>
+	   </GROUP>
+
+      <GROUP NAME="band5">
+	     <PROPERTY NAME="label" DESC="Label for band 5" TYPE="STRING" DEFAULT="Storm" />
+        <PROPERTY NAME="bandColour" DESC="Colour for band 5" TYPE="RGB" DEFAULT="#FF0000"/>
+        <PROPERTY NAME="textColour" DESC="Colour for percentage" TYPE="RGB" DEFAULT="#000000"/>
+	   </GROUP>
+
+      <GROUP NAME="timeRange">
+          <PROPERTY NAME="unit" TYPE="TIMEUNIT" DEFAULT="1" DESC="Time Unit"/>
+    	    <PROPERTY NAME="range" TYPE="INTEGER" DEFAULT="24" DESC="Number of time units to display"/>
+   	</GROUP>
+      
+      <PROPERTY NAME="backgroundColour" DESC="Colour for the background" TYPE="RGB" DEFAULT="#FFFFFF"/>
+      <PROPERTY NAME="directionFont" TYPE="FONT" DESC="Font for the direction labels"/>
+      <PROPERTY NAME="percentageFont" TYPE="FONT" DESC="Font for the percentages"/>
+      <PROPERTY NAME="keyFont" TYPE="FONT" DESC="Font for the band descriptions"/>
+
+      <SETUP NAME="begin">
+   	   <PROPERTY NAME="filename" TYPE="STRING" DESC="Filename to store historical data" DEFAULT="windrose.dat"/>   	   
+         <PROPERTY NAME="bands" DESC="Wind Speed Bands (mph)" TYPE="STRING" DEFAULT="4,13,25,39,55"/>
+      </SETUP> 
+	   
+   </CONFIG>	  
+   
+   <DRIVER HEADER="Controls" RAM="128">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+        <REQUIRE MODULE="STORAGE"/>
+     	  <RESOURCE FILE="scripts/moment.js"/>
+
+   	  <ENUMERATION NAME="TIMEUNIT">
+            <CONSTANT NAME="MINUTE" VALUE="0"/>
+            <CONSTANT NAME="HOUR"   VALUE="1"/>
+            <CONSTANT NAME="DAY"    VALUE="2"/>
+            <CONSTANT NAME="MONTH"  VALUE="3"/>
+        </ENUMERATION>      
+
+        <METHOD NAME="setTimeRange" DESC="Set a time range to be displayed">
+   	      <PARAMETER NAME="unit" TYPE="TIMEUNIT" DEFAULT="HOUR" DESC="Time units"/>
+   	      <PARAMETER NAME="range" TYPE="INTEGER" DEFAULT="24" DESC="Number of time units to display"/>
+   	  </METHOD>
+                
+        <METHOD NAME="storeReading" DESC="Store a wind reading to current record.">
+   	     <PARAMETER NAME="dir" TYPE="FLOAT" DESC="Wind direction value (degrees)"/>
+   	     <PARAMETER NAME="speed" TYPE="FLOAT" DESC="Wind speed value (mph)"/>
+   	  </METHOD>
+   
+        <METHOD NAME="storeRecord" DESC="Store the current record to the data file and start a new one."/>          
+        <METHOD NAME="clearData" DESC="Clear the data file."/>
+        <METHOD NAME="reload" DESC="Updates the graphic."/>
+   
+   </DRIVER>
+</CONTROL>  

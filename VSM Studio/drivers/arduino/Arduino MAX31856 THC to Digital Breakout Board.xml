@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Arduino/Arduino MAX31856 THC to Digital Breakout Board.pdsclip" DESC="Arduino MAX31856 THC to Digital Breakout Board" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="MAX31856 RTD to Digital" ELEMENT="MAX31856_THC1">
+      <INTERFACE OBJECT="Adafruit_MAX31856">
+         <PORT NAME="SPI"/>
+         <PIN NAME="ss" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO10"/>
+         </PIN>
+         <SETUP NAME="begin"/>
+      </INTERFACE>
+      <DRIVER FILE="max31856/max31856.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

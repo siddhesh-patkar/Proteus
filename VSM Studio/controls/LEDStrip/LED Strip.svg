@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 251 51"
+   version="1.1"
+   id="svg30"
+   sodipodi:docname="LED Strip2.svg"
+   inkscape:version="0.92.1 r15371">
+  <defs
+     id="defs34" />
+	 
+	 <vfp:catalogue
+     PREFIX="LEDBar"
+     CATEGORY="Display Controls"
+     DESC="LED Bar" />
+
+  <g
+     vfp:class="LEDStrip">
+    <rect
+	   class="bounds"
+       x="0.5"
+       y="0.5"
+       width="250"
+       height="50"
+       style="fill:#ffffff;stroke:#1d1d1b;stroke-miterlimit:10"
+       id="rect4" />
+    <rect
+	   class="LED"
+       x="12.8"
+       y="11.25"
+       width="14"
+       height="28.5"
+       style="fill:#30a237;stroke:#1d1d1b;stroke-width:0.77155173px;stroke-miterlimit:10"
+       id="rect6"
+       inkscape:label="1" />
+    <rect
+	   class="LED"
+       x="36.290001"
+       y="11.25"
+       width="14"
+       height="28.5"
+       style="fill:#30a237;stroke:#1d1d1b;stroke-width:0.77155173px;stroke-miterlimit:10"
+       id="rect8"
+       inkscape:label="2" />
+    <rect
+	   class="LED"
+       x="59.779999"
+       y="11.25"
+       width="14"
+       height="28.5"
+       style="fill:#30a237;stroke:#1d1d1b;stroke-width:0.77155173px;stroke-miterlimit:10"
+       id="rect10"
+       inkscape:label="3" />
+    <rect
+	   class="LED"
+       x="83.269997"
+       y="11.25"
+       width="14"
+       height="28.5"
+       style="fill:#30a237;stroke:#1d1d1b;stroke-width:0.77155173px;stroke-miterlimit:10"
+       id="rect12"
+       inkscape:label="4" />
+    <rect
+	   class="LED"
+       x="106.76"
+       y="11.25"
+       width="14"
+       height="28.5"
+       style="fill:#30a237;stroke:#1d1d1b;stroke-width:0.77155173px;stroke-miterlimit:10"
+       id="rect14"
+       inkscape:label="5" />
+    <rect
+	   class="LED"
+       x="130.24001"
+       y="11.25"
+       width="14"
+       height="28.5"
+       style="fill:#30a237;stroke:#1d1d1b;stroke-width:0.77155173px;stroke-miterlimit:10"
+       id="rect16"
+       inkscape:label="6" />
+    <rect
+	   class="LED"
+       x="153.73"
+       y="11.25"
+       width="14"
+       height="28.5"
+       style="fill:#30a237;stroke:#1d1d1b;stroke-width:0.77155173px;stroke-miterlimit:10"
+       id="rect18"
+       inkscape:label="7" />
+    <rect
+	   class="LED"
+       x="177.22"
+       y="11.25"
+       width="14"
+       height="28.5"
+       style="fill:#30a237;stroke:#1d1d1b;stroke-width:0.77155173px;stroke-miterlimit:10"
+       id="rect20"
+       inkscape:label="8" />
+    <rect
+	   class="LED"
+       x="200.71001"
+       y="11.25"
+       width="14"
+       height="28.5"
+       style="fill:#30a237;stroke:#1d1d1b;stroke-width:0.77155173px;stroke-miterlimit:10"
+       id="rect22" />
+    <rect
+	   class="LED"
+       x="224.2"
+       y="11.25"
+       width="14"
+       height="28.5"
+       style="fill:#30a237;stroke:#1d1d1b;stroke-width:0.77155173px;stroke-miterlimit:10"
+       id="rect24"
+       inkscape:label="10" />
+	   <text
+           id="text73"
+           y="145.43275"
+           x="0.05968352"
+           style="font-size:15px;font-family:sans-serif;text-anchor:middle;stroke-width:0.5">50%</text>
+  </g>
+</svg>

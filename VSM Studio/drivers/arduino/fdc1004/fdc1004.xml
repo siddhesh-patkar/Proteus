@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for FDC1004 Capacitance to Digital converter  -->
+<DRIVER HEADER="capdac.h">
+   <REQUIRE HEADER="FDC1004.h"/>
+   <REQUIRE HEADER="Wire.h"/>
+
+   <!-- RATE enumeration -->
+   <ENUMERATION NAME="RATE">
+      <CONSTANT NAME="RATE_100HZ"    VALUE="1"/>
+      <CONSTANT NAME="RATE_200HZ"    VALUE="2"/>
+      <CONSTANT NAME="RATE_400HZ"    VALUE="3"/>
+   </ENUMERATION>
+
+   <!-- CHANNEL enumeration -->
+   <ENUMERATION NAME="CHANNEL">
+      <CONSTANT NAME="CH1"           VALUE="0"/>
+      <CONSTANT NAME="CH2"           VALUE="1"/>
+      <CONSTANT NAME="CH3"           VALUE="2"/>
+      <CONSTANT NAME="CH4"           VALUE="3"/>
+   </ENUMERATION>
+
+   <!-- CHANNEL enumeration -->
+   <ENUMERATION NAME="MEAS">
+      <CONSTANT NAME="MEAS1"         VALUE="0"/>
+      <CONSTANT NAME="MEAS2"         VALUE="1"/>
+      <CONSTANT NAME="MEAS3"         VALUE="2"/>
+      <CONSTANT NAME="MEAS4"         VALUE="3"/>
+   </ENUMERATION>
+
+   <!-- Functions -->
+   <METHOD NAME="readCapacitance" DESC="Read Capacitance in fF from selected input.">
+      <PARAMETER NAME="ch" TYPE="CHANNEL" DEFAULT="CH1" DESC="Channel number."/>
+      <RETURN NAME="Capacitance"  TYPE="INTEGER"/>
+   </METHOD>
+   
+   <METHOD NAME="readRowData"  DESC="Read value from selected Channel.">
+      <PARAMETER NAME="ch" TYPE="CHANNEL" DEFAULT="CH1" DESC="Channel number."/>
+      <PARAMETER NAME="capdac" TYPE="INTEGER" DEFAULT="0" DESC="CAPDAC reference capacitance."/>
+      <RETURN NAME="Value" TYPE="INTEGER"/>
+   </METHOD>
+
+   <METHOD NAME="readMeasureReg"  DESC="Read selected measurement registers.">
+      <PARAMETER NAME="measure" TYPE="MEAS" DEFAULT="MEAS1" DESC="Measurement number."/>
+      <RETURN NAME="Value" TYPE="INTEGER"/>
+   </METHOD>
+
+   <METHOD NAME="getCapDac"  DESC="Get the value of CAPDAC reference capacitance register.">
+      <PARAMETER NAME="measure" TYPE="MEAS" DEFAULT="MEAS1" DESC="Measurement number."/>
+      <RETURN NAME="capdac" TYPE="INTEGER"/>
+   </METHOD>
+
+   <!-- Methods -->
+   <METHOD NAME="configureMeasurementSingle" DESC="Configure a Measure in Single-shot mode and CAPDAC enabled.">
+      <PARAMETER NAME="measure" TYPE="MEASUREMENT" DEFAULT="MEAS1" DESC="Measurement number."/>
+      <PARAMETER NAME="ch" TYPE="CHANNEL" DEFAULT="CH1" DESC="Channel number."/>
+      <PARAMETER NAME="capdac" TYPE="INTEGER" DEFAULT="0" DESC="CAPDAC reference capacitance."/>
+      <RETURN NAME="state" TYPE="BOOLEAN"/>
+   </METHOD>
+  
+   <METHOD NAME="triggerSingleMeasurement" DESC="Configure a Measure in Single-Shot mode.">
+      <PARAMETER NAME="measure" TYPE="MEASUREMENT" DEFAULT="MEAS1" DESC="Measurement number."/>
+      <PARAMETER NAME="rate" TYPE="RATE" DEFAULT="RATE_100HZ" DESC="Rate of measurement S/s."/>
+      <RETURN NAME="state" TYPE="BOOLEAN"/>
+   </METHOD>
+
+</DRIVER>

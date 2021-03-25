@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DRIVER HEADER="TimerOne.h">
+   <METHOD NAME="initialize" DESC="Initialize the timer with a specified period">
+     <PARAMETER NAME="period" TYPE="INTEGER" DEFAULT="1000000" DESC="Period in microseconds"/>
+   </METHOD>
+   <METHOD NAME="setPeriod" DESC="Set a new period in microseconds">
+     <PARAMETER NAME="period" TYPE="INTEGER" DESC="Period in microseconds"/>        	
+   </METHOD>
+   <METHOD NAME="start" DESC="Start the timer"/>
+   <METHOD NAME="stop" DESC="Stop the timer"/>
+   <METHOD NAME="restart" DESC="Restart the timer at count of zero"/>
+   <METHOD NAME="resume" DESC="Resume counting"/>
+   <METHOD NAME="read" DESC="Read the timer value in microseconds">
+    <RETURN NAME="state" TYPE="INTEGER" DEFAULT="count" DESC="Counter value"/>
+   </METHOD>           
+   <METHOD NAME="pwm" DESC="Set up a PWM output">
+  	<PARAMETER NAME="pin" TYPE="INTEGER" DESC="Pin for PWM output"></PARAMETER>
+  	<PARAMETER NAME="duty" TYPE="INTEGER" DESC="Duty cycle (0-1023)"></PARAMETER>
+  	<PARAMETER NAME="period" TYPE="INTEGER" DEFAULT="-1" DESC="Period in microseconds)"></PARAMETER>        	        	
+   </METHOD>
+   <METHOD NAME="disablePwm" DESC="Cancel PWM output">
+  	 <PARAMETER NAME="pin" TYPE="INTEGER" DESC="Pin for PWM output"></PARAMETER>
+   </METHOD>
+   <METHOD NAME="setPwmDuty" DESC="Set a new PWM duty cycle">
+  	<PARAMETER NAME="pin" TYPE="INTEGER" DESC="Pin for PWM output"></PARAMETER>
+  	<PARAMETER NAME="duty" TYPE="INTEGER" DESC="Duty cycle (0-1023)"></PARAMETER>
+   </METHOD>
+   <INTERRUPT DESC="Timer Match" HOOK="attachInterrupt" PERIODIC="1"/>        	
+</DRIVER>
+	
+  

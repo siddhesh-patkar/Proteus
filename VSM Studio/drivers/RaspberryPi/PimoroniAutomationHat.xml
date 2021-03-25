@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Pimoroni" FILE="Raspberry Pi/PimoroniAutomationHat.pdsclip" DESC="Automation Hat" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="PimoroniAutomationHat" ELEMENT="U2" >
+   
+   <INTERFACE OBJECT="PimoroniAutomationHat"/>
+   
+    <DRIVER HEADER="PimoroniHats">
+        
+       <METHOD NAME="setRelay"  DESC="Sets the relay.">
+         <PARAMETER NAME="RelayNumber" TYPE="INTEGER" DEFAULT="0" DESC="The number of the relay to control."/>
+         <PARAMETER NAME="Value" TYPE="INTEGER" DEFAULT="1" DESC="1 sets the relay to NO and 0 to NC."/>
+       </METHOD>
+       
+       <METHOD NAME="output"  DESC="Sets the output.">
+         <PARAMETER NAME="OutputNumber" TYPE="INTEGER" DEFAULT="0" DESC="The number of the output to control."/>
+         <PARAMETER NAME="Value" TYPE="INTEGER" DEFAULT="1" DESC="1 sets the output to on and 0 to off."/>
+       </METHOD>
+       
+       
+       <METHOD NAME="readADC"  DESC="Read from an analogue input.">
+         <PARAMETER NAME="Input" TYPE="INTEGER" DEFAULT="0" DESC="The ADC number."/>
+         <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="Volt"/>
+       </METHOD>
+       
+       <METHOD NAME="readInput"  DESC="Read from an digital input.">
+         <PARAMETER NAME="Input" TYPE="INTEGER" DEFAULT="0" DESC="The digital port."/>
+         <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="Input"/>
+       </METHOD>
+
+    </DRIVER>
+   </PERIPHERAL>
+</CLIP>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Generic Buttons -->
+<DRIVER HEADER="Generic.h">
+   <FUNCTION DESC="Button State">
+      <RETURN TYPE="BOOLEAN"/>
+   </FUNCTION>
+</DRIVER>  

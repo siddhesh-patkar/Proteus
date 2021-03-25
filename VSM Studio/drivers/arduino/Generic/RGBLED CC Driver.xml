@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Generic LEDs -->
+<DRIVER HEADER="Generic.h">
+   <!-- Methods for Generic RGB LED -->
+   <METHOD NAME="set" DESC="Turn the RGB Leds on or off.">
+      <PARAMETER NAME="rState" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="State of the Red Led"/>
+      <PARAMETER NAME="gState" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="State of the Green Led"/>
+      <PARAMETER NAME="bState" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="State of the Blue Led"/>
+   </METHOD>
+   <METHOD NAME="toggle" DESC="Toggle the RGB Leds states."/>
+   <METHOD NAME="dim" DESC="Set the RGB Leds brightness using a PWM signal">
+      <PARAMETER NAME="rBrightness" TYPE="INTEGER" DEFAULT="128" DESC="Red Brightness (pwm) value 0-255"/>
+      <PARAMETER NAME="gBrightness" TYPE="INTEGER" DEFAULT="128" DESC="Green Brightness (pwm) value 0-255"/>
+      <PARAMETER NAME="bBrightness" TYPE="INTEGER" DEFAULT="128" DESC="Blue Brightness (pwm) value 0-255"/>
+   </METHOD>
+</DRIVER>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino SD Card Breakout Board.pdsclip" DESC="SD Card with SPI Interface" FAMILY="ARDUINO" >
+   <PERIPHERAL TYPE="SD Card" ELEMENT="SD1" >
+   
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="FileStore" EXTERNAL="FS" >
+       <PORT NAME="SPI"/>
+       <SETUP NAME="begin">
+         <!-- Chip select active low -->
+         <PIN NAME="cs" TYPE="DIGITAL">
+           <TERMINAL ELEMENT="IO4"/>
+         </PIN> 
+       </SETUP>  
+       <STORAGE NAME="MANIFEST" ELEMENT="SD1"/>
+     </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER FILE="FileStore/FileStore.xml"/> 
+
+ </PERIPHERAL>
+</CLIP>   
+  

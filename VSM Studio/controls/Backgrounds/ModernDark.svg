@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="720" width="1280" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="linear-gradient" x1="830.57" y1="883.58" x2="449.43" y2="-163.58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.32"/>
+      <stop offset="0.18" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fbfdff" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <title>Asset 8</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_4" data-name="Layer 4">
+      <rect width="1280" height="720" style="fill: #000000"/>
+      <rect width="1280" height="720" style="fill: url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

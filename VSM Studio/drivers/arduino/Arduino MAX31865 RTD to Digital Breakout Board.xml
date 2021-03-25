@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Arduino/Arduino MAX31865 RTD to Digital Breakout Board.pdsclip" DESC="Arduino MAX31865 RTD to Digital Breakout Board" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="MAX31865 RTD to Digital" ELEMENT="MAX31865_RTD1">
+      <INTERFACE OBJECT="Adafruit_MAX31865">
+         <PORT NAME="SPI"/>
+         <PIN NAME="ss" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO10"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="max31865/max31865.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

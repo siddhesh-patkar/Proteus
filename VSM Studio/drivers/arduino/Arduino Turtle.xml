@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Motor Control" FILE="Arduino/Arduino Turtle.pdsclip" DESC="Arduino Turtle" FAMILY="ARDUINO">
+
+   <PERIPHERAL TYPE="PWM-DRIVE" ELEMENT="T1" SUFFIX="DRIVE">
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="TurtleDrive">
+         <PIN NAME="IN1" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO2"/>
+         </PIN> 
+         <PIN NAME="IN2" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO4"/>
+         </PIN> 
+         <PIN NAME="ENA" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO3"/>
+         </PIN> 
+         <PIN NAME="IN3" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO6"/>
+         </PIN> 
+         <PIN NAME="IN4" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO7"/>
+         </PIN> 
+         <PIN NAME="ENB" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO5"/>
+         </PIN> 
+         <SETUP NAME="begin" />
+      </INTERFACE>
+      <!-- Firmware Driver -->
+      <DRIVER FILE="Turtle/TurtleDrive.xml" />
+   </PERIPHERAL>
+
+  <PERIPHERAL TYPE="SONAR-HEAD" ELEMENT="T1" SUFFIX="SH">
+    <!-- Hardware Interface -->
+    <INTERFACE OBJECT="TurtleSonarHead">
+      <PIN NAME="SONAR_TRIG" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="IO8"/>
+      </PIN>
+      <PIN NAME="SONAR_ECHO" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="IO9"/>
+      </PIN>
+      <PIN NAME="SERVO" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="IO10"/>
+      </PIN>
+      <SETUP NAME="begin" />
+    </INTERFACE>
+    <!-- Firmware Driver -->
+    <DRIVER FILE="Turtle/TurtleSonarHead.xml" />
+  </PERIPHERAL>
+
+  <PERIPHERAL TYPE="LINE-HUNTER" ELEMENT="T1" SUFFIX="LH">
+    <!-- Hardware Interface -->
+    <INTERFACE OBJECT="TurtleLineHunter">
+      <PIN NAME="LH_LEFT" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="IO11"/>
+      </PIN>
+      <PIN NAME="LH_CENTRE" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="IO12"/>
+      </PIN>
+      <PIN NAME="LH_RIGHT" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="AD0"/>
+      </PIN>
+      <SETUP NAME="begin" />
+    </INTERFACE>
+    <!-- Firmware Driver -->
+    <DRIVER FILE="Turtle/TurtleLineHunter.xml" />
+  </PERIPHERAL>
+
+</CLIP>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Raspberry Pi/Adafruit DC and Stepper Motor HAT.pdsclip" DESC="DC and Stepper Motor HAT" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="DC and Stepper Motor" ELEMENT="U2" >
+   
+   <INTERFACE OBJECT="Adafruit_DC_AND_Stepper_HAT"/>
+   
+    <DRIVER HEADER="AdafruitHATs">
+         
+       <ENUMERATION NAME="DIRECTION">
+         <CONSTANT NAME="BACKWARD" VALUE="0"/>
+         <CONSTANT NAME="RELEASE" VALUE="1"/>
+         <CONSTANT NAME="FORWARD" VALUE="2"/>
+       </ENUMERATION>
+        
+       <METHOD NAME="setAddress"  DESC="Set the address of the hat.">
+         <PARAMETER NAME="Address" TYPE="INTEGER" DEFAULT="0x60" DESC="Sets the address, Starts at 0x60."/>
+       </METHOD>
+        
+       <METHOD NAME="setDcMotor"  DESC="Control over DC motors.">
+         <PARAMETER NAME="Motor Number" TYPE="INTEGER" DEFAULT="1" DESC="Port Number of the motor."/>
+         <PARAMETER NAME="Direction" TYPE="DIRECTION" DEFAULT="FORWARD" DESC="Direction of the motor."/>
+         <PARAMETER NAME="Speed" TYPE="FLOAT" DEFAULT="0.5" DESC="Speed is between 0 and 1."/>
+       </METHOD>
+       
+       <ENUMERATION NAME="PORT">
+         <CONSTANT NAME="1" VALUE="1"/>
+         <CONSTANT NAME="2" VALUE="2"/>
+       </ENUMERATION>
+       
+       <METHOD NAME="setUpStepper"  DESC="Set up the stepper motor.">
+         <PARAMETER NAME="StepsPerRotation" TYPE="INTEGER" DEFAULT="4" DESC="Number of steps in full rotation"/>
+         <PARAMETER NAME="Port Number" TYPE="PORT" DEFAULT="2" DESC="Port being used by motor."/>
+       </METHOD>
+       
+      <ENUMERATION NAME="STEPS">
+         <CONSTANT NAME="SINGLE" VALUE="0"/>
+         <CONSTANT NAME="DOUBLE" VALUE="1"/>
+         <CONSTANT NAME="INTERLEAVED" VALUE="2"/>
+         <CONSTANT NAME="MICROSTEPPING" VALUE="3"/>
+       </ENUMERATION>
+       
+       <METHOD NAME="stepStepper"  DESC="Control over the stepper motor.">
+         <PARAMETER NAME="Number Of Steps" TYPE="INTEGER" DEFAULT="10" DESC="Number of Steps the motor will take."/>
+         <PARAMETER NAME="Direction" TYPE="DIRECTION" DEFAULT="FORWARD" DESC="Forward, Backward or Release."/>
+         <PARAMETER NAME="Step Type" TYPE="STEPS" DEFAULT="SINGLE" DESC="Type of steps."/>
+         <PARAMETER NAME="Port Number" TYPE="PORT" DEFAULT="2" DESC="Port being used by motor."/>
+       </METHOD>
+       
+
+    </DRIVER>
+   </PERIPHERAL>
+</CLIP>

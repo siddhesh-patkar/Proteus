@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DRIVER HEADER="SerialTerminal.h">
+  <REQUIRE HEADER="core.h"/>
+  <ENUMERATION NAME="BASE">
+   <CONSTANT NAME="DECIMAL" VALUE="10"/>
+   <CONSTANT NAME="BINARY" VALUE="2"/>
+   <CONSTANT NAME="OCTAL"  VALUE="8"/>
+   <CONSTANT NAME="HEX"  VALUE="16"/>
+  </ENUMERATION>
+
+  <METHOD NAME="print"  DESC="Print data without newline.">
+       <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to print"/>
+  </METHOD>
+  <METHOD NAME="println"  DESC="Print data with terminating newline.">
+       <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to print"/>
+  </METHOD>
+ <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+   <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+ </METHOD>
+ <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+   <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+ </METHOD>
+</DRIVER>

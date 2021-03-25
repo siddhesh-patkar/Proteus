@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<COMPILER NAME="HI-TECH C for PIC18" ID="PIC18HITECH" VERSION="9.63" URL="http://www.htsoft.com/" AVAILABILITY="External" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- Compiler -->
+  <TOOL NAME="CC" FILE="picc18.exe">
+    <!-- And assembler as well -->
+    <ALIAS NAME="ASM"/>
+    <!-- And linker as well -->
+    <ALIAS NAME="LD"/>
+    <!-- And librarian as well -->
+    <ALIAS NAME="LIB"/>
+    <!-- Options -->
+    <OPTION NAME="-B" DESC="Select memory model (defunct)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-C" DESC="Compile to object file" ADVANCED="1"/>
+    <OPTION NAME="-D" DESC="Define preprocessor symbol" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-E" DESC="Redirect compile errors" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-G" DESC="Generate symbolic debug information" PARAM="CHOICE">
+      <PARAM VALUE="" DESC="On" DEFAULT="1"/>
+      <PARAM VALUE="=off" DESC="Off"/>
+    </OPTION>
+    <OPTION NAME="-I" DESC="Specify include path" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION TOOL="LD" NAME="-L" DESC="Set linker option" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-M" DESC="Generate map file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-N" DESC="Identifier length" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="-O" DESC="Output file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-P" DESC="Preprocess assembler" ADVANCED="1"/>
+    <OPTION NAME="-Q" DESC="Quiet mode" ADVANCED="1"/>
+    <OPTION NAME="-S" DESC="Compile to assembler" ADVANCED="1"/>
+    <OPTION NAME="-U" DESC="Undefine preprocessor symbol" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-V" DESC="Verbose mode" ADVANCED="1"/>
+    <OPTION NAME="-X" DESC="Strip local symbols" ADVANCED="1"/>
+    <OPTION NAME="--asmlist" DESC="Generate assembler listing" ADVANCED="1"/>
+    <OPTION NAME="--callgraph=" DESC="Style of call graph listing in map file" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="std" DESC="Short form" DEFAULT="1"/>
+      <PARAM VALUE="crit" DESC="Critical paths only"/>
+      <PARAM VALUE="full" DESC="Fully expanded"/>
+      <PARAM VALUE="none" DESC="None"/>
+    </OPTION>
+    <OPTION NAME="--char=" DESC="Default character type (defunct)" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="unsigned" DESC="Char type is unsigned"/>
+      <PARAM VALUE="signed" DESC="Char type is signed"/>
+      <PARAM VALUE="default" DESC="Default" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="--checksum=" DESC="Calculate a checksum and store the result in program memory" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--chip=" DESC="Select processor" PARAM="STRING"/>
+    <OPTION NAME="--codeoffset=" DESC="Specify ROM address" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--cp" DESC="Specify pointer size (defunct)" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="=16" DESC="16 bit" DEFAULT="1"/>
+      <PARAM VALUE="=24" DESC="24 bit"/>
+    </OPTION>
+    <OPTION NAME="--cr" DESC="Generate cross reference file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--debugger=" DESC="Set debugger environment" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="none" DESC="No debugger" DEFAULT="1"/>
+      <PARAM VALUE="icd2" DESC="MPLAB ICD2"/>
+      <PARAM VALUE="icd3" DESC="MPLAB ICD3"/>
+      <PARAM VALUE="realice" DESC="MPLAB REAL ICE"/>
+      <PARAM VALUE="pickit2" DESC="MPLAB PICKit 2"/>
+      <PARAM VALUE="pickit3" DESC="MPLAB PICKit 3"/>
+    </OPTION>
+    <OPTION NAME="--double=" DESC="Size of double type" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="24" DESC="Double type is 24-bits" DEFAULT="1"/>
+      <PARAM VALUE="32" DESC="Double type is 32-bits"/>
+    </OPTION>
+    <OPTION NAME="--echo" DESC="Echo command line" ADVANCED="1"/>
+    <OPTION NAME="--emi" DESC="External memory interface mode" ADVANCED="1">
+      <PARAM VALUE="bytewrite" DESC="Byte write mode"/>
+      <PARAM VALUE="byteselect" DESC="Byte select mode"/>
+      <PARAM VALUE="wordwrite" DESC="Word write mode" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="--errata=" DESC="Specify errata work-arounds" ADVANCED="1">
+      <PARAM VALUE="4000" DESC="Address 4000h boundary"/>
+      <PARAM VALUE="fastints" DESC="Corrupted fast interrupt shadow registers"/>
+      <PARAM VALUE="lfsr" DESC="LFSR instruction memory corruption"/>
+      <PARAM VALUE="minus40" DESC="Faulty table reads at -40 degrees C"/>
+      <PARAM VALUE="reset" DESC="GOTO instruction at reset vector must be preceded by NOP"/>
+      <PARAM VALUE="bsr15" DESC="Peripherals can misbehave if BSR = 15"/>
+      <PARAM VALUE="daw" DESC="DAW instruction may improperly clear CARRY bit"/>
+      <PARAM VALUE="eedat" DESC="Read EEDAT immediately after setting RD bit"/>
+      <PARAM VALUE="eeadr" DESC="Don't set RD immediately after loading EEADR"/>
+      <PARAM VALUE="eelvd" DESC="Internal VRef must be enabled to write EEPROM"/>
+      <PARAM VALUE="fllvd" DESC="Internal VRef must be enabled to write flash"/>
+      <PARAM VALUE="tblwtint" DESC="Specifically disable interrupt sources during tblwt instruction"/>
+      <PARAM VALUE="FW4000" DESC="Writes to flash must target opposite side of 4000h boundary"/>
+      <PARAM VALUE="resetram" DESC="Data in RAM location can be corrupted if async. reset occurs during write"/>
+      <PARAM VALUE="all" DESC="All of the above"/>
+      <PARAM VALUE="none" DESC="None of the above"/>
+      <PARAM VALUE="default" DESC="Default values" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="--errformat=" DESC="Error format" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--errors=" DESC="Maximum number of errors" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="--fill=" DESC="Specify a ROM-fill value for unused memory" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--forcebank" DESC="Force access bank allocation" ADVANCED="1"/>
+    <OPTION NAME="--getoption=" DESC="Get advanced options" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--ide=" DESC="Set development environment" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="hitide" DESC="HI-TECH Software HI-TIDE"/>
+      <PARAM VALUE="mplab" DESC="Microchip MPLAB"/>
+    </OPTION>
+    <OPTION NAME="--lang" DESC="Specify Language" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="en" DESC="English" DEFAULT="1"/>
+      <PARAM VALUE="fr" DESC="French"/>
+      <PARAM VALUE="de" DESC="German"/>
+    </OPTION>
+    <OPTION NAME="--mode=" DESC="Choose operating mode" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="lite" DESC="Lite (freeware) mode"/>
+      <PARAM VALUE="pro" DESC="Professional mode with OCG(tm)" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="--msgdisable=" DESC="Disable warning messages" PARAM="STRING"/>
+    <OPTION NAME="--msgformat" DESC="Message format" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--nodel" DESC="Do not remove temporary files" ADVANCED="1"/>
+    <OPTION NAME="--noexec" DESC="Do not execute" ADVANCED="1"/>
+    <OPTION NAME="--objdir=" DESC="Object files directory" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--opt=" DESC="Optimization options" PARAM="CHOICE">
+      <PARAM VALUE="1" DESC="Level 1"/>
+      <PARAM VALUE="2" DESC="Level 2"/>
+      <PARAM VALUE="3" DESC="Level 3"/>
+      <PARAM VALUE="4" DESC="Level 4"/>
+      <PARAM VALUE="5" DESC="Level 5"/>
+      <PARAM VALUE="6" DESC="Level 6"/>
+      <PARAM VALUE="7" DESC="Level 7"/>
+      <PARAM VALUE="8" DESC="Level 8"/>
+      <PARAM VALUE="9" DESC="Level 9"/>
+      <PARAM VALUE="asm" DESC="Optimize asm code generated from C"/>
+      <PARAM VALUE="asmfile" DESC="Optimize assembler files"/>
+      <PARAM VALUE="speed" DESC="Favor code generation for speed over space"/>
+      <PARAM VALUE="space" DESC="Favor code generation for space over speed"/>
+      <PARAM VALUE="all" DESC="All"/>
+      <PARAM VALUE="none" DESC="None"/>
+      <PARAM VALUE="default" DESC="Default" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="--outdir=" DESC="Output directory" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--output=" DESC="Output formats" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="intel" DESC="Intel Hex">
+        <ALIAS VALUE="inhx32"/>
+      </PARAM>
+      <PARAM VALUE="inhx032" DESC="Intel Hex, extend address zero"/>
+      <PARAM VALUE="tek" DESC="Tektronic Hex">
+        <ALIAS VALUE="tektronic"/>
+      </PARAM>
+      <PARAM VALUE="aahex" DESC="American Automation Hex"/>
+      <PARAM VALUE="mot" DESC="Motorola Hex">
+        <ALIAS VALUE="motorola"/>
+        <ALIAS VALUE="s19"/>
+      </PARAM>
+      <PARAM VALUE="ubrof" DESC="UBROF"/>
+      <PARAM VALUE="bin" DESC="Binary">
+        <ALIAS VALUE="binary"/>
+      </PARAM>
+      <PARAM VALUE="elf" DESC="ELF/DWARF"/>
+      <PARAM VALUE="cod" DESC=".COD"/>
+      <PARAM VALUE="mcof" DESC="Microchip PIC COFF">
+        <ALIAS VALUE="mcoff"/>
+        <ALIAS VALUE="mpcoff"/>
+      </PARAM>
+      <PARAM VALUE="cof" DESC="Common Object File Format">
+        <ALIAS VALUE="coff"/>
+      </PARAM>
+      <PARAM VALUE="lib" DESC="Library file"/>
+      <PARAM VALUE="lpp" DESC="P-code library file"/>
+      <PARAM VALUE="all" DESC="All"/>
+      <PARAM VALUE="none" DESC="None"/>
+      <PARAM VALUE="default" DESC="Default" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="--pass1" DESC="Compile to p-code (intermediate) file" ADVANCED="1"/>
+    <OPTION NAME="--pre" DESC="Preprocess only" ADVANCED="1"/>
+    <OPTION NAME="--proto" DESC="Generate function prototypes" ADVANCED="1"/>
+    <OPTION NAME="--ram=" DESC="Specify RAM ranges" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--rom=" DESC="Specify ROM ranges" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--runtime=" DESC="Run-time options" PARAM="CHOICE" MULTIPLE="1" ADVANCED="1">
+      <PARAM VALUE="init" DESC="Initialization of data psects"/>
+      <PARAM VALUE="clear" DESC="Clearing of bss psects"/>
+      <PARAM VALUE="clib" DESC="Link in C Libraries"/>
+      <PARAM VALUE="keep" DESC="Keep generated runtime startup code"/>
+      <PARAM VALUE="no_startup" DESC="Do not link in default startup module"/>
+      <PARAM VALUE="stackwarn" DESC="Enable stack checking"/>
+      <PARAM VALUE="download" DESC="Compile a program that will be installed via a bootloader"/>
+      <PARAM VALUE="plib" DESC="Link in Peripheral Libraries"/>
+      <PARAM VALUE="config" DESC="Program the device with default config words"/>
+      <PARAM VALUE="all" DESC="All"/>
+      <PARAM VALUE="none" DESC="None"/>
+      <PARAM VALUE="default" DESC="Default" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="--scandep" DESC="Scan for dependencies" ADVANCED="1"/>
+    <OPTION NAME="--setoption=" DESC="Set advanced options" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--strict" DESC="Strict ANSI keywords" ADVANCED="1"/>
+    <OPTION NAME="--summary" DESC="Summary options" PARAM="CHOICE" MULTIPLE="1" ADVANCED="1">
+      <PARAM VALUE="psect" DESC="Displays memory psect usage"/>
+      <PARAM VALUE="class" DESC="Displays memory class usage"/>
+      <PARAM VALUE="mem" DESC="Displays overall memory usage" DEFAULT="1"/>
+      <PARAM VALUE="hex" DESC="Displays HEX file usage"/>
+      <PARAM VALUE="file" DESC="Summary information is put into a file as well as on screen"/>
+      <PARAM VALUE="all" DESC="All"/>
+      <PARAM VALUE="none" DESC="None"/>
+    </OPTION>
+    <OPTION NAME="--time" DESC="Report compilation times" ADVANCED="1"/>
+    <OPTION NAME="--warn" DESC="Warning level" PARAM="CHOICE">
+      <PARAM VALUE="-9" DESC="Level -9"/>
+      <PARAM VALUE="-8" DESC="Level -8"/>
+      <PARAM VALUE="-7" DESC="Level -7"/>
+      <PARAM VALUE="-6" DESC="Level -6"/>
+      <PARAM VALUE="-5" DESC="Level -5"/>
+      <PARAM VALUE="-4" DESC="Level -4"/>
+      <PARAM VALUE="-3" DESC="Level -3"/>
+      <PARAM VALUE="-2" DESC="Level -2"/>
+      <PARAM VALUE="-1" DESC="Level -1"/>
+      <PARAM VALUE="0" DESC="Level 0" DEFAULT="1"/>
+      <PARAM VALUE="1" DESC="Level 1"/>
+      <PARAM VALUE="2" DESC="Level 2"/>
+      <PARAM VALUE="3" DESC="Level 3"/>
+      <PARAM VALUE="4" DESC="Level 4"/>
+      <PARAM VALUE="5" DESC="Level 5"/>
+      <PARAM VALUE="6" DESC="Level 6"/>
+      <PARAM VALUE="7" DESC="Level 7"/>
+      <PARAM VALUE="8" DESC="Level 8"/>
+      <PARAM VALUE="9" DESC="Level 9"/>
+    </OPTION>
+    <OPTION NAME="--warnformat" DESC="Warning format" PARAM="STRING" ADVANCED="1"/>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="PIC18">
+    <CONTROLLER NAME="PIC18C242">
+      <OPTION NAME="--chip=" VALUE="18C242"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C252">
+      <OPTION NAME="--chip=" VALUE="18C252"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C442">
+      <OPTION NAME="--chip=" VALUE="18C442"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C452">
+      <OPTION NAME="--chip=" VALUE="18C452"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C601">
+      <OPTION NAME="--chip=" VALUE="18C601"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C658">
+      <OPTION NAME="--chip=" VALUE="18C658"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C801">
+      <OPTION NAME="--chip=" VALUE="18C801"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18C858">
+      <OPTION NAME="--chip=" VALUE="18C858"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F1220">
+      <OPTION NAME="--chip=" VALUE="18F1220"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F1230">
+      <OPTION NAME="--chip=" VALUE="18F1230"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F1320">
+      <OPTION NAME="--chip=" VALUE="18F1320"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F1330">
+      <OPTION NAME="--chip=" VALUE="18F1330"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F13K22">
+      <OPTION NAME="--chip=" VALUE="18F13K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F13K50">
+      <OPTION NAME="--chip=" VALUE="18F13K50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F14K22">
+      <OPTION NAME="--chip=" VALUE="18F14K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F14K22LIN">
+      <OPTION NAME="--chip=" VALUE="18F14K22LIN"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F14K50">
+      <OPTION NAME="--chip=" VALUE="18F14K50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2220">
+      <OPTION NAME="--chip=" VALUE="18F2220"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2221">
+      <OPTION NAME="--chip=" VALUE="18F2221"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2320">
+      <OPTION NAME="--chip=" VALUE="18F2320"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2321">
+      <OPTION NAME="--chip=" VALUE="18F2321"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2331">
+      <OPTION NAME="--chip=" VALUE="18F2331"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F23K20">
+      <OPTION NAME="--chip=" VALUE="18F23K20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F23K22">
+      <OPTION NAME="--chip=" VALUE="18F23K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2410">
+      <OPTION NAME="--chip=" VALUE="18F2410"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F242">
+      <OPTION NAME="--chip=" VALUE="18F242"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2420">
+      <OPTION NAME="--chip=" VALUE="18F2420"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2423">
+      <OPTION NAME="--chip=" VALUE="18F2423"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2431">
+      <OPTION NAME="--chip=" VALUE="18F2431"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2439">
+      <OPTION NAME="--chip=" VALUE="18F2439"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2450">
+      <OPTION NAME="--chip=" VALUE="18F2450"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2455">
+      <OPTION NAME="--chip=" VALUE="18F2455"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2458">
+      <OPTION NAME="--chip=" VALUE="18F2458"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F248">
+      <OPTION NAME="--chip=" VALUE="18F248"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2480">
+      <OPTION NAME="--chip=" VALUE="18F2480"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F24J10">
+      <OPTION NAME="--chip=" VALUE="18F24J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F24J11">
+      <OPTION NAME="--chip=" VALUE="18F24J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F24J50">
+      <OPTION NAME="--chip=" VALUE="18F24J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F24K20">
+      <OPTION NAME="--chip=" VALUE="18F24K20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F24K22">
+      <OPTION NAME="--chip=" VALUE="18F24K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2510">
+      <OPTION NAME="--chip=" VALUE="18F2510"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2515">
+      <OPTION NAME="--chip=" VALUE="18F2515"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F252">
+      <OPTION NAME="--chip=" VALUE="18F252"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2520">
+      <OPTION NAME="--chip=" VALUE="18F2520"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2523">
+      <OPTION NAME="--chip=" VALUE="18F2523"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2525">
+      <OPTION NAME="--chip=" VALUE="18F2525"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2539">
+      <OPTION NAME="--chip=" VALUE="18F2539"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2550">
+      <OPTION NAME="--chip=" VALUE="18F2550"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2553">
+      <OPTION NAME="--chip=" VALUE="18F2553"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F258">
+      <OPTION NAME="--chip=" VALUE="18F258"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2580">
+      <OPTION NAME="--chip=" VALUE="18F2580"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2585">
+      <OPTION NAME="--chip=" VALUE="18F2585"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F25J10">
+      <OPTION NAME="--chip=" VALUE="18F25J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F25J11">
+      <OPTION NAME="--chip=" VALUE="18F25J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F25J50">
+      <OPTION NAME="--chip=" VALUE="18F25J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F25K20">
+      <OPTION NAME="--chip=" VALUE="18F25K20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F25K22">
+      <OPTION NAME="--chip=" VALUE="18F25K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F25K80">
+      <OPTION NAME="--chip=" VALUE="18F25K80"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2610">
+      <OPTION NAME="--chip=" VALUE="18F2610"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2620">
+      <OPTION NAME="--chip=" VALUE="18F2620"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2680">
+      <OPTION NAME="--chip=" VALUE="18F2680"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2682">
+      <OPTION NAME="--chip=" VALUE="18F2682"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F2685">
+      <OPTION NAME="--chip=" VALUE="18F2685"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26J11">
+      <OPTION NAME="--chip=" VALUE="18F26J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26J13">
+      <OPTION NAME="--chip=" VALUE="18F26J13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26J50">
+      <OPTION NAME="--chip=" VALUE="18F26J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26J53">
+      <OPTION NAME="--chip=" VALUE="18F26J53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26K20">
+      <OPTION NAME="--chip=" VALUE="18F26K20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26K22">
+      <OPTION NAME="--chip=" VALUE="18F26K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F26K80">
+      <OPTION NAME="--chip=" VALUE="18F26K80"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F27J13">
+      <OPTION NAME="--chip=" VALUE="18F27J13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F27J53">
+      <OPTION NAME="--chip=" VALUE="18F27J53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4220">
+      <OPTION NAME="--chip=" VALUE="18F4220"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4221">
+      <OPTION NAME="--chip=" VALUE="18F4221"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4320">
+      <OPTION NAME="--chip=" VALUE="18F4320"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4321">
+      <OPTION NAME="--chip=" VALUE="18F4321"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4331">
+      <OPTION NAME="--chip=" VALUE="18F4331"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F43K20">
+      <OPTION NAME="--chip=" VALUE="18F43K20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F43K22">
+      <OPTION NAME="--chip=" VALUE="18F43K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4410">
+      <OPTION NAME="--chip=" VALUE="18F4410"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F442">
+      <OPTION NAME="--chip=" VALUE="18F442"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4420">
+      <OPTION NAME="--chip=" VALUE="18F4420"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4423">
+      <OPTION NAME="--chip=" VALUE="18F4423"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4431">
+      <OPTION NAME="--chip=" VALUE="18F4431"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4439">
+      <OPTION NAME="--chip=" VALUE="18F4439"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4450">
+      <OPTION NAME="--chip=" VALUE="18F4450"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4455">
+      <OPTION NAME="--chip=" VALUE="18F4455"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4458">
+      <OPTION NAME="--chip=" VALUE="18F4458"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F448">
+      <OPTION NAME="--chip=" VALUE="18F448"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4480">
+      <OPTION NAME="--chip=" VALUE="18F4480"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F44J10">
+      <OPTION NAME="--chip=" VALUE="18F44J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F44J11">
+      <OPTION NAME="--chip=" VALUE="18F44J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F44J50">
+      <OPTION NAME="--chip=" VALUE="18F44J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F44K20">
+      <OPTION NAME="--chip=" VALUE="18F44K20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F44K22">
+      <OPTION NAME="--chip=" VALUE="18F44K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4510">
+      <OPTION NAME="--chip=" VALUE="18F4510"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4515">
+      <OPTION NAME="--chip=" VALUE="18F4515"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F452">
+      <OPTION NAME="--chip=" VALUE="18F452"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4520">
+      <OPTION NAME="--chip=" VALUE="18F4520"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4523">
+      <OPTION NAME="--chip=" VALUE="18F4523"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4525">
+      <OPTION NAME="--chip=" VALUE="18F4525"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4539">
+      <OPTION NAME="--chip=" VALUE="18F4539"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4550">
+      <OPTION NAME="--chip=" VALUE="18F4550"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4553">
+      <OPTION NAME="--chip=" VALUE="18F4553"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F458">
+      <OPTION NAME="--chip=" VALUE="18F458"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4580">
+      <OPTION NAME="--chip=" VALUE="18F4580"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4585">
+      <OPTION NAME="--chip=" VALUE="18F4585"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F45J10">
+      <OPTION NAME="--chip=" VALUE="18F45J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F45J11">
+      <OPTION NAME="--chip=" VALUE="18F45J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F45J50">
+      <OPTION NAME="--chip=" VALUE="18F45J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F45K20">
+      <OPTION NAME="--chip=" VALUE="18F45K20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F45K22">
+      <OPTION NAME="--chip=" VALUE="18F45K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F45K80">
+      <OPTION NAME="--chip=" VALUE="18F45K80"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4610">
+      <OPTION NAME="--chip=" VALUE="18F4610"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4620">
+      <OPTION NAME="--chip=" VALUE="18F4620"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4680">
+      <OPTION NAME="--chip=" VALUE="18F4680"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4682">
+      <OPTION NAME="--chip=" VALUE="18F4682"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F4685">
+      <OPTION NAME="--chip=" VALUE="18F4685"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46J11">
+      <OPTION NAME="--chip=" VALUE="18F46J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46J13">
+      <OPTION NAME="--chip=" VALUE="18F46J13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46J50">
+      <OPTION NAME="--chip=" VALUE="18F46J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46J53">
+      <OPTION NAME="--chip=" VALUE="18F46J53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46K20">
+      <OPTION NAME="--chip=" VALUE="18F46K20"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46K22">
+      <OPTION NAME="--chip=" VALUE="18F46K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F46K80">
+      <OPTION NAME="--chip=" VALUE="18F46K80"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F47J13">
+      <OPTION NAME="--chip=" VALUE="18F47J13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F47J53">
+      <OPTION NAME="--chip=" VALUE="18F47J53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6310">
+      <OPTION NAME="--chip=" VALUE="18F6310"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6390">
+      <OPTION NAME="--chip=" VALUE="18F6390"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6393">
+      <OPTION NAME="--chip=" VALUE="18F6393"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F63J11">
+      <OPTION NAME="--chip=" VALUE="18F63J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F63J90">
+      <OPTION NAME="--chip=" VALUE="18F63J90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6410">
+      <OPTION NAME="--chip=" VALUE="18F6410"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6490">
+      <OPTION NAME="--chip=" VALUE="18F6490"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6493">
+      <OPTION NAME="--chip=" VALUE="18F6493"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F64J11">
+      <OPTION NAME="--chip=" VALUE="18F64J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F64J90">
+      <OPTION NAME="--chip=" VALUE="18F64J90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6520">
+      <OPTION NAME="--chip=" VALUE="18F6520"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6525">
+      <OPTION NAME="--chip=" VALUE="18F6525"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6527">
+      <OPTION NAME="--chip=" VALUE="18F6527"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6585">
+      <OPTION NAME="--chip=" VALUE="18F6585"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65J10">
+      <OPTION NAME="--chip=" VALUE="18F65J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65J11">
+      <OPTION NAME="--chip=" VALUE="18F65J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65J15">
+      <OPTION NAME="--chip=" VALUE="18F65J15"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65J50">
+      <OPTION NAME="--chip=" VALUE="18F65J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65J90">
+      <OPTION NAME="--chip=" VALUE="18F65J90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65K22">
+      <OPTION NAME="--chip=" VALUE="18F65K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65K80">
+      <OPTION NAME="--chip=" VALUE="18F65K80"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F65K90">
+      <OPTION NAME="--chip=" VALUE="18F65K90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6620">
+      <OPTION NAME="--chip=" VALUE="18F6620"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6621">
+      <OPTION NAME="--chip=" VALUE="18F6621"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6622">
+      <OPTION NAME="--chip=" VALUE="18F6622"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6627">
+      <OPTION NAME="--chip=" VALUE="18F6627"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6628">
+      <OPTION NAME="--chip=" VALUE="18F6628"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6680">
+      <OPTION NAME="--chip=" VALUE="18F6680"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J10">
+      <OPTION NAME="--chip=" VALUE="18F66J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J11">
+      <OPTION NAME="--chip=" VALUE="18F66J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J15">
+      <OPTION NAME="--chip=" VALUE="18F66J15"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J16">
+      <OPTION NAME="--chip=" VALUE="18F66J16"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J50">
+      <OPTION NAME="--chip=" VALUE="18F66J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J55">
+      <OPTION NAME="--chip=" VALUE="18F66J55"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J60">
+      <OPTION NAME="--chip=" VALUE="18F66J60"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J65">
+      <OPTION NAME="--chip=" VALUE="18F66J65"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J90">
+      <OPTION NAME="--chip=" VALUE="18F66J90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66J93">
+      <OPTION NAME="--chip=" VALUE="18F66J93"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66K22">
+      <OPTION NAME="--chip=" VALUE="18F66K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66K80">
+      <OPTION NAME="--chip=" VALUE="18F66K80"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F66K90">
+      <OPTION NAME="--chip=" VALUE="18F66K90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6720">
+      <OPTION NAME="--chip=" VALUE="18F6720"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6722">
+      <OPTION NAME="--chip=" VALUE="18F6722"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F6723">
+      <OPTION NAME="--chip=" VALUE="18F6723"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67J10">
+      <OPTION NAME="--chip=" VALUE="18F67J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67J11">
+      <OPTION NAME="--chip=" VALUE="18F67J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67J50">
+      <OPTION NAME="--chip=" VALUE="18F67J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67J60">
+      <OPTION NAME="--chip=" VALUE="18F67J60"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67J90">
+      <OPTION NAME="--chip=" VALUE="18F67J90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67J93">
+      <OPTION NAME="--chip=" VALUE="18F67J93"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67K22">
+      <OPTION NAME="--chip=" VALUE="18F67K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F67K90">
+      <OPTION NAME="--chip=" VALUE="18F67K90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8310">
+      <OPTION NAME="--chip=" VALUE="18F8310"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8390">
+      <OPTION NAME="--chip=" VALUE="18F8390"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8393">
+      <OPTION NAME="--chip=" VALUE="18F8393"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F83J11">
+      <OPTION NAME="--chip=" VALUE="18F83J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F83J90">
+      <OPTION NAME="--chip=" VALUE="18F83J90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8410">
+      <OPTION NAME="--chip=" VALUE="18F8410"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8490">
+      <OPTION NAME="--chip=" VALUE="18F8490"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8493">
+      <OPTION NAME="--chip=" VALUE="18F8493"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F84J11">
+      <OPTION NAME="--chip=" VALUE="18F84J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F84J90">
+      <OPTION NAME="--chip=" VALUE="18F84J90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8520">
+      <OPTION NAME="--chip=" VALUE="18F8520"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8525">
+      <OPTION NAME="--chip=" VALUE="18F8525"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8527">
+      <OPTION NAME="--chip=" VALUE="18F8527"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8585">
+      <OPTION NAME="--chip=" VALUE="18F8585"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85J10">
+      <OPTION NAME="--chip=" VALUE="18F85J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85J11">
+      <OPTION NAME="--chip=" VALUE="18F85J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85J15">
+      <OPTION NAME="--chip=" VALUE="18F85J15"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85J50">
+      <OPTION NAME="--chip=" VALUE="18F85J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85J90">
+      <OPTION NAME="--chip=" VALUE="18F85J90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85K22">
+      <OPTION NAME="--chip=" VALUE="18F85K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F85K90">
+      <OPTION NAME="--chip=" VALUE="18F85K90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8620">
+      <OPTION NAME="--chip=" VALUE="18F8620"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8621">
+      <OPTION NAME="--chip=" VALUE="18F8621"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8622">
+      <OPTION NAME="--chip=" VALUE="18F8622"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8627">
+      <OPTION NAME="--chip=" VALUE="18F8627"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8628">
+      <OPTION NAME="--chip=" VALUE="18F8628"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8680">
+      <OPTION NAME="--chip=" VALUE="18F8680"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J10">
+      <OPTION NAME="--chip=" VALUE="18F86J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J11">
+      <OPTION NAME="--chip=" VALUE="18F86J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J15">
+      <OPTION NAME="--chip=" VALUE="18F86J15"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J16">
+      <OPTION NAME="--chip=" VALUE="18F86J16"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J50">
+      <OPTION NAME="--chip=" VALUE="18F86J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J55">
+      <OPTION NAME="--chip=" VALUE="18F86J55"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J60">
+      <OPTION NAME="--chip=" VALUE="18F86J60"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J65">
+      <OPTION NAME="--chip=" VALUE="18F86J65"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J72">
+      <OPTION NAME="--chip=" VALUE="18F86J72"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J90">
+      <OPTION NAME="--chip=" VALUE="18F86J90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86J93">
+      <OPTION NAME="--chip=" VALUE="18F86J93"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86K22">
+      <OPTION NAME="--chip=" VALUE="18F86K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F86K90">
+      <OPTION NAME="--chip=" VALUE="18F86K90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8720">
+      <OPTION NAME="--chip=" VALUE="18F8720"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8722">
+      <OPTION NAME="--chip=" VALUE="18F8722"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F8723">
+      <OPTION NAME="--chip=" VALUE="18F8723"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J10">
+      <OPTION NAME="--chip=" VALUE="18F87J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J11">
+      <OPTION NAME="--chip=" VALUE="18F87J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J50">
+      <OPTION NAME="--chip=" VALUE="18F87J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J60">
+      <OPTION NAME="--chip=" VALUE="18F87J60"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J72">
+      <OPTION NAME="--chip=" VALUE="18F87J72"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J90">
+      <OPTION NAME="--chip=" VALUE="18F87J90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87J93">
+      <OPTION NAME="--chip=" VALUE="18F87J93"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87K22">
+      <OPTION NAME="--chip=" VALUE="18F87K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F87K90">
+      <OPTION NAME="--chip=" VALUE="18F87K90"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F96J60">
+      <OPTION NAME="--chip=" VALUE="18F96J60"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F96J65">
+      <OPTION NAME="--chip=" VALUE="18F96J65"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18F97J60">
+      <OPTION NAME="--chip=" VALUE="18F97J60"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF13K22">
+      <OPTION NAME="--chip=" VALUE="18LF13K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF13K50">
+      <OPTION NAME="--chip=" VALUE="18LF13K50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF14K22">
+      <OPTION NAME="--chip=" VALUE="18LF14K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF14K50">
+      <OPTION NAME="--chip=" VALUE="18LF14K50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF23K22">
+      <OPTION NAME="--chip=" VALUE="18LF23K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF24J10">
+      <OPTION NAME="--chip=" VALUE="18LF24J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF24J11">
+      <OPTION NAME="--chip=" VALUE="18LF24J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF24J50">
+      <OPTION NAME="--chip=" VALUE="18LF24J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF24K22">
+      <OPTION NAME="--chip=" VALUE="18LF24K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF25J10">
+      <OPTION NAME="--chip=" VALUE="18LF25J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF25J11">
+      <OPTION NAME="--chip=" VALUE="18LF25J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF25J50">
+      <OPTION NAME="--chip=" VALUE="18LF25J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF25K22">
+      <OPTION NAME="--chip=" VALUE="18LF25K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF25K80">
+      <OPTION NAME="--chip=" VALUE="18LF25K80"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF26J11">
+      <OPTION NAME="--chip=" VALUE="18LF26J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF26J13">
+      <OPTION NAME="--chip=" VALUE="18LF26J13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF26J50">
+      <OPTION NAME="--chip=" VALUE="18LF26J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF26J53">
+      <OPTION NAME="--chip=" VALUE="18LF26J53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF26K22">
+      <OPTION NAME="--chip=" VALUE="18LF26K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF26K80">
+      <OPTION NAME="--chip=" VALUE="18LF26K80"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF27J13">
+      <OPTION NAME="--chip=" VALUE="18LF27J13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF27J53">
+      <OPTION NAME="--chip=" VALUE="18LF27J53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF43K22">
+      <OPTION NAME="--chip=" VALUE="18LF43K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF44J10">
+      <OPTION NAME="--chip=" VALUE="18LF44J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF44J11">
+      <OPTION NAME="--chip=" VALUE="18LF44J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF44J50">
+      <OPTION NAME="--chip=" VALUE="18LF44J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF44K22">
+      <OPTION NAME="--chip=" VALUE="18LF44K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF45J10">
+      <OPTION NAME="--chip=" VALUE="18LF45J10"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF45J11">
+      <OPTION NAME="--chip=" VALUE="18LF45J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF45J50">
+      <OPTION NAME="--chip=" VALUE="18LF45J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF45K22">
+      <OPTION NAME="--chip=" VALUE="18LF45K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF45K80">
+      <OPTION NAME="--chip=" VALUE="18LF45K80"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF46J11">
+      <OPTION NAME="--chip=" VALUE="18LF46J11"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF46J13">
+      <OPTION NAME="--chip=" VALUE="18LF46J13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF46J50">
+      <OPTION NAME="--chip=" VALUE="18LF46J50"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF46J53">
+      <OPTION NAME="--chip=" VALUE="18LF46J53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF46K22">
+      <OPTION NAME="--chip=" VALUE="18LF46K22"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF46K80">
+      <OPTION NAME="--chip=" VALUE="18LF46K80"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF47J13">
+      <OPTION NAME="--chip=" VALUE="18LF47J13"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF47J53">
+      <OPTION NAME="--chip=" VALUE="18LF47J53"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF65K80">
+      <OPTION NAME="--chip=" VALUE="18LF65K80"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="PIC18LF66K80">
+      <OPTION NAME="--chip=" VALUE="18LF66K80"/>
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT KEYLOC="HKEY_LOCAL_MACHINE\SOFTWARE\HI-TECH Software\PICC-18" LEVELS="3" TYPE="ANONYMOUS" KEY="InstDir" SUF="BIN/picc18.exe" DATE="2010-02-03">
+    <CHECK ARG="--ver" STR="HI-TECH"/>
+    <CHECK ARG="--ver" STR="PIC18"/>
+  </DETECT>
+  <DETECT PATH="%PROGRAMFILES%/HI-TECH Software/PICC-18/%SUB%" SUF="BIN/picc18.exe" LEVELS="3" DATE="2010-02-03">
+    <CHECK ARG="--ver" STR="HI-TECH"/>
+    <CHECK ARG="--ver" STR="PIC18"/>
+  </DETECT>
+  <DETECT PATH="%PROGRAMW6432%/HI-TECH Software/PICC-18/%SUB%" SUF="BIN/picc18.exe" LEVELS="3" DATE="2010-02-03">
+    <CHECK ARG="--ver" STR="HI-TECH"/>
+    <CHECK ARG="--ver" STR="PIC18"/>
+  </DETECT>
+  <PATH ADD="%COMPILER_DIR%/BIN"/>
+  <!-- File Types -->
+  <FILE NAME="c" DESC="C Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="as" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="lib" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="cof" DESC="Microchip Coff" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="elf" DESC="ELF" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="o" DESC="Object" CATEGORY="Intermediate Binary"/>
+  <!-- C Compiler -->
+  <PROCESS TOOL="CC" NAME="C Compiler" CMDLINE="$(CC) $(CCFLAGS) %OPTIONS% -O%OUTFILE_QUOTED% %INFILE_QUOTED%">
+    <FILE INPUT="c" OUTPUT="p1"/>
+    <FILE TEMP="pre"/>
+    <FILE TEMP="lst"/>
+    <OPTION NAME="--pass1"/>
+    <OPTION NAME="--errformat=" VALUE="&quot;Error at file %%%%f line %%%%l column %%%%c: (%%%%n) %%%%s&quot;"/>
+    <OPTION NAME="--warnformat=" VALUE="&quot;Warning at file %%%%f line %%%%l column %%%%c: (%%%%n) %%%%s&quot;"/>
+    <OPTION NAME="--msgformat=" VALUE="&quot;Message at file %%%%f line %%%%l column %%%%c: (%%%%n) %%%%s&quot;"/>
+    <OPTION NAME="-D" VALUE="_XTAL_FREQ=%CLOCK%" DEFAULT="1"/>
+    <MESSAGE VALUE="^(Error|Warning|Message) at file (.+) line (\d+) column (\d*): .+$">
+      <FIELD NAME="FILENAME" POSITION="2"/>
+      <FIELD NAME="LINE" POSITION="3" OFFSET="-1"/>
+      <FIELD NAME="COLUMN" POSITION="4" OFFSET="0"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="$(ASM) $(ASMFLAGS) %OPTIONS% -O%OUTFILE_QUOTED_DOS% %INFILE_QUOTED_DOS%">
+    <FILE INPUT="as" OUTPUT="obj"/>
+    <FILE TEMP="rlf"/>
+    <OPTION NAME="-C"/>
+    <OPTION NAME="--errformat=" VALUE="&quot;Error at file %%%%f line %%%%l column %%%%c: (%%%%n) %%%%s&quot;"/>
+    <OPTION NAME="--warnformat=" VALUE="&quot;Warning at file %%%%f line %%%%l column %%%%c: (%%%%n) %%%%s&quot;"/>
+    <OPTION NAME="--msgformat=" VALUE="&quot;Message at file %%%%f line %%%%l column %%%%c: (%%%%n) %%%%s&quot;"/>
+    <MESSAGE VALUE="^(Error|Warning|Message) at file (.+) line (\d+) column (\d*): .+$">
+      <FIELD NAME="FILENAME" POSITION="2"/>
+      <FIELD NAME="LINE" POSITION="3" OFFSET="-1"/>
+      <FIELD NAME="COLUMN" POSITION="4" OFFSET="0"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="$(LD) $(LDFLAGS) %OPTIONS% -O%OUTFILE_QUOTED% %INFILES_QUOTED%">
+    <FILE OUTPUT="cof">
+      <FILE TEMP="hex"/>
+      <OPTION NAME="--output=" VALUE="mcof"/>
+    </FILE>
+    <FILE OUTPUT="hex">
+      <OPTION NAME="--output=" VALUE="intel"/>
+    </FILE>
+    <FILE INPUT="p1"/>
+    <FILE INPUT="obj"/>
+    <FILE INPUT="lib"/>
+    <FILE INPUT="lpp"/>
+    <FILE TEMP="hxl"/>
+    <FILE TEMP="lst"/>
+    <FILE TEMP="sym"/>
+    <FILE TEMP="obj"/>
+    <FILE TEMP="sdb"/>
+    <FILE TEMP="as"/>
+    <FILE TEMP="startup.obj" NAME="%OUTFILE_DIR%\startup.obj"/>
+    <FILE TEMP="startup.rlf" NAME="%OUTFILE_DIR%\startup.rlf"/>
+    <FILE TEMP="startup.as" NAME="%OUTFILE_DIR%\startup.as"/>
+    <FILE TEMP="startup.lst" NAME="%OUTFILE_DIR%\startup.lst"/>
+    <FILE TEMP="funclist." NAME="%TARGET_DIR%\funclist."/>
+  </PROCESS>
+  <!-- Librarian -->
+  <PROCESS TOOL="LIB" NAME="Librarian" CMDLINE="$(LIB) $(LIBFLAGS) %OPTIONS% -O%OUTFILE_QUOTED% %INFILES_QUOTED%">
+    <FILE OUTPUT="lib">
+      <FILE INPUT="obj"/>
+      <FILE INPUT="lib"/>
+      <OPTION NAME="--output=" VALUE="lib"/>
+    </FILE>
+    <FILE OUTPUT="lpp">
+      <FILE INPUT="p1"/>
+      <FILE INPUT="lpp"/>
+      <OPTION NAME="--output=" VALUE="lpp"/>
+    </FILE>
+  </PROCESS>
+  <!-- Properties -->
+  <PROPERTY NAME="CLOCK" DESC="Clock for delays" VALUE="1000000"/>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="cof"/>
+    <OPTION TOOL="CC" NAME="-G"/>
+    <OPTION TOOL="ASM" NAME="-G"/>
+    <OPTION TOOL="LD" NAME="-G"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <SOURCE NAME="main.c" FROM="htpiccmain.c" OPEN="1"/>
+</COMPILER>

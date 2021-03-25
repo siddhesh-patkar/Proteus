@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Arduino/Arduino ILI9341 TFT LCD Shield.pdsclip" DESC="Adafruit TFT Display based on ILI9341" FAMILY="ARDUINO" >
+   <PERIPHERAL TYPE="TFT" ELEMENT="LCD1" >   
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GFX_Display&lt;Adafruit_ILI9341&gt;">
+       <PORT NAME="SPI"/>
+       <!-- Chip select active low -->
+       <PIN NAME="cs" TYPE="DIGITAL">
+         <TERMINAL ELEMENT="IO10"/>
+       </PIN> 
+       <!-- Data/Control 0=control 1=data -->
+       <PIN NAME="dc" TYPE="DIGITAL">
+         <TERMINAL ELEMENT="IO9"/>
+       </PIN>
+       <!--
+       <PROPERTY NAME="width" ELEMENT="LCD1" TYPE="INTEGER"/>
+       <PROPERTY NAME="height" ELEMENT="LCD1" TYPE="INTEGER"/>
+       <PROPERTY NAME="ramsize" ELEMENT="LCD1" TYPE="INTEGER"/>
+       -->
+       <SETUP NAME="begin"/>
+     </INTERFACE>
+   
+     <DRIVER FILE="GFX_Display/GFX_Display.xml"/>  
+   </PERIPHERAL>
+   
+   <PERIPHERAL TYPE="SD Card" ELEMENT="SD1" >
+     <INTERFACE OBJECT="FileStore" EXTERNAL="FS" >
+       <PORT NAME="SPI"/>
+       <SETUP NAME="begin">
+         <!-- Chip select active low -->
+         <PIN NAME="cs" TYPE="DIGITAL">
+           <TERMINAL ELEMENT="IO4"/>
+         </PIN> 
+       </SETUP>  
+       <STORAGE NAME="MANIFEST" ELEMENT="SD1"/>
+     </INTERFACE>
+     <DRIVER FILE="FileStore/FileStore.xml"/> 
+   </PERIPHERAL>
+
+</CLIP>
+  

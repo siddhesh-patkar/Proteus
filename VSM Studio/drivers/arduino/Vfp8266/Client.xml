@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Yun storage module (FileStore) -->
+<DRIVER HEADER="Vfp8266.h" >
+  <REQUIRE HEADER="bridge.h"/>
+
+  <FUNCTION DESC="Return true the last request was successful.">
+    <RETURN TYPE="BOOLEAN"/>
+  </FUNCTION>             
+
+  <METHOD NAME="get" DESC="Send an HTTP GET request.">
+   <PARAMETER NAME="url" TYPE="STRING"  DESC="HTTP server address"/>
+  </METHOD>          
+
+  <METHOD NAME="post" DESC="Send an HTTP POST request.">
+   <PARAMETER NAME="url" TYPE="STRING"  DESC="HTTP server address"/>
+   <PARAMETER NAME="data" TYPE="STRING"  DESC="Body"/>
+  </METHOD>          
+
+  <METHOD NAME="readln" DESC="Read a single line from the response.">
+     <RETURN NAME="Response" TYPE="STRING" DEFAULT="response" DESC="String to contain the line."/>
+  </METHOD>
+          
+</DRIVER>

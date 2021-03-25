@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DRIVER HEADER="Ports">
+<!-- SPI Driver -->
+   <ENUMERATION NAME="CLOCK">
+      <CONSTANT NAME="CLOCK1MHZ" VALUE="1000000L"/>
+      <CONSTANT NAME="CLOCK4MHZ" VALUE="4000000L"/>
+      <CONSTANT NAME="CLOCK8MHZ" VALUE="8000000L"/>
+   </ENUMERATION>
+      
+   <METHOD NAME="setup" DESC="Configure the SPI Hardware">
+      <PARAMETER NAME="clock" TYPE="INTEGER" DEFAULT="7629" DESC="SPI Clock Speed"/>
+      <PARAMETER NAME="device" TYPE="INTEGER" DEFAULT="0" DESC="Set the device to talk to."/>      
+   </METHOD>
+   
+   <METHOD NAME="transfer" DESC="Send and receive data">
+      <PARAMETER TYPE="LIST" BYREF="1" DESC="List of variables to send and receive"/>    
+   </METHOD>   
+
+   <METHOD NAME="send" DESC="Send command data, received data is ignored">
+      <PARAMETER TYPE="LIST"  DESC="Data to transmit"/>
+   </METHOD>         
+   
+   <METHOD NAME="receive" DESC="Ignore send command data, Receive data">
+      <PARAMETER NAME="length" TYPE="INTEGER"  DESC="Length of data to receive"/>
+      <RETURN NAME="data" TYPE="LIST"  DESC="Data to receive"/>
+   </METHOD>            
+         
+        
+
+</DRIVER>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino MCP3208 ADC converter -->
+<DRIVER HEADER="MCP3208.h">
+   <REQUIRE HEADER="SPI.h"/>
+
+   <!-- SPI CLOCK DIVIDER enumeration -->
+   <ENUMERATION NAME="SPI_CLOCK">
+      <CONSTANT NAME="CLOCK_DIV2"   VALUE="4"/>
+      <CONSTANT NAME="CLOCK_DIV4"   VALUE="0"/>
+      <CONSTANT NAME="CLOCK_DIV8"   VALUE="5"/>
+      <CONSTANT NAME="CLOCK_DIV16"  VALUE="1"/>
+      <CONSTANT NAME="CLOCK_DIV32"  VALUE="6"/>
+      <CONSTANT NAME="CLOCK_DIV64"  VALUE="2"/>
+      <CONSTANT NAME="CLOCK_DIV128" VALUE="3"/>
+   </ENUMERATION>
+
+   <!-- Methods -->
+   <METHOD NAME="analogRead" DESC="Read specified single ended input.">
+      <PARAMETER NAME="channel" TYPE="INTEGER" DEFAULT="0" DESC="Channel number (0-7)"/>
+      <RETURN NAME="Reading" TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="analogReadDif" DESC="Read specified differential pair input.">
+      <PARAMETER NAME="Pair" TYPE="INTEGER" DEFAULT="0" DESC="Channel pair (0-3)"/>
+      <RETURN NAME="Reading" TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="setSPIDivider" DESC="Set SPI clock divider.">
+      <PARAMETER NAME="div" TYPE="SPI_CLOCK" DEFAULT="CLOCK_DIV8" DESC="SPI Clock Divider"/>
+   </METHOD>
+   <METHOD NAME="rawToVoltage" DESC="Convert 12bit raw ADC conversion number to voltage in Volt.">
+      <PARAMETER NAME="raw" TYPE="INTEGER" DEFAULT="0" DESC="12bit row ADC conversion number"/>
+      <PARAMETER NAME="ref" TYPE="FLOAT"   DEFAULT="0" DESC="ADC reference value"/>
+      <RETURN NAME="Voltage" TYPE="FLOAT"/>
+   </METHOD>
+</DRIVER>

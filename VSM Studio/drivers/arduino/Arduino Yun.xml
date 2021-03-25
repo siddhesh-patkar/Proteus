@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CONTROLLER NAME="Arduino Yun" FAMILY="ARDUINO" DESC="Arduino Yun ATmega32U4">
+    
+    <PERIPHERAL NAME="cpu" TYPE="CPU" DESC="Arduino Processor" ELEMENT="U1">
+        <INTERFACE OBJECT="CPU" EXTERNAL="Cpu"/>
+        <DRIVER FILE="Cpu/Cpu.xml"/>
+    </PERIPHERAL>            	   
+      
+    <PERIPHERAL NAME="timer1" TYPE="TIMER1" DESC="Timer One" ELEMENT="U1" OPTIONAL="1" >
+        <INTERFACE OBJECT="TimerOne" EXTERNAL="Timer1"/>
+        <DRIVER FILE="TimerOne/TimerOne.xml"/>
+    </PERIPHERAL>            	   
+    
+    <PERIPHERAL NAME="spi" TYPE="SPI" DESC="SPI Port" ELEMENT="U1" OPTIONAL="1" >
+       <INTERFACE OBJECT="SpiPort" EXTERNAL="Spi">
+          <SETUP NAME="begin"/>
+       </INTERFACE>
+       <DRIVER FILE="SPIPORT/spi.xml"/>
+    </PERIPHERAL>            	   
+
+    <PERIPHERAL NAME="i2c" TYPE="I2C" DESC="I2C Port" ELEMENT="U1" OPTIONAL="1" >
+       <INTERFACE OBJECT="I2CPort" EXTERNAL="I2C">
+          <SETUP NAME="begin"/>
+       </INTERFACE>
+       <DRIVER FILE="I2CPORT/i2c.xml"/>
+    </PERIPHERAL>            	   
+
+    <PERIPHERAL NAME="uart" TYPE="UART" DESC="UART (USB)" ELEMENT="U1" OPTIONAL="1" >
+       <INTERFACE OBJECT="UART" EXTERNAL="Uart"/>
+       <DRIVER FILE="UART/uart.xml"/>
+    </PERIPHERAL>            	   
+    
+    <PERIPHERAL NAME="server" TYPE="SERVER" DESC="Yun VFP Server" ELEMENT="Y1" OPTIONAL="1" ENABLED="1">
+        <INTERFACE OBJECT="Yun::Server" EXTERNAL="VFP">
+         <SETUP NAME="begin">
+            <PROPERTY NAME="PORT" ELEMENT="Y1" TYPE="INTEGER"/>
+         </SETUP>         
+         <LOOP NAME="poll"/>
+         <SERVER TYPE="VFP" TRANSPORT="ETHERNET" ELEMENT="Y1"/>
+        </INTERFACE>
+        <DRIVER FILE="Yun/VfpServer.xml"/>
+    </PERIPHERAL>            	   
+         
+    <PERIPHERAL NAME="storage" TYPE="STORAGE" DESC="Yun SD Card" ELEMENT="Y1" OPTIONAL="1" ENABLED="1">
+       <INTERFACE OBJECT="Yun::FileStore" EXTERNAL="FS" >
+         <SETUP NAME="begin"></SETUP>  
+         <STORAGE NAME="MANIFEST" ELEMENT="Y1"/>
+        </INTERFACE>
+        <DRIVER FILE="Yun/FileStore.xml"/>
+    </PERIPHERAL>            	   
+
+    <PERIPHERAL NAME="client" TYPE="CLIENT" DESC="Yun HTTP Client" ELEMENT="Y1" OPTIONAL="1" >
+        <INTERFACE OBJECT="Yun::Client" EXTERNAL="CLIENT">
+         <SETUP NAME="begin"></SETUP>         
+        </INTERFACE>
+        <DRIVER FILE="Yun/Client.xml"/>
+    </PERIPHERAL>            	   
+    
+</CONTROLLER>
+	
+  

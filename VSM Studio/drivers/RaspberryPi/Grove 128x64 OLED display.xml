@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove 128x64 OLED display.pdsclip" DESC="Grove 128x64 OLED display Module" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="Grove 128x64 OLED display" ELEMENT="LCD1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="OLEDdisplay">
+       <!-- I2C ADDRESS SELECTION -->
+       <PROPERTY NAME="STATE" ELEMENT="JP1" TYPE="INTEGER"/>
+     </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="Grove">
+       <REQUIRE HEADER="GROVE"/>
+
+       <ENUMERATION NAME="COLOUR">
+         <CONSTANT NAME="BLACK"   VALUE="0"/>
+         <CONSTANT NAME="WHITE"   VALUE="1"/>
+         <CONSTANT NAME="INVERSE" VALUE="2"/>
+       </ENUMERATION>
+       
+       <ENUMERATION NAME="BASE">
+         <CONSTANT NAME="DECIMAL" VALUE="10"/>
+         <CONSTANT NAME="BINARY" VALUE="2"/>
+         <CONSTANT NAME="OCTAL"  VALUE="8"/>
+         <CONSTANT NAME="HEX"  VALUE="16"/>
+       </ENUMERATION>
+
+       <!-- Methods -->
+       <!-- Scrolling -->
+       <METHOD NAME="writeCommand" DESC="Write a command.">
+         <PARAMETER NAME="command" TYPE="INTEGER" DESC="Supported command to SSD1308 controller."/>
+       </METHOD>
+       <METHOD NAME="writeData" DESC="Write data.">
+         <PARAMETER NAME="data" TYPE="INTEGER" DESC="Data to be written in the SSD1308 GDDRAM."/>
+       </METHOD>
+       <METHOD NAME="clearDisplay" DESC="Clear display.">
+       </METHOD>
+       <METHOD NAME="invertDisplay" DESC="Invert display (Black on White or White on Black).">
+         <PARAMETER NAME="invert" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="Invert TRUE/FALSE."/>
+       </METHOD>
+
+
+       <!-- Print Functions -->
+       <METHOD NAME="print" DESC="Write text to the display.">
+          <PARAMETER TYPE="LIST" DESC="List of numbers or strings to print."/>
+       </METHOD>
+       <METHOD NAME="println" DESC="Write text, then move text cursor to new line.">
+          <PARAMETER TYPE="LIST" DESC="List of numbers or strings to print."/>
+       </METHOD>
+       <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+          <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+       </METHOD>
+       <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+          <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+       </METHOD>
+
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>        
+
+
+

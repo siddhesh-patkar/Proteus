@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CONTROLLER NAME="Proteus Playkit" FAMILY="ARDUINO" DESC="Proteus Playkit Controller">
+    
+    <PERIPHERAL NAME="cpu" TYPE="CPU" DESC="Arduino Processor" ELEMENT="U1">
+        <INTERFACE OBJECT="CPU" EXTERNAL="Cpu"/>
+        <DRIVER FILE="Cpu/Cpu.xml"/>
+    </PERIPHERAL>            	   
+      
+    <PERIPHERAL NAME="timer1" TYPE="TIMER1" DESC="Timer One" ELEMENT="U1" OPTIONAL="1">
+        <INTERFACE OBJECT="TimerOne" EXTERNAL="Timer1"/>
+        <DRIVER FILE="TimerOne/TimerOne.xml"/>
+    </PERIPHERAL>            	   
+     
+    <PERIPHERAL TYPE="SERVER" DESC="ESP8266 VFP Server" ELEMENT="ESP1" SUFFIX="SERVER" OPTIONAL="1" ENABLED="1">
+        <INTERFACE OBJECT="Vfp8266::Server" EXTERNAL="VFP">
+         <PORT NAME="UART"/>          
+         <SETUP NAME="begin">
+            <PROPERTY NAME="PORT" ELEMENT="ESP1" TYPE="INTEGER"/>
+         </SETUP>         
+         <LOOP NAME="poll"/>
+         <SERVER TYPE="VFP" TRANSPORT="ETHERNET" ELEMENT="ESP1"/>
+        </INTERFACE>
+        <DRIVER FILE="Vfp8266/VfpServer.xml"/>
+    </PERIPHERAL>            	   
+    
+    <PERIPHERAL TYPE="STORAGE" DESC="ESP8266 Storage" ELEMENT="ESP1" SUFFIX="STORAGE" OPTIONAL="1" ENABLED="1">
+       <INTERFACE OBJECT="Vfp8266::FileStore" EXTERNAL="FS" >
+         <SETUP NAME="begin"></SETUP>  
+         <STORAGE NAME="MANIFEST" ELEMENT="ESP1"/>
+        </INTERFACE>
+        <DRIVER FILE="Vfp8266/FileStore.xml"/>
+    </PERIPHERAL>            	   
+
+    <PERIPHERAL TYPE="CLIENT" DESC="ESP8266 HTTP Client" ELEMENT="ESP1" SUFFIX="CLIENT" OPTIONAL="1">
+       <INTERFACE OBJECT="Vfp8266::Client" EXTERNAL="CLIENT" >
+         <SETUP NAME="begin"></SETUP>  
+        </INTERFACE>
+        <DRIVER FILE="Vfp8266/Client.xml"/>
+    </PERIPHERAL>            	   
+
+</CONTROLLER>
+	
+  

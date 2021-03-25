@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove LCD RGB Backlight.pdsclip" FAMILY="Raspberry Pi" DESC="Grove RGB LCD Module">
+   <PERIPHERAL TYPE="Grove RGB LCD"  ELEMENT="LCD1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GroveRgbLcd"/>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="Grove">
+       <REQUIRE HEADER="GROVE"/>
+   
+       <ENUMERATION NAME="BASE">
+         <CONSTANT NAME="DECIMAL" VALUE="10"/>
+         <CONSTANT NAME="BINARY" VALUE="2"/>
+         <CONSTANT NAME="OCTAL"  VALUE="8"/>
+         <CONSTANT NAME="HEX"  VALUE="16"/>
+       </ENUMERATION>
+   
+       <!-- Setup Function -->
+       
+       <!-- Display control functions -->
+       <METHOD NAME="clear" DESC="Clear the display."/>
+       <METHOD NAME="display" DESC="Enable the display."/>
+       <METHOD NAME="noDisplay" DESC="Disable the display."/>
+   
+       <!-- TBD createChar, possibly this can be done with a resource file, as in 'setFont' -->    
+       
+       <!-- Output Functions -->
+       <METHOD NAME="print" DESC="Print a string.">
+         <PARAMETER TYPE="LIST" DESC="List of numbers or strings to print."/>
+       </METHOD>
+       <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+         <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+       </METHOD>
+       <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+         <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+       </METHOD>
+   
+       <!-- Backlight control functions  -->
+       <METHOD NAME="setColor" DESC="Set backlight color.">
+         <PARAMETER NAME="Red" TYPE="INTEGER" DESC="Set amount of Red, 0-255"/>
+         <PARAMETER NAME="Green" TYPE="INTEGER" DESC="Set amount of Green, 0-255"/>
+         <PARAMETER NAME="Blue" TYPE="INTEGER" DESC="Set amount of Blue, 0-255"/>
+       </METHOD>
+   
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>           

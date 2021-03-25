@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 102.99 102.99"
+   version="1.1"
+   id="svg37"
+   sodipodi:docname="JoyStickModern.svg"
+   inkscape:version="0.92.1 r15371">
+  <defs
+     id="defs15">
+    <linearGradient
+       id="linear-gradient"
+       x1="86.85"
+       y1="86.85"
+       x2="16.14"
+       y2="16.14"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.44"
+         stop-opacity="0"
+         id="stop2" />
+      <stop
+         offset="1"
+         stop-opacity="0.3"
+         id="stop4" />
+    </linearGradient>
+    <radialGradient
+       id="radial-gradient"
+       cx="51.49"
+       cy="51.49"
+       r="50"
+       xlink:href="#linear-gradient"
+       gradientTransform="translate(-51.49,-51.480005)" />
+    <linearGradient
+       id="linear-gradient-2"
+       x1="86.85"
+       y1="86.85"
+       x2="16.14"
+       y2="16.14"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-51.49,-51.480005)">
+      <stop
+         offset="0"
+         stop-opacity="0"
+         id="stop8" />
+      <stop
+         offset="0.92"
+         stop-opacity="0.25"
+         id="stop10" />
+      <stop
+         offset="1"
+         stop-opacity="0.3"
+         id="stop12" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linear-gradient"
+       id="linearGradient3713"
+       gradientUnits="userSpaceOnUse"
+       x1="86.85"
+       y1="86.85"
+       x2="16.14"
+       y2="16.14"
+       gradientTransform="translate(-51.49,-51.480005)" />
+  </defs>
+  <vfp:catalogue
+     PREFIX="JoyStick"
+     CATEGORY="Miscellaneous"
+     DESC="JoyStick"
+     THEME="Modern" />
+  <g vfp:class="JoyStick"
+     id="g3728"
+     transform="translate(51.49,51.49)">
+    <g class="limits"
+       style="display:inline"
+       id="g3713">
+      <circle
+         id="circle19"
+         style="display:inline;fill:#fffef5"
+         r="50"
+         cy="0.0099966787"
+         cx="1.6784668e-006" />
+      <circle
+         id="circle21"
+         style="display:inline;fill:url(#linearGradient3713)"
+         r="50"
+         cy="0.0099966787"
+         cx="1.6784668e-006" />
+      <circle
+         id="circle23"
+         style="display:inline;fill:url(#radial-gradient)"
+         r="50"
+         cy="0.0099966787"
+         cx="1.6784668e-006" />
+    </g>
+    <g class="stick"
+       style="display:inline"
+       id="g3718">
+      <circle
+         id="circle27"
+         style="fill:#fffef5"
+         r="50"
+         cy="0.0099966787"
+         cx="1.6784668e-006" />
+      <circle
+         id="circle29"
+         style="fill:none;stroke:#a89e8d;stroke-width:9px;stroke-miterlimit:10;stroke-dasharray:36.89959335, 36.89959335"
+         r="46.990002"
+         cy="0.0099966787"
+         cx="1.6784668e-006" />
+      <circle
+         id="circle31"
+         style="fill:url(#linear-gradient-2)"
+         r="50"
+         cy="0.0099966787"
+         cx="1.6784668e-006" />
+    </g>
+  </g>
+</svg>

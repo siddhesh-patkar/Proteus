@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino Compatible Stepper Motor -->
+<DRIVER HEADER="motor_shield_v1.h">
+   <!-- DC Motor enumeration -->
+   <ENUMERATION NAME="DIRECTION">
+      <CONSTANT NAME="FORWARDS"  VALUE="1"/>
+      <CONSTANT NAME="BACKWARDS" VALUE="0"/>
+   </ENUMERATION>
+
+   <ENUMERATION NAME="MODE">
+      <CONSTANT NAME="SINGLE"      VALUE="1"/>
+      <CONSTANT NAME="DOUBLE"      VALUE="2"/>
+      <CONSTANT NAME="INTERLEAVE"  VALUE="3"/>
+   </ENUMERATION>
+      
+   <!-- DC Motor methods -->
+   <METHOD NAME="step"  DESC="Advance by specified number of steps.">
+      <PARAMETER NAME="steps" TYPE="INTEGER" DEFAULT="1" DESC="Number of steps"/>
+      <PARAMETER NAME="dir" TYPE="DIRECTION" DEFAULT="FORWARDS" DESC="Direction to move"/>
+      <PARAMETER NAME="mode" TYPE="MODE" DEFAULT="INTERLEAVE" DESC="Stepping mode"/>
+   </METHOD>
+   <METHOD NAME="oneStep"  DESC="Advance by one step.">
+      <PARAMETER NAME="dir" TYPE="DIRECTION" DEFAULT="FORWARDS" DESC="Direction to move"/>
+      <PARAMETER NAME="mode" TYPE="MODE" DEFAULT="INTERLEAVE" DESC="Drive mode"/>
+   </METHOD>
+   <METHOD NAME="release"  DESC="Release the motor and let it freewheel."/>
+   <METHOD NAME="setSpeed"  DESC="Set the rotational speed of the motor.">
+      <PARAMETER NAME="rpm" TYPE="INTEGER" DEFAULT="10" DESC="Revolutions per minute"/>
+   </METHOD>      
+</DRIVER>

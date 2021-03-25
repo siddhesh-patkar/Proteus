@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DRIVER HEADER="VfpEthernet.h">          
+   <REQUIRE MODULE="STORAGE" TYPE="SD"/>
+   <REQUIRE HEADER="ethernet.h"/>
+   <REQUIRE HEADER="spi.h"/>
+   <REQUIRE HEADER="sd.h"/>         
+   <REQUIRE HEADER="core.h"/>
+
+   <INTERRUPT DESC="Page Reload" HOOK="attachReloadHandler"/>                   
+   <INTERRUPT DESC="Control Event"  HOOK="attachRequestHandler"/>                   
+
+   <METHOD NAME="setTitle" DESC="Set the document title">
+      <PARAMETER NAME="title" TYPE="STRING"/>ó
+   </METHOD>   
+
+   <FUNCTION DESC="Return true if an event is pending for a particular object">
+      <PARAMETER NAME="object" TYPE="STRING"/>
+      <RETURN TYPE="BOOLEAN"/>
+   </FUNCTION>                  
+   
+   <METHOD NAME="parseArgs" DESC="Parse the arguments for an event">
+      <PARAMETER TYPE="LIST" BYREF="1" DESC="List of arguments."/>
+   </METHOD>  
+   <METHOD NAME="setState" DESC="Set the state of a virtual control">
+      <PARAMETER NAME="object" TYPE="STRING" />
+      <PARAMETER NAME="value" TYPE="VARIANT" DESC="Property value"/>
+   </METHOD>   
+   <!--
+   <METHOD NAME="set" DESC="Set a property of a virtual control">
+      <PARAMETER NAME="object" TYPE="STRING" />
+      <PARAMETER NAME="property" TYPE="STRING" DEFAULT="state" />
+      <PARAMETER NAME="value" TYPE="VARIANT" DESC="Property value"/>
+   </METHOD>   
+   -->
+   <METHOD NAME="call" DESC="Call a method of a virtual control">
+      <PARAMETER NAME="object" TYPE="STRING" />
+      <PARAMETER NAME="method" TYPE="STRING" />
+      <PARAMETER TYPE="LIST" DESC="List of arguments."/>
+   </METHOD>             
+   
+   <!-- Will be called automatically by LOOP construct -->
+   <METHOD NAME="awaitRequest" DESC="Wait a specified number of milliseconds and poll for requests">
+      <PARAMETER NAME="timeout" TYPE="INTEGER" DESC="Delay in milliseconds"/>
+   </METHOD>
+
+   <!-- Use NTP to set the system clock -->
+   <METHOD NAME="useTimeServer" DESC="Specify a network time server to obtain the time of day.">
+      <PARAMETER NAME="host"   TYPE="STRING" DEFAULT="&quot;time.nist.gov&quot;" DESC="Hostname of NTP Server"/>
+      <PARAMETER NAME="offset" TYPE="INTEGER" DEFAULT="0" DESC="Offset in +/- hours from GMT to local time"/>
+   </METHOD>   
+
+   
+   <RESOURCE FILE="VfpEthernet/panel.htm"/>         
+   <RESOURCE FILE="VfpEthernet/favicon.png"/>
+   <RESOURCE TYPE="htm" DESC="Html Files" />
+   <RESOURCE TYPE="svg" DESC="Panel Files" />
+   <RESOURCE TYPE="png" DESC="Bitmap Files" />
+   <RESOURCE TYPE="js"  DESC="Javascript Files" />
+   
+</DRIVER> 

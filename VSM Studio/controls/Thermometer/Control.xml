@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<CONTROL>
+   <CONFIG>
+   	  <ENUMERATION NAME="UNITS">
+   	     <CONSTANT NAME="Celcius"  VALUE="0"/>
+   	     <CONSTANT NAME="Farenheit" VALUE="1"/>
+   	  </ENUMERATION>
+   	  <PROPERTY NAME="units" DESC="Units for setTemperature function" TYPE="UNITS" DEFAULT="0" />
+   </CONFIG>
+
+   <DRIVER HEADER="Controls">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+
+        <METHOD NAME="setTemperature" DESC="Sets the temperature in the configured units">
+           <PARAMETER NAME="temp" TYPE="FLOAT" DEFAULT="0.0" />
+        </METHOD>        
+   </DRIVER>
+
+</CONTROL>

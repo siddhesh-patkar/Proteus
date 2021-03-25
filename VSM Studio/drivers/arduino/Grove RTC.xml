@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove RTC.pdsclip" FAMILY="ARDUINO" DESC="Grove RTC Module" >
+   <PERIPHERAL TYPE="Grove RTC"   ELEMENT="RTC1" >     
+     <!-- Hardware Interface -->
+     <PORT NAME="I2C"/>
+     <INTERFACE OBJECT="DS1307RTC">
+          <SETUP NAME="begin"/>
+          <LOOP NAME="poll"/>
+          <CLOCK ELEMENT="RTC1"/>             
+     </INTERFACE>
+    
+     <!-- Firmware Driver -->
+     <DRIVER FILE="RTC/RTC.XML"/>
+   </PERIPHERAL>
+</CLIP>

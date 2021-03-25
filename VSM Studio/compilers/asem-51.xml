@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<COMPILER NAME="ASEM-51 (Proteus)" VERSION="1.3" URL="" AVAILABILITY="Internal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- Assembler -->
+  <TOOL NAME="ASM" FILE="asem.exe">
+    <!-- usage:     ASEM &lt;source&gt; [&lt;object&gt; [&lt;listing&gt;]] [options] -->
+    <OPTION NAME="/INCLUDES:" DESC="/INCLUDES:path1;path2;path3" PARAM="STRING" MULTIPLE="1">
+      <ALIAS NAME="/INC:"/>
+    </OPTION>
+    <OPTION NAME="/DEFINE:" DESC="/DEFINE:symbol[:value[:type]]" PARAM="STRING" MULTIPLE="1">
+      <ALIAS NAME="/D:"/>
+    </OPTION>
+    <OPTION NAME="/OMF-51" DESC="/OMF-51"/>
+    <OPTION NAME="/COLUMNS" DESC="Output column numbers of errors" ADVANCED="1">
+      <ALIAS NAME="/C"/>
+    </OPTION>
+    <OPTION NAME="/QUIET" DESC="quiet" ADVANCED="1"/>
+  </TOOL>
+  <TOOL NAME="DDX" FILE="ASEMDDX.EXE">
+    <!--Produces SDI file from list file-->
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="8051">
+    <CONTROLLER NAME="80C31">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C32">
+      <TEMPLATE NAME="INCFILE" VALUE="80C52.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C51">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C52">
+      <TEMPLATE NAME="INCFILE" VALUE="80C52.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C54">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="80C58">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C52">
+      <TEMPLATE NAME="INCFILE" VALUE="80C52.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C55">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51RB2">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51RC2">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C51RD2">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51FA">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51FB">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51FC">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51RA+">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51RB+">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51RC+">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="P87C51RD+">
+      <TEMPLATE NAME="INCFILE" VALUE="8051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C1051">
+      <TEMPLATE NAME="INCFILE" VALUE="89C1051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C2051">
+      <TEMPLATE NAME="INCFILE" VALUE="89C1051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT89C4051">
+      <TEMPLATE NAME="INCFILE" VALUE="89C1051.MCU"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STC15W4K32S4">
+      <TEMPLATE NAME="INCFILE" VALUE="80C52.MCU"/>
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT PATH="%TOOLS_DIR%/ASEM51" SUF="asem.exe" ARG="" STR="ASEM-51" DATE="2008-05-03"/>
+  <!-- File Types -->
+  <FILE NAME="asm" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="a51" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="$(ASM) %INFILE_DOS_QUOTED% %OUTFILE_DOS_QUOTED% %OUTFILE_NAME_DOS%.lst $(ASMFLAGS) %OPTIONS% /INCLUDES:&quot;%COMPILER_DIR_DOS%&quot;">
+    <FILE OUTPUT="HEX">
+      <FILE INPUT="A51"/>
+      <FILE INPUT="ASM"/>
+    </FILE>
+    <FILE TEMP="lst" NAME="%OUTFILE_NAME%.lst"/>
+    <FILE INFO="SDI" NAME="%OUTFILE_DIR%/%OUTFILE_NAME%.SDI"/>
+    <POSTPROCESS CMDLINE="$(DDX) $(DDXFLAGS) %OUTFILE_NAME_DOS%.lst"/>
+    <MESSAGE VALUE="^(.+)\((\d+)\):.+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!--ddx tool-->
+  <PROCESS TOOL="DDX" NAME="ddx" CMDLINE="$(DDX) %INFILE_QUOTED%">
+    <FILE OUTPUT="SDI">
+      <FILE INPUT="lst"/>
+    </FILE>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="hex"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <SOURCE NAME="main.asm" FROM="asem51main.asm" OPEN="1"/>
+</COMPILER>

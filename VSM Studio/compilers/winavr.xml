@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<COMPILER NAME="WinAVR" ID="WINAVR" VERSION="2010-01-10" URL="http://winavr.sourceforge.net/" DOWNLOAD_URL="http://downloads.labcenter.co.uk/vsmstudio/win/compilers/winavr-20100110-setup.exe" AVAILABILITY="Hosted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- C Compiler -->
+  <TOOL NAME="CC" FILE="avr-gcc.exe">
+    <!-- And C++ Compiler as well -->
+    <ALIAS NAME="CPP"/>
+    <!-- And Objective C and Objecive C++ Compiler as well -->
+    <ALIAS NAME="OC"/>
+    <!-- And assembler as well -->
+    <ALIAS NAME="ASM"/>
+    <!-- And linker as well -->
+    <ALIAS NAME="LD"/>
+    <!-- And librarian as well -->
+    <ALIAS NAME="LIB"/>
+    <!-- Options -->
+    <OPTION KIND="Overall" NAME="-c" DESC="Compile to object file" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-S" DESC="Compile only; do not assemble or link" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-E" DESC="Preprocess only; do not compile, assemble or link" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-o " DESC="Place the output into &lt;file&gt;" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-pass-exit-codes" DESC="Exit with highest error code from a phase" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-x " DESC="Specify the language of the input files (c, c++, none etc)" PARAM="STRING"/>
+    <OPTION KIND="Overall" NAME="-v" DESC="Display the programs invoked by the compiler" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="--version" DESC="Display compiler version information" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-ansi" DESC="A synonym for -std=c89 (for C) or -std=c++98 (for C++)" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-std=" DESC="Standard to conform to" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-fhosted" DESC="Assume normal C execution environment" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-ffreestanding" DESC="Do not assume that standard C libraries and 'main' exist" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-fopenmp" DESC="Enable OpenMP (implies -frecursive in Fortran)" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-traditional-cpp" DESC="Enable traditional preprocessing" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-fsigned-char" DESC="Make 'char' signed by default" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-funsigned-char" DESC="Make 'char' unsigned by default" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-ffor-scope" DESC="Scope of for-init-statement variables is local to the loop" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-fgnu-keywords" DESC="Recognize GNU-defined keywords" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-foperator-names" DESC="Recognize C++ keywords like 'compl' and 'xor'" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-frtti" DESC="Generate run time type descriptor information" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-fstats" DESC="Display statistics accumulated during compilation" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-nostdinc++" DESC="Do not search standard system include directories for C++" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Wnon-virtual-dtor" DESC="Warn about non-virtual destructors" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Wreorder" DESC="Warn when the compiler reorders code" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Wold-style-cast" DESC="Warn if a C-style cast is used in a program" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Woverloaded-virtual" DESC="Warn about overloaded virtual function names" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Wsign-promo" DESC="Warn when overload promotes from unsigned to signed" ADVANCED="1"/>
+    <OPTION KIND="Warning" NAME="-fsyntax-only" DESC=" Check for syntax errors, then stop" ADVANCED="1"/>
+    <OPTION KIND="Warning" NAME="-pedantic" DESC="Issue warnings needed for strict compliance to the standard" ADVANCED="1"/>
+    <OPTION KIND="Warning" NAME="-w" DESC="Suppress warnings" ADVANCED="1"/>
+    <OPTION KIND="Warning" NAME="-W" DESC="Warning options" SEPARATOR="" MULTIPLE="1" PARAM="CHOICE">
+      <PARAM VALUE="" DESC="Supress all warnings"/>
+      <PARAM VALUE="extra" DESC=""/>
+      <PARAM VALUE="all" DESC=""/>
+      <PARAM VALUE="address" DESC=""/>
+      <PARAM VALUE="array-bounds" DESC=""/>
+      <PARAM VALUE="fatal-errors" DESC=""/>
+      <PARAM VALUE="ignored-qualifiers" DESC=""/>
+      <PARAM VALUE="implicit-function-declaration" DESC=""/>
+      <PARAM VALUE="implicit-int" DESC=""/>
+      <PARAM VALUE="inline" DESC=""/>
+      <PARAM VALUE="unsafe-loop-optimizations" DESC=""/>
+      <PARAM VALUE="overlength-strings" DESC=""/>
+      <PARAM VALUE="redundant-decls" DESC=""/>
+      <PARAM VALUE="return-type" DESC=""/>
+      <PARAM VALUE="sign-compare" DESC=""/>
+      <PARAM VALUE="sign-conversion" DESC=""/>
+      <PARAM VALUE="uninitialized" DESC=""/>
+      <PARAM VALUE="unknown-pragmas" DESC=""/>
+      <PARAM VALUE="unreachable-code" DESC=""/>
+      <PARAM VALUE="unused-function" DESC=""/>
+      <PARAM VALUE="unused-variable" DESC=""/>
+    </OPTION>
+    <OPTION KIND="Debugging" NAME="-dumpmachine" DESC="Display the compiler's target processor" ADVANCED="1"/>
+    <OPTION KIND="Debugging" NAME="-dumpversion" DESC="Display the version of the compiler" ADVANCED="1"/>
+    <OPTION KIND="Debugging" NAME="-feliminate-dwarf2-dups" DESC="Perform DWARF2 duplicate elimination" ADVANCED="1"/>
+    <OPTION NAME="-g" KIND="Debugging" DESC="Generate debug information " PARAM="CHOICE" SEPARATOR="">
+      <PARAM VALUE="" DESC="in default format"/>
+      <PARAM VALUE="coff" DESC="in COFF format"/>
+      <PARAM VALUE="gdb" DESC="in default extended"/>
+      <PARAM VALUE="stabs" DESC="in STABS format"/>
+      <PARAM VALUE="stabs+" DESC="in extended STABS"/>
+      <PARAM VALUE="dwarf-2" DESC="in DWARF v2 format"/>
+      <PARAM VALUE="vms" DESC="in VMS formats"/>
+      <PARAM VALUE="xcoff" DESC="in XCOFF format"/>
+      <PARAM VALUE="xcoff+" DESC="in extended XCOFF"/>
+    </OPTION>
+    <OPTION KIND="Debugging" NAME="-p" DESC="Enable function profiling" ADVANCED="1"/>
+    <OPTION KIND="Debugging" NAME="-save-temps" DESC="Do not delete intermediate files" ADVANCED="1"/>
+    <OPTION KIND="Debugging" NAME="-time" DESC="Time the execution of each subprocess" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-O" DESC="Optimization level. 0 is none, s optimizes for space" PARAM="CHOICE" SEPARATOR="">
+      <PARAM VALUE="0" DESC=""/>
+      <PARAM VALUE="1" DESC=""/>
+      <PARAM VALUE="2" DESC=""/>
+      <PARAM VALUE="3" DESC=""/>
+      <PARAM VALUE="s" DESC=""/>
+    </OPTION>
+    <OPTION KIND="Optimization" NAME="-falign-labels" DESC="-falign-labels[=n]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-ffast-math" DESC="" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-ffinite-math-only" DESC="Assume no NaNs or infinities are generated" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-finline-functions" DESC="Integrate simple functions into their callers" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-finline-functions-called-once" DESC="Integrate functions called once into their callers" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-fno-inline" DESC="" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-fomit-frame-pointer" DESC="When possible do not generate stack frames" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-fwhole-program" DESC="Perform whole program optimizations" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-C" DESC="Do not discard comments" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-D" DESC="Define a macro -Dmacro[=defn]" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Preprocessor" NAME="-H" DESC="Print the name of header files as they are used" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-include " DESC="-include file" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Preprocessor" NAME="-imultilib " DESC="-imultilib dir" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-MD" DESC="Generate make dependencies and compile" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-MP" DESC="Generate phony targets for all headers" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-nostdinc" DESC="Do not search standard system include directories (those specified with -isystem will still be used)" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-remap" DESC="Remap file names when including files" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-undef" DESC="Do not predefine system-specific and GCC-specific macros" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-U" DESC="Undefine &lt;macro&gt;>" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Preprocessor" NAME="-Wp," DESC="Pass comma-separated &lt;options&gt; on to the preprocessor" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-Xpreprocessor " DESC="-Xpreprocessor option" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Assembler" TOOL="ASM" NAME="-Wa," DESC="-Wa,options: comma separated list of assembler options" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Assembler" TOOL="ASM" NAME="-Xassembler " DESC="-Xassembler option" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-l " DESC="-l library (to search for)" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-nostartfiles" DESC="" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-nodefaultlibs" DESC="" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-nostdlib" DESC="Only use library directories specified on the command line" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-pie" DESC="Create a position independent executable" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-static" DESC="Do not link against shared libraries" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-shared" DESC="Create a shared library" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-Wl," DESC="-Wl,options: comma separted list of linker options" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-Xlinker " DESC="-Xlinker option" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-T " DESC="Linker script" PARAM="STRING" ID="LKR"/>
+    <OPTION KIND="Directory" NAME="-B " DESC="-B dir (add dir to search path)" PARAM="STRING"/>
+    <OPTION KIND="Directory" NAME="-I" DESC="Add DIR to search list for .include directives" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Directory" NAME="-L" DESC="Add DIRECTORY to library search path" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Directory" NAME="-specs=" DESC="-specs=file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Target" NAME="-b " DESC="Run gcc for target &lt;machine&gt;, if installed" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fexceptions" DESC="Enable exception handling" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fpic" DESC="Generate position-independent code if possible (small mode)" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fPIC" DESC="Generate position-independent code if possible (large mode)" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fpie" DESC="Generate position-independent code for executables if possible (small mode)" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fPIE" DESC="Generate position-independent code for executables if possible (large mode)" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fshort-enums" DESC="Use the narrowest integer type possible for enumeration types" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fshort-double" DESC="Use the same size for double as for float" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fshort-wchar" DESC="Force the underlying type for 'wchar_t' to be 'unsigned short'" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fverbose-asm" DESC="Add extra commentary to assembler output" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fpack-struct" DESC="structure packing [member alignment] -fpack-struct[=n]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fbounds-check" DESC="Generate code to check bounds before indexing arrays" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mcall-prologues" DESC="Use subroutines for function prologues and epilogues" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mint8" DESC="Use an 8-bit 'int' type" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mmcu=" DESC="Select the target MCU" PARAM="STRING"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mno-interrupts" DESC="Change the stack pointer without disabling interrupts" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mno-tablejump" DESC="Do not generate tablejump insns" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mpmem-wrap-around" DESC="Make the linker relaxation machine assume that a program counter wrap-around occures." ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mrelax" DESC="Relax branches" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mshort-calls" DESC="Use rjmp/rcall (limited range) on >8K devices" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-msize" DESC="Output instruction sizes to the asm file" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mtiny-stack" DESC="Change only the low 8 bits of the stack pointer" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mall-opcodes" DESC="accept all AVR opcodes, even if not supported by MCU" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mno-skip-bug" DESC="disable warnings for skipping two-word instructions (default for avr4, avr5)" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="-mno-wrap" DESC="reject rjmp/rcall instructions with 8K wrap-around (default for avr3, avr5)" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="--build-id=" DESC="Generate build ID note" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="--pmem-wrap-around=" DESC="Make the linker relaxation machine assume that a program counter wrap-around occures at given address.  Supported values: 8k, 16k, 32k and 64k." PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="--no-call-ret-replacement" DESC="The relaxation machine normally will substitute two immediately following call/ret instructions by a single jump instruction. This option disables this optimization." ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="--no-stubs" DESC="If the linker detects to attempt to access an instruction beyond 128k by a reloc that is limited to 128k max, it inserts a jump stub. You can de-active this with this switch." ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="--debug-stubs" DESC="Used for debugging avr-ld." ADVANCED="1"/>
+    <OPTION KIND="WinAVR Specific" NAME="--debug-relax" DESC="Used for debugging avr-ld." ADVANCED="1"/>
+  </TOOL>
+  <!--Object copy tool to build binaries-->
+  <TOOL NAME="OBJ" FILE="avr-objcopy.exe">
+    <OPTION NAME="" DESC="Generic Option" MULTIPLE="1" PARAM="STRING"/>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="AVR">
+    <CONTROLLER NAME="AT90S2313">
+      <OPTION NAME="-mmcu=" VALUE="at90s2313" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S2323">
+      <OPTION NAME="-mmcu=" VALUE="at90s2323" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S2333">
+      <OPTION NAME="-mmcu=" VALUE="at90s2333" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S2343">
+      <OPTION NAME="-mmcu=" VALUE="at90s2343" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S4414">
+      <OPTION NAME="-mmcu=" VALUE="at90s4414" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S4433">
+      <OPTION NAME="-mmcu=" VALUE="at90s4433" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S4434">
+      <OPTION NAME="-mmcu=" VALUE="at90s4434" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S76c711">
+      <OPTION NAME="-mmcu=" VALUE="at90s76c711" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S8515">
+      <OPTION NAME="-mmcu=" VALUE="at90s8515" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S8534">
+      <OPTION NAME="-mmcu=" VALUE="at90s8534" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S8535">
+      <OPTION NAME="-mmcu=" VALUE="at90s8535" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT86RF401">
+      <OPTION NAME="-mmcu=" VALUE="at86rf401" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM1">
+      <OPTION NAME="-mmcu=" VALUE="at90pwm1" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM216">
+      <OPTION NAME="-mmcu=" VALUE="at90pwm216" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM2b">
+      <OPTION NAME="-mmcu=" VALUE="at90pwm2b" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM316">
+      <OPTION NAME="-mmcu=" VALUE="at90pwm316" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM3b">
+      <OPTION NAME="-mmcu=" VALUE="at90pwm3b" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM81">
+      <OPTION NAME="-mmcu=" VALUE="at90pwm81" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90SCR100">
+      <OPTION NAME="-mmcu=" VALUE="at90scr100" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega103">
+      <OPTION NAME="-mmcu=" VALUE="atmega103" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega128">
+      <OPTION NAME="-mmcu=" VALUE="atmega128" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega1280">
+      <OPTION NAME="-mmcu=" VALUE="atmega1280" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega1281">
+      <OPTION NAME="-mmcu=" VALUE="atmega1281" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega1284p">
+      <OPTION NAME="-mmcu=" VALUE="atmega1284p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega128rfa1">
+      <OPTION NAME="-mmcu=" VALUE="atmega128rfa1" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16">
+      <OPTION NAME="-mmcu=" VALUE="atmega16" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega161">
+      <OPTION NAME="-mmcu=" VALUE="atmega161" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega162">
+      <OPTION NAME="-mmcu=" VALUE="atmega162" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega163">
+      <OPTION NAME="-mmcu=" VALUE="atmega163" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega164">
+      <OPTION NAME="-mmcu=" VALUE="atmega164" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega165">
+      <OPTION NAME="-mmcu=" VALUE="atmega165" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega165p">
+      <OPTION NAME="-mmcu=" VALUE="atmega165p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega168">
+      <OPTION NAME="-mmcu=" VALUE="atmega168" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega168p">
+      <OPTION NAME="-mmcu=" VALUE="atmega168p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega169">
+      <OPTION NAME="-mmcu=" VALUE="atmega169" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega169p">
+      <OPTION NAME="-mmcu=" VALUE="atmega169p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16hva">
+      <OPTION NAME="-mmcu=" VALUE="atmega16hva" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16m1">
+      <OPTION NAME="-mmcu=" VALUE="atmega16m1" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16u4">
+      <OPTION NAME="-mmcu=" VALUE="atmega16u4" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega2560">
+      <OPTION NAME="-mmcu=" VALUE="atmega2560" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega2561">
+      <OPTION NAME="-mmcu=" VALUE="atmega2561" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32">
+      <OPTION NAME="-mmcu=" VALUE="atmega32" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega323">
+      <OPTION NAME="-mmcu=" VALUE="atmega323" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega324">
+      <OPTION NAME="-mmcu=" VALUE="atmega324" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega325">
+      <OPTION NAME="-mmcu=" VALUE="atmega325" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega3250">
+      <OPTION NAME="-mmcu=" VALUE="atmega3250" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega328P">
+      <OPTION NAME="-mmcu=" VALUE="atmega328p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega329">
+      <OPTION NAME="-mmcu=" VALUE="atmega329" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega3290">
+      <OPTION NAME="-mmcu=" VALUE="atmega3290" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32c1">
+      <OPTION NAME="-mmcu=" VALUE="atmega32c1" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32hvb">
+      <OPTION NAME="-mmcu=" VALUE="atmega32hvb" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32m1">
+      <OPTION NAME="-mmcu=" VALUE="atmega32m1" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32u4">
+      <OPTION NAME="-mmcu=" VALUE="atmega32u4" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32u6">
+      <OPTION NAME="-mmcu=" VALUE="atmega32u6" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega406">
+      <OPTION NAME="-mmcu=" VALUE="atmega406" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega48">
+      <OPTION NAME="-mmcu=" VALUE="atmega48" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega48p">
+      <OPTION NAME="-mmcu=" VALUE="atmega48p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega64">
+      <OPTION NAME="-mmcu=" VALUE="atmega64" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega640">
+      <OPTION NAME="-mmcu=" VALUE="atmega640" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega644">
+      <OPTION NAME="-mmcu=" VALUE="atmega644" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega645">
+      <OPTION NAME="-mmcu=" VALUE="atmega645" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega6450">
+      <OPTION NAME="-mmcu=" VALUE="atmega6450" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega649">
+      <OPTION NAME="-mmcu=" VALUE="atmega649" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega6490">
+      <OPTION NAME="-mmcu=" VALUE="atmega6490" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega64c1">
+      <OPTION NAME="-mmcu=" VALUE="atmega64c1" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega64m1">
+      <OPTION NAME="-mmcu=" VALUE="atmega64m1" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8">
+      <OPTION NAME="-mmcu=" VALUE="atmega8" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8515">
+      <OPTION NAME="-mmcu=" VALUE="atmega8515" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8535">
+      <OPTION NAME="-mmcu=" VALUE="atmega8535" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega88">
+      <OPTION NAME="-mmcu=" VALUE="atmega88" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega88p">
+      <OPTION NAME="-mmcu=" VALUE="atmega88p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8hva">
+      <OPTION NAME="-mmcu=" VALUE="atmega8hva" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega164P">
+      <OPTION NAME="-mmcu=" VALUE="atmega164p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega324P">
+      <OPTION NAME="-mmcu=" VALUE="atmega324p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega3250P">
+      <OPTION NAME="-mmcu=" VALUE="atmega3250p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega325P">
+      <OPTION NAME="-mmcu=" VALUE="atmega325p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega3290P">
+      <OPTION NAME="-mmcu=" VALUE="atmega3290p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega329P">
+      <OPTION NAME="-mmcu=" VALUE="atmega329p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega644P">
+      <OPTION NAME="-mmcu=" VALUE="atmega644p" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny10">
+      <OPTION NAME="-mmcu=" VALUE="attiny10" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny11">
+      <OPTION NAME="-mmcu=" VALUE="attiny11" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny12">
+      <OPTION NAME="-mmcu=" VALUE="attiny12" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny13">
+      <OPTION NAME="-mmcu=" VALUE="attiny13" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny13a">
+      <OPTION NAME="-mmcu=" VALUE="attiny13a" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny15">
+      <OPTION NAME="-mmcu=" VALUE="attiny15" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny167">
+      <OPTION NAME="-mmcu=" VALUE="attiny167" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny22">
+      <OPTION NAME="-mmcu=" VALUE="attiny22" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny2313">
+      <OPTION NAME="-mmcu=" VALUE="attiny2313" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny24">
+      <OPTION NAME="-mmcu=" VALUE="attiny24" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny25">
+      <OPTION NAME="-mmcu=" VALUE="attiny25" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny26">
+      <OPTION NAME="-mmcu=" VALUE="attiny26" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny261">
+      <OPTION NAME="-mmcu=" VALUE="attiny261" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny28">
+      <OPTION NAME="-mmcu=" VALUE="attiny28" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny43u">
+      <OPTION NAME="-mmcu=" VALUE="attiny43u" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny44">
+      <OPTION NAME="-mmcu=" VALUE="attiny44" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny45">
+      <OPTION NAME="-mmcu=" VALUE="attiny45" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny461">
+      <OPTION NAME="-mmcu=" VALUE="attiny461" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny48">
+      <OPTION NAME="-mmcu=" VALUE="attiny48" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny84">
+      <OPTION NAME="-mmcu=" VALUE="attiny84" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny85">
+      <OPTION NAME="-mmcu=" VALUE="attiny85" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny861">
+      <OPTION NAME="-mmcu=" VALUE="attiny861" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny87">
+      <OPTION NAME="-mmcu=" VALUE="attiny87" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny88">
+      <OPTION NAME="-mmcu=" VALUE="attiny88" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB1286">
+      <OPTION NAME="-mmcu=" VALUE="at90usb1286" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB1287">
+      <OPTION NAME="-mmcu=" VALUE="at90usb1287" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB162">
+      <OPTION NAME="-mmcu=" VALUE="at90usb162" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB646">
+      <OPTION NAME="-mmcu=" VALUE="at90usb646" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB647">
+      <OPTION NAME="-mmcu=" VALUE="at90usb647" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB82">
+      <OPTION NAME="-mmcu=" VALUE="at90usb82" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128a1">
+      <OPTION NAME="-mmcu=" VALUE="atxmega128a1" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATXMega128a3">
+      <OPTION NAME="-mmcu=" VALUE="atxmega128a3" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATXMega16a4">
+      <OPTION NAME="-mmcu=" VALUE="atxmega16a4" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATXMega16d4">
+      <OPTION NAME="-mmcu=" VALUE="atxmega16d4" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATXMega256a3">
+      <OPTION NAME="-mmcu=" VALUE="atxmega256a3" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATXMega256a3b">
+      <OPTION NAME="-mmcu=" VALUE="atxmega256a3b" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATXMega32a4">
+      <OPTION NAME="-mmcu=" VALUE="atxmega32a4" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATXMega32d4">
+      <OPTION NAME="-mmcu=" VALUE="atxmega32d4" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATXMega64a1">
+      <OPTION NAME="-mmcu=" VALUE="atxmega64a1" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATXMega64a3">
+      <OPTION NAME="-mmcu=" VALUE="atxmega64a3" DEFAULT="1"/>
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <!-- MPLAB XC8 -->
+  <DETECT PATH="%PROGRAMFILES%/Microchip/xc8/%*%/avr" SUF="bin/avr-gcc.exe" DATE="2018-01-01">
+    <CHECK ARG="--version" STR="AVR_8_bit_GNU_Toolchain"/>
+  </DETECT>
+  <!-- AVR GNU Toolchain -->
+  <DETECT KEYLOC="HKEY_LOCAL_MACHINE\SOFTWARE\Atmel\AVR Toolchain" LEVELS="2" TYPE="ANONYMOUS" CONTAINS="Toolchain" SUF="bin/avr-gcc.exe" DATE="2013-04-10">
+    <CHECK ARG="--version" STR="AVR_8_bit_GNU_Toolchain"/>
+  </DETECT>
+  <DETECT PATH="%PROGRAMFILES%/Atmel/AVR Tools/AVR Toolchain" SUF="bin/avr-gcc.exe" DATE="2013-04-10">
+    <CHECK ARG="--version" STR="AVR_8_bit_GNU_Toolchain"/>
+  </DETECT>
+  <!-- WinAVR -->
+  <DETECT KEYLOC="HKEY_LOCAL_MACHINE\SOFTWARE\WinAVR" LEVELS="0" TYPE="ANONYMOUS" CONTAINS="WINAVR" SUF="bin/avr-gcc.exe" DATE="2010-01-19">
+    <CHECK ARG="--ver" STR="WinAVR"/>
+    <CHECK ARG="--ver" STR="Target: avr"/>
+  </DETECT>
+  <DETECT PATH="C:/WinAVR-%*%" SUF="bin/avr-gcc.exe" DATE="2010-01-19">
+    <CHECK ARG="--ver" STR="WinAVR"/>
+    <CHECK ARG="--ver" STR="Target: avr"/>
+  </DETECT>
+  <PATH ADD="%COMPILER_DIR%/bin"/>
+  <!-- File Types -->
+  <FILE NAME="c" DESC="C Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="cpp" DESC="C++ Source" CATEGORY="Source" SOURCE="1" ICON="project_c++.png"/>
+  <FILE NAME="s" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="lib" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="elf" DESC="ELF" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="o" DESC="Object" CATEGORY="Intermediate Binary"/>
+  <!-- Compiler -->
+  <PROCESS TOOL="CC" NAME="C Compiler" CMDLINE="$(CC) $(CCFLAGS) %OPTIONS% -o %OUTFILE_QUOTED% -c %INFILE_QUOTED%">
+    <FILE OUTPUT="o" NAME="%INFILE_NAME%.o">
+      <FILE INPUT="c"/>
+      <FILE INPUT="cpp"/>
+      <FILE TEMP="d" NAME="%OUTFILE_DIR%\%OUTFILE_NAME%.d"/>
+    </FILE>
+    <OPTION NAME="-W" VALUE="all" DEFAULT="1"/>
+    <OPTION NAME="-g" VALUE="dwarf-2" DEFAULT="1"/>
+    <OPTION NAME="-f" VALUE="signed-char" DEFAULT="1"/>
+    <OPTION NAME="-MD" DEFAULT="1"/>
+    <OPTION NAME="-MP" DEFAULT="1"/>
+    <OPTION NAME="-D" VALUE="F_CPU=%CLOCK%" DEFAULT="1"/>
+    <MESSAGE VALUE="^(.+):(\d+):(\d+): (error|warning|message): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+      <FIELD NAME="COLUMN" POSITION="3" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^(.+):(\d+): (error|warning|message): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^In file included from (.+):(\d+):$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="$(ASM) $(ASMFLAGS) %OPTIONS% -o %OUTFILE_QUOTED% -c %INFILE_QUOTED%">
+    <FILE OUTPUT="o">
+      <FILE INPUT="s"/>
+      <FILE TEMP="d" NAME="%OUTFILE_DIR%\%OUTFILE_NAME%.d"/>
+    </FILE>
+    <OPTION NAME="-W" VALUE="all" DEFAULT="1"/>
+    <OPTION NAME="-g" VALUE="dwarf-2" DEFAULT="1"/>
+    <OPTION NAME="-f" VALUE="signed-char" DEFAULT="1"/>
+    <OPTION NAME="-MD" DEFAULT="1"/>
+    <OPTION NAME="-MP" DEFAULT="1"/>
+    <OPTION NAME="-D" VALUE="F_CPU=%CLOCK%" DEFAULT="1"/>
+    <MESSAGE VALUE="^(.+):(\d+):(\d+): (error|warning|message): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+      <FIELD NAME="COLUMN" POSITION="3" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^(.+):(\d+): (error|warning|message): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+    <MESSAGE VALUE="^In file included from (.+):(\d+):$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="$(LD) $(LDFLAGS) %OPTIONS% -o &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.elf&quot; %INFILES_QUOTED%">
+    <FILE OUTPUT="elf"/>
+    <FILE OUTPUT="hex"/>
+    <FILE INPUT="o"/>
+    <POSTPROCESS TARGET="Release" CMDLINE="avr-objcopy -O ihex -R .eeprom &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.elf&quot; &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.hex&quot;"/>
+    <POSTPROCESS TARGET="Release" CMDLINE="avr-objcopy -j .eeprom --set-section-flags=.eeprom=&quot;alloc,load&quot; --change-section-lma .eeprom=0 --no-change-warnings -O ihex &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.elf&quot; &quot;%OUTFILE_DIR%/%OUTFILE_NAME%.eep&quot; || exit 0 "/>
+  </PROCESS>
+  <!-- Properties -->
+  <PROPERTY NAME="CLOCK" DESC="Clock for delays" VALUE="1000000"/>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="elf"/>
+    <OPTION TOOL="CC" NAME="-O" VALUE="1" DEFAULT="1"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <OPTION TOOL="CC" NAME="-O" VALUE="s" DEFAULT="1"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <!-- Quick Start Source Files -->
+  <SOURCE NAME="main.c" FROM="winavrmain.c" OPEN="1"/>
+</COMPILER>

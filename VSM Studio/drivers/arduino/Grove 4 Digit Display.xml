@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove 4 Digit Display.pdsclip" FAMILY="ARDUINO" DESC="Grove 4-Digit Display Module">
+   <PERIPHERAL TYPE="Grove 4 Digit Display"  ELEMENT="LEDM1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="Grove4DigitDisplay">
+       <SETUP NAME="begin">
+           <PROPERTY NAME="STATE" ELEMENT="GC1" TYPE="INTEGER" GROVE="DIGITAL" WIDTH="2"/>
+       </SETUP>
+    </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="grove_4digit.h">
+       <REQUIRE HEADER="TM1637.h"/>
+       <ENUMERATION NAME="BRIGHTNESS">
+         <CONSTANT NAME="BRIGHT_DARKEST" VALUE="0"/>
+         <CONSTANT NAME="BRIGHT_TYPICAL" VALUE="2"/>
+         <CONSTANT NAME="BRIGHTEST"      VALUE="7"/>
+       </ENUMERATION>
+
+       <!-- Display control functions -->
+       <METHOD NAME="init" DESC="Clear the display."/>
+       <METHOD NAME="setBrightness"  DESC="Adjust the brightness of the display.">
+         <PARAMETER NAME="level" TYPE="BRIGHTNESS" DESC="Brightness level."/>
+       </METHOD>
+       <METHOD NAME="display" DESC="Display value. [0-9, A-F]">
+         <PARAMETER NAME="pos"   TYPE="INTEGER" DEFAULT="0" DESC="Digit position."/>
+         <PARAMETER NAME="value" TYPE="INTEGER" DEFAULT="0" DESC="Value to display."/>
+       </METHOD>
+       <METHOD NAME="decPoint" DESC="Decimal point ON/OFF">
+         <PARAMETER NAME="state" TYPE="BOOLEAN" DEFAULT="FALSE" DESC="TRUE/FALSE"/>
+       </METHOD>
+
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>           
+
+

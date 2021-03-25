@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove Button.pdsclip" FAMILY="ARDUINO" DESC="Momentary Action Push Button">
+   <PERIPHERAL TYPE="Grove Button" ELEMENT="BTN1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GroveButton">
+       <PROPERTY NAME="STATE" ELEMENT="GC1" TYPE="INTEGER" GROVE="DIGITAL"/>
+   	</INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="Grove.h">
+     	 <FUNCTION DESC="Button State"> 
+   		  <RETURN TYPE="BOOLEAN"/>
+       </FUNCTION>
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>	
+  

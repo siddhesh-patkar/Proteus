@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<CONTROL>
+
+   <CONFIG>
+      <ENUMERATION NAME="POSITION">
+           <CONSTANT NAME="None" VALUE="0"/> 
+           <CONSTANT NAME="Above" VALUE="1"/> 
+           <CONSTANT NAME="Below" VALUE="2"/>
+           <CONSTANT NAME="Left" VALUE="3"/>       
+           <CONSTANT NAME="Right" VALUE="4"/>       
+      </ENUMERATION>    
+      <SETUP NAME="begin">
+         <PROPERTY NAME="init" DESC="Initial selected button" TYPE="INTEGER" DEFAULT="-1"/>
+  	   </SETUP>
+      <PROPERTY NAME="buttonLabels" DESC="Comma separated list of button labels" TYPE="STRING" DEFAULT="" />
+  	   <PROPERTY NAME="labelPosition" DESC="Position of button labels" TYPE="POSITION" DEFAULT="2"/>
+  	   <PROPERTY NAME="labelSpacing" DESC="Distance of the labels from the buttons" TYPE="INTEGER" DEFAULT="10"/>
+  	   <PROPERTY NAME="labelFont" DESC="Font for the label" TYPE="FONT"/>
+  	   <PROPERTY NAME="lampColour" DESC="Colour for the indicator lamp" TYPE="RGB" DEFAULT="#00FF00" />      
+  	   <PROPERTY NAME="faceColour" DESC="Colour for the button faces" TYPE="RGB"/>
+   </CONFIG>
+   
+   <!-- Driver Descriptor for Radio Buttons  -->
+   <DRIVER HEADER="Controls">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+        <INTERRUPT DESC="Control Event"  HOOK="attachEventHandler"/>                   
+
+        <FUNCTION DESC="Selected button">
+           <RETURN TYPE="INTEGER"/>
+        </FUNCTION>
+
+        <METHOD NAME="getState" DESC="Get the set the selected button">
+            <RETURN TYPE="INTEGER"/>
+        </METHOD>   
+
+        <METHOD NAME="setState" DESC="Set the selected button">
+            <PARAMETER TYPE="INTEGER"/>
+        </METHOD>
+
+         
+   
+   </DRIVER>
+</CONTROL>
+  

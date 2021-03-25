@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DRIVER HEADER="Zumo.h">
+   <METHOD NAME="readAngularAcc" DESC="Takes a angular velocity reading in deg/sec, returning X, Y and Z components">
+      <RETURN TYPE="LIST" />
+   </METHOD>
+   <METHOD NAME="readLinearAcc" DESC="Takes a linear velocity reading in deg/sec, returning X, Y and Z components">
+      <RETURN TYPE="LIST" />
+   </METHOD>
+</DRIVER>

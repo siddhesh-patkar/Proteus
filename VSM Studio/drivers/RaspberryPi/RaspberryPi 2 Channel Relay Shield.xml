@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Raspberry Pi/RaspberryPi 2 Channel Relay Shield.pdsclip" DESC="2 Channel Relay Breakout Board" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="2 Channel Relay Shield" ELEMENT="CRS1">
+      <INTERFACE OBJECT="RelayBoards">
+         <PIN NAME="r1" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO4"/>
+         </PIN>
+         <PIN NAME="r2" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO5"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="relayboards.xml"/>
+   </PERIPHERAL>
+</CLIP>

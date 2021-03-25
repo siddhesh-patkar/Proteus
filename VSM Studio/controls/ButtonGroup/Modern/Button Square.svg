@@ -1,0 +1,57 @@
+<svg height="110" width="110" xmlns:vfp="http://www.labcenter.com/namespaces/vfp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="ButtonWhiteSquare1" x1="96.47" y1="96.47" x2="3.52" y2="3.53" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.3"/>
+      <stop offset="0.56" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ButtonWhiteSquare2" x1="12.92" y1="12.92" x2="87.08" y2="87.08" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.4"/>
+      <stop offset="0.43" stop-opacity="0.21"/>
+      <stop offset="0.5" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ButtonWhiteSquare3" x1="85.22" y1="85.22" x2="14.78" y2="14.78" gradientUnits="userSpaceOnUse">
+      <stop offset="0.44" stop-opacity="0"/>
+      <stop offset="1" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="ButtonWhiteSquare4" x1="13.01" y1="13.01" x2="86.99" y2="86.99" xlink:href="#ButtonWhiteSquare2"/>
+    <linearGradient id="ButtonWhiteSquare5" x1="82.58" y1="82.58" x2="17.42" y2="17.42" xlink:href="#ButtonWhiteSquare3"/>
+    <radialGradient id="ButtonWhiteSquare6" cx="50" cy="50" r="44.56" gradientUnits="userSpaceOnUse">
+      <stop offset="0.44" stop-opacity="0"/>
+      <stop offset="1" stop-opacity="0.3"/>
+    </radialGradient>
+  </defs>
+  
+  <vfp:catalogue
+     PREFIX="Btn"
+     ELEMENTS="2,3,4,5,6,7,8"
+     CATEGORY="Buttons"
+     DESC="Radio-Buttons (Square)" />
+  
+  <g style="display:inline"
+      vfp:class="ButtonGroup">
+      <g 
+      	class="element">
+    <rect class="bounds" width="100" height="100" rx="12" ry="12" style="fill: #fffef5"/>
+    <rect width="100" height="100" rx="12" ry="12" style="fill: url(#ButtonWhiteSquare1)"/>
+    <rect class="lamp" x="9.39" y="9.39" width="81.22" height="81.22" rx="11.77" ry="11.77" style="fill: #e30613"/>
+    <g>
+      <path d="M79.07,12.56a8.4,8.4,0,0,1,8.37,8.37V79.07a8.4,8.4,0,0,1-8.37,8.37H20.93a8.4,8.4,0,0,1-8.37-8.37V20.93a8.4,8.4,0,0,1,8.37-8.37H79.07m0-3H20.93A11.35,11.35,0,0,0,9.59,20.93V79.07A11.35,11.35,0,0,0,20.93,90.41H79.07A11.35,11.35,0,0,0,90.41,79.07V20.93A11.35,11.35,0,0,0,79.07,9.59Z" style="fill: url(#ButtonWhiteSquare2)"/>
+      <rect class="buttonFace" x="12.11" y="12.11" width="75.78" height="75.78" rx="9.09" ry="9.09" style="fill: #fffef5"/>
+      <rect x="12.11" y="12.11" width="75.78" height="75.78" rx="9.09" ry="9.09" style="fill: url(#ButtonWhiteSquare3)"/>
+    </g>
+    <g display="none">
+      <path d="M78.2,15.37a6.46,6.46,0,0,1,6.44,6.44V78.2a6.46,6.46,0,0,1-6.44,6.44H21.8a6.46,6.46,0,0,1-6.44-6.44V21.8a6.46,6.46,0,0,1,6.44-6.44H78.2m0-6H21.8A12.45,12.45,0,0,0,9.37,21.8V78.2A12.45,12.45,0,0,0,21.8,90.63H78.2A12.45,12.45,0,0,0,90.63,78.2V21.8A12.45,12.45,0,0,0,78.2,9.37Z" style="fill: url(#ButtonWhiteSquare4)"/>
+      <rect class="buttonFace" x="14.95" y="14.95" width="70.09" height="70.09" rx="8.41" ry="8.41" style="fill: #fffef5"/>
+      <rect x="14.95" y="14.95" width="70.09" height="70.09" rx="8.41" ry="8.41" style="fill: url(#ButtonWhiteSquare5)"/>
+      <rect x="14.95" y="14.95" width="70.09" height="70.09" rx="8.41" ry="8.41" style="fill: url(#ButtonWhiteSquare6)"/>
+    </g>
+    <text
+       id="text4145"
+       y="-10"
+       x="50"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#00000c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve">label</text>
+  </g>
+  </g>
+
+</svg>

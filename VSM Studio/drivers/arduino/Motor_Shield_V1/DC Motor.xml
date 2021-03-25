@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino Compatible DC Motor -->
+<DRIVER HEADER="motor_shield_v1.h">
+   <!-- DC Motor enumeration -->
+   <ENUMERATION NAME="DIRECTION">
+      <CONSTANT NAME="FORWARDS"  VALUE="1"/>
+      <CONSTANT NAME="BACKWARDS" VALUE="0"/>
+   </ENUMERATION>
+      
+   <!-- DC Motor methods -->
+   <FUNCTION DESC="TRUE if motor is running"> 
+  	   <RETURN TYPE="BOOLEAN"/>
+   </FUNCTION>     
+   
+   <METHOD NAME="run"  DESC="Run the Motor.">
+      <PARAMETER NAME="dir" TYPE="DIRECTION" DEFAULT="FORWARDS" DESC="Direction to spin"/>
+      <PARAMETER NAME="speed" TYPE="INTEGER" DEFAULT="255" DESC="Speed value (0..255)"/>
+   </METHOD>
+   <METHOD NAME="stop"  DESC="Stop the motor as quickly as possible."/>
+   <METHOD NAME="release"  DESC="Release the motor and let it freewheel."/>
+</DRIVER>

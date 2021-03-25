@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino HYT271 Precision Humidity Temperature Breakout Board.pdsclip" DESC="Arduino HYT271 Precision and Humidity Temperature Breakout Board" FAMILY="ARDUINO">
+  <PERIPHERAL TYPE="HYT271 Humidity Temperature Sensor" ELEMENT="HTS1">
+     <INTERFACE OBJECT="HYT271HumiTempSensor">
+       <PORT NAME="I2C"/>
+       <PROPERTY NAME="DVCADDR" ELEMENT="HTS1" TYPE="INTEGER"/>
+       <SETUP NAME="begin"/>
+     </INTERFACE>
+     <DRIVER FILE="hyt271/hyt271.xml"/>
+  </PERIPHERAL>
+</CLIP>
+

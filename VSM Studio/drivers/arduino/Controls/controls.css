@@ -1,0 +1,37 @@
+/* CSS Styles used by the VFP controls */
+
+.textLog li {
+   list-style: none;
+}
+.textLog li.DBG {
+   color: green;
+}
+.textLog li.INF {
+   color: blue;
+}
+.textLog li.WRN {
+   color: red;
+}
+.textLog li.ERR {
+   color: black;
+   font-weight: bold;
+   background: red;
+}
+
+.terminal li {
+   list-style: none;
+}
+
+.terminal span.prompt {
+   margin-left: 0px;
+   position: absolute;
+}
+
+.terminal input.entry {
+   margin-left: 20px;
+   background: inherit;
+   color: white;
+   border: none;
+   outline: none;
+   content-editable: true;
+}

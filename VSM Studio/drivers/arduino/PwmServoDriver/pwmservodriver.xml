@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino 16-channel pwm servo -->
+<DRIVER HEADER="pwmServoDriver.h">
+   <REQUIRE HEADER="Adafruit_PWMServoDriver.h"/>
+   <REQUIRE HEADER="Wire.h"/>
+
+   <!-- PWM Servo Controller methods -->
+   <METHOD NAME="resetPWM" DESC="Reset PWM controller."/>
+   <METHOD NAME="setPWMFreq" DESC="Set PWM frequency.">
+      <PARAMETER NAME="freq" TYPE="FLOAT" DEFAULT="0"  DESC="Frequency (Hz)"/>
+   </METHOD>
+   <METHOD NAME="setPWM" DESC="Set PWM on/of values.">
+      <PARAMETER NAME="outn" TYPE="INTEGER" DEFAULT="0"  DESC="Output number"/>
+      <PARAMETER NAME="on"   TYPE="INTEGER" DEFAULT="0"  DESC="On Value (0-4095)"/>
+      <PARAMETER NAME="off"  TYPE="INTEGER" DEFAULT="0"  DESC="Off Value (0-4095"/>
+   </METHOD>
+   <METHOD NAME="setPin" DESC="Set Pin.">
+      <PARAMETER NAME="outn" TYPE="INTEGER" DEFAULT="0"  DESC="Output number"/>
+      <PARAMETER NAME="val"  TYPE="INTEGER" DEFAULT="0"  DESC="Value (0-4095)"/>
+      <PARAMETER NAME="inv"  TYPE="BOOLEAN" DEFAULT="0"  DESC="Invert"/>
+   </METHOD>
+   
+   <!-- LED & RGB LED PWM driver methods -->
+   <METHOD NAME="dimLed" DESC="Set a Led brightness.">
+      <PARAMETER NAME="ledn"  TYPE="INTEGER" DEFAULT="0"  DESC="Led number (0-15)"/>
+      <PARAMETER NAME="min"   TYPE="INTEGER" DEFAULT="0"  DESC="Brightness min value (0-255)"/>
+      <PARAMETER NAME="max"   TYPE="INTEGER" DEFAULT="0"  DESC="Brightness max value (0-255)"/>
+      <PARAMETER NAME="delay" TYPE="INTEGER" DEFAULT="0"  DESC="Delay Value in ms"/>
+      <PARAMETER NAME="ca"    TYPE="BOOLEAN" DEFAULT="0"  DESC="Common Anode"/>
+   </METHOD>
+   
+   <METHOD NAME="dimRgb" DESC="Set Rgb Led brightness.">
+      <PARAMETER NAME="group" TYPE="INTEGER" DEFAULT="0"  DESC="Group number (0-4)"/>
+      <PARAMETER NAME="rMin"  TYPE="INTEGER" DEFAULT="0"  DESC="Red brightness min value (0-255)"/>
+      <PARAMETER NAME="rMax"  TYPE="INTEGER" DEFAULT="0"  DESC="Red brightness max value (0-255)"/>
+      <PARAMETER NAME="gMin"  TYPE="INTEGER" DEFAULT="0"  DESC="Green brightness min value (0-255)"/>
+      <PARAMETER NAME="gMax"  TYPE="INTEGER" DEFAULT="0"  DESC="Green brightness max value (0-255)"/>
+      <PARAMETER NAME="bMin"  TYPE="INTEGER" DEFAULT="0"  DESC="Blue brightness min value (0-255)"/>
+      <PARAMETER NAME="bMax"  TYPE="INTEGER" DEFAULT="0"  DESC="Blue brightness max value (0-255)"/>
+      <PARAMETER NAME="delay" TYPE="INTEGER" DEFAULT="0"  DESC="Delay Value in ms"/>
+      <PARAMETER NAME="ca"    TYPE="BOOLEAN" DEFAULT="0"  DESC="Common Anode"/>
+   </METHOD>
+</DRIVER>

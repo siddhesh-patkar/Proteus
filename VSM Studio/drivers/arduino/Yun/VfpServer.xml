@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Yun VFP Server module (VfpServer) -->
+<DRIVER HEADER="Yun.h">          
+         <REQUIRE HEADER="bridge.h"/>
+         <RESOURCE FILE="Yun/server.py"/>
+         <RESOURCE FILE="Yun/showlog.py"/>
+  
+         <INTERRUPT DESC="Page Reload" HOOK="attachReloadHandler"/>                   
+         <INTERRUPT DESC="Control Event"  HOOK="attachRequestHandler"/>                   
+
+         <METHOD NAME="setTitle" DESC="Set the document title">
+            <PARAMETER NAME="title" TYPE="STRING"/>
+         </METHOD>   
+
+         <FUNCTION DESC="Return true if an event is pending for a particular object">
+            <PARAMETER NAME="object" TYPE="STRING"/>
+            <RETURN TYPE="BOOLEAN"/>
+         </FUNCTION>                  
+
+         <!--                  
+         <METHOD NAME="set" DESC="Set the state of a virtual control">
+            <PARAMETER NAME="object" TYPE="STRING" />
+            <PARAMETER NAME="key" TYPE="STRING" />
+            <PARAMETER NAME="LIST" TYPE="VARIANT" DESC="Property values"/>
+         </METHOD>   
+         
+         <METHOD NAME="call" DESC="Call a method of a virtual control">
+            <PARAMETER NAME="object" TYPE="STRING" />
+            <PARAMETER NAME="method" TYPE="STRING" />
+            <PARAMETER TYPE="LIST" DESC="List of arguments."/>
+         </METHOD>             
+         -->
+         
+         <!-- Will be called automatically by LOOP construct -->
+         <METHOD NAME="waitForRequests" DESC="Wait a specified number of milliseconds and poll for requests">
+            <PARAMETER NAME="timeout" TYPE="INTEGER" DEFAULT="1000" DESC="Delay in milliseconds"/>
+         </METHOD>
+
+         <!-- Needs to be called if the application will use time values -->
+         <METHOD NAME="waitForTimeServer" DESC="Wait until the linux side has obtained the time from the internet."/>
+
+         <!-- Write to the debug console -->
+         <METHOD NAME="debug" DESC="Write information to the remote debugging (telnet) console.">
+           <PARAMETER TYPE="LIST" DESC="Items to output."/>
+         </METHOD>                  
+
+         <RESOURCE FILE="yun/transport.js"/>         
+         <RESOURCE TYPE="htm" DESC="Html Files" />
+         <RESOURCE TYPE="svg" DESC="Panel Files" />
+         <RESOURCE TYPE="png" DESC="Bitmap Files" />
+         <RESOURCE TYPE="js"  DESC="Javascript Files" />
+</DRIVER>

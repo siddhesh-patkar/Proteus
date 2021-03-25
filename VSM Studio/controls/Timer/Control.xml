@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Timer Control Descriptor -->
+<CONTROL>
+   <CONFIG>        
+      <ENUMERATION NAME="DIR">
+         <CONSTANT NAME="Up" VALUE="1"/>
+         <CONSTANT NAME="Down" VALUE="-1"/>
+      </ENUMERATION>
+      <ENUMERATION NAME="MODE">
+         <CONSTANT NAME="OneShot" VALUE="0"/>
+         <CONSTANT NAME="Repeat" VALUE="1"/>
+      </ENUMERATION>
+      <PROPERTY NAME="label" DESC="Timer label" TYPE="STRING" DEFAULT="Timer"/>
+      <SETUP NAME="begin">
+         <PROPERTY NAME="dir" DESC="Count direction" TYPE="DIR" DEFAULT="1" />
+         <PROPERTY NAME="mode" DESC="Operation mode" TYPE="MODE" DEFAULT="0" />
+         <PROPERTY NAME="periodHour" DESC="Timer period (hours)" TYPE="INTEGER" DEFAULT="0" MIN="0" MAX="99" />
+         <PROPERTY NAME="periodMin"   DESC="Timer period (minutes)" TYPE="INTEGER" DEFAULT="0" MIN="0" MAX="59" />
+         <PROPERTY NAME="periodSec"  DESC="Timer period (seconds)" TYPE="INTEGER" DEFAULT="0" MIN="0" MAX="59" />
+         <PROPERTY NAME="enableAlarm" DESC="Enable the alarm sound" TYPE="BOOLEAN" DEFAULT="0" />
+      </SETUP>
+      <PROPERTY NAME="segColour" DESC="Colour of the display segments" TYPE="RGB"/>
+      <LOOP NAME="poll" />
+   </CONFIG>	  
+   
+   <DRIVER HEADER="Controls">
+      <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+      <INTERRUPT DESC="Timeout Event"  HOOK="attachEventHandler"/>
+      <FUNCTION DESC="Timer has triggered">
+         <RETURN TYPE="BOOLEAN"/>
+      </FUNCTION>
+      <METHOD NAME="start" DESC="Starts the Timer"/>
+      <METHOD NAME="stop" DESC="Stops the Timer"/>
+      <METHOD NAME="reset" DESC="Resets the Timer"/>
+      <METHOD NAME="restart" DESC="Restarts the Timer"/>
+      <METHOD NAME="setPeriod" DESC="Set a new period.">
+         <PARAMETER NAME="hours" TYPE="INTEGER" DEFAULT="0"/>
+         <PARAMETER NAME="minutes" TYPE="INTEGER" DEFAULT="0"/>
+         <PARAMETER NAME="seconds" TYPE="INTEGER" DEFAULT="0"/>
+      </METHOD>
+      <METHOD NAME="enableAlarm" DESC="Enable the alarm.">
+         <PARAMETER NAME="enable" DESC="Enable the alarm" TYPE="BOOLEAN" DEFAULT="TRUE" />
+      </METHOD>
+      <METHOD NAME="getTime" >
+         <RETURN NAME="time" TYPE="TIME" DEFAULT="t"/>
+      </METHOD>
+   </DRIVER>
+</CONTROL>  

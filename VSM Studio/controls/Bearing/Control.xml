@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Compass/Bearing/Wind Direction Descriptor -->
+<CONTROL>
+   <CONFIG>
+           
+  	   <PROPERTY NAME="arrowColour" DESC="Colour for the arrow" TYPE="RGB"/>
+
+   </CONFIG>	  
+   
+   <DRIVER HEADER="Controls">
+        <REQUIRE HEADER="VfpServer" />
+         
+        <METHOD NAME="setValue" DESC="Set the bearing angle to display.">
+           <PARAMETER TYPE="FLOAT"/>
+        </METHOD>
+   
+   </DRIVER>
+</CONTROL>  

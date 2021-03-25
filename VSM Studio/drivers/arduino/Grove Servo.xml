@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove Servo.pdsclip" FAMILY="ARDUINO" DESC="Grove Servo Module">
+  <PERIPHERAL TYPE="Grove Servo" ELEMENT="M1" >
+
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GroveServo">
+        <SETUP NAME="begin">
+           <PROPERTY NAME="STATE" ELEMENT="GC1" TYPE="INTEGER" GROVE="DIGITAL"/>
+           <PROPERTY NAME="PW_MIN" ELEMENT="M1" TYPE="FLOAT"/>
+           <PROPERTY NAME="PW_MAX" ELEMENT="M1" TYPE="FLOAT"/>
+        </SETUP>
+     </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="Grove_Servo.h">
+        <REQUIRE HEADER="Servo.h"/>
+        <FUNCTION DESC="Return true if servo is attached to its pin">
+          <RETURN TYPE="BOOLEAN"/>
+        </FUNCTION>
+        <METHOD NAME="read" DESC="Read angle of the servo in degrees.">
+           <RETURN NAME="angle" TYPE="FLOAT" />
+        </METHOD>
+        <METHOD NAME="write" DESC="Set the servo Angle.">
+            <PARAMETER NAME="angle" TYPE="FLOAT" DESC="Angle value to write, from 0 to 180."/>
+        </METHOD>
+        <METHOD NAME="readMicroseconds" DESC="Read control pulse width">
+           <RETURN NAME="width" TYPE="INTEGER" DESC="Pulse width in microseconds"/>
+        </METHOD>
+        <METHOD NAME="writeMicroseconds" DESC="Set the control pulse width">
+            <PARAMETER NAME="us" TYPE="INTEGER" DESC="Pulse width in microseconds."/>
+        </METHOD>
+        <METHOD NAME="attach" DESC="Re-Attach the Servo controller to its pin "/>
+        <METHOD NAME="detach" DESC="Detach the Servo controller from its pin."/>
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>        

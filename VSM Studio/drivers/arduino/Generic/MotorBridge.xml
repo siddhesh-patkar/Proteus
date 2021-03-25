@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for generic motor bridge with PWM speed control -->
+<DRIVER HEADER="Generic.h">
+   <!-- SCALE enumeration -->
+   <ENUMERATION NAME="DIRECTION">
+      <CONSTANT NAME="Forwards"    VALUE="0"/>
+      <CONSTANT NAME="Backwards"   VALUE="1"/>
+   </ENUMERATION>
+
+   <!-- Methods -->
+   <METHOD NAME="drive" DESC="Set the motor direction and speed.">
+      <PARAMETER NAME="speed" TYPE="INTEGER" DESC="Motor speed (0..255)"/>
+      <PARAMETER NAME="dir" TYPE="DIRECTION" DEFAULT="Forwards" DESC="Motor direction"/>      
+   </METHOD>
+   <METHOD NAME="stop" DESC="Stop the motor."/>
+</DRIVER>

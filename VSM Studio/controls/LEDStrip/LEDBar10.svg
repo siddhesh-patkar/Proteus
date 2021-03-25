@@ -1,0 +1,63 @@
+<svg xmlns:vfp="http://www.labcenter.com/namespaces/vfp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 250 50">
+  <defs>
+    <linearGradient id="LEDBar10LinearGradient" x1="195.75" y1="95.75" x2="54.25" y2="-45.75" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.3"/>
+      <stop offset="0.56" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="LEDBar10LinearGradient-2" x1="-78.74" y1="-233.5" x2="58.26" y2="-96.5" gradientTransform="translate(135.24 190)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.2"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="LEDBar10LinearGradient-3" x1="29.15" y1="34.86" x2="9.44" y2="15.14" xlink:href="#LEDBar10LinearGradient"/>
+    <linearGradient id="LEDBar10LinearGradient-4" x1="52.64" y1="34.86" x2="32.93" y2="15.14" xlink:href="#LEDBar10LinearGradient"/>
+    <linearGradient id="LEDBar10LinearGradient-5" x1="76.13" y1="34.86" x2="56.42" y2="15.14" xlink:href="#LEDBar10LinearGradient"/>
+    <linearGradient id="LEDBar10LinearGradient-6" x1="99.62" y1="34.86" x2="79.91" y2="15.14" xlink:href="#LEDBar10LinearGradient"/>
+    <linearGradient id="LEDBar10LinearGradient-7" x1="123.11" y1="34.86" x2="103.4" y2="15.14" xlink:href="#LEDBar10LinearGradient"/>
+    <linearGradient id="LEDBar10LinearGradient-8" x1="146.6" y1="34.86" x2="126.89" y2="15.14" xlink:href="#LEDBar10LinearGradient"/>
+    <linearGradient id="LEDBar10LinearGradient-9" x1="170.09" y1="34.86" x2="150.38" y2="15.14" xlink:href="#LEDBar10LinearGradient"/>
+    <linearGradient id="LEDBar10LinearGradient-10" x1="193.58" y1="34.86" x2="173.87" y2="15.14" xlink:href="#LEDBar10LinearGradient"/>
+    <linearGradient id="LEDBar10LinearGradient-11" x1="217.07" y1="34.86" x2="197.36" y2="15.14" xlink:href="#LEDBar10LinearGradient"/>
+    <linearGradient id="LEDBar10LinearGradient-12" x1="240.56" y1="34.86" x2="220.85" y2="15.14" xlink:href="#LEDBar10LinearGradient"/>
+  </defs>
+  
+  <vfp:catalogue
+     PREFIX="LEDBar"
+     CATEGORY="Display Controls"
+     DESC="LED Bar 10" 
+	 THEME="Modern"/>
+
+
+    <g vfp:class="LEDStrip">
+
+        <rect class="bounds" width="250" height="50" rx="14.52" ry="14.52" style="fill: #fff"/>
+        <rect width="250" height="50" rx="14.52" ry="14.52" style="fill: url(#LEDBar10LinearGradient)"/>
+        <rect x="2.39" y="2.65" width="245.22" height="44.7" rx="13.6" ry="13.6" transform="translate(250 50) rotate(180)" style="fill: #fff"/>
+        <rect x="2.39" y="2.65" width="245.22" height="44.7" rx="13.6" ry="13.6" transform="translate(250 50) rotate(180)" style="opacity: 0.15;fill: url(#LEDBar10LinearGradient-2)"/>
+        <rect class="LED" x="12.3" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: #30a237"/>
+        <rect class="LED" x="35.79" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: #30a237"/>
+        <rect class="LED" x="59.28" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: #30a237"/>
+        <rect class="LED" x="82.77" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: #30a237"/>
+        <rect class="LED" x="106.26" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: #30a237"/>
+        <rect class="LED" x="129.74" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: #0e4d16"/>
+        <rect class="LED" x="153.23" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: #0e4d16"/>
+        <rect class="LED" x="176.72" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: #0e4d16"/>
+        <rect class="LED" x="200.21" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: #0e4d16"/>
+        <rect class="LED" x="223.7" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: #0e4d16"/>
+        <rect x="12.3" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: url(#LEDBar10LinearGradient-3)"/>
+        <rect x="35.79" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: url(#LEDBar10LinearGradient-4)"/>
+        <rect x="59.28" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: url(#LEDBar10LinearGradient-5)"/>
+        <rect x="82.77" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: url(#LEDBar10LinearGradient-6)"/>
+        <rect x="106.26" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: url(#LEDBar10LinearGradient-7)"/>
+        <rect x="129.74" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: url(#LEDBar10LinearGradient-8)"/>
+        <rect x="153.23" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: url(#LEDBar10LinearGradient-9)"/>
+        <rect x="176.72" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: url(#LEDBar10LinearGradient-10)"/>
+        <rect x="200.21" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: url(#LEDBar10LinearGradient-11)"/>
+        <rect x="223.7" y="10.75" width="14" height="28.5" rx="2.62" ry="2.62" style="fill: url(#LEDBar10LinearGradient-12)"/>
+        <text
+           id="text73"
+           y="145.43275"
+           x="0.05968352"
+           style="font-size:15px;font-family:sans-serif;text-anchor:middle;stroke-width:0.5">50%</text>
+    </g>
+
+</svg>

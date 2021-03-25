@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DRIVER HEADER="timer">
+   <METHOD NAME="initialize" DESC="Initialize the timer with a specified period">
+     <PARAMETER NAME="period" TYPE="INTEGER" DEFAULT="1000" DESC="Period in milliseconds"/>
+   </METHOD>
+   <METHOD NAME="setPeriod" DESC="Set a new period in milliseconds">
+     <PARAMETER NAME="period" TYPE="INTEGER" DESC="Period in milliseconds"/>        	
+   </METHOD>
+   <METHOD NAME="start" DESC="Start the timer"/>
+   <METHOD NAME="stop" DESC="Stop the timer"/>
+   <METHOD NAME="restart" DESC="Restart the timer at count of zero"/>
+   <METHOD NAME="resume" DESC="Resume counting"/>
+   <METHOD NAME="read" DESC="Read the timer value in milliseconds">
+    <RETURN NAME="state" TYPE="INTEGER" DEFAULT="count" DESC="Counter value"/>
+   </METHOD>           
+   <INTERRUPT DESC="Timer Match" HOOK="attachInterrupt" PERIODIC="1"/>
+</DRIVER>

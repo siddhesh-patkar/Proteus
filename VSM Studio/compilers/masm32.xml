@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<COMPILER NAME="MASM32" ID="MASM32" VERSION="11" URL="http://www.masm32.com/" DOWNLOAD_URL="http://downloads.labcenter.co.uk/vsmstudio/win/compilers/8086CompilersBundle.exe" AVAILABILITY="Hosted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- Assembler -->
+  <TOOL NAME="ASM" FILE="ml.exe">
+    <OPTION NAME="/AT" DESC="Enable tiny model (.COM file)" ADVANCED="1"/>
+    <OPTION NAME="/Bl" DESC="&lt;linker&gt; Use alternate linker" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/c" DESC="Assemble without linking" ADVANCED="1"/>
+    <OPTION NAME="/Cp" DESC="Preserve case of user identifiers" ADVANCED="1"/>
+    <OPTION NAME="/Cu" DESC="Map all identifiers to upper case" ADVANCED="1"/>
+    <OPTION NAME="/Cx" DESC="Preserve case in publics, externs" ADVANCED="1"/>
+    <OPTION NAME="/coff" DESC="generate COFF format object file" ADVANCED="1"/>
+    <OPTION NAME="/D" DESC="&lt;name&gt;[=text] Define text macro"/>
+    <OPTION NAME="/EP" DESC="Output preprocessed listing to stdout" ADVANCED="1"/>
+    <OPTION NAME="/F" DESC="&lt;hex&gt; Set stack size (bytes)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Fe" DESC="&lt;file&gt; Name executable" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Fl" DESC="[file] Generate listing" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Fm" DESC="[file] Generate map" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Fo" DESC="&lt;file&gt; Name object file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/FPi" DESC="Generate 80x87 emulator encoding" ADVANCED="1"/>
+    <OPTION NAME="/Fr" DESC="[file] Generate limited browser info" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/FR" DESC="[file] Generate full browser info" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/G" DESC="Function calling conventions" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="c" DESC="Pascal" DEFAULT="1"/>
+      <PARAM VALUE="d" DESC="C"/>
+      <PARAM VALUE="z" DESC="Stdcall"/>
+    </OPTION>
+    <OPTION NAME="/H" DESC="&lt;number&gt; Set max external name length" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/I" DESC="&lt;name&gt; Add include path" MULTIPLE="1"/>
+    <OPTION NAME="/link" DESC="&lt;linker options and libraries&gt;" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/nologo" DESC="Suppress copyright message" ADVANCED="1"/>
+    <OPTION NAME="/Sa" DESC="Maximize source listing" ADVANCED="1"/>
+    <OPTION NAME="/Sc" DESC="Generate timings in listing" ADVANCED="1"/>
+    <OPTION NAME="/Sf" DESC="Generate first pass listing" ADVANCED="1"/>
+    <OPTION NAME="/Sl" DESC="&lt;width&gt; Set line width" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Sn" DESC="Suppress symbol-table listing" ADVANCED="1"/>
+    <OPTION NAME="/Sp" DESC="&lt;length&gt; Set page length" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Ss" DESC="&lt;string&gt; Set subtitle" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/St" DESC="&lt;string&gt; Set title" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Sx" DESC="List false conditionals" ADVANCED="1"/>
+    <OPTION NAME="/Ta" DESC="&lt;file&gt; Assemble non-.ASM file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/w" DESC="Same as /W0 /WX" ADVANCED="1"/>
+    <OPTION NAME="/WX" DESC="Treat warnings as errors"/>
+    <OPTION NAME="/W" DESC="&lt;number&gt; Set warning level" PARAM="STRING"/>
+    <OPTION NAME="/X" DESC="Ignore INCLUDE environment path" ADVANCED="1"/>
+    <OPTION NAME="/Zd" DESC="Add line number debug info"/>
+    <OPTION NAME="/Zf" DESC="Make all symbols public"/>
+    <OPTION NAME="/Zi" DESC="Add symbolic debug info"/>
+    <OPTION NAME="/Zm" DESC="Enable MASM 5.10 compatibility" ADVANCED="1"/>
+    <OPTION NAME="/Zp" DESC="[n] Set structure alignment" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Zs" DESC="Perform syntax check only" ADVANCED="1"/>
+  </TOOL>
+  <!-- Linker -->
+  <TOOL NAME="LD" FILE="link16.exe">
+    <OPTION NAME="/ALIGNMENT:" DESC="Segment alignment size" PARAM="STRING" AADVANCED="1"/>
+    <OPTION NAME="/CODEVIEW" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/CPARMAXALLOC" DESC="Outputs CodeView debugger information" ADVANCED="1"/>
+    <OPTION NAME="/DOSSEG" DESC="Controls segment sequence" ADVANCED="1"/>
+    <OPTION NAME="/DSALLOCATE" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/DYNAMIC" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/EXEPACK" DESC="Performs run-length encoding (packs executable)" ADVANCED="1"/>
+    <OPTION NAME="/FARCALLTRANSLATION" DESC="Converts intra-segment far calls to near" ADVANCED="1"/>
+    <OPTION NAME="/HIGH" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/INFORMATION" DESC="Display status information throughout the link process" ADVANCED="1"/>
+    <OPTION NAME="/LINENUMBERS" DESC="Outputs line number information in .map file" ADVANCED="1"/>
+    <OPTION NAME="/MAP" DESC="Controls information content in .map file" ADVANCED="1"/>
+    <OPTION NAME="/NODEFAULTLIBRARYSEARCH" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/NOEXTDICTIONARY" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/NOFARCALLTRANSLATION" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/NOGROUPASSOCIATION" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/NOIGNORECASE" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/NOLOGO" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/NONULLSDOSSEG" DESC="Outputs null bytes in the _TEXT segment" ADVANCED="1"/>
+    <OPTION NAME="/NOPACKCODE" DESC="Does not combine segments of class CODE" ADVANCED="1"/>
+    <OPTION NAME="/NOPACKFUNCTIONS" DESC="Does not perform &quot;smart-linking&quot; on code and data" ADVANCED="1"/>
+    <OPTION NAME="/NOFREEMEM" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/OLDOVERLAY" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/ONERROR:NOEXE" DESC="Deletes .exe upon encountering any linking errors" ADVANCED="1"/>
+    <OPTION NAME="/OVERLAYINTERRUPT" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/PACKCODE" DESC="Combines segments of class CODE" ADVANCED="1"/>
+    <OPTION NAME="/PACKDATA" DESC="Combines data segments where possible" ADVANCED="1"/>
+    <OPTION NAME="/PACKFUNCTIONS" DESC="Performs &quot;smart-linking&quot; on code and data" ADVANCED="1"/>
+    <OPTION NAME="/PCODE" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/PMTYPE:" DESC="Specifies type of segmented output" PARAM="STRING" AADVANCED="1"/>
+    <OPTION NAME="/QUICKLIBRARY" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/SEGMENTS" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/STACK:" DESC="Defines stack segment and/or its size." PARAM="STRING" AADVANCED="1"/>
+    <OPTION NAME="/TINY" DESC="Generates a .com file" ADVANCED="1"/>
+    <OPTION NAME="/WARNFIXUP" DESC="" ADVANCED="1"/>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="8086">
+    <CONTROLLER NAME="8086">
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT PATH="%PROGRAMFILES%/8086 Compilers Bundle" SUF="ml.exe" DATE="1999-03-29">
+    <CHECK ARG="/help" STR="Macro Assembler"/>
+  </DETECT>
+  <DETECT PATH="C:/masm32" SUF="bin/ml.exe" DATE="1999-03-29">
+    <CHECK ARG="/help" STR="Macro Assembler"/>
+  </DETECT>
+  <!-- File Types -->
+  <FILE NAME="asm" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="lib" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="obj" DESC="Object" CATEGORY="Intermediate Binary"/>
+  <FILE NAME="exe" DESC="DOS Executable" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="$(ASM) $(ASMFLAGS) %INFILE%">
+    <FILE INPUT="asm"/>
+    <FILE OUTPUT="obj"/>
+    <OPTION NAME="/c"/>
+    <OPTION NAME="/Zd"/>
+    <OPTION NAME="/Zi"/>
+    <MESSAGE VALUE="^(.+)\((\d+)\) : error .+:">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="$(LD) $(LDFLAGS) %INFILE%,%OUTFILE%,nul.map,,,">
+    <FILE INPUT="obj"/>
+    <FILE OUTPUT="exe"/>
+    <OPTION NAME="/CODEVIEW"/>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="exe"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="exe"/>
+  </TARGET>
+  <SOURCE NAME="main.asm" FROM="masm32main.asm" OPEN="1"/>
+  <PATH ADD="%COMPILER_DIR%/bin"/>
+</COMPILER>

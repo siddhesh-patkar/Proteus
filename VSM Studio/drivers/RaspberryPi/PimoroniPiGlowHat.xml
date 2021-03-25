@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Pimoroni" FILE="Raspberry Pi/PimoroniPiGlowHat.pdsclip" DESC="PiGlow Hat" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="PimoroniPiGlowHat" ELEMENT="U2" >
+   
+   <INTERFACE OBJECT="PimoroniPiGlowHat"/>
+   
+    <DRIVER HEADER="PimoroniHats">
+        
+       <METHOD NAME="setLeg"  DESC="Sets one leg.">
+         <PARAMETER NAME="LegNumber" TYPE="INTEGER" DEFAULT="0" DESC="The number of the leg to control."/>
+         <PARAMETER NAME="Value" TYPE="FLOAT" DEFAULT="1" DESC="1 sets the leg to on and 0 to off."/>
+       </METHOD>
+       
+       <ENUMERATION NAME="COLOUR">
+         <CONSTANT NAME="Red"VALUE="1"/>
+         <CONSTANT NAME="Orange" VALUE="2"/>
+         <CONSTANT NAME="Yellow" VALUE="3"/>
+         <CONSTANT NAME="Green" VALUE="4"/>
+         <CONSTANT NAME="Blue" VALUE="5"/>
+         <CONSTANT NAME="White" VALUE="6"/>
+       </ENUMERATION>
+       
+       <METHOD NAME="setColour"  DESC="Sets one colour.">
+         <PARAMETER NAME="Colour" TYPE="COLOUR"DEFAULT="Red" DESC="The colour to control."/>
+         <PARAMETER NAME="Value" TYPE="FLOAT" DEFAULT="1" DESC="1 sets the colour to on and 0 to off."/>
+       </METHOD>
+       
+       <METHOD NAME="setRing"  DESC="Sets one ring.">
+         <PARAMETER NAME="RingNumber" TYPE="INTEGER" DEFAULT="0" DESC="The ring to control."/>
+         <PARAMETER NAME="Value" TYPE="FLOAT" DEFAULT="1" DESC="1 sets the ring to on and 0 to off."/>
+       </METHOD>
+       
+       <METHOD NAME="setLED"  DESC="Sets one LED.">
+         <PARAMETER NAME="LEDNumber" TYPE="INTEGER" DEFAULT="0" DESC="The number of the LED to control."/>
+         <PARAMETER NAME="Value" TYPE="FLOAT" DEFAULT="1" DESC="1 sets the LED to on and 0 to off."/>
+       </METHOD>
+       
+       <METHOD NAME="allOn"  DESC="Sets all LEDs to same value.">
+         <PARAMETER NAME="Value" TYPE="FLOAT" DEFAULT="1" DESC="1 sets the LEDs to on and 0 to off."/>
+       </METHOD>
+       
+       <METHOD NAME="allOff"  DESC="Turns all LEDs off."/>
+       
+    </DRIVER>
+   </PERIPHERAL>
+</CLIP>

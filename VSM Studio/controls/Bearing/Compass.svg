@@ -1,0 +1,39 @@
+<svg xmlns:vfp="http://www.labcenter.com/namespaces/vfp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100.07">
+  <defs>
+    <linearGradient id="linear-gradient" x1="85.36" y1="85.36" x2="14.64" y2="14.64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.3"/>
+      <stop offset="0.56" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="82.67" y1="83.54" x2="17.33" y2="18.21" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.2"/>
+      <stop offset="1"/>
+    </linearGradient>
+	</defs>
+
+	 <vfp:catalogue
+     PREFIX="Compass"
+     CATEGORY="Display Controls"
+     DESC="Basic Compass"
+	 THEME="Modern"	 />
+	
+    <g vfp:class="Bearing">
+      <circle class = "bounds" cx="50" cy="50" r="50" style="fill: #fffef5"/>
+      <circle cx="50" cy="50" r="50" style="fill: url(#linear-gradient)"/>
+      <circle cx="50" cy="50.87" r="46.2" style="fill: #fffef5"/>
+      <circle cx="50" cy="50.87" r="46.2" style="opacity: 0.15;fill: url(#linear-gradient-2)"/>
+      <text transform="translate(45.25 14.78)" style="font-size: 12px;fill: #1d1d1b;font-family: MyriadPro-Regular, Myriad Pro">N</text>
+      <text transform="translate(46.12 97.07)" style="font-size: 12px;fill: #1d1d1b;font-family: MyriadPro-Regular, Myriad Pro">S</text>
+      <text transform="translate(88.95 54.16)" style="font-size: 12px;fill: #1d1d1b;font-family: MyriadPro-Regular, Myriad Pro">E</text>
+      <text transform="translate(3.8 54.16)" style="font-size: 12px;fill: #1d1d1b;font-family: MyriadPro-Regular, Myriad Pro">W</text>
+      <text transform="translate(13.4 28.36)" style="font-size: 8.58411979675293px;fill: #1d1d1b;font-family: MyriadPro-Regular, Myriad Pro">NW</text>
+      <text transform="translate(16.04 82.33)" style="font-size: 8.58411979675293px;fill: #1d1d1b;font-family: MyriadPro-Regular, Myriad Pro">SW</text>
+      <text transform="translate(74.63 82.33)" style="font-size: 8.58411979675293px;fill: #1d1d1b;font-family: MyriadPro-Regular, Myriad Pro">SE</text>
+      <text transform="translate(74.13 28.36)" style="font-size: 8.58411979675293px;fill: #1d1d1b;font-family: MyriadPro-Regular, Myriad Pro">NE</text>
+      <g class = "pointer">
+        <polygon points="41.5 50.85 49.88 92.81 58.5 50.9 41.5 50.85" style="fill: #fff"/>
+        <polygon points="58.5 50.9 50.12 8.94 41.5 50.85 58.5 50.9" style="fill: #e30613"/>
+      </g>
+      <circle cx="50" cy="50" r="50" style="fill: url(#linear-gradient)"/>
+    </g>
+
+</svg>

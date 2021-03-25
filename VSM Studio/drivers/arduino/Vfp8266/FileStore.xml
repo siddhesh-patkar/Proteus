@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Yun storage module (FileStore) -->
+<DRIVER HEADER="Vfp8266.h" >
+  <REQUIRE HEADER="bridge.h"/>
+
+  <ENUMERATION NAME="MODE">
+   <CONSTANT NAME="READ"    VALUE="FILE_READ"/>
+   <CONSTANT NAME="WRITE"   VALUE="FILE_WRITE"/> 
+   <CONSTANT NAME="APPEND"   VALUE="FILE_APPEND"/> 
+  </ENUMERATION>    
+  <FUNCTION DESC="Return true if a file exists">
+    <PARAMETER NAME="name" TYPE="STRING"  DESC="Path to file"/>
+    <RETURN TYPE="BOOLEAN"/>
+  </FUNCTION>
+  <METHOD NAME="open" DESC="Open a file">
+   <PARAMETER NAME="name" TYPE="STRING"  DESC="Path to file"/>
+   <PARAMETER NAME="mode" TYPE="MODE"  DEFAULT="READ" DESC="Path to file"/>
+   <RETURN NAME="file" TYPE="HANDLE" DEFAULT="file"/>
+  </METHOD>          
+  <METHOD NAME="close" DESC="Close a file">
+     <PARAMETER NAME="file" TYPE="HANDLE"  DESC="File handle"/>
+  </METHOD>          
+  <METHOD NAME="remove" DESC="Delete a file">
+     <PARAMETER NAME="name" TYPE="STRING"  DESC="Path to file"/>
+  </METHOD>          
+  <!-- No Directory support as yet 
+  <METHOD NAME="chdir" DESC="Change current directory">
+     <PARAMETER NAME="name" TYPE="STRING"  DESC="New current directory" DEFAULT="&quot;/vsm&quot;"/>
+  </METHOD>          
+  <METHOD NAME="mkdir" DESC="Create a new directory">
+     <PARAMETER NAME="name" TYPE="STRING"  DESC="Name of new directory"/>
+  </METHOD>          
+  <METHOD NAME="rmdir" DESC="Remove a directory">
+     <PARAMETER NAME="name" TYPE="STRING"  DESC="Name of directory to remove"/>
+  </METHOD>
+  -->
+  <METHOD NAME="flush" DESC="Flush data in file">
+     <PARAMETER NAME="file" TYPE="HANDLE"  DESC="File handle"/>
+  </METHOD>
+  <METHOD NAME="read" DESC="Read delimited data">
+     <PARAMETER NAME="file" TYPE="HANDLE"  DESC="File handle"/>
+     <PARAMETER TYPE="LIST" BYREF="1" DESC="List of variables to read."/>
+  </METHOD>
+  <METHOD NAME="readln" DESC="Read a line from the file.">
+     <PARAMETER NAME="file" TYPE="HANDLE"  DESC="File handle"/>
+     <RETURN NAME="line" TYPE="STRING" DEFAULT="Line" DESC="String to contain the line."/>
+  </METHOD>
+  <METHOD NAME="write"  DESC="Write comma delimited data">
+     <PARAMETER NAME="file" TYPE="HANDLE"  DESC="File handle"/>
+     <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to write"/>
+  </METHOD>
+  <METHOD NAME="writeln"  DESC="Write comma delimited data with terminating newline.">
+     <PARAMETER NAME="file" TYPE="HANDLE"  DESC="File handle"/>
+     <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to write"/>
+  </METHOD>
+  <METHOD NAME="print"  DESC="Print data without newline.">
+     <PARAMETER NAME="file" TYPE="HANDLE"  DESC="File handle"/>
+     <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to print"/>
+  </METHOD>
+  <METHOD NAME="println"  DESC="Print data with terminating newline.">
+     <PARAMETER NAME="file" TYPE="HANDLE"  DESC="File handle"/>
+     <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to print"/>
+  </METHOD>
+        
+</DRIVER>

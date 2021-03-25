@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<CONTROL>   
+   <CONFIG>
+      <PROPERTY NAME="readOnly" DESC="Control is Read Only" TYPE="BOOLEAN"  DEFAULT="0"/>
+ 	   <PROPERTY NAME="placeHolder" DESC="Placeholder String" TYPE="STRING"  DEFAULT="Enter Text"/>
+ 	   <PROPERTY NAME="maxLength" DESC="Maximum number of characters for text" TYPE="INT" MIN="1" MAX="255" DEFAULT="255"/>
+   </CONFIG>   
+
+   <!-- Driver Descriptor for Line Edit Control  -->
+   <DRIVER HEADER="Controls">
+     <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+           
+     <METHOD NAME="setText" DESC="Sets the text">
+	     <PARAMETER NAME="text" TYPE="STRING" DESC="Text to display" />
+	  </METHOD>
+     <METHOD NAME="getText" DESC="Returns the text">
+        <RETURN TYPE="STRING"/>
+	  </METHOD>
+     <METHOD NAME="clear" DESC="Clear all of the text" />
+
+     <METHOD NAME="setError" DESC="Display an error message" >
+	     <PARAMETER NAME="msg" TYPE="STRING" DESC="Error message to display" />
+     </METHOD>
+
+     <INTERRUPT DESC="Control Event"  HOOK="attachEventHandler"/>
+   
+   </DRIVER>
+</CONTROL>
+  

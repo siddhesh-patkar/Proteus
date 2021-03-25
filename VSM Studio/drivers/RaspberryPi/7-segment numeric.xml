@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Displays" FILE="Raspberry Pi/7-segment numeric.pdsclip" FAMILY="Raspberry Pi" DESC="7 Segment Display">
+   <PERIPHERAL TYPE="RPi LED Matrix" ELEMENT="U2" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="SevenSegment"/>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="ht16k33">
+         <METHOD NAME="printString" DESC="Set value on display.">
+            <PARAMETER NAME="String" TYPE="STRING" DEFAULT="A" DESC="String to print"/>
+         </METHOD>
+         <METHOD NAME="printInt" DESC="Set value on display.">
+            <PARAMETER NAME="Integer" TYPE="INTEGER" DEFAULT="1" DESC="Integer to print"/>
+         </METHOD>
+         <METHOD NAME="printFloat" DESC="Set value on display.">
+            <PARAMETER NAME="Float" TYPE="FLOAT" DEFAULT="1.0" DESC="Float to print"/>
+            <PARAMETER NAME="decimalPlace" TYPE="INTEGER" DEFAULT="1.0" DESC="Number of decimal places"/>
+         </METHOD>
+         <METHOD NAME="printHex" DESC="Set value on display.">
+            <PARAMETER NAME="Hex" TYPE="INTEGER" DEFAULT="0xF" DESC="Float to print"/>
+         </METHOD>
+         <METHOD NAME="setColon" DESC="Set Colon on display.">
+            <PARAMETER NAME="Colon" TYPE="BOOLEAN" DEFAULT="FALSE" DESC="Colon on or off"/>
+         </METHOD>
+         <METHOD NAME="clear" DESC="Clear the Display."/>
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>	
+  

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+	 xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 51.54 278.11"
+   version="1.1"
+   id="svg62"
+   sodipodi:docname="Square Slider.svg"
+   inkscape:version="0.92.1 r15371">
+  
+    <vfp:catalogue
+     DESC="Square Slider"
+     CATEGORY="Dials and Sliders"
+     PREFIX="Slider" />
+  
+  <defs
+     id="defs26">
+    <linearGradient
+       id="SquareSliderWhite1"
+       x1="106.36"
+       y1="219.64"
+       x2="-54.81"
+       y2="58.47"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-opacity="0.3"
+         id="stop2" />
+      <stop
+         offset="0.56"
+         stop-opacity="0"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="SquareSliderWhite2"
+       x1="103.25"
+       y1="216.54"
+       x2="-51.71"
+       y2="61.57"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-opacity="0.2"
+         id="stop7" />
+      <stop
+         offset="1"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
+       id="SquareSliderWhite3"
+       x1="89.37"
+       y1="202.65"
+       x2="-37.82"
+       y2="75.46"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-25.77,-139.05501)">
+      <stop
+         offset="0"
+         stop-opacity="0.6"
+         id="stop12" />
+      <stop
+         offset="1"
+         id="stop14" />
+    </linearGradient>
+    <linearGradient
+       id="SquareSliderWhite4"
+       x1="20.73"
+       y1="138.97"
+       x2="30.81"
+       y2="139.14"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-25.77,-139.05501)">
+      <stop
+         offset="0"
+         stop-opacity="0.4"
+         id="stop17" />
+      <stop
+         offset="0.43"
+         stop-opacity="0.21"
+         id="stop19" />
+      <stop
+         offset="0.5"
+         stop-opacity="0"
+         id="stop21" />
+    </linearGradient>
+    <linearGradient
+       id="SquareSliderWhite5"
+       x1="-1643.56"
+       y1="-448.21"
+       x2="-1610.61"
+       y2="-415.25"
+       gradientTransform="translate(1627.09,431.73501)"
+       xlink:href="#SquareSliderWhite1" />
+    <linearGradient
+       id="SquareSliderWhite6"
+       x1="40.57"
+       y1="153.85"
+       x2="10.98"
+       y2="124.26"
+       gradientTransform="rotate(180,12.885,69.527505)"
+       xlink:href="#SquareSliderWhite2" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#SquareSliderWhite1"
+       id="SquareSliderWhite7"
+       gradientUnits="userSpaceOnUse"
+       x1="106.36"
+       y1="219.64"
+       x2="-54.81"
+       y2="58.47"
+       gradientTransform="translate(-25.77,-139.05501)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#SquareSliderWhite2"
+       id="SquareSliderWhite8"
+       gradientUnits="userSpaceOnUse"
+       x1="103.25"
+       y1="216.54"
+       x2="-51.71"
+       y2="61.57"
+       gradientTransform="translate(-25.77,-139.05501)" />
+  </defs>
+  
+  <g
+  	 vfp:class="Slider"
+     id="g3824"
+     transform="translate(25.77,139.05501)">
+    <g
+    	 class="orient"
+       id="g3806">
+      <rect
+         width="51.540001"
+         height="278.10999"
+         rx="6.25"
+         ry="6.25"
+         style="fill:#fffef5"
+         id="rect30"
+         x="-25.77"
+         y="-139.05501" />
+      <rect
+         width="51.540001"
+         height="278.10999"
+         rx="6.25"
+         ry="6.25"
+         style="fill:url(#SquareSliderWhite7)"
+         id="rect32"
+         x="-25.77"
+         y="-139.05501" />
+      <rect
+         x="-22.65"
+         y="-136.11501"
+         width="45.299999"
+         height="272.22"
+         rx="6.48"
+         ry="6.48"
+         style="fill:#fffef5"
+         id="rect34" />
+      <rect
+      	 class="bounds"
+         x="-22.65"
+         y="-136.11501"
+         width="45.299999"
+         height="272.22"
+         rx="6.48"
+         ry="6.48"
+         style="opacity:0.15;fill:url(#SquareSliderWhite8)"
+         id="rect36" />
+      <rect
+      	 class="scale"
+         x="-2.8900008"
+         y="-125.66501"
+         width="5.7800002"
+         height="251.33"
+         rx="2.3299999"
+         ry="2.3299999"
+         style="opacity:0.6;fill:url(#SquareSliderWhite3)"
+         id="rect38" />
+      <path
+         d="m 0.56,-124.66501 a 1.33,1.33 0 0 1 1.33,1.33 v 246.67 a 1.33,1.33 0 0 1 -1.33,1.33 h -1.12 a 1.33,1.33 0 0 1 -1.33,-1.33 v -246.67 a 1.33,1.33 0 0 1 1.33,-1.33 h 1.12 m 0,-1 h -1.12 a 2.34,2.34 0 0 0 -2.33,2.33 v 246.67 a 2.34,2.34 0 0 0 2.33,2.33 h 1.12 a 2.34,2.34 0 0 0 2.33,-2.33 v -246.67 a 2.34,2.34 0 0 0 -2.33,-2.33 z"
+         style="fill:url(#SquareSliderWhite4)"
+         id="path40"
+         inkscape:connector-curvature="0" />
+      <g
+       pointer-events="none"
+       class="graticule" />
+      <g
+      	 class="knob"
+         id="g3789">
+        <rect
+           x="-23"
+           y="-11.604993"
+           width="46"
+           height="23.209999"
+           rx="2.8099999"
+           ry="2.8099999"
+           transform="scale(-1)"
+           style="fill:#fffef5"
+           id="rect42" />
+        <rect
+           x="-23"
+           y="-11.604993"
+           width="46"
+           height="23.209999"
+           rx="2.8099999"
+           ry="2.8099999"
+           transform="scale(-1)"
+           style="fill:url(#SquareSliderWhite5)"
+           id="rect44" />
+        <rect
+           x="-21.110001"
+           y="-10.124997"
+           width="42.220001"
+           height="20.26"
+           rx="2.8099999"
+           ry="2.8099999"
+           transform="scale(-1)"
+           style="fill:#fffef5"
+           id="rect46" />
+        <rect
+           x="-21.110001"
+           y="-10.124997"
+           width="42.220001"
+           height="20.26"
+           rx="2.8099999"
+           ry="2.8099999"
+           transform="scale(-1)"
+           style="opacity:0.15;fill:url(#SquareSliderWhite6)"
+           id="rect48" />
+        <path
+           d="m -12.08,1.57499 h 24.17 a 0.76,0.76 0 0 1 0,1.52 h -24.17 a 0.76,0.76 0 0 1 0,-1.52 z"
+           style="fill:#878787"
+           id="path50"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m -12.08,-3.05501 h 24.17 a 0.76,0.76 0 0 1 0,1.52 h -24.17 a 0.76,0.76 0 0 1 0,-1.52 z"
+           style="fill:#878787"
+           id="path52"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m -10.48,8.20499 h 21 a 7,7 0 0 0 7.23,-5.89 0.8,0.8 0 0 0 -0.78,-0.74 0.76,0.76 0 0 0 -0.74,0.78 c 0,0.38 -0.91,4.22 -5.72,4.34 h -20.98 c -4.81,-0.12 -5.73,-4 -5.72,-4.34 a 0.76,0.76 0 0 0 -0.74,-0.78 0.8,0.8 0 0 0 -0.78,0.74 7,7 0 0 0 7.23,5.89 z"
+           style="fill:#878787"
+           id="path54"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m -10.48,-8.20501 h 21 a 7,7 0 0 1 7.23,5.89 0.8,0.8 0 0 1 -0.78,0.74 0.76,0.76 0 0 1 -0.74,-0.78 c 0,-0.38 -0.91,-4.22 -5.72,-4.34 h -20.98 c -4.81,0.12 -5.73,4 -5.72,4.34 a 0.76,0.76 0 0 1 -0.74,0.78 0.8,0.8 0 0 1 -0.78,-0.74 7,7 0 0 1 7.23,-5.89 z"
+           style="fill:#878787"
+           id="path56"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+       id="g66"
+       class="readout"><text
+       style="font-size:20px;font-family:sans-serif;text-anchor:middle"
+       x="0"
+       y="285"
+       id="text73">5.0</text>
+			</g>
+    </g>
+  </g>
+</svg>

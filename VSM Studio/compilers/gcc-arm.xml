@@ -1,0 +1,1546 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<COMPILER NAME="GCC for ARM" ID="ARMGCC" VERSION="4.7.2" URL="http://www.yagarto.de/" DOWNLOAD_URL="http://downloads.labcenter.co.uk/vsmstudio/win/compilers/yagarto-bu-2.23.1_gcc-4.7.2-c-c++_nl-1.20.0_gdb-7.5.1_eabi_20121222.exe" AVAILABILITY="Hosted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- C Compiler -->
+  <TOOL NAME="CC" FILE="arm-none-eabi-gcc.exe">
+    <!-- And C++ Compiler as well -->
+    <ALIAS NAME="CPP"/>
+    <!-- And Objective C and Objecive C++ Compiler as well -->
+    <ALIAS NAME="OC"/>
+    <!-- And assembler as well -->
+    <ALIAS NAME="ASM"/>
+    <!-- And linker as well -->
+    <ALIAS NAME="LD"/>
+    <!-- And librarian as well -->
+    <ALIAS NAME="LIB"/>
+    <!-- Options -->
+    <OPTION KIND="Overall" NAME="-c" DESC="Compile to object file" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-E" DESC="Preprocess only; do not compile, assemble or link" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-o" DESC="Place the output into &lt;file&gt;" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-combine" DESC="Pass multiple source files to compiler at once" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-x " DESC="Specify the language of the input files" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-v" DESC="Display the programs invoked by the compiler" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="-V" DESC="Run gcc version number &lt;version&gt;, if installed" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Overall" NAME="--version" DESC="Display compiler version information" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-ansi" DESC="A synonym for -std=c89 (for C) or -std=c++98 (for C++)" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-std=" DESC="Standard to conform to" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-fhosted" DESC="Assume normal C execution environment" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-ffreestanding" DESC="Do not assume that standard C libraries and 'main' exist" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-fopenmp" DESC="Enable OpenMP (implies -frecursive in Fortran)" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-traditional-cpp" DESC="Enable traditional preprocessing" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-fsigned-char" DESC="Make 'char' signed by default" ADVANCED="1"/>
+    <OPTION KIND="C Language" TOOL="CC" NAME="-funsigned-char" DESC="Make 'char' unsigned by default" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-ffor-scope" DESC="Scope of for-init-statement variables is local to the loop" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-fgnu-keywords" DESC="Recognize GNU-defined keywords" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-foperator-names" DESC="Recognize C++ keywords like 'compl' and 'xor'" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-frtti" DESC="Generate run time type descriptor information" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-fstats" DESC="Display statistics accumulated during compilation" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-nostdinc++" DESC="Do not search standard system include directories for C++" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Wnon-virtual-dtor" DESC="Warn about non-virtual destructors" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Wreorder" DESC="Warn when the compiler reorders code" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Wold-style-cast" DESC="Warn if a C-style cast is used in a program" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Woverloaded-virtual" DESC="Warn about overloaded virtual function names" ADVANCED="1"/>
+    <OPTION KIND="C++ Language" TOOL="CPP" NAME="-Wsign-promo" DESC="Warn when overload promotes from unsigned to signed" ADVANCED="1"/>
+    <OPTION KIND="Warning" NAME="-fsyntax-only" DESC=" Check for syntax errors, then stop" ADVANCED="1"/>
+    <OPTION KIND="Warning" NAME="-pedantic" DESC="Issue warnings needed for strict compliance to the standard" ADVANCED="1"/>
+    <OPTION KIND="Warning" NAME="-w" DESC="Suppress warnings"/>
+    <OPTION KIND="Warning" NAME="-W" DESC="Warning options" SEPARATOR="" MULTIPLE="1" PARAM="CHOICE">
+      <PARAM VALUE="" DESC="Supress all warnings"/>
+      <PARAM VALUE="extra" DESC=""/>
+      <PARAM VALUE="all" DESC=""/>
+      <PARAM VALUE="address" DESC=""/>
+      <PARAM VALUE="array-bounds" DESC=""/>
+      <PARAM VALUE="fatal-errors" DESC=""/>
+      <PARAM VALUE="ignored-qualifiers" DESC=""/>
+      <PARAM VALUE="implicit-function-declaration" DESC=""/>
+      <PARAM VALUE="implicit-int" DESC=""/>
+      <PARAM VALUE="inline" DESC=""/>
+      <PARAM VALUE="unsafe-loop-optimizations" DESC=""/>
+      <PARAM VALUE="overlength-strings" DESC=""/>
+      <PARAM VALUE="redundant-decls" DESC=""/>
+      <PARAM VALUE="return-type" DESC=""/>
+      <PARAM VALUE="sign-compare" DESC=""/>
+      <PARAM VALUE="sign-conversion" DESC=""/>
+      <PARAM VALUE="uninitialized" DESC=""/>
+      <PARAM VALUE="unknown-pragmas" DESC=""/>
+      <PARAM VALUE="unreachable-code" DESC=""/>
+      <PARAM VALUE="unused-function" DESC=""/>
+      <PARAM VALUE="unused-variable" DESC=""/>
+    </OPTION>
+    <OPTION KIND="Debugging" NAME="-dumpmachine" DESC="Display the compiler's target processor" ADVANCED="1"/>
+    <OPTION KIND="Debugging" NAME="-dumpversion" DESC="Display the version of the compiler" ADVANCED="1"/>
+    <OPTION KIND="Debugging" NAME="-feliminate-dwarf2-dups" DESC="Perform DWARF2 duplicate elimination" ADVANCED="1"/>
+    <OPTION NAME="-g" KIND="Debugging" DESC="Generate debug information " PARAM="CHOICE" SEPARATOR="">
+      <PARAM VALUE="" DESC="in default format"/>
+      <PARAM VALUE="coff" DESC="in COFF format"/>
+      <PARAM VALUE="gdb" DESC="in default extended"/>
+      <PARAM VALUE="stabs" DESC="in STABS format"/>
+      <PARAM VALUE="stabs+" DESC="in extended STABS"/>
+      <PARAM VALUE="dwarf-2" DESC="in DWARF v2 format"/>
+      <PARAM VALUE="vms" DESC="in VMS formats"/>
+      <PARAM VALUE="xcoff" DESC="in XCOFF format"/>
+      <PARAM VALUE="xcoff+" DESC="in extended XCOFF"/>
+    </OPTION>
+    <OPTION KIND="Debugging" NAME="-p" DESC="Enable function profiling" ADVANCED="1"/>
+    <OPTION KIND="Debugging" NAME="-save-temps" DESC="Do not delete intermediate files" ADVANCED="1"/>
+    <OPTION KIND="Debugging" NAME="-time" DESC="Time the execution of each subprocess" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-O" DESC="Optimization level. 0 is none, s optimizes for space" PARAM="CHOICE" SEPARATOR="">
+      <PARAM VALUE="0" DESC=""/>
+      <PARAM VALUE="1" DESC=""/>
+      <PARAM VALUE="2" DESC=""/>
+      <PARAM VALUE="3" DESC=""/>
+      <PARAM VALUE="s" DESC=""/>
+    </OPTION>
+    <OPTION KIND="Optimization" NAME="-falign-labels" DESC="-falign-labels[=n]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-ffast-math" DESC="" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-ffinite-math-only" DESC="Assume no NaNs or infinities are generated" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-finline-functions" DESC="Integrate simple functions into their callers" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-finline-functions-called-once" DESC="Integrate functions called once into their callers" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-fno-inline" DESC="" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-fomit-frame-pointer" DESC="When possible do not generate stack frames" ADVANCED="1"/>
+    <OPTION KIND="Optimization" NAME="-fwhole-program" DESC="Perform whole program optimizations" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-C" DESC="Do not discard comments" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-D" DESC="Define a macro -Dmacro[=defn]" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Preprocessor" NAME="-H" DESC="Print the name of header files as they are used" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-include " DESC="-include file" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Preprocessor" NAME="-imultilib " DESC="-imultilib dir" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-MD" DESC="Generate make dependencies and compile" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-MP" DESC="Generate phony targets for all headers" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-nostdinc" DESC="Do not search standard system include directories (those specified with -isystem will still be used)" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-remap" DESC="Remap file names when including files" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-undef" DESC="Do not predefine system-specific and GCC-specific macros" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-U" DESC="Undefine &lt;macro&gt;>" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Preprocessor" NAME="-Wp," DESC="Pass comma-separated &lt;options&gt; on to the preprocessor" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Preprocessor" NAME="-Xpreprocessor " DESC="-Xpreprocessor option" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Assembler" TOOL="ASM" NAME="-Wa," DESC="-Wa,options: comma separated list of assembler options" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Assembler" TOOL="ASM" NAME="-Xassembler " DESC="-Xassembler option" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-l " DESC="-l library (to search for)" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-nostartfiles" DESC="" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-nodefaultlibs" DESC="" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-nostdlib" DESC="Only use library directories specified on the command line" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-pie" DESC="Create a position independent executable" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-static" DESC="Do not link against shared libraries" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-shared" DESC="Create a shared library" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-Wl," DESC="-Wl,options: comma separted list of linker options" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-Xlinker " DESC="-Xlinker option" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Linker" TOOL="LD" NAME="-T " DESC="Linker script" PARAM="STRING" ID="LKR"/>
+    <OPTION KIND="Directory" NAME="-B " DESC="-B dir (add dir to search path)" PARAM="STRING"/>
+    <OPTION KIND="Directory" NAME="-I" DESC="Add &lt;dir&gt; to the end of the main include path" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Directory" NAME="-L" DESC="-Ldir" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION KIND="Directory" NAME="-specs=" DESC="-specs=file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Target" NAME="-b " DESC="Run gcc for target &lt;machine&gt;, if installed" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-u " DESC="Start with undefined reference to SYMBOL" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fexceptions" DESC="Enable exception handling" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fpic" DESC="Generate position-independent code if possible (small mode)" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fPIC" DESC="Generate position-independent code if possible (large mode)" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fpie" DESC="Generate position-independent code for executables if possible (small mode)" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fPIE" DESC="Generate position-independent code for executables if possible (large mode)" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fshort-enums" DESC="Use the narrowest integer type possible for enumeration types" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fshort-double" DESC="Use the same size for double as for float" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fshort-wchar" DESC="Force the underlying type for 'wchar_t' to be 'unsigned short'" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fverbose-asm" DESC="Add extra commentary to assembler output" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fpack-struct" DESC="structure packing [member alignment] -fpack-struct[=n]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="Code Generation" NAME="-fbounds-check" DESC="Generate code to check bounds before indexing arrays" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mabi=" DESC="Specify an ABI" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mabort-on-noreturn" DESC="Generate a call to abort if a noreturn function returns" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mapcs-float" DESC="Pass FP arguments in FP registers" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mapcs-frame" DESC="Generate APCS conformant stack frames" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-march=" DESC="Specify the name of the target architecture" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mbig-endian" DESC="Assume target CPU is configured as big endian" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mcallee-super-interworking" DESC="Thumb: Assume non-static functions may be called from ARM code" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mcaller-super-interworking" DESC="Thumb: Assume function pointers may go to non-Thumb aware code" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mcirrus-fix-invalid-insns" DESC="Cirrus: Place NOPs to avoid invalid instruction combinations" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mfix-cortex-m3-ldrd" DESC="Avoid overlapping destination and address registers on LDRD instructions that may trigger Cortex-M3 errata." ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mfloat-abi=" DESC="Specify if floating point hardware should be used" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mfpu=" DESC="Specify the name of the target floating point hardware/format" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mhard-float" DESC="Alias for -mfloat-abi=hard" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mlittle-endian" DESC="Assume target CPU is configured as little endian" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mlong-calls" DESC="Generate call insns as indirect calls, if necessary" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mpic-register=" DESC="Specify the register to be used for PIC addressing" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mpoke-function-name" DESC="Store function names in object code" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-msoft-float" DESC="Alias for -mfloat-abi=soft" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mstructure-size-boundary=" DESC="Specify the minimum bit alignment of structures" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mthumb" DESC="Compile for the Thumb not the ARM" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mthumb-interwork" DESC="Support calls between Thumb and ARM instruction sets" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mtune=" DESC="Tune code for the given processor" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific" NAME="-mwords-little-endian" DESC="Assume big endian bytes, little endian words" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific Assembler" TOOL="ASM" NAME="-k" DESC="generate PIC code" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific Assembler" TOOL="ASM" NAME="-mapcs-reentrant" DESC="re-entrant code" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific Assembler" TOOL="ASM" NAME="-matpcs" DESC="code is ATPCS conformant" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific Assembler" TOOL="ASM" NAME="-mapcs-stack-check" DESC="use stack size checking" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific Assembler" TOOL="ASM" NAME="-mcpu=" DESC="assemble for given CPU name" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific Assembler" TOOL="ASM" NAME="-meabi=" DESC="assemble for given eabi version" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific Assembler" TOOL="ASM" NAME="-EB" DESC="assemble code for a big-endian cpu" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific Assembler" TOOL="ASM" NAME="-EL" DESC="assemble code for a little-endian cpu" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific Assembler" TOOL="ASM" NAME="--fix-v4bx" DESC="Allow BX in ARMv4 code" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific Linker" TOOL="LD" NAME="--thumb-entry=" DESC="Set the entry point to be given Thumb symbol" PARAM="STRING" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific Linker" TOOL="LD" NAME="--fix-v4bx-interworking" DESC="Rewrite BX rn branch to ARMv4 interworking veneer" ADVANCED="1"/>
+    <OPTION KIND="ARM Specific Linker" TOOL="LD" NAME="--use-blx" DESC="Enable use of BLX instructions" ADVANCED="1"/>
+  </TOOL>
+  <TOOL NAME="BIN2HEX" FILE="arm-none-eabi-objcopy.exe">
+    <OPTION NAME="-I " DESC="Assume input file is in format (bfdname)" PARAM="CHOICE" ADVANCED="1">
+      <ALIAS NAME="--input-target "/>
+      <PARAM VALUE="elf32-littlearm" DESC=""/>
+      <PARAM VALUE="elf32-bigarm" DESC=""/>
+      <PARAM VALUE="elf32-little" DESC=""/>
+      <PARAM VALUE="elf32-big" DESC=""/>
+    </OPTION>
+    <OPTION NAME="-O " DESC="Create an output file in format (bfdname)" PARAM="CHOICE" ADVANCED="1">
+      <ALIAS NAME="--output-target "/>
+      <PARAM VALUE="srec" DESC=""/>
+      <PARAM VALUE="verilog" DESC=""/>
+      <PARAM VALUE="tekhex" DESC=""/>
+      <PARAM VALUE="binary" DESC=""/>
+      <PARAM VALUE="ihex" DESC=""/>
+    </OPTION>
+    <OPTION NAME="-B " DESC="(arch)  Set arch of output file, when input is binary" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--binary-architecture "/>
+    </OPTION>
+    <OPTION NAME="-F " DESC="(bfdname) Set both input and output format to (bfdname) " PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--target"/>
+    </OPTION>
+    <OPTION NAME="--debugging" DESC="Convert debugging information, if possible" ADVANCED="1"/>
+    <OPTION NAME="-p" DESC="Copy modified/access timestamps to the output" ADVANCED="1">
+      <ALIAS NAME="--preserve-dates"/>
+    </OPTION>
+    <OPTION NAME="-j " DESC="Only copy section (name) into the output" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--only-section "/>
+    </OPTION>
+    <OPTION NAME="--add-gnu-debuglink=" DESC="(file) Add section .gnu_debuglink linking to (file)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-R " DESC="Remove section (name) from the output" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--remove-section "/>
+    </OPTION>
+    <OPTION NAME="-S" DESC="Remove all symbol and relocation information" ADVANCED="1">
+      <ALIAS NAME="--strip-all"/>
+    </OPTION>
+    <OPTION NAME="-g" DESC="Remove all debugging symbols and sections" ADVANCED="1">
+      <ALIAS NAME="--strip-debug"/>
+    </OPTION>
+    <OPTION NAME="--strip-unneeded" DESC="Remove all symbols not needed by relocations" ADVANCED="1"/>
+    <OPTION NAME="-N " DESC="Do not copy symbol (name)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--strip-symbol "/>
+    </OPTION>
+    <OPTION NAME="--strip-unneeded-symbol " DESC="Do not copy symbol (name) unless needed by relocations" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--only-keep-debug" DESC="Strip everything but the debug information" ADVANCED="1"/>
+    <OPTION NAME="--extract-symbol" DESC="Remove section contents but keep symbols" ADVANCED="1"/>
+    <OPTION NAME="-K " DESC="Do not strip symbol (name)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--keep-symbol "/>
+    </OPTION>
+    <OPTION NAME="--keep-file-symbols" DESC="Do not strip file symbol(s)" ADVANCED="1"/>
+    <OPTION NAME="--localize-hidden" DESC="Turn all ELF hidden symbols into locals" ADVANCED="1"/>
+    <OPTION NAME="-L " DESC="Force symbol (name) to be marked as a local" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--localize-symbol "/>
+    </OPTION>
+    <OPTION NAME="--globalize-symbol " DESC="Force symbol (name) to be marked as a global" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-G " DESC="Localize all symbols except (name)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--keep-global-symbol "/>
+    </OPTION>
+    <OPTION NAME="-W " DESC="Force symbol (name) to be marked as a weak" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--weaken-symbol "/>
+    </OPTION>
+    <OPTION NAME="--weaken" DESC="Force all global symbols to be marked as weak" ADVANCED="1"/>
+    <OPTION NAME="-w" DESC="Permit wildcard in symbol comparison" ADVANCED="1">
+      <ALIAS NAME="--wildcard"/>
+    </OPTION>
+    <OPTION NAME="-x" DESC="Remove all non-global symbols" ADVANCED="1">
+      <ALIAS NAME="--discard-all"/>
+    </OPTION>
+    <OPTION NAME="-X" DESC="Remove any compiler-generated symbols" ADVANCED="1">
+      <ALIAS NAME="--discard-locals"/>
+    </OPTION>
+    <OPTION NAME="-i " DESC="Only copy one out of every (number) bytes" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--interleave "/>
+    </OPTION>
+    <OPTION NAME="-b " DESC="Select byte (num) in every interleaved block" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--byte "/>
+    </OPTION>
+    <OPTION NAME="--gap-fill " DESC="Fill gaps between sections with (val)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--pad-to " DESC="Pad the last section up to address (addr)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--set-start " DESC="Set the start address to (addr)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--change-start " DESC="Add (incr) to the start address" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--adjust-start "/>
+    </OPTION>
+    <OPTION NAME="--change-addresses " DESC="Add (incr) to LMA, VMA and start addresses" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--adjust-vma "/>
+    </OPTION>
+    <OPTION NAME="--change-section-address " DESC="(name){=|+|-}(val)\nChange LMA and VMA of section (name) by (val)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--adjust-section-vma "/>
+    </OPTION>
+    <OPTION NAME="--change-section-lma " DESC="(name){=|+|-}(val)\nChange the LMA of section (name) by (val)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--change-section-vma " DESC="(name){=|+|-}(val)\nChange the VMA of section (name) by (val)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--no-change-warnings" DESC="Don't warn if a named section does not exist" ADVANCED="1">
+      <ALIAS NAME="--no-adjust-warnings"/>
+    </OPTION>
+    <OPTION NAME="--change-warnings" DESC="Warn if a named section does not exist" ADVANCED="1">
+      <ALIAS NAME="--adjust-warnings"/>
+    </OPTION>
+    <OPTION NAME="--set-section-flags " DESC="(name)=(flags)\nSet section (name)'s properties to (flags)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--add-section " DESC="(name)=(file)\nAdd section (name) found in (file) to output" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--rename-section " DESC="(old)=(new)[,(flags)]\nRename section (old) to (new)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--long-section-names " DESC="Handle long section names in Coff objects." PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="enable" DESC=""/>
+      <PARAM VALUE="disable" DESC=""/>
+      <PARAM VALUE="keep" DESC=""/>
+    </OPTION>
+    <OPTION NAME="--change-leading-char" DESC="Force output format's leading character style" ADVANCED="1"/>
+    <OPTION NAME="--remove-leading-char" DESC="Remove leading character from global symbols" ADVANCED="1"/>
+    <OPTION NAME="--reverse-bytes=" DESC="Reverse (num) bytes at a time, in output sections with content" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--redefine-sym " DESC="(old)=(new)\nRedefine symbol name (old) to (new)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--redefine-syms " DESC="--redefine-sym for all symbol pairs  listed in (file)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--srec-len " DESC="(number) Restrict the length of generated Srecords" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--srec-forceS3" DESC="Restrict the type of generated Srecords to S3" ADVANCED="1"/>
+    <OPTION NAME="--strip-symbols " DESC="-N for all symbols listed in (file)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--strip-unneeded-symbols " DESC="--strip-unneeded-symbol for all symbols listed in (file)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--keep-symbols " DESC="-K for all symbols listed in (file)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--localize-symbols " DESC="-L for all symbols listed in (file)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--globalize-symbols " DESC="--globalize-symbol for all in (file)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--keep-global-symbols " DESC="-G for all symbols listed in (file)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--weaken-symbols " DESC="-W for all symbols listed in (file)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--alt-machine-code " DESC="Use the target's (index)'th alternative machine" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--writable-text" DESC="Mark the output text as writable" ADVANCED="1"/>
+    <OPTION NAME="--readonly-text" DESC="Make the output text write protected" ADVANCED="1"/>
+    <OPTION NAME="--pure" DESC="Mark the output file as demand paged" ADVANCED="1"/>
+    <OPTION NAME="--impure" DESC="Mark the output file as impure" ADVANCED="1"/>
+    <OPTION NAME="--prefix-symbols " DESC="Add (prefix) to start of every symbol name" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--prefix-sections " DESC="Add (prefix) to start of every section name" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--prefix-alloc-sections " DESC="Add (prefix) to start of every allocatable section name" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--file-alignment " DESC="Set PE file alignment to (num)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--heap " DESC="(reserve)[,(commit)]\nSet PE reserve/commit heap to (reserve)/(commit)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--image-base " DESC="Set PE image base to (address)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--section-alignment " DESC="Set PE section alignment to (num)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--stack " DESC="(reserve)[,(commit)]\nSet PE reserve/commit stack to (reserve)/(commit)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--subsystem " DESC="(name)[:(version)]\nSet PE subsystem to (name) [and (version)]" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-v" DESC="List all object files modified" ADVANCED="1">
+      <ALIAS NAME="--verbose"/>
+    </OPTION>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="ARM7">
+    <SOURCE NAME="crt0.S" FROM="gcc-arm/crt0.S"/>
+    <OPTION TOOL="CC" NAME="-mcpu=" VALUE="arm7tdmi" DEFAULT="1"/>
+    <OPTION TOOL="CPP" NAME="-mcpu=" VALUE="arm7tdmi" DEFAULT="1"/>
+    <OPTION TOOL="OC" NAME="-mcpu=" VALUE="arm7tdmi" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="arm7tdmi" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="-mcpu=" VALUE="arm7tdmi" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    <OPTION TOOL="LIB" NAME="-mcpu=" VALUE="arm7tdmi" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="-mthumb-interwork" DEFAULT="1"/>
+    <OPTION TOOL="CPP" NAME="-mthumb-interwork" DEFAULT="1"/>
+    <OPTION TOOL="OC" NAME="-mthumb-interwork" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="-mthumb-interwork" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="-mthumb-interwork" DEFAULT="1"/>
+    <OPTION TOOL="LIB" NAME="-mthumb-interwork" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="-I" VALUE="%PROJECT_DIR%"/>
+    <CONTROLLER NAME="LPC2101">
+      <SOURCE NAME="LPC2101_FLASH.ld" FROM="gcc-arm/LPC2101_FLASH.ld"/>
+      <SOURCE NAME="LPC2103.h" FROM="gcc-arm/LPC2103.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2103.h"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2102">
+      <SOURCE NAME="LPC2102_FLASH.ld" FROM="gcc-arm/LPC2102_FLASH.ld"/>
+      <SOURCE NAME="LPC2103.h" FROM="gcc-arm/LPC2103.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2103.h"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2103">
+      <SOURCE NAME="LPC2103_FLASH.ld" FROM="gcc-arm/LPC2103_FLASH.ld"/>
+      <SOURCE NAME="LPC2101.h" FROM="gcc-arm/LPC2103.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2103.h"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2104">
+      <SOURCE NAME="LPC2104_FLASH.ld" FROM="gcc-arm/LPC2104_FLASH.ld"/>
+      <SOURCE NAME="LPC210x.h" FROM="gcc-arm/LPC210x.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC210x.h"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2105">
+      <SOURCE NAME="LPC2105_FLASH.ld" FROM="gcc-arm/LPC2105_FLASH.ld"/>
+      <SOURCE NAME="LPC210x.h" FROM="gcc-arm/LPC210x.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC210x.h"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2106">
+      <SOURCE NAME="LPC2106_FLASH.ld" FROM="gcc-arm/LPC2106_FLASH.ld"/>
+      <SOURCE NAME="LPC210x.h" FROM="gcc-arm/LPC210x.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC210x.h"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2114">
+      <SOURCE NAME="LPC2114_FLASH.ld" FROM="gcc-arm/LPC2114_FLASH.ld"/>
+      <SOURCE NAME="LPC21xx.h" FROM="gcc-arm/LPC21xx.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC21xx.h"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2124">
+      <SOURCE NAME="LPC2124_FLASH.ld" FROM="gcc-arm/LPC2124_FLASH.ld"/>
+      <SOURCE NAME="LPC21xx.h" FROM="gcc-arm/LPC21xx.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC21xx.h"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2131">
+      <SOURCE NAME="LPC2131_FLASH.ld" FROM="gcc-arm/LPC2131_FLASH.ld"/>
+      <SOURCE NAME="LPC213x.h" FROM="gcc-arm/LPC213x.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC213x.h"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2132">
+      <SOURCE NAME="LPC2132_FLASH.ld" FROM="gcc-arm/LPC2132_FLASH.ld"/>
+      <SOURCE NAME="LPC213x.h" FROM="gcc-arm/LPC213x.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC213x.h"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2134">
+      <SOURCE NAME="LPC2134_FLASH.ld" FROM="gcc-arm/LPC2134_FLASH.ld"/>
+      <SOURCE NAME="LPC213x.h" FROM="gcc-arm/LPC213x.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC213x.h"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2136">
+      <SOURCE NAME="LPC2136_FLASH.ld" FROM="gcc-arm/LPC2136_FLASH.ld"/>
+      <SOURCE NAME="LPC213x.h" FROM="gcc-arm/LPC213x.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC213x.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2138">
+      <SOURCE NAME="LPC2138_FLASH.ld" FROM="gcc-arm/LPC2138_FLASH.ld"/>
+      <SOURCE NAME="LPC213x.h" FROM="gcc-arm/LPC213x.h"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC213x.h"/>
+    </CONTROLLER>
+  </FAMILY>
+  <FAMILY NAME="Cortex-M3">
+    <SOURCE NAME="cmsis/core/core_cm3.h" FROM="gcc-arm/cmsis/core/core_cm3.h"/>
+    <SOURCE NAME="cmsis/core/core_cm3.c" FROM="gcc-arm/cmsis/core/core_cm3.c"/>
+    <SOURCE NAME="cmsis/core/core_cmFunc.h" FROM="gcc-arm/cmsis/core/core_cmFunc.h"/>
+    <SOURCE NAME="cmsis/core/core_cmInstr.h" FROM="gcc-arm/cmsis/core/core_cmInstr.h"/>
+    <OPTION TOOL="CC" NAME="-mcpu=" VALUE="cortex-m3" DEFAULT="1"/>
+    <OPTION TOOL="CPP" NAME="-mcpu=" VALUE="cortex-m3" DEFAULT="1"/>
+    <OPTION TOOL="OC" NAME="-mcpu=" VALUE="cortex-m3" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="cortex-m3" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="-mcpu=" VALUE="cortex-m3" DEFAULT="1"/>
+    <OPTION TOOL="LIB" NAME="-mcpu=" VALUE="cortex-m3" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="CPP" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="OC" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="LIB" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="-I" VALUE="%PROJECT_DIR%/cmsis/core"/>
+    <OPTION TOOL="CC" NAME="-I" VALUE="%PROJECT_DIR%/cmsis/device"/>
+    <CONTROLLER NAME="LM3S300">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_lm3x.c"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.c" FROM="gcc-arm/cmsis/device/system_lm3s.c"/>
+      <SOURCE NAME="cmsis/device/lm3s_cmsis.h" FROM="gcc-arm/cmsis/device/lm3s_cmsis.h"/>
+      <SOURCE NAME="cmsis/device/lm3s_config.h" FROM="gcc-arm/cmsis/device/lm3s_config.h"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.h" FROM="gcc-arm/cmsis/device/system_lm3s.h"/>
+      <SOURCE NAME="lm3s300_flash.ld" FROM="gcc-arm/lm3s300_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S301">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_lm3x.c"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.c" FROM="gcc-arm/cmsis/device/system_lm3s.c"/>
+      <SOURCE NAME="cmsis/device/lm3s_cmsis.h" FROM="gcc-arm/cmsis/device/lm3s_cmsis.h"/>
+      <SOURCE NAME="cmsis/device/lm3s_config.h" FROM="gcc-arm/cmsis/device/lm3s_config.h"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.h" FROM="gcc-arm/cmsis/device/system_lm3s.h"/>
+      <SOURCE NAME="lm3s301_flash.ld" FROM="gcc-arm/lm3s301_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S308">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_lm3x.c"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.c" FROM="gcc-arm/cmsis/device/system_lm3s.c"/>
+      <SOURCE NAME="cmsis/device/lm3s_cmsis.h" FROM="gcc-arm/cmsis/device/lm3s_cmsis.h"/>
+      <SOURCE NAME="cmsis/device/lm3s_config.h" FROM="gcc-arm/cmsis/device/lm3s_config.h"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.h" FROM="gcc-arm/cmsis/device/system_lm3s.h"/>
+      <SOURCE NAME="lm3s308_flash.ld" FROM="gcc-arm/lm3s308_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S310">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_lm3x.c"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.c" FROM="gcc-arm/cmsis/device/system_lm3s.c"/>
+      <SOURCE NAME="cmsis/device/lm3s_cmsis.h" FROM="gcc-arm/cmsis/device/lm3s_cmsis.h"/>
+      <SOURCE NAME="cmsis/device/lm3s_config.h" FROM="gcc-arm/cmsis/device/lm3s_config.h"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.h" FROM="gcc-arm/cmsis/device/system_lm3s.h"/>
+      <SOURCE NAME="lm3s310_flash.ld" FROM="gcc-arm/lm3s310_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S315">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_lm3x.c"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.c" FROM="gcc-arm/cmsis/device/system_lm3s.c"/>
+      <SOURCE NAME="cmsis/device/lm3s_cmsis.h" FROM="gcc-arm/cmsis/device/lm3s_cmsis.h"/>
+      <SOURCE NAME="cmsis/device/lm3s_config.h" FROM="gcc-arm/cmsis/device/lm3s_config.h"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.h" FROM="gcc-arm/cmsis/device/system_lm3s.h"/>
+      <SOURCE NAME="lm3s315_flash.ld" FROM="gcc-arm/lm3s315_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S316">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_lm3x.c"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.c" FROM="gcc-arm/cmsis/device/system_lm3s.c"/>
+      <SOURCE NAME="cmsis/device/lm3s_cmsis.h" FROM="gcc-arm/cmsis/device/lm3s_cmsis.h"/>
+      <SOURCE NAME="cmsis/device/lm3s_config.h" FROM="gcc-arm/cmsis/device/lm3s_config.h"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.h" FROM="gcc-arm/cmsis/device/system_lm3s.h"/>
+      <SOURCE NAME="lm3s316_flash.ld" FROM="gcc-arm/lm3s316_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S317">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_lm3x.c"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.c" FROM="gcc-arm/cmsis/device/system_lm3s.c"/>
+      <SOURCE NAME="cmsis/device/lm3s_cmsis.h" FROM="gcc-arm/cmsis/device/lm3s_cmsis.h"/>
+      <SOURCE NAME="cmsis/device/lm3s_config.h" FROM="gcc-arm/cmsis/device/lm3s_config.h"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.h" FROM="gcc-arm/cmsis/device/system_lm3s.h"/>
+      <SOURCE NAME="lm3s317_flash.ld" FROM="gcc-arm/lm3s317_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S328">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_lm3x.c"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.c" FROM="gcc-arm/cmsis/device/system_lm3s.c"/>
+      <SOURCE NAME="cmsis/device/lm3s_cmsis.h" FROM="gcc-arm/cmsis/device/lm3s_cmsis.h"/>
+      <SOURCE NAME="cmsis/device/lm3s_config.h" FROM="gcc-arm/cmsis/device/lm3s_config.h"/>
+      <SOURCE NAME="cmsis/device/system_lm3s.h" FROM="gcc-arm/cmsis/device/system_lm3s.h"/>
+      <SOURCE NAME="lm3s328_flash.ld" FROM="gcc-arm/lm3s328_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1311FHN33">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp13x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.c" FROM="gcc-arm/cmsis/device/system_LPC13xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC13xx.h" FROM="gcc-arm/cmsis/device/LPC13xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.h" FROM="gcc-arm/cmsis/device/system_LPC13xx.h"/>
+      <SOURCE NAME="LPC1311_FLASH.ld" FROM="gcc-arm/LPC1311_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1313FBD48">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp13x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.c" FROM="gcc-arm/cmsis/device/system_LPC13xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC13xx.h" FROM="gcc-arm/cmsis/device/LPC13xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.h" FROM="gcc-arm/cmsis/device/system_LPC13xx.h"/>
+      <SOURCE NAME="LPC1313_FLASH.ld" FROM="gcc-arm/LPC1311_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1313FHN33">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp13x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.c" FROM="gcc-arm/cmsis/device/system_LPC13xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC13xx.h" FROM="gcc-arm/cmsis/device/LPC13xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.h" FROM="gcc-arm/cmsis/device/system_LPC13xx.h"/>
+      <SOURCE NAME="LPC1313_FLASH.ld" FROM="gcc-arm/LPC1311_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1342FBD48">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp13x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.c" FROM="gcc-arm/cmsis/device/system_LPC13xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC13xx.h" FROM="gcc-arm/cmsis/device/LPC13xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.h" FROM="gcc-arm/cmsis/device/system_LPC13xx.h"/>
+      <SOURCE NAME="LPC1342_FLASH.ld" FROM="gcc-arm/LPC1311_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1342FHN33">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp13x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.c" FROM="gcc-arm/cmsis/device/system_LPC13xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC13xx.h" FROM="gcc-arm/cmsis/device/LPC13xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.h" FROM="gcc-arm/cmsis/device/system_LPC13xx.h"/>
+      <SOURCE NAME="LPC1342_FLASH.ld" FROM="gcc-arm/LPC1311_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1343FBD48">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp13x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.c" FROM="gcc-arm/cmsis/device/system_LPC13xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC13xx.h" FROM="gcc-arm/cmsis/device/LPC13xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.h" FROM="gcc-arm/cmsis/device/system_LPC13xx.h"/>
+      <SOURCE NAME="LPC1343_FLASH.ld" FROM="gcc-arm/LPC1311_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1343FHN33">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp13x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.c" FROM="gcc-arm/cmsis/device/system_LPC13xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC13xx.h" FROM="gcc-arm/cmsis/device/LPC13xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC13xx.h" FROM="gcc-arm/cmsis/device/system_LPC13xx.h"/>
+      <SOURCE NAME="LPC1343_FLASH.ld" FROM="gcc-arm/LPC1311_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+
+    <CONTROLLER NAME="ATSAM3N4A">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n4a.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n4a.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N4A_FLASH.ld" FROM="gcc-arm/ATSAM3N4A_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N4A__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N4B">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n4b.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n4b.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N4B_FLASH.ld" FROM="gcc-arm/ATSAM3N4B_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N4B__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N4C">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n4c.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n4c.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N4C_FLASH.ld" FROM="gcc-arm/ATSAM3N4C_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N4C__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N2A">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n2a.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n2a.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N2A_FLASH.ld" FROM="gcc-arm/ATSAM3N2A_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N2A__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N2B">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n2b.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n2b.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N2B_FLASH.ld" FROM="gcc-arm/ATSAM3N2B_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N2B__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N2C">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n2c.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n2c.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N2C_FLASH.ld" FROM="gcc-arm/ATSAM3N2C_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N2C__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N1A">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n1a.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n1a.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N1A_FLASH.ld" FROM="gcc-arm/ATSAM3N1A_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N1A__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N1B">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n1b.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n1b.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N1B_FLASH.ld" FROM="gcc-arm/ATSAM3N1B_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N1B__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N1C">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n1c.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n1c.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N1C_FLASH.ld" FROM="gcc-arm/ATSAM3N1C_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N1C__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N0A">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n0a.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n0a.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N0A_FLASH.ld" FROM="gcc-arm/ATSAM3N0A_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N0A__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N0B">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n0b.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n0b.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N0B_FLASH.ld" FROM="gcc-arm/ATSAM3N0B_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N0B__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N0C">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n0c.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n0c.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N0C_FLASH.ld" FROM="gcc-arm/ATSAM3N0C_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N0C__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N00A">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n00a.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n00a.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N00A_FLASH.ld" FROM="gcc-arm/ATSAM3N00A_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N00A__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATSAM3N00B">
+      <SOURCE NAME="crt_sam3n.c" FROM="gcc-arm/crt_sam3n.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_atsam3n.c"/>
+      <SOURCE NAME="cmsis/core/syscalls.c" FROM="gcc-arm/cmsis/core/syscalls.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.c" FROM="gcc-arm/cmsis/device/system_sam3n.c"/>
+      <SOURCE NAME="cmsis/device/system_sam3n.h" FROM="gcc-arm/cmsis/device/system_sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n00b.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n00b.h"/>
+      <SOURCE NAME="cmsis/device/sam3n.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n.h"/>
+      <SOURCE NAME="cmsis/device/sam3n_peripherals.h" FROM="gcc-arm/cmsis/device/sam3n/sam3n_peripherals.h"/>
+      <SOURCE NAME="ATSAM3N00B_FLASH.ld" FROM="gcc-arm/ATSAM3N00B_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="sam3n.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="__SAM3N00B__" DEFAULT="1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F103T4">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_stm32f103x.c"/>
+      <SOURCE NAME="cmsis/device/system_stm32f1xx.c" FROM="gcc-arm/cmsis/device/system_stm32f1xx.c"/>
+      <SOURCE NAME="cmsis/device/system_stm32f1xx.h" FROM="gcc-arm/cmsis/device/system_stm32f1xx.h"/>      
+      <SOURCE NAME="cmsis/device/stm32f1xx.h" FROM="gcc-arm/cmsis/device/stm32f1xx.h"/>
+      <SOURCE NAME="cmsis/device/stm32f103x6.h" FROM="gcc-arm/cmsis/device/stm32f103x6.h"/>
+      <SOURCE NAME="STM32F103X4_FLASH.ld" FROM="gcc-arm/STM32F103X4_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f1xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F103x6" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F103T6">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_stm32f103x.c"/>
+      <SOURCE NAME="cmsis/device/system_stm32f1xx.c" FROM="gcc-arm/cmsis/device/system_stm32f1xx.c"/>
+      <SOURCE NAME="cmsis/device/system_stm32f1xx.h" FROM="gcc-arm/cmsis/device/system_stm32f1xx.h"/>      
+      <SOURCE NAME="cmsis/device/stm32f1xx.h" FROM="gcc-arm/cmsis/device/stm32f1xx.h"/>
+      <SOURCE NAME="cmsis/device/stm32f103x6.h" FROM="gcc-arm/cmsis/device/stm32f103x6.h"/>
+      <SOURCE NAME="STM32F103X6_FLASH.ld" FROM="gcc-arm/STM32F103X6_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f1xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F103x6" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F103C4">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_stm32f103x.c"/>
+      <SOURCE NAME="cmsis/device/system_stm32f1xx.c" FROM="gcc-arm/cmsis/device/system_stm32f1xx.c"/>
+      <SOURCE NAME="cmsis/device/system_stm32f1xx.h" FROM="gcc-arm/cmsis/device/system_stm32f1xx.h"/>      
+      <SOURCE NAME="cmsis/device/stm32f1xx.h" FROM="gcc-arm/cmsis/device/stm32f1xx.h"/>
+      <SOURCE NAME="cmsis/device/stm32f103x6.h" FROM="gcc-arm/cmsis/device/stm32f103x6.h"/>
+      <SOURCE NAME="STM32F103X4_FLASH.ld" FROM="gcc-arm/STM32F103X4_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f1xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F103x6" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F103C6">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_stm32f103x.c"/>
+      <SOURCE NAME="cmsis/device/system_stm32f1xx.c" FROM="gcc-arm/cmsis/device/system_stm32f1xx.c"/>
+      <SOURCE NAME="cmsis/device/system_stm32f1xx.h" FROM="gcc-arm/cmsis/device/system_stm32f1xx.h"/>      
+      <SOURCE NAME="cmsis/device/stm32f1xx.h" FROM="gcc-arm/cmsis/device/stm32f1xx.h"/>
+      <SOURCE NAME="cmsis/device/stm32f103x6.h" FROM="gcc-arm/cmsis/device/stm32f103x6.h"/>
+      <SOURCE NAME="STM32F103X6_FLASH.ld" FROM="gcc-arm/STM32F103X6_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f1xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F103x6" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F103R4">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_stm32f103x.c"/>
+      <SOURCE NAME="cmsis/device/system_stm32f1xx.c" FROM="gcc-arm/cmsis/device/system_stm32f1xx.c"/>
+      <SOURCE NAME="cmsis/device/system_stm32f1xx.h" FROM="gcc-arm/cmsis/device/system_stm32f1xx.h"/>      
+      <SOURCE NAME="cmsis/device/stm32f1xx.h" FROM="gcc-arm/cmsis/device/stm32f1xx.h"/>
+      <SOURCE NAME="cmsis/device/stm32f103x6.h" FROM="gcc-arm/cmsis/device/stm32f103x6.h"/>
+      <SOURCE NAME="STM32F103X4_FLASH.ld" FROM="gcc-arm/STM32F103X4_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f1xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F103x6" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F103R6">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_stm32f103x.c"/>
+      <SOURCE NAME="cmsis/device/system_stm32f1xx.c" FROM="gcc-arm/cmsis/device/system_stm32f1xx.c"/>
+      <SOURCE NAME="cmsis/device/system_stm32f1xx.h" FROM="gcc-arm/cmsis/device/system_stm32f1xx.h"/>      
+      <SOURCE NAME="cmsis/device/stm32f1xx.h" FROM="gcc-arm/cmsis/device/stm32f1xx.h"/>
+      <SOURCE NAME="cmsis/device/stm32f103x6.h" FROM="gcc-arm/cmsis/device/stm32f103x6.h"/>
+      <SOURCE NAME="STM32F103X6_FLASH.ld" FROM="gcc-arm/STM32F103X6_FLASH.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f1xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F103x6" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+  </FAMILY>
+
+  <FAMILY NAME="Cortex-M0">
+    <SOURCE NAME="cmsis/core/core_cm0.h" FROM="gcc-arm/cmsis/core/core_cm0.h"/>
+    <SOURCE NAME="cmsis/core/core_cm0.c" FROM="gcc-arm/cmsis/core/core_cm0.c"/>
+    <SOURCE NAME="cmsis/core/core_cmFunc.h" FROM="gcc-arm/cmsis/core/core_cmFunc.h"/>
+    <SOURCE NAME="cmsis/core/core_cmInstr.h" FROM="gcc-arm/cmsis/core/core_cmInstr.h"/>
+    <OPTION TOOL="CC" NAME="-mcpu=" VALUE="cortex-m0" DEFAULT="1"/>
+    <OPTION TOOL="CPP" NAME="-mcpu=" VALUE="cortex-m0" DEFAULT="1"/>
+    <OPTION TOOL="OC" NAME="-mcpu=" VALUE="cortex-m0" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="cortex-m0" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="-mcpu=" VALUE="cortex-m0" DEFAULT="1"/>
+    <OPTION TOOL="LIB" NAME="-mcpu=" VALUE="cortex-m0" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="CPP" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="OC" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="LIB" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="-I" VALUE="%PROJECT_DIR%/cmsis/core"/>
+    <OPTION TOOL="CC" NAME="-I" VALUE="%PROJECT_DIR%/cmsis/device"/>
+    <CONTROLLER NAME="LPC1110FD20">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_4_1_flash.ld" FROM="gcc-arm/LPC111X_4_1_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1111FDH20/002">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_8_2_flash.ld" FROM="gcc-arm/LPC111X_8_2_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1111FHN33/101">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_8_2_flash.ld" FROM="gcc-arm/LPC111X_8_2_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1111FHN33/102">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_8_2_flash.ld" FROM="gcc-arm/LPC111X_8_2_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1111FHN33/103">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_8_2_flash.ld" FROM="gcc-arm/LPC111X_8_2_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1111FHN33/201">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_8_4_flash.ld" FROM="gcc-arm/LPC111X_8_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1111FHN33/202">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_8_4_flash.ld" FROM="gcc-arm/LPC111X_8_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1111FHN33/203">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_8_4_flash.ld" FROM="gcc-arm/LPC111X_8_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1112FD20/102">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_16_4_flash.ld" FROM="gcc-arm/LPC111X_16_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1112FDH20/002">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_16_4_flash.ld" FROM="gcc-arm/LPC111X_16_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1112FDH28/102">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_16_4_flash.ld" FROM="gcc-arm/LPC111X_16_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1112FHN33/101">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_16_2_flash.ld" FROM="gcc-arm/LPC111X_16_2_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1112FHN33/102">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_16_2_flash.ld" FROM="gcc-arm/LPC111X_16_2_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1112FHN33/103">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_16_2_flash.ld" FROM="gcc-arm/LPC111X_16_2_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1112FHN33/201">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_16_4_flash.ld" FROM="gcc-arm/LPC111X_16_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1112FHN24/202">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_16_4_flash.ld" FROM="gcc-arm/LPC111X_16_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1112FHN33/202">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_16_4_flash.ld" FROM="gcc-arm/LPC111X_16_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1112FHN33/203">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_16_4_flash.ld" FROM="gcc-arm/LPC111X_16_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1113FBD48/301">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_24_8_flash.ld" FROM="gcc-arm/LPC111X_24_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1113FBD48/302">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_24_8_flash.ld" FROM="gcc-arm/LPC111X_24_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1113FBD48/303">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_24_8_flash.ld" FROM="gcc-arm/LPC111X_24_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1113FHN33/201">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_24_4_flash.ld" FROM="gcc-arm/LPC111X_24_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1113FHN33/202">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_24_4_flash.ld" FROM="gcc-arm/LPC111X_24_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1113FHN33/203">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_24_4_flash.ld" FROM="gcc-arm/LPC111X_24_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1113FHN33/301">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_24_8_flash.ld" FROM="gcc-arm/LPC111X_24_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1113FHN33/302">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_24_8_flash.ld" FROM="gcc-arm/LPC111X_24_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1113FHN33/303">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_24_8_flash.ld" FROM="gcc-arm/LPC111X_24_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FBD48/301">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_32_8_flash.ld" FROM="gcc-arm/LPC111X_32_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FBD48/302">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_32_8_flash.ld" FROM="gcc-arm/LPC111X_32_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FBD48/303">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_32_8_flash.ld" FROM="gcc-arm/LPC111X_32_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FBD48/323">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_48_8_flash.ld" FROM="gcc-arm/LPC111X_48_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FBD48/333">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_56_8_flash.ld" FROM="gcc-arm/LPC111X_56_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FDH28/102">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_32_4_flash.ld" FROM="gcc-arm/LPC111X_32_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FN28/102">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_32_4_flash.ld" FROM="gcc-arm/LPC111X_32_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FHN33/201">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_32_4_flash.ld" FROM="gcc-arm/LPC111X_32_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FHN33/202">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_32_4_flash.ld" FROM="gcc-arm/LPC111X_32_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FHN33/203">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_32_4_flash.ld" FROM="gcc-arm/LPC111X_32_4_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FHN33/301">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_32_8_flash.ld" FROM="gcc-arm/LPC111X_32_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FHN33/302">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_32_8_flash.ld" FROM="gcc-arm/LPC111X_32_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FHN33/303">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_32_8_flash.ld" FROM="gcc-arm/LPC111X_32_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1114FHN33/333">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_56_8_flash.ld" FROM="gcc-arm/LPC111X_56_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1115FBD48/303">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_64_8_flash.ld" FROM="gcc-arm/LPC111X_64_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1115FET48/303">
+      <SOURCE NAME="crt.c" FROM="gcc-arm/crt.c"/>
+      <SOURCE NAME="vtable.c" FROM="gcc-arm/vtable_nxp11x.c"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.c" FROM="gcc-arm/cmsis/device/system_LPC11xx.c"/>
+      <SOURCE NAME="cmsis/device/LPC11xx.h" FROM="gcc-arm/cmsis/device/LPC11xx.h"/>
+      <SOURCE NAME="cmsis/device/system_LPC11xx.h" FROM="gcc-arm/cmsis/device/system_LPC11xx.h"/>
+      <SOURCE NAME="LPC111X_64_8_flash.ld" FROM="gcc-arm/LPC111X_64_8_flash.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC11xx.h"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+    </CONTROLLER>
+  </FAMILY>
+
+  <FAMILY NAME="Cortex-M4">
+    <SOURCE NAME="cmsis/core/syscalls.h" FROM="gcc-arm/cmsis/core/syscalls.h"/>
+	<SOURCE NAME="cmsis/core/core_cm4.h" FROM="gcc-arm/cmsis/core/core_cm4.h"/>
+    <SOURCE NAME="cmsis/core/core_cmFunc.h" FROM="gcc-arm/cmsis/core/core_cmFunc.h"/>
+    <SOURCE NAME="cmsis/core/core_cmInstr.h" FROM="gcc-arm/cmsis/core/core_cmInstr.h"/>
+	<SOURCE NAME="cmsis/core/core_cmSimd.h" FROM="gcc-arm/cmsis/core/core_cmSimd.h"/>	
+    <OPTION TOOL="CC" NAME="-mcpu=" VALUE="cortex-m4" DEFAULT="1"/>
+    <OPTION TOOL="CPP" NAME="-mcpu=" VALUE="cortex-m4" DEFAULT="1"/>
+    <OPTION TOOL="OC" NAME="-mcpu=" VALUE="cortex-m4" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="-mcpu=" VALUE="cortex-m4" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="-mcpu=" VALUE="cortex-m4" DEFAULT="1"/>
+    <OPTION TOOL="LIB" NAME="-mcpu=" VALUE="cortex-m4" DEFAULT="1"/>
+	<OPTION TOOL="CC" NAME="-mfloat-abi=" VALUE="hard" DEFAULT="1"/>
+	<OPTION TOOL="CPP" NAME="-mfloat-abi=" VALUE="hard" DEFAULT="1"/>
+	<OPTION TOOL="ASM" NAME="-mfloat-abi=" VALUE="hard" DEFAULT="1"/>
+	<OPTION TOOL="CC" NAME="-mfpu=" VALUE="fpv4-sp-d16" DEFAULT="1"/>
+	<OPTION TOOL="CPP" NAME="-mfpu=" VALUE="fpv4-sp-d16" DEFAULT="1"/>
+	<OPTION TOOL="ASM" NAME="-mfpu=" VALUE="fpv4-sp-d16" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="CPP" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="OC" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="LD" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="LIB" NAME="-mthumb" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="-I" VALUE="%PROJECT_DIR%/cmsis/core"/>
+    <OPTION TOOL="CC" NAME="-I" VALUE="%PROJECT_DIR%/cmsis/device"/>
+    <CONTROLLER NAME="STM32F401CB">
+      <SOURCE NAME="cmsis/device/startup_stm32f401xx.s" FROM="gcc-arm/cmsis/device/startup_stm32f401xx.s"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.c" FROM="gcc-arm/cmsis/device/system_stm32f4xx.c"/>
+      <SOURCE NAME="cmsis/device/stm32f4xx.h" FROM="gcc-arm/cmsis/device/stm32f4xx.h"/>
+	  <SOURCE NAME="cmsis/device/stm32f4xx_it.h" FROM="gcc-arm/cmsis/device/stm32f4xx_it.h"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.h" FROM="gcc-arm/cmsis/device/system_stm32f4xx.h"/>
+      <SOURCE NAME="STM32F401XB.ld" FROM="gcc-arm/STM32F401XB.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f4xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F401xx" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+	  <OPTION TOOL="LD" NAME="-nostdlib"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F401RB">
+      <SOURCE NAME="cmsis/device/startup_stm32f401xx.s" FROM="gcc-arm/cmsis/device/startup_stm32f401xx.s"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.c" FROM="gcc-arm/cmsis/device/system_stm32f4xx.c"/>
+      <SOURCE NAME="cmsis/device/stm32f4xx.h" FROM="gcc-arm/cmsis/device/stm32f4xx.h"/>
+	  <SOURCE NAME="cmsis/device/stm32f4xx_it.h" FROM="gcc-arm/cmsis/device/stm32f4xx_it.h"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.h" FROM="gcc-arm/cmsis/device/system_stm32f4xx.h"/>
+      <SOURCE NAME="STM32F401XB.ld" FROM="gcc-arm/STM32F401XB.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f4xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F401xx" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+	  <OPTION TOOL="LD" NAME="-nostdlib"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F401VB">
+      <SOURCE NAME="cmsis/device/startup_stm32f401xx.s" FROM="gcc-arm/cmsis/device/startup_stm32f401xx.s"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.c" FROM="gcc-arm/cmsis/device/system_stm32f4xx.c"/>
+      <SOURCE NAME="cmsis/device/stm32f4xx.h" FROM="gcc-arm/cmsis/device/stm32f4xx.h"/>
+	  <SOURCE NAME="cmsis/device/stm32f4xx_it.h" FROM="gcc-arm/cmsis/device/stm32f4xx_it.h"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.h" FROM="gcc-arm/cmsis/device/system_stm32f4xx.h"/>
+      <SOURCE NAME="STM32F401XB.ld" FROM="gcc-arm/STM32F401XB.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f4xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F401xx" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+	  <OPTION TOOL="LD" NAME="-nostdlib"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F401CC">
+      <SOURCE NAME="cmsis/device/startup_stm32f401xx.s" FROM="gcc-arm/cmsis/device/startup_stm32f401xx.s"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.c" FROM="gcc-arm/cmsis/device/system_stm32f4xx.c"/>
+      <SOURCE NAME="cmsis/device/stm32f4xx.h" FROM="gcc-arm/cmsis/device/stm32f4xx.h"/>
+	  <SOURCE NAME="cmsis/device/stm32f4xx_it.h" FROM="gcc-arm/cmsis/device/stm32f4xx_it.h"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.h" FROM="gcc-arm/cmsis/device/system_stm32f4xx.h"/>
+      <SOURCE NAME="STM32F401XC.ld" FROM="gcc-arm/STM32F401XC.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f4xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F401xx" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+	  <OPTION TOOL="LD" NAME="-nostdlib"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F401RC">
+      <SOURCE NAME="cmsis/device/startup_stm32f401xx.s" FROM="gcc-arm/cmsis/device/startup_stm32f401xx.s"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.c" FROM="gcc-arm/cmsis/device/system_stm32f4xx.c"/>
+      <SOURCE NAME="cmsis/device/stm32f4xx.h" FROM="gcc-arm/cmsis/device/stm32f4xx.h"/>
+	  <SOURCE NAME="cmsis/device/stm32f4xx_it.h" FROM="gcc-arm/cmsis/device/stm32f4xx_it.h"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.h" FROM="gcc-arm/cmsis/device/system_stm32f4xx.h"/>
+      <SOURCE NAME="STM32F401XC.ld" FROM="gcc-arm/STM32F401XC.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f4xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F401xx" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+	  <OPTION TOOL="LD" NAME="-nostdlib"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F401VC">
+      <SOURCE NAME="cmsis/device/startup_stm32f401xx.s" FROM="gcc-arm/cmsis/device/startup_stm32f401xx.s"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.c" FROM="gcc-arm/cmsis/device/system_stm32f4xx.c"/>
+      <SOURCE NAME="cmsis/device/stm32f4xx.h" FROM="gcc-arm/cmsis/device/stm32f4xx.h"/>
+	  <SOURCE NAME="cmsis/device/stm32f4xx_it.h" FROM="gcc-arm/cmsis/device/stm32f4xx_it.h"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.h" FROM="gcc-arm/cmsis/device/system_stm32f4xx.h"/>
+      <SOURCE NAME="STM32F401XC.ld" FROM="gcc-arm/STM32F401XC.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f4xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F401xx" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+	  <OPTION TOOL="LD" NAME="-nostdlib"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F401CD">
+      <SOURCE NAME="cmsis/device/startup_stm32f401xx.s" FROM="gcc-arm/cmsis/device/startup_stm32f401xx.s"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.c" FROM="gcc-arm/cmsis/device/system_stm32f4xx.c"/>
+      <SOURCE NAME="cmsis/device/stm32f4xx.h" FROM="gcc-arm/cmsis/device/stm32f4xx.h"/>
+	  <SOURCE NAME="cmsis/device/stm32f4xx_it.h" FROM="gcc-arm/cmsis/device/stm32f4xx_it.h"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.h" FROM="gcc-arm/cmsis/device/system_stm32f4xx.h"/>
+      <SOURCE NAME="STM32F401XD.ld" FROM="gcc-arm/STM32F401XD.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f4xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F401xx" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+	  <OPTION TOOL="LD" NAME="-nostdlib"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F401RD">
+      <SOURCE NAME="cmsis/device/startup_stm32f401xx.s" FROM="gcc-arm/cmsis/device/startup_stm32f401xx.s"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.c" FROM="gcc-arm/cmsis/device/system_stm32f4xx.c"/>
+      <SOURCE NAME="cmsis/device/stm32f4xx.h" FROM="gcc-arm/cmsis/device/stm32f4xx.h"/>
+	  <SOURCE NAME="cmsis/device/stm32f4xx_it.h" FROM="gcc-arm/cmsis/device/stm32f4xx_it.h"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.h" FROM="gcc-arm/cmsis/device/system_stm32f4xx.h"/>
+      <SOURCE NAME="STM32F401XD.ld" FROM="gcc-arm/STM32F401XD.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f4xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F401xx" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+	  <OPTION TOOL="LD" NAME="-nostdlib"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F401VD">
+      <SOURCE NAME="cmsis/device/startup_stm32f401xx.s" FROM="gcc-arm/cmsis/device/startup_stm32f401xx.s"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.c" FROM="gcc-arm/cmsis/device/system_stm32f4xx.c"/>
+      <SOURCE NAME="cmsis/device/stm32f4xx.h" FROM="gcc-arm/cmsis/device/stm32f4xx.h"/>
+	  <SOURCE NAME="cmsis/device/stm32f4xx_it.h" FROM="gcc-arm/cmsis/device/stm32f4xx_it.h"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.h" FROM="gcc-arm/cmsis/device/system_stm32f4xx.h"/>
+      <SOURCE NAME="STM32F401XD.ld" FROM="gcc-arm/STM32F401XD.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f4xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F401xx" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+	  <OPTION TOOL="LD" NAME="-nostdlib"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F401CE">
+      <SOURCE NAME="cmsis/device/startup_stm32f401xx.s" FROM="gcc-arm/cmsis/device/startup_stm32f401xx.s"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.c" FROM="gcc-arm/cmsis/device/system_stm32f4xx.c"/>
+      <SOURCE NAME="cmsis/device/stm32f4xx.h" FROM="gcc-arm/cmsis/device/stm32f4xx.h"/>
+	  <SOURCE NAME="cmsis/device/stm32f4xx_it.h" FROM="gcc-arm/cmsis/device/stm32f4xx_it.h"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.h" FROM="gcc-arm/cmsis/device/system_stm32f4xx.h"/>
+      <SOURCE NAME="STM32F401XE.ld" FROM="gcc-arm/STM32F401XE.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f4xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F401xx" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+	  <OPTION TOOL="LD" NAME="-nostdlib"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F401RE">
+      <SOURCE NAME="cmsis/device/startup_stm32f401xx.s" FROM="gcc-arm/cmsis/device/startup_stm32f401xx.s"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.c" FROM="gcc-arm/cmsis/device/system_stm32f4xx.c"/>
+      <SOURCE NAME="cmsis/device/stm32f4xx.h" FROM="gcc-arm/cmsis/device/stm32f4xx.h"/>
+	  <SOURCE NAME="cmsis/device/stm32f4xx_it.h" FROM="gcc-arm/cmsis/device/stm32f4xx_it.h"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.h" FROM="gcc-arm/cmsis/device/system_stm32f4xx.h"/>
+      <SOURCE NAME="STM32F401XE.ld" FROM="gcc-arm/STM32F401XE.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f4xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F401xx" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+	  <OPTION TOOL="LD" NAME="-nostdlib"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F401VE">
+      <SOURCE NAME="cmsis/device/startup_stm32f401xx.s" FROM="gcc-arm/cmsis/device/startup_stm32f401xx.s"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.c" FROM="gcc-arm/cmsis/device/system_stm32f4xx.c"/>
+      <SOURCE NAME="cmsis/device/stm32f4xx.h" FROM="gcc-arm/cmsis/device/stm32f4xx.h"/>
+	  <SOURCE NAME="cmsis/device/stm32f4xx_it.h" FROM="gcc-arm/cmsis/device/stm32f4xx_it.h"/>
+      <SOURCE NAME="cmsis/device/system_stm32f4xx.h" FROM="gcc-arm/cmsis/device/system_stm32f4xx.h"/>
+      <SOURCE NAME="STM32F401XE.ld" FROM="gcc-arm/STM32F401XE.ld"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f4xx.h"/>
+      <OPTION TOOL="CC" NAME="-D" VALUE="STM32F401xx" DEFAULT="1"/>
+      <OPTION TOOL="LD" NAME="-nostartfiles"/>
+	  <OPTION TOOL="LD" NAME="-nostdlib"/>
+    </CONTROLLER>
+  </FAMILY>
+  
+  <!-- Compiler Detection -->
+  <!--Yagarto tool chain-->
+  <DETECT KEYLOC="HKEY_CURRENT_USER\Software\yagarto" LEVELS="2" TYPE="ANONYMOUS" KEY="InstallDir" SUF="bin/arm-none-eabi-gcc.exe" DATE="2010-04-29">
+    <CHECK ARG="--ver" STR="arm-none-eabi-gcc"/>
+    <CHECK ARG="-dumpmachine" STR="arm-none-eabi"/>
+  </DETECT>
+  <DETECT PATH="%PROGRAMFILES%/yagarto" SUF="bin/arm-none-eabi-gcc.exe" DATE="2010-04-29">
+    <CHECK ARG="--ver" STR="arm-none-eabi-gcc"/>
+    <CHECK ARG="-dumpmachine" STR="arm-none-eabi"/>
+  </DETECT>
+  <!--CodeSourcery tool chain-->
+  <DETECT PATH="%PROGRAMFILES%/CodeSourcery/Sourcery G++ Lite" SUF="bin/arm-none-eabi-gcc.exe" DATE="2010-04-17">
+    <CHECK ARG="--ver" STR="arm-none-eabi"/>
+    <CHECK ARG="-dumpmachine" STR="arm-none-eabi"/>
+  </DETECT>
+  <PATH ADD="%COMPILER_DIR%/bin"/>
+  <!-- File Types -->
+  <FILE NAME="c" DESC="C Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="cpp" DESC="C++ Source" CATEGORY="Source" SOURCE="1" ICON="project_c++.png"/>
+  <FILE NAME="s" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="ld" DESC="Linker Script" CATEGORY="Linker Script" SOURCE="1" ICON="project_other.png"/>
+  <FILE NAME="lib" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="elf" DESC="ELF" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="o" DESC="Object" CATEGORY="Intermediate Binary"/>
+  <!-- Compiler -->
+  <PROCESS TOOL="CC" NAME="C Compiler" CMDLINE="$(CC) -c $(CCFLAGS) %OPTIONS%  %INFILE_QUOTED% -o %OUTFILE_QUOTED% ">
+    <FILE OUTPUT="o">
+      <FILE INPUT="c"/>
+      <FILE INPUT="cpp"/>
+      <FILE TEMP="d" NAME="%OUTFILE_DIR%\%OUTFILE_NAME%.d"/>
+    </FILE>
+    <OPTION NAME="-g" VALUE="dwarf-2" DEFAULT="1"/>
+    <OPTION NAME="-fomit-frame-pointer" DEFAULT="1"/>
+    <OPTION NAME="-W" VALUE="all" DEFAULT="1"/>
+    <OPTION NAME="-fverbose-asm" DEFAULT="1"/>
+    <OPTION NAME="-MD" DEFAULT="1"/>
+    <OPTION NAME="-MP" DEFAULT="1"/>
+    <OPTION NAME="-fsigned-char" DEFAULT="1"/>
+    <MESSAGE VALUE="^([^:]+):(\d+):(\d*):?\s+((f|F)atal\s)?((E|e)rror|(W|w)arning|(M|m)essage): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+      <FIELD NAME="COLUMN" POSITION="3" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker  -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="$(LD) $(LDFLAGS) %OPTIONS% -Wl,-Map,%OUTFILE_NAME%.map,--cref,--no-warn-mismatch,--start-group,--end-group,--gc-sections -o %OUTFILE_QUOTED% %INFILES_QUOTED% ">
+    <FILE OUTPUT="elf"/>
+    <FILE INPUT="o"/>
+    <FILE INPUT="ld" OPTION="LKR"/>
+    <MESSAGE VALUE="^([^:]+):(\d+):(\d*):?\s+((f|F)atal\s)?((E|e)rror|(W|w)arning|(M|m)essage): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+      <FIELD NAME="COLUMN" POSITION="3" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="$(ASM) $(ASMFLAGS) -c %OPTIONS% -o %OUTFILE_QUOTED% %INFILE_QUOTED%">
+    <FILE INPUT="s" OUTPUT="o" ERROR="ERR"/>
+    <FILE TEMP="hex"/>
+    <FILE TEMP="err"/>
+    <FILE TEMP="lst"/>
+    <OPTION NAME="-x " VALUE="assembler-with-cpp" DEFAULT="1"/>
+    <OPTION NAME="-g" VALUE="dwarf-2" DEFAULT="1"/>
+    <MESSAGE VALUE="^([^:]+):(\d+):(\d*):?\s+((f|F)atal\s)?((E|e)rror|(W|w)arning|(M|m)essage): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+      <FIELD NAME="COLUMN" POSITION="3" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Bin2Hex -->
+  <PROCESS TOOL="BIN2HEX" NAME="Bin2hex" CMDLINE="$(BIN2HEX) $(BIN2HEXFLAGS) %OPTIONS% %INFILE_QUOTED% %OUTFILE_QUOTED%">
+    <FILE OUTPUT="hex"/>
+    <FILE INPUT="elf"/>
+    <OPTION NAME="-O " VALUE="ihex"/>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="elf"/>
+    <OPTION TOOL="CC" NAME="-O" VALUE="0" DEFAULT="1"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <OPTION TOOL="CC" NAME="-O" VALUE="s" DEFAULT="1"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <SOURCE NAME="main.c" FROM="intmain.c" OPEN="1"/>
+</COMPILER>

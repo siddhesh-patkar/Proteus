@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Virtual Front Panel (Ethernet)</title>
+      <link rel="icon" type="image/png" href="favicon.png" />
+      <link rel="stylesheet" href="controls.css">
+      <style>    
+         body {
+            margin: 0;
+            padding: 0;
+         }          
+        
+         div.outer {
+            display: table;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+         }
+  
+         div.middle {
+            display: table-cell;
+            vertical-align: middle;
+         }
+
+         div.panel {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto; 
+         }      
+             
+         svg.panel   
+         {  border-style: solid;
+            border-width: 2px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+         }
+         
+         .canvas {
+            position: absolute;
+         } 
+
+         p.error  {
+            font-weight : bold;
+            background-color: white;
+            color :  #FF0000;
+         }
+         
+         textarea {
+            font-family: inherit;
+            font-size: inherit;
+         }     
+                     
+      </style>      
+
+      <script>
+         var loadedScripts = [];
+         
+         function require (filename) {
+            // This function provides a bypass for script loading under the simulator. We know the script we are trying to load and we know, potentially that we are 
+            // running under a simulator etc. So now, if we are under the simulator, we can re-direct the script request back to the dev browser.                        
+            for (var i in loadedScripts)
+               if (loadedScripts[i] == filename)
+                  return;
+            
+            var newScript = document.createElement("script");
+            var content = "";            
+         
+            loadedScripts.push(filename);
+            
+            if (typeof(viewer) == "object") 
+               content = viewer.loadLibrary(filename);
+               
+            if (content.length > 0)
+               newScript.appendChild(document.createTextNode(content));
+            else {  
+               newScript.src = filename;           
+               newScript.type = "text/javascript";
+               newScript.async = false;
+            }
+            document.head.appendChild(newScript);
+         }
+         require('panel.js');
+         require('controls.js');
+
+      </script>
+
+ 
+      <script>
+         // The code here implements the transport protocol between the controls and the Iot application.
+         // It can be changed to use alternate transport mechanisms and formatting as required for a particular platform.
+         var statusFails = 0;
+         var statusAbort = false;
+         function statusRequest() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.timeout = 0;
+            xhttp.onreadystatechange = function() {
+               if (xhttp.readyState == 4 && !statusAbort) {
+                  if (xhttp.status == 200) {
+                     parseResponse(xhttp.responseText);
+                     statusFails = 0;
+                     statusRequest(); 
+                  }
+                  else if (statusFails < 30) {
+                     // If the status request fails then try to re-make it every second.
+                     statusFails += 1;
+                     window.setTimeout(statusRequest, 1000); 
+                  }
+                  else {
+                     // Failed to reconnect - show an error:
+                     var container = document.getElementById("container");                     
+                     container.innerHTML = "<P class=\"error\">Lost connection to VFP Server</P>";                     
+                  }                       
+               }
+            };                  
+            xhttp.open("GET", "status", true);
+            xhttp.send();
+         }
+         
+         function postMessage (id, msg) {
+            var xhttp = new XMLHttpRequest();
+            var params = "";
+            xhttp.open("POST", id, true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            if (msg === undefined)
+               xhttp.send();
+            else {
+               if (typeof(msg)!='Array')
+                  msg = [ msg ];               
+               for (var i in msg) { 
+                  if (typeof(msg[i]) === 'string')
+                     msg[i] = JSON.stringify(msg[i]);
+                  if (i > 0)
+                     params = params+',';   
+                  params = params + msg[i];
+               }
+               xhttp.send(params+'\n');
+            }
+         }
+
+
+      </script>
+       
+   </head>
+
+<body onload="initPage()">
+    <div class="outer">
+      <div class="middle">
+        <div id="container" class="panel"><P>Loading panel graphics...</P></div>
+      </div>
+    </div>
+</body>
+
+</HTML>
+

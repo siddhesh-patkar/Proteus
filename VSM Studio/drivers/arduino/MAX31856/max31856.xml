@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Adafruit MAX31856 THC Converter -->
+<DRIVER HEADER="Adafruit_MAX31856.h">
+   <REQUIRE HEADER="SPI.h"/>
+   
+   <!-- TCTYPES enumeration -->
+   <ENUMERATION NAME="TCTYPES">
+      <CONSTANT NAME="TCTYPE_B" VALUE="0"/>
+      <CONSTANT NAME="TCTYPE_E" VALUE="1"/>
+      <CONSTANT NAME="TCTYPE_J" VALUE="2"/>
+      <CONSTANT NAME="TCTYPE_K" VALUE="3"/>
+      <CONSTANT NAME="TCTYPE_N" VALUE="4"/>
+      <CONSTANT NAME="TCTYPE_R" VALUE="5"/>
+      <CONSTANT NAME="TCTYPE_S" VALUE="6"/>
+      <CONSTANT NAME="TCTYPE_T" VALUE="7"/>
+   </ENUMERATION>
+
+   <!-- Methods with parameters -->
+   <METHOD NAME="setThermocoupleType" DESC="Set the Thermocouple type.">
+      <PARAMETER NAME="type" TYPE="TCTYPES" DEFAULT="TCTYPE_K" DESC="Thermocouple Type."/>
+   </METHOD>
+   <METHOD NAME="setTempFaultThresholds" DESC="Set the Temperature Thresholds.">
+      <PARAMETER NAME="tchLow"  TYPE="FLOAT" DEFAULT="-1024.0" DESC="Low Threshold Value."/>
+      <PARAMETER NAME="tchHigh" TYPE="FLOAT" DEFAULT="2047.0"  DESC="High Threshold Value."/>
+   </METHOD>
+   <METHOD NAME="setColdJunctionFaultThreshholds" DESC="Set the Temperature Thresholds.">
+      <PARAMETER NAME="cjcLow"  TYPE="INTEGER" DEFAULT="-64" DESC="Low Threshold Value."/>
+      <PARAMETER NAME="cjcHigh" TYPE="INTEGER" DEFAULT="127" DESC="High Threshold Value."/>
+   </METHOD>
+
+   <!-- Methods -->
+   <METHOD NAME="oneShotTemperature" DESC="Start a conversion.">
+   </METHOD>
+   <METHOD NAME="getThermocoupleType" DESC="Get the Thermocouple type.">
+      <RETURN NAME="type"  TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="readFault" DESC="Read the Fault Code.">
+      <RETURN NAME="fault"  TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="readCJTemperature" DESC="Get the Cold junction Temperature in °C.">
+      <RETURN NAME="cjt"  TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="readThermocoupleTemperature" DESC="Get the Thermocouple Temperature in °C.">
+      <RETURN NAME="temp"  TYPE="FLOAT"/>
+   </METHOD>
+
+</DRIVER>

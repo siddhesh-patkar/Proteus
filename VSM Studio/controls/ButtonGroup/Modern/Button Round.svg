@@ -1,0 +1,54 @@
+<svg height="110" width="110" xmlns:vfp="http://www.labcenter.com/namespaces/vfp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="ButtonWhiteRound1" x1="85.36" y1="85.36" x2="14.64" y2="14.64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.3"/>
+      <stop offset="0.56" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ButtonWhiteRound2" x1="24.39" y1="24.39" x2="75.61" y2="75.61" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.4"/>
+      <stop offset="0.43" stop-opacity="0.21"/>
+      <stop offset="0.5" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ButtonWhiteRound3" x1="73.86" y1="73.86" x2="26.14" y2="26.14" gradientUnits="userSpaceOnUse">
+      <stop offset="0.44" stop-opacity="0"/>
+      <stop offset="1" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="ButtonWhiteRound4" x1="24.25" y1="24.25" x2="75.75" y2="75.75" xlink:href="#ButtonWhiteRound2"/>
+    <linearGradient id="ButtonWhiteRound5" x1="71.88" y1="71.88" x2="28.12" y2="28.12" xlink:href="#ButtonWhiteRound3"/>
+    <radialGradient id="ButtonWhiteRound6" cx="50" cy="50" r="30.94" xlink:href="#ButtonWhiteRound3"/>
+  </defs>
+  
+  <vfp:catalogue
+     PREFIX="Btn"
+     ELEMENTS="2,3,4,5,6,7,8"
+     CATEGORY="Buttons"
+     DESC="Radio-Buttons (Round)" />
+
+  <g style="display:inline"
+      vfp:class="ButtonGroup">
+      <g class="element">
+    <circle class="bounds" cx="50" cy="50" r="50" style="fill: #fffef5"/>
+    <circle cx="50" cy="50" r="50" style="fill: url(#ButtonWhiteRound1)"/>
+    <circle class="lamp" cx="50" cy="50" r="36.25" style="fill: #e30613"/>
+    <g>
+      <path d="M50,16.25a33.75,33.75,0,1,1-23.86,9.89A33.64,33.64,0,0,1,50,16.25m0-2.47h0A36.22,36.22,0,1,0,75.61,24.39,36,36,0,0,0,50,13.78Z" style="fill: url(#ButtonWhiteRound2)"/>
+      <circle class="buttonFace" cx="50" cy="50" r="33.75" style="fill: #fffef5"/>
+      <circle cx="50" cy="50" r="33.75" style="fill: url(#ButtonWhiteRound3)"/>
+    </g>
+    <g display="none">
+    	
+      <path d="M50,19.28a30.72,30.72,0,1,1-21.72,9,30.62,30.62,0,0,1,21.72-9m0-5.7h0A36.42,36.42,0,1,0,75.75,24.25,36.18,36.18,0,0,0,50,13.58Z" style="fill: url(#ButtonWhiteRound4)"/>
+      <circle class="buttonFace" cx="50" cy="50" r="30.94" style="fill: #fffef5"/>
+      <circle cx="50" cy="50" r="30.94" style="fill: url(#ButtonWhiteRound5)"/>
+      <circle cx="50" cy="50" r="30.94" style="fill: url(#ButtonWhiteRound6)"/>
+    </g>
+    <text
+       id="text4145"
+       y="-10"
+       x="50"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#00000c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve">label</text>
+  </g>
+  </g>
+
+</svg>

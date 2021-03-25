@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino DHT11 Humidity Temperature Breakout Board.pdsclip" DESC="Arduino DHT11 Humidity and Temperature Breakout Board" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="DHT11 Humidity Temperature" ELEMENT="HTS1">
+      <INTERFACE OBJECT="DHTXX">
+         <PIN NAME="data" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO8"/>
+         </PIN>
+         <!-- TYPE allows DHT11=11 (low accuracy sensor) and DHT22=22 (high accuracy sensor) -->
+         <PROPERTY NAME="TYPE" ELEMENT="HTS1" TYPE="INTEGER"/>
+         <SETUP NAME="begin"/>
+      </INTERFACE>
+      <DRIVER FILE="dhtxx/dhtxx.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

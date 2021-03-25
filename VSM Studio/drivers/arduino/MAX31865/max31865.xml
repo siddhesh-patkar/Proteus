@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino MCP49x1 DAC converter -->
+<DRIVER HEADER="Adafruit_MAX31865.h">
+   <REQUIRE HEADER="SPI.h"/>
+   
+   <!-- NUMWIRES enumeration -->
+   <ENUMERATION NAME="NUMWIRES">
+      <CONSTANT NAME="NUM_2WIRE" VALUE="0"/>
+      <CONSTANT NAME="NUM_3WIRE" VALUE="1"/>
+      <CONSTANT NAME="NUM_4WIRE" VALUE="0"/>
+   </ENUMERATION>
+
+   <!-- BIAS enumeration -->
+   <ENUMERATION NAME="BIAS">
+      <CONSTANT NAME="OFF" VALUE="0"/>
+      <CONSTANT NAME="ON"  VALUE="1"/>
+   </ENUMERATION>
+   
+   <!-- AUTOCONV enumeration -->
+   <ENUMERATION NAME="AUTOCONV">
+      <CONSTANT NAME="OFF" VALUE="0"/>
+      <CONSTANT NAME="ON"  VALUE="1"/>
+   </ENUMERATION>
+
+   <!-- Methods with parameters -->
+   <METHOD NAME="setWires" DESC="Set Number of Wires. Select jumper accordingly">
+      <PARAMETER NAME="wireNum" TYPE="NUMWIRES" DEFAULT="NUM_4WIRE" DESC="Number of Wires."/>
+   </METHOD>
+   <METHOD NAME="enableBias" DESC="Enable/Disable Bias.">
+      <PARAMETER NAME="eb" TYPE="BIAS" DEFAULT="OFF" DESC="Off/On"/>
+   </METHOD>
+   <METHOD NAME="autoConvert" DESC="Enable/Disable Automatic Conversion.">
+      <PARAMETER NAME="ac" TYPE="AUTOCONV" DEFAULT="OFF" DESC="Off/On"/>
+   </METHOD>
+   <METHOD NAME="temperature" DESC="Get Temperature Value in °C.">
+      <RETURN NAME="t"    TYPE="FLOAT"/>
+      <PARAMETER NAME="nomRtd" TYPE="FLOAT" DEFAULT="100.0" DESC="Nominal RTD resistance @ 0 Celsius Degree"/>
+      <PARAMETER NAME="refRes" TYPE="FLOAT" DEFAULT="430.0" DESC="Reference Resistor."/>
+   </METHOD>
+   <METHOD NAME="resistance" DESC="Get RTD Resistance Value in Ohms.">
+      <RETURN NAME="rtd"     TYPE="FLOAT"/>
+      <PARAMETER NAME="nomRtd" TYPE="FLOAT" DEFAULT="100.0" DESC="Nominal RTD resistance @ 0 Celsius Degree"/>
+      <PARAMETER NAME="refRes" TYPE="FLOAT" DEFAULT="430.0" DESC="Reference Resistor."/>
+   </METHOD>
+
+   <!-- Methods -->
+   <METHOD NAME="readRTD" DESC="Read RTD value in rows units.">
+      <RETURN NAME="rdt"  TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="readFault" DESC="Read Fault condition.">
+      <RETURN NAME="fault"  TYPE="INTEGER"/>
+   </METHOD>
+   <METHOD NAME="clearFault" DESC="Clear Fault condition.">
+   </METHOD>
+
+</DRIVER>
+

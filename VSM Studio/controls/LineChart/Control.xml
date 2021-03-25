@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<CONTROL>
+   <CONFIG>
+	  <ENUMERATION NAME="TIMEUNIT">
+         <CONSTANT NAME="Second" VALUE="0"/>
+         <CONSTANT NAME="Minute" VALUE="1"/>
+         <CONSTANT NAME="Hour"   VALUE="2"/>
+         <CONSTANT NAME="Day"    VALUE="3"/>
+         <CONSTANT NAME="Week"   VALUE="4"/>
+	  </ENUMERATION>
+	  
+	  <ENUMERATION NAME="YAXIS">
+	     <CONSTANT NAME="Left"  VALUE="0"/>
+	     <CONSTANT NAME="Right" VALUE="1"/>
+	  </ENUMERATION>           
+     
+     <TYPE NAME="COLUMN" DESC="Column Settings">
+         <PROPERTY NAME="name" TYPE="STRING" DESC="Name of this data"/>
+	      <PROPERTY NAME="axis" TYPE="YAXIS" DESC="Axis for this column"/>
+	      <PROPERTY NAME="colour" TYPE="RGB" DESC="Colour for this column"/>
+         <PROPERTY NAME="min" TYPE="FLOAT" DEFAULT="0" DESC="Minimum y value"/>
+   	   <PROPERTY NAME="max" TYPE="FLOAT" DEFAULT="0" DESC="Maximum y value"/>
+     </TYPE>
+          
+     <PROPERTY NAME="titleText" TYPE="STRING" DEFAULT="" DESC="Chart Title"/>
+     <PROPERTY NAME="titleFontSize" TYPE="INTEGER" MIN="10" MAX="100" DEFAULT="15" DESC="Font size for chart title"/>
+     <PROPERTY NAME="showLegend" TYPE="BOOLEAN" DEFAULT="1" DESC="Show the legend (column names, colours)"/>
+     <PROPERTY NAME="pointRadius" TYPE="INTEGER" DEFAULT="3" DESC="Line width for the data points or zero to hide"/>
+     <PROPERTY NAME="lineWidth" TYPE="INTEGER" DEFAULT="1" DESC="Line width for the chart trace"/>
+     <PROPERTY NAME="labelFontSize" TYPE="INTEGER" MIN="10" MAX="100" DEFAULT="15" DESC="Font size for labels"/>
+     <PROPERTY NAME="scaleFontSize" TYPE="INTEGER" MIN="10" MAX="100" DEFAULT="15" DESC="Font size for scale values"/>
+     <PROPERTY NAME="backGroundColour" TYPE="RGB" DESC="Colour for chart background"/>
+     
+     
+     <GROUP NAME="xRange">
+         <PROPERTY NAME="min" TYPE="FLOAT" DEFAULT="0" DESC="Minimum x value"/>
+   	   <PROPERTY NAME="max" TYPE="FLOAT" DEFAULT="100" DESC="Maximum x value"/>
+     </GROUP>
+
+     <GROUP NAME="timeRange">
+         <PROPERTY NAME="unit" TYPE="TIMEUNIT" DEFAULT="0" DESC="Time unit"/>
+   	   <PROPERTY NAME="range" TYPE="INTEGER" DEFAULT="60" DESC="Number of time units to display"/>
+   	   <PROPERTY NAME="absolute" TYPE="BOOLEAN" DEFAULT="1" DESC="Use absolute times/dates"/>
+     </GROUP>
+
+     <PROPERTY NAME="numColumns" TYPE="INTEGER" MIN="1" MAX="10" DEFAULT="1" DESC="Number of Data Columns"/>
+     
+     <GROUP NAME="columns">
+        <PROPERTY NAME="0" TYPE="COLUMN" DESC="Settings for column 0"/>
+        <PROPERTY NAME="1" TYPE="COLUMN" DESC="Settings for column 1"/>
+        <PROPERTY NAME="2" TYPE="COLUMN" DESC="Settings for column 2"/>
+        <PROPERTY NAME="3" TYPE="COLUMN" DESC="Settings for column 3"/>
+        <PROPERTY NAME="4" TYPE="COLUMN" DESC="Settings for column 4"/>
+        <PROPERTY NAME="5" TYPE="COLUMN" DESC="Settings for column 5"/>
+        <PROPERTY NAME="6" TYPE="COLUMN" DESC="Settings for column 6"/>
+        <PROPERTY NAME="7" TYPE="COLUMN" DESC="Settings for column 7"/>
+        <PROPERTY NAME="8" TYPE="COLUMN" DESC="Settings for column 8"/>
+        <PROPERTY NAME="9" TYPE="COLUMN" DESC="Settings for column 9"/>
+     </GROUP>
+     
+   </CONFIG>
+
+   <!-- Driver Descriptor for Line Chart -->
+   <DRIVER HEADER="Controls">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+        <REQUIRE MODULE="STORAGE"/>
+   	  <RESOURCE FILE="scripts/chart.js"/>
+   	  <RESOURCE FILE="scripts/moment.js"/>
+
+   	  <ENUMERATION NAME="TIMEUNIT">
+            <CONSTANT NAME="SECOND" VALUE="0"/>
+            <CONSTANT NAME="MINUTE" VALUE="1"/>
+            <CONSTANT NAME="HOUR"   VALUE="2"/>
+            <CONSTANT NAME="DAY"    VALUE="3"/>
+            <CONSTANT NAME="WEEK"   VALUE="4"/>
+        </ENUMERATION>      
+
+   	  <ENUMERATION NAME="AXIS"> 
+   	     <CONSTANT NAME="LEFT"  VALUE="0"/>
+   	     <CONSTANT NAME="RIGHT" VALUE="1"/>
+   	  </ENUMERATION>      
+   	  
+   	  <METHOD NAME="setXrange" DESC="Set a range for the x axis.">
+   	      <PARAMETER NAME="min" TYPE="FLOAT" DEFAULT="0" DESC="Minimum x value"/>
+   	      <PARAMETER NAME="max" TYPE="FLOAT" DEFAULT="0" DESC="Maximum x value"/>
+   	  </METHOD>
+
+        <METHOD NAME="setTimeRange" DESC="Set a range for the x axis.">
+   	      <PARAMETER NAME="unit" TYPE="TIMEUNIT" DEFAULT="SECOND" DESC="Time units"/>
+   	      <PARAMETER NAME="range" TYPE="INTEGER" DEFAULT="60" DESC="Number of time units to display"/>
+   	      <PARAMETER NAME="absolute" TYPE="BOOLEAN" DEFAULT="FALSE" DESC="Use absolute times/dates"/>
+   	  </METHOD>
+   	  
+   	  <METHOD NAME="setYrange" DESC="Set a range for the specified y axis.">
+   	      <PARAMETER NAME="axis" TYPE="AXIS" DEFAULT="LEFT" DESC="Axis to set"/>
+   	      <PARAMETER NAME="min" TYPE="FLOAT" DEFAULT="0" DESC="Suggested minimum y value"/>
+   	      <PARAMETER NAME="max" TYPE="FLOAT" DEFAULT="0" DESC="Suggested Maximum y value"/>
+        </METHOD>
+
+        <METHOD NAME="showColumn" DESC="Show or hide a data set.">
+    	      <PARAMETER NAME="column" TYPE="INTEGER" DEFAULT="0" DESC="Column number in data"/>
+    	      <PARAMETER NAME="visible" TYPE="BOOLEAN" DEFAULT="FALSE" DESC="Show/Hide the column data."/> 	      
+   	  </METHOD>	  	  
+
+        <METHOD NAME="setDataFile" DESC="Specify a filename to use for the graph data">
+   	     <PARAMETER NAME="filename" TYPE="STRING" DESC="Filename containing the data set"/>
+   	  </METHOD>
+
+        <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+           <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+        </METHOD>
+
+        <METHOD NAME="writeData" DESC="Append a new line of data to the graph.">
+   	     <PARAMETER TYPE="LIST"/>
+   	  </METHOD>
+        
+        <METHOD NAME="clearData" DESC="Clear the data stored in the graph."/>
+   </DRIVER>
+</CONTROL>  

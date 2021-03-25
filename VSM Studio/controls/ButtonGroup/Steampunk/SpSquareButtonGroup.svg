@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 51.79 51.79"
+   version="1.1"
+   width="55"
+   height="55"
+   id="svg4756"
+   sodipodi:docname="SpSquareButtonGroup.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata4760">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1417"
+     id="namedview4758"
+     showgrid="false"
+     inkscape:zoom="13.762572"
+     inkscape:cx="15.061127"
+     inkscape:cy="24.639649"
+     inkscape:current-layer="g4736"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <defs
+     id="defs4720">
+    <radialGradient
+       id="SpRadioButtonSquare1"
+       cx="-11.61"
+       cy="-10.77"
+       r="88.84"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#65410f"
+         id="stop4672" />
+      <stop
+         offset="0.02"
+         stop-color="#6d4b15"
+         id="stop4674" />
+      <stop
+         offset="0.17"
+         stop-color="#ac9d44"
+         id="stop4676" />
+      <stop
+         offset="0.28"
+         stop-color="#d3cf61"
+         id="stop4678" />
+      <stop
+         offset="0.33"
+         stop-color="#e2e36c"
+         id="stop4680" />
+      <stop
+         offset="0.66"
+         stop-color="#af7a1d"
+         id="stop4682" />
+      <stop
+         offset="1"
+         stop-color="#65410f"
+         id="stop4684" />
+    </radialGradient>
+    <radialGradient
+       id="SpRadioButtonSquare1-2"
+       cx="47.42"
+       cy="47.5"
+       fx="39.297638860803076"
+       r="66.36"
+       xlink:href="#SpRadioButtonSquare1" />
+    <linearGradient
+       id="SpSquareButton-2"
+       data-name="New Gradient 5"
+       x1="-680.55"
+       y1="228.58"
+       x2="-682.17"
+       y2="228.58"
+       gradientTransform="translate(688.64 -202.68)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         id="stop4688" />
+      <stop
+         offset="0.16"
+         stop-color="#e4e4e4"
+         id="stop4690" />
+      <stop
+         offset="1"
+         stop-color="#b0a9a9"
+         id="stop4692" />
+    </linearGradient>
+    <radialGradient
+       id="SpRadioButtonSquare1-3"
+       cx="47.42"
+       cy="47.5"
+       fx="38.99293448961664"
+       r="65.85"
+       xlink:href="#SpRadioButtonSquare1" />
+    <radialGradient
+       id="SpRadioButtonSquare1-4"
+       cx="-662.72"
+       cy="262.97"
+       r="17.88"
+       gradientTransform="translate(688.64,-237.02)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         stop-opacity="0.1"
+         id="stop4696"
+         style="stop-color:#000000;stop-opacity:0.01869159" />
+      <stop
+         offset="0.4"
+         stop-color="#dfdad4"
+         stop-opacity="0.3"
+         id="stop4698"
+         style="stop-color:#000000;stop-opacity:0.07009346" />
+      <stop
+         offset="1"
+         stop-color="#8e8b8b"
+         stop-opacity="0.4"
+         id="stop4700"
+         style="stop-color:#000000;stop-opacity:0.42289719" />
+    </radialGradient>
+    <linearGradient
+       id="SpSquareButton-2-2"
+       x1="-644.83"
+       y1="228.63"
+       x2="-646.32"
+       y2="228.63"
+       xlink:href="#SpSquareButton-2" />
+    <linearGradient
+       id="SpRadioSquareButton-3"
+       x1="0"
+       y1="2.02"
+       x2="51.79"
+       y2="2.02"
+       xlink:href="#SpRadioButtonSquare1" />
+    <linearGradient
+       id="SpRadioSquareButton-3-2"
+       y1="49.76"
+       x2="51.79"
+       y2="49.76"
+       gradientTransform="matrix(1,0,0,-1,0,99.53)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#65410f"
+         id="stop4705" />
+      <stop
+         offset="0.34"
+         stop-color="#af7a1d"
+         id="stop4707" />
+      <stop
+         offset="0.67"
+         stop-color="#e2e36c"
+         id="stop4709" />
+      <stop
+         offset="0.72"
+         stop-color="#d3cf61"
+         id="stop4711" />
+      <stop
+         offset="0.83"
+         stop-color="#ac9d44"
+         id="stop4713" />
+      <stop
+         offset="0.98"
+         stop-color="#6d4b15"
+         id="stop4715" />
+      <stop
+         offset="1"
+         stop-color="#65410f"
+         id="stop4717" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#SpRadioButtonSquare1"
+       id="SpRadioSquareButton-4"
+       gradientUnits="userSpaceOnUse"
+       cx="-11.61"
+       cy="-10.77"
+       r="88.84"
+       gradientTransform="matrix(0.96,0,0,0.96,0,2.0716)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#SpSquareButton-2"
+       id="SpSquareButton-5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(688.64,-202.68)"
+       x1="-680.55"
+       y1="228.58"
+       x2="-682.17"
+       y2="228.58" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#SpRadioButtonSquare1-4"
+       id="SpSquareButton-6"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(688.64,-237.02)"
+       cx="-662.72"
+       cy="262.97"
+       r="17.88" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#SpRadioButtonSquare1-4"
+       id="SpRadioButtonSquare6532"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(688.64,-237.02)"
+       cx="-662.72"
+       cy="262.97"
+       r="17.88" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#SpRadioButtonSquare540"
+       id="SpRadioButtonSquare542"
+       x1="11.26243"
+       y1="11.099933"
+       x2="27.175154"
+       y2="27.157978"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-7.6853896,-7.1413308)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="SpRadioButtonSquare540">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop4536" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0"
+         offset="1"
+         id="stop4538" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4584"
+       x="-0.072463407"
+       width="1.1449268"
+       y="-0.071542483"
+       height="1.143085">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.0654104"
+         id="feGaussianBlur4586" />
+    </filter>
+  </defs>
+  <vfp:catalogue
+     PREFIX="Btn"
+     ELEMENTS="2,3,4,5,6,7,8"
+     CATEGORY="Buttons"
+     DESC="Radio-Buttons (Square)" />
+  <g
+     vfp:class="ButtonGroup"
+     id="layer1"
+     transform="translate(1.03559,-1.0354249)">
+    <g
+       class="element"
+       id="g10">
+      <rect
+         style="opacity:1;fill:#fffffe;fill-opacity:1;stroke-width:0.99436796"
+         id="rect4531"
+         width="48.408581"
+         height="48.191826"
+         x="0.72251618"
+         y="2.8756592" />
+      <path
+         style="fill:url(#SpRadioSquareButton-4);fill-rule:evenodd;stroke-width:0.95999998"
+         inkscape:connector-curvature="0"
+         id="path4724"
+         d="M 0,2.0716 V 51.79 H 49.7184 V 2.0716 Z M 45.8304,47.902 H 3.84 V 5.9116 h 41.952 z"
+         class="bounds" />
+      <polygon
+         style="display:inline;fill:#be1622;fill-rule:evenodd"
+         id="polygon4726"
+         points="6.47,6.47 45.31,6.47 45.31,45.31 6.47,45.31 "
+         class="lamp"
+         transform="matrix(0.96,0,0,0.96,0,2.0716)" />
+      <g
+         id="g4736"
+         style="display:inline"
+         transform="matrix(0.96,0,0,0.96,0,2.0716)">
+        <path
+           style="display:inline;fill:url(#SpRadioButtonSquare1-2);fill-rule:evenodd"
+           inkscape:connector-curvature="0"
+           id="path4728"
+           d="M 4,4 V 47.7 H 47.7 V 4 Z M 45.31,45.31 H 6.47 V 6.47 h 38.84 z" />
+        <polygon
+           style="display:inline;opacity:0.66000001;fill:#000100;fill-rule:evenodd"
+           id="polygon4730"
+           points="7.76,46.92 46.06,46.92 46.06,6.34 6.47,6.34 6.48,6.47 45.31,6.47 45.31,45.31 8.04,45.31 " />
+        <polygon
+           points="43.81,8.07 43.81,43.84 8.04,43.84 8.04,8.07 "
+           id="polygon4781"
+           style="display:inline;opacity:0.41458734;fill:url(#SpSquareButton-6);fill-rule:evenodd"
+           transform="matrix(1.0858261,0,0,1.0858261,-2.2600421,-2.2926169)" />
+        <polygon
+           style="display:inline;opacity:0.5;fill:url(#SpSquareButton-5);fill-rule:evenodd"
+           id="polygon4732"
+           points="6.47,6.47 8.09,6.47 8.09,45.31 6.47,45.31 " />
+        <polygon
+           style="display:inline;opacity:0.51000001;fill:#ffffff;fill-rule:evenodd"
+           id="polygon4734"
+           points="45.31,6.34 45.31,7.96 6.47,7.96 6.47,6.34 " />
+        <path
+           style="display:inline;fill:url(#SpRadioButtonSquare542);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4584)"
+           d="M 1.3245546,37.019283 36.56506,1.3428115 C -3.6508514,1.8172507 1.7239633,-4.1965285 1.3245546,37.019283 Z"
+           id="path4534"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccc"
+           transform="matrix(1.0358,0,0,1.0358,6.6680263,6.9654267)" />
+      </g>
+      <g
+         id="g4748"
+         style="display:none"
+         transform="matrix(0.96,0,0,0.96,0,2.0716)">
+        <path
+           style="fill:url(#SpRadioButtonSquare1-3);fill-rule:evenodd"
+           inkscape:connector-curvature="0"
+           id="path4738"
+           d="M 4,4 V 47.7 H 47.7 V 4 Z M 43.81,43.84 H 8 V 8.07 h 35.81 z" />
+        <polygon
+           style="opacity:0.66000001;fill:#000100;fill-rule:evenodd"
+           id="polygon4740"
+           points="8.05,8.07 43.81,8.07 43.81,43.84 9.48,43.84 9.22,45.31 44.5,45.31 44.5,7.94 8.04,7.94 " />
+        <polygon
+           style="display:inline;opacity:0.5;fill:url(#SpRadioButtonSquare6532);fill-rule:evenodd"
+           id="polygon4742"
+           points="43.81,8.07 43.81,43.84 8.04,43.84 8.04,8.07 " />
+        <polygon
+           style="opacity:0.5;fill:url(#SpSquareButton-2-2);fill-rule:evenodd"
+           id="polygon4744"
+           points="42.32,8.07 43.81,8.07 43.81,43.84 42.32,43.84 " />
+        <polygon
+           style="opacity:0.51000001;fill:#ffffff;fill-rule:evenodd"
+           id="polygon4746"
+           points="43.81,42.35 43.81,43.84 8.04,43.84 8.04,42.35 " />
+      </g>
+      <polygon
+         style="display:inline;fill:url(#SpRadioSquareButton-3);fill-rule:evenodd"
+         id="polygon4750"
+         points="51.79,0 47.74,4.05 4.05,4.05 0,0 "
+         transform="matrix(0.96,0,0,0.96,0,2.0716)" />
+      <polygon
+         style="fill:url(#SpRadioSquareButton-3-2);fill-rule:evenodd"
+         id="polygon4752"
+         points="47.74,47.74 4.05,47.74 0,51.79 51.79,51.79 "
+         transform="matrix(0.96,0,0,0.96,0,2.0716)" />
+      <text
+         id="text5322"
+         y="74.847908"
+         x="-7.2355804"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.10623932px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:none"
+         xml:space="preserve">Label</text>
+    </g>
+  </g>
+</svg>

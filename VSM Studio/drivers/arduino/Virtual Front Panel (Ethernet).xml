@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Internet of Things" FILE="Arduino/Virtual Front Panel (Ethernet).pdsclip" DESC="VFP Server (Ethernet)" FAMILY="ARDUINO" >
+   <PERIPHERAL TYPE="VFP Server" ELEMENT="VFP1" >
+   
+      <INTERFACE OBJECT="VfpServer">
+          <PORT NAME="SPI"/>
+          <!-- Chip select active low -->
+          <PIN NAME="cs" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO10"/>
+          </PIN> 
+          <PROPERTY NAME="PORT" ELEMENT="VFP1" TYPE="INTEGER"/>
+          <SETUP NAME="begin">            
+               <PROPERTY NAME="MAC" ELEMENT="VFP1" TYPE="STRING"/>
+               <PROPERTY NAME="IP" ELEMENT="VFP1" TYPE="STRING"/>
+          </SETUP>         
+          <SERVER TYPE="VFP" TRANSPORT="ETHERNET" ELEMENT="VFP1"/>
+          <LOOP NAME="poll"/>
+      </INTERFACE>
+  
+      <!-- Firmware Driver -->
+      <DRIVER FILE="VfpEthernet/VfpServer.xml"/>
+
+   </PERIPHERAL>
+   
+   <PERIPHERAL TYPE="SD Card" ELEMENT="SD1" >
+      <INTERFACE OBJECT="FileStore" EXTERNAL="FS" >
+         <PORT NAME="SPI"/>
+         <SETUP NAME="begin">
+            <!-- Chip select active low -->
+            <PIN NAME="cs" TYPE="DIGITAL">
+               <TERMINAL ELEMENT="IO4"/>
+            </PIN> 
+         </SETUP>  
+         <STORAGE NAME="MANIFEST" ELEMENT="SD1"/>
+     </INTERFACE>
+     <DRIVER FILE="FileStore/FileStore.xml"/> 
+   </PERIPHERAL>
+   
+   <PERIPHERAL TYPE="Debug Terminal" ELEMENT="VT1" >   
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="SerialTerminal">
+     	<SETUP NAME="begin">
+          <PROPERTY NAME="BAUDRATE" ELEMENT="VT1" TYPE="INTEGER"/>
+       </SETUP>
+     </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER FILE="SerialTerminal/SerialTerminal.xml"/>
+   </PERIPHERAL>
+
+</CLIP>   
+  

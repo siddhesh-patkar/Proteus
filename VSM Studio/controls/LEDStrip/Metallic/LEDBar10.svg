@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 178.25 52.000001"
+   version="1.1"
+   id="svg4792"
+   sodipodi:docname="LEDBar10.svg"
+   inkscape:version="0.92.1 r15371"
+   width="178.25"
+   height="52">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview4794"
+     showgrid="false"
+     inkscape:zoom="6.1100323"
+     inkscape:cx="52.352987"
+     inkscape:cy="11.970944"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4792" />
+  <defs
+     id="defs194">
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="25.83"
+       x2="176.84"
+       y1="25.83"
+       x1="125.19"
+       data-name="Chrome 05"
+       id="Chrome_05">
+      <stop
+         id="stop4615"
+         stop-color="#bfc1c6"
+         offset="0" />
+      <stop
+         id="stop4617"
+         stop-color="#b8babe"
+         offset="0.02" />
+      <stop
+         id="stop4619"
+         stop-color="#a3a6a9"
+         offset="0.05" />
+      <stop
+         id="stop4621"
+         stop-color="#909395"
+         offset="0.08" />
+      <stop
+         id="stop4623"
+         stop-color="#a9abad"
+         offset="0.08" />
+      <stop
+         id="stop4625"
+         stop-color="#c4c5c6"
+         offset="0.09" />
+      <stop
+         id="stop4627"
+         stop-color="#dadbdb"
+         offset="0.1" />
+      <stop
+         id="stop4629"
+         stop-color="#ebebeb"
+         offset="0.1" />
+      <stop
+         id="stop4631"
+         stop-color="#f6f7f7"
+         offset="0.11" />
+      <stop
+         id="stop4633"
+         stop-color="#fdfdfd"
+         offset="0.13" />
+      <stop
+         id="stop4635"
+         stop-color="#fff"
+         offset="0.16" />
+      <stop
+         id="stop4637"
+         stop-color="#f2f2f3"
+         offset="0.18" />
+      <stop
+         id="stop4639"
+         stop-color="#d0d1d4"
+         offset="0.2" />
+      <stop
+         id="stop4641"
+         stop-color="#9a9ba2"
+         offset="0.23" />
+      <stop
+         id="stop4643"
+         stop-color="#6a6c75"
+         offset="0.25" />
+      <stop
+         id="stop4645"
+         stop-color="#6b6d76"
+         offset="0.25" />
+      <stop
+         id="stop4647"
+         stop-color="#7b7e85"
+         offset="0.26" />
+      <stop
+         id="stop4649"
+         stop-color="#87898f"
+         offset="0.27" />
+      <stop
+         id="stop4651"
+         stop-color="#8d9095"
+         offset="0.29" />
+      <stop
+         id="stop4653"
+         stop-color="#8f9297"
+         offset="0.35" />
+      <stop
+         id="stop4655"
+         stop-color="#8b8e93"
+         offset="0.36" />
+      <stop
+         id="stop4657"
+         stop-color="#808488"
+         offset="0.38" />
+      <stop
+         id="stop4659"
+         stop-color="#6e7276"
+         offset="0.4" />
+      <stop
+         id="stop4661"
+         stop-color="#54585c"
+         offset="0.41" />
+      <stop
+         id="stop4663"
+         stop-color="#4d5155"
+         offset="0.42" />
+      <stop
+         id="stop4665"
+         stop-color="#696c70"
+         offset="0.44" />
+      <stop
+         id="stop4667"
+         stop-color="#848589"
+         offset="0.46" />
+      <stop
+         id="stop4669"
+         stop-color="#9a9a9e"
+         offset="0.49" />
+      <stop
+         id="stop4671"
+         stop-color="#abaaae"
+         offset="0.52" />
+      <stop
+         id="stop4673"
+         stop-color="#b6b6ba"
+         offset="0.55" />
+      <stop
+         id="stop4675"
+         stop-color="#bdbcc0"
+         offset="0.61" />
+      <stop
+         id="stop4677"
+         stop-color="#bfbec2"
+         offset="0.75" />
+      <stop
+         id="stop4679"
+         stop-color="#bdbcc0"
+         offset="0.8" />
+      <stop
+         id="stop4681"
+         stop-color="#b6b6b9"
+         offset="0.82" />
+      <stop
+         id="stop4683"
+         stop-color="#abaaae"
+         offset="0.83" />
+      <stop
+         id="stop4685"
+         stop-color="#9a9a9d"
+         offset="0.85" />
+      <stop
+         id="stop4687"
+         stop-color="#858487"
+         offset="0.85" />
+      <stop
+         id="stop4689"
+         stop-color="#6a6a6b"
+         offset="0.86" />
+      <stop
+         id="stop4691"
+         stop-color="#4a4b4b"
+         offset="0.87" />
+      <stop
+         id="stop4693"
+         stop-color="#262727"
+         offset="0.88" />
+      <stop
+         id="stop4695"
+         stop-color="#1a1b1a"
+         offset="0.88" />
+      <stop
+         id="stop4697"
+         stop-color="#1a1b1a"
+         offset="0.93" />
+      <stop
+         id="stop4699"
+         stop-color="#3c3d3d"
+         offset="0.93" />
+      <stop
+         id="stop4701"
+         stop-color="#5d5f60"
+         offset="0.94" />
+      <stop
+         id="stop4703"
+         stop-color="#797c7d"
+         offset="0.95" />
+      <stop
+         id="stop4705"
+         stop-color="#8f9293"
+         offset="0.96" />
+      <stop
+         id="stop4707"
+         stop-color="#9ea1a3"
+         offset="0.97" />
+      <stop
+         id="stop4709"
+         stop-color="#a7aaac"
+         offset="0.98" />
+      <stop
+         id="stop4711"
+         stop-color="#aaadaf"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       y2="50.099998"
+       x2="178.57001"
+       y1="1.97"
+       x1="-0.050000001"
+       gradientTransform="rotate(-90,-0.005,0.005)"
+       gradientUnits="userSpaceOnUse"
+       id="LedStrip1-675"
+       xlink:href="#Chrome_05"
+       inkscape:collect="always" />
+    <linearGradient
+       xlink:href="#Chrome"
+       y2="49.790001"
+       x2="177.42"
+       y1="2.28"
+       x1="1.1"
+       id="LedStrip1-1-2" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="86.089996"
+       x2="51.650002"
+       y1="86.089996"
+       id="Chrome">
+      <stop
+         id="stop4727"
+         stop-color="#eeebe9"
+         offset="0" />
+      <stop
+         id="stop4729"
+         stop-color="#dfdede"
+         offset="0" />
+      <stop
+         id="stop4731"
+         stop-color="#dadada"
+         offset="0" />
+      <stop
+         id="stop4733"
+         stop-color="#f6f6f6"
+         offset="0.08" />
+      <stop
+         id="stop4735"
+         stop-color="#fff"
+         offset="0.11" />
+      <stop
+         id="stop4737"
+         stop-color="#f5f5f5"
+         offset="0.13" />
+      <stop
+         id="stop4739"
+         stop-color="#dbdbdb"
+         offset="0.17" />
+      <stop
+         id="stop4741"
+         stop-color="#b1b1b1"
+         offset="0.23" />
+      <stop
+         id="stop4743"
+         stop-color="#a1a1a1"
+         offset="0.25" />
+      <stop
+         id="stop4745"
+         stop-color="#a4a4a4"
+         offset="0.27" />
+      <stop
+         id="stop4747"
+         stop-color="#acacac"
+         offset="0.29" />
+      <stop
+         id="stop4749"
+         stop-color="#bababa"
+         offset="0.3" />
+      <stop
+         id="stop4751"
+         stop-color="#cecece"
+         offset="0.31" />
+      <stop
+         id="stop4753"
+         stop-color="#dadada"
+         offset="0.31" />
+      <stop
+         id="stop4755"
+         stop-color="#d0d0d0"
+         offset="0.36" />
+      <stop
+         id="stop4757"
+         stop-color="#b6b6b6"
+         offset="0.44" />
+      <stop
+         id="stop4759"
+         stop-color="#8c8c8b"
+         offset="0.54" />
+      <stop
+         id="stop4761"
+         stop-color="#575756"
+         offset="0.65" />
+      <stop
+         id="stop4763"
+         stop-color="#616160"
+         offset="0.67" />
+      <stop
+         id="stop4765"
+         stop-color="#7a7a7a"
+         offset="0.72" />
+      <stop
+         id="stop4767"
+         stop-color="#878787"
+         offset="0.74" />
+      <stop
+         id="stop4769"
+         stop-color="#787878"
+         offset="0.74" />
+      <stop
+         id="stop4771"
+         stop-color="#585857"
+         offset="0.75" />
+      <stop
+         id="stop4773"
+         stop-color="#3e3e3c"
+         offset="0.76" />
+      <stop
+         id="stop4775"
+         stop-color="#2c2c2a"
+         offset="0.77" />
+      <stop
+         id="stop4777"
+         stop-color="#21211f"
+         offset="0.77" />
+      <stop
+         id="stop4779"
+         stop-color="#1d1d1b"
+         offset="0.78" />
+      <stop
+         id="stop4781"
+         stop-color="#494948"
+         offset="0.79" />
+      <stop
+         id="stop4783"
+         stop-color="#797978"
+         offset="0.8" />
+      <stop
+         id="stop4785"
+         stop-color="#a2a2a1"
+         offset="0.82" />
+      <stop
+         id="stop4787"
+         stop-color="#c4c4c3"
+         offset="0.83" />
+      <stop
+         id="stop4789"
+         stop-color="#dedede"
+         offset="0.84" />
+      <stop
+         id="stop4791"
+         stop-color="#f0f0f0"
+         offset="0.85" />
+      <stop
+         id="stop4793"
+         stop-color="#fbfbfb"
+         offset="0.87" />
+      <stop
+         id="stop4795"
+         stop-color="#fff"
+         offset="0.88" />
+      <stop
+         id="stop4797"
+         stop-color="#f6f5f5"
+         offset="0.89" />
+      <stop
+         id="stop4799"
+         stop-color="#dcdbdb"
+         offset="0.92" />
+      <stop
+         id="stop4801"
+         stop-color="#cac9c9"
+         offset="0.94" />
+      <stop
+         id="stop4803"
+         stop-color="#bfbebe"
+         offset="0.97" />
+      <stop
+         id="stop4805"
+         stop-color="#bbbaba"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Steel_01"
+       id="linearGradient5950"
+       x1="1.9999973"
+       y1="-89.125"
+       x2="49.999996"
+       y2="-89.125"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="25.83"
+       x2="114.25"
+       y1="25.83"
+       x1="62.599998"
+       data-name="Steel 01"
+       id="Steel_01">
+      <stop
+         id="stop4582"
+         stop-color="#e5e1df"
+         offset="0" />
+      <stop
+         id="stop4584"
+         stop-color="#ded9d7"
+         offset="0" />
+      <stop
+         id="stop4586"
+         stop-color="#cfccca"
+         offset="0.04" />
+      <stop
+         id="stop4588"
+         stop-color="#a8a8a8"
+         offset="0.11" />
+      <stop
+         id="stop4590"
+         stop-color="#6a7072"
+         offset="0.21" />
+      <stop
+         id="stop4592"
+         stop-color="#465053"
+         offset="0.26" />
+      <stop
+         id="stop4594"
+         stop-color="#878d8f"
+         offset="0.37" />
+      <stop
+         id="stop4596"
+         stop-color="#b7babb"
+         offset="0.46" />
+      <stop
+         id="stop4598"
+         stop-color="#d5d6d6"
+         offset="0.53" />
+      <stop
+         id="stop4600"
+         stop-color="#e0e0e0"
+         offset="0.57" />
+      <stop
+         id="stop4602"
+         stop-color="#d6d7d8"
+         offset="0.63" />
+      <stop
+         id="stop4604"
+         stop-color="#bcbfc2"
+         offset="0.73" />
+      <stop
+         id="stop4606"
+         stop-color="#92989e"
+         offset="0.86" />
+      <stop
+         id="stop4608"
+         stop-color="#8b9298"
+         offset="0.88" />
+      <stop
+         id="stop4610"
+         stop-color="#d1d3d4"
+         offset="1" />
+      <stop
+         id="stop4612"
+         stop-color="#a7a9ab"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Linear_Gradient_1"
+       id="linearGradient5796"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(-90)"
+       x1="7.75"
+       y1="26.1"
+       x2="24.48"
+       y2="26.1" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="25.83"
+       x2="239.44"
+       y1="25.83"
+       x1="187.78999"
+       data-name="Linear Gradient 1"
+       id="Linear_Gradient_1">
+      <stop
+         id="stop4714"
+         stop-color="#010000"
+         offset="0" />
+      <stop
+         id="stop4716"
+         stop-color="#7f7e82"
+         offset="0.17" />
+      <stop
+         id="stop4718"
+         stop-color="#fff"
+         offset="0.48" />
+      <stop
+         id="stop4720"
+         stop-color="#e3e2e5"
+         offset="0.68" />
+      <stop
+         id="stop4722"
+         stop-color="#7f7e82"
+         offset="0.77" />
+      <stop
+         id="stop4724"
+         stop-color="#010000"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Linear_Gradient_1"
+       id="linearGradient5798"
+       gradientTransform="rotate(-90)"
+       x1="24.709999"
+       y1="26.1"
+       x2="41.439999"
+       y2="26.1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Linear_Gradient_1"
+       id="linearGradient5800"
+       gradientTransform="rotate(-90)"
+       x1="41.669998"
+       y1="26.1"
+       x2="58.389999"
+       y2="26.1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Linear_Gradient_1"
+       id="linearGradient5802"
+       gradientTransform="rotate(-90)"
+       x1="58.630001"
+       y1="26.1"
+       x2="75.349998"
+       y2="26.1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Linear_Gradient_1"
+       id="linearGradient5804"
+       gradientTransform="rotate(-90)"
+       x1="75.580002"
+       y1="26.1"
+       x2="92.309998"
+       y2="26.1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Linear_Gradient_1"
+       id="linearGradient5806"
+       gradientTransform="rotate(-90)"
+       x1="92.540001"
+       y1="26.1"
+       x2="109.27"
+       y2="26.1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Linear_Gradient_1"
+       id="linearGradient5808"
+       gradientTransform="rotate(-90)"
+       x1="109.5"
+       y1="26.1"
+       x2="126.23"
+       y2="26.1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Linear_Gradient_1"
+       id="linearGradient5810"
+       gradientTransform="rotate(-90)"
+       x1="126.46"
+       y1="26.1"
+       x2="143.19"
+       y2="26.1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Linear_Gradient_1"
+       id="linearGradient5812"
+       gradientTransform="rotate(-90)"
+       x1="143.42"
+       y1="26.1"
+       x2="160.14"
+       y2="26.1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Linear_Gradient_1"
+       id="linearGradient5814"
+       gradientTransform="rotate(-90)"
+       x1="160.38"
+       y1="26.1"
+       x2="177.10001"
+       y2="26.1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-1-3"
+       id="linearGradient5816"
+       gradientUnits="userSpaceOnUse"
+       x1="4.4099998"
+       y1="23.16"
+       x2="33.549999"
+       y2="34.099998" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="34.099998"
+       x2="33.549999"
+       y1="23.16"
+       x1="4.4099998"
+       id="LedStrip1-1-3">
+      <stop
+         id="stop86"
+         stop-opacity="0"
+         stop-color="#fff"
+         offset="0" />
+      <stop
+         id="stop88"
+         stop-opacity="0.7"
+         stop-color="#fff"
+         offset="1" />
+    </linearGradient>
+    <filter
+       height="1.0615236"
+       y="-0.030761808"
+       width="3.4228001"
+       x="-1.2114"
+       id="LedStrip1-808"
+       style="color-interpolation-filters:sRGB"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur4810"
+         stdDeviation="0.50475001"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-1-3"
+       id="linearGradient5818"
+       x1="21.370001"
+       y1="23.16"
+       x2="50.509998"
+       y2="34.099998" />
+    <filter
+       height="1.0615236"
+       y="-0.030761808"
+       width="3.4228001"
+       x="-1.2114"
+       id="LedStrip1-804"
+       style="color-interpolation-filters:sRGB"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur4806"
+         stdDeviation="0.50475001"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-1-3"
+       id="linearGradient5820"
+       x1="38.330002"
+       y1="23.16"
+       x2="67.470001"
+       y2="34.099998" />
+    <filter
+       height="1.0615236"
+       y="-0.030761808"
+       width="3.4228001"
+       x="-1.2114"
+       id="LedStrip1-800"
+       style="color-interpolation-filters:sRGB"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur4802"
+         stdDeviation="0.50475001"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-1-3"
+       id="linearGradient5822"
+       x1="55.290001"
+       y1="23.16"
+       x2="84.43"
+       y2="34.099998" />
+    <filter
+       height="1.0615236"
+       y="-0.030761808"
+       width="3.4228001"
+       x="-1.2114"
+       id="LedStrip1-796"
+       style="color-interpolation-filters:sRGB"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur4798"
+         stdDeviation="0.50475001"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-1-3"
+       id="linearGradient5824"
+       x1="72.25"
+       y1="23.16"
+       x2="101.38"
+       y2="34.099998" />
+    <filter
+       height="1.0615236"
+       y="-0.030761808"
+       width="3.4228001"
+       x="-1.2114"
+       id="LedStrip1-792"
+       style="color-interpolation-filters:sRGB"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur4794"
+         stdDeviation="0.50475001"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-1-3"
+       id="linearGradient5826"
+       x1="89.199997"
+       y1="23.16"
+       x2="118.34"
+       y2="34.099998" />
+    <filter
+       height="1.0615236"
+       y="-0.030761808"
+       width="3.4228001"
+       x="-1.2114"
+       id="LedStrip1-788"
+       style="color-interpolation-filters:sRGB"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur4790"
+         stdDeviation="0.50475001"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-1-3"
+       id="linearGradient5828"
+       x1="106.16"
+       y1="23.16"
+       x2="135.3"
+       y2="34.099998" />
+    <filter
+       height="1.0615236"
+       y="-0.030761808"
+       width="3.4228001"
+       x="-1.2114"
+       id="LedStrip1-784"
+       style="color-interpolation-filters:sRGB"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur4786"
+         stdDeviation="0.50475001"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-1-3"
+       id="linearGradient5830"
+       x1="123.12"
+       y1="23.16"
+       x2="152.25999"
+       y2="34.099998" />
+    <filter
+       height="1.0615236"
+       y="-0.030761808"
+       width="3.4228001"
+       x="-1.2114"
+       id="LedStrip1-780"
+       style="color-interpolation-filters:sRGB"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur4782"
+         stdDeviation="0.50475001"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-1-3"
+       id="linearGradient5832"
+       x1="140.08"
+       y1="23.16"
+       x2="169.22"
+       y2="34.099998" />
+    <filter
+       height="1.0615236"
+       y="-0.030761808"
+       width="3.4228001"
+       x="-1.2114"
+       id="LedStrip1-776"
+       style="color-interpolation-filters:sRGB"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur4778"
+         stdDeviation="0.50475001"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-1-3"
+       id="linearGradient5834"
+       x1="157.03999"
+       y1="23.16"
+       x2="186.17999"
+       y2="34.099998" />
+    <filter
+       height="1.0615236"
+       y="-0.030761808"
+       width="3.4228001"
+       x="-1.2114"
+       id="LedStrip1-772"
+       style="color-interpolation-filters:sRGB"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur4774"
+         stdDeviation="0.50475001"
+         inkscape:collect="always" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata4637">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title></dc:title>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <vfp:catalogue
+     PREFIX="LEDBar"
+     CATEGORY="Display Controls"
+     DESC="LED Bar 10" />
+  <g
+     vfp:class="LEDStrip"
+     id="Layer_2-7"
+     transform="translate(-0.00999451,-1.0681152e-6)">
+    <rect
+       class=""
+       x="1.0681152e-006"
+       y="-178.25999"
+       width="52"
+       height="178.25"
+       transform="rotate(90)"
+       id="rect216"
+       style="display:inline;fill:url(#LedStrip1-675);fill-opacity:1" />
+    <rect
+       class="bounds"
+       x="0.97000003"
+       y="1"
+       width="176.31"
+       height="50"
+       id="rect218"
+       style="display:inline;fill:url(#LedStrip1-1-2);fill-opacity:1" />
+    <rect
+       x="1.9999973"
+       y="-176.31"
+       width="48"
+       height="174.37"
+       transform="rotate(90)"
+       id="rect220"
+       style="display:inline;fill:url(#linearGradient5950);fill-opacity:1" />
+    <g
+       id="LED Frames">
+      <rect
+         style="display:inline;fill:url(#linearGradient5796);fill-opacity:1"
+         id="rect222"
+         transform="rotate(90)"
+         height="13.75"
+         width="43.5"
+         y="-19.120001"
+         x="4.3499999" />
+      <rect
+         style="fill:url(#linearGradient5798);fill-opacity:1"
+         id="rect232"
+         transform="rotate(90)"
+         height="13.75"
+         width="43.5"
+         y="-36.080002"
+         x="4.3499999" />
+      <rect
+         style="fill:url(#linearGradient5800);fill-opacity:1"
+         id="rect242"
+         transform="rotate(90)"
+         height="13.75"
+         width="43.5"
+         y="-53.040001"
+         x="4.3600001" />
+      <rect
+         style="fill:url(#linearGradient5802);fill-opacity:1"
+         id="rect252"
+         transform="rotate(90)"
+         height="13.75"
+         width="43.5"
+         y="-70"
+         x="4.3600011" />
+      <rect
+         style="fill:url(#linearGradient5804);fill-opacity:1"
+         id="rect262"
+         transform="rotate(90)"
+         height="13.75"
+         width="43.5"
+         y="-86.959999"
+         x="4.3500018" />
+      <rect
+         style="fill:url(#linearGradient5806);fill-opacity:1"
+         id="rect272"
+         transform="rotate(90)"
+         height="13.75"
+         width="43.5"
+         y="-103.91"
+         x="4.3500009" />
+      <rect
+         style="fill:url(#linearGradient5808);fill-opacity:1"
+         id="rect282"
+         transform="rotate(90)"
+         height="13.75"
+         width="43.5"
+         y="-120.87"
+         x="4.3499999" />
+      <rect
+         style="fill:url(#linearGradient5810);fill-opacity:1"
+         id="rect292"
+         transform="rotate(90)"
+         height="13.75"
+         width="43.5"
+         y="-137.83"
+         x="4.349999" />
+      <rect
+         style="fill:url(#linearGradient5812);fill-opacity:1"
+         id="rect302"
+         transform="rotate(90)"
+         height="13.75"
+         width="43.5"
+         y="-154.78999"
+         x="4.3599982" />
+      <rect
+         style="fill:url(#linearGradient5814);fill-opacity:1"
+         id="rect312"
+         transform="rotate(90)"
+         height="13.75"
+         width="43.5"
+         y="-171.75"
+         x="4.3600049" />
+    </g>
+    <g
+       style="display:inline"
+       id="LEDs">
+      <rect
+         class="LED"
+         style="fill:#e41915"
+         id="rect224"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="6.3800001" />
+      <rect
+         class="LED"
+         style="fill:#e41915"
+         id="rect234"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="23.33" />
+      <rect
+         class="LED"
+         style="fill:#e41915"
+         id="rect244"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="40.290001" />
+      <rect
+         class="LED"
+         style="fill:#e41915"
+         id="rect254"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="57.25" />
+      <rect
+         class="LED"
+         style="fill:#e41915"
+         id="rect264"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="74.209999" />
+      <rect
+         class="LED"
+         style="fill:#2b0000"
+         id="rect274"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="91.169998" />
+      <rect
+         class="LED"
+         style="fill:#2b0000"
+         id="rect284"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="108.13" />
+      <rect
+         class="LED"
+         style="fill:#2b0000"
+         id="rect294"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="125.08" />
+      <rect
+         class="LED"
+         style="fill:#2b0000"
+         id="rect304"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="142.03999" />
+      <rect
+         class="LED"
+         style="display:inline;fill:#2b0000"
+         id="rect314"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="159" />
+    </g>
+    <g
+       id="Highlights">
+      <rect
+         style="opacity:0.65;fill:url(#linearGradient5816)"
+         id="rect226"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="6.3800001" />
+      <rect
+         x="7"
+         y="6.5700002"
+         width="1"
+         height="39.380001"
+         id="rect228"
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-808)" />
+      <rect
+         style="opacity:0.65;fill:url(#linearGradient5818)"
+         id="rect236"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="23.33" />
+      <rect
+         x="23.959999"
+         y="6.5700002"
+         width="1"
+         height="39.380001"
+         id="rect238"
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-804)" />
+      <rect
+         style="opacity:0.65;fill:url(#linearGradient5820)"
+         id="rect246"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="40.290001" />
+      <rect
+         x="40.919998"
+         y="6.5700002"
+         width="1"
+         height="39.380001"
+         id="rect248"
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-800)" />
+      <rect
+         style="opacity:0.65;fill:url(#linearGradient5822)"
+         id="rect256"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="57.25" />
+      <rect
+         x="57.880001"
+         y="6.5700002"
+         width="1"
+         height="39.380001"
+         id="rect258"
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-796)" />
+      <rect
+         style="opacity:0.65;fill:url(#linearGradient5824)"
+         id="rect266"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="74.209999" />
+      <rect
+         x="74.830002"
+         y="6.5700002"
+         width="1"
+         height="39.380001"
+         id="rect268"
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-792)" />
+      <rect
+         style="opacity:0.65;fill:url(#linearGradient5826)"
+         id="rect276"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="91.169998" />
+      <rect
+         x="91.790001"
+         y="6.5700002"
+         width="1"
+         height="39.380001"
+         id="rect278"
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-788)" />
+      <rect
+         style="opacity:0.65;fill:url(#linearGradient5828)"
+         id="rect286"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="108.13" />
+      <rect
+         x="108.75"
+         y="6.5700002"
+         width="1"
+         height="39.380001"
+         id="rect288"
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-784)" />
+      <rect
+         style="opacity:0.65;fill:url(#linearGradient5830)"
+         id="rect296"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="125.08" />
+      <rect
+         x="125.71"
+         y="6.5700002"
+         width="1"
+         height="39.380001"
+         id="rect298"
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-780)" />
+      <rect
+         style="opacity:0.65;fill:url(#linearGradient5832)"
+         id="rect306"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="142.03999" />
+      <rect
+         x="142.67"
+         y="6.5700002"
+         width="1"
+         height="39.380001"
+         id="rect308"
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-776)" />
+      <rect
+         style="opacity:0.65;fill:url(#linearGradient5834)"
+         id="rect316"
+         height="41.5"
+         width="11.75"
+         y="5.3499999"
+         x="159" />
+      <rect
+         x="159.63"
+         y="6.5700002"
+         width="1"
+         height="39.380001"
+         id="rect318"
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-772)" />
+    </g>
+    <text
+       style="font-size:15px;font-family:sans-serif;text-anchor:middle;stroke-width:0.5"
+       x="90.384201"
+       y="66.921593"
+       id="text73">50%</text>
+  </g>
+</svg>

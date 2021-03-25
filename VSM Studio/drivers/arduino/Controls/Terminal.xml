@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Driver Descriptor for Terminal -->
+<DRIVER HEADER="Controls.h">
+	  <REQUIRE MODULE="SERVER" />
+	  <RESOURCE FILE="controls/jquery.js" />
+     <RESOURCE FILE="controls/textutil.js" />
+     <RESOURCE FILE="controls/controls.css" />
+     
+
+     <METHOD NAME="appendLine" DESC="Append a line of text to the terminal.">
+	     <PARAMETER NAME="text" TYPE="STRING" DESC="The text to append" />
+	  </METHOD>
+     <METHOD NAME="getCommand" DESC="Returns a command or an empty string in none">
+        <RETURN TYPE="STRING"/>
+	  </METHOD>
+     <METHOD NAME="cls" DESC="Clears the screen" />
+
+     <INTERRUPT DESC="Control Event"  HOOK="attachEventHandler"/>
+</DRIVER>

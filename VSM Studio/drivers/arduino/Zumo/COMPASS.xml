@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<DRIVER HEADER="Zumo.h">
+   <METHOD NAME="readMagneticField" DESC="Reads the magnetic field strength in Gauss units and returns X, Y and Z components">
+      <RETURN TYPE="LIST" />
+   </METHOD>
+   <METHOD NAME="calibrateHeading" DESC="Spins the Zumo assuming it starts at North and calibrates the heading" />
+   <METHOD NAME="readHeading" DESC="Returns the heading as an angle in degrees or -1 if not calibrated">
+      <RETURN TYPE="FLOAT" />
+   </METHOD>
+</DRIVER>

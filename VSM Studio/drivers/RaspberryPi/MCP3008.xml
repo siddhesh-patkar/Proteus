@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Raspberry Pi/MCP3008.pdsclip" FAMILY="Raspberry Pi" DESC="8 channel Analog to Digital Converter">
+   <PERIPHERAL TYPE="MCP3008 ADC" ELEMENT="U2" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="MCP3008">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO5"/>
+         </PIN>
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO6"/>
+         </PIN>
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO12"/>
+         </PIN>
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO16"/>
+         </PIN>
+     </INTERFACE>
+
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="Generic">
+       
+       <METHOD NAME="analogRead"  DESC="Read from pin.">
+         <PARAMETER NAME="Pin Number" TYPE="INTEGER" DEFAULT="0" DESC="Number of pin being read from."/>
+         <RETURN TYPE="FLOAT" DEFAULT="Volt"/>
+       </METHOD>
+       
+    </DRIVER>
+   </PERIPHERAL>
+</CLIP>	
+  

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<CONTROL>
+   <CONFIG>
+      <ENUMERATION NAME="TIMEUNIT">
+          <CONSTANT NAME="Second" VALUE="0"/>
+          <CONSTANT NAME="Minute" VALUE="1"/>
+          <CONSTANT NAME="Hour"   VALUE="2"/>
+          <CONSTANT NAME="Day"    VALUE="3"/>
+          <CONSTANT NAME="Month"  VALUE="4"/>
+      </ENUMERATION>
+
+      <PROPERTY NAME="titleText" TYPE="STRING" DEFAULT="" DESC="Chart Title"/>
+      <PROPERTY NAME="titleFontSize" TYPE="INTEGER" MIN="10" MAX="100" DEFAULT="15" DESC="Font size for chart title"/>
+      <PROPERTY NAME="labelFontSize" TYPE="INTEGER" MIN="10" MAX="100" DEFAULT="15" DESC="Font size for labels"/>
+      <PROPERTY NAME="scaleFontSize" TYPE="INTEGER" MIN="10" MAX="100" DEFAULT="15" DESC="Font size for scale values"/>
+      <PROPERTY NAME="backgroundColour" TYPE="RGB" DESC="Colour for chart background" DEFAULT="#F0F0E0"/>
+      <PROPERTY NAME="barColour" TYPE="RGB" DESC="Colour for chart bars" DEFAULT="#81FF81"/>
+
+      <GROUP NAME="xRange">
+         <PROPERTY NAME="min" TYPE="FLOAT" DEFAULT="0" DESC="Minimum x value"/>
+         <PROPERTY NAME="max" TYPE="FLOAT" DEFAULT="100" DESC="Maximum x value"/>
+         <PROPERTY NAME="bars" TYPE="INTEGER" MIN="1" MAX="30" DEFAULT="10" DESC="Number of bars to show"/>
+      </GROUP>
+
+      <GROUP NAME="timeRange">
+         <PROPERTY NAME="unit" TYPE="TIMEUNIT" DEFAULT="0" DESC="Minimum x value"/>
+         <PROPERTY NAME="range" TYPE="INTEGER" DEFAULT="60" DESC="Number of time units to display"/>
+         <PROPERTY NAME="bars" TYPE="INTEGER" MIN="1" MAX="30" DEFAULT="6" DESC="Number of bars to show."/>
+         <PROPERTY NAME="absolute" TYPE="BOOLEAN" DEFAULT="1" DESC="Use absolute times/dates"/>
+      </GROUP>
+
+      <GROUP NAME="yRange">
+         <PROPERTY NAME="min" TYPE="FLOAT" DEFAULT="0" DESC="Minimum y value"/>
+         <PROPERTY NAME="max" TYPE="FLOAT" DEFAULT="0" DESC="Maximum y value"/>
+      </GROUP>
+
+   </CONFIG>
+
+   <!-- Driver Descriptor for Histogram -->
+   <DRIVER HEADER="Controls">
+      <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+      <REQUIRE MODULE="STORAGE"/>
+      <RESOURCE FILE="scripts/chart.js"/>
+      <RESOURCE FILE="scripts/moment.js"/>
+
+      <ENUMERATION NAME="TIMEUNIT">
+         <CONSTANT NAME="SECOND" VALUE="0"/>
+         <CONSTANT NAME="MINUTE" VALUE="1"/>
+         <CONSTANT NAME="HOUR"   VALUE="2"/>
+         <CONSTANT NAME="DAY"    VALUE="3"/>
+         <CONSTANT NAME="MONTH"  VALUE="4"/>
+      </ENUMERATION>
+
+      <METHOD NAME="setXRange" DESC="Set up a numeric x-axis.">
+         <PARAMETER NAME="min" TYPE="FLOAT" DEFAULT="0"  DESC="Minimum x value"/>
+         <PARAMETER NAME="max" TYPE="FLOAT" DEFAULT="10" DESC="Maximum x value"/>
+         <PARAMETER NAME="bars" TYPE="INTEGER" MIN="1" MAX="30" DEFAULT="10" DESC="Number of bars to show."/>
+      </METHOD>
+
+      <METHOD NAME="setTimeRange" DESC="Set up a time based x-axis.">
+          <PARAMETER NAME="unit" TYPE="TIMEUNIT" DEFAULT="SECOND" DESC="Time units"/>
+          <PARAMETER NAME="range" TYPE="INTEGER" DEFAULT="60" DESC="Number of time units to display"/>
+          <PARAMETER NAME="bars" TYPE="INTEGER" MIN="1" MAX="30" DEFAULT="6" DESC="Number of bars to show."/>
+          <PARAMETER NAME="absolute" TYPE="BOOLEAN" DEFAULT="FALSE" DESC="Use absolute times/dates"/>
+      </METHOD>
+
+      <METHOD NAME="setYRange" DESC="Set a range for the specified y-axis.">
+          <PARAMETER NAME="min" TYPE="FLOAT" DEFAULT="0" DESC="Suggested minimum y value"/>
+          <PARAMETER NAME="max" TYPE="FLOAT" DEFAULT="0" DESC="Suggested Maximum y value"/>
+      </METHOD>
+
+      <METHOD NAME="setDataFile" DESC="Specify a filename to use for the graph data">
+           <PARAMETER NAME="filename" TYPE="STRING" DESC="Filename containing the data set"/>
+      </METHOD>
+
+      <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+          <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+      </METHOD>
+
+      <METHOD NAME="writeData" DESC="Append a new line of data to the graph.">
+         <PARAMETER TYPE="LIST"/>
+      </METHOD>
+
+      <METHOD NAME="clearData" DESC="Clear the data stored in the graph."/>
+   </DRIVER>
+</CONTROL>

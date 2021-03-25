@@ -1,0 +1,51 @@
+<svg xmlns:vfp="http://www.labcenter.com/namespaces/vfp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="GreenSquareModernLEDWhite" x1="38.08" y1="38.08" x2="1.92" y2="1.92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.3"/>
+      <stop offset="0.56" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="GreenSquareModernLEDWhite-2" x1="32.58" y1="32.58" x2="7.42" y2="7.42" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.2"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="GreenSquareModernLEDWhite-3" x1="8.25" y1="8.25" x2="31.75" y2="31.75" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.4"/>
+      <stop offset="0.47" stop-opacity="0.21"/>
+      <stop offset="0.55" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="GreenSquareModernLEDWhite-4" x1="31.75" y1="31.75" x2="8.25" y2="8.25" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
+      <stop offset="1" stop-opacity="0.6"/>
+    </linearGradient>
+    <radialGradient id="GreenSquareModernLEDWhiteradial" cx="33.38" cy="33.13" r="19.62" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="GreenSquareModernLEDWhiteradial-2" cx="8.34" cy="7.46" r="10.91" xlink:href="#GreenSquareModernLEDWhiteradial"/>
+  </defs>
+  <vfp:catalogue
+     DESC="Green Square LED"
+     CATEGORY="Indicators"
+     PREFIX="LED" />
+  <g vfp:class="Indicator">
+    <rect class="bounds" width="40" height="40" rx="6.54" ry="6.54" style="fill: #fffef5"/>
+    <rect width="40" height="40" rx="6.54" ry="6.54" style="fill: url(#GreenSquareModernLEDWhite)"/>
+    <rect x="5.5" y="5.5" width="29" height="29" rx="6.54" ry="6.54" style="opacity: 0.15;fill: url(#GreenSquareModernLEDWhite-2)"/>
+    <rect class="colour" x="6.5" y="6.5" width="27" height="27" rx="5.95" ry="5.95" style="fill: #39ff14"/>
+    <g style="display:none">
+    <path d="M27.55,7.5a5,5,0,0,1,4.95,4.95v15.1a5,5,0,0,1-4.95,4.95H12.45A5,5,0,0,1,7.5,27.55V12.45A5,5,0,0,1,12.45,7.5h15.1m0-1H12.45A6,6,0,0,0,6.5,12.45v15.1a6,6,0,0,0,5.95,5.95h15.1a6,6,0,0,0,5.95-5.95V12.45A6,6,0,0,0,27.55,6.5Z" style="fill: url(#GreenSquareModernLEDWhite-3)"/> 
+    <rect x="6.5" y="6.5" width="27" height="27" rx="5.95" ry="5.95" style="opacity: 0.6000000000000001;fill: url(#GreenSquareModernLEDWhite-4)"/>
+    </g>
+    <g>
+    <rect x="6.5" y="6.5" width="27" height="27" rx="5.95" ry="5.95" style="fill: url(#GreenSquareModernLEDWhiteradial)"/> 
+    <path d="M12.44,7.5H27.77a5.73,5.73,0,0,1,5.73,5.73V27.77a5.73,5.73,0,0,1-5.73,5.73H13.23A5.73,5.73,0,0,1,7.5,27.77V12.44A4.93,4.93,0,0,1,12.44,7.5Z" style="fill: url(#GreenSquareModernLEDWhiteradial-2)"/>
+  </g>
+  <text
+       x="100.0"
+       y="100.0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"
+       id="text23">label</text>
+  </g>
+
+</svg>

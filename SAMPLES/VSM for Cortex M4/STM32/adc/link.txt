@@ -1,0 +1,2 @@
+https://stm32f4-discovery.net/2015/10/hal-library-29-analog-to-digital-converter-for-stm32fxxx/
+https://github.com/MaJerle/stm32fxxx_hal_libraries/tree/master/29-STM32Fxxx_ADC

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Twitter -->
+<DRIVER HEADER="InternetCommunication">
+   <METHOD NAME="setup" DESC="SetUp the Twitter Bot">
+      <PARAMETER NAME="CustomerKey"    TYPE="STRING"  DESC="Consumer API key"/>
+      <PARAMETER NAME="CustomerSecret" TYPE="STRING"  DESC="Consumer API secret key"/>
+      <PARAMETER NAME="Token"          TYPE="STRING"  DESC="Access token"/>
+      <PARAMETER NAME="SecretToken"    TYPE="STRING"  DESC="Access token secret"/>
+   </METHOD>   
+
+   <METHOD NAME="tweet" DESC="Simple Text Tweet">
+      <PARAMETER NAME="Message" TYPE="STRING"  DESC="Message to Tweet"/>
+   </METHOD>       
+
+   <METHOD NAME="tweetImage" DESC="Tweeting Image and Text">
+      <PARAMETER NAME="Message" TYPE="STRING"  DESC="Message to Tweet"/>
+      <PARAMETER NAME="Image" TYPE="STRING"  DESC="Image to Tweet"/>
+   </METHOD>        
+
+   <METHOD NAME="tweetVideo" DESC="Tweeting Video and Text">
+      <PARAMETER NAME="Message" TYPE="STRING"  DESC="Message to Tweet"/>
+      <PARAMETER NAME="Video" TYPE="STRING"  DESC="Video to Tweet"/>
+   </METHOD>        
+   
+   <METHOD NAME="searchFor" DESC="Look for Tweet">
+      <PARAMETER NAME="Query" TYPE="STRING"  DESC="Message to look for"/>
+      <RETURN NAME="Message" TYPE="STRING" DEFAULT="FullMessage"/>
+      <RETURN NAME="User" TYPE="STRING" DEFAULT="UserName"/>
+      <RETURN NAME="Date" TYPE="TIME" DEFAULT="TweetTime"/>
+   </METHOD>  
+
+   <METHOD NAME="searchImage" DESC="Look for Tweet with image">
+      <PARAMETER NAME="Query" TYPE="STRING"  DESC="Message to look for"/>
+      <PARAMETER NAME="FileName" TYPE="STRING"  DESC="Name to allocate image"/>
+      <RETURN NAME="Message" TYPE="STRING" DEFAULT="FullMessage"/>
+      <RETURN NAME="User" TYPE="STRING" DEFAULT="UserName"/>
+      <RETURN NAME="Date" TYPE="TIME" DEFAULT="TweetTime"/>
+      <RETURN NAME="ImageName" TYPE="STRING" DEFAULT="ImageReceived"/>
+   </METHOD>        
+        
+</DRIVER>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<CONTROL>
+
+   <CONFIG>
+   
+      <ENUMERATION NAME="MODE">
+           <CONSTANT NAME="LEDs" VALUE="0"/> 
+           <CONSTANT NAME="Percentage" VALUE="1"/> 
+      </ENUMERATION> 
+   
+	  <PROPERTY NAME="units" DESC="Control using % or the number of LEDs" TYPE="MODE" DEFAULT="1"/>
+     <PROPERTY NAME="init" DESC="Initial value" TYPE="FLOAT" MIN="0" MAX="100" DEFAULT="0"/>
+     <PROPERTY NAME="LEDColourGroup1" DESC="Colour of the LED bar" TYPE="RGB" DEFAULT="#00FF00"/>
+     <PROPERTY NAME="LEDGroupArea1" DESC="How much is taken by colour" TYPE="FLOAT" MIN="0" MAX="100" DEFAULT="30"/>
+     <PROPERTY NAME="LEDColourGroup2" DESC="Colour of the LED bar" TYPE="RGB" DEFAULT="#FFFF00"/>
+     <PROPERTY NAME="LEDGroupArea2" DESC="How much is taken by colour" TYPE="FLOAT" MIN="0" MAX="100" DEFAULT="40"/>
+     <PROPERTY NAME="LEDColourGroup3" DESC="Colour of the LED bar" TYPE="RGB" DEFAULT="#FF0000"/>
+	  <PROPERTY NAME="LEDoffColour" DESC="Colour of the LED bar when off" TYPE="RGB" DEFAULT="#606060"/>
+	  <PROPERTY NAME="textFont" DESC="Font for the value readout" TYPE="FONT"/>
+	  <PROPERTY NAME="textVisible" DESC="Text Visibility" TYPE="BOOLEAN" DEFAULT="1"/>
+   </CONFIG>
+
+   <DRIVER HEADER="Controls">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+        <METHOD NAME="setValue" DESC="Sets the loading bar position">
+           <PARAMETER NAME="location" TYPE="FLOAT" DEFAULT="0.0" />
+        </METHOD>        
+   </DRIVER>
+
+</CONTROL>

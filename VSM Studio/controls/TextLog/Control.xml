@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<CONTROL>   
+   <CONFIG>
+      <PROPERTY NAME="textFont" DESC="Font for normal log message" TYPE="FONT" />
+      <PROPERTY NAME="warnColour" DESC="Font for warning messages " TYPE="RGB" DEFAULT="#C08000" />
+      <PROPERTY NAME="errorColour" DESC="Font for error messages" TYPE="RGB" DEFAULT="#FF0000" />
+      <PROPERTY NAME="backgroundColour" DESC="Background colour" TYPE="RGB"  />
+   </CONFIG>   
+
+   <!-- Driver Descriptor for Text Log Control  -->
+   <DRIVER HEADER="Controls">
+     <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+     <REQUIRE MODULE="STORAGE"/>
+           
+     <ENUMERATION NAME="BASE">
+      <CONSTANT NAME="DECIMAL" VALUE="10"/>
+      <CONSTANT NAME="BINARY" VALUE="2"/>
+      <CONSTANT NAME="OCTAL"  VALUE="8"/>
+      <CONSTANT NAME="HEX"  VALUE="16"/>
+     </ENUMERATION>
+
+     <METHOD NAME="setFile" DESC="Set the filename to be used for the log.">
+	     <PARAMETER NAME="filename" TYPE="STRING" DESC="Filename containing the log" />
+	  </METHOD>
+
+
+     <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+      <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+     </METHOD>
+     <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+       <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+     </METHOD>
+   
+     <METHOD NAME="info"  DESC="Write a normal log message.">
+        <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to log"/>
+     </METHOD>
+     <METHOD NAME="warning"  DESC="Write a warning message.">
+        <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to log"/>
+     </METHOD>
+     <METHOD NAME="error"  DESC="Write an error message">
+        <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to log"/>
+     </METHOD>
+
+     <METHOD NAME="clear" DESC="Clear all of the text" />
+     
+   </DRIVER>
+</CONTROL>
+  

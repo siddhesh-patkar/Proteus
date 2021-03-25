@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- UART Driver -->
+<DRIVER HEADER="Ports">
+   <ENUMERATION NAME="BASE">
+      <CONSTANT NAME="DECIMAL" VALUE="10"/>
+      <CONSTANT NAME="BINARY" VALUE="2"/>
+      <CONSTANT NAME="OCTAL"  VALUE="8"/>
+      <CONSTANT NAME="HEX"  VALUE="16"/>
+   </ENUMERATION>
+
+   <METHOD NAME="setup" DESC="Sets up the UART">
+      <PARAMETER NAME="speed" TYPE="INTEGER"  DESC="UART speed"/>
+   </METHOD>  
+
+   <METHOD NAME="input" DESC="Input String">
+      <PARAMETER NAME="Echo" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="Enable Echo"/>
+      <RETURN NAME="Data" TYPE="STRING" DEFAULT="input"/>
+   </METHOD>     
+   
+   <METHOD NAME="print" DESC="Prints data along UART">
+      <PARAMETER TYPE="LIST"  DESC="String to print"/>
+   </METHOD>  
+   
+   <METHOD NAME="println" DESC="Prints data along UART">
+      <PARAMETER TYPE="LIST"  DESC="String to print"/>
+   </METHOD>  
+
+   <METHOD NAME="send" DESC="Send a single character">
+      <PARAMETER NAME="Data" TYPE="STRING"  DESC="Character to send"/>
+   </METHOD>      
+   
+   <METHOD NAME="recv" DESC="Receive a single character">
+      <RETURN NAME="Data" TYPE="STRING"/>
+   </METHOD>      
+   
+   <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+      <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+   </METHOD>
+   
+   <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+      <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+   </METHOD>
+        
+        
+</DRIVER>

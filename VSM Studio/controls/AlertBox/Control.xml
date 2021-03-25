@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<CONTROL>
+   
+   <!-- Driver Descriptor for Push-Button  -->
+   <DRIVER HEADER="Controls">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+    	  <RESOURCE FILE="scripts/alerts.js"/>
+    	  <RESOURCE FILE="scripts/alerts.css"/>
+        <RESOURCE FILE="images/alert_title.gif"/>
+        <RESOURCE FILE="images/alert_info.gif"/>
+        <RESOURCE FILE="images/alert_warning.gif"/>
+        <RESOURCE FILE="images/alert_error.gif"/>
+        <RESOURCE FILE="images/alert_query.gif"/>
+
+        <INTERRUPT DESC="Control Callback"  HOOK="attachEventHandler"/>                   
+
+        <FUNCTION DESC="Test Button Id">
+           <PARAMETER NAME="buttonId" TYPE="INTEGER" DESC="Button ID"/>       
+           <RETURN TYPE="BOOLEAN"/>
+        </FUNCTION>
+
+        <METHOD NAME="info" DESC="Show information message">
+           <PARAMETER NAME="msg" TYPE="STRING" DESC="Messsage"/>
+        </METHOD>
+
+        <METHOD NAME="warning" DESC="Show warning message">
+           <PARAMETER NAME="msg" TYPE="STRING" DESC="Messsage"/>
+        </METHOD>
+
+        <METHOD NAME="error" DESC="Show error message">
+           <PARAMETER NAME="msg" TYPE="STRING" DESC="Messsage"/>
+        </METHOD>
+   
+        <METHOD NAME="confirm" DESC="Show a confirm (ok/cancel) message">
+           <PARAMETER NAME="msg" TYPE="STRING" DESC="Messsage"/>
+        </METHOD>
+   
+   </DRIVER>
+</CONTROL>
+  

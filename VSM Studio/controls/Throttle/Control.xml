@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Slider Knob Control Descriptor -->
+<CONTROL>
+   <CONFIG>
+      <SETUP NAME="begin">
+         <PROPERTY NAME="init" DESC="Initial value" TYPE="INTEGER" DEFAULT="0"/>
+      </SETUP>  
+	   <PROPERTY NAME="min" DESC="Minumum value" TYPE="INTEGER" DEFAULT="0"/>
+	   <PROPERTY NAME="max" DESC="Maximum value" TYPE="INTEGER" DEFAULT="255"/>
+	   <PROPERTY NAME="rate" DESC="Update Rate (Hz)" TYPE="FLOAT" DEFAULT="2"/>	   
+   </CONFIG>	  
+   
+   <DRIVER HEADER="Controls">
+        <REQUIRE HEADER="VfpServer" />
+        <INTERRUPT DESC="Value Changed Event"  HOOK="attachEventHandler"/>                   
+
+        <FUNCTION DESC="Throttle Position">
+           <RETURN TYPE="INTEGER"/>
+        </FUNCTION>
+          
+        <METHOD NAME="getValue" DESC="Reads the throttle position.">
+           <RETURN NAME="throttle" TYPE="INTEGER" />
+        </METHOD>
+        <METHOD NAME="setValue" DESC="Set the throttle position">
+           <PARAMETER NAME="throttle" TYPE="INTEGER" DESC="Throttle position"/>
+        </METHOD>        
+   
+   </DRIVER>
+</CONTROL>  

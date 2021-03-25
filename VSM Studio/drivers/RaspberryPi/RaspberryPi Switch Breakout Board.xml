@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Raspberry Pi/RaspberryPi Switch Breakout Board.pdsclip" DESC="SPDT slide Switch" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="RPi Switch"  ELEMENT="SW1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="Switch">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="GPIO12"/>
+         </PIN>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="Generic">
+         <FUNCTION DESC="Switch State">
+            <RETURN TYPE="BOOLEAN"/>
+         </FUNCTION>
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

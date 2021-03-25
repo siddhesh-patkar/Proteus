@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg120"
+   sodipodi:docname="Metallic Keypad.svg"
+   inkscape:version="0.92.1 r15371">
+  <defs
+     id="defs92">
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="86.089996"
+       x2="114.25"
+       y1="86.089996"
+       x1="62.599998"
+       data-name="GradientFill 16"
+       id="GradientFill_16">
+      <stop
+         id="stop4808"
+         stop-color="#3a4346"
+         offset="0" />
+      <stop
+         id="stop4810"
+         stop-color="#cedde6"
+         offset="0.17" />
+      <stop
+         id="stop4812"
+         stop-color="#63747e"
+         offset="0.33" />
+      <stop
+         id="stop4814"
+         stop-color="#fff"
+         offset="0.47" />
+      <stop
+         id="stop4816"
+         stop-color="#515453"
+         offset="0.78" />
+      <stop
+         id="stop4818"
+         stop-color="#4c5a60"
+         offset="0.85" />
+      <stop
+         id="stop4820"
+         stop-color="#fff"
+         offset="0.96" />
+      <stop
+         id="stop4822"
+         stop-color="#fff"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="86.089996"
+       x2="239.44"
+       y1="86.089996"
+       x1="187.78999"
+       id="Silver">
+      <stop
+         id="stop4838"
+         stop-color="#eeebe9"
+         offset="0" />
+      <stop
+         id="stop4840"
+         stop-color="#e7e3e0"
+         offset="0" />
+      <stop
+         id="stop4842"
+         stop-color="#d8d4d3"
+         offset="0.06" />
+      <stop
+         id="stop4844"
+         stop-color="#b2adb0"
+         offset="0.19" />
+      <stop
+         id="stop4846"
+         stop-color="#989398"
+         offset="0.26" />
+      <stop
+         id="stop4848"
+         stop-color="#f8f8f8"
+         offset="0.52" />
+      <stop
+         id="stop4850"
+         stop-color="#eae9ea"
+         offset="0.59" />
+      <stop
+         id="stop4852"
+         stop-color="#c5c2c4"
+         offset="0.71" />
+      <stop
+         id="stop4854"
+         stop-color="#8c878a"
+         offset="0.88" />
+      <stop
+         id="stop4856"
+         stop-color="#dadada"
+         offset="1" />
+      <stop
+         id="stop4858"
+         stop-color="#b2b2b2"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="35.029999"
+       x2="-16.559999"
+       y1="368.14999"
+       x1="316.56"
+       id="linear-gradient">
+      <stop
+         id="stop2-9"
+         stop-opacity="0.3"
+         offset="0" />
+      <stop
+         id="stop4-9"
+         stop-opacity="0"
+         offset="0.56" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="46.549999"
+       x2="-5.04"
+       y1="356.63"
+       x1="305.04001"
+       id="linear-gradient-2">
+      <stop
+         id="stop7"
+         stop-opacity="0.2"
+         offset="0" />
+      <stop
+         id="stop9-5"
+         offset="0.22" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="36.150002"
+       x2="31.25"
+       y1="102.43"
+       x1="97.540001"
+       id="linear-gradient-3" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="36.150002"
+       x2="113"
+       y1="102.43"
+       x1="179.28999"
+       id="linear-gradient-4" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="36.150002"
+       x2="194.75"
+       y1="102.43"
+       x1="261.04001"
+       id="linear-gradient-5" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="119.31"
+       x2="31.25"
+       y1="185.59"
+       x1="97.540001"
+       id="linear-gradient-6" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="119.31"
+       x2="113"
+       y1="185.59"
+       x1="179.28999"
+       id="linear-gradient-7" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="119.31"
+       x2="194.75"
+       y1="185.59"
+       x1="261.04001"
+       id="linear-gradient-8" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="208.91"
+       x2="35.110001"
+       y1="275.19"
+       x1="101.39"
+       id="linear-gradient-9" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="208.91"
+       x2="116.86"
+       y1="275.19"
+       x1="183.14"
+       id="linear-gradient-10" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="208.91"
+       x2="198.61"
+       y1="275.19"
+       x1="264.89001"
+       id="linear-gradient-11" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="304.14999"
+       x2="35.110001"
+       y1="370.42999"
+       x1="101.39"
+       id="linear-gradient-12" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="304.14999"
+       x2="116.86"
+       y1="370.42999"
+       x1="183.14"
+       id="linear-gradient-13" />
+    <linearGradient
+       xlink:href="#linear-gradient"
+       y2="304.14999"
+       x2="198.61"
+       y1="370.42999"
+       x1="264.89001"
+       id="linear-gradient-14" />
+    <linearGradient
+       id="linear-gradient-37"
+       x1="16.639999"
+       y1="6.1999998"
+       x2="23.389999"
+       y2="33.919998"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#eeebe9"
+         id="stop3756" />
+      <stop
+         offset="0.06"
+         stop-color="#dfdcdb"
+         id="stop3758" />
+      <stop
+         offset="0.16"
+         stop-color="#b8b6b5"
+         id="stop3760" />
+      <stop
+         offset="0.31"
+         stop-color="#7a7978"
+         id="stop3762" />
+      <stop
+         offset="0.38"
+         stop-color="#575756"
+         id="stop3764" />
+      <stop
+         offset="0.54"
+         stop-color="#4d4d4c"
+         id="stop3766" />
+      <stop
+         offset="0.81"
+         stop-color="#343432"
+         id="stop3768" />
+      <stop
+         offset="1"
+         stop-color="#1d1d1b"
+         id="stop3770" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="201.59"
+       x2="300"
+       y1="201.59"
+       x1="0"
+       id="linearGradient5079"
+       xlink:href="#linear-gradient-37"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="201.59"
+       x2="341.07382"
+       y1="201.59"
+       x1="-82.147652"
+       id="linearGradient5087"
+       xlink:href="#GradientFill_16"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="197.31902"
+       x2="354.8356"
+       y1="201.59"
+       x1="13.5"
+       id="linearGradient5095"
+       xlink:href="#GradientFill_16"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="69.290001"
+       x2="99.389999"
+       y1="69.290001"
+       x1="29.389999"
+       id="linearGradient5207"
+       xlink:href="#Silver"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="69.290001"
+       x2="181.14"
+       y1="69.290001"
+       x1="111.14"
+       id="linearGradient5209"
+       xlink:href="#Silver"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="69.290001"
+       x2="262.89001"
+       y1="69.290001"
+       x1="192.89"
+       id="linearGradient5211"
+       xlink:href="#Silver"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="152.45"
+       x2="99.389999"
+       y1="152.45"
+       x1="29.389999"
+       id="linearGradient5213"
+       xlink:href="#Silver"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="152.45"
+       x2="181.14"
+       y1="152.45"
+       x1="111.14"
+       id="linearGradient5215"
+       xlink:href="#Silver"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="152.45"
+       x2="262.89001"
+       y1="152.45"
+       x1="192.89"
+       id="linearGradient5217"
+       xlink:href="#Silver"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="242.05"
+       x2="103.25"
+       y1="242.05"
+       x1="33.25"
+       id="linearGradient5219"
+       xlink:href="#Silver"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="242.05"
+       x2="185"
+       y1="242.05"
+       x1="115"
+       id="linearGradient5221"
+       xlink:href="#Silver"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="242.05"
+       x2="266.75"
+       y1="242.05"
+       x1="196.75"
+       id="linearGradient5223"
+       xlink:href="#Silver"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="337.29001"
+       x2="103.25"
+       y1="337.29001"
+       x1="33.25"
+       id="linearGradient5225"
+       xlink:href="#Silver"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="337.29001"
+       x2="185"
+       y1="337.29001"
+       x1="115"
+       id="linearGradient5227"
+       xlink:href="#Silver"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="337.29001"
+       x2="266.75"
+       y1="337.29001"
+       x1="196.75"
+       id="linearGradient5229"
+       xlink:href="#Silver"
+       inkscape:collect="always" />
+  </defs>
+  <vfp:catalogue
+     DESC="Numeric Keypad"
+     CATEGORY="Miscellaneous"
+     PREFIX="Kpd"
+     THEME="Metallic" />
+  <g
+     data-name="Layer 3"
+     id="Layer_3"
+     vfp:class="KeyPad"
+     transform="scale(0.66666667)">
+    <rect
+       y="0"
+       x="0"
+       id="rect35"
+       style="display:inline;fill:url(#linearGradient5087);fill-opacity:1"
+       ry="31.43"
+       rx="31.43"
+       height="403.17999"
+       width="300"
+       class="bounds"/>
+    <rect
+       y="0"
+       x="0"
+       id="rect33"
+       style="display:none;opacity:1;fill:url(#linearGradient5079);fill-opacity:1"
+       ry="31.43"
+       rx="31.43"
+       height="403.17999"
+       width="300" />
+    <rect
+       id="rect37"
+       style="display:inline;fill:url(#linearGradient5095);fill-opacity:1"
+       ry="29.16"
+       rx="29.16"
+       height="381.44"
+       width="273"
+       y="10.87"
+       x="13.5" />
+    <rect
+       id="rect39"
+       style="display:inline;opacity:0.15;fill:url(#linear-gradient-2)"
+       ry="29.16"
+       rx="29.16"
+       height="381.44"
+       width="273"
+       y="10.87"
+       x="13.5" />
+    <g
+       class="keypad_key"
+       vfp:key_value="1"
+       id="g3933">
+      <rect
+         x="29.389999"
+         y="34.290001"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="display:inline;fill:url(#linearGradient5207);fill-opacity:1"
+         id="rect41" />
+      <rect
+         x="29.389999"
+         y="34.290001"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="display:inline;fill:url(#linear-gradient-3)"
+         id="rect43" />
+      <text
+         y="88.779999"
+         x="49.110001"
+         id="text47"
+         style="font-size:59.60464859px;font-family:Tahoma, Tahoma;fill:#1d1d1b">1</text>
+    </g>
+    <g
+       class="keypad_key"
+       vfp:key_value="2"
+       id="g3940"
+       inkscape:label="Two">
+      <rect
+         x="111.14"
+         y="34.290001"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linearGradient5209);fill-opacity:1"
+         id="rect49" />
+      <rect
+         x="111.14"
+         y="34.290001"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linear-gradient-4)"
+         id="rect51" />
+      <text
+         y="88.779999"
+         x="130.86"
+         id="text55"
+         style="font-size:59.60464859px;font-family:Tahoma, Tahoma;fill:#1d1d1b">2</text>
+    </g>
+    <g
+       class="keypad_key"
+       vfp:key_value="3"
+       id="g3947"
+       inkscape:label="Three">
+      <rect
+         x="192.89"
+         y="34.290001"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linearGradient5211);fill-opacity:1"
+         id="rect57" />
+      <rect
+         x="192.89"
+         y="34.290001"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linear-gradient-5)"
+         id="rect59" />
+      <text
+         y="88.779999"
+         x="212.61"
+         id="text63"
+         style="font-size:59.60464859px;font-family:Tahoma, Tahoma;fill:#1d1d1b">3</text>
+    </g>
+    <g
+       class="keypad_key"
+       vfp:key_value="4"
+       id="g3961"
+       inkscape:label="Four">
+      <rect
+         x="29.389999"
+         y="117.45"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linearGradient5213);fill-opacity:1"
+         id="rect65" />
+      <rect
+         x="29.389999"
+         y="117.45"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linear-gradient-6)"
+         id="rect67" />
+      <text
+         y="171.94"
+         x="49.110001"
+         id="text71"
+         style="font-size:59.60464859px;font-family:Tahoma, Tahoma;fill:#1d1d1b">4</text>
+    </g>
+    <g
+       class="keypad_key"
+       vfp:key_value="5"
+       id="g3996"
+       inkscape:label="Five">
+      <rect
+         x="111.14"
+         y="117.45"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linearGradient5215);fill-opacity:1"
+         id="rect73" />
+      <rect
+         x="111.14"
+         y="117.45"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linear-gradient-7)"
+         id="rect75" />
+      <text
+         y="171.94"
+         x="130.86"
+         id="text79"
+         style="font-size:59.60464859px;font-family:Tahoma, Tahoma;fill:#1d1d1b">5</text>
+    </g>
+    <g
+       class="keypad_key"
+       vfp:key_value="6"
+       id="g3954"
+       inkscape:label="Six">
+      <rect
+         x="192.89"
+         y="117.45"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linearGradient5217);fill-opacity:1"
+         id="rect81" />
+      <rect
+         x="192.89"
+         y="117.45"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linear-gradient-8)"
+         id="rect83" />
+      <text
+         y="171.94"
+         x="212.61"
+         id="text87"
+         style="font-size:59.60464859px;font-family:Tahoma, Tahoma;fill:#1d1d1b">6</text>
+    </g>
+    <g
+       class="keypad_key"
+       vfp:key_value="7"
+       id="g3968"
+       inkscape:label="Seven">
+      <rect
+         x="33.25"
+         y="207.05"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linearGradient5219);fill-opacity:1"
+         id="rect89" />
+      <rect
+         x="33.25"
+         y="207.05"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linear-gradient-9)"
+         id="rect91" />
+      <text
+         y="261.54001"
+         x="52.959999"
+         id="text95"
+         style="font-size:59.60464859px;font-family:Tahoma, Tahoma;fill:#1d1d1b">7</text>
+    </g>
+    <g
+       class="keypad_key"
+       vfp:key_value="8"
+       id="g4003"
+       inkscape:label="Eight">
+      <rect
+         x="115"
+         y="207.05"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linearGradient5221);fill-opacity:1"
+         id="rect97" />
+      <rect
+         x="115"
+         y="207.05"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linear-gradient-10)"
+         id="rect99" />
+      <text
+         y="261.54001"
+         x="134.71001"
+         id="text103"
+         style="font-size:59.60464859px;font-family:Tahoma, Tahoma;fill:#1d1d1b">8</text>
+    </g>
+    <g
+       class="keypad_key"
+       vfp:key_value="9"
+       id="g3989"
+       inkscape:label="Nine">
+      <rect
+         x="196.75"
+         y="207.05"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linearGradient5223);fill-opacity:1"
+         id="rect105" />
+      <rect
+         x="196.75"
+         y="207.05"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linear-gradient-11)"
+         id="rect107" />
+      <text
+         y="261.54001"
+         x="216.46001"
+         id="text111"
+         style="font-size:59.60464859px;font-family:Tahoma, Tahoma;fill:#1d1d1b">9</text>
+    </g>
+    <g
+       class="keypad_key"
+       vfp:key_value="#"
+       id="g3975"
+       inkscape:label="Hash">
+      <rect
+         x="33.25"
+         y="302.29001"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linearGradient5225);fill-opacity:1"
+         id="rect113" />
+      <rect
+         x="33.25"
+         y="302.29001"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linear-gradient-12)"
+         id="rect115" />
+      <text
+         y="358.79001"
+         x="46.110001"
+         id="text119"
+         style="font-size:59.60464859px;font-family:Tahoma, Tahoma;fill:#1d1d1b">#</text>
+    </g>
+    <g
+       class="keypad_key"
+       vfp:key_value="0"
+       id="g129"
+       inkscape:label="Zero">
+      <rect
+         id="rect121"
+         style="fill:url(#linearGradient5227);fill-opacity:1"
+         ry="6.3299999"
+         rx="6.3299999"
+         height="70"
+         width="70"
+         y="302.29001"
+         x="115" />
+      <rect
+         id="rect123"
+         style="fill:url(#linear-gradient-13)"
+         ry="6.3299999"
+         rx="6.3299999"
+         height="70"
+         width="70"
+         y="302.29001"
+         x="115" />
+      <text
+         transform="translate(134.71,356.78)"
+         style="font-size:59.60464859px;font-family:Tahoma, Tahoma;fill:#1d1d1b"
+         id="text127">0</text>
+    </g>
+    <g
+       class="keypad_key"
+       vfp:key_value="*"
+       id="g3982"
+       inkscape:label="Star">
+      <rect
+         x="196.75"
+         y="302.29001"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linearGradient5229);fill-opacity:1"
+         id="rect131" />
+      <rect
+         x="196.75"
+         y="302.29001"
+         width="70"
+         height="70"
+         rx="6.3299999"
+         ry="6.3299999"
+         style="fill:url(#linear-gradient-14)"
+         id="rect133" />
+      <text
+         y="378.17001"
+         x="210.71001"
+         id="text137"
+         style="font-size:77.48387909px;font-family:Tahoma, Tahoma;fill:#1d1d1b">*</text>
+    </g>
+       <text
+       class="label"
+       x="-20"
+       y="-20"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-size:60px;line-height:125%;font-family:sans-serif;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"
+       id="text23">label</text>
+  </g>
+</svg>

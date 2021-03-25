@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg20"
+   sodipodi:docname="Rotart Switch 4.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs24" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     id="namedview22"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="-44.491525"
+     inkscape:cy="50"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g3724" />
+  <vfp:catalogue
+     PREFIX="Switch"
+     CATEGORY="Switches"
+     DESC="Rotary Switch 4" />
+  <g vfp:class="RotarySwitch"
+     id="g3724"
+     transform="translate(50,50)">
+    <g class="stator"
+       id="g3732"
+       inkscape:label="Stator">
+      <circle
+         cx="0"
+         cy="0"
+         r="50"
+         style="fill:#a7d7cf"
+         id="circle4" />
+      <circle
+         cx="0"
+         cy="0"
+         r="46.75"
+         style="fill:#b9b8bc"
+         id="circle6" />
+    </g>
+    <g class="rotor"
+       style="pointer-events:none"
+       id="g3728"
+       inkscape:label="Rotor">
+      <path
+         d="M 15,0 A 150.8,150.8 0 0 0 4,-37.62 q -0.41,-1 -0.81,-1.81 c -1.11,-2.46 -2,-4.29 -2.56,-5.33 -0.34,-0.66 -0.91,-0.66 -1.27,0 -0.54,1.05 -1.43,2.86 -2.52,5.27 q -0.39,0.86 -0.81,1.81 A 150.8,150.8 0 0 0 -15,0 c -1.6,11.11 -2.76,23.89 -1.31,32 1.58,8.74 12.18,13.67 16.07,13.81 a 2,2 0 0 0 0.22,0 h 0.14 c 3.74,0 14.64,-5 16.24,-13.82 C 17.79,23.91 16.63,11.13 15,0 Z"
+         style="fill:#c8c7c7;stroke:#3c3c3b;stroke-width:1.69336772px;stroke-linecap:round;stroke-linejoin:round"
+         id="path10"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 0,-46.17 a 0.86,0.86 0 0 0 -0.94,0.76 V -31 a 1,1 0 0 0 1.88,0 V -45.41 A 0.86,0.86 0 0 0 0,-46.17 Z"
+         style="fill:#3c3c3b"
+         id="path12"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+    	class="lables"
+    	id="lables"
+    	></g>
+    	<g 
+       id="Text"
+       class="readout"
+       style="opacity:0"><text
+         id="text"
+         style="font-size:20px;font-family:sans-serif;dominant-baseline:central;text-anchor:middle;fill:#000000"
+         x="0"
+         y="0">999</text>
+     </g>  
+  </g>
+</svg>

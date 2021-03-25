@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<CONTROL>
+   <CONFIG>
+      <ENUMERATION NAME="MODE">
+           <CONSTANT NAME="One-Click" VALUE="0"/> 
+           <CONSTANT NAME="Momentary" VALUE="1"/> 
+           <CONSTANT NAME="Toggle" VALUE="2"/> 
+      </ENUMERATION>             
+      <ENUMERATION NAME="POSITION">
+           <CONSTANT NAME="None" VALUE="0"/> 
+           <CONSTANT NAME="Above" VALUE="1"/> 
+           <CONSTANT NAME="Below" VALUE="2"/>
+           <CONSTANT NAME="Left" VALUE="3"/>       
+           <CONSTANT NAME="Right" VALUE="4"/>       
+      </ENUMERATION>    
+      <ENUMERATION NAME="ICON">
+           <CONSTANT NAME="Blank" VALUE="0"/> 
+           <CONSTANT NAME="Power" VALUE="1"/> 
+           <CONSTANT NAME="Play" VALUE="2"/>
+           <CONSTANT NAME="Pause" VALUE="3"/>       
+           <CONSTANT NAME="Stop" VALUE="4"/>      
+           <CONSTANT NAME="Fast-Forward" VALUE="5"/> 
+           <CONSTANT NAME="Rewind" VALUE="6"/>
+           <CONSTANT NAME="Record" VALUE="7"/>
+           <CONSTANT NAME="Skip Forward" VALUE="8"/>
+           <CONSTANT NAME="Skip Backwards" VALUE="9"/>
+           <CONSTANT NAME="Volume Up" VALUE="10"/>
+           <CONSTANT NAME="Volume Down" VALUE="11"/>
+           <CONSTANT NAME="Mute" VALUE="12"/>
+           <CONSTANT NAME="Reload" VALUE="13"/>
+           <CONSTANT NAME="Lamp" VALUE="14"/>
+           <CONSTANT NAME="Custom 1" VALUE="15"/> 
+           <CONSTANT NAME="Custom 2" VALUE="16"/>
+           <CONSTANT NAME="Custom 3" VALUE="17"/>    
+      </ENUMERATION> 
+
+  	   <PROPERTY NAME="mode" DESC="Mode of operation" TYPE="MODE" DEFAULT="0"/>
+  	   <PROPERTY NAME="icon" DESC="Icon for button face" TYPE="ICON" />
+  	   <PROPERTY NAME="autoLamp"  DESC="Manage lamp state automatically" TYPE="BOOLEAN" DEFAULT="0"/>
+  	   <PROPERTY NAME="labelText" DESC="Text for button label" TYPE="STRING" DEFAULT="label"/>
+  	   <PROPERTY NAME="labelPosition" DESC="Position of button label" TYPE="POSITION" DEFAULT="2"/>
+  	   <PROPERTY NAME="labelSpacing" DESC="Distance of the label from the button" TYPE="INTEGER" DEFAULT="10"/>
+  	   <PROPERTY NAME="labelFont" DESC="Font for the label" TYPE="FONT"/>
+  	   <PROPERTY NAME="lampColour" DESC="Colour for the indicator lamp" TYPE="RGB" DEFAULT="#00FF00" />     
+  	   <PROPERTY NAME="faceColour" DESC="Colour for the button face" TYPE="RGB"/>
+  	   
+   </CONFIG>
+   
+   <!-- Driver Descriptor for Push-Button  -->
+   <DRIVER HEADER="Controls">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+
+        <INTERRUPT DESC="Control Event"  HOOK="attachEventHandler"/>                   
+
+        <FUNCTION DESC="Button is Clicked/Down">
+           <RETURN TYPE="BOOLEAN"/>
+        </FUNCTION>
+
+        <METHOD NAME="setState" DESC="Set the state of the button (latching only)">
+           <PARAMETER TYPE="BOOLEAN"/>
+        </METHOD>
+
+        <METHOD NAME="getState" DESC="Return the state of the button (latching only)">
+           <RETURN TYPE="BOOLEAN" DEFAULT="state"/>
+        </METHOD>
+   
+        <METHOD NAME="setLamp" DESC="Set the state of the indicator lamp (autoLamp=FALSE)">
+           <PARAMETER TYPE="BOOLEAN"/>
+        </METHOD>
+
+   
+   </DRIVER>
+</CONTROL>
+  

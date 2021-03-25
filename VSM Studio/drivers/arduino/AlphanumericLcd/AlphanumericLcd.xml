@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino LCD Display -->
+<DRIVER HEADER="AlphanumericLcd.h">
+ <REQUIRE HEADER="Core.h"/>
+ <REQUIRE HEADER="LiquidCrystal.h"/>
+ 
+ <ENUMERATION NAME="BASE">
+   <CONSTANT NAME="DECIMAL" VALUE="10"/>
+   <CONSTANT NAME="BINARY" VALUE="2"/>
+   <CONSTANT NAME="OCTAL"  VALUE="8"/>
+   <CONSTANT NAME="HEX"  VALUE="16"/>
+ </ENUMERATION>
+
+ <!-- Display control functions -->
+ <METHOD NAME="clear" DESC="Clear the display."/>
+ <METHOD NAME="home" DESC="Set the cursor to the home position."/>
+ <METHOD NAME="display" DESC="Enable the display."/>
+ <METHOD NAME="noDisplay" DESC="Disable the display."/>
+ <METHOD NAME="blink" DESC="Make the cursor blink."/>
+ <METHOD NAME="noBlink" DESC="Stop the cursor blinking."/>
+ <METHOD NAME="cursor" DESC="Show the cursor."/>
+ <METHOD NAME="noCursor" DESC="Hide the cursor."/>
+ <METHOD NAME="scrollDisplayLeft" DESC="Scroll the display to the left."/>
+ <METHOD NAME="scrollDisplayRight" DESC="Scroll the display to the right."/>
+ <METHOD NAME="leftToRight" DESC="Add new characters to the right."/>
+ <METHOD NAME="rightToLeft" DESC="Right justify text from the cursor."/>
+ <METHOD NAME="autoscroll" DESC="Enable automatic scrolling."/>
+ <METHOD NAME="noAutoscroll" DESC="Disable automatic scrolling."/>
+ <METHOD NAME="setCursor" DESC="Set the cursor position.">
+   <PARAMETER NAME="col" TYPE="INTEGER" DEFAULT="0" DESC="Column of new cursor position"/>
+   <PARAMETER NAME="row" TYPE="INTEGER" DEFAULT="0" DESC="Row of new cursor position"/>
+ </METHOD>  
+
+ <!-- TBD createChar, possibly this can be done with a resource file, as in 'setFont' -->    
+ 
+ <!-- Output Functions -->
+ <METHOD NAME="print" DESC="Print a string.">
+   <PARAMETER TYPE="LIST" DESC="List of numbers or strings to print."/>
+ </METHOD>
+ <METHOD NAME="println" DESC="Print a string and move cursor to new line.">
+   <PARAMETER TYPE="LIST" DESC="List of numbers or strings to print."/>
+ </METHOD>
+ <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+   <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+ </METHOD>
+ <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+   <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+ </METHOD>
+
+</DRIVER>

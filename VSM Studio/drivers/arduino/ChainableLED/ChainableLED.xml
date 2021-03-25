@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Generic Buttons -->
+<DRIVER HEADER="ChainableLED.h">
+    <METHOD NAME="setColorRGB" DESC="Set an LED colour as RGB values">
+        <PARAMETER NAME="led" TYPE="INTEGER" DESC="LED Index" DEFAULT="0"/>
+        <PARAMETER NAME="r" TYPE="INTEGER" DESC="Red value (0-255)"/>
+        <PARAMETER NAME="g" TYPE="INTEGER" DESC="Green value (0-255)"/>
+        <PARAMETER NAME="b" TYPE="INTEGER" DESC="Blue value (0-255)"/>        
+    </METHOD>
+    <METHOD NAME="setColorHSB" DESC="Set an LED colour as HSB values">
+        <PARAMETER NAME="led" TYPE="INTEGER" DESC="LED Index" DEFAULT="0"/>
+        <PARAMETER NAME="h" TYPE="FLOAT" DESC="Hue value (0-1)"/>
+        <PARAMETER NAME="s" TYPE="FLOAT" DESC="Saturation value (0-1)"/>
+        <PARAMETER NAME="b" TYPE="FLAOT" DESC="Brightness value (0-1)"/>        
+    </METHOD>
+</DRIVER>  

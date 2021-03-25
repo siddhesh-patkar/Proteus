@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino LED Green Breakout Board.pdsclip" FAMILY="ARDUINO" DESC="Arduino LED (Green)">
+   <PERIPHERAL TYPE="Arduino LED" ELEMENT="LED1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GenericLED">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO9"/>
+         </PIN>
+   	</INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER FILE="Generic/LED Driver.xml"/>
+   </PERIPHERAL>
+</CLIP>	
+  

@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 178.25 52"
+   version="1.1"
+   id="svg324"
+   sodipodi:docname="LedStrip10.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata175">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1417"
+     id="namedview173"
+     showgrid="false"
+     inkscape:zoom="1.6718093"
+     inkscape:cx="-122.62164"
+     inkscape:cy="26"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="LEDs" />
+  <defs
+     id="defs212">
+    <linearGradient
+       id="LedStrip1-1"
+       x1="-0.05"
+       y1="1.97"
+       x2="178.57"
+       y2="50.1"
+       gradientTransform="translate(63.12 115.13) rotate(-90)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#883a15"
+         id="stop2" />
+      <stop
+         offset="0.09"
+         stop-color="#c18635"
+         id="stop4" />
+      <stop
+         offset="0.18"
+         stop-color="#f7b931"
+         id="stop6" />
+      <stop
+         offset="0.29"
+         stop-color="#c68e22"
+         id="stop8" />
+      <stop
+         offset="0.4"
+         stop-color="#ad6d15"
+         id="stop10" />
+      <stop
+         offset="0.47"
+         stop-color="#e09e23"
+         id="stop12" />
+      <stop
+         offset="0.55"
+         stop-color="#df9626"
+         id="stop14" />
+      <stop
+         offset="0.62"
+         stop-color="#ffec4e"
+         id="stop16" />
+      <stop
+         offset="0.71"
+         stop-color="#eaa12d"
+         id="stop18" />
+      <stop
+         offset="0.77"
+         stop-color="#b56d15"
+         id="stop20" />
+      <stop
+         offset="0.82"
+         stop-color="#ffe744"
+         id="stop22" />
+      <stop
+         offset="0.93"
+         stop-color="#bb7116"
+         id="stop24" />
+      <stop
+         offset="1"
+         stop-color="#883a15"
+         id="stop26" />
+    </linearGradient>
+    <linearGradient
+       id="LedStrip1-1-2"
+       x1="1.1"
+       y1="2.28"
+       x2="177.42"
+       y2="49.79"
+       xlink:href="#LedStrip1-1" />
+    <linearGradient
+       id="LedStrip1-2"
+       data-name="Gold 13"
+       x1="2.25"
+       y1="2.59"
+       x2="176.27"
+       y2="49.48"
+       gradientTransform="rotate(-90,-0.005,0.005)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#883a15"
+         id="stop30" />
+      <stop
+         offset="0.07"
+         stop-color="#bb7116"
+         id="stop32" />
+      <stop
+         offset="0.18"
+         stop-color="#ffe744"
+         id="stop34" />
+      <stop
+         offset="0.23"
+         stop-color="#b56d15"
+         id="stop36" />
+      <stop
+         offset="0.29"
+         stop-color="#eaa12d"
+         id="stop38" />
+      <stop
+         offset="0.38"
+         stop-color="#ffec4e"
+         id="stop40" />
+      <stop
+         offset="0.45"
+         stop-color="#df9626"
+         id="stop42" />
+      <stop
+         offset="0.53"
+         stop-color="#e09e23"
+         id="stop44" />
+      <stop
+         offset="0.6"
+         stop-color="#ad6d15"
+         id="stop46" />
+      <stop
+         offset="0.71"
+         stop-color="#c68e22"
+         id="stop48" />
+      <stop
+         offset="0.82"
+         stop-color="#f7b931"
+         id="stop50" />
+      <stop
+         offset="0.91"
+         stop-color="#c18635"
+         id="stop52" />
+      <stop
+         offset="1"
+         stop-color="#883a15"
+         id="stop54" />
+    </linearGradient>
+    <linearGradient
+       id="LedStrip1-3"
+       data-name="Gold 14"
+       x1="7.75"
+       y1="26.1"
+       x2="24.48"
+       y2="26.1"
+       gradientTransform="translate(-13.85 38.35) rotate(-90)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#893813"
+         id="stop57" />
+      <stop
+         offset="0.11"
+         stop-color="#eae43b"
+         id="stop59" />
+      <stop
+         offset="0.2"
+         stop-color="#f9ae27"
+         id="stop61" />
+      <stop
+         offset="0.28"
+         stop-color="#a46b1e"
+         id="stop63" />
+      <stop
+         offset="0.39"
+         stop-color="#422b13"
+         id="stop65" />
+      <stop
+         offset="0.52"
+         stop-color="#be8725"
+         id="stop67" />
+      <stop
+         offset="0.63"
+         stop-color="#f9ba42"
+         id="stop69" />
+      <stop
+         offset="0.75"
+         stop-color="#b58726"
+         id="stop71" />
+      <stop
+         offset="0.85"
+         stop-color="#fcef79"
+         id="stop73" />
+      <stop
+         offset="0.87"
+         stop-color="#fbe973"
+         id="stop75" />
+      <stop
+         offset="0.9"
+         stop-color="#f7d862"
+         id="stop77" />
+      <stop
+         offset="0.93"
+         stop-color="#f1bd46"
+         id="stop79" />
+      <stop
+         offset="0.97"
+         stop-color="#e8971f"
+         id="stop81" />
+      <stop
+         offset="0.97"
+         stop-color="#e8961e"
+         id="stop83" />
+    </linearGradient>
+    <linearGradient
+       id="LedStrip1-1-3"
+       x1="4.41"
+       y1="23.16"
+       x2="33.55"
+       y2="34.1"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         stop-opacity="0"
+         id="stop86" />
+      <stop
+         offset="1"
+         stop-color="#fff"
+         stop-opacity="0.7"
+         id="stop88" />
+    </linearGradient>
+    <linearGradient
+       id="LedStrip1-3-2"
+       x1="24.71"
+       y1="26.1"
+       x2="41.44"
+       y2="26.1"
+       gradientTransform="rotate(-90)"
+       xlink:href="#LedStrip1-3" />
+    <linearGradient
+       id="LedStrip1-1-4"
+       x1="21.37"
+       y1="23.16"
+       x2="50.51"
+       y2="34.1"
+       xlink:href="#LedStrip1-1-3" />
+    <linearGradient
+       id="LedStrip1-3-3"
+       x1="41.67"
+       y1="26.1"
+       x2="58.39"
+       y2="26.1"
+       gradientTransform="rotate(-90)"
+       xlink:href="#LedStrip1-3" />
+    <linearGradient
+       id="LedStrip1-1-5"
+       x1="38.33"
+       y1="23.16"
+       x2="67.47"
+       y2="34.1"
+       xlink:href="#LedStrip1-1-3" />
+    <linearGradient
+       id="LedStrip1-3-4"
+       x1="58.63"
+       y1="26.1"
+       x2="75.35"
+       y2="26.1"
+       gradientTransform="rotate(-90)"
+       xlink:href="#LedStrip1-3" />
+    <linearGradient
+       id="LedStrip1-1-6"
+       x1="55.29"
+       y1="23.16"
+       x2="84.43"
+       y2="34.1"
+       xlink:href="#LedStrip1-1-3" />
+    <linearGradient
+       id="LedStrip1-3-5"
+       x1="75.58"
+       y1="26.1"
+       x2="92.31"
+       y2="26.1"
+       gradientTransform="rotate(-90)"
+       xlink:href="#LedStrip1-3" />
+    <linearGradient
+       id="LedStrip1-1-7"
+       x1="72.25"
+       y1="23.16"
+       x2="101.38"
+       y2="34.1"
+       xlink:href="#LedStrip1-1-3" />
+    <linearGradient
+       id="LedStrip1-3-6"
+       x1="92.54"
+       y1="26.1"
+       x2="109.27"
+       y2="26.1"
+       gradientTransform="rotate(-90)"
+       xlink:href="#LedStrip1-3" />
+    <linearGradient
+       id="LedStrip1-1-8"
+       x1="89.2"
+       y1="23.16"
+       x2="118.34"
+       y2="34.1"
+       xlink:href="#LedStrip1-1-3" />
+    <linearGradient
+       id="LedStrip1-3-7"
+       x1="109.5"
+       y1="26.1"
+       x2="126.23"
+       y2="26.1"
+       gradientTransform="rotate(-90)"
+       xlink:href="#LedStrip1-3" />
+    <linearGradient
+       id="LedStrip1-1-9"
+       x1="106.16"
+       y1="23.16"
+       x2="135.3"
+       y2="34.1"
+       xlink:href="#LedStrip1-1-3" />
+    <linearGradient
+       id="LedStrip1-3-8"
+       x1="126.46"
+       y1="26.1"
+       x2="143.19"
+       y2="26.1"
+       gradientTransform="rotate(-90)"
+       xlink:href="#LedStrip1-3" />
+    <linearGradient
+       id="LedStrip1-1-10"
+       x1="123.12"
+       y1="23.16"
+       x2="152.26"
+       y2="34.1"
+       xlink:href="#LedStrip1-1-3" />
+    <linearGradient
+       id="LedStrip1-3-9"
+       x1="143.42"
+       y1="26.1"
+       x2="160.14"
+       y2="26.1"
+       gradientTransform="rotate(-90)"
+       xlink:href="#LedStrip1-3" />
+    <linearGradient
+       id="LedStrip1-1-11"
+       x1="140.08"
+       y1="23.16"
+       x2="169.22"
+       y2="34.1"
+       xlink:href="#LedStrip1-1-3" />
+    <linearGradient
+       id="LedStrip1-3-10"
+       x1="160.38"
+       y1="26.1"
+       x2="177.1"
+       y2="26.1"
+       gradientTransform="rotate(-90)"
+       xlink:href="#LedStrip1-3" />
+    <linearGradient
+       id="LedStrip1-1-12"
+       x1="157.04"
+       y1="23.16"
+       x2="186.18"
+       y2="34.1"
+       xlink:href="#LedStrip1-1-3" />
+    <LedStrip1-
+       inkscape:collect="always"
+       style="color-interpolation-LedStrip1-s:sRGB"
+       id="LedStrip1-4815"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4817" />
+    </LedStrip1->
+    <LedStrip1-
+       inkscape:collect="always"
+       style="color-interpolation-LedStrip1-s:sRGB"
+       id="LedStrip1-4819"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4821" />
+    </LedStrip1->
+    <LedStrip1-
+       inkscape:collect="always"
+       style="color-interpolation-LedStrip1-s:sRGB"
+       id="LedStrip1-4823"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4825" />
+    </LedStrip1->
+    <LedStrip1-
+       inkscape:collect="always"
+       style="color-interpolation-LedStrip1-s:sRGB"
+       id="LedStrip1-4827"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4829" />
+    </LedStrip1->
+    <LedStrip1-
+       inkscape:collect="always"
+       style="color-interpolation-LedStrip1-s:sRGB"
+       id="LedStrip1-4831"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4833" />
+    </LedStrip1->
+    <LedStrip1-
+       inkscape:collect="always"
+       style="color-interpolation-LedStrip1-s:sRGB"
+       id="LedStrip1-4835"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4837" />
+    </LedStrip1->
+    <LedStrip1-
+       inkscape:collect="always"
+       style="color-interpolation-LedStrip1-s:sRGB"
+       id="LedStrip1-4839"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4841" />
+    </LedStrip1->
+    <LedStrip1-
+       inkscape:collect="always"
+       style="color-interpolation-LedStrip1-s:sRGB"
+       id="LedStrip1-4843"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4845" />
+    </LedStrip1->
+    <LedStrip1-
+       inkscape:collect="always"
+       style="color-interpolation-LedStrip1-s:sRGB"
+       id="LedStrip1-4847"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4849" />
+    </LedStrip1->
+    <LedStrip1-
+       inkscape:collect="always"
+       style="color-interpolation-LedStrip1-s:sRGB"
+       id="LedStrip1-4851"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4853" />
+    </LedStrip1->
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-1"
+       id="LedStrip1-675"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(-90,-0.005,0.005)"
+       x1="-0.05"
+       y1="1.97"
+       x2="178.57"
+       y2="50.1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-3"
+       id="LedStrip1-677"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(-90)"
+       x1="7.75"
+       y1="26.1"
+       x2="24.48"
+       y2="26.1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#LedStrip1-1-3"
+       id="LedStrip1-679"
+       gradientUnits="userSpaceOnUse"
+       x1="4.41"
+       y1="23.16"
+       x2="33.55"
+       y2="34.1" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="LedStrip1-772"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4774" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="LedStrip1-776"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4778" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="LedStrip1-780"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4782" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="LedStrip1-784"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4786" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="LedStrip1-788"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4790" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="LedStrip1-792"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4794" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="LedStrip1-796"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4798" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="LedStrip1-800"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4802" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="LedStrip1-804"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4806" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="LedStrip1-808"
+       x="-1.2114"
+       width="3.4228001"
+       y="-0.030761808"
+       height="1.0615236">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.50475001"
+         id="feGaussianBlur4810" />
+    </filter>
+  </defs>
+  <vfp:catalogue
+     PREFIX="LEDBar"
+     CATEGORY="Display Controls"
+     DESC="LED Bar 10" />
+  <g
+     id="Layer_2"
+     vfp:class="LEDStrip">
+    <rect
+       style="display:inline;fill:url(#LedStrip1-675)"
+       id="rect216"
+       transform="rotate(90)"
+       height="178.25"
+       width="52"
+       y="-178.25999"
+       x="1.0681152e-006"
+       class="" />
+    <rect
+       style="display:inline;fill:url(#LedStrip1-1-2)"
+       id="rect218"
+       height="50"
+       width="176.31"
+       y="1"
+       x="0.97000003"
+       class="bounds" />
+    <rect
+       style="display:inline;fill:url(#LedStrip1-2)"
+       id="rect220"
+       transform="rotate(90)"
+       height="174.37"
+       width="48"
+       y="-176.31"
+       x="1.9999973" />
+    <g
+       id="LED Frames">
+      <rect
+         x="4.3499999"
+         y="-19.120001"
+         width="43.5"
+         height="13.75"
+         transform="rotate(90)"
+         id="rect222"
+         style="display:inline;fill:url(#LedStrip1-677)" />
+      <rect
+         x="4.3499999"
+         y="-36.080002"
+         width="43.5"
+         height="13.75"
+         transform="rotate(90)"
+         id="rect232"
+         style="fill:url(#LedStrip1-3-2)" />
+      <rect
+         x="4.3600001"
+         y="-53.040001"
+         width="43.5"
+         height="13.75"
+         transform="rotate(90)"
+         id="rect242"
+         style="fill:url(#LedStrip1-3-3)" />
+      <rect
+         x="4.3600011"
+         y="-70"
+         width="43.5"
+         height="13.75"
+         transform="rotate(90)"
+         id="rect252"
+         style="fill:url(#LedStrip1-3-4)" />
+      <rect
+         x="4.3500018"
+         y="-86.959999"
+         width="43.5"
+         height="13.75"
+         transform="rotate(90)"
+         id="rect262"
+         style="fill:url(#LedStrip1-3-5)" />
+      <rect
+         x="4.3500009"
+         y="-103.91"
+         width="43.5"
+         height="13.75"
+         transform="rotate(90)"
+         id="rect272"
+         style="fill:url(#LedStrip1-3-6)" />
+      <rect
+         x="4.3499999"
+         y="-120.87"
+         width="43.5"
+         height="13.75"
+         transform="rotate(90)"
+         id="rect282"
+         style="fill:url(#LedStrip1-3-7)" />
+      <rect
+         x="4.349999"
+         y="-137.83"
+         width="43.5"
+         height="13.75"
+         transform="rotate(90)"
+         id="rect292"
+         style="fill:url(#LedStrip1-3-8)" />
+      <rect
+         x="4.3599982"
+         y="-154.78999"
+         width="43.5"
+         height="13.75"
+         transform="rotate(90)"
+         id="rect302"
+         style="fill:url(#LedStrip1-3-9)" />
+      <rect
+         x="4.3600049"
+         y="-171.75"
+         width="43.5"
+         height="13.75"
+         transform="rotate(90)"
+         id="rect312"
+         style="fill:url(#LedStrip1-3-10)" />
+    </g>
+    <g
+       id="LEDs"
+       style="display:inline">
+      <rect
+         x="6.3800001"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect224"
+         style="fill:#e41915"
+         class="LED" />
+      <rect
+         x="23.33"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect234"
+         style="fill:#e41915"
+         class="LED" />
+      <rect
+         x="40.290001"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect244"
+         style="fill:#e41915"
+         class="LED" />
+      <rect
+         x="57.25"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect254"
+         style="fill:#e41915"
+         class="LED" />
+      <rect
+         x="74.209999"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect264"
+         style="fill:#e41915"
+         class="LED" />
+      <rect
+         x="91.169998"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect274"
+         style="fill:#2b0000"
+         class="LED" />
+      <rect
+         x="108.13"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect284"
+         style="fill:#2b0000"
+         class="LED" />
+      <rect
+         x="125.08"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect294"
+         style="fill:#2b0000"
+         class="LED" />
+      <rect
+         x="142.03999"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect304"
+         style="fill:#2b0000"
+         class="LED" />
+      <rect
+         x="159"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect314"
+         style="display:inline;fill:#2b0000"
+         class="LED" />
+    </g>
+    <g
+       id="Highlights">
+      <rect
+         x="6.3800001"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect226"
+         style="opacity:0.65;fill:url(#LedStrip1-679)" />
+      <rect
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-808)"
+         id="rect228"
+         height="39.380001"
+         width="1"
+         y="6.5700002"
+         x="7" />
+      <rect
+         x="23.33"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect236"
+         style="opacity:0.65;fill:url(#LedStrip1-1-4)" />
+      <rect
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-804)"
+         id="rect238"
+         height="39.380001"
+         width="1"
+         y="6.5700002"
+         x="23.959999" />
+      <rect
+         x="40.290001"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect246"
+         style="opacity:0.65;fill:url(#LedStrip1-1-5)" />
+      <rect
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-800)"
+         id="rect248"
+         height="39.380001"
+         width="1"
+         y="6.5700002"
+         x="40.919998" />
+      <rect
+         x="57.25"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect256"
+         style="opacity:0.65;fill:url(#LedStrip1-1-6)" />
+      <rect
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-796)"
+         id="rect258"
+         height="39.380001"
+         width="1"
+         y="6.5700002"
+         x="57.880001" />
+      <rect
+         x="74.209999"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect266"
+         style="opacity:0.65;fill:url(#LedStrip1-1-7)" />
+      <rect
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-792)"
+         id="rect268"
+         height="39.380001"
+         width="1"
+         y="6.5700002"
+         x="74.830002" />
+      <rect
+         x="91.169998"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect276"
+         style="opacity:0.65;fill:url(#LedStrip1-1-8)" />
+      <rect
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-788)"
+         id="rect278"
+         height="39.380001"
+         width="1"
+         y="6.5700002"
+         x="91.790001" />
+      <rect
+         x="108.13"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect286"
+         style="opacity:0.65;fill:url(#LedStrip1-1-9)" />
+      <rect
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-784)"
+         id="rect288"
+         height="39.380001"
+         width="1"
+         y="6.5700002"
+         x="108.75" />
+      <rect
+         x="125.08"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect296"
+         style="opacity:0.65;fill:url(#LedStrip1-1-10)" />
+      <rect
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-780)"
+         id="rect298"
+         height="39.380001"
+         width="1"
+         y="6.5700002"
+         x="125.71" />
+      <rect
+         x="142.03999"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect306"
+         style="opacity:0.65;fill:url(#LedStrip1-1-11)" />
+      <rect
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-776)"
+         id="rect308"
+         height="39.380001"
+         width="1"
+         y="6.5700002"
+         x="142.67" />
+      <rect
+         x="159"
+         y="5.3499999"
+         width="11.75"
+         height="41.5"
+         id="rect316"
+         style="opacity:0.65;fill:url(#LedStrip1-1-12)" />
+      <rect
+         style="opacity:0.65;fill:#fffdf5;filter:url(#LedStrip1-772)"
+         id="rect318"
+         height="39.380001"
+         width="1"
+         y="6.5700002"
+         x="159.63" />
+    </g>
+    <text
+       id="text73"
+       y="66.921593"
+       x="90.384201"
+       style="font-size:15px;font-family:sans-serif;text-anchor:middle;stroke-width:0.5">50%</text>
+  </g>
+</svg>

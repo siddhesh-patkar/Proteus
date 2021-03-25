@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Slider Knob Control Descriptor -->
+<CONTROL>
+   <CONFIG>
+      <ENUMERATION NAME="VALUEPOSITION">
+           <CONSTANT NAME="None" VALUE="0"/> 
+           <CONSTANT NAME="Above/Right"VALUE="1"/> 
+           <CONSTANT NAME="Below/Left" VALUE="2"/>
+      </ENUMERATION>
+      
+      
+      <ENUMERATION NAME="LABELPOSITION">
+           <CONSTANT NAME="None" VALUE="0"/> 
+           <CONSTANT NAME="Left/Above" VALUE="1"/> 
+           <CONSTANT NAME="Right/Below" VALUE="2"/>
+      </ENUMERATION>
+      
+      
+ 	   <ENUMERATION NAME="ORIENTATION">
+           <CONSTANT NAME="Vertical" VALUE="0"/> 
+           <CONSTANT NAME="Horizontal" VALUE="1"/> 
+      </ENUMERATION>  
+          	      
+      <SETUP NAME="begin">
+         <PROPERTY NAME="init" DESC="Initial value" TYPE="INTEGER" MIN="0" MAX="4" DEFAULT="0"/>
+      </SETUP>  
+       <PROPERTY NAME="numStates" DESC="Number of States" TYPE="INTEGER" MIN="2" MAX="5" DEFAULT="5"/>
+	     <PROPERTY NAME="tickLength" DESC="Length of Tick in pixels" TYPE="INTEGER" MIN="0" DEFAULT="5"/>
+	     <PROPERTY NAME="tickColour" DESC="Colour for the ticks" TYPE="RGB"/>   
+  	   <PROPERTY NAME="orientation" DESC="Orientation of the slider" TYPE="ORIENTATION" DEFAULT="0"/>
+  	   <PROPERTY NAME="labels" DESC="Comma separated list of button labels" TYPE="STRING" DEFAULT="Zero,One,Two,Three,Four"/>
+  	   <PROPERTY NAME="labelPosition" DESC="Location for the value labels" TYPE="LABELPOSITION" DEFAULT="2"/>
+  	   <PROPERTY NAME="staggeredLabels" DESC="Stagger the labels on the hosizontal setting" TYPE="BOOLEAN" DEFAULT="0"/>
+  	   <PROPERTY NAME="labelFont" DESC="Font for the labels" TYPE="FONT"/>
+
+   </CONFIG>	  
+   
+   <DRIVER HEADER="Controls">
+        <REQUIRE HEADER="VfpServer" />
+        <INTERRUPT DESC="State Changed"  HOOK="attachEventHandler"/>                   
+
+        <FUNCTION DESC="Switch Position">
+           <RETURN TYPE="INTEGER"/>
+        </FUNCTION>
+     
+        <METHOD NAME="getState" DESC="Reads the switch position.">
+           <RETURN TYPE="INTEGER" />
+        </METHOD>
+
+        <METHOD NAME="setState" DESC="Set the switch position.">
+           <PARAMETER TYPE="INTEGER"/>
+        </METHOD>
+         
+   
+           
+   </DRIVER>
+</CONTROL>  

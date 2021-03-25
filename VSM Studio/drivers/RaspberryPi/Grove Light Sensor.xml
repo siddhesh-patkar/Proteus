@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove Light Sensor.pdsclip" FAMILY="Raspberry Pi" DESC="Grove Light Sensor Module" >
+   <PERIPHERAL TYPE="Grove Light Sensor"  ELEMENT="LDR1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GroveLightSensor">
+         <PROPERTY NAME="STATE" ELEMENT="GC1" TYPE="INTEGER" GROVE="ANALOG"/>
+     </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="Grove">
+       <REQUIRE MODULE="GROVE"/>
+        <!-- Sensor Function -->
+       <FUNCTION DESC="Return true if light is greater or equal to the trigger value.">
+         <PARAMETER NAME="Trigger" TYPE="FLOAT" DEFAULT="0" DESC="Trigger value in Lux"/>
+         <RETURN TYPE="BOOLEAN"/>
+       </FUNCTION>
+       <!-- Methods -->
+       <METHOD NAME="readLight" DESC="Read Light."> 
+         <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="Lux"/>
+       </METHOD>
+       <METHOD NAME="readResistance" DESC="Read resistance.">
+         <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="Ohms"/>
+       </METHOD>
+       <METHOD NAME="readRaw" DESC="Read Raw Value."> 
+         <RETURN NAME="reading" TYPE="FLOAT" DEFAULT="ADCUnits"/>
+       </METHOD>
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>   

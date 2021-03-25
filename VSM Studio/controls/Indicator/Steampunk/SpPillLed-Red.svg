@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 80 20"
+   version="1.1"
+   id="svg120"
+   sodipodi:docname="SpPillLed-Red.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata124">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1417"
+     id="namedview122"
+     showgrid="false"
+     inkscape:zoom="14.9"
+     inkscape:cx="18.715597"
+     inkscape:cy="9.1877015"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g108" />
+  <defs
+     id="defs92">
+    <linearGradient
+       id="SpPillLed-Red-1"
+       x1="39.69"
+       y1="-3.27"
+       x2="39.69"
+       y2="17.64"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         id="stop2" />
+      <stop
+         offset="0.54"
+         stop-color="#fff"
+         stop-opacity="0"
+         id="stop4" />
+      <stop
+         offset="1"
+         stop-color="#134d96"
+         stop-opacity="0.1"
+         id="stop6" />
+    </linearGradient>
+    <radialGradient
+       id="SpPillLed-Red-2"
+       cx="48.58"
+       cy="332.83"
+       r="9.99"
+       gradientTransform="matrix(-0.94,0.36,-0.33,-1.03,229.92,333.55)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#feefe1"
+         stop-opacity="0.9"
+         id="stop9" />
+      <stop
+         offset="0.14"
+         stop-color="#fef5ed"
+         stop-opacity="0.66"
+         id="stop11" />
+      <stop
+         offset="0.28"
+         stop-color="#fffbf7"
+         stop-opacity="0.47"
+         id="stop13" />
+      <stop
+         offset="0.38"
+         stop-color="#fffefd"
+         stop-opacity="0.35"
+         id="stop15" />
+      <stop
+         offset="0.43"
+         stop-color="#fff"
+         stop-opacity="0.3"
+         id="stop17" />
+    </radialGradient>
+    <radialGradient
+       id="SpPillLed-Red-2-2"
+       cx="-41.024563"
+       cy="54.961948"
+       r="26.45"
+       gradientTransform="matrix(0.30635747,-0.09795984,0.37065634,1.0947489,-2.0885445,-55.824177)"
+       gradientUnits="userSpaceOnUse"
+       fx="-41.024563"
+       fy="54.961948">
+      <stop
+         offset="0"
+         stop-color="#efeeee"
+         id="stop20" />
+      <stop
+         offset="0.07"
+         stop-color="#edecec"
+         stop-opacity="0.97"
+         id="stop22" />
+      <stop
+         offset="0.18"
+         stop-color="#e6e5e5"
+         stop-opacity="0.88"
+         id="stop24" />
+      <stop
+         offset="0.32"
+         stop-color="#dbdbdb"
+         stop-opacity="0.73"
+         id="stop26" />
+      <stop
+         offset="0.43"
+         stop-color="#d2d2d2"
+         stop-opacity="0.6"
+         id="stop28" />
+    </radialGradient>
+    <linearGradient
+       id="SpPillLed-Red-3"
+       data-name="SpPillLed-Red-3"
+       y1="10"
+       x2="80"
+       y2="10"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#69320e"
+         id="stop31" />
+      <stop
+         offset="0.22"
+         stop-color="#ab7c1a"
+         id="stop33" />
+      <stop
+         offset="0.4"
+         stop-color="#dac375"
+         id="stop35" />
+      <stop
+         offset="0.52"
+         stop-color="#fcf5b6"
+         id="stop37" />
+      <stop
+         offset="0.61"
+         stop-color="#f8f0a8"
+         id="stop39" />
+      <stop
+         offset="0.68"
+         stop-color="#f3fafd"
+         id="stop41" />
+      <stop
+         offset="0.73"
+         stop-color="#e5d287"
+         id="stop43" />
+      <stop
+         offset="0.78"
+         stop-color="#cdac60"
+         id="stop45" />
+      <stop
+         offset="0.8"
+         stop-color="#c5a256"
+         id="stop47" />
+      <stop
+         offset="0.84"
+         stop-color="#b1873e"
+         id="stop49" />
+      <stop
+         offset="1"
+         stop-color="#7d4615"
+         id="stop51" />
+    </linearGradient>
+    <linearGradient
+       id="SpPillLed-Red-4"
+       data-name="SpPillLed-Red-4"
+       x1="40"
+       y1="-0.74"
+       x2="40"
+       y2="20.03"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a05927"
+         id="stop54" />
+      <stop
+         offset="0.25"
+         stop-color="#dc9b1a"
+         id="stop56" />
+      <stop
+         offset="0.36"
+         stop-color="#fddd6e"
+         id="stop58" />
+      <stop
+         offset="0.48"
+         stop-color="#cc8a21"
+         id="stop60" />
+      <stop
+         offset="0.6"
+         stop-color="#9f5924"
+         id="stop62" />
+      <stop
+         offset="0.75"
+         stop-color="#fddd6e"
+         id="stop64" />
+      <stop
+         offset="0.88"
+         stop-color="#c47f23"
+         id="stop66" />
+      <stop
+         offset="1"
+         stop-color="#f9d663"
+         id="stop68" />
+    </linearGradient>
+    <linearGradient
+       id="SpPillLed-Red-5"
+       data-name="SpPillLed-Red-5"
+       x1="40"
+       y1="0.25"
+       x2="40"
+       y2="19.97"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#886229"
+         id="stop71" />
+      <stop
+         offset="0.09"
+         stop-color="#997538"
+         id="stop73" />
+      <stop
+         offset="0.26"
+         stop-color="#b89653"
+         id="stop75" />
+      <stop
+         offset="0.41"
+         stop-color="#caab63"
+         id="stop77" />
+      <stop
+         offset="0.51"
+         stop-color="#d1b269"
+         id="stop79" />
+      <stop
+         offset="0.61"
+         stop-color="#ccad65"
+         id="stop81" />
+      <stop
+         offset="0.73"
+         stop-color="#bf9e59"
+         id="stop83" />
+      <stop
+         offset="0.86"
+         stop-color="#a88645"
+         id="stop85" />
+      <stop
+         offset="0.99"
+         stop-color="#89642a"
+         id="stop87" />
+      <stop
+         offset="1"
+         stop-color="#886229"
+         id="stop89" />
+    </linearGradient>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Feather"
+       id="SpPillLed-Red-Filter1"
+       x="-0.0073281387"
+       width="1.0146563"
+       y="-0.033105603"
+       height="1.0662112">
+      <feComposite
+         in="SourceGraphic"
+         in2="SourceGraphic"
+         operator="atop"
+         result="composite1"
+         id="feComposite3953" />
+      <feComposite
+         in2="composite1"
+         operator="in"
+         result="composite2"
+         id="feComposite3955" />
+      <feComposite
+         in2="composite2"
+         operator="in"
+         result="composite3"
+         id="feComposite3957" />
+      <feGaussianBlur
+         stdDeviation="0.21587612"
+         id="feGaussianBlur3961" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Feather"
+       id="SpPillLed-Red-Filter2">
+      <feGaussianBlur
+         stdDeviation="1"
+         result="blur"
+         id="feGaussianBlur3844" />
+      <feComposite
+         in="SourceGraphic"
+         in2="blur"
+         operator="atop"
+         result="composite1"
+         id="feComposite3846" />
+      <feComposite
+         in2="composite1"
+         operator="in"
+         result="composite2"
+         id="feComposite3848" />
+      <feComposite
+         in2="composite2"
+         operator="in"
+         result="composite3"
+         id="feComposite3850" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="SpPillLed-Red-Filter3"
+       x="-0.03498063"
+       width="1.0699613"
+       y="-0.076456007"
+       height="1.152912">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.35383598"
+         id="feGaussianBlur3856" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="SpPillLed-Red-Filter4"
+       x="-0.12782741"
+       width="1.2556548"
+       y="-0.020950083"
+       height="1.0419002">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.073150708"
+         id="feGaussianBlur3860" />
+    </filter>
+  </defs>
+  <vfp:catalogue
+     DESC="Pill LED - Red"
+     CATEGORY="Indicators"
+     PREFIX="LED" />
+  <g
+     id="BrassPillLed"
+     vfp:class="Indicator">
+    <path
+       d="M 67.8,17.83 H 12.2 a 7.83,7.83 0 0 1 0,-15.65 h 55.6 a 7.83,7.83 0 0 1 0,15.65 z"
+       id="path96"
+       inkscape:connector-curvature="0"
+       style="fill:#1d1d1b" />
+    <path
+       d="M 67.8,17.83 H 12.2 a 7.83,7.83 0 0 1 0,-15.65 h 55.6 a 7.83,7.83 0 0 1 0,15.65 z"
+       id="path98"
+       class="colour"
+       inkscape:connector-curvature="0"
+       style="display:inline;opacity:1;fill:#e52421;filter:url(#SpPillLed-Red-Filter2)" />
+    <g
+       id="g3819"
+       style="display:none">
+      <path
+         style="display:inline;opacity:0.5"
+         inkscape:connector-curvature="0"
+         id="path100"
+         d="m 77.29,13.7 a 5,5 0 0 1 -4.78,5.22 L 8.8,18.1 A 5,5 0 0 1 4,12.88 L 3.08,6.31 c 0,-2.88 5.15,-5.18 7.79,-5.18 h 61.64 a 5,5 0 0 1 4.78,5.22 z" />
+    </g>
+    <g
+       id="g108"
+       style="display:inline">
+      <path
+         d="m 75.91,6.46 a 4.36,4.36 0 0 1 -4.3,4.17 H 6 C 3.86,10.63 5.05,9.69 5.05,7.35 L 3.67,6.6 C 2.82,3.21 4.09,2.42 6.23,2.42 l 66.2,-1.29 c 2.14,0 3.28,1.59 3.56,5.1 z"
+         id="path102"
+         inkscape:connector-curvature="0"
+         style="fill:url(#SpPillLed-Red-1)" />
+      <path
+         d="m 73.08,14.82 a 11.4,11.4 0 0 0 0.8,-8.38 c 0,0 0,1.16 -0.92,1.44 0.04,-0.01 1.65,2.24 0.12,6.94 z"
+         id="path104"
+         inkscape:connector-curvature="0"
+         style="fill:url(#SpPillLed-Red-2);filter:url(#SpPillLed-Red-Filter4)" />
+      <path
+         d="m 11.43,16 c 4.11,1.37 13.48,0.89 17.76,1.43 -17.58,0.39 -19.14,-0.11 -20.31,-0.77 -3,-1.7 -5.37,-5.33 -3,-10.2 0.27,3.24 1.44,8.15 5.55,9.54 z"
+         id="path106"
+         inkscape:connector-curvature="0"
+         style="opacity:1;fill:url(#SpPillLed-Red-2-2);filter:url(#SpPillLed-Red-Filter3)" />
+    </g>
+    <path
+       d="M 70,0 H 10 a 10,10 0 0 0 0,20 H 70 A 10,10 0 0 0 70,0 Z M 67,17.41 H 13 C 8.56,17.41 5,14.41 5,10 5,5.59 8.6,2.72 13,2.72 h 54 c 4.44,0 8,2.84 8,7.28 0,4.44 -3.56,7.41 -8,7.41 z"
+       id="path110"
+       inkscape:connector-curvature="0"
+       style="fill:url(#SpPillLed-Red-3)" />
+    <path
+       d="M 69.19,0.27 H 10.81 a 9.73,9.73 0 1 0 0,19.46 h 58.38 a 9.73,9.73 0 1 0 0,-19.46 z M 67.8,17.83 H 12.2 a 7.83,7.83 0 0 1 0,-15.65 h 55.6 a 7.83,7.83 0 0 1 0,15.65 z"
+       id="path112"
+       inkscape:connector-curvature="0"
+       style="fill:url(#SpPillLed-Red-4)" />
+    <path
+       d="M 70,0 H 10 a 10,10 0 0 0 0,20 H 70 A 10,10 0 0 0 70,0 Z m 1.31,19.41 H 8.59 c -4.44,0 -8,-5 -8,-9.41 0,-4.41 3.55,-9.47 8,-9.47 h 62.72 c 4.44,0 8,5 8,9.47 0,4.47 -3.56,9.41 -8,9.41 z"
+       id="path114"
+       class="bounds"
+       inkscape:connector-curvature="0"
+       style="fill:url(#SpPillLed-Red-5)" />
+    <text
+       class="text"
+       id="text73"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-size:16.69802094px;line-height:125%;font-family:sans-serif;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.1132015"
+       y="55"
+       x="20">label</text>
+  </g>
+</svg>

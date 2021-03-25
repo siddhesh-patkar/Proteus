@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<COMPILER NAME="AVRASM (Proteus)" VERSION="2.1.42" URL="" AVAILABILITY="Internal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- Assembler -->
+  <TOOL NAME="ASM" FILE="avrasm2.exe">
+    <!--usage: avrasm2.exe [options] file.asm-->
+    <OPTION NAME="-f" DESC="output file format" PARAM="CHOICE">
+      <PARAM VALUE="O" DESC="Debug info for simulation in AVR Studio (default)"/>
+      <PARAM VALUE="O1" DESC="force format version 1"/>
+      <PARAM VALUE="O2" DESC="force format version 2"/>
+      <PARAM VALUE="M" DESC="Motorola hex"/>
+      <PARAM VALUE="I" DESC="Intel hex"/>
+      <PARAM VALUE="G" DESC="Generic hex format"/>
+      <PARAM VALUE="-" DESC="No output file"/>
+    </OPTION>
+    <OPTION NAME="-o " DESC="Put output in 'outfile'" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-d " DESC="Generate debug info for simulation in 'debugfile'" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-l " DESC="Generate listing in 'lfile'" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-m " DESC="Generate map in 'mfile'" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-w" DESC="Relative jumps are allowed to wrap for program ROM up to 4k words in size" ADVANCED="1"/>
+    <OPTION NAME="-e " DESC="Place EEPROM contents in 'efile'" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-C " DESC="Specify AVR core version" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-c" DESC="Case sensitive" ADVANCED="1"/>
+    <OPTION NAME="-1" DESC="Turn on AVR Assembler version 1 compatibility" ADVANCED="1"/>
+    <OPTION NAME="-2" DESC="Turn off AVR Assembler version 1 compatibility" ADVANCED="1"/>
+    <OPTION NAME="-p" DESC=" Set/unset AVRASM1 implicit .device include (also set by -1)" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="1"/>
+      <PARAM VALUE="2"/>
+    </OPTION>
+    <OPTION NAME="-I " DESC="Preprocessor: Add 'dir' to include search path" PARAM="STRING"/>
+    <OPTION NAME="-i " DESC="Preprocessor: Explicitly pre-include file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-D " DESC="Preprocessor: Define symbol. -D name[=value] If =value is omitted, it is set to 1" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-U " DESC="Preprocessor: Undefine symbol" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-S " DESC="Produce include/label info file for AVR Studio" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-v" DESC="verbosity [l|k|0-9][s]:" PARAM="CHOICE">
+      <PARAM VALUE="s" DESC="Include target resource usage statistics">
+        <ALIAS VALUE="2s"/>
+      </PARAM>
+      <PARAM VALUE="k" DESC="Keep output files if source file empty"/>
+      <PARAM VALUE="l" DESC="Output low-level assembly code to stdout"/>
+      <PARAM VALUE="0" DESC="Silent, only error messages printed"/>
+      <PARAM VALUE="1" DESC="Error and warning messages printed"/>
+      <PARAM VALUE="2" DESC="Error, warning, and  info messages printed" DEFAULT="1"/>
+      <PARAM VALUE="3" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="4" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="5" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="6" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="7" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="8" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="9" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="3s" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="4s" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="5s" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="6s" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="7s" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="8s" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+      <PARAM VALUE="9s" DESC="Unspecified, increasing amounts of assembler internal dumps"/>
+    </OPTION>
+    <OPTION NAME="-V" DESC="Format map and list files for Verilog" ADVANCED="1"/>
+    <OPTION NAME="-O" DESC="Overlap report:" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="i" DESC="ignore"/>
+      <PARAM VALUE="w" DESC="warning"/>
+      <PARAM VALUE="e" DESC="error"/>
+    </OPTION>
+    <OPTION NAME="-W" DESC="Warning control" PARAM="CHOICE" MULTIPLE="1" ADVANCED="1">
+      <PARAM VALUE="-b" DESC="Byte operand out of range warning disable"/>
+      <PARAM VALUE="+bo" DESC="Byte operand out of range warning overflow"/>
+      <PARAM VALUE="+bi" DESC="Byte operand out of range warning integer"/>
+      <PARAM VALUE="+ie" DESC="Unsupported instruction error"/>
+      <PARAM VALUE="+iw" DESC="Unsupported instruction warning"/>
+    </OPTION>
+    <OPTION NAME="-W+fw" DESC="Label slip caused by forward ref accepted (DANGEROUS)" ADVANCED="1"/>
+    <OPTION NAME="-F" DESC="-FD|Tfmt   __DATE__ | __TIME__ format, using strftime(3) format string" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-h" DESC="output help" ADVANCED="1"/>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="AVR">
+    <CONTROLLER NAME="AT90S1200">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\1200def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S2313">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\2313def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S2323">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\2323def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S2333">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\2333def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S2343">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\2343def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S4414">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\4414def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S4433">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\4433def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S4434">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\4434def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S8515">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\8515def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90S8535">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\8535def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT86RF401">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\AT86RF401def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128A1">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega128A1def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128A3">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega128A3def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega128D3">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega128D3def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega16A4">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega16A4def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega16D4">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega16D4def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega192A3">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega192A3def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega192D3">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega192D3def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega256A3B">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega256A3Bdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega256A3">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega256A3def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega256D3">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega256D3def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega32A4">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega32A4def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega32D4">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega32D4def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64A1">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega64A1def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64A3">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega64A3def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATxmega64D3">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\ATxmega64D3def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90CAN128">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\can128def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90CAN32">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\can32def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90CAN64">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\can64def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega103">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m103def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega1280">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m1280def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega1281">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m1281def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega1284">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m1284def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega1284P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m1284Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega128A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m128Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega128">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m128def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega128RFA1">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m128RFA1def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega161">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m161def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega162">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m162def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega163">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m163def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega164A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m164Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega164PA">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m164PAdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega164P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m164Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega165">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m165def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega165PA">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m165PAdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega165P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m165Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega168A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m168Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega168">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m168def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega168PA">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m168PAdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega168P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m168Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega169">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m169def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega169PA">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m169PAdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega169P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m169Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m16Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m16def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16HVA2">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m16HVA2def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16HVA">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m16HVAdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16HVB">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m16HVBdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16M1">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m16M1def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16U2">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m16U2def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega16U4">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m16U4def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega2560">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m2560def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega2561">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m2561def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega323">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m323def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega324A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m324Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega324PA">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m324PAdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega324P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m324Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega3250">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m3250def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega3250P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m3250Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega325">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m325def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega325P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m325Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega328">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m328def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega328P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m328Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega3290">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m3290def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega3290P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m3290Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega329">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m329def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega329PA">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m329PAdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega329P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m329Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m32Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32C1">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m32C1def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m32def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32HVB">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m32HVBdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32M1">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m32M1def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32U2">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m32U2def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32U4">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m32U4def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega32U6">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m32U6def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega406">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m406def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega48A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m48Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega48">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m48def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega48PA">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m48PAdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega48P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m48Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega640">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m640def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega644A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m644Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega644">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m644def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega644PA">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m644PAdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega644P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m644Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega6450">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m6450def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega645">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m645def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega6490">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m6490def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega649">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m649def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega649P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m649Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega64A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m64Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega64C1">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m64C1def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega64">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m64def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega64HVE">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m64HVEdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega64M1">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m64M1def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8515">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m8515def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8535">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m8535def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega88A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m88Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega88">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m88def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega88PA">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m88PAdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega88P">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m88Pdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m8Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m8def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8HVA">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m8HVAdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATmega8U2">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m8U2def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM1">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\pwm1def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM216">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\pwm216def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM2B">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\pwm2Bdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM2">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\pwm2def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM316">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\pwm316def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM3B">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\pwm3Bdef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM3">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\pwm3def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90PWM81">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\pwm81def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny10">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn10def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny11">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn11def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny12">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn12def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny13A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn13Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny13">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn13def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny15">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn15def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny167">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn167def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny20">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn20def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny22">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn22def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny2313A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn2313Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny2313">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn2313def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny24A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn24Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny24">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn24def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny25">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn25def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny261A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn261Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny261">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn261def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny26">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn26def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny28">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn28def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny40">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn40def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny4313">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn4313def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny43U">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn43Udef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny44A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn44Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny44">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn44def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny45">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn45def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny461A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn461Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny461">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn461def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny48">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn48def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny4">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn4def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny5">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn5def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny84">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn84def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny85">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn85def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny861A">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn861Adef.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny861">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn861def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny87">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn87def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny88">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn88def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="ATtiny9">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\tn9def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB1286">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\usb1286def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB1287">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\usb1287def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB162">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\usb162def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB646">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\usb646def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB647">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\usb647def.inc&quot;"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="AT90USB82">
+      <OPTION TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\usb82def.inc&quot;"/>
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT PATH="%TOOLS_DIR%/AVRASM" SUF="avrasm2.exe" ARG="" STR="AVRASM" DATE="2009-09-15"/>
+  <!-- File Types -->
+  <FILE NAME="asm" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="$(ASM) $(ASMFLAGS) %OPTIONS% -o %OUTFILE_DOS_QUOTED% -l %OUTFILE_NAME_DOS%.lst %INFILE_DOS_QUOTED%">
+    <FILE OUTPUT="hex">
+      <FILE TEMP="lst"/>
+      <FILE INPUT="asm"/>
+      <OPTION NAME="-f" VALUE="I"/>
+    </FILE>
+    <FILE OUTPUT="obj">
+      <FILE TEMP="lst"/>
+      <FILE INPUT="asm"/>
+      <OPTION NAME="-f" VALUE="O"/>
+    </FILE>
+    <MESSAGE VALUE="^(.+)\((\d+)\): (error|warning|message): .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="obj"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <SOURCE NAME="main.asm" FROM="avrasmmain.asm" OPEN="1"/>
+</COMPILER>

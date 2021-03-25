@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Motor Control" FILE="Arduino/Arduino Zumo Robot.pdsclip" DESC="Arduino Zumo Robot" FAMILY="ARDUINO">
+
+   <PERIPHERAL TYPE="DRIVE" ELEMENT="Z1" SUFFIX="DRIVE">
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="DRIVE">
+         <PIN NAME="DIR_L" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO8"/>
+         </PIN> 
+         <PIN NAME="SPD_L" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO10"/>
+         </PIN> 
+         <PIN NAME="DIR_R" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO7"/>
+         </PIN> 
+         <PIN NAME="SPD_R" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO9"/>
+         </PIN> 
+         <SETUP NAME="begin" />
+      </INTERFACE>
+      <!-- Firmware Driver -->
+      <DRIVER FILE="Zumo/DRIVE.xml" />
+   </PERIPHERAL>
+
+  <PERIPHERAL TYPE="LINESENSOR" ELEMENT="Z1" SUFFIX="LINESENSOR">
+    <!-- Hardware Interface -->
+    <INTERFACE OBJECT="LINESENSOR">
+      <PIN NAME="LH0" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="IO4"/>
+      </PIN>
+      <PIN NAME="LH1" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="AD3"/>
+      </PIN>
+      <PIN NAME="LH2" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="IO11"/>
+      </PIN>
+      <PIN NAME="LH3" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="AD0"/>
+      </PIN>
+      <PIN NAME="LH4" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="AD2"/>
+      </PIN>
+      <PIN NAME="LH5" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="IO5"/>
+      </PIN>
+      <PIN NAME="LH_EMIT" TYPE="DIGITAL">
+        <TERMINAL ELEMENT="IO2"/>
+      </PIN>
+      <SETUP NAME="begin" />
+    </INTERFACE>
+    <!-- Firmware Driver -->
+    <DRIVER FILE="Zumo/LINESENSOR.xml" />
+  </PERIPHERAL>
+  
+  <PERIPHERAL TYPE="COMPASS" ELEMENT="Z1" SUFFIX="COMPASS">
+    <!-- Hardware Interface -->
+    <INTERFACE OBJECT="COMPASS">
+       <SETUP NAME="begin" />
+    </INTERFACE>
+
+    <!-- Firmware Driver -->
+    <DRIVER FILE="Zumo/COMPASS.xml" />
+  </PERIPHERAL>
+  
+  <PERIPHERAL TYPE="GYRO" ELEMENT="Z1" SUFFIX="GYRO">
+    <!-- Hardware Interface -->
+    <INTERFACE OBJECT="GYRO">
+       <SETUP NAME="begin" />
+    </INTERFACE>
+
+    <!-- Firmware Driver -->
+    <DRIVER FILE="Zumo/GYRO.xml" />
+  </PERIPHERAL>
+  
+</CLIP>

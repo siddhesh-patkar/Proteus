@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Joystick Control Descriptor -->
+<CONTROL>
+   <CONFIG> 
+   	<PROPERTY NAME="returnToCenter" DESC="Puts the stick back in the middle on release" TYPE="BOOLEAN" DEFAULT="1"/>
+	   <PROPERTY NAME="roundLimit" DESC="Puts a circular limit on the stick" TYPE="BOOLEAN" DEFAULT="1"/>
+   </CONFIG>	  
+   
+   <DRIVER HEADER="Controls">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+        <INTERRUPT DESC="Value Changed Event"  HOOK="attachEventHandler"/>                  
+        
+        <METHOD NAME="getValueX" DESC="Reads the X Joystick position.">
+           <RETURN TYPE="INTEGER" />
+        </METHOD>
+        
+        <METHOD NAME="getValueY" DESC="Reads the Y Joystick position.">
+           <RETURN TYPE="INTEGER" />
+        </METHOD>
+        
+        <METHOD NAME="getValues" DESC="Reads both the Joystick positions.">
+           <RETURN TYPE="INTEGER" />
+           <RETURN TYPE="INTEGER" />
+        </METHOD>
+      
+   </DRIVER>
+</CONTROL>  

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<COMPILER NAME="Keil for ARM" ID="MDKARM" VERSION="4.1" URL="http://www.keil.com/arm/" AVAILABILITY="External" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- C Compiler -->
+  <TOOL NAME="CC" FILE="armcc.exe">
+    <!--  -->
+    <!-- And C++ Compiler as well -->
+    <ALIAS NAME="CPP"/>
+    <OPTION NAME="--arm" DESC="Generate ARM code" ADVANCED="1"/>
+    <OPTION NAME="--thumb" DESC="Generate Thumb code"/>
+    <OPTION NAME="--c90" DESC="Switch to C mode (default for .c files)" ADVANCED="1"/>
+    <OPTION NAME="--cpp" DESC="Switch to C++ mode (default for .cpp files)" ADVANCED="1"/>
+    <OPTION NAME="-O" DESC="Optimization" PARAM="CHOICE">
+      <PARAM VALUE="0" DESC="Minimum optimization"/>
+      <PARAM VALUE="1" DESC="Restricted optimization for debugging"/>
+      <PARAM VALUE="2" DESC="High optimization"/>
+      <PARAM VALUE="3" DESC="Maximum optimization"/>
+      <PARAM VALUE="space" DESC="Optimize for codesize"/>
+      <PARAM VALUE="time" DESC="Optimize for maximum performance"/>
+    </OPTION>
+    <OPTION NAME="--cpu " DESC="cpu Select CPU to generate code for" PARAM="STRING"/>
+    <OPTION NAME="--device " DESC="dev Set the target device type" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-o " DESC="file Name the final output file of the compilation" ADVANCED="1"/>
+    <OPTION NAME="-c" DESC="Compile only, do not link" ADVANCED="1"/>
+    <OPTION NAME="--asm" DESC="Output assembly code as well as object code" ADVANCED="1"/>
+    <OPTION NAME="-S" DESC="Output assembly code instead of object code" ADVANCED="1"/>
+    <OPTION NAME="--interleave" DESC="Interleave source with disassembly (use with --asm or -S)" ADVANCED="1"/>
+    <OPTION NAME="-E" DESC="Preprocess the C source code only" ADVANCED="1"/>
+    <OPTION NAME="-D" DESC="symbol Define symbol on entry to the compiler" MULTIPLE="1" PARAM="STRING"/>
+    <OPTION NAME="-g" DESC="Generate tables for high-level debugging"/>
+    <OPTION NAME="-I" DESC="directory  Include directory on the #include search path" MULTIPLE="1" PARAM="STRING"/>
+  </TOOL>
+  <!-- Linker -->
+  <TOOL NAME="LD" FILE="armlink.exe">
+    <OPTION NAME="--output " DESC="file Specify the name of the output file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--via " DESC="file Read further arguments from file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--partial" DESC="Generate a partially linked object" ADVANCED="1"/>
+    <OPTION NAME="--scatter " DESC="file Create the memory map as described in file" PARAM="STRING"/>
+    <OPTION NAME="--ro-base " DESC="n Set exec addr of region containing RO sections" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--rw-base " DESC="n Set exec addr of region containing RW/ZI sections" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--bestdebug" DESC="Add debug information giving best debug view to image"/>
+    <OPTION NAME="--datacompressor off " DESC="Do not compress RW data sections" ADVANCED="1"/>
+    <OPTION NAME="--no_debug" DESC="Do not add debug information to image" ADVANCED="1"/>
+    <OPTION NAME="--entry" DESC="Specify entry sections and entry point" ADVANCED="1"/>
+    <OPTION NAME="--libpath " DESC="path Specify path to find system libraries from" MULTIPLE="1" PARAM="STRING"/>
+    <OPTION NAME="--userlibpath " DESC="path Specify path to find user libraries from" PARAM="STRING"/>
+    <OPTION NAME="--no_locals" DESC="Do not add local symbols to image symbol table" ADVANCED="1"/>
+    <OPTION NAME="--no_remove" DESC="Do not remove unused sections from image" ADVANCED="1"/>
+    <OPTION NAME="--callgraph" DESC="Create a static callgraph of functions" ADVANCED="1"/>
+    <OPTION NAME="--feedback " DESC="file Generate feedback that can be used by the compiler in file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--map" DESC="Display memory map of image"/>
+    <OPTION NAME="--symbols" DESC="List symbols in image" ADVANCED="1"/>
+    <OPTION NAME="--xref" DESC="List all cross-references between input sections" ADVANCED="1"/>
+  </TOOL>
+  <!-- Assembler -->
+  <TOOL NAME="ASM" FILE="armasm.exe">
+    <OPTION NAME="--list " DESC="listingfile Write a listing file (see manual for options)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-o " DESC="outputfile Name the final output file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--depend " DESC="dependfile Save 'make' source file dependencies" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--errors " DESC="errorsfile Put stderr diagnostics to errorsfile" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-I " DESC="dir[,dir] Add dirs to source file search path" MULTIPLE="1" PARAM="STRING"/>
+    <OPTION NAME="--predefine " DESC="directive Pre-execute a SET{L,A,S} directive" PARAM="STRING">
+      <ALIAS NAME="--pd"/>
+    </OPTION>
+    <OPTION NAME="--maxcache " DESC="n Maximum cache size (default 8MB)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--no_esc" DESC="Ignore C-style (\\c) escape sequences" ADVANCED="1"/>
+    <OPTION NAME="--no_warn" DESC="Turn off Warning messages"/>
+    <OPTION NAME="-g" DESC="Output debugging tables"/>
+    <OPTION NAME="--apcs " DESC="/quals Make pre-definitions to match the chosen procedure-call standard" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--checkreglist" DESC="Warn about out of order LDM/STM register lists" ADVANCED="1"/>
+    <OPTION NAME="--li" DESC="Little-endian ARM" ADVANCED="1"/>
+    <OPTION NAME="--bi" DESC="Big-endian ARM" ADVANCED="1"/>
+    <OPTION NAME="-M" DESC="Write source file dependency lists to stdout" ADVANCED="1"/>
+    <OPTION NAME="--MD" DESC="Write source file dependency lists to inputfile.d" ADVANCED="1"/>
+    <OPTION NAME="--keep" DESC="Keep local labels in symbol table of object file" ADVANCED="1"/>
+    <OPTION NAME="--regnames none" DESC="Do not predefine register names" ADVANCED="1"/>
+    <OPTION NAME="--split_ldm" DESC="Fault long LDM/STM" ADVANCED="1"/>
+    <OPTION NAME="--unsafe" DESC="Downgrade certain errors to warnings" ADVANCED="1"/>
+    <OPTION NAME="--via " DESC="file Read further arguments from file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--cpu " DESC="target-cpu Set the target ARM core type" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--device " DESC="device Set the target device type" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--fpu " DESC="target-arch Set target FP architecture version" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--thumb" DESC="Assemble Thumb instructions" ADVANCED="1"/>
+    <OPTION NAME="--arm" DESC="Assemble ARM instructions" ADVANCED="1"/>
+  </TOOL>
+  <!-- Object to hex converter-->
+  <TOOL NAME="BIN2HEX" FILE="fromelf.exe">
+    <OPTION NAME="--output " DESC="file  the output file. (defaults to stdout for -text format)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--nodebug" DESC="do not put debug areas in the output image" ADVANCED="1"/>
+    <OPTION NAME="--nolinkview" DESC="do not put sections in the output image" ADVANCED="1"/>
+    <OPTION NAME="--bin" DESC="Plain Binary" ADVANCED="1"/>
+    <OPTION NAME="--m32" DESC="Motorola 32 bit Hex" ADVANCED="1"/>
+    <OPTION NAME="--i32" DESC="Intel 32 bit Hex" ADVANCED="1"/>
+    <OPTION NAME="--vhx" DESC="Byte Oriented Hex format" ADVANCED="1"/>
+    <OPTION NAME="--base " DESC="addr Optionally set base address for m32,i32" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--fieldoffsets" DESC="Assembly Language Description of Structures/Classes" ADVANCED="1"/>
+    <OPTION NAME="--expandarrays" DESC="Arrays inside and outside structures are expanded" ADVANCED="1"/>
+    <OPTION NAME="--elf" DESC="ELF" ADVANCED="1"/>
+    <OPTION NAME="--text" DESC="Text Information" ADVANCED="1"/>
+    <OPTION NAME="-v" DESC="verbose" ADVANCED="1"/>
+    <OPTION NAME="-a" DESC="print data addresses (For images built with debug)" ADVANCED="1"/>
+    <OPTION NAME="-c" DESC="disassemble code" ADVANCED="1"/>
+    <OPTION NAME="-d" DESC="print contents of data section" ADVANCED="1"/>
+    <OPTION NAME="-e" DESC="print exception tables" ADVANCED="1"/>
+    <OPTION NAME="-g" DESC="print debug tables" ADVANCED="1"/>
+    <OPTION NAME="-r" DESC="print relocation information" ADVANCED="1"/>
+    <OPTION NAME="-s" DESC="print symbol table" ADVANCED="1"/>
+    <OPTION NAME="-t" DESC="print string table" ADVANCED="1"/>
+    <OPTION NAME="-y" DESC="print dynamic segment contents" ADVANCED="1"/>
+    <OPTION NAME="-z" DESC="print code and data size information" ADVANCED="1"/>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="ARM7">
+    <SOURCE NAME="Startup.s" FROM="%COMPILER_DIR%/../../Startup/Philips/Startup.s"/>
+    <OPTION TOOL="CC" NAME="-I" VALUE="%PROJECT_DIR%"/>
+    <OPTION TOOL="CPP" NAME="-I" VALUE="%PROJECT_DIR%"/>
+    <OPTION TOOL="ASM" NAME="-I" VALUE="%PROJECT_DIR%"/>
+    <OPTION TOOL="CC" NAME="-I" VALUE="%COMPILER_DIR%/ARMCC/include"/>
+    <OPTION TOOL="CPP" NAME="-I" VALUE="%COMPILER_DIR%/ARMCC/include"/>
+    <OPTION TOOL="CC" NAME="-g" VALUE=""/>
+    <OPTION TOOL="CPP" NAME="-g" VALUE=""/>
+    <OPTION TOOL="ASM" NAME="-g" VALUE=""/>
+    <OPTION TOOL="CC" NAME="--cpu " VALUE="ARM7TDMI"/>
+    <OPTION TOOL="CPP" NAME="--cpu " VALUE="ARM7TDMI"/>
+    <OPTION TOOL="ASM" NAME="--cpu " VALUE="ARM7TDMI"/>
+    <OPTION TOOL="CC" NAME="--thumb" VALUE=""/>
+    <OPTION TOOL="CPP" NAME="--thumb" VALUE=""/>
+    <OPTION TOOL="ASM" NAME="--thumb" VALUE=""/>
+    <OPTION TOOL="LD" NAME="--bestdebug" VALUE=""/>
+    <CONTROLLER NAME="LPC2101">
+      <SOURCE NAME="LPC2101.h" FROM="gcc-arm/LPC2103.h"/>
+      <SOURCE NAME="LPC2101.sct" FROM="keil-arm/LPC2101.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2101.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2101.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2102">
+      <SOURCE NAME="LPC2102.h" FROM="gcc-arm/LPC2103.h"/>
+      <SOURCE NAME="LPC2102.sct" FROM="keil-arm/LPC2102.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2102.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2102.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2103">
+      <SOURCE NAME="LPC2103.h" FROM="gcc-arm/LPC2103.h"/>
+      <SOURCE NAME="LPC2103.sct" FROM="keil-arm/LPC2103.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2103.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2103.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2104">
+      <SOURCE NAME="LPC2104.h" FROM="gcc-arm/LPC210x.h"/>
+      <SOURCE NAME="LPC2104.sct" FROM="keil-arm/LPC2104.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2104.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2104.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2105">
+      <SOURCE NAME="LPC2105.h" FROM="gcc-arm/LPC210x.h"/>
+      <SOURCE NAME="LPC2105.sct" FROM="keil-arm/LPC2105.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2105.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2105.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2106">
+      <SOURCE NAME="LPC2106.h" FROM="gcc-arm/LPC210x.h"/>
+      <SOURCE NAME="LPC2106.sct" FROM="keil-arm/LPC2106.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2106.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2106.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2114">
+      <SOURCE NAME="LPC2114.h" FROM="gcc-arm/lpc21xx.h"/>
+      <SOURCE NAME="LPC2114.sct" FROM="keil-arm/LPC2114.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2114.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2114.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2124">
+      <SOURCE NAME="LPC2124.h" FROM="gcc-arm/lpc21xx.h"/>
+      <SOURCE NAME="LPC2124.sct" FROM="keil-arm/LPC2124.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2124.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2124.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2131">
+      <SOURCE NAME="LPC2131.h" FROM="gcc-arm/LPC213x.h"/>
+      <SOURCE NAME="LPC2131.sct" FROM="keil-arm/LPC2131.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2131.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2131.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2132">
+      <SOURCE NAME="LPC2132.h" FROM="gcc-arm/LPC213x.h"/>
+      <SOURCE NAME="LPC2132.sct" FROM="keil-arm/LPC2131.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2132.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2132.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2134">
+      <SOURCE NAME="LPC2134.h" FROM="gcc-arm/LPC213x.h"/>
+      <SOURCE NAME="LPC2134.sct" FROM="keil-arm/LPC2134.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2134.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2134.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2136">
+      <SOURCE NAME="LPC2136.h" FROM="gcc-arm/LPC213x.h"/>
+      <SOURCE NAME="LPC2136.sct" FROM="keil-arm/LPC2136.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2136.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2136.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC2138">
+      <SOURCE NAME="LPC2138.h" FROM="gcc-arm/LPC213x.h"/>
+      <SOURCE NAME="LPC2138.sct" FROM="keil-arm/LPC2138.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC2138.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC2138.sct"/>
+    </CONTROLLER>
+  </FAMILY>
+  <FAMILY NAME="Cortex-M3">
+    <OPTION TOOL="CC" NAME="--cpu=" VALUE="cortex-m3" DEFAULT="1"/>
+    <OPTION TOOL="CPP" NAME="--cpu=" VALUE="cortex-m3" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="--cpu=" VALUE="cortex-m3" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="--thumb" DEFAULT="1"/>
+    <OPTION TOOL="CPP" NAME="--thumb" DEFAULT="1"/>
+    <OPTION TOOL="ASM" NAME="--thumb" DEFAULT="1"/>
+    <OPTION TOOL="CC" NAME="-I" VALUE="%PROJECT_DIR%"/>
+    <OPTION TOOL="CC" NAME="-I" VALUE="%COMPILER_DIR%/CMSIS/Include"/>
+    <OPTION TOOL="CC" NAME="-g" VALUE=""/>
+    <OPTION TOOL="CPP" NAME="-g" VALUE=""/>
+    <OPTION TOOL="ASM" NAME="-g" VALUE=""/>
+    <CONTROLLER NAME="LM3S300">
+      <SOURCE NAME="lm3s_cmsis.h" FROM="keil-arm/cmsis/lm3s_cmsis.h"/>
+      <SOURCE NAME="lm3s_config.h" FROM="keil-arm/cmsis/lm3s_config.h"/>
+      <SOURCE NAME="system_lm3s.h" FROM="keil-arm/cmsis/system_lm3s.h"/>
+      <SOURCE NAME="system_lm3s.c" FROM="keil-arm/cmsis/system_lm3s.c"/>
+      <SOURCE NAME="startup_lm3s.s" FROM="keil-arm/cmsis/startup_lm3s.s"/>
+      <SOURCE NAME="lm3s300.sct" FROM="keil-arm/lm3s300.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/lm3s300.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S301">
+      <SOURCE NAME="lm3s_cmsis.h" FROM="keil-arm/cmsis/lm3s_cmsis.h"/>
+      <SOURCE NAME="lm3s_config.h" FROM="keil-arm/cmsis/lm3s_config.h"/>
+      <SOURCE NAME="system_lm3s.h" FROM="keil-arm/cmsis/system_lm3s.h"/>
+      <SOURCE NAME="system_lm3s.c" FROM="keil-arm/cmsis/system_lm3s.c"/>
+      <SOURCE NAME="startup_lm3s.s" FROM="keil-arm/cmsis/startup_lm3s.s"/>
+      <SOURCE NAME="lm3s301.sct" FROM="keil-arm/lm3s301.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/lm3s301.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S308">
+      <SOURCE NAME="lm3s_cmsis.h" FROM="keil-arm/cmsis/lm3s_cmsis.h"/>
+      <SOURCE NAME="lm3s_config.h" FROM="keil-arm/cmsis/lm3s_config.h"/>
+      <SOURCE NAME="system_lm3s.h" FROM="keil-arm/cmsis/system_lm3s.h"/>
+      <SOURCE NAME="system_lm3s.c" FROM="keil-arm/cmsis/system_lm3s.c"/>
+      <SOURCE NAME="startup_lm3s.s" FROM="keil-arm/cmsis/startup_lm3s.s"/>
+      <SOURCE NAME="lm3s308.sct" FROM="keil-arm/lm3s308.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/lm3s308.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S310">
+      <SOURCE NAME="lm3s_cmsis.h" FROM="keil-arm/cmsis/lm3s_cmsis.h"/>
+      <SOURCE NAME="lm3s_config.h" FROM="keil-arm/cmsis/lm3s_config.h"/>
+      <SOURCE NAME="system_lm3s.h" FROM="keil-arm/cmsis/system_lm3s.h"/>
+      <SOURCE NAME="system_lm3s.c" FROM="keil-arm/cmsis/system_lm3s.c"/>
+      <SOURCE NAME="startup_lm3s.s" FROM="keil-arm/cmsis/startup_lm3s.s"/>
+      <SOURCE NAME="lm3s310.sct" FROM="keil-arm/lm3s310.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/lm3s310.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S315">
+      <SOURCE NAME="lm3s_cmsis.h" FROM="keil-arm/cmsis/lm3s_cmsis.h"/>
+      <SOURCE NAME="lm3s_config.h" FROM="keil-arm/cmsis/lm3s_config.h"/>
+      <SOURCE NAME="system_lm3s.h" FROM="keil-arm/cmsis/system_lm3s.h"/>
+      <SOURCE NAME="system_lm3s.c" FROM="keil-arm/cmsis/system_lm3s.c"/>
+      <SOURCE NAME="startup_lm3s.s" FROM="keil-arm/cmsis/startup_lm3s.s"/>
+      <SOURCE NAME="lm3s315.sct" FROM="keil-arm/lm3s315.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/lm3s315.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S316">
+      <SOURCE NAME="lm3s_cmsis.h" FROM="keil-arm/cmsis/lm3s_cmsis.h"/>
+      <SOURCE NAME="lm3s_config.h" FROM="keil-arm/cmsis/lm3s_config.h"/>
+      <SOURCE NAME="system_lm3s.h" FROM="keil-arm/cmsis/system_lm3s.h"/>
+      <SOURCE NAME="system_lm3s.c" FROM="keil-arm/cmsis/system_lm3s.c"/>
+      <SOURCE NAME="startup_lm3s.s" FROM="keil-arm/cmsis/startup_lm3s.s"/>
+      <SOURCE NAME="lm3s316.sct" FROM="keil-arm/lm3s316.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/lm3s316.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S317">
+      <SOURCE NAME="lm3s_cmsis.h" FROM="keil-arm/cmsis/lm3s_cmsis.h"/>
+      <SOURCE NAME="lm3s_config.h" FROM="keil-arm/cmsis/lm3s_config.h"/>
+      <SOURCE NAME="system_lm3s.h" FROM="keil-arm/cmsis/system_lm3s.h"/>
+      <SOURCE NAME="system_lm3s.c" FROM="keil-arm/cmsis/system_lm3s.c"/>
+      <SOURCE NAME="startup_lm3s.s" FROM="keil-arm/cmsis/startup_lm3s.s"/>
+      <SOURCE NAME="lm3s317.sct" FROM="keil-arm/lm3s317.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/lm3s317.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LM3S328">
+      <SOURCE NAME="lm3s_cmsis.h" FROM="keil-arm/cmsis/lm3s_cmsis.h"/>
+      <SOURCE NAME="lm3s_config.h" FROM="keil-arm/cmsis/lm3s_config.h"/>
+      <SOURCE NAME="system_lm3s.h" FROM="keil-arm/cmsis/system_lm3s.h"/>
+      <SOURCE NAME="system_lm3s.c" FROM="keil-arm/cmsis/system_lm3s.c"/>
+      <SOURCE NAME="startup_lm3s.s" FROM="keil-arm/cmsis/startup_lm3s.s"/>
+      <SOURCE NAME="lm3s328.sct" FROM="keil-arm/lm3s328.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="lm3s_cmsis.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/lm3s328.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1311FHN33">
+      <SOURCE NAME="system_LPC13xx.c" FROM="keil-arm/cmsis/system_LPC13xx.c"/>
+      <SOURCE NAME="startup_LPC13xx.s" FROM="keil-arm/cmsis/startup_LPC13xx.s"/>
+      <SOURCE NAME="LPC13xx.h" FROM="keil-arm/cmsis/LPC13xx.h"/>
+      <SOURCE NAME="system_LPC13xx.h" FROM="keil-arm/cmsis/system_LPC13xx.h"/>
+      <SOURCE NAME="power_api.h" FROM="keil-arm/cmsis/power_api.h"/>
+      <SOURCE NAME="LPC1311.sct" FROM="keil-arm/LPC1311.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC1311.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1313FBD48">
+      <SOURCE NAME="system_LPC13xx.c" FROM="keil-arm/cmsis/system_LPC13xx.c"/>
+      <SOURCE NAME="startup_LPC13xx.s" FROM="keil-arm/cmsis/startup_LPC13xx.s"/>
+      <SOURCE NAME="LPC13xx.h" FROM="keil-arm/cmsis/LPC13xx.h"/>
+      <SOURCE NAME="system_LPC13xx.h" FROM="keil-arm/cmsis/system_LPC13xx.h"/>
+      <SOURCE NAME="power_api.h" FROM="keil-arm/cmsis/power_api.h"/>
+      <SOURCE NAME="LPC1313.sct" FROM="keil-arm/LPC1313.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC1313.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1313FHN33">
+      <SOURCE NAME="system_LPC13xx.c" FROM="keil-arm/cmsis/system_LPC13xx.c"/>
+      <SOURCE NAME="startup_LPC13xx.s" FROM="keil-arm/cmsis/startup_LPC13xx.s"/>
+      <SOURCE NAME="LPC13xx.h" FROM="keil-arm/cmsis/LPC13xx.h"/>
+      <SOURCE NAME="system_LPC13xx.h" FROM="keil-arm/cmsis/system_LPC13xx.h"/>
+      <SOURCE NAME="power_api.h" FROM="keil-arm/cmsis/power_api.h"/>
+      <SOURCE NAME="LPC1313.sct" FROM="keil-arm/LPC1313.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC1313.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1342FBD48">
+      <SOURCE NAME="system_LPC13xx.c" FROM="keil-arm/cmsis/system_LPC13xx.c"/>
+      <SOURCE NAME="startup_LPC13xx.s" FROM="keil-arm/cmsis/startup_LPC13xx.s"/>
+      <SOURCE NAME="LPC13xx.h" FROM="keil-arm/cmsis/LPC13xx.h"/>
+      <SOURCE NAME="system_LPC13xx.h" FROM="keil-arm/cmsis/system_LPC13xx.h"/>
+      <SOURCE NAME="power_api.h" FROM="keil-arm/cmsis/power_api.h"/>
+      <SOURCE NAME="LPC1342.sct" FROM="keil-arm/LPC1342.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC1342.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1342FHN33">
+      <SOURCE NAME="system_LPC13xx.c" FROM="keil-arm/cmsis/system_LPC13xx.c"/>
+      <SOURCE NAME="startup_LPC13xx.s" FROM="keil-arm/cmsis/startup_LPC13xx.s"/>
+      <SOURCE NAME="LPC13xx.h" FROM="keil-arm/cmsis/LPC13xx.h"/>
+      <SOURCE NAME="system_LPC13xx.h" FROM="keil-arm/cmsis/system_LPC13xx.h"/>
+      <SOURCE NAME="power_api.h" FROM="keil-arm/cmsis/power_api.h"/>
+      <SOURCE NAME="LPC1342.sct" FROM="keil-arm/LPC1342.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC1342.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1343FBD48">
+      <SOURCE NAME="system_LPC13xx.c" FROM="keil-arm/cmsis/system_LPC13xx.c"/>
+      <SOURCE NAME="startup_LPC13xx.s" FROM="keil-arm/cmsis/startup_LPC13xx.s"/>
+      <SOURCE NAME="LPC13xx.h" FROM="keil-arm/cmsis/LPC13xx.h"/>
+      <SOURCE NAME="system_LPC13xx.h" FROM="keil-arm/cmsis/system_LPC13xx.h"/>
+      <SOURCE NAME="power_api.h" FROM="keil-arm/cmsis/power_api.h"/>
+      <SOURCE NAME="LPC1343.sct" FROM="keil-arm/LPC1343.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC1343.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="LPC1343FHN33">
+      <SOURCE NAME="system_LPC13xx.c" FROM="keil-arm/cmsis/system_LPC13xx.c"/>
+      <SOURCE NAME="startup_LPC13xx.s" FROM="keil-arm/cmsis/startup_LPC13xx.s"/>
+      <SOURCE NAME="LPC13xx.h" FROM="keil-arm/cmsis/LPC13xx.h"/>
+      <SOURCE NAME="system_LPC13xx.h" FROM="keil-arm/cmsis/system_LPC13xx.h"/>
+      <SOURCE NAME="power_api.h" FROM="keil-arm/cmsis/power_api.h"/>
+      <SOURCE NAME="LPC1343.sct" FROM="keil-arm/LPC1343.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="LPC13xx.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/LPC1343.sct"/>
+    </CONTROLLER>
+
+    <CONTROLLER NAME="STM32F103C4">
+      <SOURCE NAME="system_stm32f1xx.c" FROM="keil-arm/cmsis/system_stm32f1xx.c"/>
+      <SOURCE NAME="startup_stm32f103.s" FROM="keil-arm/cmsis/startup_stm32f103.s"/>
+      <SOURCE NAME="stm32f103x6.h" FROM="keil-arm/cmsis/stm32f103x6.h"/>
+	  <SOURCE NAME="stm32f1xx.h" FROM="keil-arm/cmsis/stm32f1xx.h"/>
+	  <SOURCE NAME="core_cm3.h" FROM="keil-arm/cmsis/core_cm3.h"/>
+	  <SOURCE NAME="cmsis_compiler.h" FROM="keil-arm/cmsis/cmsis_compiler.h"/>
+	  <SOURCE NAME="cmsis_armcc.h" FROM="keil-arm/cmsis/cmsis_armcc.h"/>
+      <SOURCE NAME="system_stm32f1xx.h" FROM="keil-arm/cmsis/system_stm32f1xx.h"/>
+      <SOURCE NAME="stm32f103x4.sct" FROM="keil-arm/stm32f103x4.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f103x6.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/stm32f103x4.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F103R4">
+      <SOURCE NAME="system_stm32f1xx.c" FROM="keil-arm/cmsis/system_stm32f1xx.c"/>
+      <SOURCE NAME="startup_stm32f103.s" FROM="keil-arm/cmsis/startup_stm32f103.s"/>
+      <SOURCE NAME="stm32f103x6.h" FROM="keil-arm/cmsis/stm32f103x6.h"/>
+	  <SOURCE NAME="stm32f1xx.h" FROM="keil-arm/cmsis/stm32f1xx.h"/>
+	  <SOURCE NAME="core_cm3.h" FROM="keil-arm/cmsis/core_cm3.h"/>
+	  <SOURCE NAME="cmsis_compiler.h" FROM="keil-arm/cmsis/cmsis_compiler.h"/>
+	  <SOURCE NAME="cmsis_armcc.h" FROM="keil-arm/cmsis/cmsis_armcc.h"/>
+      <SOURCE NAME="system_stm32f1xx.h" FROM="keil-arm/cmsis/system_stm32f1xx.h"/>
+      <SOURCE NAME="stm32f103x4.sct" FROM="keil-arm/stm32f103x4.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f103x6.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/stm32f103x4.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F103T4">
+      <SOURCE NAME="system_stm32f1xx.c" FROM="keil-arm/cmsis/system_stm32f1xx.c"/>
+      <SOURCE NAME="startup_stm32f103.s" FROM="keil-arm/cmsis/startup_stm32f103.s"/>
+      <SOURCE NAME="stm32f103x6.h" FROM="keil-arm/cmsis/stm32f103x6.h"/>
+	  <SOURCE NAME="stm32f1xx.h" FROM="keil-arm/cmsis/stm32f1xx.h"/>
+	  <SOURCE NAME="core_cm3.h" FROM="keil-arm/cmsis/core_cm3.h"/>
+	  <SOURCE NAME="cmsis_compiler.h" FROM="keil-arm/cmsis/cmsis_compiler.h"/>
+	  <SOURCE NAME="cmsis_armcc.h" FROM="keil-arm/cmsis/cmsis_armcc.h"/>
+      <SOURCE NAME="system_stm32f1xx.h" FROM="keil-arm/cmsis/system_stm32f1xx.h"/>
+      <SOURCE NAME="stm32f103x4.sct" FROM="keil-arm/stm32f103x4.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f103x6.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/stm32f103x4.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F103C6">
+      <SOURCE NAME="system_stm32f1xx.c" FROM="keil-arm/cmsis/system_stm32f1xx.c"/>
+      <SOURCE NAME="startup_stm32f103.s" FROM="keil-arm/cmsis/startup_stm32f103.s"/>
+      <SOURCE NAME="stm32f103x6.h" FROM="keil-arm/cmsis/stm32f103x6.h"/>
+	  <SOURCE NAME="stm32f1xx.h" FROM="keil-arm/cmsis/stm32f1xx.h"/>
+	  <SOURCE NAME="core_cm3.h" FROM="keil-arm/cmsis/core_cm3.h"/>
+	  <SOURCE NAME="cmsis_compiler.h" FROM="keil-arm/cmsis/cmsis_compiler.h"/>
+	  <SOURCE NAME="cmsis_armcc.h" FROM="keil-arm/cmsis/cmsis_armcc.h"/>
+      <SOURCE NAME="system_stm32f1xx.h" FROM="keil-arm/cmsis/system_stm32f1xx.h"/>
+      <SOURCE NAME="stm32f103x6.sct" FROM="keil-arm/stm32f103x6.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f103x6.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/stm32f103x6.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F103R6">
+      <SOURCE NAME="system_stm32f1xx.c" FROM="keil-arm/cmsis/system_stm32f1xx.c"/>
+      <SOURCE NAME="startup_stm32f103.s" FROM="keil-arm/cmsis/startup_stm32f103.s"/>
+      <SOURCE NAME="stm32f103x6.h" FROM="keil-arm/cmsis/stm32f103x6.h"/>
+	  <SOURCE NAME="stm32f1xx.h" FROM="keil-arm/cmsis/stm32f1xx.h"/>
+	  <SOURCE NAME="core_cm3.h" FROM="keil-arm/cmsis/core_cm3.h"/>
+	  <SOURCE NAME="cmsis_compiler.h" FROM="keil-arm/cmsis/cmsis_compiler.h"/>
+	  <SOURCE NAME="cmsis_armcc.h" FROM="keil-arm/cmsis/cmsis_armcc.h"/>
+      <SOURCE NAME="system_stm32f1xx.h" FROM="keil-arm/cmsis/system_stm32f1xx.h"/>
+      <SOURCE NAME="stm32f103x6.sct" FROM="keil-arm/stm32f103x6.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f103x6.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/stm32f103x6.sct"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="STM32F103T6">
+      <SOURCE NAME="system_stm32f1xx.c" FROM="keil-arm/cmsis/system_stm32f1xx.c"/>
+      <SOURCE NAME="startup_stm32f103.s" FROM="keil-arm/cmsis/startup_stm32f103.s"/>
+      <SOURCE NAME="stm32f103x6.h" FROM="keil-arm/cmsis/stm32f103x6.h"/>
+	  <SOURCE NAME="stm32f1xx.h" FROM="keil-arm/cmsis/stm32f1xx.h"/>
+	  <SOURCE NAME="core_cm3.h" FROM="keil-arm/cmsis/core_cm3.h"/>
+	  <SOURCE NAME="cmsis_compiler.h" FROM="keil-arm/cmsis/cmsis_compiler.h"/>
+	  <SOURCE NAME="cmsis_armcc.h" FROM="keil-arm/cmsis/cmsis_armcc.h"/>
+      <SOURCE NAME="system_stm32f1xx.h" FROM="keil-arm/cmsis/system_stm32f1xx.h"/>
+      <SOURCE NAME="stm32f103x6.sct" FROM="keil-arm/stm32f103x6.sct"/>
+      <TEMPLATE NAME="INCFILE" VALUE="stm32f103x6.h"/>
+      <OPTION TOOL="LD" NAME="--scatter " VALUE="%PROJECT_DIR%/stm32f103x6.sct"/>
+    </CONTROLLER>
+	</FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT KEYLOC="HKEY_LOCAL_MACHINE\SOFTWARE\Keil\Products\MDK" TYPE="NAMED" KEY="Path" >
+    <CHECK SUF="ARMCC/bin/armcc.exe" ARG="" STR="ARM"/>
+    <CHECK SUF="ARMCC/bin/armasm.exe" ARG="" STR="ARM"/>
+    <CHECK SUF="ARMCC/bin/armlink.exe" ARG="" STR="ARM"/>
+  </DETECT>
+  <DETECT PATH="C:/Keil/ARM" >
+    <CHECK SUF="ARMCC/bin/armcc.exe" ARG="" STR="ARM"/>
+    <CHECK SUF="ARMCC/bin/armasm.exe" ARG="" STR="ARM"/>
+    <CHECK SUF="ARMCC/bin/armlink.exe" ARG="" STR="ARM"/>
+  </DETECT>
+  <PATH ADD="%COMPILER_DIR%/ARMCC/bin"/>
+  <!-- File Types -->
+  <FILE NAME="c" DESC="C Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="cpp" DESC="C++ Source" CATEGORY="Source" SOURCE="1" ICON="project_c++.png"/>
+  <FILE NAME="asm" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="s" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="o" DESC="Object" CATEGORY="Intermediate Binary"/>
+  <FILE NAME="l" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="lib" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="b" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="sct" DESC="Scatter Script" CATEGORY="Scatter"/>
+  <FILE NAME="elf" DESC="Elf" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="hex" DESC="Intel Hex" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <!-- Compiler -->
+  <PROCESS TOOL="CC" CMDLINE="$(CC) $(CCFLAGS) %OPTIONS% %INFILE_QUOTED% -c -o %OUTFILE_QUOTED%">
+    <FILE OUTPUT="o">
+      <FILE INPUT="c"/>
+      <FILE INPUT="cpp"/>
+    </FILE>
+    <MESSAGE VALUE="^(.+), line (.+): (Error|Warning):.*$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" CMDLINE="$(LD)  $(LDFLAGS) %OPTIONS% %INFILES_QUOTED% --output %OUTFILE_QUOTED%">
+    <FILE OUTPUT="elf"/>
+    <FILE INPUT="o"/>
+    <FILE INPUT="l"/>
+    <FILE INPUT="lib"/>
+    <FILE INPUT="b"/>
+    <MESSAGE VALUE="^.*(ERROR|WARNING|FATAL ERROR)\s*([^:]*):(.+)$"/>
+  </PROCESS>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" CMDLINE="$(ASM) $(ASMFLAGS) %OPTIONS% %INFILE_QUOTED% -o %OUTFILE_QUOTED%">
+    <FILE OUTPUT="o">
+      <FILE INPUT="asm"/>
+      <FILE INPUT="s"/>
+    </FILE>
+    <MESSAGE VALUE="^(.+), line (.+): (Error|Warning):.*$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Binary Files Converter -->
+  <PROCESS TOOL="BIN2HEX" CMDLINE="$(BIN2HEX) $(BIN2HEXFLAGS) %OPTIONS% %INFILE_QUOTED% --output %OUTFILE_QUOTED%">
+    <FILE OUTPUT="hex">
+      <FILE INPUT="elf"/>
+      <OPTION NAME="--i32"/>
+    </FILE>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="elf"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <SOURCE NAME="main.c" FROM="intmain.c" OPEN="1"/>
+</COMPILER>

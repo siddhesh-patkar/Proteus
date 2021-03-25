@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Arduino DHTxx Humidity Temperature sensor -->
+<DRIVER HEADER="DHTxx.h">
+   <!-- SCALE enumeration -->
+   <ENUMERATION NAME="SCALE">
+      <CONSTANT NAME="Celsius"    VALUE="0"/>
+      <CONSTANT NAME="Fahrenheit" VALUE="1"/>
+   </ENUMERATION>
+
+   <!-- Methods -->
+   <METHOD NAME="readTemperature" DESC="Read temperature in Celsius or Fahrenheit degree.">
+      <PARAMETER NAME="scale" TYPE="SCALE" DEFAULT="Celsius" DESC="Celsius or Fahrenheit"/>
+      <RETURN NAME="Temperature" TYPE="FLOAT" DEFAULT="t"/>
+   </METHOD>
+   <METHOD NAME="readHumidity" DESC="Read Relative Humidity %.">
+      <RETURN NAME="Humidity" TYPE="FLOAT" DEFAULT="h"/>
+   </METHOD>
+   <METHOD NAME="computeHeatIndex" DESC="Compute index of heat.">
+      <PARAMETER NAME="Fahrenheit" TYPE="FLOAT" DEFAULT="0" DESC="Temperature in Fahrenheit "/>
+      <PARAMETER NAME="Humidity"   TYPE="FLOAT" DEFAULT="0" DESC="Relative Humidity in %"/>
+      <RETURN NAME="Index" TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="convertCtoF" DESC="Convert Celsius to Fahrenheit degree.">
+      <PARAMETER NAME="Celsius" TYPE="FLOAT" DEFAULT="0" DESC="Temperaure in Celsius degree"/>
+      <RETURN NAME="Fahrenheit" TYPE="FLOAT"/>
+   </METHOD>
+   <METHOD NAME="convertFtoC" DESC="Convert Fahrenheit to Celsius degree.">
+      <PARAMETER NAME="Fahrenheit" TYPE="FLOAT" DEFAULT="0" DESC="Temperaure in Fahrenheit degree"/>
+      <RETURN NAME="Celsius" TYPE="FLOAT"/>
+   </METHOD>
+</DRIVER>

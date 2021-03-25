@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Snippet file relative to IMAGE/Snippets folder -->
+<CLIP CATEGORY="Breakout Peripherals" FILE="Raspberry Pi/RaspberryPiTerminal.pdsclip" FAMILY="Raspberry Pi" DESC="Terminal Module">
+  <PERIPHERAL NAME="Terminal"  ELEMENT="VT1" >   
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="SerialTerminal">      
+      <PROPERTY NAME="BAUDRATE" ELEMENT="VT1" TYPE="INTEGER"/>
+     </INTERFACE>
+   
+     <!-- Firmware Driver -->
+   <DRIVER HEADER="Ports">
+        <ENUMERATION NAME="BASE">
+         <CONSTANT NAME="DECIMAL" VALUE="10"/>
+         <CONSTANT NAME="BINARY" VALUE="2"/>
+         <CONSTANT NAME="OCTAL"  VALUE="8"/>
+         <CONSTANT NAME="HEX"  VALUE="16"/>
+        </ENUMERATION>
+        
+        <METHOD NAME="input" DESC="Input String">
+           <PARAMETER NAME="Echo" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="Enable Echo"/>
+           <RETURN NAME="Data" TYPE="STRING" DEFAULT="input"/>
+        </METHOD> 
+         
+        <METHOD NAME="print"  DESC="Print data without newline.">
+             <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to print"/>
+        </METHOD>
+        <METHOD NAME="println"  DESC="Print data with terminating newline.">
+             <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to print"/>
+        </METHOD>
+       <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+         <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+       </METHOD>
+       <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+         <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+       </METHOD>
+   </DRIVER>
+   </PERIPHERAL>
+</CLIP>        
+  

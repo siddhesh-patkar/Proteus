@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino PCD8544 Nokia 3310 LCD Breakout Board.pdsclip" DESC="Arduino PCD8544 Nokia 3310 LCD Breakout Board." FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="Adafruit PCD8544 84x48 Display" ELEMENT="LCD1" >
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="GFX_Display&lt;Adafruit_PCD8544&gt;">
+         <PORT NAME="SPI"/>
+         <!-- Data/Control 0=control 1=data -->
+         <PIN NAME="dc" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO5"/>
+         </PIN>
+         <!-- Chip select active low -->
+         <PIN NAME="cs" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO4"/>
+         </PIN>
+         <!-- Reset -->
+         <PIN NAME="rst" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO3"/>
+         </PIN>
+         <SETUP NAME="begin"/>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER HEADER="GFX_Display.h" RAM="1024">
+         <REQUIRE HEADER="core.h"/>
+         <REQUIRE HEADER="spi.h"/>
+         <REQUIRE HEADER="wire.h"/>
+
+         <ENUMERATION NAME="COLOUR">
+            <CONSTANT NAME="BLACK"   VALUE="1"/>
+            <CONSTANT NAME="WHITE"   VALUE="0"/>
+         </ENUMERATION>
+
+         <!-- Methods -->
+         <METHOD NAME="command" DESC="Write a command.">
+            <PARAMETER NAME="cmd" TYPE="INTEGER" DESC="Supported command to PCD8544 controller."/>
+         </METHOD>
+         <METHOD NAME="data" DESC="Write data.">
+            <PARAMETER NAME="data" TYPE="INTEGER" DESC="Data to be written in the PCD8544 GDDRAM."/>
+         </METHOD>
+         <METHOD NAME="clearDisplay" DESC="Clear display."/>
+         <METHOD NAME="display" DESC="Display screen."/>
+
+         <!-- Graphics -->
+         <METHOD NAME="fillScreen"  DESC="Clear the screen to black.">
+            <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to fill screen with." DEFAULT="BLACK"/>
+         </METHOD>
+         <METHOD NAME="drawPixel" DESC="Draw a single pixel">
+            <PARAMETER NAME="x" TYPE="INTEGER" DESC="X coordinate of pixel"/>
+            <PARAMETER NAME="y" TYPE="INTEGER" DESC="Y coordinate of pixel"/>
+            <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to fill with." DEFAULT="WHITE"/>
+         </METHOD>
+         <METHOD NAME="drawLine" DESC="Draw a line.">
+            <PARAMETER NAME="x1" TYPE="INTEGER" DESC="x-coord of line start"/>
+            <PARAMETER NAME="y1" TYPE="INTEGER" DESC="y-coord of line start"/>
+            <PARAMETER NAME="x2" TYPE="INTEGER" DESC="x-coord of line end"/>
+            <PARAMETER NAME="y2" TYPE="INTEGER" DESC="y-coord of line end"/>
+            <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to draw with" DEFAULT="WHITE"/>
+         </METHOD>
+         <METHOD NAME="drawRect" DESC="Draw a rectangle.">
+            <PARAMETER NAME="x" TYPE="INTEGER" DESC="Left edge of rectangle"/>
+            <PARAMETER NAME="y" TYPE="INTEGER" DESC="Right edge of rectangle"/>
+            <PARAMETER NAME="width" TYPE="INTEGER" DESC="Width of rectangle"/>
+            <PARAMETER NAME="height" TYPE="INTEGER" DESC="Height of rectangle"/>
+            <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to fill with." DEFAULT="WHITE"/>
+         </METHOD>
+         <METHOD NAME="fillRect" DESC="Fill a rectangle.">
+            <PARAMETER NAME="x" TYPE="INTEGER" DESC="Left edge of rectangle"/>
+            <PARAMETER NAME="y" TYPE="INTEGER" DESC="Right edge of rectangle"/>
+            <PARAMETER NAME="width" TYPE="INTEGER" DESC="Width of rectangle"/>
+            <PARAMETER NAME="height" TYPE="INTEGER" DESC="Height of rectangle"/>
+            <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to fill with." DEFAULT="WHITE"/>
+         </METHOD>
+         <METHOD NAME="drawCircle" DESC="Draw a circle.">
+            <PARAMETER NAME="centreX" TYPE="INTEGER" DESC="x-coord of centre"/>
+            <PARAMETER NAME="centreY" TYPE="INTEGER" DESC="y-coord of centre"/>
+            <PARAMETER NAME="radius" TYPE="INTEGER" DESC="Radius of circle"/>
+            <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to draw with." DEFAULT="WHITE"/>
+         </METHOD>
+         <METHOD NAME="fillCircle" DESC="Fill a circle.">
+            <PARAMETER NAME="centreX" TYPE="INTEGER" DESC="x-coord of centre"/>
+            <PARAMETER NAME="centreY" TYPE="INTEGER" DESC="y-coord of centre"/>
+            <PARAMETER NAME="radius" TYPE="INTEGER" DESC="Radius of circle"/>
+            <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Colour to draw with." DEFAULT="WHITE"/>
+         </METHOD>
+
+         <!-- Print Functions -->
+         <METHOD NAME="print" DESC="Write text to the display.">
+            <PARAMETER TYPE="LIST" DESC="List of numbers or strings to print."/>
+         </METHOD>
+         <METHOD NAME="println" DESC="Write text, then move text cursor to new line.">
+            <PARAMETER TYPE="LIST" DESC="List of numbers or strings to print."/>
+         </METHOD>
+         <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+            <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+         </METHOD>
+         <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+            <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+         </METHOD>
+
+         <!-- Text -->
+         <METHOD NAME="drawChar" DESC="Draw a character.">
+            <PARAMETER NAME="x" TYPE="INTEGER" DESC="X coordinate of cursor"/>
+            <PARAMETER NAME="y" TYPE="INTEGER" DESC="Y coordinate of cursor"/>
+            <PARAMETER NAME="c" TYPE="INTEGER" DESC="Text character"/>
+            <PARAMETER NAME="foreground" TYPE="COLOUR" DESC="Foreground colour for text." DEFAULT="WHITE"/>
+            <PARAMETER NAME="background" TYPE="COLOUR" DESC="Background colour for text." DEFAULT="WHITE"/>
+            <PARAMETER NAME="size" TYPE="INTEGER" DESC="Text font size" DEFAULT="1"/>
+         </METHOD>
+         <METHOD NAME="setCursor" DESC="Set the position of the text cursor.">
+            <PARAMETER NAME="x" TYPE="INTEGER" DESC="X coordinate of cursor"/>
+            <PARAMETER NAME="y" TYPE="INTEGER" DESC="Y coordinate of cursor"/>
+         </METHOD>
+         <METHOD NAME="setTextColor" DESC="Set the foreground text colour.">
+            <PARAMETER NAME="colour" TYPE="COLOUR" DESC="Foreground colour for text." DEFAULT="WHITE"/>
+         </METHOD>
+         <METHOD NAME="setTextBackground" DESC="Set a background colour for text.">
+            <PARAMETER NAME="background" TYPE="COLOUR" DESC="Background colour for text." DEFAULT="BLACK"/>
+         </METHOD>
+         <METHOD NAME="setTextSize" DESC="Set the size of the text.">
+            <PARAMETER NAME="size" TYPE="INTEGER" DESC="Text font size" DEFAULT="1"/>
+         </METHOD>
+         <METHOD NAME="setTextWrap" DESC="Set the size of the text.">
+            <PARAMETER NAME="Wrap" TYPE="BOOLEAN" DESC="Text wrapping mode" DEFAULT="TRUE"/>
+         </METHOD>
+         <METHOD NAME="setRotation" DESC="Set orientation of the display.">
+            <PARAMETER NAME="rotation" TYPE="INTEGER" DESC="Rotation value 0-3" DEFAULT="0"/>
+         </METHOD>
+
+      </DRIVER>
+   </PERIPHERAL>
+</CLIP>
+

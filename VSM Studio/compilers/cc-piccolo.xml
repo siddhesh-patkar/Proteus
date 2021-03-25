@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<COMPILER NAME="CodeComposer for Piccolo" ID="PICCOLOCC" VERSION="4.2.1" URL="http://www.ti.com/" AVAILABILITY="External" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- C Compiler -->
+  <TOOL NAME="CC" FILE="cl2000.exe">
+    <!-- And C++ Compiler as well -->
+    <ALIAS NAME="CPP"/>
+    <!--And linker-->
+    <ALIAS NAME="LD"/>
+    <!--And Assembler -->
+    <ALIAS NAME="ASM"/>
+    <!-- Options -->
+    <!-- Control Options -->
+    <OPTION NAME="--compile_only" DESC="Disable linking (overrides -z)" ADVANCED="1">
+      <ALIAS NAME="-c"/>
+    </OPTION>
+    <OPTION NAME="--help" DESC="Show help screen" ADVANCED="1">
+      <ALIAS NAME="-h"/>
+    </OPTION>
+    <OPTION NAME="--run_linker" DESC="[=arguments] Perform link using options following" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-z"/>
+    </OPTION>
+    <OPTION NAME="--skip_assembler" DESC="Compile only; do not assemble" ADVANCED="1">
+      <ALIAS NAME="-n"/>
+    </OPTION>
+    <!-- Symbolic Debug Options -->
+    <OPTION NAME="--symdebug:" DESC="Symbolic Debug Options" PARAM="CHOICE">
+      <PARAM VALUE="skeletal" DESC="Symbolic debug for program analysis" DEFAULT="1"/>
+      <PARAM VALUE="dwarf" DESC="Full symbolic debug"/>
+      <PARAM VALUE="none" DESC="Suppress all symbolic debug generation"/>
+    </OPTION>
+    <!-- Language Options -->
+    <OPTION NAME="--cpp_default" DESC="Treat C files as C++ files" ADVANCED="1">
+      <ALIAS NAME="-fg"/>
+    </OPTION>
+    <OPTION NAME="--embedded_cpp" DESC="Embedded C++" ADVANCED="1">
+      <ALIAS NAME="-pe"/>
+    </OPTION>
+    <OPTION NAME="--exceptions" DESC="Enable C++ exception handling" ADVANCED="1"/>
+    <OPTION NAME="--gcc" DESC="Enable support for GCC extensions" ADVANCED="1"/>
+    <OPTION NAME="--gen_acp_raw" DESC="Output raw listing to .rl file" ADVANCED="1">
+      <ALIAS NAME="-pl"/>
+    </OPTION>
+    <OPTION NAME="--gen_acp_xref" DESC="Output xref listing to .crl file" ADVANCED="1">
+      <ALIAS NAME="-px"/>
+    </OPTION>
+    <OPTION NAME="--keep_unneeded_statics" DESC="Do not delete unreferenced static variables" ADVANCED="1"/>
+    <OPTION NAME="--kr_compatible" DESC="K and R compatibility" ADVANCED="1">
+      <ALIAS NAME="-pk"/>
+    </OPTION>
+    <OPTION NAME="--multibyte_chars" DESC="Multibyte character support" ADVANCED="1">
+      <ALIAS NAME="-pc"/>
+    </OPTION>
+    <OPTION NAME="--no_inlining" DESC="Ignore inline keyword" ADVANCED="1">
+      <ALIAS NAME="-pi"/>
+    </OPTION>
+    <OPTION NAME="--no_intrinsics" DESC="Disable intrinsic functions" ADVANCED="1">
+      <ALIAS NAME="-pn"/>
+    </OPTION>
+    <OPTION NAME="--program_level_compile" DESC="Program mode compilation" ADVANCED="1">
+      <ALIAS NAME="-pm"/>
+    </OPTION>
+    <OPTION NAME="--relaxed_ansi" DESC="Relaxed parsing (non-strict ANSI)" ADVANCED="1">
+      <ALIAS NAME="-pr"/>
+    </OPTION>
+    <OPTION NAME="--rtti" DESC="Support C++ run-time type information" ADVANCED="1">
+      <ALIAS NAME="-rtti"/>
+    </OPTION>
+    <OPTION NAME="--static_template_instantiation" DESC="Do static early template instantiation" ADVANCED="1"/>
+    <OPTION NAME="--strict_ansi" DESC="Strict ANSI mode (errors)" ADVANCED="1">
+      <ALIAS NAME="-ps"/>
+    </OPTION>
+    <!-- Parser Preprocessing Options -->
+    <OPTION NAME="--preproc_dependency=" DESC="Generate include file dependency information: filename" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-ppd="/>
+    </OPTION>
+    <OPTION NAME="--preproc_includes=" DESC="Generate first-level include file list: filename" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-ppi="/>
+    </OPTION>
+    <OPTION NAME="--preproc_macros=" DESC="Generate list of pre- and user-defined macros" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-ppm="/>
+    </OPTION>
+    <OPTION NAME="--preproc_only" DESC="Preprocess only" ADVANCED="1">
+      <ALIAS NAME="-ppo"/>
+    </OPTION>
+    <OPTION NAME="--preproc_with_comment" DESC="Preprocess only; maintain comments" ADVANCED="1">
+      <ALIAS NAME="-ppc"/>
+    </OPTION>
+    <OPTION NAME="--preproc_with_compile" DESC="Continue compilation after using -pp&lt;X&gt; options." ADVANCED="1">
+      <ALIAS NAME="-ppa"/>
+    </OPTION>
+    <OPTION NAME="--preproc_with_line" DESC="Preprocess only; maintain line directives" ADVANCED="1">
+      <ALIAS NAME="-ppl"/>
+    </OPTION>
+    <!-- Predefined Symbols Options-->
+    <OPTION NAME="--define=" DESC="Pre-define NAME: D=NAME[=value]" PARAM="STRING" MULTIPLE="1">
+      <ALIAS NAME="-D="/>
+    </OPTION>
+    <OPTION NAME="--undefine=" DESC="Undefine NAME: -U=NAME" PARAM="STRING" MULTIPLE="1">
+      <ALIAS NAME="-U="/>
+    </OPTION>
+    <!-- Include Options -->
+    <OPTION NAME="--include_path=" DESC="Add dir to #include search path" PARAM="STRING" MULTIPLE="1">
+      <ALIAS NAME="-I="/>
+    </OPTION>
+    <OPTION NAME="--preinclude=" DESC="Specify a preinclude file" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <!-- Diagnostic Options -->
+    <OPTION NAME="--compiler_revision" DESC="Print compiler revision and exit" ADVANCED="1"/>
+    <OPTION NAME="--diag_error=" DESC="Treat diagnostic &lt;id&gt; as error" PARAM="NUMBER" ADVANCED="1">
+      <ALIAS NAME="-pdse="/>
+    </OPTION>
+    <OPTION NAME="--diag_remark=" DESC="Treat diagnostic &lt;id&gt; as remark" PARAM="NUMBER" ADVANCED="1">
+      <ALIAS NAME="-pdsr="/>
+    </OPTION>
+    <OPTION NAME="--diag_suppress=" DESC="Suppress diagnostic &lt;id&gt;" PARAM="NUMBER" ADVANCED="1">
+      <ALIAS NAME="-pds="/>
+    </OPTION>
+    <OPTION NAME="--diag_warning=" DESC="Treat diagnostic &lt;id&gt; as warning" PARAM="NUMBER" ADVANCED="1">
+      <ALIAS NAME="-pdsw="/>
+    </OPTION>
+    <OPTION NAME="--display_error_number" DESC="Emit diagnostic identifier numbers" ADVANCED="1">
+      <ALIAS NAME="-pden"/>
+    </OPTION>
+    <OPTION NAME="--issue_remarks" DESC="Issue remarks" ADVANCED="1">
+      <ALIAS NAME="-pdr"/>
+    </OPTION>
+    <OPTION NAME="--no_warnings" DESC="Suppress warnings" ADVANCED="1">
+      <ALIAS NAME="-pdw"/>
+    </OPTION>
+    <OPTION NAME="--quiet" DESC="Quiet Mode" ADVANCED="1">
+      <ALIAS NAME="-q"/>
+    </OPTION>
+    <OPTION NAME="--set_error_limit=" DESC="Set error limit to &lt;count&gt;" PARAM="NUMBER" ADVANCED="1">
+      <ALIAS NAME="-pdel="/>
+    </OPTION>
+    <OPTION NAME="--super_quiet" DESC="Super Quiet Mode" ADVANCED="1">
+      <ALIAS NAME="-qq"/>
+    </OPTION>
+    <OPTION NAME="--tool_version" DESC="Print version numbers for each tool" ADVANCED="1">
+      <ALIAS NAME="-version"/>
+    </OPTION>
+    <OPTION NAME="--verbose" DESC="Display banner and function progress information" ADVANCED="1"/>
+    <OPTION NAME="--verbose_diagnostics" DESC="Verbose diagnostics" ADVANCED="1">
+      <ALIAS NAME="-pdv"/>
+    </OPTION>
+    <OPTION NAME="--write_diagnostics_file" DESC="Output diagnostic to .err file" ADVANCED="1">
+      <ALIAS NAME="-pdf"/>
+    </OPTION>
+    <!-- Runtime Model Options -->
+    <OPTION NAME="--silicon_version=" DESC="Silicon version" PARAM="CHOICE" ADVANCED="1">
+      <ALIAS NAME="-v="/>
+      <PARAM VALUE="27" DEFAULT="1"/>
+      <PARAM VALUE="28"/>
+    </OPTION>
+    <OPTION NAME="--large_memory_model" DESC="Use large-data memory model" ADVANCED="1">
+      <ALIAS NAME="-ml"/>
+    </OPTION>
+    <OPTION NAME="--fp_reassoc=" DESC="Allow reassociation of FP arithmetic" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="off" DEFAULT="1"/>
+      <PARAM VALUE="on"/>
+    </OPTION>
+    <OPTION NAME="--sat_reassoc=" DESC="Allow reassociation of sat arithmetic" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="off" DEFAULT="1"/>
+      <PARAM VALUE="on"/>
+    </OPTION>
+    <OPTION NAME="--unified_memory" DESC="Unified memory" ADVANCED="1">
+      <ALIAS NAME="-mt"/>
+    </OPTION>
+    <OPTION NAME="--asm_code_fill=" DESC="Assembler fill value for code section" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="--asm_data_fill=" DESC="Assembler fill value for data section" PARAM="NUMBER" ADVANCED="1"/>
+    <OPTION NAME="--c2xlp_src_compatible" DESC="C2XLP source compatibility" ADVANCED="1">
+      <ALIAS NAME="-m20"/>
+    </OPTION>
+    <OPTION NAME="--cla_support" DESC="[=cla0] Specify CLA support (Default:cla0)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--disable_dp_load_opt" DESC="No DP load optimization" ADVANCED="1">
+      <ALIAS NAME="-md"/>
+    </OPTION>
+    <OPTION NAME="--float_support=" DESC="Specify floating point support" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="softlib" DEFAULT="1"/>
+      <PARAM VALUE="fpu32"/>
+      <PARAM VALUE="fpu64"/>
+    </OPTION>
+    <OPTION NAME="--gen_func_subsections" DESC="Place each function in a separate subsection" ADVANCED="1">
+      <ALIAS NAME="-mo"/>
+    </OPTION>
+    <OPTION NAME="--no_fast_branch" DESC="Disable C28x fast branch instructions" ADVANCED="1">
+      <ALIAS NAME="-me"/>
+    </OPTION>
+    <OPTION NAME="--no_rpt" DESC="Don't generate RPT instructions" ADVANCED="1">
+      <ALIAS NAME="-mi"/>
+    </OPTION>
+    <OPTION NAME="--opt_for_space" DESC="Optimize for code size" ADVANCED="1">
+      <ALIAS NAME="-ms"/>
+    </OPTION>
+    <OPTION NAME="--gen_func_subsections" DESC="Place each function in a separate subsection" ADVANCED="1">
+      <ALIAS NAME="-mo"/>
+    </OPTION>
+    <OPTION NAME="--profile:power" DESC="Compile for power profiling" ADVANCED="1"/>
+    <OPTION NAME="--protect_volatile" DESC="[=nops] default 2. Pipeline protect volatiles by nops" ADVANCED="1">
+      <ALIAS NAME="-mv"/>
+    </OPTION>
+    <OPTION NAME="--rpt_threshold=" DESC="0-256. Specify max number of repetitions in a RPT instruction" PARAM="NUMBER" ADVANCED="1"/>
+    <!-- Optimizations Options -->
+    <OPTION NAME="--opt_level" DESC="Optimization level" PARAM="CHOICE">
+      <ALIAS NAME="-O"/>
+      <PARAM VALUE="0"/>
+      <PARAM VALUE="1"/>
+      <PARAM VALUE="2" DEFAULT="1"/>
+      <PARAM VALUE="3"/>
+    </OPTION>
+    <OPTION NAME="--opt_for_speed" DESC="Control speed vs. size tradeoffs (0=size, 5=speed)" PARAM="CHOICE">
+      <ALIAS NAME="-mf"/>
+      <PARAM VALUE="0"/>
+      <PARAM VALUE="1"/>
+      <PARAM VALUE="2"/>
+      <PARAM VALUE="3"/>
+      <PARAM VALUE="4" DEFAULT="1"/>
+      <PARAM VALUE="5"/>
+    </OPTION>
+    <OPTION NAME="--auto_inline=" DESC="Specify threshold for automatic inlining" PARAM="NUMBER" ADVANCED="1">
+      <ALIAS NAME="-oi="/>
+    </OPTION>
+    <OPTION NAME="--call_assumptions" DESC="Specify call assumptions when optimizing" PARAM="CHOICE" ADVANCED="1">
+      <ALIAS NAME="-op"/>
+      <PARAM VALUE="0"/>
+      <PARAM VALUE="1"/>
+      <PARAM VALUE="2"/>
+      <PARAM VALUE="3"/>
+    </OPTION>
+    <OPTION NAME="--gen_opt_info" DESC="Generate optimizer information file at level" PARAM="CHOICE" ADVANCED="1">
+      <ALIAS NAME="-on"/>
+      <PARAM VALUE="0"/>
+      <PARAM VALUE="1"/>
+      <PARAM VALUE="2"/>
+    </OPTION>
+    <OPTION NAME="--optimize_with_debug" DESC="Optimize fully in the presence of debug directives">
+      <ALIAS NAME="-mn"/>
+    </OPTION>
+    <OPTION NAME="--optimizer_interlist" DESC="Generate optimized source interlisted assembly" ADVANCED="1">
+      <ALIAS NAME="-os"/>
+    </OPTION>
+    <OPTION NAME="--remove_hooks_when_inlining" DESC="Remove entry/exit hooks from inlined functions" ADVANCED="1"/>
+    <OPTION NAME="--single_inline" DESC="Inline functions only called once" ADVANCED="1"/>
+    <OPTION NAME="--aliased_variables" DESC="Assume called funcs create hidden aliases (rare)" ADVANCED="1">
+      <ALIAS NAME="-ma"/>
+    </OPTION>
+    <!-- Entry/Exit Hook Options -->
+    <OPTION NAME="--entry_hook=" DESC="Insert this call at entry to each function (Default:__entry_hook)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--entry_parm=" DESC="Pass caller's name or address to entry hook" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="address"/>
+      <PARAM VALUE="name"/>
+      <PARAM VALUE="none"/>
+    </OPTION>
+    <OPTION NAME="--exit_hook=" DESC="Insert this call at exit from each function (Default:__exit_hook)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--exit_parm=" DESC="Pass caller's name or address to exit hook" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="address"/>
+      <PARAM VALUE="name"/>
+      <PARAM VALUE="none"/>
+    </OPTION>
+    <!-- Feedback Options -->
+    <OPTION NAME="--analyze=" DESC="Generate analysis info from profile data" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="callgraph"/>
+      <PARAM VALUE="codecov"/>
+    </OPTION>
+    <OPTION NAME="--analyze_only" DESC="Only generate analysis" ADVANCED="1"/>
+    <OPTION NAME="--gen_profile_info" DESC="Generate profile feedback data" ADVANCED="1"/>
+    <OPTION NAME="--use_profile_info=" DESC=" Use profile feedback file(s)" PARAM="STRING" ADVANCED="1"/>
+    <!-- Library Function Assumptions Options -->
+    <OPTION NAME="--printf_support=" DESC="Level of printf support required" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="full"/>
+      <PARAM VALUE="minimal"/>
+      <PARAM VALUE="nofloat"/>
+    </OPTION>
+    <OPTION NAME="--std_lib_func_defined" DESC="File contains an RTS library function" ADVANCED="1">
+      <ALIAS NAME="-ol1"/>
+    </OPTION>
+    <OPTION NAME="--std_lib_func_not_defined" DESC="File does not define any RTS library func (def.)" ADVANCED="1">
+      <ALIAS NAME="-ol2"/>
+    </OPTION>
+    <OPTION NAME="--std_lib_func_redefined" DESC="File redefines an RTS library function" ADVANCED="1">
+      <ALIAS NAME="-ol0"/>
+    </OPTION>
+    <!-- Assembler Options -->
+    <OPTION NAME="--keep_asm" DESC="Keep the generated assembly language (.asm) file" ADVANCED="1">
+      <ALIAS NAME="-k"/>
+    </OPTION>
+    <OPTION NAME="--asm_listing" DESC="Generate listing file" ADVANCED="1">
+      <ALIAS NAME="-al"/>
+    </OPTION>
+    <OPTION NAME="--c_src_interlist" DESC="Generate C source interlisted assembly file" ADVANCED="1">
+      <ALIAS NAME="-ss"/>
+    </OPTION>
+    <OPTION NAME="--src_interlist" DESC="Generate interlisted assembly file" ADVANCED="1">
+      <ALIAS NAME="-s"/>
+    </OPTION>
+    <OPTION NAME="--absolute_listing" DESC="Generate absolute listing file" ADVANCED="1">
+      <ALIAS NAME="-aa"/>
+    </OPTION>
+    <OPTION NAME="--asm_define=" DESC="Pre-define assembly symbol NAME: NAME[=value]" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-ad="/>
+    </OPTION>
+    <OPTION NAME="--asm_dependency" DESC="Generate assembly dependency information" ADVANCED="1">
+      <ALIAS NAME="-apd"/>
+    </OPTION>
+    <OPTION NAME="--asm_includes" DESC="Generate first-level assembly include file list" ADVANCED="1">
+      <ALIAS NAME="-api"/>
+    </OPTION>
+    <OPTION NAME="--asm_remarks" DESC="Generate asm extended warnings" ADVANCED="1">
+      <ALIAS NAME="-mw"/>
+    </OPTION>
+    <OPTION NAME="--asm_undefine=" DESC="Undefine assembly symbol NAME" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-au="/>
+    </OPTION>
+    <OPTION NAME="--copy_file=" DESC="Simulate source '.copy filename'" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-ahc="/>
+    </OPTION>
+    <OPTION NAME="--cross_reference" DESC="Generate cross reference file" ADVANCED="1">
+      <ALIAS NAME="-ax"/>
+    </OPTION>
+    <OPTION NAME="--include_file=" DESC="Simulate source '.include filename'" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-ahi="/>
+    </OPTION>
+    <OPTION NAME="--no_const_clink" DESC="Do not generate .clink for .const sections" ADVANCED="1"/>
+    <OPTION NAME="--output_all_syms" DESC="Keep local symbols in output file">
+      <ALIAS NAME="-as"/>
+    </OPTION>
+    <OPTION NAME="--syms_ignore_case" DESC="Symbol names are not case-significant" ADVANCED="1">
+      <ALIAS NAME="-ac"/>
+    </OPTION>
+    <OPTION NAME="--cdebug_asm_data" DESC="Generate asm debug directive" ADVANCED="1">
+      <ALIAS NAME="-mg"/>
+    </OPTION>
+    <OPTION NAME="--flash_prefetch_warn" DESC="Assembler warnings for F281X BF flash prefetch issue" ADVANCED="1"/>
+    <OPTION NAME="--preproc_asm" DESC="Preprocess assembly source, expand macros." ADVANCED="1">
+      <ALIAS NAME="-mx"/>
+    </OPTION>
+    <!-- File Type Specifier Options -->
+    <OPTION NAME="--asm_file=" DESC="File is an assembly file (default for .asm)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-fa="/>
+    </OPTION>
+    <OPTION NAME="--c_file=" DESC="File is a C file (default for .c/no ext)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-fc="/>
+    </OPTION>
+    <OPTION NAME="--cpp_file=" DESC="File is a C++ file (default for .C .cpp .cc)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-fp="/>
+    </OPTION>
+    <OPTION NAME="--obj_file=" DESC="File is an object file (default for .obj)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-fo="/>
+    </OPTION>
+    <!-- Directory Specifier Options -->
+    <OPTION NAME="--abs_directory=" DESC="Absolute listing directory (default is .obj dir)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-fb="/>
+    </OPTION>
+    <OPTION NAME="--asm_directory=" DESC="Assembly file directory (default is .)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-fs="/>
+    </OPTION>
+    <OPTION NAME="--list_directory=" DESC="Listing/xref file directory (default is .obj dir)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-ff="/>
+    </OPTION>
+    <OPTION NAME="--obj_directory=" DESC="Object file directory (default is .)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-fr="/>
+    </OPTION>
+    <OPTION NAME="--temp_directory=" DESC="Temporary file directory (default is .)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-ft="/>
+    </OPTION>
+    <!-- Default File Extensions Options -->
+    <OPTION NAME="--asm_extension=" DESC="Extension for assembly files (default is .asm)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-ea="/>
+    </OPTION>
+    <OPTION NAME="--c_extension=" DESC="Extension for C files (default is .c)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-ec="/>
+    </OPTION>
+    <OPTION NAME="--cpp_extension=" DESC="Extension for C++ files (default is .cpp)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-ep="/>
+    </OPTION>
+    <OPTION NAME="--listing_extension=" DESC="Extension for listing files (default is .lst)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-es="/>
+    </OPTION>
+    <OPTION NAME="--obj_extension=" DESC="Extension for object files (default is .obj)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-eo="/>
+    </OPTION>
+    <!-- Command Files Options -->
+    <OPTION NAME="--cmd_file=" DESC="Read options from specified file" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-@="/>
+    </OPTION>
+    <!-- Linking section -->
+    <!--The following Linker options can be specified following the -z
+    option.  Linking is only enabled if -z is used and -c is not:-->
+    <OPTION NAME="" DESC="Linker script" PARAM="STRING" ID="LKR" ADVANCED="1"/>
+    <!-- Command File Preprocessing Options -->
+    <OPTION NAME="--disable_pp" DESC="Don't use C preprocessor for command files" ADVANCED="1"/>
+    <OPTION NAME="--undefine=" DESC="[name] Undefine preprocessor macro _name_" PARAM="STRING"/>
+    <!-- Diagnostics Options -->
+    <OPTION NAME="--no_demangle" DESC="Don't demangle symbol names in diagnostics" ADVANCED="1"/>
+    <OPTION NAME="--warn_sections" DESC="Warn if an unspecified output section is created" ADVANCED="1">
+      <ALIAS NAME="-w"/>
+    </OPTION>
+    <OPTION NAME="--diag_error=" DESC="[id] Treat diagnostic id as error" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--diag_remark=" DESC="[id] Treat diagnostic id as remark" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--diag_suppress=" DESC="[id] Suppress diagnostic id" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--diag_warning=" DESC="[id] Treat diagnostic id as warning" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--display_error_number" DESC="Emit diagnostic identifier numbers" ADVANCED="1"/>
+    <OPTION NAME="--issue_remarks" DESC="Issue remarks" ADVANCED="1"/>
+    <OPTION NAME="--no_warnings" DESC="Suppress warnings" ADVANCED="1"/>
+    <OPTION NAME="--set_error_limit=" DESC="[count] Set error limit to count" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--verbose_diagnostics" DESC="Verbose diagnostics" ADVANCED="1"/>
+    <!-- File Search Path Options -->
+    <OPTION NAME="-l" DESC="Include library file or command file as input" PARAM="STRING" MULTIPLE="1">
+      <ALIAS NAME="--library="/>
+    </OPTION>
+    <OPTION NAME="-i" DESC="Add &lt;dir&gt; to library search path" PARAM="STRING" MULTIPLE="1">
+      <ALIAS NAME="--search_path="/>
+    </OPTION>
+    <OPTION NAME="--disable_auto_rts" DESC="Disable automatic RTS selection" ADVANCED="1"/>
+    <OPTION NAME="--priority" DESC="Search libraries in priority order" ADVANCED="1">
+      <ALIAS NAME="-priority"/>
+    </OPTION>
+    <OPTION NAME="--reread_libs" DESC="Reread libraries; resolve backward references" ADVANCED="1">
+      <ALIAS NAME="-x"/>
+    </OPTION>
+    <!-- Linker Output Options -->
+    <OPTION NAME="--output_file=" DESC="Specify output file name" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-o "/>
+    </OPTION>
+    <OPTION NAME="--map_file=" DESC="Input and output sections listed into &lt;file&gt;" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-m="/>
+    </OPTION>
+    <OPTION NAME="--absolute_exe" DESC="Produce absolute executable object file (default)" ADVANCED="1">
+      <ALIAS NAME="-a"/>
+    </OPTION>
+    <OPTION NAME="--generate_dead_funcs_list=" DESC="[fname] List removed dead functions into file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--mapfile_contents=" DESC="Display attribute settings in map file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--relocatable" DESC="Produce a relocatable output module" ADVANCED="1">
+      <ALIAS NAME="-r"/>
+    </OPTION>
+    <OPTION NAME="--run_abs" DESC="Produce absolute listing file" ADVANCED="1">
+      <ALIAS NAME="-abs"/>
+    </OPTION>
+    <OPTION NAME="--xml_link_info=" DESC="[fname]Detailed link information data-base into &lt;file&gt;" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-xml_link_info="/>
+    </OPTION>
+    <!-- Symbol Management Options -->
+    <OPTION NAME="--entry_point=" DESC="Specify program entry point for the output module" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-e="/>
+    </OPTION>
+    <OPTION NAME="--globalize=" DESC="Do not localize symbols matching pattern" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--hide=" DESC="Hide symbols matching pattern" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--localize=" DESC="Make the symbols matching pattern local" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--make_global=" DESC="Don't make global symbol static if -h is specified" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-g="/>
+    </OPTION>
+    <OPTION NAME="--make_static" DESC="Make all global symbols static" ADVANCED="1">
+      <ALIAS NAME="-h"/>
+    </OPTION>
+    <OPTION NAME="--no_sym_merge" DESC="No type merging in symbolic debugging information" ADVANCED="1">
+      <ALIAS NAME="-b"/>
+    </OPTION>
+    <OPTION NAME="--no_symtable" DESC="Strip symbol table and line number entries" ADVANCED="1">
+      <ALIAS NAME="-s"/>
+    </OPTION>
+    <OPTION NAME="--scan_libraries" DESC="Scan libraries for duplicate symbol definitions" ADVANCED="1">
+      <ALIAS NAME="-scanlibs"/>
+    </OPTION>
+    <OPTION NAME="--symbol_map=" DESC="Specify a symbol map, mapping refname to defname: refname=defname" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--undef_sym=" DESC=" Add &lt;sym&gt; to symbol table as an unresolved symbol" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-u="/>
+    </OPTION>
+    <OPTION NAME="--unhide=" DESC="Exclude symbols matching pattern from hinding" PARAM="STRING" ADVANCED="1"/>
+    <!-- Runtime Environment Options -->
+    <OPTION NAME="--heap_size=" DESC="Heap size for C/C++ dynamic memory allocation" PARAM="NUMBER" ADVANCED="1">
+      <ALIAS NAME="-heap="/>
+      <ALIAS NAME="--heap="/>
+    </OPTION>
+    <OPTION NAME="--stack_size=" DESC="Set C system stack size" PARAM="NUMBER" ADVANCED="1">
+      <ALIAS NAME="-stack="/>
+      <ALIAS NAME="--stack="/>
+    </OPTION>
+    <OPTION NAME="--far_heapsize=" DESC="Specify heap size in far (extended) memory" PARAM="NUMBER" ADVANCED="1">
+      <ALIAS NAME="-farheap="/>
+    </OPTION>
+    <OPTION NAME="--arg_size=" DESC="Set C argc/argv memory size" PARAM="NUMBER" ADVANCED="1">
+      <ALIAS NAME="-args="/>
+    </OPTION>
+    <OPTION NAME="--fill_value=" DESC="Default fill value for holes in output sections" PARAM="NUMBER" ADVANCED="1">
+      <ALIAS NAME="-f="/>
+    </OPTION>
+    <OPTION NAME="--ram_model" DESC="Link using RAM autoinitialization model" ADVANCED="1">
+      <ALIAS NAME="-cr"/>
+    </OPTION>
+    <OPTION NAME="--rom_model" DESC="Link using ROM autoinitialization model" ADVANCED="1">
+      <ALIAS NAME="-c"/>
+    </OPTION>
+    <!-- Linktime Optimization Options -->
+    <OPTION NAME="--no_postlink_across_calls" DESC="Disable post-link optimizations across functions" ADVANCED="1">
+      <ALIAS NAME="-nf"/>
+    </OPTION>
+    <OPTION NAME="--postlink_exclude" DESC="Exclude files from post-link pass" ADVANCED="1">
+      <ALIAS NAME="-ex"/>
+    </OPTION>
+    <OPTION NAME="--postlink_opt" DESC="Post-link optimizations (only after -z)" ADVANCED="1">
+      <ALIAS NAME="-plink"/>
+    </OPTION>
+    <!-- Miscellaneous Options -->
+    <OPTION NAME="--disable_clink" DESC="Disable conditional linking and ignore .clink" ADVANCED="1">
+      <ALIAS NAME="-j"/>
+    </OPTION>
+    <OPTION NAME="--linker_help" DESC="Display usage information" ADVANCED="1">
+      <ALIAS NAME="-help"/>
+      <ALIAS NAME="--help"/>
+    </OPTION>
+    <OPTION NAME="--preferred_order=" DESC="Add &lt;function&gt; to preferred placement order list" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="--strict_compatibility=" DESC="Strict compatibility checking" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="on" DEFAULT="1"/>
+      <PARAM VALUE="off"/>
+    </OPTION>
+  </TOOL>
+  <TOOL NAME="BIN2HEX" FILE="hex2000.exe">
+    <OPTION NAME="--byte" DESC="Output as bytes rather than target addressing" ADVANCED="1">
+      <ALIAS NAME="-byte"/>
+    </OPTION>
+    <OPTION NAME="--entrypoint=" DESC="Specify entrypoint address or symbol name" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-e="/>
+    </OPTION>
+    <OPTION NAME="--exclude=" DESC="Exclude section from hex conversion" PARAM="STRING" MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="-exclude="/>
+    </OPTION>
+    <OPTION NAME="--fill=" DESC="Specify fill value" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-fill="/>
+    </OPTION>
+    <OPTION NAME="--image" DESC="Select image mode" ADVANCED="1">
+      <ALIAS NAME="image"/>
+    </OPTION>
+    <OPTION NAME="--linkerfill" DESC="Include linker fill sections in images" ADVANCED="1">
+      <ALIAS NAME="-linkerfill"/>
+    </OPTION>
+    <OPTION NAME="--map=" DESC="Specify map file name" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-map="/>
+    </OPTION>
+    <OPTION NAME="--memwidth=" DESC="Specify memory width" PARAM="STRING">
+      <ALIAS NAME="-memwidth="/>
+    </OPTION>
+    <OPTION NAME="--olength=" DESC="Number of data items per line of hex output" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-olength="/>
+    </OPTION>
+    <OPTION NAME="--order=" DESC="Specify data ordering (endianness)" PARAM="CHOICE" ADVANCED="1">
+      <ALIAS NAME="-order="/>
+      <PARAM VALUE="LS" DEFAULT="1"/>
+      <PARAM VALUE="MS"/>
+    </OPTION>
+    <OPTION NAME="--quiet" DESC="Quiet Operation" ADVANCED="1">
+      <ALIAS NAME="-quiet"/>
+      <ALIAS NAME="-q"/>
+    </OPTION>
+    <OPTION NAME="--romwidth=" DESC="Specify rom width" PARAM="NUMBER" ADVANCED="1">
+      <ALIAS NAME="-romwidth="/>
+    </OPTION>
+    <OPTION NAME="--swapbytes" DESC="Swap output bytes for 16byte memwidth" ADVANCED="1">
+      <ALIAS NAME="-sb"/>
+    </OPTION>
+    <OPTION NAME="--zero" DESC="Zero based addressing" ADVANCED="1">
+      <ALIAS NAME="-zero"/>
+      <ALIAS NAME="-z"/>
+    </OPTION>
+    <OPTION NAME="--diag_error=" DESC="Treat diagnostic (id) as error" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_remark=" DESC="Treat diagnostic (id) as remark" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_suppress=" DESC="Suppress diagnostic (id)" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--diag_warning=" DESC="Treat diagnostic (id) as warning" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--display_error_number" DESC="Emit diagnostic identifier numbers" ADVANCED="1"/>
+    <OPTION NAME="--emit_warnings_as_errors" DESC="Treat warnings as errors" ADVANCED="1">
+      <ALIAS NAME="-pdew"/>
+    </OPTION>
+    <OPTION NAME="--issue_remarks" DESC="Issue remarks" ADVANCED="1"/>
+    <OPTION NAME="--no_warnings" DESC="Suppress warnings" ADVANCED="1"/>
+    <OPTION NAME="--set_error_limit=" DESC="count Set error limit to (count)" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="--boot" DESC="Select boot mode" ADVANCED="1">
+      <ALIAS NAME="-boot"/>
+    </OPTION>
+    <OPTION NAME="--bootorg=" DESC="Specify origin address or symbol of boot table ROM" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-bootorg="/>
+    </OPTION>
+    <OPTION NAME="--divsel=" DESC="Specify the initial value for the DIVSEL register" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-divsel="/>
+    </OPTION>
+    <OPTION NAME="--gpio16" DESC="Specify table source as the GP I/O port, 16-bit mode" ADVANCED="1">
+      <ALIAS NAME="-gpio16"/>
+    </OPTION>
+    <OPTION NAME="--gpio8" DESC="Specify table source as the GP I/O port, 8-bit mode" ADVANCED="1">
+      <ALIAS NAME="-gpio8"/>
+      <ALIAS NAME="-can8"/>
+    </OPTION>
+    <OPTION NAME="--i2c8" DESC="Specify I2C port as source of boot table loader" ADVANCED="1">
+      <ALIAS NAME="-i2c8"/>
+    </OPTION>
+    <OPTION NAME="--i2cclkh=" DESC="Specify the initial value for I2CCLKH register" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-i2cclkh="/>
+    </OPTION>
+    <OPTION NAME="--i2cclkl=" DESC="Specify the initial value for the I2CCLKL register" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-i2cclkl="/>
+    </OPTION>
+    <OPTION NAME="--i2cpsc=" DESC="Specify the initial value for I2CPSC register" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-i2cpsc="/>
+    </OPTION>
+    <OPTION NAME="--lospcp=" DESC="Specify the initial value for the LOSPCP register" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-lospcp="/>
+    </OPTION>
+    <OPTION NAME="--pllcr=" DESC="Specify the initial value for the PLLCR register" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-pllcr="/>
+    </OPTION>
+    <OPTION NAME="--sci8" DESC="Specify table source as the SCI-A port, 8-bit mode" ADVANCED="1">
+      <ALIAS NAME="-sci8"/>
+    </OPTION>
+    <OPTION NAME="--spi8" DESC="Specify table source as the SPI-A port, 8-bit mode" ADVANCED="1">
+      <ALIAS NAME="-spi8"/>
+    </OPTION>
+    <OPTION NAME="--spibrr=" DESC="Specify the initial value for the SPIBRR register" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-spibrr="/>
+    </OPTION>
+    <OPTION NAME="--xintcnf2=" DESC="Specify the initial value for the XINTCNF2 register" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="--xintcnf2="/>
+    </OPTION>
+    <OPTION NAME="--xintf16" DESC="Specify parallel XINTF stream, 16-bit mode" ADVANCED="1">
+      <ALIAS NAME="-xintf16"/>
+    </OPTION>
+    <OPTION NAME="--xintf8" DESC="Specify parallel XINTF stream, 8-bit mode" ADVANCED="1">
+      <ALIAS NAME="-xintf8"/>
+    </OPTION>
+    <OPTION NAME="--xtiming=" DESC="Specify the initial value for the XTIMING" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="-xtiming="/>
+    </OPTION>
+    <OPTION NAME="--ascii" DESC="Output ASCII hex format" ADVANCED="1">
+      <ALIAS NAME="-a"/>
+    </OPTION>
+    <OPTION NAME="--binary" DESC="Binary output format (for DSKs)" ADVANCED="1">
+      <ALIAS NAME="-b"/>
+    </OPTION>
+    <OPTION NAME="--intel" DESC="Output Intel hex format">
+      <ALIAS NAME="-i"/>
+    </OPTION>
+    <OPTION NAME="--motorola" DESC="[=1,2,3] Output Motorola S hex format" PARAM="STRING" MULTIPLE="1" ADVANCED="1">
+      <ALIAS NAME="-m"/>
+    </OPTION>
+    <OPTION NAME="--tektronix" DESC="Output Extended Tektronix hex format" ADVANCED="1">
+      <ALIAS NAME="-x"/>
+    </OPTION>
+    <OPTION NAME="--ti_tagged" DESC="Output TI-Tagged hex format" ADVANCED="1">
+      <ALIAS NAME="-t"/>
+    </OPTION>
+    <OPTION NAME="--ti_txt" DESC="Output TI-TXT hex format" ADVANCED="1"/>
+    <OPTION NAME="--load_image" DESC="Output Load Image Object format" ADVANCED="1"/>
+    <OPTION NAME="--section_name_prefix=" DESC="Prefix for load image object sections" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="PICCOLO">
+    <TEMPLATE NAME="INCFILE" VALUE="DSP28x_Project.h"/>
+    <CONTROLLER NAME="TMS320F28027DA">
+      <SOURCE NAME="F28027.cmd" FROM="cc-piccolo/link/F28027.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_28027DA=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F28027PT">
+      <SOURCE NAME="F28027.cmd" FROM="cc-piccolo/link/F28027.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_28027PT=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F28026DA">
+      <SOURCE NAME="F28026.cmd" FROM="cc-piccolo/link/F28026.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_28026DA=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F28026PT">
+      <SOURCE NAME="F28026.cmd" FROM="cc-piccolo/link/F28026.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_28026PT=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F28023DA">
+      <SOURCE NAME="F28023.cmd" FROM="cc-piccolo/link/F28023.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_28023DA=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F28023PT">
+      <SOURCE NAME="F28023.cmd" FROM="cc-piccolo/link/F28023.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_28023PT=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F28022DA">
+      <SOURCE NAME="F28022.cmd" FROM="cc-piccolo/link/F28022.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_28022DA=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F28022PT">
+      <SOURCE NAME="F28022.cmd" FROM="cc-piccolo/link/F28022.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_28022PT=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F28021DA">
+      <SOURCE NAME="F28021.cmd" FROM="cc-piccolo/link/F28021.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_28021DA=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F28021PT">
+      <SOURCE NAME="F28021.cmd" FROM="cc-piccolo/link/F28021.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_28021PT=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F280200DA">
+      <SOURCE NAME="F280200.cmd" FROM="cc-piccolo/link/F280200.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_280200DA=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F280200PT">
+      <SOURCE NAME="F280200.cmd" FROM="cc-piccolo/link/F280200.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_280200PT=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F28020DA">
+      <SOURCE NAME="F28020.cmd" FROM="cc-piccolo/link/F28020.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_28020DA=1"/>
+    </CONTROLLER>
+    <CONTROLLER NAME="TMS320F28020PT">
+      <SOURCE NAME="F28020.cmd" FROM="cc-piccolo/link/F28020.cmd"/>
+      <OPTION TOOL="CC" NAME="--define=" VALUE="DSP28_28020PT=1"/>
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT PATH="c:/ti/ccs%*%/ccs/tools/compiler/ti-cgt-c2000%*%" SUF="bin/cl2000.exe" ARG="" STR="TMS320C2000"/>
+  <DETECT PATH="c:/ti/ccsv6/tools/compiler" SUF="bin/cl2000.exe" ARG="" STR="TMS320C2000" DATE="2009-11-17"/>
+  <DETECT PATH="c:/ti/ccsv5/tools/compiler/c2000" SUF="bin/cl2000.exe" ARG="" STR="TMS320C2000" DATE="2009-11-17"/>
+  <DETECT PATH="%PROGRAMFILES%/Texas Instruments/ccsv4/tools/compiler/c2000" SUF="bin/cl2000.exe" ARG="" STR="TMS320C2000" DATE="2009-11-17"/>
+  <PATH ADD="%COMPILER_DIR%/bin"/>
+  <!-- File Types -->
+  <FILE NAME="c" DESC="C Source" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="cpp" DESC="C++ Source" CATEGORY="Source" SOURCE="1" ICON="project_c++.png"/>
+  <FILE NAME="asm" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="cmd" DESC="Linker Script" CATEGORY="Linker Script" SOURCE="1" ICON="project_other.png"/>
+  <!--FILE NAME="asm" DESC="Assembler Source" />-->
+  <FILE NAME="obj" DESC="Object" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <FILE NAME="cof" DESC="COF" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <!-- Compiler and assembler -->
+  <PROCESS TOOL="CC" NAME="C Compiler" CMDLINE="$(CC) %OPTIONS% $(CCFLAGS) %INFILE_QUOTED% --output_file=%OUTFILE_QUOTED%">
+    <FILE OUTPUT="obj">
+      <FILE INPUT="c"/>
+      <FILE INPUT="cpp"/>
+      <FILE INPUT="asm"/>
+    </FILE>
+    <OPTION NAME="-c"/>
+    <OPTION NAME="-ml"/>
+    <OPTION NAME="--define=" VALUE="_DEBUG"/>
+    <OPTION NAME="--define=" VALUE="LARGE_MODEL"/>
+    <OPTION NAME="--symdebug:" VALUE="dwarf"/>
+    <OPTION NAME="--include_path=" VALUE="&quot;%COMPILER_ABS_DIR%/include&quot;"/>
+    <OPTION NAME="--include_path=" VALUE="&quot;%COMPILER_ABS_DIR%/../../../C2000/include&quot;"/>
+    <OPTION NAME="--include_path=" VALUE="&quot;%CONFIG_ABS_DIR%/cc-piccolo/inc&quot;"/>
+    <OPTION NAME="--fp_reassoc=" VALUE="off"/>
+    <OPTION NAME="--sat_reassoc=" VALUE="off"/>
+    <OPTION NAME="--keep_unneeded_statics"/>
+    <OPTION NAME="--silicon_version=" VALUE="28"/>
+    <MESSAGE VALUE="^&quot;(.+)&quot;.*line\D*(\d+):.*(error|warning|message):.+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="$(LD) %OPTIONS% $(LDFLAGS) -o %OUTFILE_QUOTED% %INFILES_QUOTED% ">
+    <FILE OUTPUT="cof"/>
+    <FILE INPUT="obj"/>
+    <FILE INPUT="CMD" OPTION="LKR"/>
+    <OPTION NAME="-z"/>
+    <OPTION NAME="--rom_model"/>
+    <OPTION NAME="--reread_libs"/>
+    <OPTION NAME="--rom_model"/>
+    <OPTION NAME="--warn_sections"/>
+    <OPTION NAME="--stack_size=" VALUE="0x300"/>
+    <OPTION NAME="-i" VALUE="&quot;%COMPILER_ABS_DIR%/lib&quot;"/>
+    <OPTION NAME="-i" VALUE="&quot;%CONFIG_ABS_DIR%/cc-piccolo/lib&quot;"/>
+    <OPTION NAME="" VALUE="&quot;%CONFIG_ABS_DIR%/cc-piccolo/link/DSP2802x_Headers_nonBIOS.cmd&quot;"/>
+    <MESSAGE VALUE="^&quot;(.+)&quot;.*line\D*(\d+):.*(error|warning|message):.+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Bin2Hex -->
+  <PROCESS TOOL="BIN2HEX" NAME="Bin2hex" CMDLINE="$(BIN2HEX) $(BIN2HEXFLAGS) -o %OUTFILE_QUOTED% %INFILE_QUOTED% ">
+    <FILE OUTPUT="hex"/>
+    <FILE INPUT="cof"/>
+    <OPTION NAME="--memwidth=" VALUE="8"/>
+    <OPTION NAME="--intel"/>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="cof"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="hex"/>
+    <POSTPROCESS CMDLINE="cp &quot;%OUTFILE%&quot; &quot;%SOLUTION_ABS_DIR%/%PROJECT_NAME%.%OUTFILE_TYPE%&quot;"/>
+  </TARGET>
+  <SOURCE NAME="main.c" FROM="intmain.c" OPEN="1"/>
+</COMPILER>

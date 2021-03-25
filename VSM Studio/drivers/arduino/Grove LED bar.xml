@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove LED bar.pdsclip" FAMILY="ARDUINO" DESC="Grove LED bar Module">
+   <PERIPHERAL TYPE="Grove LED bar"  ELEMENT="LEDC1">
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GroveLedBar">
+       <SETUP NAME="begin">
+           <PROPERTY NAME="STATE" ELEMENT="GC1" TYPE="INTEGER" GROVE="DIGITAL" WIDTH="2"/>
+       </SETUP>
+    </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="grove_led_bar.h">
+       <REQUIRE HEADER="led_bar.h"/>
+
+       <!-- Methods -->
+       <METHOD NAME="setOrientation"  DESC="Set orientation.">
+         <PARAMETER NAME="orientation" TYPE="BOOLEAN" DESC="TRUE=Green to Red, FALSE=Red to Green."/>
+       </METHOD>
+       <METHOD NAME="setLevel" DESC="Set level, range from 0 to 10.">
+         <PARAMETER NAME="level" TYPE="FLOAT" DEFAULT="0" DESC="Range from 0 to 10"/>
+       </METHOD>
+       <METHOD NAME="setLed" DESC="Turn individual LED on or off.">
+         <PARAMETER NAME="led"   TYPE="INTEGER" DEFAULT="0" DESC="Individual Led, from 1 to 10"/>
+         <PARAMETER NAME="state" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="TRUE/FALSE"/>
+       </METHOD>
+       <METHOD NAME="toggleLed" DESC="Toggle a single Led.">
+         <PARAMETER NAME="led"   TYPE="INTEGER" DEFAULT="0" DESC="Individual Led, from 1 to 10"/>
+       </METHOD>
+       <METHOD NAME="setLeds" DESC="Set Leds to match given mask.">
+         <PARAMETER NAME="leds" TYPE="INTEGER" DEFAULT="0" DESC="Leds to set"/>
+       </METHOD>
+       <METHOD NAME="getLeds" DESC="Get current Leds mask.">
+         <RETURN NAME="ledsMask" TYPE="INTEGER"/>
+       </METHOD>
+
+    </DRIVER>
+   </PERIPHERAL>
+</CLIP>           
+
+

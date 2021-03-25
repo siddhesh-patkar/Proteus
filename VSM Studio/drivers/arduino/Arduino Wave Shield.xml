@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Arduino/Arduino Wave Shield.pdsclip" DESC="Arduino Wave Shield (Plays Audio WAV Files)" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="Wave Player" ELEMENT="AUDIO1" RAM="128">
+      <INTERFACE OBJECT="WavePlayer" EXTERNAL="WP">
+         <SETUP NAME="begin">
+            <PIN NAME="cs" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO2"/>
+            </PIN> 
+            <PIN NAME="sck" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO3"/>
+            </PIN> 
+            <PIN NAME="sdi" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO4"/>
+            </PIN> 
+            <PIN NAME="ldac" TYPE="DIGITAL">
+              <TERMINAL ELEMENT="IO5"/>
+            </PIN> 
+         </SETUP>   
+      </INTERFACE>
+      
+      <DRIVER HEADER="WavePlayer.h">
+         <REQUIRE HEADER="core.h"/>
+         <REQUIRE HEADER="spi.h"/>
+
+         <RESOURCE TYPE="wav" DESC="Audio files" METHOD="play" />
+
+         <!-- Sensor function -->
+         <FUNCTION DESC="Busy">
+            <RETURN TYPE="BOOLEAN" DESC="True if playing"/>
+         </FUNCTION>   
+         
+         <METHOD NAME="play"  DESC="Play a WAV file.">
+            <PARAMETER NAME="file" TYPE="STRING" DESC="Filename of WAV file (22kHz or lower sample rate, mono)"/>
+            <PARAMETER NAME="wait" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="Wait for audio playback to finish"/>
+         </METHOD>
+         
+         <METHOD NAME="pause"  DESC="Pause the playback."/>
+         <METHOD NAME="resume" DESC="Resume the playback after pause ."/>
+        <METHOD NAME="stop"  DESC="Stop the playback."/>
+      </DRIVER>                  
+   </PERIPHERAL>
+
+   <PERIPHERAL TYPE="SD Card" ELEMENT="SD1" >
+     <INTERFACE OBJECT="WaveStore" EXTERNAL="WS" >
+       <PORT NAME="SPI"/>
+       <SETUP NAME="begin">
+         <!-- Chip select active low -->
+         <PIN NAME="cs" TYPE="DIGITAL">
+           <TERMINAL ELEMENT="IO10"/>
+         </PIN> 
+       </SETUP>  
+       <STORAGE NAME="MANIFEST" ELEMENT="SD1"/>
+     </INTERFACE>
+
+     <DRIVER HEADER="WaveStore.h" RAM="640">
+        <REQUIRE HEADER="core.h"/>
+        <REQUIRE HEADER="spi.h"/>
+      
+        <FUNCTION DESC="Return true if a file exists">
+          <PARAMETER NAME="name" TYPE="STRING"  DESC="Path to file"/>
+        </FUNCTION>        
+        <METHOD NAME="changeDir" DESC="Change the current directory">
+           <PARAMETER NAME="name" TYPE="STRING"  DESC="Directory Name"/>
+        </METHOD>  
+        <METHOD NAME="getFirstFile" DESC="Get the name of the first file in the current directory.">
+           <RETURN NAME="fileName" TYPE="STRING" DEFAULT="fileName"  DESC="File name, empty if none."/>
+        </METHOD>  
+        <METHOD NAME="getNextFile" DESC="Get the name of the next file in the current directory.">
+           <RETURN NAME="fileName" TYPE="STRING" DEFAULT="fileName"  DESC="File name, empty if none."/>
+        </METHOD>  
+        <METHOD NAME="getFirstDir" DESC="Get the name of the first sub-directory in the current directory.">
+           <RETURN NAME="dirName" TYPE="STRING" DEFAULT="dirName"  DESC="File name, empty if none."/>
+        </METHOD>  
+        <METHOD NAME="getNextDir" DESC="Get the name of the next sub-directory in the current directory.">
+           <RETURN NAME="dirName" TYPE="STRING" DEFAULT="dirName"  DESC="File name, empty if none."/>
+        </METHOD>  
+                        
+      </DRIVER>
+
+   </PERIPHERAL>
+
+</CLIP>
+
+

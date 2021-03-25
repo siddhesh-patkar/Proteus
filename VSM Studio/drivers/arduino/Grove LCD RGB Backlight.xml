@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove LCD RGB Backlight.pdsclip" FAMILY="ARDUINO" DESC="Grove RGB LCD Module">
+   <PERIPHERAL TYPE="Grove RGB LCD"  ELEMENT="LCD1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GroveRgbLcd">
+       <SETUP NAME="begin">
+         <PROPERTY NAME="NUMCOLS" ELEMENT="LCD1" TYPE="INTEGER"/>
+         <PROPERTY NAME="NUMROWS" ELEMENT="LCD1" TYPE="INTEGER"/>
+       </SETUP>
+     </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="grove_rgb_lcd.h">
+       <REQUIRE HEADER="rgb_lcd.h"/>
+       <REQUIRE HEADER="wire.h"/>
+       <REQUIRE HEADER="core.h"/>
+   
+       <ENUMERATION NAME="BASE">
+         <CONSTANT NAME="DECIMAL" VALUE="10"/>
+         <CONSTANT NAME="BINARY" VALUE="2"/>
+         <CONSTANT NAME="OCTAL"  VALUE="8"/>
+         <CONSTANT NAME="HEX"  VALUE="16"/>
+       </ENUMERATION>
+   
+       <ENUMERATION NAME="COLOR">
+         <CONSTANT NAME="WHITE" VALUE="0"/>
+         <CONSTANT NAME="RED"  VALUE="1"/>
+         <CONSTANT NAME="GREEN"  VALUE="2"/>
+         <CONSTANT NAME="BLUE"  VALUE="3"/>
+       </ENUMERATION>
+   
+       <!-- Setup Function -->
+       
+       <!-- Display control functions -->
+       <METHOD NAME="clear" DESC="Clear the display."/>
+       <METHOD NAME="home" DESC="Set the cursor to the home position."/>
+       <METHOD NAME="display" DESC="Enable the display."/>
+       <METHOD NAME="noDisplay" DESC="Disable the display."/>
+       <METHOD NAME="blink" DESC="Make the cursor blink."/>
+       <METHOD NAME="noBlink" DESC="Stop the cursor blinking."/>
+       <METHOD NAME="cursor" DESC="Show the cursor."/>
+       <METHOD NAME="noCursor" DESC="Hide the cursor."/>
+       <METHOD NAME="scrollDisplayLeft" DESC="Scroll the display to the left."/>
+       <METHOD NAME="scrollDisplayRight" DESC="Scroll the display to the right."/>
+       <METHOD NAME="leftToRight" DESC="Add new characters to the right."/>
+       <METHOD NAME="rightToLeft" DESC="Right justify text from the cursor."/>
+       <METHOD NAME="autoscroll" DESC="Enable automatic scrolling."/>
+       <METHOD NAME="noAutoscroll" DESC="Disable automatic scrolling."/>
+       <METHOD NAME="setCursor" DESC="Set the cursor position.">
+         <PARAMETER NAME="col" TYPE="INTEGER" DEFAULT="0" DESC="Column of new cursor position"/>
+         <PARAMETER NAME="row" TYPE="INTEGER" DEFAULT="0" DESC="Row of new cursor position"/>
+       </METHOD>  
+   
+       <!-- TBD createChar, possibly this can be done with a resource file, as in 'setFont' -->    
+       
+       <!-- Output Functions -->
+       <METHOD NAME="print" DESC="Print a string.">
+         <PARAMETER TYPE="LIST" DESC="List of numbers or strings to print."/>
+       </METHOD>
+       <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+         <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+       </METHOD>
+       <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+         <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+       </METHOD>
+   
+       <!-- Backlight control functions  -->
+       <METHOD NAME="setColor" DESC="Set backlight color.">
+         <PARAMETER NAME="color" TYPE="COLOR" DESC="Color for backlight"/>
+       </METHOD>
+   
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>           

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Pimoroni" FILE="Raspberry Pi/PimoroniPianoHat.pdsclip" DESC="Piano Hat" FAMILY="Raspberry Pi">
+   <PERIPHERAL TYPE="PimoroniPianoHat" ELEMENT="U2" >
+   
+   <INTERFACE OBJECT="PimoroniPianoHat"/>
+   
+    <DRIVER HEADER="PimoroniHats">
+
+       <METHOD NAME="buttonState"  DESC="Gets the state of a single button.">
+         <PARAMETER NAME="Button" TYPE="INTEGER" DEFAULT="0" DESC="Button to read from."/>
+         <RETURN NAME="State" TYPE="BOOLEAN" DEFAULT="state"/>
+       </METHOD>
+       
+       <METHOD NAME="setAutoLED"  DESC="To set LEDs manually you must turn auto LED off.">
+         <PARAMETER NAME="AutoLED" TYPE="BOOLEAN" DEFAULT="FALSE" DESC="State of Auto LED."/>
+       </METHOD>
+       
+       <METHOD NAME="setLED"  DESC="Sets a single LED. Auto LED must be off.">
+         <PARAMETER NAME="LED" TYPE="INTEGER" DEFAULT="0"  DESC="LED to set."/>
+         <PARAMETER NAME="State" TYPE="BOOLEAN" DEFAULT="TRUE"  DESC="Set LED on or Off."/>
+       </METHOD>
+       
+
+    </DRIVER>
+   </PERIPHERAL>
+</CLIP>

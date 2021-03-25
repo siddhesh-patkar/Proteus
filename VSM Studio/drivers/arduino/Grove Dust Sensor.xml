@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Grove" FILE="Grove/Grove Dust Sensor.pdsclip" FAMILY="ARDUINO" DESC="Grove Dust Sensor Module" >
+   <PERIPHERAL TYPE="Grove Dust Sensor"  ELEMENT="DS1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GroveDustSensor">
+         <SETUP NAME="begin">
+            <PIN NAME="PWM" TYPE="DIGITAL">
+               <TERMINAL ELEMENT="IO8"/>
+            </PIN>
+         </SETUP>
+         <LOOP NAME="poll"/>
+     </INTERFACE>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="Grove_Dust.h">
+       <!-- Sensor Function -->
+       <FUNCTION DESC="Return true if the dust level is greater or equal to the trigger value.">
+         <PARAMETER NAME="Trigger" TYPE="INTEGER" DEFAULT="1000" DESC="Trigger value in particles per 0.01cf"/>
+         <RETURN TYPE="BOOLEAN"/>
+       </FUNCTION>
+       <!-- Methods -->
+       <METHOD NAME="setSamplePeriod">
+           <PARAMETER NAME="period" TYPE="INTEGER" DESC="Number seconds per sample" DEFAULT="60"/>
+       </METHOD>
+       <METHOD NAME="setNumSamples">
+           <PARAMETER NAME="samples" TYPE="INTEGER" DESC="Numer of samples to average" DEFAULT="10"/>
+       </METHOD>
+       <METHOD NAME="readDustNow" DESC="Read current dust concentration (particles per 0.01cf)"> 
+         <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="dust"/>
+       </METHOD>
+       <METHOD NAME="readDustAvg" DESC="Read averaged  dust concentration (particles per 0.01cf)"> 
+         <RETURN NAME="reading" TYPE="INTEGER" DEFAULT="dust"/>
+       </METHOD>
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>   

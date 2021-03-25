@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Clock Control Descriptor -->
+<CONTROL>
+   <CONFIG>        
+      <PROPERTY NAME="label" DESC="Default label" TYPE="STRING" DEFAULT="Clock"/>
+      <PROPERTY NAME="labelFont" DESC="Font for label" TYPE="FONT"/>
+      <PROPERTY NAME="segColour" DESC="Colour of the display segments" TYPE="RGB"/>
+      <PROPERTY NAME="showPM" TYPE="BOOLEAN" DESC="Show the AM/PM indicator." />
+      <PROPERTY NAME="useBrowserTime" TYPE="BOOLEAN" DESC="Set the clock from the browser's time" DEFAULT="0" />
+      <LOOP NAME="poll" />
+   </CONFIG>	  
+   
+   <DRIVER HEADER="Controls">
+      <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+      <INTERRUPT DESC="Alarm Event"  HOOK="attachAlarmHandler"/>
+      <INTERRUPT DESC="Setting Event"  HOOK="attachEventHandler"/>
+      <FUNCTION DESC="Alarm has triggered">
+         <PARAMETER NAME="id" DESC="Alarm id" TYPE="INTEGER" DEFAULT="0"/>
+         <RETURN TYPE="BOOLEAN"/>
+      </FUNCTION>
+      <METHOD NAME="setTimeMode" DESC="Enable setting of the time or alarms through the GUI.">
+         <PARAMETER NAME="mode" TYPE="INTEGER" DEFAULT="0" DESC="Time to set. 0=Time, 1..n=Alarms"/>
+      </METHOD>
+      <METHOD NAME="cancelMode" DESC="Cancel the setting mode and show the time."/>
+      <METHOD NAME="setTime" DESC="Set the current time.">
+         <PARAMETER NAME="time" TYPE="TIME" />
+      </METHOD>
+      <METHOD NAME="getTime">
+         <RETURN NAME="time" TYPE="TIME" DEFAULT="t"/>
+      </METHOD>
+      <METHOD NAME="setAlarm" DESC="Set time of specified alarm.">
+         <PARAMETER NAME="id" TYPE="INTEGER" DEFAULT="1"/>
+         <PARAMETER NAME="hours" TYPE="INTEGER" DEFAULT="0"/>
+         <PARAMETER NAME="minutes" TYPE="INTEGER" DEFAULT="0"/>
+      </METHOD>
+      <METHOD NAME="enableAlarm" DESC="Enable specified alarm.">
+         <PARAMETER NAME="id" TYPE="INTEGER" DEFAULT="1"/>
+         <PARAMETER NAME="enable" DESC="Enable the alarm" TYPE="BOOLEAN" DEFAULT="TRUE" />
+      </METHOD>
+      <METHOD NAME="getAlarm">
+         <PARAMETER NAME="id" TYPE="INTEGER" DEFAULT="0"/>
+         <RETURN NAME="time" TYPE="TIME" DEFAULT="t"/>
+      </METHOD>
+   </DRIVER>
+</CONTROL>  

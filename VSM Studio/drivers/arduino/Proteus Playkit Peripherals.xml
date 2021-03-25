@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Proteus Playkit" FILE="Arduino/Proteus Playkit Peripherals.pdsclip" DESC="Proteus Plakit Peripheral Shield" FAMILY="ARDUINO">
+    <PERIPHERAL TYPE="Arduino Button" ELEMENT="B1" OPTIONAL="1" ENABLED="1">
+      <INTERFACE OBJECT="GenericInvertedButton">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO6"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="Generic/Button.xml"/>
+    </PERIPHERAL>
+
+   <PERIPHERAL TYPE="Arduino Button" ELEMENT="B2" OPTIONAL="1" ENABLED="1">
+      <INTERFACE OBJECT="GenericInvertedButton">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO7"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="Generic/Button.xml"/>
+    </PERIPHERAL>
+
+   <PERIPHERAL TYPE="Arduino Button" ELEMENT="B3" OPTIONAL="1" ENABLED="1">
+      <INTERFACE OBJECT="GenericInvertedButton">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO15"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="Generic/Button.xml"/>
+   </PERIPHERAL>
+
+   <PERIPHERAL TYPE="DHT11 Humidity Temperature" ELEMENT="HTS1" OPTIONAL="1" ENABLED="1">
+      <INTERFACE OBJECT="DHTXX">
+         <PIN NAME="data" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO3"/>
+         </PIN>
+         <!-- TYPE allows DHT11=11 (low accuracy sensor) and DHT22=22 (high accuracy sensor) -->
+         <PROPERTY NAME="TYPE" ELEMENT="HTS1" TYPE="INTEGER" VALUE="11"/>
+         <SETUP NAME="begin"/>
+      </INTERFACE>
+      <DRIVER FILE="dhtxx/dhtxx.xml"/>
+   </PERIPHERAL>
+
+   <PERIPHERAL TYPE="RGB LED" ELEMENT="RGB1" OPTIONAL="1" ENABLED="1">
+      <INTERFACE OBJECT="ChainableLED">
+         <PIN NAME="CLK" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO19"/>
+         </PIN>
+         <PIN NAME="DATA" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO18"/>
+         </PIN>
+        <PROPERTY NAME="CHAINLENGTH" ELEMENT="U2" TYPE="INTEGER" VALUE="1"/>
+        <SETUP NAME="init" />    
+      </INTERFACE>
+      <DRIVER FILE="ChainableLED/ChainableLED.xml"/>    
+   </PERIPHERAL>
+   
+   <PERIPHERAL TYPE="DC Motor" ELEMENT="MOTOR1" OPTIONAL="1" ENABLED="1">
+      <INTERFACE OBJECT="GenericMotorBridge">
+         <PIN NAME="DIR" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO4"/>
+         </PIN>                     
+         <PIN NAME="PWM" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO5"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="Generic/MotorBridge.xml"/>    
+   </PERIPHERAL>   
+
+   <PERIPHERAL TYPE="IR Pet Detector" ELEMENT="PD1" OPTIONAL="1" ENABLED="1">
+      <INTERFACE OBJECT="GenericInvertedButton">
+         <PIN NAME="IO" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO2"/>
+         </PIN>
+      </INTERFACE>
+      <DRIVER FILE="Generic/Button.xml"/>   
+   </PERIPHERAL>
+
+   
+   
+</CLIP>

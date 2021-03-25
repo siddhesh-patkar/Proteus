@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+  <DRIVER HEADER="Grove">
+    <ENUMERATION NAME="PINMODE">
+      <CONSTANT NAME="INPUT" VALUE="&quot;INPUT&quot;"/>
+      <CONSTANT NAME="OUTPUT"  VALUE="&quot;OUTPUT&quot;"/>
+    </ENUMERATION>
+
+    <METHOD NAME="pinMode" DESC="Set pin to input or output">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DEFAULT="0" DESC="Grove digital I/O number"/>
+      <PARAMETER NAME="mode" TYPE="PINMODE" DEFAULT="INPOUT" DESC="Input or output mode"/>
+    </METHOD>
+    <METHOD NAME="digitalWrite" DESC="Set state of digital output pin">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DEFAULT="0" DESC="Grove digital I/O number"/>
+      <PARAMETER NAME="state" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="Pin state"/>
+    </METHOD>
+    <METHOD NAME="digitalRead" DESC="Read state of digital pin">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DEFAULT="0" DESC="Grove digital I/O number"/>
+      <RETURN NAME="state" TYPE="BOOLEAN" DEFAULT="state" DESC="Pin state"/>
+    </METHOD>
+    <METHOD NAME="analogWrite" DESC="Set PWM output on digital pin">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DEFAULT="0" DESC="Grove digital I/O number"/>
+      <PARAMETER NAME="value" TYPE="BOOLEAN" DEFAULT="127" DESC="PWM value"/>
+    </METHOD>
+    <METHOD NAME="analogRead" DESC="Read value of analog pin">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DEFAULT="0" DESC="Grove analog I/O number"/>
+      <RETURN NAME="value" TYPE="INTEGER" DEFAULT="value" DESC="Pin value"/>
+    </METHOD>
+  </DRIVER>

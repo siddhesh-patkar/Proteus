@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Firmware Driver -->
+<DRIVER HEADER="datalogger.h">
+   <METHOD NAME="setRedLed"  DESC="Drive on/off the on-board Red Led.">
+      <PARAMETER NAME="s" TYPE="BOOLEAN" DEFAULT="LOW" DESC="State of Red Led HIGH/LOW"/>
+   </METHOD>
+   <METHOD NAME="setGreenLed"  DESC="Drive on/off the on-board Green Led.">
+      <PARAMETER NAME="s" TYPE="BOOLEAN" DEFAULT="LOW" DESC="State of Green Led HIGH/LOW"/>
+   </METHOD>
+   <METHOD NAME="toggleRedLed"  DESC="Toggle on/off the on-board Red Led."/>
+   <METHOD NAME="toggleGreenLed"  DESC="Drive on/off the on-board Green Led."/>
+   <METHOD NAME="writeDigital"  DESC="Write digital state to selected digital output.">
+      <PARAMETER NAME="DIG" TYPE="INTEGER" DEFAULT="0"   DESC="Selected digital pin 0-3"/>
+      <PARAMETER NAME="s" TYPE="BOOLEAN" DEFAULT="LOW" DESC="State of digital output HIGH/LOW"/>
+   </METHOD>
+   <METHOD NAME="readDigital"  DESC="Read digital state from selected digital input.">
+      <PARAMETER NAME="DIG" TYPE="INTEGER" DEFAULT="0"   DESC="Selected digital pin 0-3"/>
+      <RETURN NAME="s" TYPE="BOOLEAN" DESC="State of digital pin HIGH/LOW"/>
+   </METHOD>
+   <METHOD NAME="readRaw"  DESC="Read from selected analog input in ADC raw units.">
+      <PARAMETER NAME="AN" TYPE="INTEGER" DEFAULT="0"   DESC="Selected analog pin 0-3"/>
+      <RETURN NAME="value" TYPE="INTEGER" DESC="Analog input value (12-bit resolution)"/>
+   </METHOD>
+   <METHOD NAME="readVoltage"  DESC="Read voltage from selected analog input.">
+      <PARAMETER NAME="AN"  TYPE="INTEGER" DEFAULT="0"   DESC="Selected analog pin 0-3"/>
+      <PARAMETER NAME="NAV" TYPE="INTEGER" DEFAULT="1"   DESC="Number of Average 1-255"/>
+      <PARAMETER NAME="REF" TYPE="FLOAT"   DEFAULT="5.0" DESC="ADC Reference (in Volt)"/>
+      <RETURN NAME="value" TYPE="FLOAT" DESC="Analog voltage (in Volt)"/>
+   </METHOD>
+</DRIVER>

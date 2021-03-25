@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:vfp="http://www.labcenter.com/namespaces/vfp"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 400 200"
+   version="1.1"
+   id="svg447"
+   sodipodi:docname="MetallicDigitalClock.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata451">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1417"
+     id="namedview449"
+     showgrid="false"
+     inkscape:zoom="2.98"
+     inkscape:cx="83.795332"
+     inkscape:cy="72.594836"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_2" />
+  <defs
+     id="defs309">
+    <linearGradient
+       id="MetDigitalClock_1"
+       y1="100"
+       x2="400"
+       y2="100"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#bfc1c6"
+         id="stop4" />
+      <stop
+         offset="0.02"
+         stop-color="#b8babe"
+         id="stop6" />
+      <stop
+         offset="0.05"
+         stop-color="#a3a6a9"
+         id="stop8" />
+      <stop
+         offset="0.08"
+         stop-color="#909395"
+         id="stop10" />
+      <stop
+         offset="0.08"
+         stop-color="#a9abad"
+         id="stop12" />
+      <stop
+         offset="0.09"
+         stop-color="#c4c5c6"
+         id="stop14" />
+      <stop
+         offset="0.1"
+         stop-color="#dadbdb"
+         id="stop16" />
+      <stop
+         offset="0.1"
+         stop-color="#ebebeb"
+         id="stop18" />
+      <stop
+         offset="0.11"
+         stop-color="#f6f7f7"
+         id="stop20" />
+      <stop
+         offset="0.13"
+         stop-color="#fdfdfd"
+         id="stop22" />
+      <stop
+         offset="0.16"
+         stop-color="#fff"
+         id="stop24" />
+      <stop
+         offset="0.18"
+         stop-color="#f2f2f3"
+         id="stop26" />
+      <stop
+         offset="0.2"
+         stop-color="#d0d1d4"
+         id="stop28" />
+      <stop
+         offset="0.23"
+         stop-color="#9a9ba2"
+         id="stop30" />
+      <stop
+         offset="0.25"
+         stop-color="#6a6c75"
+         id="stop32" />
+      <stop
+         offset="0.25"
+         stop-color="#6b6d76"
+         id="stop34" />
+      <stop
+         offset="0.26"
+         stop-color="#7b7e85"
+         id="stop36" />
+      <stop
+         offset="0.27"
+         stop-color="#87898f"
+         id="stop38" />
+      <stop
+         offset="0.29"
+         stop-color="#8d9095"
+         id="stop40" />
+      <stop
+         offset="0.35"
+         stop-color="#8f9297"
+         id="stop42" />
+      <stop
+         offset="0.36"
+         stop-color="#8b8e93"
+         id="stop44" />
+      <stop
+         offset="0.38"
+         stop-color="#808488"
+         id="stop46" />
+      <stop
+         offset="0.4"
+         stop-color="#6e7276"
+         id="stop48" />
+      <stop
+         offset="0.41"
+         stop-color="#54585c"
+         id="stop50" />
+      <stop
+         offset="0.42"
+         stop-color="#4d5155"
+         id="stop52" />
+      <stop
+         offset="0.44"
+         stop-color="#696c70"
+         id="stop54" />
+      <stop
+         offset="0.46"
+         stop-color="#848589"
+         id="stop56" />
+      <stop
+         offset="0.49"
+         stop-color="#9a9a9e"
+         id="stop58" />
+      <stop
+         offset="0.52"
+         stop-color="#abaaae"
+         id="stop60" />
+      <stop
+         offset="0.55"
+         stop-color="#b6b6ba"
+         id="stop62" />
+      <stop
+         offset="0.61"
+         stop-color="#bdbcc0"
+         id="stop64" />
+      <stop
+         offset="0.75"
+         stop-color="#bfbec2"
+         id="stop66" />
+      <stop
+         offset="0.8"
+         stop-color="#bdbcc0"
+         id="stop68" />
+      <stop
+         offset="0.82"
+         stop-color="#b6b6b9"
+         id="stop70" />
+      <stop
+         offset="0.83"
+         stop-color="#abaaae"
+         id="stop72" />
+      <stop
+         offset="0.85"
+         stop-color="#9a9a9d"
+         id="stop74" />
+      <stop
+         offset="0.85"
+         stop-color="#858487"
+         id="stop76" />
+      <stop
+         offset="0.86"
+         stop-color="#6a6a6b"
+         id="stop78" />
+      <stop
+         offset="0.87"
+         stop-color="#4a4b4b"
+         id="stop80" />
+      <stop
+         offset="0.88"
+         stop-color="#262727"
+         id="stop82" />
+      <stop
+         offset="0.88"
+         stop-color="#1a1b1a"
+         id="stop84" />
+      <stop
+         offset="0.93"
+         stop-color="#1a1b1a"
+         id="stop86" />
+      <stop
+         offset="0.93"
+         stop-color="#3c3d3d"
+         id="stop88" />
+      <stop
+         offset="0.94"
+         stop-color="#5d5f60"
+         id="stop90" />
+      <stop
+         offset="0.95"
+         stop-color="#797c7d"
+         id="stop92" />
+      <stop
+         offset="0.96"
+         stop-color="#8f9293"
+         id="stop94" />
+      <stop
+         offset="0.97"
+         stop-color="#9ea1a3"
+         id="stop96" />
+      <stop
+         offset="0.98"
+         stop-color="#a7aaac"
+         id="stop98" />
+      <stop
+         offset="1"
+         stop-color="#aaadaf"
+         id="stop100" />
+    </linearGradient>
+    <linearGradient
+       id="MetDigitalClock_2"
+       x1="6"
+       y1="100"
+       x2="394"
+       y2="100"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#cbd1d6"
+         id="stop103" />
+      <stop
+         offset="0.2"
+         stop-color="#bbc1c6"
+         id="stop105" />
+      <stop
+         offset="0.43"
+         stop-color="#abb2b6"
+         id="stop107" />
+      <stop
+         offset="0.52"
+         stop-color="#b8bfc3"
+         id="stop109" />
+      <stop
+         offset="0.84"
+         stop-color="#e4eaee"
+         id="stop111" />
+      <stop
+         offset="1"
+         stop-color="#f5fbfe"
+         id="stop113" />
+    </linearGradient>
+    <linearGradient
+       id="MetDigitalClock_3"
+       x1="11"
+       y1="100"
+       x2="389"
+       y2="100"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#aaadaf"
+         id="stop116" />
+      <stop
+         offset="0.02"
+         stop-color="#a7aaac"
+         id="stop118" />
+      <stop
+         offset="0.03"
+         stop-color="#9ea1a3"
+         id="stop120" />
+      <stop
+         offset="0.04"
+         stop-color="#8f9293"
+         id="stop122" />
+      <stop
+         offset="0.05"
+         stop-color="#797c7d"
+         id="stop124" />
+      <stop
+         offset="0.06"
+         stop-color="#5d5f60"
+         id="stop126" />
+      <stop
+         offset="0.07"
+         stop-color="#3c3d3d"
+         id="stop128" />
+      <stop
+         offset="0.07"
+         stop-color="#1a1b1a"
+         id="stop130" />
+      <stop
+         offset="0.12"
+         stop-color="#1a1b1a"
+         id="stop132" />
+      <stop
+         offset="0.12"
+         stop-color="#262727"
+         id="stop134" />
+      <stop
+         offset="0.13"
+         stop-color="#4a4b4b"
+         id="stop136" />
+      <stop
+         offset="0.14"
+         stop-color="#6a6a6b"
+         id="stop138" />
+      <stop
+         offset="0.15"
+         stop-color="#858487"
+         id="stop140" />
+      <stop
+         offset="0.15"
+         stop-color="#9a9a9d"
+         id="stop142" />
+      <stop
+         offset="0.17"
+         stop-color="#abaaae"
+         id="stop144" />
+      <stop
+         offset="0.18"
+         stop-color="#b6b6b9"
+         id="stop146" />
+      <stop
+         offset="0.2"
+         stop-color="#bdbcc0"
+         id="stop148" />
+      <stop
+         offset="0.25"
+         stop-color="#bfbec2"
+         id="stop150" />
+      <stop
+         offset="0.39"
+         stop-color="#bdbcc0"
+         id="stop152" />
+      <stop
+         offset="0.45"
+         stop-color="#b6b6ba"
+         id="stop154" />
+      <stop
+         offset="0.48"
+         stop-color="#abaaae"
+         id="stop156" />
+      <stop
+         offset="0.51"
+         stop-color="#9a9a9e"
+         id="stop158" />
+      <stop
+         offset="0.54"
+         stop-color="#848589"
+         id="stop160" />
+      <stop
+         offset="0.56"
+         stop-color="#696c70"
+         id="stop162" />
+      <stop
+         offset="0.58"
+         stop-color="#4d5155"
+         id="stop164" />
+      <stop
+         offset="0.59"
+         stop-color="#54585c"
+         id="stop166" />
+      <stop
+         offset="0.6"
+         stop-color="#6e7276"
+         id="stop168" />
+      <stop
+         offset="0.62"
+         stop-color="#808488"
+         id="stop170" />
+      <stop
+         offset="0.64"
+         stop-color="#8b8e93"
+         id="stop172" />
+      <stop
+         offset="0.65"
+         stop-color="#8f9297"
+         id="stop174" />
+      <stop
+         offset="0.71"
+         stop-color="#8d9095"
+         id="stop176" />
+      <stop
+         offset="0.73"
+         stop-color="#87898f"
+         id="stop178" />
+      <stop
+         offset="0.74"
+         stop-color="#7b7e85"
+         id="stop180" />
+      <stop
+         offset="0.75"
+         stop-color="#6b6d76"
+         id="stop182" />
+      <stop
+         offset="0.75"
+         stop-color="#6a6c75"
+         id="stop184" />
+      <stop
+         offset="0.77"
+         stop-color="#9a9ba2"
+         id="stop186" />
+      <stop
+         offset="0.8"
+         stop-color="#d0d1d4"
+         id="stop188" />
+      <stop
+         offset="0.82"
+         stop-color="#f2f2f3"
+         id="stop190" />
+      <stop
+         offset="0.84"
+         stop-color="#fff"
+         id="stop192" />
+      <stop
+         offset="0.87"
+         stop-color="#fdfdfd"
+         id="stop194" />
+      <stop
+         offset="0.89"
+         stop-color="#f6f7f7"
+         id="stop196" />
+      <stop
+         offset="0.9"
+         stop-color="#ebebeb"
+         id="stop198" />
+      <stop
+         offset="0.9"
+         stop-color="#dadbdb"
+         id="stop200" />
+      <stop
+         offset="0.91"
+         stop-color="#c4c5c6"
+         id="stop202" />
+      <stop
+         offset="0.92"
+         stop-color="#a9abad"
+         id="stop204" />
+      <stop
+         offset="0.92"
+         stop-color="#909395"
+         id="stop206" />
+      <stop
+         offset="0.95"
+         stop-color="#a3a6a9"
+         id="stop208" />
+      <stop
+         offset="0.98"
+         stop-color="#b8babe"
+         id="stop210" />
+      <stop
+         offset="1"
+         stop-color="#bfc1c6"
+         id="stop212" />
+    </linearGradient>
+    <linearGradient
+       id="MetDigitalClock_3-2"
+       x1="-27.42"
+       y1="-10.04"
+       x2="364.58"
+       y2="179.63"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.16"
+         stop-color="#161412"
+         stop-opacity="0"
+         id="stop215" />
+      <stop
+         offset="0.49"
+         stop-color="#161412"
+         stop-opacity="0.2"
+         id="stop217" />
+      <stop
+         offset="1"
+         stop-color="#161412"
+         stop-opacity="0.4"
+         id="stop219" />
+    </linearGradient>
+    <linearGradient
+       id="MetDigitalClock_3-3"
+       x1="22.5"
+       y1="100"
+       x2="377.5"
+       y2="100"
+       xlink:href="#MetDigitalClock_3" />
+    <linearGradient
+       id="MetDigitalClock_3-4"
+       x1="326.09"
+       y1="226.09"
+       x2="73.91"
+       y2="-26.09"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-opacity="0.2"
+         id="stop223" />
+      <stop
+         offset="1"
+         id="stop225" />
+    </linearGradient>
+    <linearGradient
+       id="MetDigitalClock_4"
+       x1="26.67"
+       y1="80.57"
+       x2="373.33"
+       y2="80.57"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e5e1df"
+         id="stop228" />
+      <stop
+         offset="0"
+         stop-color="#d6d7d7"
+         id="stop230" />
+      <stop
+         offset="0"
+         stop-color="#d1d3d4"
+         id="stop232" />
+      <stop
+         offset="0.07"
+         stop-color="#edeeee"
+         id="stop234" />
+      <stop
+         offset="0.11"
+         stop-color="#fff"
+         id="stop236" />
+      <stop
+         offset="0.13"
+         stop-color="#f5f5f6"
+         id="stop238" />
+      <stop
+         offset="0.17"
+         stop-color="#dbdbdc"
+         id="stop240" />
+      <stop
+         offset="0.22"
+         stop-color="#b1b1b4"
+         id="stop242" />
+      <stop
+         offset="0.25"
+         stop-color="#98999c"
+         id="stop244" />
+      <stop
+         offset="0.27"
+         stop-color="#9a9c9e"
+         id="stop246" />
+      <stop
+         offset="0.29"
+         stop-color="#a3a4a7"
+         id="stop248" />
+      <stop
+         offset="0.3"
+         stop-color="#b1b2b4"
+         id="stop250" />
+      <stop
+         offset="0.31"
+         stop-color="#c5c6c8"
+         id="stop252" />
+      <stop
+         offset="0.31"
+         stop-color="#d1d3d4"
+         id="stop254" />
+      <stop
+         offset="0.36"
+         stop-color="#c7c9ca"
+         id="stop256" />
+      <stop
+         offset="0.45"
+         stop-color="#adafb0"
+         id="stop258" />
+      <stop
+         offset="0.55"
+         stop-color="#838586"
+         id="stop260" />
+      <stop
+         offset="0.65"
+         stop-color="#595a5b"
+         id="stop262" />
+      <stop
+         offset="0.68"
+         stop-color="#626365"
+         id="stop264" />
+      <stop
+         offset="0.73"
+         stop-color="#7a7c7f"
+         id="stop266" />
+      <stop
+         offset="0.74"
+         stop-color="#808285"
+         id="stop268" />
+      <stop
+         offset="0.74"
+         stop-color="#797a7d"
+         id="stop270" />
+      <stop
+         offset="0.75"
+         stop-color="#5a595c"
+         id="stop272" />
+      <stop
+         offset="0.76"
+         stop-color="#414041"
+         id="stop274" />
+      <stop
+         offset="0.76"
+         stop-color="#302d2f"
+         id="stop276" />
+      <stop
+         offset="0.77"
+         stop-color="#252324"
+         id="stop278" />
+      <stop
+         offset="0.78"
+         stop-color="#221f20"
+         id="stop280" />
+      <stop
+         offset="0.79"
+         stop-color="#4a4848"
+         id="stop282" />
+      <stop
+         offset="0.8"
+         stop-color="#7a7878"
+         id="stop284" />
+      <stop
+         offset="0.81"
+         stop-color="#a3a1a2"
+         id="stop286" />
+      <stop
+         offset="0.83"
+         stop-color="#c4c3c3"
+         id="stop288" />
+      <stop
+         offset="0.84"
+         stop-color="#dedede"
+         id="stop290" />
+      <stop
+         offset="0.85"
+         stop-color="#f0f0f0"
+         id="stop292" />
+      <stop
+         offset="0.87"
+         stop-color="#fbfbfb"
+         id="stop294" />
+      <stop
+         offset="0.88"
+         stop-color="#fff"
+         id="stop296" />
+      <stop
+         offset="0.9"
+         stop-color="#eaebec"
+         id="stop298" />
+      <stop
+         offset="0.92"
+         stop-color="#d0d2d3"
+         id="stop300" />
+      <stop
+         offset="0.95"
+         stop-color="#bebfc2"
+         id="stop302" />
+      <stop
+         offset="0.97"
+         stop-color="#b3b5b7"
+         id="stop304" />
+      <stop
+         offset="1"
+         stop-color="#afb1b4"
+         id="stop306" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#MetDigitalClock_3"
+       id="MetDigitalClock_4123"
+       gradientUnits="userSpaceOnUse"
+       x1="11"
+       y1="100"
+       x2="389"
+       y2="100" />
+  </defs>
+  <vfp:catalogue
+     DESC="Digital Clock"
+     CATEGORY="Clocks and Timers"
+     PREFIX="Clock" />
+  <g
+     vfp:class="Clock"
+     id="Layer_2"
+     data-name="Layer 2">
+    <rect
+       style="fill:url(#MetDigitalClock_1)"
+       y="0"
+       x="0"
+       id="rect313"
+       ry="18.5"
+       rx="18.5"
+       height="200"
+       width="400" />
+    <rect
+       style="fill:url(#MetDigitalClock_2)"
+       id="rect315"
+       ry="17.940001"
+       rx="17.940001"
+       height="194"
+       width="388"
+       y="3"
+       x="6" />
+    <rect
+       style="fill:url(#MetDigitalClock_4123)"
+       id="rect317"
+       ry="17.48"
+       rx="17.48"
+       height="189"
+       width="378"
+       y="5.5"
+       x="11" />
+    <rect
+       style="display:inline;fill:#b2b2b2"
+       id="rect321"
+       ry="15.98"
+       rx="15.98"
+       height="168.12"
+       width="355"
+       y="15.94"
+       x="22.5" />
+    <rect
+       style="display:inline;opacity:0.70999995;fill:url(#MetDigitalClock_3-3)"
+       id="rect323"
+       ry="15.98"
+       rx="15.98"
+       height="168.12"
+       width="355"
+       y="15.94"
+       x="22.5" />
+    <rect
+       style="display:inline;fill:#1d1d1b;stroke:url(#MetDigitalClock_4);stroke-width:4px;stroke-miterlimit:10"
+       id="rect327"
+       height="93.529999"
+       width="342.67001"
+       y="33.810001"
+       x="28.67" />
+    <g
+       id="g4480"
+       class="segments"
+       style="fill:#ff0000">
+      <g
+         id="g4403"
+         class="digits">
+        <g
+           id="g4198"
+           class="digit">
+          <polygon
+             id="polygon329"
+             points="276.94,46.39 279.62,49.17 279.76,49.17 305.25,49.17 305.4,49.17 308.08,46.39 305.4,43.6 305.25,43.6 279.76,43.6 279.62,43.6 " />
+          <polygon
+             id="polygon331"
+             points="312.84,75.91 312.84,51.84 312.84,51.71 309.89,49.17 306.94,51.71 306.94,51.84 306.94,75.91 306.94,76.05 309.89,78.58 312.84,76.05 " />
+          <polygon
+             id="polygon333"
+             points="312.84,87.43 309.89,84.9 306.94,87.43 306.94,87.57 306.94,111.64 306.94,111.77 309.89,114.31 312.84,111.77 312.84,111.64 312.84,87.57 " />
+          <polygon
+             id="polygon335"
+             points="305.4,114.95 305.25,114.95 279.76,114.95 279.62,114.95 276.94,117.74 279.62,120.52 279.76,120.52 305.25,120.52 305.4,120.52 308.08,117.74 " />
+          <polygon
+             id="polygon337"
+             points="272.18,112.29 272.18,112.42 275.13,114.95 278.08,112.42 278.08,112.29 278.08,88.22 278.08,88.08 275.13,85.55 272.18,88.08 272.18,88.22 " />
+          <polygon
+             id="polygon339"
+             points="275.13,79.23 278.08,76.7 278.08,76.56 278.08,52.49 278.08,52.36 275.13,49.82 272.18,52.36 272.18,52.49 272.18,76.56 272.18,76.7 " />
+          <polygon
+             id="polygon341"
+             points="279.76,84.85 305.25,84.85 305.4,84.85 308.08,82.06 305.4,79.28 305.25,79.28 279.76,79.28 279.62,79.28 276.94,82.06 279.62,84.85 " />
+        </g>
+        <g
+           id="g4221"
+           class="digit">
+          <polygon
+             id="polygon343"
+             points="356.19,46.39 353.51,43.6 353.37,43.6 327.88,43.6 327.73,43.6 325.05,46.39 327.73,49.17 327.88,49.17 353.37,49.17 353.51,49.17 " />
+          <polygon
+             id="polygon345"
+             points="355.05,51.84 355.05,75.91 355.05,76.05 358,78.58 360.95,76.05 360.95,75.91 360.95,51.84 360.95,51.71 358,49.17 355.05,51.71 " />
+          <polygon
+             id="polygon347"
+             points="358,84.9 355.05,87.43 355.05,87.57 355.05,111.64 355.05,111.77 358,114.31 360.95,111.77 360.95,111.64 360.95,87.57 360.95,87.43 " />
+          <polygon
+             id="polygon349"
+             points="353.37,120.52 353.51,120.52 356.19,117.74 353.51,114.95 353.37,114.95 327.88,114.95 327.73,114.95 325.05,117.74 327.73,120.52 327.88,120.52 " />
+          <polygon
+             id="polygon351"
+             points="326.19,112.42 326.19,112.29 326.19,88.22 326.19,88.08 323.24,85.55 320.29,88.08 320.29,88.22 320.29,112.29 320.29,112.42 323.24,114.95 " />
+          <polygon
+             id="polygon353"
+             points="320.29,76.7 323.24,79.23 326.19,76.7 326.19,76.56 326.19,52.49 326.19,52.36 323.24,49.82 320.29,52.36 320.29,52.49 320.29,76.56 " />
+          <polygon
+             id="polygon355"
+             points="356.19,82.06 353.51,79.28 353.37,79.28 327.88,79.28 327.73,79.28 325.05,82.06 327.73,84.85 327.88,84.85 353.37,84.85 353.51,84.85 " />
+        </g>
+        <g
+           id="g4246"
+           class="digit">
+          <polygon
+             id="polygon359"
+             points="163.64,43.6 160.96,46.39 163.64,49.17 163.78,49.17 189.28,49.17 189.42,49.17 192.1,46.39 189.42,43.6 189.28,43.6 163.78,43.6 " />
+          <polygon
+             id="polygon361"
+             points="196.86,76.05 196.86,75.91 196.86,51.84 196.86,51.71 193.91,49.17 190.96,51.71 190.96,51.84 190.96,75.91 190.96,76.05 193.91,78.58 " />
+          <polygon
+             id="polygon363"
+             points="196.86,87.57 196.86,87.43 193.91,84.9 190.96,87.43 190.96,87.57 190.96,111.64 190.96,111.77 193.91,114.31 196.86,111.77 196.86,111.64 " />
+          <polygon
+             id="polygon365"
+             points="192.1,117.74 189.42,114.95 189.28,114.95 163.78,114.95 163.64,114.95 160.96,117.74 163.64,120.52 163.78,120.52 189.28,120.52 189.42,120.52 " />
+          <polygon
+             id="polygon367"
+             points="156.2,88.22 156.2,112.29 156.2,112.42 159.15,114.95 162.1,112.42 162.1,112.29 162.1,88.22 162.1,88.08 159.15,85.55 156.2,88.08 " />
+          <polygon
+             id="polygon369"
+             points="156.2,76.7 159.15,79.23 162.1,76.7 162.1,76.56 162.1,52.49 162.1,52.36 159.15,49.82 156.2,52.36 156.2,52.49 156.2,76.56 " />
+          <polygon
+             id="polygon371"
+             points="163.64,84.85 163.78,84.85 189.28,84.85 189.42,84.85 192.1,82.06 189.42,79.28 189.28,79.28 163.78,79.28 163.64,79.28 160.96,82.06 " />
+        </g>
+        <g
+           id="g4255"
+           class="digit">
+          <polygon
+             id="polygon373"
+             points="211.75,43.6 209.07,46.39 211.75,49.17 211.9,49.17 237.39,49.17 237.53,49.17 240.21,46.39 237.53,43.6 237.39,43.6 211.9,43.6 " />
+          <polygon
+             id="polygon375"
+             points="244.97,76.05 244.97,75.91 244.97,51.84 244.97,51.71 242.02,49.17 239.07,51.71 239.07,51.84 239.07,75.91 239.07,76.05 242.02,78.58 " />
+          <polygon
+             id="polygon377"
+             points="244.97,87.57 244.97,87.43 242.02,84.9 239.07,87.43 239.07,87.57 239.07,111.64 239.07,111.77 242.02,114.31 244.97,111.77 244.97,111.64 " />
+          <polygon
+             id="polygon379"
+             points="240.21,117.74 237.53,114.95 237.39,114.95 211.9,114.95 211.75,114.95 209.07,117.74 211.75,120.52 211.9,120.52 237.39,120.52 237.53,120.52 " />
+          <polygon
+             id="polygon381"
+             points="204.31,88.22 204.31,112.29 204.31,112.42 207.26,114.95 210.21,112.42 210.21,112.29 210.21,88.22 210.21,88.08 207.26,85.55 204.31,88.08 " />
+          <polygon
+             id="polygon383"
+             points="204.31,76.7 207.26,79.23 210.21,76.7 210.21,76.56 210.21,52.49 210.21,52.36 207.26,49.82 204.31,52.36 204.31,52.49 204.31,76.56 " />
+          <polygon
+             id="polygon385"
+             points="211.75,84.85 211.9,84.85 237.39,84.85 237.53,84.85 240.21,82.06 237.53,79.28 237.39,79.28 211.9,79.28 211.75,79.28 209.07,82.06 " />
+        </g>
+        <g
+           id="g4280"
+           class="digit">
+          <polygon
+             id="polygon389"
+             points="73.3,49.17 73.44,49.17 76.12,46.39 73.44,43.6 73.3,43.6 47.8,43.6 47.66,43.6 44.98,46.39 47.66,49.17 47.8,49.17 " />
+          <polygon
+             id="polygon391"
+             points="77.93,49.17 74.98,51.71 74.98,51.84 74.98,75.91 74.98,76.05 77.93,78.58 80.88,76.05 80.88,75.91 80.88,51.84 80.88,51.71 " />
+          <polygon
+             id="polygon393"
+             points="74.98,87.57 74.98,111.64 74.98,111.77 77.93,114.31 80.88,111.77 80.88,111.64 80.88,87.57 80.88,87.43 77.93,84.9 74.98,87.43 " />
+          <polygon
+             id="polygon395"
+             points="47.66,114.95 44.98,117.74 47.66,120.52 47.8,120.52 73.3,120.52 73.44,120.52 76.12,117.74 73.44,114.95 73.3,114.95 47.8,114.95 " />
+          <polygon
+             id="polygon397"
+             points="46.12,112.42 46.12,112.29 46.12,88.22 46.12,88.08 43.17,85.55 40.22,88.08 40.22,88.22 40.22,112.29 40.22,112.42 43.17,114.95 " />
+          <polygon
+             id="polygon399"
+             points="46.12,52.49 46.12,52.36 43.17,49.82 40.22,52.36 40.22,52.49 40.22,76.56 40.22,76.7 43.17,79.23 46.12,76.7 46.12,76.56 " />
+          <polygon
+             id="polygon401"
+             points="76.12,82.06 73.44,79.28 73.3,79.28 47.8,79.28 47.66,79.28 44.98,82.06 47.66,84.85 47.8,84.85 73.3,84.85 73.44,84.85 " />
+        </g>
+        <g
+           id="g4289"
+           class="digit">
+          <polygon
+             id="polygon403"
+             points="95.92,43.6 95.78,43.6 93.09,46.39 95.78,49.17 95.92,49.17 121.41,49.17 121.55,49.17 124.23,46.39 121.55,43.6 121.41,43.6 " />
+          <polygon
+             id="polygon405"
+             points="126.04,78.58 128.99,76.05 128.99,75.91 128.99,51.84 128.99,51.71 126.04,49.17 123.09,51.71 123.09,51.84 123.09,75.91 123.09,76.05 " />
+          <polygon
+             id="polygon407"
+             points="128.99,111.64 128.99,87.57 128.99,87.43 126.04,84.9 123.09,87.43 123.09,87.57 123.09,111.64 123.09,111.77 126.04,114.31 128.99,111.77 " />
+          <polygon
+             id="polygon409"
+             points="121.55,120.52 124.23,117.74 121.55,114.95 121.41,114.95 95.92,114.95 95.78,114.95 93.09,117.74 95.78,120.52 95.92,120.52 121.41,120.52 " />
+          <polygon
+             id="polygon411"
+             points="88.33,88.08 88.33,88.22 88.33,112.29 88.33,112.42 91.28,114.95 94.23,112.42 94.23,112.29 94.23,88.22 94.23,88.08 91.28,85.55 " />
+          <polygon
+             id="polygon413"
+             points="88.33,76.56 88.33,76.7 91.28,79.23 94.23,76.7 94.23,76.56 94.23,52.49 94.23,52.36 91.28,49.82 88.33,52.36 88.33,52.49 " />
+          <polygon
+             id="polygon415"
+             points="93.09,82.06 95.78,84.85 95.92,84.85 121.41,84.85 121.55,84.85 124.23,82.06 121.55,79.28 121.41,79.28 95.92,79.28 95.78,79.28 " />
+        </g>
+      </g>
+      <g
+         id="g4409"
+         class="colons">
+        <circle
+           id="circle419"
+           r="3.3599999"
+           cy="69.660004"
+           cx="258.57999" />
+        <circle
+           id="circle421"
+           r="3.3599999"
+           cy="94.470001"
+           cx="258.57999" />
+        <circle
+           id="circle423"
+           r="3.3599999"
+           cy="69.660004"
+           cx="142.60001" />
+        <circle
+           id="circle425"
+           r="3.3599999"
+           cy="94.470001"
+           cx="142.60001" />
+      </g>
+      <g
+         id="g4417"
+         class="alarm">
+        <path
+           d="M 69.869141,136.40039 A 14.62,14.62 0 0 0 55.259766,151 h 2.320312 a 12.31,12.31 0 0 1 12.289063,-12.28906 z m 10.230468,0 v 2.31055 A 12.31,12.31 0 0 1 92.390625,151 h 2.308594 a 14.62,14.62 0 0 0 -14.59961,-14.59961 z m -10.429687,6.19922 a 7.9,7.9 0 0 0 -7.890625,7.89062 h 2.310547 a 5.6,5.6 0 0 1 5.580078,-5.58007 z m 10.61914,0 v 2.31055 a 5.59,5.59 0 0 1 5.580079,5.58007 h 2.320312 a 7.91,7.91 0 0 0 -7.900391,-7.89062 z m -5.978515,1.00977 a 3.24,3.24 0 0 0 -0.330078,0.13085 l -0.150391,0.0801 -0.189453,0.12891 -0.179687,0.15039 a 2.44,2.44 0 0 0 -0.351563,0.42969 2.19,2.19 0 0 0 -0.308594,0.91015 1.1,1.1 0 0 0 0,0.17969 1,1 0 0 0 0,0.18164 2.26,2.26 0 0 0 0.179688,0.68945 c -5.61,2.26 -4.789688,4.66 -6.429688,11 l -1,2.82032 c -1.6,3.47 -5,5.76945 -5,8.68945 0,3.75 -0.49164,3.65039 1.81836,3.65039 h 25.121093 c 2.31,-0.04 1.800313,0.0596 1.820313,-3.65039 0,-2.92 -3.42,-5.21945 -5,-8.68945 l -1,-2.82032 c -1.64,-6.31 -0.819922,-8.71 -6.419922,-11 a 2.25,2.25 0 0 0 0.169922,-0.68945 v -0.18164 a 1.13,1.13 0 0 0 0,-0.17969 A 2.06,2.06 0 0 0 76.75,144.5293 2.06,2.06 0 0 0 76.400391,144.09961 l -0.179688,-0.15039 -0.201172,-0.12891 -0.138672,-0.0801 -0.341797,-0.13085 h -0.09961 -0.07031 -0.158203 -0.28125 -0.279297 -0.160157 -0.07031 z m -5.410156,30.60156 c 0,2.28 1.389609,4.13867 3.099609,4.13867 h 5.800781 c 1.7,0 3.09961,-1.85867 3.09961,-4.13867 z"
+           id="path433"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <rect
+       style="opacity:0;stroke:none"
+       id="rect4482"
+       width="244.63087"
+       height="41.275169"
+       x="127.85235"
+       y="140.60402"
+       class="inputArea" />
+    <text
+       style="font-size:43.72000122px;font-family:MyriadPro-Regular, 'Myriad Pro';fill:#1d1d1b"
+       id="text431"
+       x="134.69"
+       y="175.02"
+       class="label">Clock</text>
+  </g>
+</svg>

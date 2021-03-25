@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Motor Control" FILE="Arduino/Arduino Motor Shield V2 motor party.pdsclip" DESC="Motor Shield V2 with Servos, DC and Stepper motors" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="PWM Servo Controller" ELEMENT="PWMC1">
+      <INTERFACE OBJECT="PwmServoController">
+         <!-- JUMPERS DETERMINE I2C ADDRESS -->
+         <PROPERTY NAME="STATE" ELEMENT="JP1" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP2" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP3" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP4" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP5" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP6" TYPE="INTEGER"/>
+         <SETUP NAME="begin"/>
+      </INTERFACE>
+      <DRIVER FILE="PwmServoDriver/PwmServoDriver.xml"/>
+   </PERIPHERAL>
+
+   <!-- DC Motor 1 peripheral -->
+   <PERIPHERAL TYPE="DC Motor 1" ELEMENT="DCM1">
+      <INTERFACE OBJECT="DCMotorV2">
+         <PORT NAME="I2C"/>
+         <PROPERTY NAME="CHANNEL" ELEMENT="DCM1" TYPE="INTEGER"/>
+         <SETUP NAME="begin">
+            <!-- JUMPERS DETERMINE I2C ADDRESS -->
+            <PROPERTY NAME="STATE" ELEMENT="JP1" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP2" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP3" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP4" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP5" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP6" TYPE="INTEGER"/>
+         </SETUP>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER FILE="Motor_Shield_V2/DC Motor.xml"/>
+   </PERIPHERAL>
+
+   <!-- DC Motor 2 peripheral --> 
+   <PERIPHERAL TYPE="DC Motor 2" ELEMENT="DCM2">
+      <INTERFACE OBJECT="DCMotorV2">
+         <PORT NAME="I2C"/>
+         <PROPERTY NAME="CHANNEL" ELEMENT="DCM2" TYPE="INTEGER"/>
+         <SETUP NAME="begin">
+            <!-- JUMPERS DETERMINE I2C ADDRESS -->
+            <PROPERTY NAME="STATE" ELEMENT="JP1" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP2" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP3" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP4" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP5" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP6" TYPE="INTEGER"/>
+         </SETUP>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER FILE="Motor_Shield_V2/DC Motor.xml"/>
+   </PERIPHERAL>
+
+   <!-- Stepper Motor peripheral -->
+   <PERIPHERAL TYPE="Stepper Motor" ELEMENT="STPM1">
+      <INTERFACE OBJECT="StepperMotorV2">
+         <PORT NAME="I2C"/>
+         <PROPERTY NAME="CHANNEL" ELEMENT="STPM1" TYPE="INTEGER"/>
+         <PROPERTY NAME="STEP" ELEMENT="STPM1" TYPE="INTEGER"/>
+         <SETUP NAME="begin">
+            <!-- JUMPERS DETERMINE I2C ADDRESS -->
+            <PROPERTY NAME="STATE" ELEMENT="JP1" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP2" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP3" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP4" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP5" TYPE="INTEGER"/>
+            <PROPERTY NAME="STATE" ELEMENT="JP6" TYPE="INTEGER"/>
+         </SETUP>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER FILE="Motor_Shield_V2/Stepper Motor.xml"/>
+   </PERIPHERAL>
+
+   <!-- Servo Motor 1 peripheral -->
+   <PERIPHERAL TYPE="Servo Motor 1" ELEMENT="SERVO1">
+      <INTERFACE OBJECT="ServoMotorV2">
+         <SETUP NAME="begin">
+            <PIN NAME="IO" TYPE="DIGITAL">
+               <TERMINAL ELEMENT="IO10"/>
+            </PIN>
+            <PROPERTY NAME="PW_MIN" ELEMENT="SERVO1" TYPE="FLOAT"/>
+            <PROPERTY NAME="PW_MAX" ELEMENT="SERVO1" TYPE="FLOAT"/>
+         </SETUP>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER FILE="Motor_Shield_V2/Servo Motor.xml"/>
+   </PERIPHERAL>
+
+
+   <!-- Servo Motor 2 peripheral -->
+   <PERIPHERAL TYPE="Servo Motor 2" ELEMENT="SERVO2">
+      <INTERFACE OBJECT="ServoMotorV2">
+         <SETUP NAME="begin">
+            <PIN NAME="IO" TYPE="DIGITAL">
+               <TERMINAL ELEMENT="IO9"/>
+            </PIN>
+            <PROPERTY NAME="PW_MIN" ELEMENT="SERVO2" TYPE="FLOAT"/>
+            <PROPERTY NAME="PW_MAX" ELEMENT="SERVO2" TYPE="FLOAT"/>
+         </SETUP>
+      </INTERFACE>
+
+      <!-- Firmware Driver -->
+      <DRIVER FILE="Motor_Shield_V2/Servo Motor.xml"/>
+   </PERIPHERAL>
+</CLIP>
+
+

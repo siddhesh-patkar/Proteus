@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino GPS Module Breakout Board.pdsclip" DESC="GPS card with serial Interface" FAMILY="ARDUINO" >
+   <PERIPHERAL TYPE="GPS Module" ELEMENT="GPS1" >
+   
+      <!-- Hardware Interface -->
+      <INTERFACE OBJECT="GPS">
+         <PIN NAME="tx" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO2"/>
+         </PIN>
+         <PIN NAME="rx" TYPE="DIGITAL">
+            <TERMINAL ELEMENT="IO3"/>
+         </PIN>
+         <SETUP NAME="begin">
+            <PROPERTY NAME="BAUDRATE" ELEMENT="GPS1" TYPE="INTEGER"/>
+         </SETUP>  
+       
+      </INTERFACE>
+  
+      <!-- Firmware Driver -->
+      <DRIVER FILE="GPS/GPS.xml"/> 
+
+ </PERIPHERAL>
+</CLIP>   
+  

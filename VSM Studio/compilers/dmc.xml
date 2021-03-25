@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<COMPILER NAME="Digital Mars C" ID="DMC" VERSION="8.42n" URL="http://www.digitalmars.com/ctg/sc.html" DOWNLOAD_URL="http://downloads.labcenter.co.uk/vsmstudio/win/compilers/8086CompilersBundle.exe" AVAILABILITY="Hosted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/compiler.xsd">
+  <!-- C Compiler -->
+  <TOOL NAME="CC" FILE="dmc.exe">
+    <OPTION NAME="-a" DESC="alignment of struct members" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="1" DESC="1"/>
+      <PARAM VALUE="2" DESC="2"/>
+      <PARAM VALUE="4" DESC="4"/>
+      <PARAM VALUE="8" DESC="8"/>
+    </OPTION>
+    <OPTION NAME="-A" DESC="strict ANSI C/C++" ADVANCED="1"/>
+    <OPTION NAME="-Aa" DESC="enable new[] and delete[]" ADVANCED="1"/>
+    <OPTION NAME="-Ab" DESC="enable bool" ADVANCED="1"/>
+    <OPTION NAME="-Ae" DESC="enable exception handling" ADVANCED="1"/>
+    <OPTION NAME="-Ar" DESC="enable RTTI" ADVANCED="1"/>
+    <OPTION NAME="-B" DESC="message language" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="e" DESC="English"/>
+      <PARAM VALUE="f" DESC="French"/>
+      <PARAM VALUE="g" DESC="German"/>
+      <PARAM VALUE="j" DESC="Japanese"/>
+    </OPTION>
+    <OPTION NAME="-c" DESC="skip the link, do compile only" ADVANCED="1"/>
+    <OPTION NAME="-cpp" DESC="source files are C++" ADVANCED="1"/>
+    <OPTION NAME="-cod" DESC="generate .cod (assembly) file" ADVANCED="1"/>
+    <OPTION NAME="-C" DESC="no inline function expansion" ADVANCED="1"/>
+    <OPTION NAME="-d" DESC="generate .dep (make dependency) file" ADVANCED="1"/>
+    <OPTION NAME="-D" DESC="#define DEBUG 1"/>
+    <OPTION NAME="-D" DESC="macro[=text]  define macro" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-e" DESC="show results of preprocessor" ADVANCED="1"/>
+    <OPTION NAME="-EC" DESC="do not elide comments" ADVANCED="1"/>
+    <OPTION NAME="-EL" DESC="#line directives not output" ADVANCED="1"/>
+    <OPTION NAME="-f" DESC="IEEE 754 inline 8087 code" ADVANCED="1"/>
+    <OPTION NAME="-fd" DESC="work around FDIV problem" ADVANCED="1"/>
+    <OPTION NAME="-ff" DESC="fast inline 8087 code" ADVANCED="1"/>
+    <OPTION NAME="-g" DESC="generate debug info"/>
+    <OPTION NAME="-gf" DESC="disable debug info optimization"/>
+    <OPTION NAME="-gg" DESC="make static functions global"/>
+    <OPTION NAME="-gh" DESC="symbol info for globals"/>
+    <OPTION NAME="-gl" DESC="debug line numbers only"/>
+    <OPTION NAME="-gp" DESC="generate pointer validations" ADVANCED="1"/>
+    <OPTION NAME="-gs" DESC="debug symbol info only"/>
+    <OPTION NAME="-gt" DESC="generate trace prolog/epilog" ADVANCED="1"/>
+    <OPTION NAME="-GT" DESC="nnnn set data threshold to nnnn" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-H" DESC="use precompiled headers (ph)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-HD" DESC="directory  use ph from directory" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-HF" DESC="[filename]  generate ph to filename"PARAM="STRING"  ADVANCED="1"/>
+    <OPTION NAME="-HH" DESC="filename  read ph from filename" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-HI" DESC="filename   #include &quot;filename&quot;" PARAM="STRING"/>
+    <OPTION NAME="-HO" DESC="include files only once" ADVANCED="1"/>
+    <OPTION NAME="-HS" DESC="only search -I directories"/>
+    <OPTION NAME="-HX" DESC="automatic precompiled headers" ADVANCED="1"/>
+    <OPTION NAME="-I" DESC="path	#include file search path" PARAM="STRING" MULTIPLE="1"/>
+    <OPTION NAME="-j" DESC="Asian language characters" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="0" DESC="Japanese"/>
+      <PARAM VALUE="1" DESC="Taiwanese and Chinese"/>
+      <PARAM VALUE="2" DESC="Korean"/>
+    </OPTION>
+    <OPTION NAME="-Jm" DESC="relaxed type checking" ADVANCED="1"/>
+    <OPTION NAME="-Ju" DESC="char==unsigned char" ADVANCED="1"/>
+    <OPTION NAME="-Jb" DESC="no empty base class optimization" ADVANCED="1"/>
+    <OPTION NAME="-J" DESC="chars are unsigned" ADVANCED="1"/>
+    <OPTION NAME="-l" DESC="[listfile]  generate list file" ADVANCED="1"/>
+    <OPTION NAME="-L" DESC="using non-Digital Mars linker" ADVANCED="1"/>
+    <OPTION NAME="-L" DESC="link  specify linker to use" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-L/" DESC="switch  pass /switch to linker" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-M" DESC="asm   specify assembler to use" ADVANCED="1"/>
+    <OPTION NAME="-M/" DESC="switch  pass /switch to assembler" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-m" DESC="[tsmclvfnrpxz][do][w][u] set memory model" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="s" DESC="small code and data"/>
+      <PARAM VALUE="m" DESC="large code, small data"/>
+      <PARAM VALUE="c" DESC="small code, large data"/>
+      <PARAM VALUE="l" DESC="large code and data"/>
+      <PARAM VALUE="v" DESC="VCM"/>
+      <PARAM VALUE="r" DESC="Rational 16 bit DOS Extender"/>
+      <PARAM VALUE="p" DESC="Pharlap 32 bit DOS Extender"/>
+      <PARAM VALUE="x" DESC="DOSX 32 bit DOS Extender"/>
+      <PARAM VALUE="z" DESC="ZPM 16 bit DOS Extender"/>
+      <PARAM VALUE="f" DESC="OS/2 2.0 32 bit"/>
+      <PARAM VALUE="t" DESC=".COM file"/>
+      <PARAM VALUE="n" DESC="Windows 32s/95/98/NT/2000/ME/XP"/>
+      <PARAM VALUE="d" DESC="DOS 16 bit"/>
+      <PARAM VALUE="o" DESC="OS/2 16 bit"/>
+      <PARAM VALUE="w" DESC="SS != DS"/>
+      <PARAM VALUE="u" DESC="reload DS"/>
+    </OPTION>
+    <OPTION NAME="-Nc" DESC="function level linking" ADVANCED="1"/>
+    <OPTION NAME="-NL" DESC="no default library" ADVANCED="1"/>
+    <OPTION NAME="-Ns" DESC="place expr strings in code seg" ADVANCED="1"/>
+    <OPTION NAME="-NS" DESC="new code seg for each function" ADVANCED="1"/>
+    <OPTION NAME="-NT" DESC="name  set code segment name" ADVANCED="1"/>
+    <OPTION NAME="-NV" DESC="vtables in far data" ADVANCED="1"/>
+    <OPTION NAME="-o" DESC="[-+flag]  run optimizer with flag" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-p" DESC="turn off autoprototyping" ADVANCED="1"/>
+    <OPTION NAME="-P" DESC="default to pascal linkage" ADVANCED="1"/>
+    <OPTION NAME="-Pz" DESC="default to stdcall linkage" ADVANCED="1"/>
+    <OPTION NAME="-r" DESC="strict prototyping" ADVANCED="1"/>
+    <OPTION NAME="-R" DESC="put switch tables in code seg" ADVANCED="1"/>
+    <OPTION NAME="-s" DESC="stack overflow checking" ADVANCED="1"/>
+    <OPTION NAME="-S" DESC="always generate stack frame" ADVANCED="1"/>
+    <OPTION NAME="-u" DESC="suppress predefined macros" ADVANCED="1"/>
+    <OPTION NAME="-v" DESC="verbose compile" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="0" DESC="0"/>
+      <PARAM VALUE="1" DESC="1"/>
+      <PARAM VALUE="2" DESC="2"/>
+    </OPTION>
+    <OPTION NAME="-w" DESC="suppress all warnings" ADVANCED="1"/>
+    <OPTION NAME="-wc" DESC="warn on C style casts" ADVANCED="1"/>
+    <OPTION NAME="-wn" DESC="suppress warning number n" ADVANCED="1"/>
+    <OPTION NAME="-wx" DESC="treat warnings as errors" ADVANCED="1"/>
+    <OPTION NAME="-W" DESC="{0123ADabdefmrstuvwx-+}  Windows prolog/epilog" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="-x" DESC="turn off error maximum" ADVANCED="1"/>
+    <OPTION NAME="-XD" DESC="instantiate templates" ADVANCED="1"/>
+    <OPTION NAME="-XI" DESC="temp&lt;type&gt;  instantiate template class temp&lt;type&gt;" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="-XI" DESC="func(type)  instantiate template function func(type)" PARAM="STRING" MULTIPLE="1" ADVANCED="1"/>
+    <OPTION NAME="-" DESC="code generation" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="0" DESC="8088"/>
+      <PARAM VALUE="2" DESC="286"/>
+      <PARAM VALUE="3" DESC="386"/>
+      <PARAM VALUE="4" DESC="486"/>
+      <PARAM VALUE="5" DESC="Pentium"/>
+      <PARAM VALUE="6" DESC="P6"/>
+    </OPTION>
+  </TOOL>
+  <!-- Assembler -->
+  <TOOL NAME="ASM" FILE="ml.exe">
+    <OPTION NAME="/AT" DESC="Enable tiny model (.COM file)" ADVANCED="1"/>
+    <OPTION NAME="/Bl" DESC="&lt;linker&gt; Use alternate linker" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/c" DESC="Assemble without linking" ADVANCED="1"/>
+    <OPTION NAME="/Cp" DESC="Preserve case of user identifiers" ADVANCED="1"/>
+    <OPTION NAME="/Cu" DESC="Map all identifiers to upper case" ADVANCED="1"/>
+    <OPTION NAME="/Cx" DESC="Preserve case in publics, externs" ADVANCED="1"/>
+    <OPTION NAME="/coff" DESC="generate COFF format object file" ADVANCED="1"/>
+    <OPTION NAME="/D" DESC="&lt;name&gt;[=text] Define text macro" MULTIPLE="1"/>
+    <OPTION NAME="/EP" DESC="Output preprocessed listing to stdout" ADVANCED="1"/>
+    <OPTION NAME="/F" DESC="&lt;hex&gt; Set stack size (bytes)" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Fe" DESC="&lt;file&gt; Name executable" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Fl" DESC="[file] Generate listing" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Fm" DESC="[file] Generate map" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Fo" DESC="&lt;file&gt; Name object file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/FPi" DESC="Generate 80x87 emulator encoding" ADVANCED="1"/>
+    <OPTION NAME="/Fr" DESC="[file] Generate limited browser info" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/FR" DESC="[file] Generate full browser info" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/G" DESC="Function calling conventions" PARAM="CHOICE" ADVANCED="1">
+      <PARAM VALUE="c" DESC="Pascal" DEFAULT="1"/>
+      <PARAM VALUE="d" DESC="C"/>
+      <PARAM VALUE="z" DESC="Stdcall"/>
+    </OPTION>
+    <OPTION NAME="/H" DESC="&lt;number&gt; Set max external name length" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/I" DESC="&lt;name&gt; Add include path" MULTIPLE="1"/>
+    <OPTION NAME="/link" DESC="&lt;linker options and libraries&gt;" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/nologo" DESC="Suppress copyright message" ADVANCED="1"/>
+    <OPTION NAME="/Sa" DESC="Maximize source listing" ADVANCED="1"/>
+    <OPTION NAME="/Sc" DESC="Generate timings in listing" ADVANCED="1"/>
+    <OPTION NAME="/Sf" DESC="Generate first pass listing" ADVANCED="1"/>
+    <OPTION NAME="/Sl" DESC="&lt;width&gt; Set line width" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Sn" DESC="Suppress symbol-table listing" ADVANCED="1"/>
+    <OPTION NAME="/Sp" DESC="&lt;length&gt; Set page length" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Ss" DESC="&lt;string&gt; Set subtitle" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/St" DESC="&lt;string&gt; Set title" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Sx" DESC="List false conditionals" ADVANCED="1"/>
+    <OPTION NAME="/Ta" DESC="&lt;file&gt; Assemble non-.ASM file" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/w" DESC="Same as /W0 /WX" ADVANCED="1"/>
+    <OPTION NAME="/WX" DESC="Treat warnings as errors"/>
+    <OPTION NAME="/W" DESC="&lt;number&gt; Set warning level" PARAM="STRING"/>
+    <OPTION NAME="/X" DESC="Ignore INCLUDE environment path" ADVANCED="1"/>
+    <OPTION NAME="/Zd" DESC="Add line number debug info"/>
+    <OPTION NAME="/Zf" DESC="Make all symbols public"/>
+    <OPTION NAME="/Zi" DESC="Add symbolic debug info"/>
+    <OPTION NAME="/Zm" DESC="Enable MASM 5.10 compatibility" ADVANCED="1"/>
+    <OPTION NAME="/Zp" DESC="[n] Set structure alignment" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/Zs" DESC="Perform syntax check only" ADVANCED="1"/>
+  </TOOL>
+  <!-- Linker -->
+  <TOOL NAME="LD" FILE="optlink.exe">
+    <OPTION NAME="/A:" DESC="Segment alignment size" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/ALIGNMENT:"/>
+    </OPTION>
+    <OPTION NAME="/BAS:" DESC="Set the base address of the executable image" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/BASE:"/>
+    </OPTION>
+    <OPTION NAME="/BI" DESC="Generates a .sys file" ADVANCED="1">
+      <ALIAS NAME="/BINARY"/>
+    </OPTION>
+    <OPTION NAME="/BYO" DESC="Export by ordinal" ADVANCED="1">
+      <ALIAS NAME="/BYORDINAL"/>
+    </OPTION>
+    <OPTION NAME="/CO" DESC="Outputs CodeView debugger information" PARAM="STRING">
+      <ALIAS NAME="/CODEVIEW"/>
+    </OPTION>
+    <OPTION NAME="/COM" DESC="Specifies whether an undefined COMDEF causes a library search" ADVANCED="1">
+      <ALIAS NAME="/COMDEFSEARCH"/>
+    </OPTION>
+    <OPTION NAME="/CP:" DESC="Sets .exe maximum bytes to occupy in DOS RAM" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/CPARMAXALLOC:"/>
+    </OPTION>
+    <OPTION NAME="/CVV:" DESC="Preserves OPTLINK's CodeView compatibility" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/CVVERSION:"/>
+    </OPTION>
+    <OPTION NAME="/DEB" DESC="Controls all debug information for files that follow" ADVANCED="1">
+      <ALIAS NAME="/DEBUG"/>
+    </OPTION>
+    <OPTION NAME="/DEBUGF:" DESC="Controls debug information for specific files only" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/DEBUGFILES:"/>
+    </OPTION>
+    <OPTION NAME="/DEBUGLI" DESC="Controls debug line number information for files that follow" ADVANCED="1">
+      <ALIAS NAME="/DEBUGLINES"/>
+    </OPTION>
+    <OPTION NAME="/DEBUGLO" DESC="Controls debug local symbols information for files that follow" ADVANCED="1">
+      <ALIAS NAME="/DEBUGLOCALS"/>
+    </OPTION>
+    <OPTION NAME="/DEBUGM:" DESC="Controls debug information for specific modules only" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/DEBUGMODULES:"/>
+    </OPTION>
+    <OPTION NAME="/DEBUGP" DESC="Controls debug public symbols information for files that follow" ADVANCED="1">
+      <ALIAS NAME="/DEBUGPUBLICS"/>
+    </OPTION>
+    <OPTION NAME="/DEBUGT" DESC="Controls debug type information for files that follow" ADVANCED="1">
+      <ALIAS NAME="/DEBUGTYPES"/>
+    </OPTION>
+    <OPTION NAME="/DEF:" DESC="Searches default libraries named in .obj files" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/DEFAULTLIBRARYSEARCH:"/>
+    </OPTION>
+    <OPTION NAME="/DE" DESC="Deletes .exe upon encountering any linking errors" ADVANCED="1">
+      <ALIAS NAME="/DELEXECUTABLE"/>
+    	<ALIAS NAME="/ON:NOEXE"/>
+      <ALIAS NAME="/ONERROR:NOEXE"/>
+    </OPTION>
+    <OPTION NAME="/DET" DESC="Produces detailed map reports" ADVANCED="1">
+      <ALIAS NAME="/DETAILEDMAP"/>
+    </OPTION>
+    <OPTION NAME="/DO" DESC="Controls segment sequence" ADVANCED="1">
+      <ALIAS NAME="/DOSSEG"/>
+    </OPTION>
+    <OPTION NAME="/EC" DESC="Controls echoing of indirect response file input" ADVANCED="1">
+      <ALIAS NAME="/ECHOINDIRECT"/>
+    </OPTION>
+    <OPTION NAME="/EMSM:" DESC="Sets maximum EMS size" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/EMSMAXSIZE:"/>
+    </OPTION>
+    <OPTION NAME="/EMSP" DESC="Gives permission to use EMS page frame for I/O" ADVANCED="1">
+      <ALIAS NAME="/EMSPAGEFRAMEIO"/>
+    </OPTION>
+    <OPTION NAME="/EMSU" DESC="Allow LIM 4.0 adherence" ADVANCED="1">
+      <ALIAS NAME="/EMSUSE40"/>
+    </OPTION>
+    <OPTION NAME="/ER" DESC="Controls error flag in segmented executable header" ADVANCED="1">
+      <ALIAS NAME="/ERRORFLAG"/>
+    </OPTION>
+    <OPTION NAME="/E:" DESC="Performs run-length encoding (packs executable)" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/EXEPACK:"/>
+    </OPTION>
+    <OPTION NAME="/EXET" DESC="Specifies the target operating system" PARAM="CHOICE" ADVANCED="1">
+      <ALIAS NAME="/EXETYPE"/>
+      <PARAM VALUE="OS2" DESC="OS2" DEFAULT="1"/>
+      <PARAM VALUE="WINDOWS" DESC="WINDOWS"/>
+      <PARAM VALUE="DOS4" DESC="DOS4"/>
+      <PARAM VALUE="UNKNOWN" DESC="UNKNOWN"/>
+      <PARAM VALUE="DOS" DESC="DOS"/>
+      <PARAM VALUE="NT" DESC="NT"/>
+    </OPTION>
+    <OPTION NAME="/F" DESC="Converts intra-segment far calls to near" ADVANCED="1">
+      <ALIAS NAME="/FARCALLTRANSLATION"/>
+    </OPTION>
+    <OPTION NAME="/FI" DESC="Identical to the .def directive FIXDS" ADVANCED="1">
+      <ALIAS NAME="/FIXDS"/>
+    </OPTION>
+    <OPTION NAME="/FIXE" DESC="Fixes the executable image in memory" ADVANCED="1">
+      <ALIAS NAME="/FIXED"/>
+    </OPTION>
+    <OPTION NAME="/G" DESC="Controls GROUP information found in .obj" ADVANCED="1">
+      <ALIAS NAME="/GROUPASSOCIATION"/>
+    </OPTION>
+    <OPTION NAME="/GROUPS" DESC="Controls stack definition in .exe file header" ADVANCED="1">
+      <ALIAS NAME="/GROUPSTACK"/>
+    </OPTION>
+    <OPTION NAME="/HEA:" DESC="Sets the size of the local heap" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/HEAP:"/>
+    </OPTION>
+    <OPTION NAME="/IG" DESC="Preserves and ignores case of all symbols" ADVANCED="1">
+      <ALIAS NAME="/IGNORECASE"/>
+    </OPTION>
+    <OPTION NAME="/IMPD" DESC="Generate .din file from EXPORTS section of .def file" ADVANCED="1">
+      <ALIAS NAME="/IMPDEF"/>
+    </OPTION>
+    <OPTION NAME="/IMPL" DESC="Create .lib import library for .dll" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/IMPLIB"/>
+    </OPTION>
+    <OPTION NAME="/I" DESC="Display status information throughout the link process" ADVANCED="1">
+      <ALIAS NAME="/INFORMATION"/>
+    </OPTION>
+    <OPTION NAME="/L" DESC="Outputs line number information in .map file" ADVANCED="1">
+      <ALIAS NAME="/LINENUMBERS"/>
+    </OPTION>
+    <OPTION NAME="/LO" DESC="Outputs line number information in .map file" ADVANCED="1">
+      <ALIAS NAME="/LOWERCASE"/>
+    </OPTION>
+    <OPTION NAME="/MAC:" DESC="Specifies the type of the target machine" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/MACHINE:"/>
+    </OPTION>
+    <OPTION NAME="/M" DESC="Controls information content in .map file" ADVANCED="1">
+      <ALIAS NAME="/MAP"/>
+    </OPTION>
+    <OPTION NAME="/NODEF:" DESC="Do no searches default library" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/NODEFAULTLIBRARYSEARCH:"/>
+    </OPTION>
+    <OPTION NAME="/NOL" DESC="Suppresses OPTLINK's sign-on copyright message" ADVANCED="1">
+      <ALIAS NAME="/NOLOGO"/>
+    </OPTION>
+    <OPTION NAME="/NONA" DESC="Eliminates name text for ordinal exports" ADVANCED="1">
+      <ALIAS NAME="/NONAMES"/>
+    </OPTION>
+    <OPTION NAME="/NONT" DESC="Outputs null bytes in the _TEXT segment" ADVANCED="1">
+      <ALIAS NAME="/NONTHOST"/>
+    </OPTION>
+    <OPTION NAME="/OPT" DESC="" ADVANCED="1"/>
+    <OPTION NAME="/PAC" DESC="Combines segments of class CODE" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/PACKCODE"/>
+    </OPTION>
+    <OPTION NAME="/PACKD" DESC="Combines data segments where possible" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/PACKDATA"/>
+    </OPTION>
+    <OPTION NAME="/PACKF" DESC="Performs &quot;smart-linking&quot; on code and data" ADVANCED="1">
+      <ALIAS NAME="/PACKFUNCTIONS"/>
+    </OPTION>
+    <OPTION NAME="/PACKI" DESC="Forces /PACKCODE on when no SEGMENTS directive" ADVANCED="1">
+      <ALIAS NAME="/PACKIFNOSEGMENTS"/>
+    </OPTION>
+    <OPTION NAME="/PACKS" DESC="Packs size for /PACKCODE and /PACKDATA" ADVANCED="1">
+      <ALIAS NAME="/PACKSIZE"/>
+    </OPTION>
+    <OPTION NAME="/PAG:" DESC="Set /IMPLIB page size" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/PAGESIZE:"/>
+    </OPTION>
+    <OPTION NAME="/PAU" DESC="Provides time to swap disks while creating output" ADVANCED="1">
+      <ALIAS NAME="/PAUSE"/>
+    </OPTION>
+    <OPTION NAME="/PM:" DESC="Specifies type of segmented output" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/PMTYPE:"/>
+    </OPTION>
+    <OPTION NAME="/RC" DESC="Like .def directive RC" PARAM="STRING" ADVANCED="1"/>
+    <OPTION NAME="/RELOC" DESC="Ensures no relocation overlaps have occurred" ADVANCED="1">
+      <ALIAS NAME="/RELOCATIONCHECK"/>
+    </OPTION>
+    <OPTION NAME="/REO" DESC="Performs segment reordering" ADVANCED="1">
+      <ALIAS NAME="/REORDERSEGMENTS"/>
+    </OPTION>
+    <OPTION NAME="/SCANLIB" DESC="Scans the LIB environment variable" ADVANCED="1"/>
+    <OPTION NAME="/SCANLINK" DESC="Scans the LINK environment variable" ADVANCED="1"/>
+    <OPTION NAME="/SI" DESC="Does not display linking status information" ADVANCED="1">
+      <ALIAS NAME="/SILENT"/>
+    </OPTION>
+    <OPTION NAME="/ST" DESC="Defines stack segment and/ or its size" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/STACK"/>
+    </OPTION>
+    <OPTION NAME="/STU:" DESC="Adds a stub file to the executable" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/STUB:"/>
+    </OPTION>
+    <OPTION NAME="/SU" DESC="Sets Win32 subsyste" ADVANCED="1">ADVANCED="1">
+      <ALIAS NAME="/SUBSYSTEM"/>
+      <PARAM VALUE="NATIVE" DESC="NATIVE" DEFAULT="1"/>
+      <PARAM VALUE="WINDOWS" DESC="WINDOWS" DEFAULT="1"/>
+      <PARAM VALUE="CONSOLE" DESC="CONSOLE" DEFAULT="1"/>
+      <PARAM VALUE="POSIX" DESC="POSIX" DEFAULT="1"/>
+    </OPTION>
+    <OPTION NAME="/T" DESC="Generates a .com file" ADVANCED="1">
+      <ALIAS NAME="/TINY"/>
+    </OPTION>
+    <OPTION NAME="/U" DESC="Converts all symbols to upper case" ADVANCED="1">
+      <ALIAS NAME="/UPPERCASE"/>
+    </OPTION>
+    <OPTION NAME="/VERS:" DESC="Adds a version number to the executable" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/VERSION:"/>
+    </OPTION>
+    <OPTION NAME="/WARND" DESC="Adds a version number to the executable" ADVANCED="1">
+      <ALIAS NAME="/WARNDUPS"/>
+    </OPTION>
+    <OPTION NAME="/WI" DESC="Build compressed output utilizing decompressing loader" ADVANCED="1">
+      <ALIAS NAME="/WINPACK"/>
+    </OPTION>
+    <OPTION NAME="/XM:" DESC="Sets maximum XMS size" PARAM="STRING" ADVANCED="1">
+      <ALIAS NAME="/XMSMAXSIZE:"/>
+    </OPTION>
+    <OPTION NAME="/XN" DESC="Treats EXPORT and IMPORT symbols as case significant" ADVANCED="1">
+      <ALIAS NAME="/XNOIGNORECASE"/>
+    </OPTION>
+    <OPTION NAME="/X" DESC="Controls information content in .map file" ADVANCED="1">
+      <ALIAS NAME="/XREF"/>
+    </OPTION>
+    <OPTION NAME="/XU" DESC="Forces EXPORT and IMPORT symbols to upper case" ADVANCED="1">
+      <ALIAS NAME="/XUPPERCASE"/>
+    </OPTION>
+  </TOOL>
+  <!-- Available controllers for this compiler -->
+  <FAMILY NAME="8086">
+    <CONTROLLER NAME="8086">
+    </CONTROLLER>
+  </FAMILY>
+  <!-- Compiler Detection -->
+  <DETECT PATH="%PROGRAMFILES%/8086 Compilers Bundle">
+    <CHECK SUF="dmc.exe" DATE="2013-08-15" ARG="" STR="Digital Mars Compiler"/>
+    <CHECK SUF="ml.exe" DATE="1999-03-29" ARG="/help" STR="Macro Assembler"/>
+  </DETECT>
+  <!-- File Types -->
+  <FILE NAME="c" DESC="C" CATEGORY="Source" SOURCE="1" ICON="project_c.png"/>
+  <FILE NAME="h" DESC="C Include" CATEGORY="Header" SOURCE="1" ICON="project_header.png"/>
+  <FILE NAME="asm" DESC="Assembler Source" CATEGORY="Source" SOURCE="1" ICON="project_assembly.png"/>
+  <FILE NAME="inc" DESC="Assembler Include" CATEGORY="Header" SOURCE="1" ICON="project_source.png"/>
+  <FILE NAME="lib" DESC="Object Library" CATEGORY="Library"/>
+  <FILE NAME="obj" DESC="Object" CATEGORY="Intermediate Binary"/>
+  <FILE NAME="exe" DESC="DOS Executable" CATEGORY="Firmware Binary" FIRMWARE="1"/>
+  <!-- C Compiler -->
+  <PROCESS TOOL="CC" NAME="C Compiler" CMDLINE="$(CC) $(CCFLAGS) -o%OUTFILE% %INFILE%">
+    <FILE INPUT="c"/>
+    <FILE OUTPUT="obj"/>
+    <OPTION NAME="-g"/>
+    <OPTION NAME="-ms"/>
+    <OPTION NAME="-0"/>
+    <OPTION NAME="-c"/>
+    <MESSAGE VALUE="^(.+)\((\d+)\) : Error: .+$">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Assembler -->
+  <PROCESS TOOL="ASM" NAME="Assembler" CMDLINE="$(ASM) $(ASMFLAGS) %INFILE%">
+    <FILE INPUT="asm"/>
+    <FILE OUTPUT="obj"/>
+    <OPTION NAME="/c"/>
+    <MESSAGE VALUE="^(.+)\((\d+)\) : error .+:">
+      <FIELD NAME="FILENAME" POSITION="1"/>
+      <FIELD NAME="LINE" POSITION="2" OFFSET="-1"/>
+    </MESSAGE>
+  </PROCESS>
+  <!-- Linker -->
+  <PROCESS TOOL="LD" NAME="Linker" CMDLINE="$(LD) $(LDFLAGS) %INFILES_DOS(+)%,%OUTFILE%">
+    <FILE INPUT="obj"/>
+    <FILE INPUT="lib"/>
+    <FILE OUTPUT="exe"/>
+    <OPTION NAME="/CO"/>
+    <OPTION NAME="/NODEF:" VALUE="SDS"/>
+  </PROCESS>
+  <!-- Compilation Targets -->
+  <TARGET NAME="Debug">
+    <FILE OUTPUT="exe"/>
+  </TARGET>
+  <TARGET NAME="Release">
+    <FILE OUTPUT="exe"/>
+  </TARGET>
+  <SOURCE NAME="main.c" FROM="dmcmain.c" OPEN="1"/>
+  <SOURCE NAME="rtl.asm" FROM="dmcrtl.asm"/>
+</COMPILER>

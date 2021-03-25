@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Driver Descriptor for Generic LEDs -->
+<DRIVER HEADER="Generic">
+     <FUNCTION DESC="Current LED State"> <RETURN TYPE="BOOLEAN"/> </FUNCTION>
+     <METHOD NAME="on"  DESC="Turn the LED on."/>
+     <METHOD NAME="off" DESC="Turn the LED off."/>
+     <METHOD NAME="set" DESC="Turn the LED on or off.">
+     	 <PARAMETER NAME="state" TYPE="BOOLEAN" DEFAULT="TRUE" DESC="State of the LED"/>
+     </METHOD>            
+     <METHOD NAME="toggle" DESC="Toggle the LED state."/>
+</DRIVER>
+  

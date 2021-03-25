@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Arduino/Arduino FDC1004 Breakout Board.pdsclip" DESC="Arduino FDC1004 Breakout Board" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="FDC1004 Capacitance to Digital Converter" ELEMENT="CAPDAC1">
+      <INTERFACE OBJECT="CapDac">
+         <PORT NAME="I2C"/>
+      </INTERFACE>
+      <DRIVER FILE="fdc1004/fdc1004.xml"/>
+   </PERIPHERAL>
+</CLIP>
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Breakout Peripherals" FILE="Raspberry Pi/RaspberryPi GPS.pdsclip" FAMILY="Raspberry Pi" DESC="GPS Module">
+   <PERIPHERAL TYPE="RPi GPS" ELEMENT="GPS1" >
+     <!-- Hardware Interface -->
+     <INTERFACE OBJECT="GPS"/>
+   
+     <!-- Firmware Driver -->
+     <DRIVER HEADER="Generic">
+         <!-- Methods for GPS Wrapper -->
+         <METHOD NAME="returnFix" DESC="Checks for valid fix data.">
+            <RETURN NAME="returnFix" TYPE="BOOLEAN" DEFAULT="fix" DESC="Is there valid data?"/>
+         </METHOD>
+         <METHOD NAME="getPosition" DESC="Return the GPS position">        
+            <RETURN NAME="latitude" TYPE="FLOAT" DEFAULT="lat" DESC="Returns the latatude"/>
+            <RETURN NAME="longitude" TYPE="FLOAT" DEFAULT="lon" DESC="Returns the longitude"/>
+         </METHOD>
+         <METHOD NAME="getAltitude" DESC="Get altitude above mean sea level">
+           <RETURN NAME="altitude" TYPE="FLOAT" DEFAULT="alt" DESC="Altitude in meters above mean sea level"/>
+         </METHOD>
+         <METHOD NAME="getSatellites" DESC="Get number of satellites">
+            <RETURN NAME="Satellites" TYPE="INTEGER" DEFAULT="sats" DESC="Number of satellites in view"/>
+         </METHOD>    
+         <METHOD NAME="getDistance" DESC="Get distance between two positions using the haversine formula">
+            <PARAMETER NAME="lat1" TYPE="FLOAT" DESC="Latitude of first point"/>
+            <PARAMETER NAME="lon1" TYPE="FLOAT" DESC="Longitude of first point"/>
+            <PARAMETER NAME="lat2" TYPE="FLOAT" DESC="Latitude of second point"/>
+            <PARAMETER NAME="lon2" TYPE="FLOAT" DESC="Longitude of second point"/>
+            <RETURN NAME="distance" TYPE="FLOAT" DEFAULT="distance" DESC="Distance in meters"/>
+         </METHOD>      
+         <METHOD NAME="getBearing" DESC="Get the initial bearing between two positions">
+            <PARAMETER NAME="lat1" TYPE="FLOAT" DESC="Latitude of first point"/>
+            <PARAMETER NAME="lon1" TYPE="FLOAT" DESC="Longitude of first point"/>
+            <PARAMETER NAME="lat2" TYPE="FLOAT" DESC="Latitude of second point"/>
+            <PARAMETER NAME="lon2" TYPE="FLOAT" DESC="Longitude of second point"/>
+            <RETURN NAME="bearing" TYPE="FLOAT" DEFAULT="bearing" DESC="Bearing in degrees"/>
+         </METHOD>   
+     </DRIVER>
+   </PERIPHERAL>
+</CLIP>	
+  

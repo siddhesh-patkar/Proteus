@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+  <DRIVER HEADER="cpu">
+    <ENUMERATION NAME="PINMODE">
+      <CONSTANT NAME="INPUT" VALUE="cpu.INPUT"/>
+      <CONSTANT NAME="OUTPUT"  VALUE="cpu.OUTPUT"/>
+    </ENUMERATION>
+    <ENUMERATION NAME="PULLUP">
+      <CONSTANT NAME="OFF" VALUE="cpu.PUD_OFF"/>
+      <CONSTANT NAME="DOWN"  VALUE="cpu.PUD_DOWN"/>
+      <CONSTANT NAME="UP"  VALUE="cpu.PUD_UP"/>
+    </ENUMERATION>
+    <ENUMERATION NAME="INTID">
+      <CONSTANT NAME="INT0" VALUE="0"/>
+      <CONSTANT NAME="INT1"  VALUE="1"/>
+    </ENUMERATION>
+    <ENUMERATION NAME="INTMODE">
+      <CONSTANT NAME="LOW" VALUE="cpu.LOW"/>
+      <CONSTANT NAME="CHANGE"  VALUE="cpu.CHANGE"/>
+      <CONSTANT NAME="FALLING"  VALUE="cpu.FALLING"/>
+      <CONSTANT NAME="RISING"  VALUE="cpu.RISING"/>
+    </ENUMERATION>
+
+    <METHOD NAME="pinMode" DESC="Set pin to input or output">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DESC="Raspberry Pi digital I/O number"/>
+      <PARAMETER NAME="mode" TYPE="PINMODE" DESC="Input or output mode"/>
+    </METHOD>
+    <METHOD NAME="pwmMode" DESC="Set pin pwm frequency">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DESC="Raspberry Pi digital I/O number"/>
+      <PARAMETER NAME="frequency" TYPE="INTEGER" DESC="Frequency of signal"/>
+    </METHOD>
+    <METHOD NAME="pullUpDnControl" DESC="Set pin pullup to off, up or down">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DESC="Raspberry Pi digital I/O number"/>
+      <PARAMETER NAME="mode" TYPE="PULLUP" DESC="Off, up or down mode"/>
+    </METHOD>
+    <METHOD NAME="digitalWrite" DESC="Set state of digital output pin">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DESC="Raspberry Pi digital I/O number"/>
+      <PARAMETER NAME="state" TYPE="BOOLEAN" DESC="Pin state"/>
+    </METHOD>
+    <METHOD NAME="digitalRead" DESC="Read state of digital pin">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DESC="Raspberry Pi digital I/O number"/>
+      <RETURN NAME="state" TYPE="BOOLEAN" DEFAULT="state" DESC="Pin state"/>
+    </METHOD>
+    <METHOD NAME="pwmWrite" DESC="Set state of pwm output pin">
+      <PARAMETER NAME="pin" TYPE="INTEGER" DESC="Raspberry Pi I/O number"/>
+      <PARAMETER NAME="percentage" TYPE="INTEGER" DESC="Percentage on"/>
+    </METHOD>
+    <METHOD NAME="playSound"  DESC="Play a sound file from resorces">
+      <PARAMETER TYPE="FileName" DEFAULT="" DESC="The name of the file"/>
+    </METHOD>
+    <METHOD NAME="sys"  DESC="Execute system command">
+      <PARAMETER TYPE="LIST" DEFAULT="" DESC="Command and arguments list"/>
+    </METHOD>
+    <METHOD NAME="millis" DESC="Read number of milliseconds since last reset">
+      <RETURN NAME="millis" TYPE="INTEGER" DEFAULT="millis" DESC="Millseconds"/>
+    </METHOD>
+    <METHOD NAME="debug"  DESC="Write information to the simulation log">
+      <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to write"/>
+    </METHOD>
+  </DRIVER>

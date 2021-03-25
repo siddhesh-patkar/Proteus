@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<CONTROL>
+   <CONFIG>
+  	   <PROPERTY NAME="faceColour" DESC="Colour for the button faces" TYPE="RGB" />
+  	   <PROPERTY NAME="lampColour" DESC="Colour for the button faces" TYPE="RGB" />
+  	   <GROUP NAME="lampOpacity">
+  	      <PROPERTY NAME="on" DESC="Opacity for segment on" TYPE="FLOAT" MIN="0" MAX="1" DEFAULT="1.0"/>
+  	      <PROPERTY NAME="off" DESC="Opacity for segment off" TYPE="FLOAT" MIN="0" MAX="1" DEFAULT="0.2"/>
+  	   </GROUP>
+   </CONFIG>
+
+   <!-- Driver Descriptor for Segmented Numeric Displays -->
+   <DRIVER HEADER="Controls">
+        <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+        <ENUMERATION NAME="BASE">
+            <CONSTANT NAME="DECIMAL" VALUE="10"/>
+            <CONSTANT NAME="BINARY" VALUE="2"/>
+            <CONSTANT NAME="OCTAL"  VALUE="8"/>
+            <CONSTANT NAME="HEX"  VALUE="16"/>
+         </ENUMERATION>
+      
+        <METHOD NAME="clear" DESC="Clear the display"/>
+        <METHOD NAME="setValue" DESC="Set a numeric value to display">
+         	 <PARAMETER NAME="value" TYPE="FLOAT" DEFAULT="0" DESC="Value to Display"/>
+        </METHOD>                 
+        <METHOD NAME="setError" DESC="Display an error state"/>
+        <METHOD NAME="print" DESC="Format the value to display from a list of arguments">
+         	 <PARAMETER TYPE="LIST" DESC="List of values and/or characters to display"/>
+        </METHOD>                 
+       <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+         <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+       </METHOD>
+       <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+         <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+       </METHOD>
+   </DRIVER>
+</CONTROL>

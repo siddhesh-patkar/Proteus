@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CLIP CATEGORY="Adafruit" FILE="Arduino/Arduino 16-channel PWM Servo Adafruit Shield.pdsclip" DESC="Adafruit 16 Channel Pwm Servo Shield" FAMILY="ARDUINO">
+   <PERIPHERAL TYPE="PWM Servo Controller" ELEMENT="PWMC1">
+      <INTERFACE OBJECT="PwmServoController">
+         <!-- JUMPERS DEERMINE I2C ADDRESS -->
+         <PROPERTY NAME="STATE" ELEMENT="JP1" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP2" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP3" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP4" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP5" TYPE="INTEGER"/>
+         <PROPERTY NAME="STATE" ELEMENT="JP6" TYPE="INTEGER"/>
+         <SETUP NAME="begin">
+         </SETUP>
+      </INTERFACE>
+      <DRIVER FILE="PwmServoDriver/PwmServoDriver.xml"/>
+   </PERIPHERAL>
+</CLIP>
+
+

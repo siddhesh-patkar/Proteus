@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<CONTROL>   
+   <CONFIG>
+      <PROPERTY NAME="textFont" DESC="Font for the terminal text" TYPE="FONT" />
+      <PROPERTY NAME="placeHolder" DESC="Placeholder string for command" TYPE="STRING"  DEFAULT="Enter Command"/>
+      <PROPERTY NAME="cmdLength" DESC="Maximum number of characters for command " TYPE="INT" MIN="1" MAX="255" DEFAULT="255"/>
+      <PROPERTY NAME="clsCmd" DESC="Command string for clear screen" TYPE="STRING" DEFAULT="cls" />
+   </CONFIG>   
+
+   <!-- Driver Descriptor for Line Edit Control  -->
+   <DRIVER HEADER="Controls">
+     <REQUIRE MODULE="SERVER" TYPE="VFP"/>
+           
+     <ENUMERATION NAME="BASE">
+      <CONSTANT NAME="DECIMAL" VALUE="10"/>
+      <CONSTANT NAME="BINARY" VALUE="2"/>
+      <CONSTANT NAME="OCTAL"  VALUE="8"/>
+      <CONSTANT NAME="HEX"  VALUE="16"/>
+     </ENUMERATION>
+   
+     <METHOD NAME="print"  DESC="Print data without newline.">
+        <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to print"/>
+     </METHOD>
+     <METHOD NAME="println"  DESC="Print data with terminating newline.">
+        <PARAMETER TYPE="LIST" DEFAULT="" DESC="List of strings or numbers to print"/>
+     </METHOD>
+     <METHOD NAME="setBase" DESC="Set the base to use for integer values.">
+      <PARAMETER NAME="base" TYPE="BASE" DESC="Number base"/>
+     </METHOD>
+     <METHOD NAME="setPlaces" DESC="Set the number of places to use for floating point values.">
+       <PARAMETER NAME="places" TYPE="INTEGER" DEFAULT="2" DESC="Number of decimal places"/>
+     </METHOD>
+
+     <METHOD NAME="setPrompt" DESC="Sets the prompt/placeholder string">
+        <PARAMETER NAME="prompt" TYPE="STRING" DEFAULT="Enter Command" DESC="String to for prompt"/>
+     </METHOD>
+     <METHOD NAME="getCommand" DESC="Returns the command or an empty string if none">
+        <RETURN TYPE="STRING"/>
+	  </METHOD>
+     <METHOD NAME="cls" DESC="Clears the screen" />
+
+     <INTERRUPT DESC="Control Event"  HOOK="attachEventHandler"/>
+
+   </DRIVER>
+</CONTROL>
+  

@@ -1,0 +1,12 @@
+#
+# Labcenter Electronics
+#
+# Python syntax highlighter definition file.
+#
+line_comment=#.*$
+string="([^"\\]|\\.)*"|'([^'\\]|\\.)*'
+constant=\b((0(b|B)[01]*)|(0(x|X)[\da-fA-F]*)|((\d+\.?\d*)|(\.\d+))((e|E)(\+|-)?\d+)?)\b
+keyword=\b(and|as|assert|break|class|continue|def|del|elif|else|except|exec|finally|for|from|global|if|in|is|lambda|not|or|pass|print|raise|return|try|while|with|yield)\b
+extensions=\b(True|False|None)\b
+macro=(import).*$
+operator=(\+|-|\*|/|%|<|>|=|!=|<>|\(|\)|\[|\]|\{|\}|@|,|:|\.|;)

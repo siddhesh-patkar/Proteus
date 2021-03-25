@@ -1,0 +1,67 @@
+<svg xmlns:vfp="http://www.labcenter.com/namespaces/vfp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 198.38">
+  <defs>
+    <linearGradient id="ToggleSwitchToggleSwitchWhite1" x1="109.99" y1="159.18" x2="-9.99" y2="39.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-opacity="0.3"/>
+      <stop offset="0.56" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ToggleSwitchToggleSwitchWhite2" x1="1723.17" y1="264.46" x2="1829.78" y2="371.07" gradientTransform="translate(367.76 -1677.29) rotate(90)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffef5"/>
+      <stop offset="1" stop-color="#6f6f6b"/>
+    </linearGradient>
+    <linearGradient id="ToggleSwitchToggleSwitchWhite3" x1="1865.26" y1="317.76" x2="1699.25" y2="317.76" gradientTransform="translate(367.76 -1677.29) rotate(90)" xlink:href="#ToggleSwitchToggleSwitchWhite1"/>
+    <linearGradient id="ToggleSwitchToggleSwitchWhite4" x1="1830.84" y1="269.17" x2="1733.66" y2="366.35" xlink:href="#ToggleSwitchToggleSwitchWhite2"/>
+    <linearGradient id="ToggleSwitchToggleSwitchWhite5" x1="1845.08" y1="283.41" x2="1776.37" y2="352.12" gradientTransform="translate(367.76 -1677.29) rotate(90)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffef5"/>
+      <stop offset="1" stop-color="#6f6f6b"/>
+    </linearGradient>
+    <linearGradient id="ToggleSwitchToggleSwitchWhite6" x1="-2946.17" y1="-3352.61" x2="-3052.77" y2="-3459.22" gradientTransform="translate(3455.91 -2900.28) rotate(-90)" xlink:href="#ToggleSwitchToggleSwitchWhite2"/>
+    <linearGradient id="ToggleSwitchToggleSwitchWhite7" x1="-2910.69" y1="-3405.91" x2="-3076.7" y2="-3405.91" gradientTransform="translate(3455.91 -2900.28) rotate(-90)" xlink:href="#ToggleSwitchToggleSwitchWhite1"/>
+    <linearGradient id="ToggleSwitchToggleSwitchWhite8" x1="-2945.1" y1="-3454.5" x2="-3042.28" y2="-3357.32" gradientTransform="translate(3455.91 -2900.28) rotate(-90)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6f6f6b"/>
+      <stop offset="0.16" stop-color="#81817c"/>
+      <stop offset="0.52" stop-color="#a6a59f"/>
+      <stop offset="0.81" stop-color="#bdbcb5"/>
+      <stop offset="1" stop-color="#c5c4bd"/>
+      <stop offset="1" stop-color="#fffef5"/>
+    </linearGradient>
+    <linearGradient id="ToggleSwitchToggleSwitchWhite9" x1="-2999.57" y1="-3371.56" x2="-2930.87" y2="-3440.26" gradientTransform="translate(3455.91 -2900.28) rotate(-90)" xlink:href="#ToggleSwitchToggleSwitchWhite2"/>
+  </defs>
+<vfp:catalogue
+     PREFIX="ToggleSwitch"
+     CATEGORY="Switches"
+     DESC="Toggle Switch" />
+
+  <g vfp:class="ToggleSwitch">
+  	<g>
+    <path class="bounds" d="M0,148.74V49.64a50,50,0,0,1,100,0v99.11a50,50,0,0,1-100,0Z" style="fill: #fffef5"/>
+    <path d="M0,148.74V49.64a50,50,0,0,1,100,0v99.11a50,50,0,0,1-100,0Z" style="fill: url(#ToggleSwitchToggleSwitchWhite1)"/>
+    <g>
+      <path d="M10.06,49.07a39.94,39.94,0,1,1,79.88,0V149.31a39.94,39.94,0,0,1-79.88,0Z" style="fill: url(#ToggleSwitchToggleSwitchWhite2)"/>
+      <path d="M11.34,149.31V60.62a38.66,38.66,0,1,1,77.32,0v88.69a38.66,38.66,0,1,1-77.32,0Z" style="fill: url(#ToggleSwitchToggleSwitchWhite3)"/>
+      <path d="M87.37,60.62a37.37,37.37,0,0,0-74.75,0v88.69a37.37,37.37,0,0,0,74.75,0Z" style="fill: url(#ToggleSwitchToggleSwitchWhite4)"/>
+      <path d="M87.37,149.31v-47.2H12.63v47.2a37.37,37.37,0,0,0,74.75,0Z" style="fill: url(#ToggleSwitchToggleSwitchWhite5)"/>
+    </g>
+    <g>
+      <path d="M89.94,149.31a39.94,39.94,0,0,1-79.88,0V49.07a39.94,39.94,0,1,1,79.88,0Z" style="fill: url(#ToggleSwitchToggleSwitchWhite6)"/>
+      <path d="M88.66,49.07v88.7a38.66,38.66,0,0,1-77.32,0V49.07a38.66,38.66,0,0,1,77.32,0Z" style="fill: url(#ToggleSwitchToggleSwitchWhite7)"/>
+      <path d="M12.63,137.76a37.37,37.37,0,0,0,74.75,0V49.07a37.37,37.37,0,0,0-74.75,0Z" style="fill: url(#ToggleSwitchToggleSwitchWhite8)"/>
+      <path d="M12.63,49.07v47.2H87.37V49.07a37.37,37.37,0,0,0-74.75,0Z" style="fill: url(#ToggleSwitchToggleSwitchWhite9)"/>
+    </g>
+    <text
+      class="text"
+       id="text5322"
+       y="-41.81345"
+       x="-28.962091"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.10623932px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve">Label</text>
+      <text
+       class="text2"
+       id="text5322"
+       y="-41.81345"
+       x="-28.962091"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.10623932px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve">Label</text>
+  </g>
+  </g>
+
+</svg>
